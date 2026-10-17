@@ -16,7 +16,7 @@
 - Backup: đã restore thật sang DB mới trong test; từ chối sai mật khẩu, thiếu bảng, con trỏ xuất bản hỏng và DB không trống. Chưa có bản backup ngoài AWS hoặc diễn tập cloud migration.
 - Cloud: chưa truy cập tài khoản, chưa tạo tài nguyên, chưa deploy, chưa dùng AI trả phí. Production fail-closed nếu thiếu HTTPS/email.
 - Dependency audit: 5 high trong chuỗi dev ESLint/braces, advisory GHSA-vfj7-8cjw-p6xm chưa có bản vá ở lần kiểm tra; không tự downgrade framework. Cần kiểm tra lại trước release.
-- Git đã init; chưa commit tại lúc viết checkpoint. Không có `.codegraph/`, không tự index.
+- Commit mã đã xác minh: `b1077ce` (local, chưa push). Không có `.codegraph/`, không tự index.
 - Tiến trình: preview loopback 92988 đang chạy cổng 3000/API3001. Build 19113, lint 35974/94185, E2E 84231 và toàn bộ tests đã kết thúc đạt. Preview HTTP 200 sau restart; không chạy thêm server nếu cổng đang dùng.
 - Không còn bindings Node REPL cũ. Kiểm tra native sessions và port trước chạy lặp.
 - Bằng chứng: `docs/TEST_REPORT.md`, `docs/reports/content-audit.json`, `docs/WORK_LOG.md`.

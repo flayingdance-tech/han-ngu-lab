@@ -74,3 +74,4 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 - Xem screenshot desktop/mobile, không tràn ngang; chưa kiểm thử thiết bị thật/CMS browser/load test.
 - Preview cũ dừng, khởi động mới session 92988 với Next `-H 127.0.0.1`, API loopback. Sau restart HTTP 200.
 - Không tạo cloud, không gửi email thật, không thêm phí. Các thiếu sót còn lại đã ghi NEXT_STEPS/TASKS.
+`n- Commit mã đã xác minh: b1077ce; chưa push. HTTP 200 và /api/health ok; Get-NetTCPConnection xác nhận cả 3000/3001 chỉ bind 127.0.0.1.
