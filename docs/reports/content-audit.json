@@ -1,0 +1,409 @@
+{
+  "generatedAt": "2026-10-17T06:58:55.234Z",
+  "scope": "Local draft inventory; not a complete HSK coverage matrix",
+  "fullHSK4Coverage": false,
+  "lessons": [
+    {
+      "id": "nen-tang-chao-hoi",
+      "level": 0,
+      "title": "Xin chào, tiếng Trung!",
+      "objectives": [
+        "Hiểu và sử dụng 你好！ / 再见！.",
+        "Nhận diện 6 từ/cụm từ trong ngữ cảnh.",
+        "Hoàn thành luyện tập và giải thích được lỗi của mình."
+      ],
+      "words": 6,
+      "questions": 5,
+      "humanReviewed": false
+    },
+    {
+      "id": "nen-tang-thanh-dieu",
+      "level": 0,
+      "title": "Bốn thanh, bốn ý nghĩa",
+      "objectives": [
+        "Hiểu và sử dụng mā / má / mǎ / mà.",
+        "Nhận diện 5 từ/cụm từ trong ngữ cảnh.",
+        "Hoàn thành luyện tập và giải thích được lỗi của mình."
+      ],
+      "words": 5,
+      "questions": 5,
+      "humanReviewed": false
+    },
+    {
+      "id": "nen-tang-gioi-thieu",
+      "level": 0,
+      "title": "Bạn tên là gì?",
+      "objectives": [
+        "Hiểu và sử dụng 我叫 + tên / 你叫什么名字？.",
+        "Nhận diện 5 từ/cụm từ trong ngữ cảnh.",
+        "Hoàn thành luyện tập và giải thích được lỗi của mình."
+      ],
+      "words": 5,
+      "questions": 5,
+      "humanReviewed": false
+    },
+    {
+      "id": "hsk1-quoc-tich",
+      "level": 1,
+      "title": "Tôi là người Việt Nam",
+      "objectives": [
+        "Hiểu và sử dụng Chủ ngữ + 是 / 不是 + danh từ.",
+        "Nhận diện 6 từ/cụm từ trong ngữ cảnh.",
+        "Hoàn thành luyện tập và giải thích được lỗi của mình."
+      ],
+      "words": 6,
+      "questions": 5,
+      "humanReviewed": false
+    },
+    {
+      "id": "hsk1-gia-dinh",
+      "level": 1,
+      "title": "Gia đình của tôi",
+      "objectives": [
+        "Hiểu và sử dụng Chủ ngữ + 有 / 没有 + danh từ.",
+        "Nhận diện 6 từ/cụm từ trong ngữ cảnh.",
+        "Hoàn thành luyện tập và giải thích được lỗi của mình."
+      ],
+      "words": 6,
+      "questions": 5,
+      "humanReviewed": false
+    },
+    {
+      "id": "hsk1-thoi-gian",
+      "level": 1,
+      "title": "Bây giờ là mấy giờ?",
+      "objectives": [
+        "Hiểu và sử dụng Chủ ngữ + thời gian + động từ.",
+        "Nhận diện 6 từ/cụm từ trong ngữ cảnh.",
+        "Hoàn thành luyện tập và giải thích được lỗi của mình."
+      ],
+      "words": 6,
+      "questions": 5,
+      "humanReviewed": false
+    },
+    {
+      "id": "hsk1-goi-mon",
+      "level": 1,
+      "title": "Một tách trà, cảm ơn!",
+      "objectives": [
+        "Hiểu và sử dụng 想 + động từ / 要 + số lượng + danh từ.",
+        "Nhận diện 6 từ/cụm từ trong ngữ cảnh.",
+        "Hoàn thành luyện tập và giải thích được lỗi của mình."
+      ],
+      "words": 6,
+      "questions": 5,
+      "humanReviewed": false
+    },
+    {
+      "id": "hsk2-kinh-nghiem",
+      "level": 2,
+      "title": "Bạn đã đến Bắc Kinh chưa?",
+      "objectives": [
+        "Hiểu và sử dụng Động từ + 过 / 没 + động từ + 过.",
+        "Nhận diện 6 từ/cụm từ trong ngữ cảnh.",
+        "Hoàn thành luyện tập và giải thích được lỗi của mình."
+      ],
+      "words": 6,
+      "questions": 5,
+      "humanReviewed": false
+    },
+    {
+      "id": "hsk2-so-sanh",
+      "level": 2,
+      "title": "Hôm nay nóng hơn hôm qua",
+      "objectives": [
+        "Hiểu và sử dụng A + 比 + B + tính từ.",
+        "Nhận diện 6 từ/cụm từ trong ngữ cảnh.",
+        "Hoàn thành luyện tập và giải thích được lỗi của mình."
+      ],
+      "words": 6,
+      "questions": 5,
+      "humanReviewed": false
+    },
+    {
+      "id": "hsk2-dang-lam-gi",
+      "level": 2,
+      "title": "Tôi đang học tiếng Trung",
+      "objectives": [
+        "Hiểu và sử dụng Chủ ngữ + 正在 + động từ + (呢).",
+        "Nhận diện 6 từ/cụm từ trong ngữ cảnh.",
+        "Hoàn thành luyện tập và giải thích được lỗi của mình."
+      ],
+      "words": 6,
+      "questions": 5,
+      "humanReviewed": false
+    },
+    {
+      "id": "hsk3-ke-hoach",
+      "level": 3,
+      "title": "Cuối tuần bạn định làm gì?",
+      "objectives": [
+        "Hiểu và sử dụng Chủ ngữ + 打算 + cụm động từ.",
+        "Nhận diện 6 từ/cụm từ trong ngữ cảnh.",
+        "Hoàn thành luyện tập và giải thích được lỗi của mình."
+      ],
+      "words": 6,
+      "questions": 5,
+      "humanReviewed": false
+    },
+    {
+      "id": "hsk3-nguyen-nhan",
+      "level": 3,
+      "title": "Vì trời mưa nên…",
+      "objectives": [
+        "Hiểu và sử dụng 因为 + nguyên nhân，所以 + kết quả.",
+        "Nhận diện 6 từ/cụm từ trong ngữ cảnh.",
+        "Hoàn thành luyện tập và giải thích được lỗi của mình."
+      ],
+      "words": 6,
+      "questions": 5,
+      "humanReviewed": false
+    },
+    {
+      "id": "hsk3-bo-ngu-ket-qua",
+      "level": 3,
+      "title": "Đã nghe nhưng chưa hiểu",
+      "objectives": [
+        "Hiểu và sử dụng Động từ + bổ ngữ kết quả.",
+        "Nhận diện 6 từ/cụm từ trong ngữ cảnh.",
+        "Hoàn thành luyện tập và giải thích được lỗi của mình."
+      ],
+      "words": 6,
+      "questions": 5,
+      "humanReviewed": false
+    },
+    {
+      "id": "hsk4-nhuong-bo",
+      "level": 4,
+      "title": "Dù khó, tôi vẫn tiếp tục",
+      "objectives": [
+        "Hiểu và sử dụng 虽然 + điều được thừa nhận，但是 + ý tương phản.",
+        "Nhận diện 6 từ/cụm từ trong ngữ cảnh.",
+        "Hoàn thành luyện tập và giải thích được lỗi của mình."
+      ],
+      "words": 6,
+      "questions": 5,
+      "humanReviewed": false
+    },
+    {
+      "id": "hsk4-dieu-kien",
+      "level": 4,
+      "title": "Chỉ cần luyện tập đều đặn",
+      "objectives": [
+        "Hiểu và sử dụng 只要…就… / 只有…才….",
+        "Nhận diện 6 từ/cụm từ trong ngữ cảnh.",
+        "Hoàn thành luyện tập và giải thích được lỗi của mình."
+      ],
+      "words": 6,
+      "questions": 5,
+      "humanReviewed": false
+    },
+    {
+      "id": "hsk4-y-kien",
+      "level": 4,
+      "title": "Theo tôi, chúng ta nên…",
+      "objectives": [
+        "Hiểu và sử dụng 对 + người/nhóm + 来说，….",
+        "Nhận diện 6 từ/cụm từ trong ngữ cảnh.",
+        "Hoàn thành luyện tập và giải thích được lỗi của mình."
+      ],
+      "words": 6,
+      "questions": 5,
+      "humanReviewed": false
+    }
+  ],
+  "issues": [
+    {
+      "lessonId": "nen-tang-chao-hoi",
+      "path": "humanReviewed",
+      "code": "human-review-pending",
+      "message": "Chưa có xác nhận duyệt chuyên môn."
+    },
+    {
+      "lessonId": "nen-tang-chao-hoi",
+      "path": "standard",
+      "code": "mapping-pending",
+      "message": "Chưa có ánh xạ chuẩn HSK được xác minh."
+    },
+    {
+      "lessonId": "nen-tang-thanh-dieu",
+      "path": "humanReviewed",
+      "code": "human-review-pending",
+      "message": "Chưa có xác nhận duyệt chuyên môn."
+    },
+    {
+      "lessonId": "nen-tang-thanh-dieu",
+      "path": "standard",
+      "code": "mapping-pending",
+      "message": "Chưa có ánh xạ chuẩn HSK được xác minh."
+    },
+    {
+      "lessonId": "nen-tang-gioi-thieu",
+      "path": "humanReviewed",
+      "code": "human-review-pending",
+      "message": "Chưa có xác nhận duyệt chuyên môn."
+    },
+    {
+      "lessonId": "nen-tang-gioi-thieu",
+      "path": "standard",
+      "code": "mapping-pending",
+      "message": "Chưa có ánh xạ chuẩn HSK được xác minh."
+    },
+    {
+      "lessonId": "hsk1-quoc-tich",
+      "path": "humanReviewed",
+      "code": "human-review-pending",
+      "message": "Chưa có xác nhận duyệt chuyên môn."
+    },
+    {
+      "lessonId": "hsk1-quoc-tich",
+      "path": "standard",
+      "code": "mapping-pending",
+      "message": "Chưa có ánh xạ chuẩn HSK được xác minh."
+    },
+    {
+      "lessonId": "hsk1-gia-dinh",
+      "path": "humanReviewed",
+      "code": "human-review-pending",
+      "message": "Chưa có xác nhận duyệt chuyên môn."
+    },
+    {
+      "lessonId": "hsk1-gia-dinh",
+      "path": "standard",
+      "code": "mapping-pending",
+      "message": "Chưa có ánh xạ chuẩn HSK được xác minh."
+    },
+    {
+      "lessonId": "hsk1-thoi-gian",
+      "path": "humanReviewed",
+      "code": "human-review-pending",
+      "message": "Chưa có xác nhận duyệt chuyên môn."
+    },
+    {
+      "lessonId": "hsk1-thoi-gian",
+      "path": "standard",
+      "code": "mapping-pending",
+      "message": "Chưa có ánh xạ chuẩn HSK được xác minh."
+    },
+    {
+      "lessonId": "hsk1-goi-mon",
+      "path": "humanReviewed",
+      "code": "human-review-pending",
+      "message": "Chưa có xác nhận duyệt chuyên môn."
+    },
+    {
+      "lessonId": "hsk1-goi-mon",
+      "path": "standard",
+      "code": "mapping-pending",
+      "message": "Chưa có ánh xạ chuẩn HSK được xác minh."
+    },
+    {
+      "lessonId": "hsk2-kinh-nghiem",
+      "path": "humanReviewed",
+      "code": "human-review-pending",
+      "message": "Chưa có xác nhận duyệt chuyên môn."
+    },
+    {
+      "lessonId": "hsk2-kinh-nghiem",
+      "path": "standard",
+      "code": "mapping-pending",
+      "message": "Chưa có ánh xạ chuẩn HSK được xác minh."
+    },
+    {
+      "lessonId": "hsk2-so-sanh",
+      "path": "humanReviewed",
+      "code": "human-review-pending",
+      "message": "Chưa có xác nhận duyệt chuyên môn."
+    },
+    {
+      "lessonId": "hsk2-so-sanh",
+      "path": "standard",
+      "code": "mapping-pending",
+      "message": "Chưa có ánh xạ chuẩn HSK được xác minh."
+    },
+    {
+      "lessonId": "hsk2-dang-lam-gi",
+      "path": "humanReviewed",
+      "code": "human-review-pending",
+      "message": "Chưa có xác nhận duyệt chuyên môn."
+    },
+    {
+      "lessonId": "hsk2-dang-lam-gi",
+      "path": "standard",
+      "code": "mapping-pending",
+      "message": "Chưa có ánh xạ chuẩn HSK được xác minh."
+    },
+    {
+      "lessonId": "hsk3-ke-hoach",
+      "path": "humanReviewed",
+      "code": "human-review-pending",
+      "message": "Chưa có xác nhận duyệt chuyên môn."
+    },
+    {
+      "lessonId": "hsk3-ke-hoach",
+      "path": "standard",
+      "code": "mapping-pending",
+      "message": "Chưa có ánh xạ chuẩn HSK được xác minh."
+    },
+    {
+      "lessonId": "hsk3-nguyen-nhan",
+      "path": "humanReviewed",
+      "code": "human-review-pending",
+      "message": "Chưa có xác nhận duyệt chuyên môn."
+    },
+    {
+      "lessonId": "hsk3-nguyen-nhan",
+      "path": "standard",
+      "code": "mapping-pending",
+      "message": "Chưa có ánh xạ chuẩn HSK được xác minh."
+    },
+    {
+      "lessonId": "hsk3-bo-ngu-ket-qua",
+      "path": "humanReviewed",
+      "code": "human-review-pending",
+      "message": "Chưa có xác nhận duyệt chuyên môn."
+    },
+    {
+      "lessonId": "hsk3-bo-ngu-ket-qua",
+      "path": "standard",
+      "code": "mapping-pending",
+      "message": "Chưa có ánh xạ chuẩn HSK được xác minh."
+    },
+    {
+      "lessonId": "hsk4-nhuong-bo",
+      "path": "humanReviewed",
+      "code": "human-review-pending",
+      "message": "Chưa có xác nhận duyệt chuyên môn."
+    },
+    {
+      "lessonId": "hsk4-nhuong-bo",
+      "path": "standard",
+      "code": "mapping-pending",
+      "message": "Chưa có ánh xạ chuẩn HSK được xác minh."
+    },
+    {
+      "lessonId": "hsk4-dieu-kien",
+      "path": "humanReviewed",
+      "code": "human-review-pending",
+      "message": "Chưa có xác nhận duyệt chuyên môn."
+    },
+    {
+      "lessonId": "hsk4-dieu-kien",
+      "path": "standard",
+      "code": "mapping-pending",
+      "message": "Chưa có ánh xạ chuẩn HSK được xác minh."
+    },
+    {
+      "lessonId": "hsk4-y-kien",
+      "path": "humanReviewed",
+      "code": "human-review-pending",
+      "message": "Chưa có xác nhận duyệt chuyên môn."
+    },
+    {
+      "lessonId": "hsk4-y-kien",
+      "path": "standard",
+      "code": "mapping-pending",
+      "message": "Chưa có ánh xạ chuẩn HSK được xác minh."
+    }
+  ]
+}

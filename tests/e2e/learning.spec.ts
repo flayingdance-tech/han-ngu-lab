@@ -1,0 +1,72 @@
+import { test, expect } from '@playwright/test';
+
+test('visitor registers, verifies, completes lesson and keeps progress after reload', async ({page}, info) => {
+  const email=`e2e-${info.project.name}-${Date.now()}@example.test`;
+  const password='Synthetic-E2E-Password-123!';
+  await page.goto('/');
+  await expect(page.getByRole('heading',{name:/Chào bạn/})).toBeVisible();
+  await page.locator('header').getByRole('button',{name:'Đăng nhập',exact:true}).click();
+  const dialog=page.getByRole('dialog');
+  await dialog.getByRole('button',{name:'Chưa có tài khoản? Đăng ký'}).click();
+  await dialog.getByLabel('Tên hiển thị').fill('Bạn học thử');
+  await dialog.getByLabel('Email',{exact:true}).fill(email);
+  await dialog.getByLabel('Mật khẩu',{exact:true}).fill(password);
+  await dialog.getByLabel('Tôi từ 18 tuổi trở lên.').check();
+  await dialog.getByLabel(/Tôi đồng ý/).check();
+  await dialog.getByRole('button',{name:'Tạo tài khoản miễn phí'}).click();
+  await dialog.getByRole('link',{name:'Xác minh tài khoản thử nghiệm'}).click();
+  await expect(page.getByRole('status')).toContainText('Email đã được xác minh');
+  await page.getByRole('dialog').getByLabel('Email',{exact:true}).fill(email);
+  await page.getByRole('dialog').getByLabel('Mật khẩu',{exact:true}).fill(password);
+  await page.getByRole('dialog').getByRole('button',{name:'Đăng nhập',exact:true}).click();
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+  await page.getByRole('button',{name:'Bắt đầu bài đầu tiên'}).click();
+  await expect(page.getByRole('heading',{name:'Xin chào, tiếng Trung!'})).toBeVisible();
+  await page.getByRole('button',{name:'Luyện tập',exact:true}).click();
+  await page.getByRole('radio',{name:/谢谢！/}).check();
+  await page.getByRole('button',{name:'谢谢',exact:true}).click();
+  await page.getByRole('button',{name:'你',exact:true}).click();
+  await page.getByLabel('Đáp án câu 3',{exact:true}).fill('你');
+  await page.getByLabel('Đáp án câu 4',{exact:true}).fill('好');
+  await page.getByLabel('Đáp án câu 5',{exact:true}).fill('你好');
+  await page.getByRole('button',{name:'Nộp bài & xem kết quả'}).click();
+  await expect(page.getByRole('heading',{name:'Bạn đã hoàn thành bài học!'})).toBeVisible();
+  await page.reload();
+  await expect(page.getByRole('heading',{name:/Chào thử/})).toBeVisible();
+  const result=await page.request.get('/api/progress');
+  expect(result.ok()).toBeTruthy();
+  expect((await result.json()).progress).toHaveLength(1);
+  const widths=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth, viewport:window.innerWidth}));
+  expect(widths.scroll).toBeLessThanOrEqual(widths.viewport+1);
+  await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
+  await page.screenshot({path:`test-results/dashboard-${info.project.name}.png`,fullPage:true});
+});
+
+test('authentication dialog traps keyboard focus and returns focus on Escape',async({page})=>{
+  await page.goto('/');
+  const trigger=page.locator('header').getByRole('button',{name:'Đăng nhập',exact:true});
+  await trigger.click();
+  const close=page.getByRole('button',{name:'Đóng đăng nhập'});
+  await expect(close).toBeFocused();
+  await page.keyboard.press('Shift+Tab');
+  await expect(page.getByRole('button',{name:'Quên mật khẩu?'})).toBeFocused();
+  await page.keyboard.press('Tab');
+  await expect(close).toBeFocused();
+  await page.keyboard.press('Escape');
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+  await expect(trigger).toBeFocused();
+});
+
+test('public roadmap and lesson remain usable without a login',async({page})=>{
+  await page.goto('/');
+  if(await page.getByRole('button',{name:'Mở điều hướng'}).isVisible())await page.getByRole('button',{name:'Mở điều hướng'}).click();
+  await page.getByRole('navigation',{name:'Điều hướng chính'}).getByRole('button',{name:'Lộ trình học'}).click();
+  await page.getByRole('button',{name:'HSK 4',exact:true}).click();
+  await expect(page.getByRole('heading',{name:'Dù khó, tôi vẫn tiếp tục'})).toBeVisible();
+  await page.getByLabel('Tìm bài học').fill('Chỉ cần');
+  await expect(page.locator('.catalog-card')).toHaveCount(1);
+  await page.getByRole('button',{name:'Khám phá bài học'}).click();
+  await expect(page.getByRole('heading',{name:'Chỉ cần luyện tập đều đặn'})).toBeVisible();
+  const widths=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth, viewport:window.innerWidth}));
+  expect(widths.scroll).toBeLessThanOrEqual(widths.viewport+1);
+});
