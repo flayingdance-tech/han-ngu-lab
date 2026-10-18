@@ -1,23 +1,13 @@
 # Bước tiếp theo
 
-Checkpoint 2026-10-17 14:08 +07:00.
+Checkpoint 2026-10-18, Asia/Bangkok.
 
-1. Đọc AGENTS, PROJECT_STATUS, DECISIONS, TASKS; đối chiếu Git/process trước sửa.
-2. Mốc local đã đạt 15 tests + 6 E2E, typecheck/lint/build. Không chạy lặp nếu chưa thay mã; đọc TEST_REPORT rồi tiếp tục phần còn thiếu.
-3. Preview session 92988 đã khởi động loopback, HTTP 200; kiểm tra session/port khi tiếp tục. Giữ dữ liệu `.local/` và lịch sử revision.
-4. Tiếp tục CMS: chỉnh sửa đủ loại bài tập/Pinyin, CSV, media, UI quản lý người dùng/audit; kiểm thử browser hai vai editor/reviewer, lỗi mạng và phiên hết hạn.
-5. Tạo ma trận đầy đủ nhập môn–HSK4 theo phiên bản chuẩn xác định. Inventory 16 bài trong content-audit.json chưa phải ma trận hoàn chỉnh. Không giảm phạm vi xuống bài mẫu.
-6. Soạn/kiểm tra phần còn thiếu và media có nguồn; nội dung AI giữ draft cho đến quy trình duyệt đủ điều kiện.
-7. Hoàn thiện adapter cloud/email và kế hoạch tải/chi phí theo tài khoản thực. Cần quyền truy cập để kiểm tra Console, hạn credit/Free Plan trước deploy; không tự nâng gói/mua dịch vụ.
-8. Diễn tập backup ngoài AWS và migration, kiểm tra user/progress/content/media/email. Local encrypted roundtrip đã có nhưng chưa thay cho diễn tập cloud.
-9. Trước public: chốt chuẩn HSK, người/quy trình duyệt, ngày mở và chính sách bản chưa duyệt; chỉ hỏi quyết định chủ sở hữu còn thiếu khi cần.
-10. Giữ trần 150 USD gồm credit/6 tháng, tuổi 18+, AI tùy chọn. Không hỏi lại thông tin đã chốt.
-11. Sau mỗi mốc cập nhật STATUS/TASKS/NEXT_STEPS/WORK_LOG; commit nhỏ và lưu SHA khi đã xác minh.
-
-- Checkpoint FIX-01: nút logout/E2E xong; lấy kết quả check session 84574 nếu gián đoạn trước cập nhật.
-
-- Mốc 18/10: lấy kết quả 29726/99504/59411; session 84574 đã fail EPERM, không chờ lại. Tiếp tục CMS còn thiếu media/CSV/duyệt browser sau khi chốt trình soạn.
-
-- Kết quả 18/10: CMS E2E 99504 đạt 2/2, build 93856 đạt. Chốt lint 59411; tiếp theo CSV/media, CMS reviewer/publication browser và audit/users. Không cần chạy lại các ca đã đạt nếu chưa đổi mã.
-
-- Đã chốt 59411 exit 0; preview mới 19658 Ready. Không còn lệnh kiểm tra cần chờ của mốc này.
+1. Đọc AGENTS, PROJECT_STATUS, DECISIONS, TASKS; đối chiếu Git/process. Không chạy lại các lệnh đã hoàn tất nếu không có thay đổi mới.
+2. UI-02 đã bàn giao: pastel + dark lo-fi + chữ Trung lớn. Xem DESIGN_ASSETS và TEST_REPORT. Giữ preview trên localhost:3000 và dữ liệu .local/.
+3. Tiếp tục phần dự án còn thiếu: CMS CSV/media, reviewer/publication browser, audit/users và kiểm tra phiên hết hạn/lỗi mạng.
+4. Hoàn thiện ma trận nhập môn–HSK4 theo chuẩn xác định. 16 bài hiện có chưa phải giáo trình hoàn chỉnh; nội dung chưa duyệt giữ draft.
+5. Soạn học liệu/media có nguồn và quy trình duyệt người thật. Các quyết định chuẩn HSK/người duyệt/quyền xuất bản còn thiếu phải chốt trước public.
+6. Hoàn thiện cloud/email và kế hoạch tải/chi phí sau khi có quyền kiểm tra tài khoản; không nâng gói/mua dịch vụ hoặc suy ngày hết credit từ ZIP.
+7. Backup ngoài AWS và diễn tập migration giữ user/progress/content/media/auth/email; local roundtrip không thay thế diễn tập cloud.
+8. Giữ trần 150 USD gồm credit/6 tháng, không phát sinh tiền trả thêm, tuổi 18+, AI tùy chọn.
+9. Cập nhật hồ sơ sau mỗi mốc; không ghi mật khẩu/token. Chỉ nghiệm thu toàn dự án khi đủ phạm vi đã chốt.

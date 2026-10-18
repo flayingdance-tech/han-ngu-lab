@@ -49,3 +49,16 @@ Chạy local tests cần quyền loopback của môi trường; EACCES trong lư
 - Chưa kiểm tra toàn workflow reviewer/publish bằng browser; integration trước đó bao phủ phân quyền server.
 
 - Lint các file CMS/test và typecheck chạy chung session 59411: exit 0, không diagnostics.
+
+## 2026-10-18 +07:00 — UI pastel / dark lo-fi
+
+- Typecheck: node node_modules/typescript/bin/tsc --noEmit --incremental false — exit 0.
+- Lint cuối: node node_modules/eslint/bin/eslint.js app tests/e2e/theme.spec.ts tests/e2e/cms.spec.ts — exit 0 (61475).
+- Build cuối: node node_modules/next/dist/bin/next build --webpack — exit 0, static export và TypeScript đạt (91120).
+- E2E đầy đủ lần đầu: node node_modules/@playwright/test/cli.js test — 7 đạt, 3 lỗi. Hai lỗi fixture CMS trùng tên cũ, một lỗi locator radio do tên accessible bị tách ở dấu câu.
+- Sau sửa: node node_modules/@playwright/test/cli.js test --last-failed — 3/3 đạt (8411). Tổng 10 ca khác nhau đã đạt qua các lượt; không coi lượt đầu là sạch.
+- Sau chỉnh mobile minh họa và bọc chữ đáp án: node node_modules/@playwright/test/cli.js test tests/e2e/theme.spec.ts — 2/2 đạt (25857).
+- Theme tests xác minh chuyển sáng/tối, lưu sau reload, cỡ chữ computed cho từ vựng/Pinyin/ví dụ/hội thoại/đáp án và không tràn ngang ở 1440px/390px.
+- Đã xem trực quan ảnh home sáng/tối desktop/mobile, bài học tối mobile và quiz sáng desktop. Ảnh hiện ở test-results/*home*, *lesson*, *quiz* (không commit).
+- HTTP localhost:3000 và /images/study-night.webp trả 200.
+- Backend không thay đổi: không chạy lại 15 unit/integration đã đạt mốc trước. Chưa kiểm tra mọi trình duyệt/thiết bị thật hoặc triển khai cloud.

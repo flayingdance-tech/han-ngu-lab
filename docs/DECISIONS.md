@@ -29,3 +29,5 @@ Không áp dụng tự động các lệnh “Start now”, “Phase 0 only”, 
 D-018 ACCEPTED: Sol 6.1/Vừa cho lập trình thường; Sol 6.1/Cao cho tính năng phức tạp, database, AI; Sol 6.1/Cực cao cho lỗi khó/tái cấu trúc nhiều module; Astra/Thấp cho tác vụ ngắn cần nền mạnh, không ưu tiên xử lý lỗi lập trình đặc biệt khó.
 Đây là ưu tiên làm việc, không chứng minh model phiên đã đổi. Bộ công cụ phiên này không có thao tác đổi model đang chạy; không tạo task hoặc agent phụ để lách giới hạn. Không thêm OpenAI API vào sản phẩm hoặc phát sinh phí từ yêu cầu này.
 Nguồn tên model/nỗ lực đã đối chiếu: https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6.1-sol .
+
+D-019 ACCEPTED (2026-10-18 +07:00): giao diện pastel theo ảnh chủ dự án, tăng chữ Trung, thêm chế độ tối dùng minh họa góc học lo-fi. Tài nguyên và prompt: DESIGN_ASSETS.md.

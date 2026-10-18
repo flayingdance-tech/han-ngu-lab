@@ -93,3 +93,13 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 - Test mới cms.spec.ts tạo tài khoản editor và bài nháp tổng hợp riêng, kiểm tra save thành revision mới trên desktop/mobile. Session 99504; lint/typecheck 59411. Không đụng mật khẩu tài khoản người dùng.
 
 - Chốt 18/10: CMS E2E 2/2, lint/typecheck 59411 exit 0, build cuối 93856 exit 0. AGENTS 94 dòng. Preview 19658 Ready loopback; không tạo cloud, không phí API.
+
+## 2026-10-18 11:08 +07:00 — UI pastel / lo-fi
+- Đã thêm themes.css, ThemeToggle, ChineseText và hai WebP; không đổi dữ liệu học.
+- Typecheck và lint phần ứng dụng đạt. E2E đang chạy: sửa fixture CMS trùng tên bằng UUID và aria-label đáp án sau khi tách chữ Hán.
+- Đã xem ảnh desktop sáng/tối; còn kiểm tra mobile, chạy lại ca lỗi và build.
+
+
+- 2026-10-18 11:12 +07:00: 3 ca lỗi ban đầu chạy lại đều đạt (8411); theme 2/2 đạt (90201); build 86799 đạt. Xem ảnh mobile phát hiện ảnh nằm dưới caption và dấu câu bị giãn do flex; đã đưa ảnh xuống dưới, bọc đáp án thành một khối. Đang xác minh cuối: theme 25857, build 91120.
+
+- 2026-10-18 11:13 +07:00: UI-02 hoàn tất. Theme 25857 đạt 2/2, lint 61475 exit 0, build 91120 exit 0 (gồm TypeScript). Preview và asset HTTP 200. Đã xem ảnh mobile cuối; không còn test/build cần chờ. Không tạo cloud/không đổi dữ liệu học.

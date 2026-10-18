@@ -1,31 +1,22 @@
 # Trạng thái hiện tại — đọc đầu tiên khi tiếp tục
 
-- Checkpoint: 2026-10-17 14:08 +07:00 (Asia/Bangkok).
-- Workspace: `D:\Hán Ngữ Lab`. Đã chốt khởi công; không hỏi lại lệnh bắt đầu.
-- Phạm vi: nhập môn đến hết HSK 4; miễn phí, 18+, AI tùy chọn, CMS thay giáo trình/mở rộng HSK 5–6, backup di chuyển.
-- Ngân sách: tối đa 150 USD/6 tháng gồm credit, không tiền trả thêm. 200 USD credit và 5 tháng 20 ngày Free Plan là thông tin chủ dự án cung cấp 16/10, chưa kiểm tra Console.
-- Source: Next frontend, Express API, SQLite local; auth email mô phỏng, role, chấm server/idempotency, progress/SRS, CMS revision/rollback/import JSON, backup AES-GCM.
-- Đã xác minh: 6/6 E2E desktop/mobile (đăng ký→xác minh→học→reload giữ tiến độ; lộ trình; focus bàn phím). Đã xem screenshot hai kích thước.
-- Unit/integration: 15/15 đạt sau sửa ID ví dụ; typecheck, lint toàn ứng dụng/lint phần mới và build cuối đều exit 0. Xem TEST_REPORT.md.
-
-- Học liệu: 16 bài draft, 94 word IDs, 80 câu hỏi; bổ sung 39 ví dụ. Audit cấu trúc không còn thiếu ví dụ/Pinyin/nghĩa; 16 bài chờ ánh xạ chuẩn và 16 chờ duyệt người thật. Chưa đủ giáo trình HSK 4.
-- Lưu ý: nội dung có chữ Hán/Pinyin/nguồn không đồng nghĩa được chuyên gia xác nhận đúng; không tự publish.
-- Seed mới bổ sung revision sample khi nguồn đổi, không ghi đè revision cũ, không đụng published pointer. Tiến độ học giữ lịch sử cũ.
-- Đã sửa lỗi Strict Mode gửi xác minh email hai lần; dùng chung promise, token server vẫn single-use.
-- CMS có bản xem đầy đủ đáp án và cảnh báo biên tập. Media, CSV, UI quản lý người dùng/audit và kiểm thử CMS qua browser còn thiếu.
-- Backup: đã restore thật sang DB mới trong test; từ chối sai mật khẩu, thiếu bảng, con trỏ xuất bản hỏng và DB không trống. Chưa có bản backup ngoài AWS hoặc diễn tập cloud migration.
-- Cloud: chưa truy cập tài khoản, chưa tạo tài nguyên, chưa deploy, chưa dùng AI trả phí. Production fail-closed nếu thiếu HTTPS/email.
-- Dependency audit: 5 high trong chuỗi dev ESLint/braces, advisory GHSA-vfj7-8cjw-p6xm chưa có bản vá ở lần kiểm tra; không tự downgrade framework. Cần kiểm tra lại trước release.
-- Commit mã đã xác minh: `b1077ce` (local, chưa push). Không có `.codegraph/`, không tự index.
-- Tiến trình: preview loopback 92988 đang chạy cổng 3000/API3001. Build 19113, lint 35974/94185, E2E 84231 và toàn bộ tests đã kết thúc đạt. Preview HTTP 200 sau restart; không chạy thêm server nếu cổng đang dùng.
-- Không còn bindings Node REPL cũ. Kiểm tra native sessions và port trước chạy lặp.
-- Bằng chứng: `docs/TEST_REPORT.md`, `docs/reports/content-audit.json`, `docs/WORK_LOG.md`.
-- Bước tiếp: `docs/NEXT_STEPS.md`; không đánh dấu dự án hoàn thành khi thiếu HSK4/cloud/media/duyệt.
-
-- 2026-10-17 14:39 +07:00: đã thêm nút Đăng xuất rõ chữ ở header; 2 E2E desktop/mobile qua logout/reload/401. Build lượt đó lỗi EPERM, đã xác minh lại thành công ngày 18/10.
-
-- 2026-10-18 +07:00: tiếp tục CMS; đọc WORK_LOG mốc mới. FIX-01 build cũ lỗi EPERM, không còn chạy. Build mới 29726; CMS E2E 99504; lint/typecheck 59411. Quy tắc model đã lưu D-018, chưa đổi model phiên.
-
-- Mốc 18/10 đã xác minh: CMS E2E 2/2 đạt, build cuối 93856 exit 0; typecheck trước E2E đạt. Lint/typecheck kết hợp 59411 exit 0. ExerciseEditor/CMS mới hỗ trợ 3 loại, alternatives, Pinyin ví dụ, thứ tự, ID mới an toàn.
-
-- Preview hiện hành: session 19658, Next/API Ready trên loopback 3000/3001. Session cũ 92988 đã ngừng trước lượt này.
+- Checkpoint: 2026-10-18, Asia/Bangkok. Chi tiết thời gian và lệnh trong WORK_LOG.
+- Workspace: D:\Hán Ngữ Lab. Đã được giao triển khai, không hỏi lại lệnh bắt đầu.
+- Mốc mới nhất UI-02: DONE. Giao diện pastel theo ảnh chủ dự án, dark lo-fi, chữ Trung lớn, nhớ theme, responsive desktop/mobile.
+- File chính: app/themes.css, app/components/ThemeToggle.tsx, ChineseText.tsx, LessonPlayer.tsx, app/page.tsx, app/layout.tsx; assets và prompt trong DESIGN_ASSETS.md.
+- Xác minh UI: typecheck/lint đạt; build cuối 91120 exit 0; theme E2E cuối 25857 đạt 2/2. Tổng 10 ca E2E khác nhau đã đạt qua lượt đầu và chạy lại ca lỗi; không gọi lượt đầu 10/10.
+- Lỗi đã sửa: fixture CMS trùng tên giữa các lượt (UUID); tên accessible radio khi tách chữ Hán; dấu câu bị giãn trong flex. Đã xem ảnh desktop/mobile sáng/tối và bài học.
+- Preview loopback http://localhost:3000/ và ảnh WebP trả HTTP 200. Giữ server hiện hành; kiểm tra port/process trước chạy mới, không giả định session cũ còn sống.
+- Không còn build/test đang chạy. Không có .codegraph/ tại lần kiểm tra, không tự index.
+- Backend hiện có: Express, SQLite local; auth email mô phỏng, role, chấm server/idempotency, progress/SRS, CMS revision/rollback/import JSON, backup AES-GCM.
+- CMS-EDIT-01: DONE; soạn choice/input/order, alternatives, Pinyin ví dụ, thứ tự; 2 CMS E2E đạt.
+- FIX-01: DONE; nút Đăng xuất rõ chữ tại header, E2E logout/reload/401 đạt.
+- Unit/integration mốc trước: 15/15; lượt UI không đổi backend nên không chạy lại. Chi tiết TEST_REPORT.
+- Học liệu: 16 bài draft, 94 word IDs, 80 câu hỏi; đã bổ sung 39 ví dụ. Chưa đủ giáo trình HSK4, chưa ánh xạ chuẩn đầy đủ hoặc duyệt chuyên môn độc lập. Không tự publish.
+- Seed thêm revision sample khi nguồn đổi, không ghi đè lịch sử hoặc published pointer. Giữ .local/ và tài khoản người dùng.
+- Backup local đã thử restore vào DB mới, kiểm tra sai mật khẩu/thiếu bảng/pointer hỏng/DB không trống. Chưa có backup ngoài AWS hoặc diễn tập cloud migration.
+- Cloud: chưa truy cập tài khoản, chưa tạo tài nguyên/deploy. Production còn cần HTTPS/email.
+- Phạm vi giữ nguyên: nhập môn–hết HSK4, miễn phí 18+, AI tùy chọn, thay giáo trình/mở rộng HSK5–6, backup di chuyển.
+- Ngân sách tối đa 150 USD/6 tháng gồm credit, không tiền trả thêm. 200 USD credit và hạn 5 tháng 20 ngày là thông tin chủ dự án cung cấp 16/10, chưa kiểm tra Console.
+- Dependency audit mốc trước: 5 high trong dev ESLint/braces, cần kiểm tra lại trước release.
+- Bước tiếp: NEXT_STEPS. Chưa hoàn thành toàn dự án; không quảng cáo độ phủ học liệu/triển khai vượt bằng chứng.

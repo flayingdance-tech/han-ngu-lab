@@ -16,7 +16,7 @@ test('editor changes exercise type, alternative answers and example Pinyin in a 
   const db=openDatabase('.local/hanngulab.sqlite');
   try{db.prepare("UPDATE users SET role='editor' WHERE email=?").run(email);}finally{db.close();}
   expect((await page.request.post('/api/auth/login',{headers,data:{email,password}})).ok()).toBeTruthy();
-  const lesson={...structuredClone(seedLessons[0]),id:`cms-${randomUUID()}`,title:`Bài kiểm thử ${info.project.name}`};
+  const lesson={...structuredClone(seedLessons[0]),id:`cms-${randomUUID()}`,title:`Bài kiểm thử ${info.project.name} ${randomUUID()}`};
   expect((await page.request.post('/api/admin/lessons',{headers,data:lesson})).status()).toBe(201);
   await page.goto('/');
   const menu=page.getByRole('button',{name:'Mở điều hướng'});
