@@ -22,3 +22,10 @@
 - Dependency audit mốc trước: 5 high trong dev ESLint/braces, cần kiểm tra lại trước release.
 - Bước tiếp: NEXT_STEPS. Chưa hoàn thành toàn dự án; không quảng cáo độ phủ học liệu/triển khai vượt bằng chứng.
 - Xác minh UI-06: typecheck/lint 14722 exit 0; build cuối 21044 exit 0. Theme lượt đầu 3 đạt/1 lỗi do CSS specificity; đã sửa, ca đó chạy lại 50383 đạt. Đã xem dark review desktop và home mobile. Không còn test/build cần chờ.
+
+- 2026-10-18 +07:00 AUDIO-01: khảo sát VoiceStudio/podcast xong; mới đánh giá khả thi, chưa xử lý MP4 hoặc thay audio. AUDIO-02 còn quyền giọng và thử chất lượng; WORK_LOG.
+
+- AUDIO-02 IN_PROGRESS 2026-10-18 +07:00: chủ dự án xác nhận full quyền giọng; đang chuẩn bị mẫu tách nhạc và chỉnh nhẹ, chưa nhân bản. Venv/session và lệnh ở WORK_LOG; scripts/audio_preview.py tái lập pipeline.
+
+
+- AUDIO-03 DONE 2026-10-18 15:25 +07:00: 3 mẫu MP3 24.5s tại .local/audio-preview; model htdemucs CPU, 42.95s pipeline, ffprobe/decode/loudness và pip check đạt. Chờ đánh giá nghe; chưa clone/TTS hoặc thay audio web. Không có tiến trình cần chờ.

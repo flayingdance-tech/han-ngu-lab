@@ -39,3 +39,7 @@ D-021 ACCEPTED (2026-10-18 +07:00): ưu tiên bố cục, tỉ lệ hình và mi
 D-022 ACCEPTED (2026-10-18 +07:00): dark không hiển thị chibi; dùng góc học lo-fi không nhân vật, giữ minh họa của chế độ sáng.
 
 D-023 ACCEPTED (2026-10-18 +07:00), thay phần ảnh nền của D-022: dark giữ nữ lo-fi study-night.webp, chỉ ẩn chibi trẻ em. Chế độ sáng giữ nguyên. Không tạo ảnh mới.
+
+D-024 PROPOSED (2026-10-18 +07:00): VoiceStudio offline để sản xuất audio đã duyệt và podcast; chưa chốt thay toàn bộ, engine hoặc quyền giọng. Chi tiết WORK_LOG.
+
+D-025 OWNER_REPORTED (2026-10-18 +07:00): chủ dự án xác nhận giọng MP4 đã được cấp full quyền sử dụng/chỉnh sửa/nhân bản; yêu cầu mẫu nghe. Không cần hỏi lại cùng phạm vi.

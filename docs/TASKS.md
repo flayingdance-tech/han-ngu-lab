@@ -38,3 +38,8 @@ Trạng thái: TODO / IN_PROGRESS / BLOCKED / DONE. Phạm vi đã chốt; nghi�
 | UI-05 | Dùng đúng minh họa gốc trùng hoàn toàn mẫu | BLOCKED | Cần bộ asset gốc riêng lẻ; hiện chỉ có collage 821x461, bản tái dựng không trùng pixel |
 | UI-06 | Bỏ chibi khỏi dark | DONE | Ẩn mascot/header/sidebar, hero góc học trống; 4 ca theme đạt qua sửa và chạy lại; typecheck/lint/build đạt |
 | UI-07 | Khôi phục nữ lo-fi, dark chỉ bỏ trẻ chibi | DONE | Đổi đúng dark hero về study-night.webp; theme 4/4, lint/build đạt, light không đổi |
+
+| AUDIO-01 | Khảo sát VoiceStudio và podcast | DONE | Đọc tài liệu chính thức, kiểm tra audio hiện tại/GPU/file; WORK_LOG. Chưa thử chất lượng |
+| AUDIO-02 | Thử tách nhạc/chỉnh và nhân bản giọng | IN_PROGRESS | Chủ dự án xác nhận full quyền; mẫu xử lý đã có (AUDIO-03), còn đánh giá nghe và nhân bản/TTS |
+
+| AUDIO-03 | Xuất mẫu nghe bản thu gốc/tách nhạc/chỉnh nhẹ | DONE | 3 MP3 24.5 giây, CPU pipeline 42.95s, ffprobe/FFmpeg đạt; WORK_LOG và .local/audio-preview/report.json |

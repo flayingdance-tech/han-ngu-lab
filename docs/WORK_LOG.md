@@ -132,3 +132,32 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 - Đã hiểu lại yêu cầu: dark chỉ bỏ chibi trẻ em, giữ ảnh nữ lo-fi gốc; light giữ nguyên.
 - Đổi đúng biến --hero-art của :root[data-theme=dark] về study-night.webp; giữ các rule ẩn child mascot. Đang xác minh theme/build.
 - 2026-10-18 15:00 +07:00: UI-07 hoàn tất. Theme 56696 đạt 4/4 desktop/mobile, hero nữ lo-fi đúng nguồn và dark không trẻ chibi; light vẫn có hình. Build 26032 exit 0 gồm TypeScript, lint test exit 0. Đã xem screenshot home tối desktop. Không tạo/chỉnh ảnh, không còn lệnh chờ.
+
+## 2026-10-18 +07:00 — khảo sát VoiceStudio/podcast
+- Đã xác nhận file MP4 người dùng gửi tồn tại (985487 bytes); chưa nghe, tách nhạc, chỉnh giọng hoặc nhân bản.
+- VoiceStudio có Vocal Isolation, voice cloning, batch và local API theo README/feature catalog; chưa cài/chạy thử, không tải model.
+- Máy hiện báo Intel UHD Graphics 620; PyTorch Windows của VoiceStudio chạy CPU với Intel theo performance guide. Chưa benchmark hay kiểm tra đủ RAM/disk.
+- Audio hiện dùng speechSynthesis trong lib/client.ts. Đề xuất sinh audio offline, duyệt rồi phát file tĩnh; không chạy AI theo mỗi lượt nghe.
+- Tách nhạc sạch hoàn toàn/chất lượng giọng trẻ hơn chưa xác minh. Cần thử mẫu ngắn, giữ thanh điệu tiếng Trung, transcript đúng và duyệt phát âm.
+- Trước nhân bản/phát hành cần làm rõ quyền dùng bản ghi và sự đồng ý của chủ giọng; chưa xác định chủ giọng từ tên file.
+- Đề xuất podcast 3–5 phút, chủ đề công sở, HSK, transcript Hán/Pinyin/Việt, lặp câu, shadowing, quiz, lưu từ vào SRS. Chưa triển khai hoặc thay âm thanh/UI.
+- Nguồn: https://github.com/debpalash/VoiceStudio ; docs/feature-catalog.md ; docs/performance.md. App AGPL-3.0, quyền model/voice/output riêng; cần kiểm tra engine đã chọn.
+- Tiếp theo: làm rõ quyền giọng, thử một mẫu và đánh giá CPU/chất lượng trước quyết định thay toàn bộ. Không phát sinh cloud/API phí.
+
+## 2026-10-18 15:17 +07:00 — AUDIO-02 đang xử lý mẫu
+- Chủ dự án xác nhận giọng được cấp full quyền; đã nhận yêu cầu xuất mẫu nghe.
+- File nguồn thực tế audio MP3 stereo 44.1kHz trong đuôi .mp4, 24.566712 giây; FFmpeg giải mã source.wav 24.5 giây thành công.
+- Workspace riêng .local/audio-preview (gitignore); bản gốc không bị ghi đè. 01-giong-goc.mp3 đã xuất để so sánh, loudnorm -18 LUFS, TP -1.5.
+- VoiceStudio backend/services/dub_pipeline.py xác minh dùng demucs.separate --two-stems vocals -n htdemucs. Đang cài riêng cùng engine, chưa cài toàn bộ VoiceStudio/clone/TTS.
+- Venv Python 3.12.14 tại .local/audio-preview/venv; torch/torchaudio 2.8.0 CPU đang cài (session 36614). Tiếp theo: cài demucs/soundfile, tách vocals CPU, FFmpeg chỉnh nhẹ 0.5 semitone + EQ, xuất MP3 và đo duration/peak. Chưa nghe/đánh giá chủ quan.
+- Nguồn công cụ: https://github.com/debpalash/VoiceStudio/blob/main/backend/services/dub_pipeline.py . Không dùng dịch vụ cloud/API tính phí.
+
+## 2026-10-18 15:25 +07:00 — AUDIO-03 DONE, mẫu nghe đã xuất
+- Lệnh đạt: .local/audio-preview/venv/Scripts/python.exe -X utf8 scripts/audio_preview.py .local/audio-preview/source.wav .local/audio-preview ; session 82231 exit 0. Pipeline 42.95 giây gồm inference và encode, không gồm cài/import ban đầu.
+- Engine Demucs 4.0.1/htdemucs CPU 4 threads, shifts=1; cùng engine VoiceStudio đang gọi, không phải cài toàn bộ ứng dụng VoiceStudio. Torch/torchaudio 2.8.0+cpu; soundfile 0.14.0. pip check đạt. Model SHA256 8726e21a993978c7ba086d3872e7608d7d5bfca646ca4aca459ffda844faa8b4, khớp prefix upstream.
+- Mẫu riêng tư trong .local/audio-preview (đã gitignore): 01-giong-goc.mp3, 02-giong-tach-nhac.mp3, 03-giong-thanh-nhe.mp3; source.wav/vocals.wav và model/venv được giữ để tiếp tục.
+- Bản 03 highpass 65Hz, EQ 300Hz -1dB/3kHz +1.2dB, rubberband pitch +0.5 semitone/formant preserved; loudnorm mục tiêu -18LUFS trên cả ba bản.
+- Kiểm tra ffprobe: cả ba stereo 44100Hz/24.5 giây; FFmpeg decode/loudnorm đạt exit 0. LUFS lần lượt -18.07/-18.15/-18.17; true peak -8.88/-10.26/-8.53 dBTP. Không clipping theo phép đo này. Python syntax compile đạt; không đổi mã web nên không chạy build/E2E.
+- Trong cài Demucs có lỗi ghi log cp1252 với đường dẫn Unicode nhưng install exit 0; đã dùng -X utf8 cho lệnh sau. Không có dependency lỗi qua pip check.
+- Đã chạy tách nguồn thực sự, chưa chứng minh nhạc sạch 100% hoặc giọng tự nhiên bằng nghe. Không có công cụ nghe/duyệt chuyên môn ở lượt này; để chủ dự án so sánh mẫu. Đây là xử lý bản thu, chưa clone hoặc tạo lời đọc mới; chưa thay audio website/chưa publish.
+- Không còn tiến trình cài/tách cần chờ. Bước tiếp: nhận đánh giá âm sắc, thử TTS clone/podcast và kiểm tra thanh điệu trước thay âm thanh diện rộng. Quyền giọng đã được chủ dự án xác nhận, không hỏi lại.
