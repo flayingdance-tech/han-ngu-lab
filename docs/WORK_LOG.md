@@ -169,3 +169,71 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 - Cả hai loudnorm I=-18/TP=-1.5/LRA=7; MP3 lame q2 stereo 44100Hz, ffprobe 24.5s; FFmpeg encode/decode exit 0. LUFS nhẹ/vừa -18.20/-18.18; true peak -7.87/-8.13 dBTP. Chưa được nghe/duyệt chủ quan; tăng cao độ/âm sắc chỉ tạo cảm giác trẻ, không chứng minh độ tuổi.
 - Mức +1.5 (05-giong-tre-hon.mp3) có xuất trước khi chủ dự án thu hẹp yêu cầu, không chọn giới thiệu hoặc đưa vào web. Bản nguồn và mẫu cũ được giữ.
 - Không sửa web/backend, không chạy build/E2E; không còn lệnh cần chờ. Tiếp: chủ dự án nghe hai mức, chọn âm sắc trước nhân bản/podcast.
+
+## 2026-10-18 +07:00 — AUDIO-05: đối chiếu file vocals mới
+- File D:/audio [vocals].mp3: 667715 bytes, MP3 stereo 44100Hz, 24.552948s, khoảng 217.6kbps; loudness -13.80LUFS, true peak -4.87dBTP. ffprobe và decode/loudnorm exit 0.
+- Mẫu 02-giong-tach-nhac.mp3: stereo 44100Hz/24.5s, khoảng 125.8kbps; phép đo trước -18.15LUFS/-10.26dBTP. File mới to hơn khoảng 4.35LU không chứng minh phát âm chính xác/ít nhiễu hơn.
+- Chưa nghe được/duyệt ngữ âm hai bản nên không kết luận file nào sạch hơn hoặc không sai thanh điệu. Đề xuất provisional: tham chiếu giọng không pitch/formant shift, dùng vocals.wav hiện có để tránh thêm lần mã hóa MP3; thử clone cùng văn bản/thiết lập rồi duyệt trước chọn master. Chưa chạy clone.
+- Không dùng các bản trẻ nhẹ/vừa làm chuẩn phát âm lúc này. Chủ dự án chưa chốt nguồn master. File mới không bị sửa; không sao chép vào public hoặc Git.
+- Tài liệu đã đối chiếu: https://github.com/debpalash/VoiceStudio/blob/main/docs/audio-quality.md ; kiểm tra tín hiệu không chấm độ tự nhiên, thử ngắn không xếp hạng chất lượng đa ngôn ngữ.
+
+## 2026-10-18 +07:00 — AUDIO-06 bắt đầu
+- Chủ dự án chốt voice sau tách nhạc. Reuse .local/audio-preview/vocals.wav, không dùng bản pitch shift hoặc file mới.
+- Clone VoiceStudio sparse nguồn omnivoice tại .local/VoiceStudio SHA d819ff54d93017bf4a5b34b605833162163c9e3c; không bundle vào frontend. Session cài deps 48537; model k2-fsa/OmniVoice revision c5fdb5ccb189668d56333f77ba2629f4cd7535f4 đang tải riêng trong .local/audio-preview/tts-model.
+- Chọn inference CPU, không gọi API tính phí. Model upstream CC-BY-NC, code fork/app AGPL; tokenizer có license riêng. Dự án hiện miễn phí, cần rà lại trước mô hình thu phí. Chưa chứng minh clone hoặc đọc tiếng Trung đúng.
+- File/code sẽ sửa: lib/audio.ts, lib/client.ts, LessonPlayer/page, scripts xuất target/generation/audit, public/audio và tests; checkpoint trước sinh dài.
+
+
+### AUDIO-06 checkpoint mẫu clone
+- Xuất 145 targets public-only (16 bài) qua scripts/audio-targets.ts; typecheck 9459 đạt. Test audio 3 ca đạt (38755 còn lint cần nhận kết quả).
+- ASR nhỏ local nhận diện zh, transcript có lỗi/đoạn bị cắt ở mốc 12s; đã chọn lại câu/clause hoàn chỉnh 0–8.97s từ cùng giọng. .local/voice/reference.json + WAV, chưa humanReviewed.
+- Lượt render 40948 dừng có kiểm soát PID 7652 vì prompt tạo ngoài inference_mode gây bộ nhớ cao; chưa xuất audio. Đã bọc torch.inference_mode cho prompt, fingerprint model/ref/settings cho cache, faulthandler 180s chẩn đoán. Rerun 2 clip đang chạy; kiểm tra session mới trước chạy lại.
+- ASR PyAV 19 không tương thích metadata_errors; sửa decode qua FFmpeg -> float32 array, không sửa deps hoặc hạ test. Một số file ASR tùy chọn 404; vocabulary.txt đã lấy đúng, ASR thực chạy thành công.
+- Không đưa reference/private voice profile lên public/Git. Native engine từ clone VoiceStudio pinned; chưa cài desktop/backend đầy đủ. Không giả định đã clone thành công.
+
+
+### AUDIO-06 checkpoint CPU 16:16 +07:00
+- FP32 33336 đã sinh thật 2 clip, batch 161.8s. INT8 81894 đã sinh thật 4 clip, batch 256.5s; giữ file nhưng dừng PID 1884 tại checkpoint do áp lực RAM (~94.5%).
+- Lượt mới 12229 dùng reference trọn câu 4.11s cùng master, INT8 và clone những embedding/norms còn tham chiếu safetensors mmap để giải phóng float pages cũ. Fingerprint tách bộ này với các thử trước. Các file mẫu cũ không xóa.
+- Lib Audio + buttons đã thay TTS trình duyệt; About/vocab nhãn audio thử nghiệm. Chặn unreviewed ngoài lesson preview. Test unit audio 3/3 và lint lượt 38755 đạt. Typecheck lượt 41489 phát hiện cast instrumentation E2E, đã sửa; 7110 đang chạy typecheck/lint cuối.
+- E2E 79920 chạy sớm trong khi sửa UI/tạo asset: 1 đạt/3 timeout (desktop readyState khi hot reload; mobile thiếu dialogue file; một navigation load timeout). Chưa coi đạt; cần chạy lại khi code/manifest ổn định và asset đủ, không hạ assertions.
+- Model source/weights đã ở .local; không API trả phí. Thêm VOICE_RUNBOOK, audio-audit, voice-qa, wrappers. Chưa đủ 145 clip/duyệt phát âm/backup media; AUDIO-06 còn IN_PROGRESS.
+
+
+### AUDIO-06 16:19 +07:00
+- Chốt ref4.11s trọn câu đúng từmaster, profile tiếng Trung ASR chưa humanReviewed. Phiên đang chạy 12229 PID16772, all145 batch4/int8/16steps. Sau giải phóng mmap tham chiếu: working set khoảng2670MiB/available3508MiB, giảm áp lựcRAM so lượt trước. Không sửa/mua dịch vụ hệ thống.
+- Unit/integration 29471 đạt18/18; typecheck/lint7110 exit0. Sau đó bổ sung E2E coverageSổtừvựng (testfile cầnlinttypecheckcuối). TestE2E sẽ chạy lại sauassetđủ, khôngHMRgiữachừng.
+- Cònrender145/auditdecode+ASRtriage/mediarestoreroundtrip/build/E2E/hồsơcuối. Chưa hoàn thànhAUDIO06.
+
+
+### AUDIO-06 16:25 +07:00
+- Phiên 12229 đã ghi checkpoint8/145 (batch4 FP32/INT8 phù hợp). Sau đó dừng tại8 để chuyển batch8 có nhóm độ dài tương tự; phiên đang chạy40746/PID6328, tiếp tục137 mục cùngfingerprint/ref4.11. Không xóa/ghi đè8 file đã hoàn tất.
+- QA84778: decode8files/4entries không phát hiện lỗi tín hiệu; ASR từng từ rất ngắn có hallucination/empty (好 nhận nhầm chuỗi dài, 你/谢谢 trống), không được coi là pass phát âm. Ghép8clip kiểmtra65962 nhận '你好再见不客气你好谢谢你', thiếu/lược các từ lặp. Giữ báo cáo private asr-first8.json, signal-qa.json; humanReviewed=false.
+- Typecheck/lint95557 exit0. E2E44018 đang chạy14ca trên code ổn định; desktop audio real+failure đã đạt, còn nhận kết quả learning/theme/mobile. Không sửa app trong lúc lượt này chạy.
+
+
+### AUDIO-06 checkpoint 16:38 +07:00
+- E2E44018:13đạt/1lỗifixturestrictselectorSổtừvựngtrùng2navmobile. Sửa scopenavigationchính; rerun54092 đạt1/1 (audio normal/slow, cancel, vocabulary, khôngbrowserTTS). Các ca learning/theme desktopmobile khácđãđạt. Typecheck/lint51053đạt; AST5scriptPythonđạt.
+- voice-finalize.py theo dõiPID6328 (session mới ởtool), chờrenderthoát0rồichạyaudit145/decode/ASR8mẫu(khôngduyệt)/cache-no-op/media backuprestore/build/exportidentity/privateleakcheck. Vừa khởiđộnglạichỉobserverđểápdụngphiênbảnmớinhất; producerkhôngbịdừng.
+- Renderer đãxuất32clip ởlầnđọc16:35. Thêmfast-pathkhôngnạpmodelnếucacheđủvàchặnregenapprovedthiếufileđểphụchồitừbackup. Phiênđangchạycompiledbảntrướcfast-path, khôngđổikếtquảrender. ScriptSourceđãlưuđểtiếptục.
+- ĐãkhảosátMOSS-TTS-NanotrongVoiceStudio(thíchhợpCPU), chưacàivàkhôngđổi engine trongđợtnày; ưu tiênmẫu/giọngOmniđangtest. KhôngkếtluậnASRđúng100%hoặcđãduyệtthanhđiệu.
+
+## AUDIO-06 checkpoint 2026-10-18 16:49 +07:00
+- Producer hiện tại: session 40746, PID 6328, OmniVoice INT8/ref 4.11 giây; 64/145 clip đã tạo. Không giả định các clip đã được duyệt phát âm.
+- Observer/finalizer duy nhất hiện tại: session 72560, có finalize.lock; chờ producer rồi audit/cache/decode/backup/build. Hai observer cũ 79209/85687 đã dừng khi cập nhật script. Một helper chọn process bằng substring tự kết thúc; đã sửa chọn chính xác argument + cwd và thêm lock. Không dừng producer từ thao tác observer.
+- Kiểm tra F0 bốn thanh (79935) chỉ là triage, không phải chấm thanh điệu: đường F0 chưa đủ rõ để khẳng định đúng; dữ liệu private f0-four-tones.json. Giữ toàn bộ audio unreviewed.
+- Đang thử riêng engine MOSS-TTS-Nano ONNX được VoiceStudio hỗ trợ để so sánh CPU/độ rõ; chưa thay production bank. Source pin 8b7bcc9341b3b4ef3a3a58ba1338a7d85ff133eb trùng pin được VoiceStudio hướng dẫn; source/model cards Apache-2.0. Source .local/MOSS-TTS-Nano, weights .local/moss-models; revision trong mỗi thư mục model.
+- Prototype 70212 lỗi SentencePiece đọc đường dẫn Unicode Windows dù file có thật; 20677 đang thử adapter nạp model_proto bytes, không sửa upstream source, không dịch chuyển repo. Đây vẫn là cùng reference đã được chủ dự án chọn. Không gửi giọng lên dịch vụ ngoài.
+- E2E tổng 14 ca đã đạt qua sửa fixture/chạy lại; unit/integration18/18; lint/typecheck đạt. Build và nghiệm thu corpus/backup vẫn đang chờ. Không triển khai cloud.
+
+
+## AUDIO-06 checkpoint 2026-10-18 19:36 +07:00 — tiếp tục sau gián đoạn
+- Renderer cũ PID6328 và observer cũ không còn chạy; manifest còn 72/145 đoạn. Không suy phiên tool mất handle là hoàn thành. Render report 2 clip thuộc lần thử cũ, không phải nghiệm thu corpus.
+- Đã tiếp tục cùng reference/fingerprint, bỏ qua 72 clip có đủ file: launcher PID10224, Python con PID13924. Finalizer launcher PID13136/Python con PID14852 chờ producer; stdout/stderr riêng ở .local/voice/*-resume.log và *-resume.err. Chưa có build/backup/audit cuối đạt.
+- Prototype MOSS 20677 đã tạo câu thử nhưng ASR chỉ nhận phần đầu; chưa xác nhận chất lượng và không thay engine sản xuất. Bốn mẫu thanh riêng đã tạo để khảo sát, không được duyệt. Không cần chạy thêm engine cạnh tranh CPU trong lượt render chính.
+- Đã rà soát thay browser TTS ở từ vựng, hội thoại và sổ từ vựng; không sửa CSS/theme. Key giữ Pinyin để phân biệt reading, nhưng model nhận chữ Hán, chưa có điều khiển phát âm Pinyin; chữ đa âm cần nghe duyệt.
+- NEXT_STEPS đã bỏ các hướng dẫn lỗi thời về hỏi quyền/chọn giọng trẻ/cài model chưa có. Quyết định cuối là nguồn chỉ tách nhạc, quyền đã xác nhận, mọi output vẫn unreviewed.
+
+### AUDIO-06 2026-10-18 19:39 +07:00 — snapshot bảo vệ tiến độ
+- Chạy thực scripts/audio-backup.ts qua tsx: exit 0, 72 entries, 151 file backup/restore khớp SHA256. Snapshot .local/voice-backups/2026-10-18T12-38-21-134Z; restore .local/voice-restore-check/2026-10-18T12-38-21-134Z. Có profile/master riêng; không đưa snapshot lên public/Git. Đây là backup cùng máy, chưa phải ngoài máy/AWS.
+- Renderer PID13924 vẫn xử lý batch 73 mục còn lại. Snapshot không chứng minh đủ 145 mục. Finalizer sẽ tạo bản đủ sau audit nếu thành công.

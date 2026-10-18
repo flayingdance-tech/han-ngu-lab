@@ -1,20 +1,14 @@
 # Bước tiếp theo
 
-Checkpoint 2026-10-18, Asia/Bangkok.
+Checkpoint 2026-10-18 19:36 +07:00. Quyết định mới nhất thay các đề xuất cũ; lịch sử nằm trong WORK_LOG và DECISIONS.
 
-1. Đọc AGENTS, PROJECT_STATUS, DECISIONS, TASKS; đối chiếu Git/process. Không chạy lại các lệnh đã hoàn tất nếu không có thay đổi mới.
-2. UI-04 đã triển khai bố cục sát collage, minh họa tái dựng có reference; UI-02/UI-03 đã xác minh trước. UI-05 cần asset gốc tách riêng nếu yêu cầu trùng ảnh hoàn toàn. Xem DESIGN_ASSETS và TEST_REPORT. Giữ preview trên localhost:3000 và dữ liệu .local/.
-3. Tiếp tục phần dự án còn thiếu: CMS CSV/media, reviewer/publication browser, audit/users và kiểm tra phiên hết hạn/lỗi mạng.
-4. Hoàn thiện ma trận nhập môn–HSK4 theo chuẩn xác định. 16 bài hiện có chưa phải giáo trình hoàn chỉnh; nội dung chưa duyệt giữ draft.
-5. Soạn học liệu/media có nguồn và quy trình duyệt người thật. Các quyết định chuẩn HSK/người duyệt/quyền xuất bản còn thiếu phải chốt trước public.
-6. Hoàn thiện cloud/email và kế hoạch tải/chi phí sau khi có quyền kiểm tra tài khoản; không nâng gói/mua dịch vụ hoặc suy ngày hết credit từ ZIP.
-7. Backup ngoài AWS và diễn tập migration giữ user/progress/content/media/auth/email; local roundtrip không thay thế diễn tập cloud.
-8. Giữ trần 150 USD gồm credit/6 tháng, không phát sinh tiền trả thêm, tuổi 18+, AI tùy chọn.
-9. Cập nhật hồ sơ sau mỗi mốc; không ghi mật khẩu/token. Chỉ nghiệm thu toàn dự án khi đủ phạm vi đã chốt.
-- UI-07 làm rõ và thay phần nền của UI-06: dark giữ nữ lo-fi, chỉ ẩn trẻ chibi; light giữ nguyên. Đã kiểm tra, không đổi lại sang góc học trống.
-
-- Audio/podcast: làm rõ quyền nhân bản giọng MP4; thử mẫu ngắn và benchmark CPU, duyệt thanh điệu trước thay toàn bộ. Đề xuất sinh offline/phát file tĩnh. Chưa cài VoiceStudio, chưa tải model.
-
-- AUDIO-03 đã xuất 01-giong-goc/02-giong-tach-nhac/03-giong-thanh-nhe.mp3 trong .local/audio-preview; chạy lại bằng scripts/audio_preview.py với venv và -X utf8. Tiếp: đánh giá mẫu nghe, clone/TTS và podcast. Quyền giọng đã xác nhận; không hỏi lại. Chưa duyệt độ sạch/âm sắc/thanh điệu.
-
-- Yêu cầu mới: trẻ hơn nhưng chỉ mức nhẹ/vừa. Mẫu để nghe: 06-giong-tre-nhe.mp3 và 04-giong-tre-vua.mp3; ưu tiên phản hồi hai mức này trước clone/podcast. Chi tiết bộ lọc WORK_LOG.
+1. AUDIO-06 đang chạy tiếp từ 72/145 đoạn. Đọc đầu PROJECT_STATUS, kiểm tra process thực và `.local/voice/render-resume.log`, `finalize-resume.log`, hai file `.err`. Không khởi động producer trùng. Finalizer chỉ thành công khi có `finalize-report.json` mới và đầy đủ bằng chứng.
+2. Hoàn tất 145 âm thường +145 âm chậm; audit độ phủ, decode, kiểm tra tín hiệu, thử cache không tái tạo, backup/restore SHA256, build và đối chiếu static export. Chưa có kết quả cuối ở checkpoint này.
+3. Dùng đúng bản chỉ tách nhạc đã chốt, không pitch/formant shift. Quyền giọng đã xác nhận; không hỏi lại. VoiceStudio native engine và model đã tải cục bộ, không phải desktop GUI đã cài. Không dùng API trả phí hoặc fallback giọng thiết bị.
+4. Giữ audio tổng hợp ở unreviewed; chỉ cho phát trong bài preview. Nghe duyệt tiếng Trung, nhất là bốn thanh và chữ đa âm, trước xuất bản. ASR/F0 không thay thế người duyệt. MOSS thử riêng có dấu hiệu thiếu cuối câu; chưa thay bộ OmniVoice đang sản xuất.
+5. Cập nhật TEST_REPORT, STATUS, TASKS và WORK_LOG sau kết quả thực; kiểm tra diff rồi commit mốc. Không ghi secret hoặc profile giọng riêng vào Git/public.
+6. Giữ giao diện sáng hiện có; tối dùng nữ lo-fi, chỉ ẩn trẻ chibi. UI-05 vẫn cần asset gốc riêng nếu yêu cầu trùng hoàn toàn collage.
+7. Phần dự án còn thiếu: CMS CSV/media, giao diện reviewer/publication, audit/users và kiểm tra phiên hết hạn/lỗi mạng. Podcast là phần tiếp theo, chưa có thư viện podcast hoàn chỉnh.
+8. Hoàn thiện ma trận nhập môn–HSK4 theo chuẩn xác định và quy trình duyệt. 16 bài hiện tại là draft, chưa phải giáo trình HSK4 hoàn chỉnh; không tự publish.
+9. Cloud/email và dự toán tải cần quyền truy cập tài khoản; chưa tạo tài nguyên/deploy. Giữ trần 150 USD/6 tháng gồm credit, không tiền trả thêm, tuổi 18+, AI tùy chọn.
+10. Backup ngoài AWS và diễn tập migration user/progress/content/media/auth/email còn phải thực hiện. Backup/restore trên cùng máy không chứng minh đã có bản ngoài máy/cloud.

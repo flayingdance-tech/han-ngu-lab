@@ -9,16 +9,6 @@ export async function api<T>(path: string, body?: unknown, method?: string): Pro
   if (!res.ok) throw new ApiError(data.issues?.length ? `${data.error} ${data.issues.map((x: {path:string;message:string}) => `${x.path}: ${x.message}`).join('; ')}` : data.error ?? 'Có lỗi xảy ra.', res.status);
   return data;
 }
-export function speak(text: string, slow = false): boolean {
-  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return false;
-  const voices = speechSynthesis.getVoices();
-  const voice = voices.find(v => /^zh[-_]CN/i.test(v.lang)) ?? voices.find(v => /^zh/i.test(v.lang));
-  if (!voice) return false;
-  speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.voice = voice; utterance.lang = 'zh-CN'; utterance.rate = slow ? .65 : .85;
-  speechSynthesis.speak(utterance); return true;
-}
 export function downloadJson(value: unknown, name: string) {
   const url = URL.createObjectURL(new Blob([JSON.stringify(value, null, 2)], { type: 'application/json' }));
   const link = document.createElement('a'); link.href = url; link.download = name; link.click(); URL.revokeObjectURL(url);

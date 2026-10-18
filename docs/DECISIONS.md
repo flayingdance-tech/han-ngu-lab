@@ -43,3 +43,5 @@ D-023 ACCEPTED (2026-10-18 +07:00), thay phần ảnh nền của D-022: dark gi
 D-024 PROPOSED (2026-10-18 +07:00): VoiceStudio offline để sản xuất audio đã duyệt và podcast; chưa chốt thay toàn bộ, engine hoặc quyền giọng. Chi tiết WORK_LOG.
 
 D-025 OWNER_REPORTED (2026-10-18 +07:00): chủ dự án xác nhận giọng MP4 đã được cấp full quyền sử dụng/chỉnh sửa/nhân bản; yêu cầu mẫu nghe. Không cần hỏi lại cùng phạm vi.
+
+D-026 ACCEPTED (2026-10-18 +07:00), cập nhật D-024: chủ dự án chốt bản 1 chỉ tách nhạc làm voice toàn dự án, thay giọng trình duyệt; tích hợp VoiceStudio xử lý cục bộ/sinh file sẵn để không có phí API. Giữ nguyên pitch/formant, quyền giọng theo D-025. Nội dung AI vẫn unreviewed đến khi có duyệt chuyên môn. Không hứa hosting/băng thông miễn phí vô hạn.

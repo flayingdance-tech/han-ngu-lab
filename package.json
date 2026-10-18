@@ -19,7 +19,12 @@
     "check": "npm run typecheck && npm run lint && npm test && npm run build",
     "admin": "tsx scripts/admin.ts",
     "backup": "tsx scripts/backup.ts",
-    "content:check": "tsx scripts/content-check.ts"
+    "content:check": "tsx scripts/content-check.ts",
+    "audio:targets": "tsx scripts/audio-targets.ts",
+    "audio:render": "tsx scripts/voice-command.ts render",
+    "audio:reference": "tsx scripts/voice-command.ts reference",
+    "audio:check": "tsx scripts/audio-audit.ts",
+    "audio:backup": "tsx scripts/audio-backup.ts"
   },
   "dependencies": {
     "cookie-parser": "1.4.7",

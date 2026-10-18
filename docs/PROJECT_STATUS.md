@@ -1,6 +1,7 @@
 # Trạng thái hiện tại — đọc đầu tiên khi tiếp tục
 
-- Checkpoint: 2026-10-18, Asia/Bangkok. UI-07 DONE: dark khôi phục nữ lo-fi study-night.webp, chỉ ẩn trẻ chibi; light giữ nguyên. Thay cách hiểu ảnh nền ở UI-06.
+- Checkpoint: 2026-10-18 19:35 +07:00. AUDIO-06 IN_PROGRESS: đã có 72/145 đoạn (mỗi đoạn thường/chậm). Sau gián đoạn, renderer cũ PID6328 không còn; đã tiếp tục bằng launcher PID10224, Python con PID13924; finalizer launcher PID13136, con PID14852. Log ở .local/voice/*-resume.log và *-resume.err. Chưa có finalize-report.json thành công; không chạy thêm producer trùng.
+- UI-07 DONE: dark khôi phục nữ lo-fi study-night.webp, chỉ ẩn trẻ chibi; light giữ nguyên. Thay cách hiểu ảnh nền ở UI-06.
 - Workspace: D:\Hán Ngữ Lab. Đã được giao triển khai, không hỏi lại lệnh bắt đầu.
 - Mốc UI-04: bố cục/tỉ lệ sát collage đã triển khai. Home banner ~3:1 + 3 thẻ ngang, header gọn/cảnh nền, bé trai sidebar desktop lớn, review scene, StudyActivity dùng dữ liệu thật. Chưa trùng hoàn toàn ảnh gốc; UI-05 phụ thuộc bộ asset riêng lẻ.
 - File chính: app/themes.css, app/components/ThemeToggle.tsx, ChineseText.tsx, LessonPlayer.tsx, app/page.tsx, app/layout.tsx; thêm app/reference-ui.css, StudyActivity.tsx; assets/prompt trong DESIGN_ASSETS.md, REFERENCE_UI_PROMPTS.json.
@@ -31,3 +32,9 @@
 - AUDIO-03 DONE 2026-10-18 15:25 +07:00: 3 mẫu MP3 24.5s tại .local/audio-preview; model htdemucs CPU, 42.95s pipeline, ffprobe/decode/loudness và pip check đạt. Chờ đánh giá nghe; chưa clone/TTS hoặc thay audio web. Không có tiến trình cần chờ.
 
 - AUDIO-04 DONE 2026-10-18 15:30 +07:00: mẫu trẻ nhẹ 06 (+0.75 cung)/vừa 04 (+1 cung), mỗi bản 24.5s trong .local/audio-preview; encode/decode/duration/peak đạt. Chờ đánh giá nghe; chưa áp dụng website hoặc clone.
+
+- AUDIO-05 2026-10-18 +07:00: file vocals mới đã kiểm tra metadata/peak; chưa nghe/duyệt ngữ âm, chưa chốt master. Đề xuất thử clone nguồn không chỉnh pitch/formant và duyệt tiếng Trung; chi tiết WORK_LOG.
+
+- AUDIO-06 IN_PROGRESS 2026-10-18 16:19 +07:00: pipeline clone thật đã xuất mẫu; phiên sản xuất hiện 12229/PID 16772 (INT8/ref4.11s) đang chạy, không khởi động trùng. Mục tiêu 145 âm thường +145 chậm. Mã frontend đã chuyển file giọng riêng, chưa đủ corpus; chưa nghiệm thu. Unit/integration 29471 đạt 18/18, typecheck/lint 7110 đạt; cần build, audit, E2E cuối khi render/code ổn định. Xem WORK_LOG/VOICE_RUNBOOK.
+
+- AUDIO-06 checkpoint 16:38 +07:00: 40746/PID6328 đang render137 clip còn lại (sau8đãcó), không chạy bản thứhai. 14ca E2E44018 đạt13/14; lỗifixturemobile navtrùng, đãscopetheonavigation; rerun54092 đạt1/1. Tổng14cađạtquasửa/chạylại. Unit18/18, typecheck/lint51053 đạt. Finalizerđangchờrenderđểaudit, QA, cache-no-op, archiveprototypevàbackup/build/exportcheck; chưa coi cácbướcnàyđãđạt.
