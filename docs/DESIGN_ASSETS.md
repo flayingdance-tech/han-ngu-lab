@@ -1,5 +1,17 @@
 # Giao diện pastel và lo-fi
 
+## 2026-10-18 — chibi riêng cho bốn tab
+
+- Chủ dự án yêu cầu nhân vật trẻ mũm mĩm theo ảnh collage mới; minh họa không thay đổi đối tượng 18+ của website.
+- Tạo mới bằng ImageGen tích hợp, nền trong suốt; prompt đầy đủ trong `CHIBI_PROMPTS.json`.
+- `public/images/chibi-roadmap.webp`: bé khám phá, ba lô và cuộn bản đồ.
+- `public/images/chibi-review.webp`: bé đeo tai nghe, ôm sách.
+- `public/images/chibi-vocab.webp`: bé học thẻ từ cùng sách và mèo.
+- `public/images/chibi-progress.webp`: bé ăn mừng tiến bộ với sao vàng.
+- Header có hai cột desktop, chuyển thành chữ trên/ảnh dưới trên mobile; cùng asset alpha trên nền pastel hoặc nền tối có ánh đèn ấm.
+- Bốn PNG nguồn 1280×1280 có alpha; asset web 640×640, WebP quality 88/alphaQuality 100. Tổng 414.076 byte (khoảng 404 KiB), không tải cả bốn vào một header.
+- Không có chữ/đáp án được nhúng vào ảnh, không có dữ liệu học viên trong prompt.
+
 2026-10-18, Asia/Bangkok. Yêu cầu trực tiếp: thiết kế theo ảnh tham khảo do chủ dự án cung cấp, tăng chữ Trung và thêm chế độ tối.
 
 - Tham khảo: `D:\Bảng giao diện Hán Ngữ Lab pastel đáng yêu.png`.

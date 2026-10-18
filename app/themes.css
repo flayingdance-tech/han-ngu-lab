@@ -92,3 +92,21 @@ footer,footer button{color:var(--muted);font-size:12px}.footer-dot{color:var(--g
 @media(max-width:520px){.hero{min-height:650px;padding:28px 24px}.hero-copy{max-width:100%}.hero h2{font-size:33px;max-width:310px}.hero:before{background-size:auto 300px;background-position:right bottom}.hero:after{background:linear-gradient(180deg,var(--hero-wash) 0%,var(--hero-wash) 32%,transparent 66%)}.hero p{max-width:270px;margin-bottom:16px}.hero .button{font-size:14px}.hero-caption{max-width:220px;line-height:1.7}.hero-label{font-size:10px}.greeting h1{font-size:23px}.greeting-dot{display:none}.vocab-grid{grid-template-columns:1fr}.vocab-card{padding:26px}.hanzi{font-size:58px;margin-top:0}.catalog-grid{grid-template-columns:1fr}.level-cards{grid-template-columns:1fr}.level-card{padding:21px 20px 20px 83px}.level-character{font-size:42px}.level-card .eyebrow{font-size:10px}.level-card p{font-size:14px}.level-card small{font-size:12px}.stat div>span{font-size:12px}.stat .icon-tile{width:32px;height:36px}.stat{padding:15px 12px!important}.stat strong{font-size:27px}.lesson-row>div{min-width:140px}.lesson-row strong{font-size:15px}.lesson-row div span{font-size:14px}.dialogue{padding:24px 15px}.dialogue-line{gap:8px}.dialogue-line>div{padding:15px;min-width:0}.dialogue-line .avatar{display:none}.dialogue-line .icon-button{width:36px;height:40px}.grammar blockquote{padding:18px}.grammar blockquote>span{font-size:28px}.question-number{width:25px}.flashcard>strong{font-size:76px}.rating-buttons{grid-template-columns:repeat(2,1fr)}.rating-buttons .button{font-size:14px}.daily-note:after{display:none}.daily-note{padding-right:22px}.auth-panel{padding:26px}.roadmap-banner{padding:20px;gap:14px}.roadmap-banner p{font-size:13px}.toolbar>select{max-width:100%;width:100%}}
 
 .option>.option-copy{font-size:inherit;color:var(--ink);flex:1;min-width:0}
+
+/* Each learning space has its own chibi companion. Copy never sits under the artwork. */
+.page-heading-copy{position:relative;z-index:1;min-width:0}
+.page-heading-copy>p{font-size:15px;line-height:1.85;max-width:620px;margin-bottom:0;color:var(--muted)}
+.illustrated-heading{display:grid;grid-template-columns:minmax(0,1fr) 280px;align-items:center;gap:18px;min-height:260px;padding:28px 30px 28px 34px;background:radial-gradient(ellipse at 92% 30%,#f7d3c1 0,transparent 62%),linear-gradient(115deg,#fff8f1,#fae9e2)}
+.illustrated-heading:after{background:radial-gradient(ellipse at 15% 90%,#f9bbae40,transparent 45%),radial-gradient(circle at 86% 28%,#fff9e8 0 48px,transparent 49px);opacity:1}
+.illustrated-heading h1{font-size:clamp(28px,2.6vw,36px);line-height:1.35;margin:12px 0}
+.page-mascot{height:240px;min-width:0;background:var(--mascot) center / contain no-repeat;filter:drop-shadow(0 10px 12px #a0443420);pointer-events:none}
+.illustrated-roadmap{--mascot:url('/images/chibi-roadmap.webp')}
+.illustrated-review{--mascot:url('/images/chibi-review.webp')}
+.illustrated-vocab{--mascot:url('/images/chibi-vocab.webp')}
+.illustrated-progress{--mascot:url('/images/chibi-progress.webp')}
+.page-review .empty{padding-top:45px;background:var(--surface)}
+[data-theme=dark] .illustrated-heading{background:radial-gradient(ellipse at 90% 50%,#6e405459,transparent 65%),linear-gradient(115deg,#262337,#322738)}
+[data-theme=dark] .illustrated-heading:after{background:radial-gradient(ellipse at 90% 75%,#d99c6529,transparent 50%),radial-gradient(circle at 86% 28%,#ffe8b91a 0 48px,transparent 49px)}
+[data-theme=dark] .page-mascot{filter:drop-shadow(0 12px 16px #0d07184d)}
+@media(max-width:1000px){.illustrated-heading{grid-template-columns:minmax(0,1fr) 220px;padding:24px;gap:10px}.page-mascot{height:220px}}
+@media(max-width:600px){.illustrated-heading{grid-template-columns:1fr;gap:4px;padding:25px 24px 12px}.illustrated-heading h1{font-size:29px}.illustrated-heading .page-heading-copy>p{max-width:none}.page-mascot{height:210px;width:min(100%,280px);justify-self:center}.illustrated-heading:after{background:radial-gradient(ellipse at 50% 85%,#ffd1b94d,transparent 60%)}[data-theme=dark] .illustrated-heading:after{background:radial-gradient(ellipse at 50% 85%,#d99c6529,transparent 60%)}}

@@ -31,3 +31,5 @@ D-018 ACCEPTED: Sol 6.1/Vừa cho lập trình thường; Sol 6.1/Cao cho tính 
 Nguồn tên model/nỗ lực đã đối chiếu: https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6.1-sol .
 
 D-019 ACCEPTED (2026-10-18 +07:00): giao diện pastel theo ảnh chủ dự án, tăng chữ Trung, thêm chế độ tối dùng minh họa góc học lo-fi. Tài nguyên và prompt: DESIGN_ASSETS.md.
+
+D-020 ACCEPTED (2026-10-18 +07:00): bốn tab Lộ trình/Ôn tập/Sổ từ vựng/Tiến độ có minh họa chibi trẻ mũm mĩm riêng theo ảnh do chủ dự án cung cấp. Đây là phong cách minh họa, đối tượng website vẫn 18+.

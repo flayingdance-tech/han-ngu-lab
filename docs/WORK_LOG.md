@@ -104,3 +104,11 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 
 - 2026-10-18 11:13 +07:00: UI-02 hoàn tất. Theme 25857 đạt 2/2, lint 61475 exit 0, build 91120 exit 0 (gồm TypeScript). Preview và asset HTTP 200. Đã xem ảnh mobile cuối; không còn test/build cần chờ. Không tạo cloud/không đổi dữ liệu học.
 - Commit UI đã xác minh: 37ac5d4 (local, chưa push).
+
+## 2026-10-18 14:26 +07:00 — UI-03 nhân vật riêng cho bốn tab
+- Chủ dự án yêu cầu chibi trẻ mũm mĩm theo ảnh mới. Đang tạo bốn ảnh trong suốt bằng ImageGen, không dùng API của sản phẩm.
+- Tiếp theo: header riêng cho roadmap/review/vocab/progress, kiểm tra khách chưa đăng nhập và responsive sáng/tối. Không đổi auth/học liệu/tuổi sử dụng.
+
+- 2026-10-18 14:30 +07:00: đã lưu bốn WebP alpha 640px (~404 KiB), PageHeading có art riêng, review/progress header hiện cả khi chưa đăng nhập. Đang chạy typecheck/lint 12495, build 12957, 10 E2E học/theme/chibi 27956. Chưa ghi đạt trước khi lấy exit code.
+
+- 2026-10-18 14:32 +07:00: UI-03 hoàn tất. Typecheck/lint 12495 exit 0; build 12957 exit 0, có đủ 4 asset trong out/images; E2E 27956 đạt 10/10. Đã xem roadmap sáng desktop, vocab tối desktop, review sáng mobile, progress tối mobile; HTTP asset 200. Không còn lệnh kiểm tra đang chờ.

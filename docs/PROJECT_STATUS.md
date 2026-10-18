@@ -2,9 +2,9 @@
 
 - Checkpoint: 2026-10-18, Asia/Bangkok. Chi tiết thời gian và lệnh trong WORK_LOG.
 - Workspace: D:\Hán Ngữ Lab. Đã được giao triển khai, không hỏi lại lệnh bắt đầu.
-- Mốc mới nhất UI-02: DONE. Giao diện pastel theo ảnh chủ dự án, dark lo-fi, chữ Trung lớn, nhớ theme, responsive desktop/mobile.
-- File chính: app/themes.css, app/components/ThemeToggle.tsx, ChineseText.tsx, LessonPlayer.tsx, app/page.tsx, app/layout.tsx; assets và prompt trong DESIGN_ASSETS.md.
-- Xác minh UI: typecheck/lint đạt; build cuối 91120 exit 0; theme E2E cuối 25857 đạt 2/2. Tổng 10 ca E2E khác nhau đã đạt qua lượt đầu và chạy lại ca lỗi; không gọi lượt đầu 10/10.
+- Mốc mới nhất UI-03: DONE. Bốn tab roadmap/review/vocab/progress có ảnh chibi riêng trên nền sáng/tối; header hiện cả khi khách chưa đăng nhập. UI-02 pastel/lo-fi/chữ Trung lớn đã bàn giao.
+- File chính: app/themes.css, app/components/ThemeToggle.tsx, ChineseText.tsx, LessonPlayer.tsx, app/page.tsx, app/layout.tsx; assets và prompt trong DESIGN_ASSETS.md, CHIBI_PROMPTS.json.
+- Xác minh UI-03: typecheck/lint 12495 exit 0, build 12957 exit 0; 10/10 E2E học/theme/chibi đạt (27956). Đã xem ảnh desktop/mobile sáng/tối; bốn WebP có trong out/images.
 - Lỗi đã sửa: fixture CMS trùng tên giữa các lượt (UUID); tên accessible radio khi tách chữ Hán; dấu câu bị giãn trong flex. Đã xem ảnh desktop/mobile sáng/tối và bài học.
 - Preview loopback http://localhost:3000/ và ảnh WebP trả HTTP 200. Giữ server hiện hành; kiểm tra port/process trước chạy mới, không giả định session cũ còn sống.
 - Không còn build/test đang chạy. Không có .codegraph/ tại lần kiểm tra, không tự index.

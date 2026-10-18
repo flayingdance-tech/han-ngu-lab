@@ -33,3 +33,4 @@ Trạng thái: TODO / IN_PROGRESS / BLOCKED / DONE. Phạm vi đã chốt; nghi�
 | FIX-01 | Đăng xuất dễ tìm desktop/mobile | DONE | Nút header, 2 E2E xác minh logout + /me 401 + reload |
 | CMS-EDIT-01 | Soạn đủ 3 loại bài tập, alternatives, Pinyin ví dụ, thứ tự | DONE | 2 CMS E2E, typecheck, lint và build đạt ngày 18/10 |
 | UI-02 | Pastel theo ảnh, chữ Trung lớn, theme tối lo-fi | DONE | Typecheck/lint/build đạt; 2 theme E2E, 8 ca học/CMS đạt qua chạy lại; xem TEST_REPORT/DESIGN_ASSETS |
+| UI-03 | Minh họa chibi riêng cho bốn tab học | DONE | 4 WebP alpha, 10/10 E2E học/theme/chibi; typecheck/lint/build đạt; screenshot desktop/mobile sáng/tối |

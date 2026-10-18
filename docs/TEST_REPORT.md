@@ -62,3 +62,13 @@ Chạy local tests cần quyền loopback của môi trường; EACCES trong lư
 - Đã xem trực quan ảnh home sáng/tối desktop/mobile, bài học tối mobile và quiz sáng desktop. Ảnh hiện ở test-results/*home*, *lesson*, *quiz* (không commit).
 - HTTP localhost:3000 và /images/study-night.webp trả 200.
 - Backend không thay đổi: không chạy lại 15 unit/integration đã đạt mốc trước. Chưa kiểm tra mọi trình duyệt/thiết bị thật hoặc triển khai cloud.
+
+## 2026-10-18 +07:00 — UI-03: chibi riêng từng tab
+
+- Typecheck/lint: node node_modules/typescript/bin/tsc --noEmit --incremental false; node node_modules/eslint/bin/eslint.js app/page.tsx tests/e2e/theme.spec.ts — không có lỗi, exit 0 (12495).
+- Build: node node_modules/next/dist/bin/next build --webpack — exit 0 (12957), bốn asset đã có trong out/images.
+- Browser: node node_modules/@playwright/test/cli.js test tests/e2e/theme.spec.ts tests/e2e/learning.spec.ts — 10/10 đạt (27956), không retry.
+- Ca chibi duyệt bốn tab ở light/dark, desktop 1440px/mobile 390px: asset HTTP thành công, heading hiển thị, ảnh và chữ không đè nhau, không tràn ngang. Ca học/auth/logout/theme/cỡ chữ tiếp tục đạt.
+- Đã xem screenshot roadmap-light-desktop, vocab-dark-desktop, review-light-mobile, progress-dark-mobile; screenshot đầy đủ từng tab ở test-results/chibi-*.png (không commit).
+- Bốn PNG nguồn có alpha; WebP 640px giữ alpha, tổng 414.076 byte. HTTP asset trên preview trả 200.
+- Backend/CMS không thay đổi; lượt này không chạy lại unit/integration hoặc CMS E2E của mốc trước. Chưa kiểm tra mọi thiết bị thật hoặc cloud.
