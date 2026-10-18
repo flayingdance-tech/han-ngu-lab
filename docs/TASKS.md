@@ -43,3 +43,4 @@ Trạng thái: TODO / IN_PROGRESS / BLOCKED / DONE. Phạm vi đã chốt; nghi�
 | AUDIO-02 | Thử tách nhạc/chỉnh và nhân bản giọng | IN_PROGRESS | Chủ dự án xác nhận full quyền; mẫu xử lý đã có (AUDIO-03), còn đánh giá nghe và nhân bản/TTS |
 
 | AUDIO-03 | Xuất mẫu nghe bản thu gốc/tách nhạc/chỉnh nhẹ | DONE | 3 MP3 24.5 giây, CPU pipeline 42.95s, ffprobe/FFmpeg đạt; WORK_LOG và .local/audio-preview/report.json |
+| AUDIO-04 | Mẫu giọng trẻ nhẹ/vừa | DONE | Hai MP3 24.5s +0.75/+1 cung, ffprobe/decode/loudness đạt; chờ đánh giá âm sắc |

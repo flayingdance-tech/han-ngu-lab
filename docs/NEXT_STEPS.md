@@ -16,3 +16,5 @@ Checkpoint 2026-10-18, Asia/Bangkok.
 - Audio/podcast: làm rõ quyền nhân bản giọng MP4; thử mẫu ngắn và benchmark CPU, duyệt thanh điệu trước thay toàn bộ. Đề xuất sinh offline/phát file tĩnh. Chưa cài VoiceStudio, chưa tải model.
 
 - AUDIO-03 đã xuất 01-giong-goc/02-giong-tach-nhac/03-giong-thanh-nhe.mp3 trong .local/audio-preview; chạy lại bằng scripts/audio_preview.py với venv và -X utf8. Tiếp: đánh giá mẫu nghe, clone/TTS và podcast. Quyền giọng đã xác nhận; không hỏi lại. Chưa duyệt độ sạch/âm sắc/thanh điệu.
+
+- Yêu cầu mới: trẻ hơn nhưng chỉ mức nhẹ/vừa. Mẫu để nghe: 06-giong-tre-nhe.mp3 và 04-giong-tre-vua.mp3; ưu tiên phản hồi hai mức này trước clone/podcast. Chi tiết bộ lọc WORK_LOG.

@@ -161,3 +161,11 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 - Trong cài Demucs có lỗi ghi log cp1252 với đường dẫn Unicode nhưng install exit 0; đã dùng -X utf8 cho lệnh sau. Không có dependency lỗi qua pip check.
 - Đã chạy tách nguồn thực sự, chưa chứng minh nhạc sạch 100% hoặc giọng tự nhiên bằng nghe. Không có công cụ nghe/duyệt chuyên môn ở lượt này; để chủ dự án so sánh mẫu. Đây là xử lý bản thu, chưa clone hoặc tạo lời đọc mới; chưa thay audio website/chưa publish.
 - Không còn tiến trình cài/tách cần chờ. Bước tiếp: nhận đánh giá âm sắc, thử TTS clone/podcast và kiểm tra thanh điệu trước thay âm thanh diện rộng. Quyền giọng đã được chủ dự án xác nhận, không hỏi lại.
+
+## 2026-10-18 15:30 +07:00 — AUDIO-04 DONE: giọng trẻ mức nhẹ/vừa
+- Chủ dự án muốn trẻ hơn, sau đó giới hạn hai mức nhẹ và vừa. Đã xuất từ vocals.wav hiện có, không tách lại hoặc chạy clone.
+- Nhẹ: .local/audio-preview/06-giong-tre-nhe.mp3 ; rubberband tempo=1/pitch=1.0442737824 (+0.75 semitone), formant=shifted/pitchq=quality; highpass 70Hz, EQ 280Hz -1dB/3200Hz +1dB.
+- Vừa: .local/audio-preview/04-giong-tre-vua.mp3 ; rubberband tempo=1/pitch=1.0594630944 (+1 semitone), formant=shifted/pitchq=quality; highpass 70Hz, EQ 280Hz -1.2dB/3200Hz +1.3dB.
+- Cả hai loudnorm I=-18/TP=-1.5/LRA=7; MP3 lame q2 stereo 44100Hz, ffprobe 24.5s; FFmpeg encode/decode exit 0. LUFS nhẹ/vừa -18.20/-18.18; true peak -7.87/-8.13 dBTP. Chưa được nghe/duyệt chủ quan; tăng cao độ/âm sắc chỉ tạo cảm giác trẻ, không chứng minh độ tuổi.
+- Mức +1.5 (05-giong-tre-hon.mp3) có xuất trước khi chủ dự án thu hẹp yêu cầu, không chọn giới thiệu hoặc đưa vào web. Bản nguồn và mẫu cũ được giữ.
+- Không sửa web/backend, không chạy build/E2E; không còn lệnh cần chờ. Tiếp: chủ dự án nghe hai mức, chọn âm sắc trước nhân bản/podcast.

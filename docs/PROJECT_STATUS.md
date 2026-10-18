@@ -29,3 +29,5 @@
 
 
 - AUDIO-03 DONE 2026-10-18 15:25 +07:00: 3 mẫu MP3 24.5s tại .local/audio-preview; model htdemucs CPU, 42.95s pipeline, ffprobe/decode/loudness và pip check đạt. Chờ đánh giá nghe; chưa clone/TTS hoặc thay audio web. Không có tiến trình cần chờ.
+
+- AUDIO-04 DONE 2026-10-18 15:30 +07:00: mẫu trẻ nhẹ 06 (+0.75 cung)/vừa 04 (+1 cung), mỗi bản 24.5s trong .local/audio-preview; encode/decode/duration/peak đạt. Chờ đánh giá nghe; chưa áp dụng website hoặc clone.
