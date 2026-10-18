@@ -33,6 +33,8 @@ Chạy tại gốc repo bằng PowerShell UTF-8. Runtime hiện dùng Python 3.1
 
 Lượt render có thể tiếp tục sau gián đoạn: manifest ghi nguyên tử sau mỗi clip, mục đã đủ file cùng fingerprint được bỏ qua. Không xóa DB, source/reference hoặc cả thư mục `.local` để làm lại. Nếu đổi engine/reference/settings, tạo file hash mới. Khi thêm/sửa bài, xuất lại targets rồi render phần thiếu. Kết quả phát âm vẫn cần duyệt.
 
+Trên Windows, nếu reader/antivirus tạm giữ file, bước thay file nguyên tử sẽ thử lại có giới hạn rồi báo lỗi; không xóa manifest cũ để vượt khóa. Toàn bộ WAV của một batch được lưu trước khi encode/cập nhật manifest. Lượt tiếp theo kiểm tra WAV cùng fingerprint và phục hồi MP3/danh mục từ đó, không cần tổng hợp lại. Test hồi quy: `python -B tests/test_voice_io.py` bằng runtime local; cache hỏng/khác profile không được dùng.
+
 ## Nguồn và môi trường đã chọn
 
 - VoiceStudio: https://github.com/debpalash/VoiceStudio ; source pin `d819ff54d93017bf4a5b34b605833162163c9e3c`. Ứng dụng/source fork AGPL-3.0; bản nguồn đầy đủ có thể lấy từ repository tại commit này. Tích hợp engine được chạy cục bộ, không bundle Python vào web.

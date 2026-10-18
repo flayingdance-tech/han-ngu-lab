@@ -20,7 +20,7 @@ args = parser.parse_args()
 if args.wait_pid:
     try:
         process = psutil.Process(args.wait_pid)
-        if not any('voice-render.py' in part for part in process.cmdline()):
+        if not any(Path(part).name == 'voice-render.py' for part in process.cmdline()):
             raise RuntimeError('Refusing to wait on an unrelated process')
         count = -1
         while True:
@@ -68,17 +68,21 @@ for file in folder.iterdir():
     source.rename(destination)
     archived.append(file.name)
 print(f'Archived {len(archived)} unused prototypes privately', flush=True)
+if list((root/'public/audio').rglob('*.tmp.*')):
+    raise RuntimeError('Temporary audio files remain; do not export a partial write')
 run(['node', 'node_modules/tsx/dist/cli.mjs', 'scripts/audio-backup.ts'])
 run(['node', 'node_modules/next/dist/bin/next', 'build', '--webpack'])
 
 # The static export must include every referenced audio file, and no reference/model.
+if (root/'out/audio/manifest.json').read_bytes() != (root/'public/audio/manifest.json').read_bytes():
+    raise RuntimeError('Exported audio manifest differs from the checked source')
 for item in manifest['entries'].values():
     for kind in ('normal', 'slow'):
         relative = item[kind].lstrip('/')
         public_file, exported = root/'public'/relative, root/'out'/relative
         if not exported.is_file() or exported.read_bytes() != public_file.read_bytes():
             raise RuntimeError(f'Static export is incomplete: {relative}')
-if any(file.name in ('reference.wav', 'reference.json', 'model.safetensors') for file in (root/'out').rglob('*')):
+if any(file.name in ('reference.wav', 'reference.json', 'master-vocals.wav') or file.suffix in ('.pt', '.safetensors') for file in (root/'out').rglob('*')):
     raise RuntimeError('Private model/reference leaked into static export')
 report = {'entries':len(manifest['entries']), 'files':len(used), 'archivedPrototypes':len(archived),
           'backupRoundtrip':True,'build':True,'exportVerified':True,'deployed':False,'humanReviewed':False,

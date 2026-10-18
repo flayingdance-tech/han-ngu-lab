@@ -99,3 +99,17 @@ Chạy local tests cần quyền loopback của môi trường; EACCES trong lư
 - node node_modules/@playwright/test/cli.js test tests/e2e/theme.spec.ts — 4/4 đạt (56696), desktop/mobile, đúng hero nữ lo-fi, dark không child mascot và light còn hình.
 - node node_modules/next/dist/bin/next build --webpack — exit 0 (26032), gồm TypeScript; node node_modules/eslint/bin/eslint.js tests/e2e/theme.spec.ts — exit 0.
 - Đã xem home tối desktop. Không chạy lại backend/CMS tests vì không thay logic; không tạo ảnh mới.
+
+## AUDIO-06 — bằng chứng tạm thời 2026-10-18 19:41 +07:00
+
+- Unit/integration: session 29471, 18/18 đạt, gồm 3 ca audio mới về key/manifest/cancel/lỗi media/gate unreviewed. Typecheck/lint 7110, 95557, 51053 đạt; AST 5 Python scripts đạt ở checkpoint 16:37. Không sửa kiểm tra để báo xanh.
+- E2E audio/learning/theme desktop/mobile 44018: 13 đạt, 1 lỗi fixture do hai navigation cùng có nút Sổ từ vựng trên mobile. Sửa selector scope navigation chính; rerun 54092 đạt 1/1. Tổng 14 ca khác nhau đã đạt qua sửa/chạy lại, không gọi lượt đầu là sạch.
+- Lượt E2E sớm 79920 trước asset/code ổn định có 1 đạt/3 timeout; không dùng làm bằng chứng đạt cuối.
+- Backup/restore scripts/audio-backup.ts session 55091 exit 0: 72 entries, 151 file SHA256 khớp tại .local/voice-backups/2026-10-18T12-38-21-134Z và restore-check cùng timestamp. Chỉ backup cùng máy, không chứng minh bản ngoài AWS.
+- Corpus hiện 80/145 đoạn; producer đang tiếp tục. Build cuối, audit đủ corpus, decode toàn bộ, static export và backup bộ đủ chưa có kết quả. Tất cả audio vẫn unreviewed, chưa nghiệm thu phát âm/thanh điệu hoặc độ tự nhiên bằng nghe.
+
+- Bổ sung 19:50 +07:00: pip check runtime Python exit 0 (68677), không dependency hỏng. npm audit --omit=dev --json exit 0 (3368), 0 vulnerability trong dependency production; không đánh đồng với audit dev hoặc kiểm thử bảo mật tổng thể. Corpus đã 104/145, các nghiệm thu cuối vẫn chờ.
+
+- AUDIO-06 19:58 +07:00: E2E audio chạy lại 32319 đạt 4/4 trong 1.6 phút, desktop/mobile, không retry; preview HTTP200. Lượt5264 trước đó chưa vào test do webServer cold start/khởi động trùng, exit1; đã chờ HTTP200 rồi chạy lại. Không có thay đổi CSS/theme. Full corpus/build vẫn chờ producer.
+
+- AUDIO-06 20:08 +07:00: test Python tests/test_voice_io.py đạt2/2 về Windows file lock và bảo toàn dữ liệu khi hết retry; AST6 file đạt. Cache recovery thật35192 phục hồi1 mục từ WAV, không nạp TTS (generated0,recovered1,total124,pending21). Producer trước đó WinError5 ở manifest, finalizer dừng đúng; chưa nghiệm thu build/corpus. Full21 mục tiếp tục bằng log *-final.*.

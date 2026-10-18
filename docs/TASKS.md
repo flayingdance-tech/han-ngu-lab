@@ -40,9 +40,10 @@ Trạng thái: TODO / IN_PROGRESS / BLOCKED / DONE. Phạm vi đã chốt; nghi�
 | UI-07 | Khôi phục nữ lo-fi, dark chỉ bỏ trẻ chibi | DONE | Đổi đúng dark hero về study-night.webp; theme 4/4, lint/build đạt, light không đổi |
 
 | AUDIO-01 | Khảo sát VoiceStudio và podcast | DONE | Đọc tài liệu chính thức, kiểm tra audio hiện tại/GPU/file; WORK_LOG. Chưa thử chất lượng |
-| AUDIO-02 | Thử tách nhạc/chỉnh và nhân bản giọng | IN_PROGRESS | Chủ dự án xác nhận full quyền; mẫu xử lý đã có (AUDIO-03), còn đánh giá nghe và nhân bản/TTS |
+| AUDIO-02 | Thử tách nhạc/chỉnh và nhân bản giọng | IN_PROGRESS | Đã tách nhạc và chạy nhân bản/TTS thật cục bộ; quyền giọng xác nhận, master theo D-026. Còn nghe duyệt ngữ âm/độ tự nhiên; ASR/F0 không thay thế duyệt |
 
 | AUDIO-03 | Xuất mẫu nghe bản thu gốc/tách nhạc/chỉnh nhẹ | DONE | 3 MP3 24.5 giây, CPU pipeline 42.95s, ffprobe/FFmpeg đạt; WORK_LOG và .local/audio-preview/report.json |
 | AUDIO-04 | Mẫu giọng trẻ nhẹ/vừa | DONE | Hai MP3 24.5s +0.75/+1 cung, ffprobe/decode/loudness đạt; chờ đánh giá âm sắc |
-| AUDIO-05 | Kiểm tra kỹ thuật nguồn vocals mới | DONE | Metadata/decode/loudness đạt; WORK_LOG. Chưa đánh giá nghe hoặc chọn master cuối |
-| AUDIO-06 | Giọng thống nhất + VoiceStudio offline | IN_PROGRESS | Clone mẫu thật, audio manifest/file theo nội dung, thay browser TTS, xử lý lỗi/cancel, kiểm thử và hướng dẫn tái tạo/backup; chưa đủ khi chỉ có adapter |
+| AUDIO-05 | Kiểm tra kỹ thuật nguồn vocals mới | DONE | Metadata/decode/loudness đạt; WORK_LOG. Không duyệt chất lượng nghe; quyết định master sau đó ở D-026 |
+| AUDIO-06 | Giọng thống nhất + VoiceStudio offline | IN_PROGRESS | Mã tích hợp f7cf56e; 120/145 đoạn, unit18/18, audio E2E mới4/4. Đợi corpus đủ, audit/decode/build/static export và backup bộ đủ; chưa nghiệm thu phát âm |
+| AUDIO-07 | Nghe duyệt audio trước xuất bản | TODO | Người có chuyên môn đối chiếu chữ Hán/Pinyin, bốn thanh, chữ đa âm, độ tự nhiên và quyền media; lưu bằng chứng trước approved. Chưa có output nào approved |

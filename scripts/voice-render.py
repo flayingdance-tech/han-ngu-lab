@@ -10,6 +10,7 @@ import faulthandler
 import gc
 from datetime import datetime, timezone
 from pathlib import Path
+from voice_io import atomic_replace
 
 VOICE = "hnl-original-v1"
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,6 +24,7 @@ def main():
     p.add_argument("--steps", type=int, default=16)
     p.add_argument("--allow-preview", action="store_true")
     p.add_argument("--int8", action="store_true", help="CPU dynamic INT8 for the language backbone; codec stays float32")
+    p.add_argument("--recover-only", action="store_true", help="Restore valid cached WAVs without loading the synthesis model")
     p.add_argument("--trace-interval", type=int, default=0)
     args = p.parse_args()
     if args.trace_interval > 0:
@@ -82,8 +84,47 @@ def main():
         todo = todo[:args.limit]
     # Similar lengths share a batch so short words do not pay sentence padding cost.
     todo.sort(key=lambda item: len(item["text"]))
-    if not todo:
-        report = {"generated": 0, "totalEntries": len(manifest["entries"]), "cacheHit": True, "apiCalls": 0}
+    recovered = 0
+    if todo:
+        import numpy as np
+        import soundfile as sf
+
+    def deliver(item):
+        nonlocal done
+        wav_path = staging / f"{item['id']}.wav"
+        for suffix, filters in (("", "loudnorm=I=-18:TP=-1.5:LRA=7"),
+                                ("-slow", "atempo=0.8,loudnorm=I=-18:TP=-1.5:LRA=7")):
+            target = output / f"{item['id']}{suffix}.mp3"
+            temporary = target.with_suffix(".tmp.mp3")
+            subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(wav_path),
+                            "-af", filters, "-ar", "24000", "-c:a", "libmp3lame", "-q:a", "2", str(temporary)], check=True)
+            atomic_replace(temporary, target)
+        manifest["entries"][item["key"]] = {"text": item["text"], "pinyin": item["pinyin"],
+            "normal": f"/audio/{VOICE}/{item['id']}.mp3", "slow": f"/audio/{VOICE}/{item['id']}-slow.mp3",
+            "review": "unreviewed"}
+        temporary_manifest = manifest_path.with_suffix(".tmp.json")
+        temporary_manifest.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+        atomic_replace(temporary_manifest, manifest_path)
+        done += 1
+        print(f"{len(manifest['entries'])}/{len(targets['targets'])}: {item['text']}", flush=True)
+
+    pending = []
+    for item in todo:
+        wav_path = staging / f"{item['id']}.wav"
+        if wav_path.exists():
+            try:
+                wave, rate = sf.read(wav_path, dtype="float32")
+                valid = rate == 24000 and wave.ndim == 1 and len(wave) >= rate * .2 and np.isfinite(wave).all() and np.max(np.abs(wave)) >= 1e-5
+            except (OSError, RuntimeError, ValueError):
+                valid = False
+            if valid:
+                deliver(item)
+                recovered += 1
+                continue
+        pending.append(item)
+    todo = pending
+    if not todo or args.recover_only:
+        report = {"generated": 0, "recoveredFromWav": recovered, "totalEntries": len(manifest["entries"]), "pending": len(todo), "cacheHit": not bool(todo), "apiCalls": 0}
         (workspace / "cache-check.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
         print(json.dumps(report), flush=True)
         faulthandler.cancel_dump_traceback_later()
@@ -129,33 +170,24 @@ def main():
             with torch.inference_mode():
                 waves = model.generate(text=[x["text"] for x in batch], language="zh",
                                        voice_clone_prompt=prompt, num_step=args.steps, speed=0.9)
+            # Persist the whole expensive batch before encoding/publishing any clip.
+            # A restart can then recover every WAV without running synthesis again.
             for item, wave in zip(batch, waves, strict=True):
                 wave = wave.detach().float().cpu().squeeze().numpy()
                 if not np.isfinite(wave).all() or len(wave) < model.sampling_rate * 0.2 or np.max(np.abs(wave)) < 1e-5:
                     raise ValueError(f"Invalid/silent generated audio: {item['id']}")
                 wav_path = staging / f"{item['id']}.wav"
-                sf.write(wav_path, wave, model.sampling_rate, subtype="FLOAT")
-                for suffix, filters in (("", "loudnorm=I=-18:TP=-1.5:LRA=7"),
-                                        ("-slow", "atempo=0.8,loudnorm=I=-18:TP=-1.5:LRA=7")):
-                    target = output / f"{item['id']}{suffix}.mp3"
-                    temporary = target.with_suffix(".tmp.mp3")
-                    subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(wav_path),
-                                    "-af", filters, "-ar", "24000", "-c:a", "libmp3lame", "-q:a", "2", str(temporary)], check=True)
-                    temporary.replace(target)
-                manifest["entries"][item["key"]] = {"text": item["text"], "pinyin": item["pinyin"],
-                    "normal": f"/audio/{VOICE}/{item['id']}.mp3", "slow": f"/audio/{VOICE}/{item['id']}-slow.mp3",
-                    "review": "unreviewed"}
-                temporary_manifest = manifest_path.with_suffix(".tmp.json")
-                temporary_manifest.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
-                temporary_manifest.replace(manifest_path)
-                done += 1
-                print(f"{len(manifest['entries'])}/{len(targets['targets'])}: {item['text']}", flush=True)
+                temporary_wav = wav_path.with_suffix(".tmp.wav")
+                sf.write(temporary_wav, wave, model.sampling_rate, subtype="FLOAT")
+                atomic_replace(temporary_wav, wav_path)
+            for item in batch:
+                deliver(item)
             print(f"Batch {time.monotonic()-started:.1f}s", flush=True)
         except Exception as error:
             failed.extend(x["id"] for x in batch if x["key"] not in manifest["entries"])
             print(f"Batch failed: {error}", file=sys.stderr, flush=True)
             raise
-    report = {"generated": done, "totalEntries": len(manifest["entries"]), "failed": failed,
+    report = {"generated": done - recovered, "recoveredFromWav": recovered, "totalEntries": len(manifest["entries"]), "failed": failed,
               "referenceSha256": reference_hash, "steps": args.steps,
               "int8": args.int8,
               "humanReviewed": False, "apiCalls": 0}

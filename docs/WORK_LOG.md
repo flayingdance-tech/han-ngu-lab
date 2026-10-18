@@ -237,3 +237,22 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 ### AUDIO-06 2026-10-18 19:39 +07:00 — snapshot bảo vệ tiến độ
 - Chạy thực scripts/audio-backup.ts qua tsx: exit 0, 72 entries, 151 file backup/restore khớp SHA256. Snapshot .local/voice-backups/2026-10-18T12-38-21-134Z; restore .local/voice-restore-check/2026-10-18T12-38-21-134Z. Có profile/master riêng; không đưa snapshot lên public/Git. Đây là backup cùng máy, chưa phải ngoài máy/AWS.
 - Renderer PID13924 vẫn xử lý batch 73 mục còn lại. Snapshot không chứng minh đủ 145 mục. Finalizer sẽ tạo bản đủ sau audit nếu thành công.
+
+### AUDIO-06 2026-10-18 19:50 +07:00
+- Renderer đã ghi 104/145 đoạn, 208 file thường/chậm được tham chiếu; chưa đủ corpus cuối. Không có batch lỗi được ghi nhận. Giữ cấu hình CPU INT8/16 bước/reference đã chốt.
+- Kiểm tra môi trường sau cài đủ engine/ASR: .local/audio-preview/venv/Scripts/python.exe -X utf8 -m pip check, session68677 exit0: No broken requirements found.
+- npm.cmd audit --omit=dev --json, session3368 exit0: vulnerabilities=0 (94 production dependencies trong báo cáo). Đây không phải kết luận mọi dependency dev hoặc toàn hệ thống đã an toàn; cảnh báo dev mốc cũ chưa được kiểm tra lại.
+
+### AUDIO-06 2026-10-18 19:58 +07:00 — khôi phục preview và xác minh lại audio
+- Khởi động preview loopback sau khi xác minh không listener 3000/3001: API launcher PID3296 (listener10460), web launcher2988 (listener1472). Log riêng .local/dev-*-resume.log/.err; không dump log xác thực.
+- E2E5264 chưa chạy ca nào: Playwright thử tự khởi động webServer khi máy chủ đang cold start, exit1. Không coi là lỗi assertion ứng dụng hoặc kết quả đạt. Chờ health HTTP200 (60849) rồi mới chạy lại.
+- E2E32319: node node_modules/@playwright/test/cli.js test tests/e2e/audio.spec.ts, 4/4 đạt trong1.6 phút, không retry. Desktop/mobile đều phát file normal/slow thật, dừng khi đổi tab, sổ từ vựng cùng giọng, thiếu file/lỗi mạng và retry không fallback browser TTS.
+- Producer vẫn chạy, không dừng để kiểm thử. Chưa build/audit toàn corpus.
+
+## AUDIO-06 2026-10-18 20:08 +07:00 — sửa khóa file Windows
+- Producer13924 dừng ở123 vì PermissionError WinError5 khi replace manifest.tmp.json -> manifest.json; finalizer dừng đúng với exit1, không báo nghiệm thu. File WAV và hai MP3 của mục124 đã ghi trước lỗi; không mất123 mục đã commit manifest. Nguyên nhân quan sát là handle/khóa Windows tại thao tác replace, chưa xác định process giữ handle.
+- Thêm scripts/voice_io.py: atomic replace thử lại tối đa12 lần, delay có giới hạn, không xóa destination cũ. Tests/test_voice_io.py có2 test khóa tạm thời/khóa lâu, cả2 đạt; xác minh giữ cả source/destination khi hết retry. AST6 file Python mới/liên quan đạt.
+- Renderer lưu toàn bộ WAV của batch trước encode/publish; trên resume kiểm tra WAV cùng fingerprint rồi phục hồi MP3/manifest. Lệnh --recover-only không nạp model TTS, đã chạy35192 exit0: recoveredFromWav=1,totalEntries=124,pending=21,generated=0,apiCalls=0.
+- Lượt thử --limit1 trước đó chọn theo thứ tự target, không trúng WAV cần khôi phục và bắt đầu nạp model; đã dừng đúng Python16112/launcher5876 trước sinh audio. Không có producer khác chạy cùng lúc. Bổ sung --recover-only để kiểm tra đúng phục hồi thay vì dùng limit.
+- Đã tiếp tục full21 mục bằng launcher588, finalizer13792. Log mới .local/voice/render-final.log/.err và finalize-final.log/.err. Finalizer bổ sung đối chiếu manifest xuất tĩnh, chặn file tạm và kiểm tra không leak .pt/.safetensors/reference/master.
+- Không đổi model/reference/fingerprint hoặc frontend. Cấu hình vẫn CPU INT8/16steps; các âm vẫn unreviewed. Chưa có build/backup đủ corpus.

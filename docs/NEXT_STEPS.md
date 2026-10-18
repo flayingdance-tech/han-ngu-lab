@@ -1,8 +1,8 @@
 # Bước tiếp theo
 
-Checkpoint 2026-10-18 19:36 +07:00. Quyết định mới nhất thay các đề xuất cũ; lịch sử nằm trong WORK_LOG và DECISIONS.
+Checkpoint 2026-10-18 20:09 +07:00. Quyết định mới nhất thay các đề xuất cũ; lịch sử nằm trong WORK_LOG và DECISIONS.
 
-1. AUDIO-06 đang chạy tiếp từ 72/145 đoạn. Đọc đầu PROJECT_STATUS, kiểm tra process thực và `.local/voice/render-resume.log`, `finalize-resume.log`, hai file `.err`. Không khởi động producer trùng. Finalizer chỉ thành công khi có `finalize-report.json` mới và đầy đủ bằng chứng.
+1. AUDIO-06 đang chạy tiếp từ 124/145 đoạn. Đọc đầu PROJECT_STATUS, kiểm tra process thực và `.local/voice/render-final.log`, `finalize-final.log`, hai file `.err`. Không khởi động producer trùng. Finalizer chỉ thành công khi có `finalize-report.json` mới và đầy đủ bằng chứng.
 2. Hoàn tất 145 âm thường +145 âm chậm; audit độ phủ, decode, kiểm tra tín hiệu, thử cache không tái tạo, backup/restore SHA256, build và đối chiếu static export. Chưa có kết quả cuối ở checkpoint này.
 3. Dùng đúng bản chỉ tách nhạc đã chốt, không pitch/formant shift. Quyền giọng đã xác nhận; không hỏi lại. VoiceStudio native engine và model đã tải cục bộ, không phải desktop GUI đã cài. Không dùng API trả phí hoặc fallback giọng thiết bị.
 4. Giữ audio tổng hợp ở unreviewed; chỉ cho phát trong bài preview. Nghe duyệt tiếng Trung, nhất là bốn thanh và chữ đa âm, trước xuất bản. ASR/F0 không thay thế người duyệt. MOSS thử riêng có dấu hiệu thiếu cuối câu; chưa thay bộ OmniVoice đang sản xuất.
