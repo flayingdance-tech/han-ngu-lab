@@ -72,3 +72,14 @@ Chạy local tests cần quyền loopback của môi trường; EACCES trong lư
 - Đã xem screenshot roadmap-light-desktop, vocab-dark-desktop, review-light-mobile, progress-dark-mobile; screenshot đầy đủ từng tab ở test-results/chibi-*.png (không commit).
 - Bốn PNG nguồn có alpha; WebP 640px giữ alpha, tổng 414.076 byte. HTTP asset trên preview trả 200.
 - Backend/CMS không thay đổi; lượt này không chạy lại unit/integration hoặc CMS E2E của mốc trước. Chưa kiểm tra mọi thiết bị thật hoặc cloud.
+
+## 2026-10-18 +07:00 — UI-04: sát bố cục collage
+
+- Typecheck và lint ứng dụng: node node_modules/typescript/bin/tsc --noEmit --incremental false; node node_modules/eslint/bin/eslint.js app/page.tsx app/layout.tsx app/components/StudyActivity.tsx — exit 0 (25412).
+- Lint cuối gồm test: node node_modules/eslint/bin/eslint.js app/page.tsx app/layout.tsx app/components/StudyActivity.tsx tests/e2e/theme.spec.ts tests/e2e/learning.spec.ts — exit 0.
+- Build: node node_modules/next/dist/bin/next build --webpack — exit 0 (64823), đủ 6 reference WebP trong out/images.
+- E2E: node node_modules/@playwright/test/cli.js test tests/e2e/theme.spec.ts tests/e2e/learning.spec.ts — 10/10 đạt (29130), gồm lịch hiển thị ngày luyện tập thật, đổi tháng trước/sau, học/lưu tiến độ/logout.
+- Sau chỉnh vị trí bé trai sidebar: node node_modules/@playwright/test/cli.js test tests/e2e/theme.spec.ts — 4/4 đạt (29815), desktop/mobile, sáng/tối, chữ Trung, ảnh không đè chữ, không tràn ngang.
+- Đã xem home desktop/mobile, roadmap/review desktop, progress desktop/mobile, các theme. Ảnh progress giữ ở .local/qa/ui-04; ảnh khác test-results/ (không commit). HTTP preview 200.
+- Chỉ so khớp trực quan với collage, không có đo lường pixel chứng minh giống hoàn toàn. UI-05 phụ thuộc asset gốc tách riêng; bộ ảnh đang dùng là tái dựng qua ImageGen với reference thật.
+- Backend không đổi. Không chạy lại unit/integration hoặc CMS E2E trong lượt này; chưa kiểm tra mọi thiết bị thật/cloud.

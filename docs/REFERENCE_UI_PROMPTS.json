@@ -1,0 +1,38 @@
+{
+  "method": "Built-in ImageGen, using supplied collage as reference",
+  "reference": "C:\\Users\\c\\AppData\\Local\\Temp\\codex-clipboard-b51ded17-2fac-4389-b2ef-c5e6959a56dd.png",
+  "limitation": "Reconstruction from 821x461 collage, not original source artwork",
+  "assets": [
+    {
+      "name": "reference-home",
+      "transparent": false,
+      "prompt": "Use the attached user-owned UI design collage as the visual reference. Reconstruct ONLY the requested decorative illustration as a high-resolution production website asset, not a UI screenshot. Match the particular chibi child's face, soft rounded cheeks, glossy brown hair, huge expressive eyes, warm cream and cinnabar red Chinese-inspired clothing, soft premium 3D storybook material and pastel watercolor cherry-blossom world in the reference. Faithful visual reconstruction, not a new character design. No interface, no labels, no logos, no typography, no watermark. Recreate the hero artwork in the TOP LEFT panel: smiling girl with twin hair buns and red dress holding two ivory flashcards (one with 学, one with 好), on the RIGHT half, cherry blossoms around her, distant mountains and a small pagoda lower middle. Wide landscape 3:1 composition; LEFT 48 percent pale peach blank negative space so actual HTML text can be overlaid. The character occupies most of the height on the right, face fully visible, torso and cards visible. Preserve the composition from that panel. Do not include the panel's headline, button or lesson UI."
+    },
+    {
+      "name": "reference-roadmap",
+      "transparent": true,
+      "prompt": "Use the attached user-owned UI design collage as the visual reference. Reconstruct ONLY the requested decorative illustration as a high-resolution production website asset, not a UI screenshot. Match the particular chibi child's face, soft rounded cheeks, glossy brown hair, huge expressive eyes, warm cream and cinnabar red Chinese-inspired clothing, soft premium 3D storybook material and pastel watercolor cherry-blossom world in the reference. Faithful visual reconstruction, not a new character design. No interface, no labels, no logos, no typography, no watermark. Recreate the little explorer BOY from the LEFT SIDE of the TOP RIGHT panel: plump child with tousled brown hair, sage green and ivory robe, red backpack, pointing eagerly to the right and smiling. Full body, transparent background, including feet and a tiny natural ground shadow. No cards, no scenery. Center the figure in a square, no crop."
+    },
+    {
+      "name": "reference-vocab",
+      "transparent": true,
+      "prompt": "Use the attached user-owned UI design collage as the visual reference. Reconstruct ONLY the requested decorative illustration as a high-resolution production website asset, not a UI screenshot. Match the particular chibi child's face, soft rounded cheeks, glossy brown hair, huge expressive eyes, warm cream and cinnabar red Chinese-inspired clothing, soft premium 3D storybook material and pastel watercolor cherry-blossom world in the reference. Faithful visual reconstruction, not a new character design. No interface, no labels, no logos, no typography, no watermark. Recreate the girl and cat artwork from the top of the BOTTOM LEFT vocabulary panel: round cheek girl with twin buns and red outfit resting her cheek on her hand, leaning on two books, a fluffy cream cat nestled beside her, a small cherry blossom branch overhead. Full arrangement, compact horizontal composition, transparent background, no crop. Do not include UI or characters/words."
+    },
+    {
+      "name": "reference-review",
+      "transparent": true,
+      "prompt": "Use the attached user-owned UI design collage as the visual reference. Reconstruct ONLY the requested decorative illustration as a high-resolution production website asset, not a UI screenshot. Match the particular chibi child's face, soft rounded cheeks, glossy brown hair, huge expressive eyes, warm cream and cinnabar red Chinese-inspired clothing, soft premium 3D storybook material and pastel watercolor cherry-blossom world in the reference. Faithful visual reconstruction, not a new character design. No interface, no labels, no logos, no typography, no watermark. Recreate the girl from the BOTTOM MIDDLE review panel: chubby chibi girl with twin hair buns, eyes gently closed with happy rosy smile, big coral headphones, reading an open red book, upper body leaning into the book, blossoms at the bottom. Transparent background, full arrangement, compact horizontal composition. No play button, no UI, no lettering."
+    },
+    {
+      "name": "reference-progress",
+      "transparent": true,
+      "prompt": "Use the attached user-owned UI design collage as the visual reference. Reconstruct ONLY the requested decorative illustration as a high-resolution production website asset, not a UI screenshot. Match the particular chibi child's face, soft rounded cheeks, glossy brown hair, huge expressive eyes, warm cream and cinnabar red Chinese-inspired clothing, soft premium 3D storybook material and pastel watercolor cherry-blossom world in the reference. Faithful visual reconstruction, not a new character design. No interface, no labels, no logos, no typography, no watermark. Recreate the celebrating girl from the BOTTOM RIGHT progress panel: very cute chubby child girl with twin hair buns and red Chinese-inspired dress, eyes closed smiling exuberantly, both hands and arms raised above shoulder height, tiny warm gold petals and red confetti floating around her. Show upper body and both hands fully. Transparent background. No UI, no numbers, no lettering."
+    },
+    {
+      "name": "reference-landscape",
+      "transparent": false,
+      "prompt": "From the attached user-owned UI collage, reconstruct ONLY its decorative landscape background in high resolution, without any people or UI. Wide horizontal 4:1 watercolor illustration: warm ivory blank mist across left 65 percent, distant peach and pale grey Chinese mountains at right, small elegant red pagoda low on the right, cherry blossoms entering from upper right, winding pale river/path toward pagoda, warm soft cream paper. Match the muted scenery in the top right roadmap panel, very delicate, airy and pale, suitable behind text. Absolutely no text, no letters, no logos, no interface."
+    }
+  ],
+  "savedReference": "D:/Hán Ngữ Lab/docs/references/ui-design-collage.png"
+}

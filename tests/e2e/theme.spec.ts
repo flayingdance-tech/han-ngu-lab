@@ -44,12 +44,12 @@ test('all four learning spaces show their own chibi without covering the heading
       await page.getByRole('navigation',{name:'Điều hướng chính'}).getByRole('button',{name:label,exact:true}).click();
       const heading=page.locator('.illustrated-heading');
       await expect(heading.getByRole('heading',{level:1})).toBeVisible();
-      const mascot=heading.locator('.page-mascot');
+      const mascot=page.locator('.page-mascot:visible, .sidebar-companion:visible');
       await expect(mascot).toBeVisible();
-      expect(await mascot.evaluate(el=>getComputedStyle(el).backgroundImage)).toContain(`chibi-${art}.webp`);
-      expect((await page.request.get(`/images/chibi-${art}.webp`)).ok()).toBeTruthy();
+      expect(await mascot.evaluate(el=>getComputedStyle(el).backgroundImage)).toContain(`reference-${art}.webp`);
+      expect((await page.request.get(`/images/reference-${art}.webp`)).ok()).toBeTruthy();
       const copy=await heading.locator('.page-heading-copy').boundingBox(),image=await mascot.boundingBox();
-      expect(copy&&image&&(copy.x+copy.width<=image.x+1||copy.y+copy.height<=image.y+1)).toBeTruthy();
+      expect(copy&&image&&(copy.x+copy.width<=image.x+1||image.x+image.width<=copy.x+1||copy.y+copy.height<=image.y+1||image.y+image.height<=copy.y+1)).toBeTruthy();
       expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBeTruthy();
       await page.screenshot({path:`test-results/chibi-${art}-${theme}-${info.project.name}.png`,fullPage:false});
     }

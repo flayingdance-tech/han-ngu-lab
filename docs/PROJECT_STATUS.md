@@ -2,9 +2,9 @@
 
 - Checkpoint: 2026-10-18, Asia/Bangkok. Chi tiết thời gian và lệnh trong WORK_LOG.
 - Workspace: D:\Hán Ngữ Lab. Đã được giao triển khai, không hỏi lại lệnh bắt đầu.
-- Mốc mới nhất UI-03: DONE. Bốn tab roadmap/review/vocab/progress có ảnh chibi riêng trên nền sáng/tối; header hiện cả khi khách chưa đăng nhập. UI-02 pastel/lo-fi/chữ Trung lớn đã bàn giao.
-- File chính: app/themes.css, app/components/ThemeToggle.tsx, ChineseText.tsx, LessonPlayer.tsx, app/page.tsx, app/layout.tsx; assets và prompt trong DESIGN_ASSETS.md, CHIBI_PROMPTS.json.
-- Xác minh UI-03: typecheck/lint 12495 exit 0, build 12957 exit 0; 10/10 E2E học/theme/chibi đạt (27956). Đã xem ảnh desktop/mobile sáng/tối; bốn WebP có trong out/images.
+- Mốc mới nhất UI-04: bố cục/tỉ lệ sát collage đã triển khai. Home banner ~3:1 + 3 thẻ ngang, header gọn/cảnh nền, bé trai sidebar desktop lớn, review scene, StudyActivity dùng dữ liệu thật. Chưa trùng hoàn toàn ảnh gốc; UI-05 phụ thuộc bộ asset riêng lẻ.
+- File chính: app/themes.css, app/components/ThemeToggle.tsx, ChineseText.tsx, LessonPlayer.tsx, app/page.tsx, app/layout.tsx; thêm app/reference-ui.css, StudyActivity.tsx; assets/prompt trong DESIGN_ASSETS.md, REFERENCE_UI_PROMPTS.json.
+- Xác minh UI-04: typecheck/lint 25412 đạt, lint cuối đạt; build 64823 exit 0. E2E 29130 10/10; sau chỉnh sidebar, theme 29815 4/4. Đã xem desktop/mobile sáng/tối, lịch tháng/đổi tháng và sáu asset trong out/images.
 - Lỗi đã sửa: fixture CMS trùng tên giữa các lượt (UUID); tên accessible radio khi tách chữ Hán; dấu câu bị giãn trong flex. Đã xem ảnh desktop/mobile sáng/tối và bài học.
 - Preview loopback http://localhost:3000/ và ảnh WebP trả HTTP 200. Giữ server hiện hành; kiểm tra port/process trước chạy mới, không giả định session cũ còn sống.
 - Không còn build/test đang chạy. Không có .codegraph/ tại lần kiểm tra, không tự index.

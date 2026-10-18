@@ -112,3 +112,12 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 - 2026-10-18 14:30 +07:00: đã lưu bốn WebP alpha 640px (~404 KiB), PageHeading có art riêng, review/progress header hiện cả khi chưa đăng nhập. Đang chạy typecheck/lint 12495, build 12957, 10 E2E học/theme/chibi 27956. Chưa ghi đạt trước khi lấy exit code.
 
 - 2026-10-18 14:32 +07:00: UI-03 hoàn tất. Typecheck/lint 12495 exit 0; build 12957 exit 0, có đủ 4 asset trong out/images; E2E 27956 đạt 10/10. Đã xem roadmap sáng desktop, vocab tối desktop, review sáng mobile, progress tối mobile; HTTP asset 200. Không còn lệnh kiểm tra đang chờ.
+
+## 2026-10-18 14:40 +07:00 — UI-04 bám bố cục ảnh gốc
+- Chủ dự án yêu cầu cả tỉ lệ và hình giống mẫu. Ảnh D: gốc không còn, bản collage trong Temp còn 821x461. Đã nêu giới hạn không thể cam kết trùng từng nét khi thiếu asset gốc.
+- Đang dựng asset qua ImageGen có reference thật và chỉnh home/header/cards/review/progress gần mẫu; prompt REFERENCE_UI_PROMPTS.json. Giữ chữ Trung dễ đọc, auth/dữ liệu nguyên vẹn.
+
+
+- 2026-10-18 14:45 +07:00: typecheck/lint 25412 đạt; E2E 29130 đạt 10/10 gồm lịch, đổi tháng, đăng xuất. Sau xem ảnh đã đưa bé trai sang sidebar ở desktop lớn để sát mẫu; đang chốt theme/build mới. Ảnh gốc tái dựng có reference, chưa thể nhận trùng pixel.
+
+- 2026-10-18 14:46 +07:00: chốt UI-04. Build 64823 exit 0, lint cuối exit 0; theme 29815 4/4 sau chỉnh sidebar; E2E trước 29130 10/10 có lịch, đổi tháng, logout. HTTP preview 200, out/images đủ 6 reference assets. Đã xem home/roadmap/review/progress desktop và mobile. UI-05 chờ bộ asset gốc nếu cần trùng ảnh 100%; không coi tái dựng là ảnh gốc. Không còn lệnh test/build đang chạy.

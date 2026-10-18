@@ -1,5 +1,16 @@
 # Giao diện pastel và lo-fi
 
+## UI-04 — tỉ lệ và ảnh sát bản tham khảo
+
+- Mẫu lưu bền tại `docs/references/ui-design-collage.png` (821×461). Tệp D: gốc đã không còn tại lần kiểm tra; không coi collage là bộ asset nguồn độ phân giải cao.
+- ImageGen tích hợp dùng chính collage làm reference; sáu asset `public/images/reference-{home,roadmap,vocab,review,progress,landscape}.webp`. Prompt đầy đủ trong `REFERENCE_UI_PROMPTS.json`.
+- Đây là minh họa tái dựng theo mẫu, không phải tuyên bố trùng pixel hoặc có lại ảnh gốc tách lớp.
+- Home: banner gần 3:1 và ba thẻ bài nằm ngang; bỏ các khối phụ trên home. Tiến độ/SRS vẫn truy cập ở tab tương ứng.
+- Header các tab gọn, cảnh núi/chùa/hoa anh đào, cô bé sách/mèo ở Sổ từ; Ôn tập có cảnh riêng dưới tiêu đề. Chế độ tối giữ nền lo-fi.
+- Tiến độ có lịch tháng, đổi tháng và biểu đồ lượt làm bài bảy ngày, chỉ dùng dữ liệu thực của người học; không suy diễn thời gian học khi chưa có bộ đếm.
+- Chữ Hán, Pinyin, hội thoại và bài tập giữ thang cỡ chữ lớn đã xác minh ở UI-02.
+- Asset web tổng 513.060 byte (~501 KiB); home/landscape 1536×512, roadmap 640×640, vocab 640×236, review 800×376, progress 640×427; WebP q88, các nhân vật giữ alpha. Bản sửa quầng nền thử thêm không được chọn vì bản đầu hiển thị phù hợp trong trang.
+
 ## 2026-10-18 — chibi riêng cho bốn tab
 
 - Chủ dự án yêu cầu nhân vật trẻ mũm mĩm theo ảnh collage mới; minh họa không thay đổi đối tượng 18+ của website.

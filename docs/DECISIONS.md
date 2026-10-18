@@ -33,3 +33,5 @@ Nguồn tên model/nỗ lực đã đối chiếu: https://developers.openai.com
 D-019 ACCEPTED (2026-10-18 +07:00): giao diện pastel theo ảnh chủ dự án, tăng chữ Trung, thêm chế độ tối dùng minh họa góc học lo-fi. Tài nguyên và prompt: DESIGN_ASSETS.md.
 
 D-020 ACCEPTED (2026-10-18 +07:00): bốn tab Lộ trình/Ôn tập/Sổ từ vựng/Tiến độ có minh họa chibi trẻ mũm mĩm riêng theo ảnh do chủ dự án cung cấp. Đây là phong cách minh họa, đối tượng website vẫn 18+.
+
+D-021 ACCEPTED (2026-10-18 +07:00): ưu tiên bố cục, tỉ lệ hình và minh họa sát collage chủ dự án. Bản hiện có 821x461, tái dựng có reference không phải asset gốc trùng pixel; vẫn giữ chữ Trung dễ đọc và chế độ tối.

@@ -40,6 +40,17 @@ test('visitor registers, verifies, completes lesson and keeps progress after rel
   expect(widths.scroll).toBeLessThanOrEqual(widths.viewport+1);
   await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
   await page.screenshot({path:`test-results/dashboard-${info.project.name}.png`,fullPage:true});
+  const menu=page.getByRole('button',{name:'Mở điều hướng'});
+  if(await menu.isVisible())await menu.click();
+  await page.getByRole('navigation',{name:'Điều hướng chính'}).getByRole('button',{name:'Tiến độ của tôi',exact:true}).click();
+  const calendar=page.getByRole('region',{name:'Lịch luyện tập',exact:true});
+  await expect(calendar.locator('.activity-day.studied')).toHaveCount(1);
+  const month=await calendar.locator('.calendar-heading strong').innerText();
+  await calendar.getByRole('button',{name:'Tháng trước'}).click();
+  await expect(calendar.locator('.calendar-heading strong')).not.toHaveText(month);
+  await calendar.getByRole('button',{name:'Tháng sau'}).click();
+  await expect(calendar.locator('.calendar-heading strong')).toHaveText(month);
+  await page.screenshot({path:`test-results/progress-${info.project.name}.png`,fullPage:true});
   await page.locator('header').getByRole('button',{name:'Đăng xuất',exact:true}).click();
   await expect(page.locator('header').getByRole('button',{name:'Đăng nhập',exact:true})).toBeVisible();
   expect((await page.request.get('/api/me')).status()).toBe(401);
