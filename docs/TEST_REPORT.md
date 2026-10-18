@@ -123,3 +123,10 @@ Chạy local tests cần quyền loopback của môi trường; EACCES trong lư
 - Backup/restore đủ297 file SHA256 khớp tại .local/voice-backups/2026-10-18T13-21-20-771Z và restore-check cùng timestamp. Đây là backup cùng máy có private profile, chưa có backup ngoài máy/AWS hoặc diễn tập cloud migration.
 - Build webpack và TypeScript thành công; manifest+290 MP3 trong out byte-identical với nguồn, không file tạm/reference/master/.pt/.safetensors.12 prototype chuyển vào private. Sau build, HTTP trang/API catalog/MP3 thường/chậm đều200 (20:23).
 - Kiểm thử mã đã ghi:unit/integration18/18,typecheck/lint đạt; audio E2E32319 đạt4/4 không retry; Python2/2; pip check đạt, production npm audit0. Các lượt lỗi trước và cách sửa được giữ ở WORK_LOG. Không suy kết quả thành toàn dự án/HSK4/cloud đã hoàn tất.
+
+
+### 2026-10-18T20:46:23+07:00 — ngăn phát bộ bị từ chối
+- npm test:18/18; npm run typecheck/lint/build:đạt.
+- npx playwright test tests/e2e/audio.spec.ts:6/6 desktop/mobile (1.8m), gồm chặn manifest lỗi ngay cả preview, không request MP3; các ca transport dùng fixture bỏ disabledReason rõ ràng, không xác nhận chất lượng giọng cũ.
+- pip check cả runtime gốc và Kokoro:đạt; hash model B1D8410F... khớp model card chính thức.
+- Log .local/audio-replacement-*.log. Không thay đổi giao diện sáng/tối hoặc dữ liệu học.

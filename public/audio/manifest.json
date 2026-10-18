@@ -1021,5 +1021,6 @@
       "slow": "/audio/hnl-original-v1/e4fc2a172d97289ffd27bb2b-slow.mp3",
       "review": "unreviewed"
     }
-  }
+  },
+  "disabledReason": "Bộ âm đọc cũ đã tạm dừng vì chất lượng chưa đạt. Giọng thay thế đang được kiểm tra."
 }

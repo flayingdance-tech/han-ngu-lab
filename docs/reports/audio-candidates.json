@@ -1,0 +1,316 @@
+[
+  {
+    "engine": "Kokoro-82M-v1.1-zh",
+    "revision": "01e7505bd6a7a2ac4975463114c3a7650a9f7218",
+    "humanReviewed": false,
+    "speed": 1.0,
+    "pitchChanged": false,
+    "pronunciationOverrides": {
+      "还书": "huán shū"
+    },
+    "samples": [
+      {
+        "voice": "zf_001",
+        "text": "你好！欢迎来到汉语实验室。今天我们一起练习中文。",
+        "path": "zf_001-01.wav",
+        "seconds": 5.45,
+        "renderSeconds": 4.76,
+        "phonemes": [
+          "ㄋㄧ2ㄏㄠ3! ㄏ万1应2/ㄌㄞ2ㄉㄠ4/ㄏㄢ4ㄩ3/ㄕ十2言4ㄕ十4. ㄐ阴1ㄊ言1/我3ㄇㄣ5/ㄧ4ㄑㄧ3/ㄌ言4ㄒㄧ2/ㄓ中1文2."
+        ],
+        "recognized": "你好欢迎来到汉语实验室 今天我们一起练习中文。",
+        "peak": 0.454315185546875
+      },
+      {
+        "voice": "zf_001",
+        "text": "谢谢你的帮助。姐姐正在准备明天的会议。请认真听，然后跟我读。",
+        "path": "zf_001-02.wav",
+        "seconds": 6.525,
+        "renderSeconds": 5.5,
+        "phonemes": [
+          "ㄒㄝ4ㄒㄝ5/ㄋㄧ3/ㄉㄜ5/ㄅㄤ1ㄓㄨ4. ㄐㄝ3ㄐㄝ5/ㄓㄥ4ㄗㄞ4/ㄓ文3ㄅㄟ4/ㄇ应2ㄊ言1/ㄉㄜ5/ㄏ为4ㄧ4. ㄑ应3/ㄖㄣ4ㄓㄣ1/ㄊ应1, ㄖㄢ2ㄏㄡ4/ㄍㄣ1/我3/ㄉㄨ2."
+        ],
+        "recognized": "谢谢你的帮助,杰杰正在准备明天的会议,请认真听然后跟我读。",
+        "peak": 0.4764404296875
+      },
+      {
+        "voice": "zf_001",
+        "text": "今天天气怎么样？虽然有点儿冷，但是很舒服。",
+        "path": "zf_001-03.wav",
+        "seconds": 4.8,
+        "renderSeconds": 4.2,
+        "phonemes": [
+          "ㄐ阴1ㄊ言1ㄊ言1ㄑㄧ4/ㄗㄣ3ㄇㄜ5阳4? ㄙ为1ㄖㄢ2/又2ㄉ言R3/ㄌㄥ3, ㄉㄢ4ㄕ十4/ㄏㄣ3/ㄕㄨ1ㄈㄨ5."
+        ],
+        "recognized": "今天天气怎么样,虽然有点冷,但是很舒服。",
+        "peak": 0.36102294921875
+      },
+      {
+        "voice": "zf_001",
+        "text": "我在银行工作。这个办法行不行？我还要还书。",
+        "path": "zf_001-04.wav",
+        "seconds": 5.175,
+        "renderSeconds": 4.83,
+        "phonemes": [
+          "我3/ㄗㄞ4/阴2ㄏㄤ2/ㄍ中1ㄗ我4. ㄓㄜ4ㄍㄜ5/ㄅㄢ4ㄈㄚ3/ㄒ应2ㄅㄨ5ㄒ应2? 我3/ㄏㄞ2要4/ㄏ万2ㄕㄨ1."
+        ],
+        "recognized": "我在银行工作,这个办法行不行,我还要还书。",
+        "peak": 0.434844970703125
+      },
+      {
+        "voice": "zf_001",
+        "text": "妈妈，麻烦，马路，骂人。",
+        "path": "zf_001-05.wav",
+        "seconds": 2.95,
+        "renderSeconds": 2.95,
+        "phonemes": [
+          "ㄇㄚ1ㄇㄚ5, ㄇㄚ2ㄈㄢ5, ㄇㄚ3ㄌㄨ4, ㄇㄚ4ㄖㄣ2."
+        ],
+        "recognized": "妈妈麻烦马路骂人。",
+        "peak": 0.423797607421875
+      },
+      {
+        "voice": "zf_001",
+        "text": "你好。谢谢。姐姐。准备。认真。",
+        "path": "zf_001-06.wav",
+        "seconds": 3.6,
+        "renderSeconds": 3.75,
+        "phonemes": [
+          "ㄋㄧ2ㄏㄠ3. ㄒㄝ4ㄒㄝ5. ㄐㄝ3ㄐㄝ5. ㄓ文3ㄅㄟ4. ㄖㄣ4ㄓㄣ1."
+        ],
+        "recognized": "你好 谢谢姐姐 准备认真。",
+        "peak": 0.438995361328125
+      },
+      {
+        "voice": "zf_002",
+        "text": "你好！欢迎来到汉语实验室。今天我们一起练习中文。",
+        "path": "zf_002-01.wav",
+        "seconds": 5.975,
+        "renderSeconds": 6.36,
+        "phonemes": [
+          "ㄋㄧ2ㄏㄠ3! ㄏ万1应2/ㄌㄞ2ㄉㄠ4/ㄏㄢ4ㄩ3/ㄕ十2言4ㄕ十4. ㄐ阴1ㄊ言1/我3ㄇㄣ5/ㄧ4ㄑㄧ3/ㄌ言4ㄒㄧ2/ㄓ中1文2."
+        ],
+        "recognized": "你好,欢迎来到汉语实验室,今天我们一起练习中文。",
+        "peak": 0.406158447265625
+      },
+      {
+        "voice": "zf_002",
+        "text": "谢谢你的帮助。姐姐正在准备明天的会议。请认真听，然后跟我读。",
+        "path": "zf_002-02.wav",
+        "seconds": 7.2,
+        "renderSeconds": 7.38,
+        "phonemes": [
+          "ㄒㄝ4ㄒㄝ5/ㄋㄧ3/ㄉㄜ5/ㄅㄤ1ㄓㄨ4. ㄐㄝ3ㄐㄝ5/ㄓㄥ4ㄗㄞ4/ㄓ文3ㄅㄟ4/ㄇ应2ㄊ言1/ㄉㄜ5/ㄏ为4ㄧ4. ㄑ应3/ㄖㄣ4ㄓㄣ1/ㄊ应1, ㄖㄢ2ㄏㄡ4/ㄍㄣ1/我3/ㄉㄨ2."
+        ],
+        "recognized": "谢谢你的帮助,杰杰正在准备明天的会议。请认真听,然后跟我读。",
+        "peak": 0.419891357421875
+      },
+      {
+        "voice": "zf_002",
+        "text": "今天天气怎么样？虽然有点儿冷，但是很舒服。",
+        "path": "zf_002-03.wav",
+        "seconds": 5.3,
+        "renderSeconds": 5.81,
+        "phonemes": [
+          "ㄐ阴1ㄊ言1ㄊ言1ㄑㄧ4/ㄗㄣ3ㄇㄜ5阳4? ㄙ为1ㄖㄢ2/又2ㄉ言R3/ㄌㄥ3, ㄉㄢ4ㄕ十4/ㄏㄣ3/ㄕㄨ1ㄈㄨ5."
+        ],
+        "recognized": "今天天气怎么样,虽然有点冷,但是很舒服。",
+        "peak": 0.448822021484375
+      },
+      {
+        "voice": "zf_002",
+        "text": "我在银行工作。这个办法行不行？我还要还书。",
+        "path": "zf_002-04.wav",
+        "seconds": 5.65,
+        "renderSeconds": 6.14,
+        "phonemes": [
+          "我3/ㄗㄞ4/阴2ㄏㄤ2/ㄍ中1ㄗ我4. ㄓㄜ4ㄍㄜ5/ㄅㄢ4ㄈㄚ3/ㄒ应2ㄅㄨ5ㄒ应2? 我3/ㄏㄞ2要4/ㄏ万2ㄕㄨ1."
+        ],
+        "recognized": "我在银行工作,这个办法行不行,我还要还书。",
+        "peak": 0.43157958984375
+      },
+      {
+        "voice": "zf_002",
+        "text": "妈妈，麻烦，马路，骂人。",
+        "path": "zf_002-05.wav",
+        "seconds": 3.25,
+        "renderSeconds": 3.41,
+        "phonemes": [
+          "ㄇㄚ1ㄇㄚ5, ㄇㄚ2ㄈㄢ5, ㄇㄚ3ㄌㄨ4, ㄇㄚ4ㄖㄣ2."
+        ],
+        "recognized": "妈妈埋饭,买路骂人。",
+        "peak": 0.339202880859375
+      },
+      {
+        "voice": "zf_002",
+        "text": "你好。谢谢。姐姐。准备。认真。",
+        "path": "zf_002-06.wav",
+        "seconds": 4.025,
+        "renderSeconds": 4.22,
+        "phonemes": [
+          "ㄋㄧ2ㄏㄠ3. ㄒㄝ4ㄒㄝ5. ㄐㄝ3ㄐㄝ5. ㄓ文3ㄅㄟ4. ㄖㄣ4ㄓㄣ1."
+        ],
+        "recognized": "你好 谢谢姐姐 准备认真",
+        "peak": 0.422454833984375
+      }
+    ],
+    "testSet": "sentences"
+  },
+  {
+    "engine": "Kokoro-82M-v1.1-zh",
+    "revision": "01e7505bd6a7a2ac4975463114c3a7650a9f7218",
+    "humanReviewed": false,
+    "speed": 1.0,
+    "pitchChanged": false,
+    "pronunciationOverrides": {
+      "还书": "huán shū"
+    },
+    "samples": [
+      {
+        "voice": "zf_001",
+        "text": "你",
+        "path": "zf_001-01.wav",
+        "seconds": 0.65,
+        "renderSeconds": 1.31,
+        "phonemes": [
+          "ㄋㄧ3"
+        ],
+        "recognized": "没有",
+        "peak": 0.206024169921875
+      },
+      {
+        "voice": "zf_001",
+        "text": "过",
+        "path": "zf_001-02.wav",
+        "seconds": 0.725,
+        "renderSeconds": 1.17,
+        "phonemes": [
+          "ㄍ我5"
+        ],
+        "recognized": "Good",
+        "peak": 0.414886474609375
+      },
+      {
+        "voice": "zf_001",
+        "text": "谢谢",
+        "path": "zf_001-03.wav",
+        "seconds": 0.975,
+        "renderSeconds": 1.88,
+        "phonemes": [
+          "ㄒㄝ4ㄒㄝ5"
+        ],
+        "recognized": "谢谢。",
+        "peak": 0.352874755859375
+      },
+      {
+        "voice": "zf_001",
+        "text": "姐姐",
+        "path": "zf_001-04.wav",
+        "seconds": 0.975,
+        "renderSeconds": 2.45,
+        "phonemes": [
+          "ㄐㄝ3ㄐㄝ5"
+        ],
+        "recognized": "姐姐",
+        "peak": 0.4075927734375
+      },
+      {
+        "voice": "zf_001",
+        "text": "准备",
+        "path": "zf_001-05.wav",
+        "seconds": 0.95,
+        "renderSeconds": 1.69,
+        "phonemes": [
+          "ㄓ文3ㄅㄟ4"
+        ],
+        "recognized": "准备",
+        "peak": 0.367095947265625
+      },
+      {
+        "voice": "zf_001",
+        "text": "认真",
+        "path": "zf_001-06.wav",
+        "seconds": 0.95,
+        "renderSeconds": 1.62,
+        "phonemes": [
+          "ㄖㄣ4ㄓㄣ1"
+        ],
+        "recognized": "认真",
+        "peak": 0.337890625
+      },
+      {
+        "voice": "zf_002",
+        "text": "你",
+        "path": "zf_002-01.wav",
+        "seconds": 0.675,
+        "renderSeconds": 1.19,
+        "phonemes": [
+          "ㄋㄧ3"
+        ],
+        "recognized": "neak",
+        "peak": 0.2890625
+      },
+      {
+        "voice": "zf_002",
+        "text": "过",
+        "path": "zf_002-02.wav",
+        "seconds": 0.75,
+        "renderSeconds": 1.27,
+        "phonemes": [
+          "ㄍ我5"
+        ],
+        "recognized": "Good",
+        "peak": 0.4208984375
+      },
+      {
+        "voice": "zf_002",
+        "text": "谢谢",
+        "path": "zf_002-03.wav",
+        "seconds": 1.075,
+        "renderSeconds": 2.16,
+        "phonemes": [
+          "ㄒㄝ4ㄒㄝ5"
+        ],
+        "recognized": "谢谢!",
+        "peak": 0.430389404296875
+      },
+      {
+        "voice": "zf_002",
+        "text": "姐姐",
+        "path": "zf_002-04.wav",
+        "seconds": 1.15,
+        "renderSeconds": 2.06,
+        "phonemes": [
+          "ㄐㄝ3ㄐㄝ5"
+        ],
+        "recognized": "姐姐",
+        "peak": 0.40142822265625
+      },
+      {
+        "voice": "zf_002",
+        "text": "准备",
+        "path": "zf_002-05.wav",
+        "seconds": 1.125,
+        "renderSeconds": 1.83,
+        "phonemes": [
+          "ㄓ文3ㄅㄟ4"
+        ],
+        "recognized": "准备",
+        "peak": 0.4552001953125
+      },
+      {
+        "voice": "zf_002",
+        "text": "认真",
+        "path": "zf_002-06.wav",
+        "seconds": 1.125,
+        "renderSeconds": 2.03,
+        "phonemes": [
+          "ㄖㄣ4ㄓㄣ1"
+        ],
+        "recognized": "认真",
+        "peak": 0.412872314453125
+      }
+    ],
+    "testSet": "isolated"
+  }
+]

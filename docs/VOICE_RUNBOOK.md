@@ -54,3 +54,9 @@ Trên Windows, nếu reader/antivirus tạm giữ file, bước thay file nguyê
 File giọng là phần bổ sung cho backup DB/user/progress hiện có; không thay thế backup DB hoặc chứng minh đã chuyển nền tảng cloud. Giới hạn chi phí 150 USD/6 tháng vẫn áp dụng. Kiến trúc này loại phí API tổng hợp theo lượt nghe; lưu trữ, băng thông, domain và máy vận hành vẫn phải tính trong ngân sách, chưa xác minh tại AWS Console.
 
 `npm.cmd run audio:backup` tạo snapshot mới trong `.local/voice-backups/`, gồm bộ phát công khai và profile riêng/master, rồi copy restore thử sang `.local/voice-restore-check/` và đối chiếu SHA256 từng file. Snapshot không ghi đè dữ liệu cũ, không chứa model/runtime/DB hoặc WAV trung gian. WAV là cache có thể sao lưu riêng để phục hồi nhanh một lượt đang dở; không cần để phát bộ MP3 hoặc sinh câu mới từ reference. Đây là bản riêng tư; chỉ đưa nhánh `public/audio/` lên hosting. Kết quả này không chứng minh đã có backup ngoài máy hoặc ngoài AWS.
+
+
+## Bộ giọng bị từ chối — D-027
+Manifest public hiện có disabledReason, client chặn cả preview. Không xóa cờ chỉ để nghe lại bộ cũ. Backup cũ vẫn giữ để phục hồi dữ liệu, không phải nguồn đã duyệt.
+Thử riêng: `.local/kokoro-venv/Scripts/python.exe -B -X utf8 scripts/voice-candidate.py`; QA: `.local/audio-preview/venv/Scripts/python.exe -B -X utf8 scripts/voice-candidate-qa.py`. Xem AUDIO_QUALITY.md. Môi trường Kokoro có shared-runtime.pth trỏ site-packages runtime cũ (chỉ đọc), gói bổ sung cài riêng; pip freeze tại .local/kokoro-requirements-lock.txt. Cần backup cả hai môi trường hoặc tái cài đúng dependency, không coi venv mới tự chứa toàn bộ.
+Model nằm .local/kokoro-model; download bằng snapshot_download với revision pin trong script. Chỉ download config.json, kokoro-v1_1-zh.pth, voices/zf_001.pt, voices/zf_002.pt, README.md. Inference offline. Mẫu không xuất bản, không tự đổi approved.

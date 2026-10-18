@@ -36,6 +36,7 @@ export async function speak(text: string, pinyin: string, slow = false, preview 
   const request = generation;
   const catalog = await loadManifest();
   if (request !== generation) throw cancelled();
+  if (catalog.disabledReason) throw new Error(catalog.disabledReason);
   const key = audioKey(text, pinyin);
   const entry = Object.hasOwn(catalog.entries, key) ? catalog.entries[key] : undefined;
   if (!entry) throw new Error('Âm đọc này đang được chuẩn bị. Bạn có thể tiếp tục học và thử lại sau.');

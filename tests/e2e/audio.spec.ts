@@ -2,6 +2,27 @@ import { test, expect } from '@playwright/test';
 
 type AudioWindow=Window&{hnlAudio:HTMLAudioElement[];hnlBrowserTts:number};
 
+// Playback transport fixtures do not imply these historical samples passed listening QA.
+test.beforeEach(async ({page}) => {
+  await page.route('**/audio/manifest.json', async route => {
+    const response = await route.fetch();
+    const fixture = await response.json();
+    delete fixture.disabledReason;
+    await route.fulfill({json:fixture});
+  });
+});
+
+test('quality-rejected library cannot play even in local preview',async({page})=>{
+  await page.unroute('**/audio/manifest.json');
+  const requests:string[]=[];
+  page.on('request',request=>{if(request.url().endsWith('.mp3')) requests.push(request.url());});
+  await page.goto('/');
+  await page.getByRole('button',{name:'Bắt đầu bài đầu tiên'}).click();
+  await page.getByRole('button',{name:'Nghe 你',exact:true}).click();
+  await expect(page.getByRole('status')).toContainText('chất lượng chưa đạt');
+  expect(requests).toEqual([]);
+});
+
 test('chosen project voice plays real normal and slow files without browser speech',async({page})=>{
   await page.addInitScript(()=>{
     const state=window as unknown as AudioWindow;
@@ -43,6 +64,10 @@ test('missing clip and network failure show a recoverable message with no voice 
   await page.getByRole('button',{name:'Nghe 你',exact:true}).click();
   await expect(page.getByRole('status')).toContainText('Âm đọc này đang được chuẩn bị');
   await page.unroute('**/audio/manifest.json');
+  await page.route('**/audio/manifest.json',async route=>{
+    const fixture=await (await route.fetch()).json();delete fixture.disabledReason;
+    await route.fulfill({json:fixture});
+  });
   await page.route('**/audio/**/*.mp3',route=>route.abort('failed'));
   await page.reload();
   await page.getByRole('button',{name:'Bắt đầu bài đầu tiên'}).click();

@@ -267,3 +267,24 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 - Mốc kỹ thuật AUDIO-06 DONE; chất lượng phát âm vẫn chờ chuyên môn, podcast/HSK4/cloud chưa hoàn thành. Cập nhật hồ sơ nhất quán, chỉ commit audio được tạo+manifest/inventory; master/model/prompt vẫn private/ignored.
 
 - Kiểm tra chốt 20:25 +07:00: inventory145 entries/expected145,approved0,290 files,tổng5.532.712 bytes,issues0. Quét out cho .wav/.pt/.safetensors/.onnx/.bin không có kết quả; diff --check đạt. Không thêm nguồn/master/model hoặc dữ liệu người học vào commit.
+
+
+### 2026-10-18 20:39 +07:00 — AUDIO-08 bắt đầu
+- Git ban đầu sạch, không .codegraph, không Python renderer còn chạy. Đã đọc hồ sơ và ghi nhận phản hồi nghe thất bại.
+- Nguồn chính thức: https://huggingface.co/hexgrad/Kokoro-82M-v1.1-zh (Apache2, 100 giọng Trung từ dataset chuyên nghiệp); thử riêng .local/kokoro-venv, không sửa runtime cũ.
+- Đang cài kokoro0.9.4/misaki[zh]; log .local/kokoro-install.log. Chặn manifest cũ bằng disabledReason; không xóa asset/backup. Tiếp: tạo mẫu ngắn, kiểm tra decode/ASR, mẫu nghe và báo giới hạn.
+
+
+### 2026-10-18T20:46:23+07:00 — kết quả kiểm thử và lỗi đa âm
+- Chặn bộ cũ: unit18/18,E2E6/6,typecheck/lint/build đạt. next-env.d.ts được trả đúng import dev trước build, không thay nguồn khác.
+- Kokoro render lần đầu12mẫu thành công nhưng G2P sai 还书 thành hai2 shu1. Đã thêm jieba phrase + pypinyin override huán shū, assert chuỗi phoneme; đang render lại trước ASR.
+- Metadata lỗi đầu lưu before-pronunciation-fix.json; mẫu chưa đưa vào web, bộ cũ vẫn blocked.
+- Lệnh đang chạy session99406: voice-candidate.py sau đó voice-candidate-qa.py; log kokoro-candidate-fixed.log/kokoro-asr.log. Tiếp: đọc kết quả, tạo MP3 mẫu, cập nhật hồ sơ; chưa nghe/duyệt chuyên môn.
+
+
+### 2026-10-18T20:49:20+07:00 — mẫu thay thế đã tạo, chờ đánh giá nghe
+- Kokoro0.9.4/misaki0.9.4, CPU FP32, speed1.0, không pitch/formant; model SHA256 khớp bản chính thức. Hai giọng A zf_001 (31.5s), B zf_002 (34.4s); file WAV/MP3 ở .local/voice-candidates/kokoro-zh. Hai MP3 decode24k mono, peak0.473/0.442, hữu hạn.
+- 12 mẫu câu/từ ghép +12 mẫu từ đơn đã sinh và ASR; báo cáo đã bỏ đường dẫn riêng ở docs/reports/audio-candidates.json. G2P 还书 đã sửa huán shū, vẫn giữ 还要 hái yào; assert đạt. 过 trong giáo trình hiện là trợ từ guo thanh nhẹ, khớp G2P5; không suy ra mọi ngữ cảnh đều thanh nhẹ.
+- ASR: câu phần lớn có nội dung đầy đủ, hai giọng nhận 姐姐 thành 杰杰 trong câu; B nhận sai cụm 妈妈麻烦马路; từ đơn 谢谢/姐姐/准备/认真 nhận đúng, 你/过 nhận sai. Đây là triage, chưa biết lỗi nào do ASR hay âm thanh; không đủ chứng nhận thanh điệu/độ tự nhiên.
+- Đã gửi hai mẫu nghe và hỏi lựa chọn âm sắc; chưa có phản hồi tại checkpoint này. Không chọn thay người dùng hoặc tự đánh dấu approved. AUDIO-08 IN_PROGRESS; mẫu khả thi nhưng chưa nghiệm thu. Giữ disabledReason ở public và out, đều145entries; không đổi UI/DB.
+- Lệnh render/QA session99406,72255 đã kết thúc; không cần chạy lại. Tiếp: nhận phản hồi mẫu; nếu vẫn không đạt, thử engine khác. Nếu chọn được, kiểm soát từng Pinyin/đa âm rồi tái tạo thư viện bằng ID riêng; vẫn cần duyệt chuyên môn.

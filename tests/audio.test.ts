@@ -60,5 +60,14 @@ test('playback cancels stale loads, uses one voice, handles media errors and blo
     const third=speak(item.text,item.pinyin,false,true);
     await new Promise(resolve=>setTimeout(resolve,0));
     media[2].dispatchEvent(new Event('ended')); await third;
+    const now = Date.now;
+    try {
+      Date.now = () => now() + 120_000;
+      globalThis.fetch = async () => new Response(JSON.stringify({version:1,voiceId:'hnl-original-v1',label:'HNL',engine:'VoiceStudio',generatedAt:'2026-10-18',disabledReason:'Âm đọc tạm dừng vì chất lượng chưa đạt.',entries:{[audioKey(item.text,item.pinyin)]:item}}));
+      const before = played;
+      await assert.rejects(speak(item.text,item.pinyin,false,true),/chất lượng chưa đạt/);
+      await assert.rejects(speak(item.text,item.pinyin,true,false),/chất lượng chưa đạt/);
+      assert.equal(played,before, 'rejected audio must not play, including preview');
+    } finally { Date.now = now; }
   } finally {stopSpeech();globalThis.fetch=originalFetch;globalThis.Audio=originalAudio;}
 });

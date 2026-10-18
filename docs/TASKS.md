@@ -47,3 +47,6 @@ Trạng thái: TODO / IN_PROGRESS / BLOCKED / DONE. Phạm vi đã chốt; nghi�
 | AUDIO-05 | Kiểm tra kỹ thuật nguồn vocals mới | DONE | Metadata/decode/loudness đạt; WORK_LOG. Không duyệt chất lượng nghe; quyết định master sau đó ở D-026 |
 | AUDIO-06 | Giọng thống nhất + VoiceStudio offline — tích hợp kỹ thuật | DONE | 145/145 đoạn,290 MP3; audit/decode/build/export đạt, backup/restore297 file SHA256 khớp, unit18/18,audio E2E4/4,Python2/2,cache/profile guard đạt. Finalize-report20:22:49 +07:00; mọi audio unreviewed, chất lượng nghe ở AUDIO-02/07 |
 | AUDIO-07 | Nghe duyệt audio trước xuất bản | TODO | Người có chuyên môn đối chiếu chữ Hán/Pinyin, bốn thanh, chữ đa âm, độ tự nhiên và quyền media; lưu bằng chứng trước approved. Chưa có output nào approved |
+
+
+| AUDIO-08 | Khắc phục âm méo/sai và thử giọng Mandarin thay thế | IN_PROGRESS | Chủ dự án báo không đạt; chặn bộ cũ, thử mẫu Kokoro riêng, đối chiếu nội dung và nghe trước thay hàng loạt. Không tự approved |
