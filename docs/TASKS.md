@@ -19,7 +19,7 @@ Trạng thái: TODO / IN_PROGRESS / BLOCKED / DONE. Phạm vi đã chốt; nghi�
 | CONTENT-01 | Lập ma trận độ phủ nhập môn–HSK 4 theo chuẩn xác định | IN_PROGRESS | Có inventory/audit 16 bài; chưa có ma trận đầy đủ chuẩn HSK |
 | OPS-00 | Kiểm tra hạn Free Plan, credit và dịch vụ khả dụng | TODO | Hiện chỉ có thông tin chủ dự án, chưa kiểm tra Console |
 | DEV-01 | Khảo sát runtime, Git, lập đặc tả và kiến trúc cuối | IN_PROGRESS | Runtime đã biết, tài liệu local đã có; cloud chưa chốt theo tài khoản |
-| DEV-02 | Khởi tạo source, thiết kế giao diện, pipeline | IN_PROGRESS | Source đã có; chưa hoàn tất build/lint/E2E |
+| DEV-02 | Khởi tạo source, thiết kế giao diện, pipeline | IN_PROGRESS | Source local đã qua build/lint/E2E; pipeline release/cloud chưa có |
 | DEV-03 | Auth, phân quyền, API, dữ liệu | IN_PROGRESS | API local qua integration; email local mô phỏng, production email chưa cấu hình |
 | DEV-04 | CMS, revision, media, import/export | IN_PROGRESS | Có workflow/JSON/bản xem duyệt và cảnh báo biên tập; media/CSV chưa hoàn thiện |
 | DEV-05 | Học bài, chấm điểm, tiến độ, SRS | IN_PROGRESS | Luồng học/lưu tiến độ qua E2E desktop/mobile; chưa nghiệm thu mọi lỗi mạng/phiên |
@@ -30,3 +30,5 @@ Trạng thái: TODO / IN_PROGRESS / BLOCKED / DONE. Phạm vi đã chốt; nghi�
 | OPS-04 | Diễn tập chuyển nhà cung cấp | TODO | Restore ngoài AWS giữ user/progress/media; auth/email hoạt động; kế hoạch trước hết hạn |
 | OPS-03 | Phát hành trong phạm vi được cấp | TODO | URL, smoke test, giám sát và vận hành được xác minh |
 | END-01 | Nghiệm thu và bàn giao | TODO | Đủ tiêu chí đã chốt, không còn thiếu mục bắt buộc |
+| FIX-01 | Đăng xuất dễ tìm desktop/mobile | DONE | Nút header, 2 E2E xác minh logout + /me 401 + reload |
+| CMS-EDIT-01 | Soạn đủ 3 loại bài tập, alternatives, Pinyin ví dụ, thứ tự | DONE | 2 CMS E2E, typecheck, lint và build đạt ngày 18/10 |

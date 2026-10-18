@@ -76,3 +76,20 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 - Không tạo cloud, không gửi email thật, không thêm phí. Các thiếu sót còn lại đã ghi NEXT_STEPS/TASKS.
 
 - Commit mã đã xác minh: b1077ce; chưa push. HTTP 200 và /api/health ok; Get-NetTCPConnection xác nhận cả 3000/3001 chỉ bind 127.0.0.1.
+
+## 2026-10-17 14:39 +07:00 — nút đăng xuất dễ tìm
+
+- Phản hồi chủ dự án: không thấy đăng xuất. Trước đây chỉ có icon cuối sidebar, khó tìm trên mobile.
+- Thay avatar header bằng nút có chữ “Đăng xuất”, dùng API logout hiện có; không thay role hoặc dữ liệu học.
+- Playwright ca hành trình học mở rộng: 2/2 desktop/mobile đạt; logout trả UI về Đăng nhập, API /me trả 401, reload vẫn đăng xuất.
+- app/page.tsx và tests/e2e/learning.spec.ts; typecheck/lint/build đang xác minh ở session 84574.
+
+## 2026-10-18 +07:00 — tiếp tục CMS và quy tắc model
+
+- Lượt 17/10 FIX-01: E2E logout đạt 2/2; build compile/typecheck qua nhưng export lỗi EPERM tạo thư mục .next. Lần xin quyền tiếp theo bị automatic approval review từ chối chạy do hết hạn mức review, không phải kết luận lệnh nguy hiểm. Checkpoint cũ ghi đang chạy đã lỗi thời.
+- 18/10 chủ dự án yêu cầu tiếp tục và đưa bảng model. Đã lưu AGENTS/D-018; chưa thay model vì không có công cụ đổi phiên đang chạy.
+- Lần build có quyền mới đã được cho chạy, session 29726; chưa ghi đạt trước khi lấy exit code.
+- Thêm ExerciseEditor chọn choice/input/order, alternatives, xóa câu hỏi; CMS có Pinyin ví dụ/thứ tự bài và ID mới không phụ thuộc độ dài mảng.
+- Test mới cms.spec.ts tạo tài khoản editor và bài nháp tổng hợp riêng, kiểm tra save thành revision mới trên desktop/mobile. Session 99504; lint/typecheck 59411. Không đụng mật khẩu tài khoản người dùng.
+
+- Chốt 18/10: CMS E2E 2/2, lint/typecheck 59411 exit 0, build cuối 93856 exit 0. AGENTS 94 dòng. Preview 19658 Ready loopback; không tạo cloud, không phí API.

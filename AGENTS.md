@@ -84,3 +84,11 @@
 - Bàn giao mã nguồn, URL nếu đã triển khai, báo cáo test, CMS guide và runbook.
 - Cuối mỗi mốc cập nhật STATUS, TASKS, NEXT_STEPS và WORK_LOG nhất quán.
 - Chỉ báo hoàn thành dự án khi đủ tiêu chí nghiệm thu đã chốt; nêu thẳng phần còn thiếu.
+
+## Lựa chọn model theo chủ dự án (18/10/2026)
+- Sol 6.1 / Vừa: lập trình thông thường.
+- Sol 6.1 / Cao: tính năng phức tạp, database, AI.
+- Sol 6.1 / Cực cao: lỗi khó hoặc tái cấu trúc nhiều module.
+- Astra / Thấp: tác vụ ngắn cần nền mạnh; không ưu tiên cho lỗi lập trình đặc biệt khó.
+- Chỉ báo đã chuyển khi công cụ xác nhận; nếu phiên không hỗ trợ đổi, nói rõ giới hạn.
+- Quy tắc này không tự cho phép tạo task/agent mới hay gọi API trả phí.

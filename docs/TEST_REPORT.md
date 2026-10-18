@@ -40,3 +40,12 @@ Ngày: 2026-10-17, Asia/Bangkok. Đây là mốc kỹ thuật local, chưa phả
 - CMS media/CSV, phần quản lý người dùng/audit và quy trình xử lý xóa tài khoản còn thiếu.
 
 Chạy local tests cần quyền loopback của môi trường; EACCES trong lượt sandbox đầu không được tính là test ứng dụng đạt.
+
+## Bổ sung 18/10/2026 +07:00
+
+- FIX-01: hai ca desktop/mobile mở rộng kiểm tra logout header, /api/me 401, reload vẫn đăng xuất đã đạt ngày 17/10. Build vướng EPERM ở lượt đó; lượt có quyền 29726 và build mã CMS cuối 93856 đều exit 0 ngày 18/10.
+- CMS: `node node_modules/@playwright/test/cli.js test tests/e2e/cms.spec.ts` — 2/2 đạt. Editor đổi choice→input, lưu alternatives/Pinyin ví dụ/thứ tự bài; tạo đúng revision draft mới, giữ bản cũ và humanReviewed=false.
+- Test CMS tạo tài khoản/bài draft tổng hợp riêng. Không dùng tài khoản hoặc mật khẩu do người dùng nhập.
+- Chưa kiểm tra toàn workflow reviewer/publish bằng browser; integration trước đó bao phủ phân quyền server.
+
+- Lint các file CMS/test và typecheck chạy chung session 59411: exit 0, không diagnostics.

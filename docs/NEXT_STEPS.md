@@ -13,3 +13,11 @@ Checkpoint 2026-10-17 14:08 +07:00.
 9. Trước public: chốt chuẩn HSK, người/quy trình duyệt, ngày mở và chính sách bản chưa duyệt; chỉ hỏi quyết định chủ sở hữu còn thiếu khi cần.
 10. Giữ trần 150 USD gồm credit/6 tháng, tuổi 18+, AI tùy chọn. Không hỏi lại thông tin đã chốt.
 11. Sau mỗi mốc cập nhật STATUS/TASKS/NEXT_STEPS/WORK_LOG; commit nhỏ và lưu SHA khi đã xác minh.
+
+- Checkpoint FIX-01: nút logout/E2E xong; lấy kết quả check session 84574 nếu gián đoạn trước cập nhật.
+
+- Mốc 18/10: lấy kết quả 29726/99504/59411; session 84574 đã fail EPERM, không chờ lại. Tiếp tục CMS còn thiếu media/CSV/duyệt browser sau khi chốt trình soạn.
+
+- Kết quả 18/10: CMS E2E 99504 đạt 2/2, build 93856 đạt. Chốt lint 59411; tiếp theo CSV/media, CMS reviewer/publication browser và audit/users. Không cần chạy lại các ca đã đạt nếu chưa đổi mã.
+
+- Đã chốt 59411 exit 0; preview mới 19658 Ready. Không còn lệnh kiểm tra cần chờ của mốc này.

@@ -11,3 +11,12 @@
 9. Xuất giáo trình lấy revision gần nhất từng bài. CSV, quản lý media và UI nhật ký/người dùng còn đang phát triển.
 
 `humanReviewed` trong nội dung không được cho phép tự nâng bằng payload import. Chỉ nhãn kiểm duyệt chuyên môn có bằng chứng mới được dùng; hiện các seed là chưa duyệt. Các bài sample chỉ hiện ở LOCAL_PREVIEW, không tự xuất bản khi chuyển sang production.
+
+## Trình soạn bài cập nhật 18/10/2026
+
+- Thứ tự bài điều khiển vị trí trong lộ trình; Pinyin ví dụ có trường sửa riêng.
+- Mỗi câu hỏi chọn Chọn đáp án, Nhập đáp án hoặc Sắp xếp câu. Nhập đáp án có danh sách biến thể được chấp nhận.
+- Chuyển loại giữ ID, câu hỏi, đáp án và lời giải; kiểm tra lại lựa chọn/mảnh câu phù hợp loại mới trước khi lưu.
+- Xóa câu hỏi chỉ thay bản đang soạn. Bài cần ít nhất ba câu hỏi để lưu hợp lệ.
+- Thêm từ/câu hỏi dùng ID mới; không tái sử dụng ID chỉ vì đã xóa một hàng.
+- Lưu tạo revision draft mới, không tự publish hoặc tự gắn nhãn đã duyệt.

@@ -21,3 +21,11 @@
 - Không còn bindings Node REPL cũ. Kiểm tra native sessions và port trước chạy lặp.
 - Bằng chứng: `docs/TEST_REPORT.md`, `docs/reports/content-audit.json`, `docs/WORK_LOG.md`.
 - Bước tiếp: `docs/NEXT_STEPS.md`; không đánh dấu dự án hoàn thành khi thiếu HSK4/cloud/media/duyệt.
+
+- 2026-10-17 14:39 +07:00: đã thêm nút Đăng xuất rõ chữ ở header; 2 E2E desktop/mobile qua logout/reload/401. Build lượt đó lỗi EPERM, đã xác minh lại thành công ngày 18/10.
+
+- 2026-10-18 +07:00: tiếp tục CMS; đọc WORK_LOG mốc mới. FIX-01 build cũ lỗi EPERM, không còn chạy. Build mới 29726; CMS E2E 99504; lint/typecheck 59411. Quy tắc model đã lưu D-018, chưa đổi model phiên.
+
+- Mốc 18/10 đã xác minh: CMS E2E 2/2 đạt, build cuối 93856 exit 0; typecheck trước E2E đạt. Lint/typecheck kết hợp 59411 exit 0. ExerciseEditor/CMS mới hỗ trợ 3 loại, alternatives, Pinyin ví dụ, thứ tự, ID mới an toàn.
+
+- Preview hiện hành: session 19658, Next/API Ready trên loopback 3000/3001. Session cũ 92988 đã ngừng trước lượt này.

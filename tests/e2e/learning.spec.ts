@@ -40,6 +40,11 @@ test('visitor registers, verifies, completes lesson and keeps progress after rel
   expect(widths.scroll).toBeLessThanOrEqual(widths.viewport+1);
   await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
   await page.screenshot({path:`test-results/dashboard-${info.project.name}.png`,fullPage:true});
+  await page.locator('header').getByRole('button',{name:'Đăng xuất',exact:true}).click();
+  await expect(page.locator('header').getByRole('button',{name:'Đăng nhập',exact:true})).toBeVisible();
+  expect((await page.request.get('/api/me')).status()).toBe(401);
+  await page.reload();
+  await expect(page.locator('header').getByRole('button',{name:'Đăng nhập',exact:true})).toBeVisible();
 });
 
 test('authentication dialog traps keyboard focus and returns focus on Escape',async({page})=>{
