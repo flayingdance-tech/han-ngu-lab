@@ -1,14 +1,14 @@
 # Bước tiếp theo
 
-Checkpoint 2026-10-18 20:09 +07:00. Quyết định mới nhất thay các đề xuất cũ; lịch sử nằm trong WORK_LOG và DECISIONS.
+Checkpoint 2026-10-18 20:24 +07:00. Lịch sử: WORK_LOG và DECISIONS.
 
-1. AUDIO-06 đang chạy tiếp từ 124/145 đoạn. Đọc đầu PROJECT_STATUS, kiểm tra process thực và `.local/voice/render-final.log`, `finalize-final.log`, hai file `.err`. Không khởi động producer trùng. Finalizer chỉ thành công khi có `finalize-report.json` mới và đầy đủ bằng chứng.
-2. Hoàn tất 145 âm thường +145 âm chậm; audit độ phủ, decode, kiểm tra tín hiệu, thử cache không tái tạo, backup/restore SHA256, build và đối chiếu static export. Chưa có kết quả cuối ở checkpoint này.
-3. Dùng đúng bản chỉ tách nhạc đã chốt, không pitch/formant shift. Quyền giọng đã xác nhận; không hỏi lại. VoiceStudio native engine và model đã tải cục bộ, không phải desktop GUI đã cài. Không dùng API trả phí hoặc fallback giọng thiết bị.
-4. Giữ audio tổng hợp ở unreviewed; chỉ cho phát trong bài preview. Nghe duyệt tiếng Trung, nhất là bốn thanh và chữ đa âm, trước xuất bản. ASR/F0 không thay thế người duyệt. MOSS thử riêng có dấu hiệu thiếu cuối câu; chưa thay bộ OmniVoice đang sản xuất.
-5. Cập nhật TEST_REPORT, STATUS, TASKS và WORK_LOG sau kết quả thực; kiểm tra diff rồi commit mốc. Không ghi secret hoặc profile giọng riêng vào Git/public.
-6. Giữ giao diện sáng hiện có; tối dùng nữ lo-fi, chỉ ẩn trẻ chibi. UI-05 vẫn cần asset gốc riêng nếu yêu cầu trùng hoàn toàn collage.
-7. Phần dự án còn thiếu: CMS CSV/media, giao diện reviewer/publication, audit/users và kiểm tra phiên hết hạn/lỗi mạng. Podcast là phần tiếp theo, chưa có thư viện podcast hoàn chỉnh.
-8. Hoàn thiện ma trận nhập môn–HSK4 theo chuẩn xác định và quy trình duyệt. 16 bài hiện tại là draft, chưa phải giáo trình HSK4 hoàn chỉnh; không tự publish.
-9. Cloud/email và dự toán tải cần quyền truy cập tài khoản; chưa tạo tài nguyên/deploy. Giữ trần 150 USD/6 tháng gồm credit, không tiền trả thêm, tuổi 18+, AI tùy chọn.
-10. Backup ngoài AWS và diễn tập migration user/progress/content/media/auth/email còn phải thực hiện. Backup/restore trên cùng máy không chứng minh đã có bản ngoài máy/cloud.
+1. AUDIO-06 tích hợp kỹ thuật đã xong:145 đoạn/290 MP3, build/export, signal QA, cache và backup/restore đạt. Không chạy lại render/finalizer đã hoàn tất. Đọc STATUS, kiểm tra Git/process và giữ DB/account trước khi làm tiếp.
+2. Ưu tiên AUDIO-07: quy trình người có chuyên môn nghe duyệt chữ Hán/Pinyin, bốn thanh, chữ đa âm và độ tự nhiên. ASR8 mẫu còn nhận sai/bỏ trống, không được đổi unreviewed thành approved dựa vào ASR/F0. Chưa xuất bản audio như tài liệu phát âm chuẩn.
+3. Dùng đúng nguồn chỉ tách nhạc đã chốt, quyền đã xác nhận; không hỏi lại. Thử profile/engine khác ở workspace riêng, không ghi đè manifest đang phát. VOICE_RUNBOOK có lệnh và giới hạn; không API có phí/fallback giọng thiết bị.
+4. Hoàn thiện thư viện podcast học theo chủ đề ở trạng thái draft, sau khi có quy trình giọng đạt. Hiện chưa có mục podcast hoàn chỉnh; không quảng cáo đã có.
+5. Phần CMS còn thiếu: CSV/media, giao diện reviewer/publication, audit/users, kiểm tra phiên hết hạn/lỗi mạng. Giữ revision đã xuất bản và tiến độ người học.
+6. Hoàn thiện ma trận nhập môn–HSK4 theo chuẩn xác định và quy trình duyệt.16 bài hiện tại là draft, chưa phải giáo trình HSK4 đầy đủ; không tự publish.
+7. Giữ giao diện sáng hiện có; tối dùng nữ lo-fi, chỉ ẩn trẻ chibi. UI-05 cần asset gốc riêng nếu yêu cầu trùng hoàn toàn collage.
+8. Cloud/email và dự toán tải cần quyền truy cập tài khoản; chưa tạo tài nguyên/deploy. Trần150 USD/6 tháng gồm credit, không tiền trả thêm,18+, AI tùy chọn. Rà cả dependency dev trước release; production audit hiện0 không thay thế kiểm thử bảo mật.
+9. Backup ngoài AWS và diễn tập migration user/progress/content/media/auth/email còn phải thực hiện. Snapshot297 file giọng hiện có ở cùng máy; không phải bản ngoài máy. Giữ private profile ngoài web server.
+10. Sau mỗi mốc cập nhật STATUS/TASKS/NEXT_STEPS/WORK_LOG theo kết quả thực. Không ghi secret và không coi cả dự án đã hoàn thành khi còn các mục trên.

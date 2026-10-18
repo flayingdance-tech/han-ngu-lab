@@ -1,0 +1,1025 @@
+{
+  "version": 1,
+  "voiceId": "hnl-original-v1",
+  "label": "Giọng Hán Ngữ Lab",
+  "engine": "VoiceStudio / OmniVoice (local CPU)",
+  "profileFingerprint": "b8e87753f463aeedc0c2793122efed7adc558bf15b5157574ccfe60f3d8868d3",
+  "generatedAt": "2026-10-18T09:17:38.412464+00:00",
+  "entries": {
+    "你␟nǐ": {
+      "text": "你",
+      "pinyin": "nǐ",
+      "normal": "/audio/hnl-original-v1/ec3b7eb8757bf7eda09ba41d.mp3",
+      "slow": "/audio/hnl-original-v1/ec3b7eb8757bf7eda09ba41d-slow.mp3",
+      "review": "unreviewed"
+    },
+    "好␟hǎo": {
+      "text": "好",
+      "pinyin": "hǎo",
+      "normal": "/audio/hnl-original-v1/8f897b3eaf42d6be5f690486.mp3",
+      "slow": "/audio/hnl-original-v1/8f897b3eaf42d6be5f690486-slow.mp3",
+      "review": "unreviewed"
+    },
+    "你好␟nǐ hǎo": {
+      "text": "你好",
+      "pinyin": "nǐ hǎo",
+      "normal": "/audio/hnl-original-v1/5f38b9ca1e9c7307c8bdce34.mp3",
+      "slow": "/audio/hnl-original-v1/5f38b9ca1e9c7307c8bdce34-slow.mp3",
+      "review": "unreviewed"
+    },
+    "谢谢␟xièxie": {
+      "text": "谢谢",
+      "pinyin": "xièxie",
+      "normal": "/audio/hnl-original-v1/60a7a97436e4e1dcb82765ed.mp3",
+      "slow": "/audio/hnl-original-v1/60a7a97436e4e1dcb82765ed-slow.mp3",
+      "review": "unreviewed"
+    },
+    "再见␟zàijiàn": {
+      "text": "再见",
+      "pinyin": "zàijiàn",
+      "normal": "/audio/hnl-original-v1/b3b5072a1bfe4b913c55d21d.mp3",
+      "slow": "/audio/hnl-original-v1/b3b5072a1bfe4b913c55d21d-slow.mp3",
+      "review": "unreviewed"
+    },
+    "不客气␟bú kèqi": {
+      "text": "不客气",
+      "pinyin": "bú kèqi",
+      "normal": "/audio/hnl-original-v1/501e527e1f8049238e1adb36.mp3",
+      "slow": "/audio/hnl-original-v1/501e527e1f8049238e1adb36-slow.mp3",
+      "review": "unreviewed"
+    },
+    "你好！␟Nǐ hǎo!": {
+      "text": "你好！",
+      "pinyin": "Nǐ hǎo!",
+      "normal": "/audio/hnl-original-v1/162f50d0047d34646270808d.mp3",
+      "slow": "/audio/hnl-original-v1/162f50d0047d34646270808d-slow.mp3",
+      "review": "unreviewed"
+    },
+    "谢谢你。␟Xièxie nǐ.": {
+      "text": "谢谢你。",
+      "pinyin": "Xièxie nǐ.",
+      "normal": "/audio/hnl-original-v1/d3a6bd44eb1e37a4a7c7159a.mp3",
+      "slow": "/audio/hnl-original-v1/d3a6bd44eb1e37a4a7c7159a-slow.mp3",
+      "review": "unreviewed"
+    },
+    "妈␟mā": {
+      "text": "妈",
+      "pinyin": "mā",
+      "normal": "/audio/hnl-original-v1/b4bb9b3270add4c0362b1426.mp3",
+      "slow": "/audio/hnl-original-v1/b4bb9b3270add4c0362b1426-slow.mp3",
+      "review": "unreviewed"
+    },
+    "麻␟má": {
+      "text": "麻",
+      "pinyin": "má",
+      "normal": "/audio/hnl-original-v1/3d55e83613cfb70faed0ad40.mp3",
+      "slow": "/audio/hnl-original-v1/3d55e83613cfb70faed0ad40-slow.mp3",
+      "review": "unreviewed"
+    },
+    "马␟mǎ": {
+      "text": "马",
+      "pinyin": "mǎ",
+      "normal": "/audio/hnl-original-v1/fc4eb2f2fa208e698d0f91a6.mp3",
+      "slow": "/audio/hnl-original-v1/fc4eb2f2fa208e698d0f91a6-slow.mp3",
+      "review": "unreviewed"
+    },
+    "骂␟mà": {
+      "text": "骂",
+      "pinyin": "mà",
+      "normal": "/audio/hnl-original-v1/06242d4d6e083139c72d6c6b.mp3",
+      "slow": "/audio/hnl-original-v1/06242d4d6e083139c72d6c6b-slow.mp3",
+      "review": "unreviewed"
+    },
+    "我␟wǒ": {
+      "text": "我",
+      "pinyin": "wǒ",
+      "normal": "/audio/hnl-original-v1/40b4ade9cc614bc302b8f556.mp3",
+      "slow": "/audio/hnl-original-v1/40b4ade9cc614bc302b8f556-slow.mp3",
+      "review": "unreviewed"
+    },
+    "叫␟jiào": {
+      "text": "叫",
+      "pinyin": "jiào",
+      "normal": "/audio/hnl-original-v1/7ef20acdf8b83b32fd4ed509.mp3",
+      "slow": "/audio/hnl-original-v1/7ef20acdf8b83b32fd4ed509-slow.mp3",
+      "review": "unreviewed"
+    },
+    "呢␟ne": {
+      "text": "呢",
+      "pinyin": "ne",
+      "normal": "/audio/hnl-original-v1/f302ca268bfab9fc093cba62.mp3",
+      "slow": "/audio/hnl-original-v1/f302ca268bfab9fc093cba62-slow.mp3",
+      "review": "unreviewed"
+    },
+    "人␟rén": {
+      "text": "人",
+      "pinyin": "rén",
+      "normal": "/audio/hnl-original-v1/141db1b09397efbd63c9a950.mp3",
+      "slow": "/audio/hnl-original-v1/141db1b09397efbd63c9a950-slow.mp3",
+      "review": "unreviewed"
+    },
+    "是␟shì": {
+      "text": "是",
+      "pinyin": "shì",
+      "normal": "/audio/hnl-original-v1/8dc017de76a4581fa1df78e3.mp3",
+      "slow": "/audio/hnl-original-v1/8dc017de76a4581fa1df78e3-slow.mp3",
+      "review": "unreviewed"
+    },
+    "家␟jiā": {
+      "text": "家",
+      "pinyin": "jiā",
+      "normal": "/audio/hnl-original-v1/a4de97706b18cbd8d42b260c.mp3",
+      "slow": "/audio/hnl-original-v1/a4de97706b18cbd8d42b260c-slow.mp3",
+      "review": "unreviewed"
+    },
+    "有␟yǒu": {
+      "text": "有",
+      "pinyin": "yǒu",
+      "normal": "/audio/hnl-original-v1/442f09b3c76956fa89f8647a.mp3",
+      "slow": "/audio/hnl-original-v1/442f09b3c76956fa89f8647a-slow.mp3",
+      "review": "unreviewed"
+    },
+    "点␟diǎn": {
+      "text": "点",
+      "pinyin": "diǎn",
+      "normal": "/audio/hnl-original-v1/42c74e3063d2d5f70cd2306f.mp3",
+      "slow": "/audio/hnl-original-v1/42c74e3063d2d5f70cd2306f-slow.mp3",
+      "review": "unreviewed"
+    },
+    "分␟fēn": {
+      "text": "分",
+      "pinyin": "fēn",
+      "normal": "/audio/hnl-original-v1/1a94f7fb63237dc5830fbd33.mp3",
+      "slow": "/audio/hnl-original-v1/1a94f7fb63237dc5830fbd33-slow.mp3",
+      "review": "unreviewed"
+    },
+    "半␟bàn": {
+      "text": "半",
+      "pinyin": "bàn",
+      "normal": "/audio/hnl-original-v1/231b57af12f3743a7d531706.mp3",
+      "slow": "/audio/hnl-original-v1/231b57af12f3743a7d531706-slow.mp3",
+      "review": "unreviewed"
+    },
+    "喝␟hē": {
+      "text": "喝",
+      "pinyin": "hē",
+      "normal": "/audio/hnl-original-v1/a16c85a50c5fe55d537f272a.mp3",
+      "slow": "/audio/hnl-original-v1/a16c85a50c5fe55d537f272a-slow.mp3",
+      "review": "unreviewed"
+    },
+    "茶␟chá": {
+      "text": "茶",
+      "pinyin": "chá",
+      "normal": "/audio/hnl-original-v1/ebe104790b8154872eceb1f3.mp3",
+      "slow": "/audio/hnl-original-v1/ebe104790b8154872eceb1f3-slow.mp3",
+      "review": "unreviewed"
+    },
+    "水␟shuǐ": {
+      "text": "水",
+      "pinyin": "shuǐ",
+      "normal": "/audio/hnl-original-v1/11112aa208201e831c64e93c.mp3",
+      "slow": "/audio/hnl-original-v1/11112aa208201e831c64e93c-slow.mp3",
+      "review": "unreviewed"
+    },
+    "杯␟bēi": {
+      "text": "杯",
+      "pinyin": "bēi",
+      "normal": "/audio/hnl-original-v1/d76d4fe5cdd28ea54793b923.mp3",
+      "slow": "/audio/hnl-original-v1/d76d4fe5cdd28ea54793b923-slow.mp3",
+      "review": "unreviewed"
+    },
+    "想␟xiǎng": {
+      "text": "想",
+      "pinyin": "xiǎng",
+      "normal": "/audio/hnl-original-v1/ca7aeadc2cc82a7aa8c5ea3e.mp3",
+      "slow": "/audio/hnl-original-v1/ca7aeadc2cc82a7aa8c5ea3e-slow.mp3",
+      "review": "unreviewed"
+    },
+    "过␟guo": {
+      "text": "过",
+      "pinyin": "guo",
+      "normal": "/audio/hnl-original-v1/fcd5fa36d28e9d8fd23d2d44.mp3",
+      "slow": "/audio/hnl-original-v1/fcd5fa36d28e9d8fd23d2d44-slow.mp3",
+      "review": "unreviewed"
+    },
+    "热␟rè": {
+      "text": "热",
+      "pinyin": "rè",
+      "normal": "/audio/hnl-original-v1/83add2af41d31c54c28ab4d8.mp3",
+      "slow": "/audio/hnl-original-v1/83add2af41d31c54c28ab4d8-slow.mp3",
+      "review": "unreviewed"
+    },
+    "冷␟lěng": {
+      "text": "冷",
+      "pinyin": "lěng",
+      "normal": "/audio/hnl-original-v1/de29f9ca7e308d7280446bb8.mp3",
+      "slow": "/audio/hnl-original-v1/de29f9ca7e308d7280446bb8-slow.mp3",
+      "review": "unreviewed"
+    },
+    "高␟gāo": {
+      "text": "高",
+      "pinyin": "gāo",
+      "normal": "/audio/hnl-original-v1/4a469fdb1b5a305cf2b2df85.mp3",
+      "slow": "/audio/hnl-original-v1/4a469fdb1b5a305cf2b2df85-slow.mp3",
+      "review": "unreviewed"
+    },
+    "比␟bǐ": {
+      "text": "比",
+      "pinyin": "bǐ",
+      "normal": "/audio/hnl-original-v1/78cae412294ed19ce50b88c1.mp3",
+      "slow": "/audio/hnl-original-v1/78cae412294ed19ce50b88c1-slow.mp3",
+      "review": "unreviewed"
+    },
+    "忙␟máng": {
+      "text": "忙",
+      "pinyin": "máng",
+      "normal": "/audio/hnl-original-v1/262d47fcf8ac2a7707abbb83.mp3",
+      "slow": "/audio/hnl-original-v1/262d47fcf8ac2a7707abbb83-slow.mp3",
+      "review": "unreviewed"
+    },
+    "懂␟dǒng": {
+      "text": "懂",
+      "pinyin": "dǒng",
+      "normal": "/audio/hnl-original-v1/46184c288e87b9837db11cfb.mp3",
+      "slow": "/audio/hnl-original-v1/46184c288e87b9837db11cfb-slow.mp3",
+      "review": "unreviewed"
+    },
+    "完␟wán": {
+      "text": "完",
+      "pinyin": "wán",
+      "normal": "/audio/hnl-original-v1/a16bfbadeea3b4b9e0bc09fb.mp3",
+      "slow": "/audio/hnl-original-v1/a16bfbadeea3b4b9e0bc09fb-slow.mp3",
+      "review": "unreviewed"
+    },
+    "妈妈␟māma": {
+      "text": "妈妈",
+      "pinyin": "māma",
+      "normal": "/audio/hnl-original-v1/6a79e8c142c70983a02c767b.mp3",
+      "slow": "/audio/hnl-original-v1/6a79e8c142c70983a02c767b-slow.mp3",
+      "review": "unreviewed"
+    },
+    "什么␟shénme": {
+      "text": "什么",
+      "pinyin": "shénme",
+      "normal": "/audio/hnl-original-v1/250592a7c43818fc36cbf6d4.mp3",
+      "slow": "/audio/hnl-original-v1/250592a7c43818fc36cbf6d4-slow.mp3",
+      "review": "unreviewed"
+    },
+    "名字␟míngzi": {
+      "text": "名字",
+      "pinyin": "míngzi",
+      "normal": "/audio/hnl-original-v1/1c22b7b7c31c97dff5293aed.mp3",
+      "slow": "/audio/hnl-original-v1/1c22b7b7c31c97dff5293aed-slow.mp3",
+      "review": "unreviewed"
+    },
+    "越南␟Yuènán": {
+      "text": "越南",
+      "pinyin": "Yuènán",
+      "normal": "/audio/hnl-original-v1/aaaead9febbde8cf815f719a.mp3",
+      "slow": "/audio/hnl-original-v1/aaaead9febbde8cf815f719a-slow.mp3",
+      "review": "unreviewed"
+    },
+    "中国␟Zhōngguó": {
+      "text": "中国",
+      "pinyin": "Zhōngguó",
+      "normal": "/audio/hnl-original-v1/fc01e7be5296100ac53c9059.mp3",
+      "slow": "/audio/hnl-original-v1/fc01e7be5296100ac53c9059-slow.mp3",
+      "review": "unreviewed"
+    },
+    "学生␟xuésheng": {
+      "text": "学生",
+      "pinyin": "xuésheng",
+      "normal": "/audio/hnl-original-v1/13ab08165f3770ea62a13469.mp3",
+      "slow": "/audio/hnl-original-v1/13ab08165f3770ea62a13469-slow.mp3",
+      "review": "unreviewed"
+    },
+    "老师␟lǎoshī": {
+      "text": "老师",
+      "pinyin": "lǎoshī",
+      "normal": "/audio/hnl-original-v1/54bb1e441797860be914da69.mp3",
+      "slow": "/audio/hnl-original-v1/54bb1e441797860be914da69-slow.mp3",
+      "review": "unreviewed"
+    },
+    "爸爸␟bàba": {
+      "text": "爸爸",
+      "pinyin": "bàba",
+      "normal": "/audio/hnl-original-v1/16a202faef3ef7bc5320786c.mp3",
+      "slow": "/audio/hnl-original-v1/16a202faef3ef7bc5320786c-slow.mp3",
+      "review": "unreviewed"
+    },
+    "哥哥␟gēge": {
+      "text": "哥哥",
+      "pinyin": "gēge",
+      "normal": "/audio/hnl-original-v1/3c6af54fbbad062cf958d419.mp3",
+      "slow": "/audio/hnl-original-v1/3c6af54fbbad062cf958d419-slow.mp3",
+      "review": "unreviewed"
+    },
+    "姐姐␟jiějie": {
+      "text": "姐姐",
+      "pinyin": "jiějie",
+      "normal": "/audio/hnl-original-v1/c162d1c726b625bd96c20cdb.mp3",
+      "slow": "/audio/hnl-original-v1/c162d1c726b625bd96c20cdb-slow.mp3",
+      "review": "unreviewed"
+    },
+    "没有␟méiyǒu": {
+      "text": "没有",
+      "pinyin": "méiyǒu",
+      "normal": "/audio/hnl-original-v1/cb14b5e09a64e8cc2fdcd61b.mp3",
+      "slow": "/audio/hnl-original-v1/cb14b5e09a64e8cc2fdcd61b-slow.mp3",
+      "review": "unreviewed"
+    },
+    "现在␟xiànzài": {
+      "text": "现在",
+      "pinyin": "xiànzài",
+      "normal": "/audio/hnl-original-v1/43c74b6b641cf4bccb91fec1.mp3",
+      "slow": "/audio/hnl-original-v1/43c74b6b641cf4bccb91fec1-slow.mp3",
+      "review": "unreviewed"
+    },
+    "早上␟zǎoshang": {
+      "text": "早上",
+      "pinyin": "zǎoshang",
+      "normal": "/audio/hnl-original-v1/2684542b382b2910e2d2f0b3.mp3",
+      "slow": "/audio/hnl-original-v1/2684542b382b2910e2d2f0b3-slow.mp3",
+      "review": "unreviewed"
+    },
+    "上课␟shàng kè": {
+      "text": "上课",
+      "pinyin": "shàng kè",
+      "normal": "/audio/hnl-original-v1/9d840cd485fa2da58a486c12.mp3",
+      "slow": "/audio/hnl-original-v1/9d840cd485fa2da58a486c12-slow.mp3",
+      "review": "unreviewed"
+    },
+    "咖啡␟kāfēi": {
+      "text": "咖啡",
+      "pinyin": "kāfēi",
+      "normal": "/audio/hnl-original-v1/cf1eb1dd84d144729cc3383c.mp3",
+      "slow": "/audio/hnl-original-v1/cf1eb1dd84d144729cc3383c-slow.mp3",
+      "review": "unreviewed"
+    },
+    "北京␟Běijīng": {
+      "text": "北京",
+      "pinyin": "Běijīng",
+      "normal": "/audio/hnl-original-v1/cf8d086e401391616578c516.mp3",
+      "slow": "/audio/hnl-original-v1/cf8d086e401391616578c516-slow.mp3",
+      "review": "unreviewed"
+    },
+    "上海␟Shànghǎi": {
+      "text": "上海",
+      "pinyin": "Shànghǎi",
+      "normal": "/audio/hnl-original-v1/30fab62fe101d89ea7110f43.mp3",
+      "slow": "/audio/hnl-original-v1/30fab62fe101d89ea7110f43-slow.mp3",
+      "review": "unreviewed"
+    },
+    "旅游␟lǚyóu": {
+      "text": "旅游",
+      "pinyin": "lǚyóu",
+      "normal": "/audio/hnl-original-v1/99a2cd4bfe1947acfdc6c9b4.mp3",
+      "slow": "/audio/hnl-original-v1/99a2cd4bfe1947acfdc6c9b4-slow.mp3",
+      "review": "unreviewed"
+    },
+    "机场␟jīchǎng": {
+      "text": "机场",
+      "pinyin": "jīchǎng",
+      "normal": "/audio/hnl-original-v1/a58897d7732180fec1bd9fb8.mp3",
+      "slow": "/audio/hnl-original-v1/a58897d7732180fec1bd9fb8-slow.mp3",
+      "review": "unreviewed"
+    },
+    "飞机␟fēijī": {
+      "text": "飞机",
+      "pinyin": "fēijī",
+      "normal": "/audio/hnl-original-v1/805791a181b4448231ab8795.mp3",
+      "slow": "/audio/hnl-original-v1/805791a181b4448231ab8795-slow.mp3",
+      "review": "unreviewed"
+    },
+    "今天␟jīntiān": {
+      "text": "今天",
+      "pinyin": "jīntiān",
+      "normal": "/audio/hnl-original-v1/26b868fcea197881629cb0d8.mp3",
+      "slow": "/audio/hnl-original-v1/26b868fcea197881629cb0d8-slow.mp3",
+      "review": "unreviewed"
+    },
+    "昨天␟zuótiān": {
+      "text": "昨天",
+      "pinyin": "zuótiān",
+      "normal": "/audio/hnl-original-v1/ff9607fc92785259eb1f9c98.mp3",
+      "slow": "/audio/hnl-original-v1/ff9607fc92785259eb1f9c98-slow.mp3",
+      "review": "unreviewed"
+    },
+    "正在␟zhèngzài": {
+      "text": "正在",
+      "pinyin": "zhèngzài",
+      "normal": "/audio/hnl-original-v1/8cc50cfcae0b79e963302bd0.mp3",
+      "slow": "/audio/hnl-original-v1/8cc50cfcae0b79e963302bd0-slow.mp3",
+      "review": "unreviewed"
+    },
+    "学习␟xuéxí": {
+      "text": "学习",
+      "pinyin": "xuéxí",
+      "normal": "/audio/hnl-original-v1/2abbf3c27d4ddb9d0c402415.mp3",
+      "slow": "/audio/hnl-original-v1/2abbf3c27d4ddb9d0c402415-slow.mp3",
+      "review": "unreviewed"
+    },
+    "汉语␟Hànyǔ": {
+      "text": "汉语",
+      "pinyin": "Hànyǔ",
+      "normal": "/audio/hnl-original-v1/baf2f685f2c58d506a140986.mp3",
+      "slow": "/audio/hnl-original-v1/baf2f685f2c58d506a140986-slow.mp3",
+      "review": "unreviewed"
+    },
+    "看书␟kàn shū": {
+      "text": "看书",
+      "pinyin": "kàn shū",
+      "normal": "/audio/hnl-original-v1/265b07d9b74f7f3b3817101f.mp3",
+      "slow": "/audio/hnl-original-v1/265b07d9b74f7f3b3817101f-slow.mp3",
+      "review": "unreviewed"
+    },
+    "打算␟dǎsuàn": {
+      "text": "打算",
+      "pinyin": "dǎsuàn",
+      "normal": "/audio/hnl-original-v1/7d4eecd2286f04bc3e036792.mp3",
+      "slow": "/audio/hnl-original-v1/7d4eecd2286f04bc3e036792-slow.mp3",
+      "review": "unreviewed"
+    },
+    "周末␟zhōumò": {
+      "text": "周末",
+      "pinyin": "zhōumò",
+      "normal": "/audio/hnl-original-v1/a7ad6b4537701f556c13c0dd.mp3",
+      "slow": "/audio/hnl-original-v1/a7ad6b4537701f556c13c0dd-slow.mp3",
+      "review": "unreviewed"
+    },
+    "爬山␟pá shān": {
+      "text": "爬山",
+      "pinyin": "pá shān",
+      "normal": "/audio/hnl-original-v1/f2250ad8e5e06f7b99b0610c.mp3",
+      "slow": "/audio/hnl-original-v1/f2250ad8e5e06f7b99b0610c-slow.mp3",
+      "review": "unreviewed"
+    },
+    "还是␟háishi": {
+      "text": "还是",
+      "pinyin": "háishi",
+      "normal": "/audio/hnl-original-v1/62a94d0697d96ee45e176a97.mp3",
+      "slow": "/audio/hnl-original-v1/62a94d0697d96ee45e176a97-slow.mp3",
+      "review": "unreviewed"
+    },
+    "准备␟zhǔnbèi": {
+      "text": "准备",
+      "pinyin": "zhǔnbèi",
+      "normal": "/audio/hnl-original-v1/98e472f482b9e6c9c6113680.mp3",
+      "slow": "/audio/hnl-original-v1/98e472f482b9e6c9c6113680-slow.mp3",
+      "review": "unreviewed"
+    },
+    "放松␟fàngsōng": {
+      "text": "放松",
+      "pinyin": "fàngsōng",
+      "normal": "/audio/hnl-original-v1/a05282904aa3c1bc119a6b84.mp3",
+      "slow": "/audio/hnl-original-v1/a05282904aa3c1bc119a6b84-slow.mp3",
+      "review": "unreviewed"
+    },
+    "因为␟yīnwèi": {
+      "text": "因为",
+      "pinyin": "yīnwèi",
+      "normal": "/audio/hnl-original-v1/11eb66e73788f082d6cede65.mp3",
+      "slow": "/audio/hnl-original-v1/11eb66e73788f082d6cede65-slow.mp3",
+      "review": "unreviewed"
+    },
+    "所以␟suǒyǐ": {
+      "text": "所以",
+      "pinyin": "suǒyǐ",
+      "normal": "/audio/hnl-original-v1/a3abcffba7ece2f5bea4a7d2.mp3",
+      "slow": "/audio/hnl-original-v1/a3abcffba7ece2f5bea4a7d2-slow.mp3",
+      "review": "unreviewed"
+    },
+    "下雨␟xià yǔ": {
+      "text": "下雨",
+      "pinyin": "xià yǔ",
+      "normal": "/audio/hnl-original-v1/39234f1cdada6e10c8f4bb6f.mp3",
+      "slow": "/audio/hnl-original-v1/39234f1cdada6e10c8f4bb6f-slow.mp3",
+      "review": "unreviewed"
+    },
+    "公园␟gōngyuán": {
+      "text": "公园",
+      "pinyin": "gōngyuán",
+      "normal": "/audio/hnl-original-v1/3d57e3992a42f597f4d231d7.mp3",
+      "slow": "/audio/hnl-original-v1/3d57e3992a42f597f4d231d7-slow.mp3",
+      "review": "unreviewed"
+    },
+    "迟到␟chídào": {
+      "text": "迟到",
+      "pinyin": "chídào",
+      "normal": "/audio/hnl-original-v1/83596847de26576263fdead6.mp3",
+      "slow": "/audio/hnl-original-v1/83596847de26576263fdead6-slow.mp3",
+      "review": "unreviewed"
+    },
+    "原因␟yuányīn": {
+      "text": "原因",
+      "pinyin": "yuányīn",
+      "normal": "/audio/hnl-original-v1/a21a7632fb6e9f373883de5a.mp3",
+      "slow": "/audio/hnl-original-v1/a21a7632fb6e9f373883de5a-slow.mp3",
+      "review": "unreviewed"
+    },
+    "句子␟jùzi": {
+      "text": "句子",
+      "pinyin": "jùzi",
+      "normal": "/audio/hnl-original-v1/bb2ac507e5a67a17425a38c9.mp3",
+      "slow": "/audio/hnl-original-v1/bb2ac507e5a67a17425a38c9-slow.mp3",
+      "review": "unreviewed"
+    },
+    "再说␟zài shuō": {
+      "text": "再说",
+      "pinyin": "zài shuō",
+      "normal": "/audio/hnl-original-v1/6a7caa59d172a811271179b4.mp3",
+      "slow": "/audio/hnl-original-v1/6a7caa59d172a811271179b4-slow.mp3",
+      "review": "unreviewed"
+    },
+    "清楚␟qīngchu": {
+      "text": "清楚",
+      "pinyin": "qīngchu",
+      "normal": "/audio/hnl-original-v1/333a151cde66b05aec32f271.mp3",
+      "slow": "/audio/hnl-original-v1/333a151cde66b05aec32f271-slow.mp3",
+      "review": "unreviewed"
+    },
+    "练习␟liànxí": {
+      "text": "练习",
+      "pinyin": "liànxí",
+      "normal": "/audio/hnl-original-v1/4e669cd364eac8db96f3a020.mp3",
+      "slow": "/audio/hnl-original-v1/4e669cd364eac8db96f3a020-slow.mp3",
+      "review": "unreviewed"
+    },
+    "虽然␟suīrán": {
+      "text": "虽然",
+      "pinyin": "suīrán",
+      "normal": "/audio/hnl-original-v1/3ac5f20caaff1798a87b8038.mp3",
+      "slow": "/audio/hnl-original-v1/3ac5f20caaff1798a87b8038-slow.mp3",
+      "review": "unreviewed"
+    },
+    "但是␟dànshì": {
+      "text": "但是",
+      "pinyin": "dànshì",
+      "normal": "/audio/hnl-original-v1/b7f51540f2725dcc8d635223.mp3",
+      "slow": "/audio/hnl-original-v1/b7f51540f2725dcc8d635223-slow.mp3",
+      "review": "unreviewed"
+    },
+    "继续␟jìxù": {
+      "text": "继续",
+      "pinyin": "jìxù",
+      "normal": "/audio/hnl-original-v1/5fa1fae24d602b1525fd77ad.mp3",
+      "slow": "/audio/hnl-original-v1/5fa1fae24d602b1525fd77ad-slow.mp3",
+      "review": "unreviewed"
+    },
+    "机会␟jīhuì": {
+      "text": "机会",
+      "pinyin": "jīhuì",
+      "normal": "/audio/hnl-original-v1/3d6b5b17e7beaabe50f600e5.mp3",
+      "slow": "/audio/hnl-original-v1/3d6b5b17e7beaabe50f600e5-slow.mp3",
+      "review": "unreviewed"
+    },
+    "坚持␟jiānchí": {
+      "text": "坚持",
+      "pinyin": "jiānchí",
+      "normal": "/audio/hnl-original-v1/5e009f86b859874b92e7f43f.mp3",
+      "slow": "/audio/hnl-original-v1/5e009f86b859874b92e7f43f-slow.mp3",
+      "review": "unreviewed"
+    },
+    "困难␟kùnnan": {
+      "text": "困难",
+      "pinyin": "kùnnan",
+      "normal": "/audio/hnl-original-v1/af38869af2a91b3222a81f4c.mp3",
+      "slow": "/audio/hnl-original-v1/af38869af2a91b3222a81f4c-slow.mp3",
+      "review": "unreviewed"
+    },
+    "只要␟zhǐyào": {
+      "text": "只要",
+      "pinyin": "zhǐyào",
+      "normal": "/audio/hnl-original-v1/12a653c708f7c4a46c50a0b5.mp3",
+      "slow": "/audio/hnl-original-v1/12a653c708f7c4a46c50a0b5-slow.mp3",
+      "review": "unreviewed"
+    },
+    "只有␟zhǐyǒu": {
+      "text": "只有",
+      "pinyin": "zhǐyǒu",
+      "normal": "/audio/hnl-original-v1/7e91f95b08727b7a048d23f5.mp3",
+      "slow": "/audio/hnl-original-v1/7e91f95b08727b7a048d23f5-slow.mp3",
+      "review": "unreviewed"
+    },
+    "认真␟rènzhēn": {
+      "text": "认真",
+      "pinyin": "rènzhēn",
+      "normal": "/audio/hnl-original-v1/c571dc42177de15c787269d5.mp3",
+      "slow": "/audio/hnl-original-v1/c571dc42177de15c787269d5-slow.mp3",
+      "review": "unreviewed"
+    },
+    "方法␟fāngfǎ": {
+      "text": "方法",
+      "pinyin": "fāngfǎ",
+      "normal": "/audio/hnl-original-v1/0eb80daf5dd4e253dc7c080e.mp3",
+      "slow": "/audio/hnl-original-v1/0eb80daf5dd4e253dc7c080e-slow.mp3",
+      "review": "unreviewed"
+    },
+    "效果␟xiàoguǒ": {
+      "text": "效果",
+      "pinyin": "xiàoguǒ",
+      "normal": "/audio/hnl-original-v1/6653b491614ed3b4028b8d4c.mp3",
+      "slow": "/audio/hnl-original-v1/6653b491614ed3b4028b8d4c-slow.mp3",
+      "review": "unreviewed"
+    },
+    "进步␟jìnbù": {
+      "text": "进步",
+      "pinyin": "jìnbù",
+      "normal": "/audio/hnl-original-v1/1729386b7f5de45b292012d8.mp3",
+      "slow": "/audio/hnl-original-v1/1729386b7f5de45b292012d8-slow.mp3",
+      "review": "unreviewed"
+    },
+    "认为␟rènwéi": {
+      "text": "认为",
+      "pinyin": "rènwéi",
+      "normal": "/audio/hnl-original-v1/5863a7eb9cf2bc51afa8f738.mp3",
+      "slow": "/audio/hnl-original-v1/5863a7eb9cf2bc51afa8f738-slow.mp3",
+      "review": "unreviewed"
+    },
+    "重要␟zhòngyào": {
+      "text": "重要",
+      "pinyin": "zhòngyào",
+      "normal": "/audio/hnl-original-v1/9072d2f31c22b7e46beaab5b.mp3",
+      "slow": "/audio/hnl-original-v1/9072d2f31c22b7e46beaab5b-slow.mp3",
+      "review": "unreviewed"
+    },
+    "经验␟jīngyàn": {
+      "text": "经验",
+      "pinyin": "jīngyàn",
+      "normal": "/audio/hnl-original-v1/743477c4815ab4f551045cbd.mp3",
+      "slow": "/audio/hnl-original-v1/743477c4815ab4f551045cbd-slow.mp3",
+      "review": "unreviewed"
+    },
+    "建议␟jiànyì": {
+      "text": "建议",
+      "pinyin": "jiànyì",
+      "normal": "/audio/hnl-original-v1/1c7613d245692debd5821013.mp3",
+      "slow": "/audio/hnl-original-v1/1c7613d245692debd5821013-slow.mp3",
+      "review": "unreviewed"
+    },
+    "讨论␟tǎolùn": {
+      "text": "讨论",
+      "pinyin": "tǎolùn",
+      "normal": "/audio/hnl-original-v1/54ea5f3ca9d3e57e787bab5a.mp3",
+      "slow": "/audio/hnl-original-v1/54ea5f3ca9d3e57e787bab5a-slow.mp3",
+      "review": "unreviewed"
+    },
+    "选择␟xuǎnzé": {
+      "text": "选择",
+      "pinyin": "xuǎnzé",
+      "normal": "/audio/hnl-original-v1/55484454d20e7a107f0d81a9.mp3",
+      "slow": "/audio/hnl-original-v1/55484454d20e7a107f0d81a9-slow.mp3",
+      "review": "unreviewed"
+    },
+    "是的。␟Shì de.": {
+      "text": "是的。",
+      "pinyin": "Shì de.",
+      "normal": "/audio/hnl-original-v1/cda91e31adbbfc8f357403f5.mp3",
+      "slow": "/audio/hnl-original-v1/cda91e31adbbfc8f357403f5-slow.mp3",
+      "review": "unreviewed"
+    },
+    "打电话␟dǎ diànhuà": {
+      "text": "打电话",
+      "pinyin": "dǎ diànhuà",
+      "normal": "/audio/hnl-original-v1/16d0b33ccc72df779d7e7e48.mp3",
+      "slow": "/audio/hnl-original-v1/16d0b33ccc72df779d7e7e48-slow.mp3",
+      "review": "unreviewed"
+    },
+    "我叫李明。␟Wǒ jiào Lǐ Míng.": {
+      "text": "我叫李明。",
+      "pinyin": "Wǒ jiào Lǐ Míng.",
+      "normal": "/audio/hnl-original-v1/ca3e60868b03bd63027f8325.mp3",
+      "slow": "/audio/hnl-original-v1/ca3e60868b03bd63027f8325-slow.mp3",
+      "review": "unreviewed"
+    },
+    "现在几点？␟Xiànzài jǐ diǎn?": {
+      "text": "现在几点？",
+      "pinyin": "Xiànzài jǐ diǎn?",
+      "normal": "/audio/hnl-original-v1/11d719e432dd4cf4574b92bd.mp3",
+      "slow": "/audio/hnl-original-v1/11d719e432dd4cf4574b92bd-slow.mp3",
+      "review": "unreviewed"
+    },
+    "我想喝茶。␟Wǒ xiǎng hē chá.": {
+      "text": "我想喝茶。",
+      "pinyin": "Wǒ xiǎng hē chá.",
+      "normal": "/audio/hnl-original-v1/d756a90a53518e35b2f4c69b.mp3",
+      "slow": "/audio/hnl-original-v1/d756a90a53518e35b2f4c69b-slow.mp3",
+      "review": "unreviewed"
+    },
+    "有一点儿。␟Yǒu yìdiǎnr.": {
+      "text": "有一点儿。",
+      "pinyin": "Yǒu yìdiǎnr.",
+      "normal": "/audio/hnl-original-v1/22023ccca158aff711250d5e.mp3",
+      "slow": "/audio/hnl-original-v1/22023ccca158aff711250d5e-slow.mp3",
+      "review": "unreviewed"
+    },
+    "妈妈，你好！␟Māma, nǐ hǎo!": {
+      "text": "妈妈，你好！",
+      "pinyin": "Māma, nǐ hǎo!",
+      "normal": "/audio/hnl-original-v1/79e3e052b4bf536b7561c17f.mp3",
+      "slow": "/audio/hnl-original-v1/79e3e052b4bf536b7561c17f-slow.mp3",
+      "review": "unreviewed"
+    },
+    "你是老师吗？␟Nǐ shì lǎoshī ma?": {
+      "text": "你是老师吗？",
+      "pinyin": "Nǐ shì lǎoshī ma?",
+      "normal": "/audio/hnl-original-v1/baea48628f6f03028fd914e7.mp3",
+      "slow": "/audio/hnl-original-v1/baea48628f6f03028fd914e7-slow.mp3",
+      "review": "unreviewed"
+    },
+    "你有哥哥吗？␟Nǐ yǒu gēge ma?": {
+      "text": "你有哥哥吗？",
+      "pinyin": "Nǐ yǒu gēge ma?",
+      "normal": "/audio/hnl-original-v1/aa0118805a6f324c231ba99e.mp3",
+      "slow": "/audio/hnl-original-v1/aa0118805a6f324c231ba99e-slow.mp3",
+      "review": "unreviewed"
+    },
+    "现在八点半。␟Xiànzài bā diǎn bàn.": {
+      "text": "现在八点半。",
+      "pinyin": "Xiànzài bā diǎn bàn.",
+      "normal": "/audio/hnl-original-v1/04f37af2835d9666107951ab.mp3",
+      "slow": "/audio/hnl-original-v1/04f37af2835d9666107951ab-slow.mp3",
+      "review": "unreviewed"
+    },
+    "你几点上课？␟Nǐ jǐ diǎn shàng kè?": {
+      "text": "你几点上课？",
+      "pinyin": "Nǐ jǐ diǎn shàng kè?",
+      "normal": "/audio/hnl-original-v1/cb3ae72f92669230d3ac1e4a.mp3",
+      "slow": "/audio/hnl-original-v1/cb3ae72f92669230d3ac1e4a-slow.mp3",
+      "review": "unreviewed"
+    },
+    "我九点上课。␟Wǒ jiǔ diǎn shàng kè.": {
+      "text": "我九点上课。",
+      "pinyin": "Wǒ jiǔ diǎn shàng kè.",
+      "normal": "/audio/hnl-original-v1/6cd915639b7f6ffa1d1e7412.mp3",
+      "slow": "/audio/hnl-original-v1/6cd915639b7f6ffa1d1e7412-slow.mp3",
+      "review": "unreviewed"
+    },
+    "你想喝什么？␟Nǐ xiǎng hē shénme?": {
+      "text": "你想喝什么？",
+      "pinyin": "Nǐ xiǎng hē shénme?",
+      "normal": "/audio/hnl-original-v1/3e0a059e507c7016a2711e80.mp3",
+      "slow": "/audio/hnl-original-v1/3e0a059e507c7016a2711e80-slow.mp3",
+      "review": "unreviewed"
+    },
+    "你现在忙吗？␟Nǐ xiànzài máng ma?": {
+      "text": "你现在忙吗？",
+      "pinyin": "Nǐ xiànzài máng ma?",
+      "normal": "/audio/hnl-original-v1/3662dee421653bffa602e85d.mp3",
+      "slow": "/audio/hnl-original-v1/3662dee421653bffa602e85d-slow.mp3",
+      "review": "unreviewed"
+    },
+    "你听懂了吗？␟Nǐ tīngdǒng le ma?": {
+      "text": "你听懂了吗？",
+      "pinyin": "Nǐ tīngdǒng le ma?",
+      "normal": "/audio/hnl-original-v1/a7c219a51a1de5cd73f3f1f0.mp3",
+      "slow": "/audio/hnl-original-v1/a7c219a51a1de5cd73f3f1f0-slow.mp3",
+      "review": "unreviewed"
+    },
+    "不客气。再见！␟Bú kèqi. Zàijiàn!": {
+      "text": "不客气。再见！",
+      "pinyin": "Bú kèqi. Zàijiàn!",
+      "normal": "/audio/hnl-original-v1/2a58f3512f2709c64997e9f8.mp3",
+      "slow": "/audio/hnl-original-v1/2a58f3512f2709c64997e9f8-slow.mp3",
+      "review": "unreviewed"
+    },
+    "你叫什么名字？␟Nǐ jiào shénme míngzi?": {
+      "text": "你叫什么名字？",
+      "pinyin": "Nǐ jiào shénme míngzi?",
+      "normal": "/audio/hnl-original-v1/c789f85553ba0e195a318a04.mp3",
+      "slow": "/audio/hnl-original-v1/c789f85553ba0e195a318a04-slow.mp3",
+      "review": "unreviewed"
+    },
+    "我叫安。你呢？␟Wǒ jiào Ān. Nǐ ne?": {
+      "text": "我叫安。你呢？",
+      "pinyin": "Wǒ jiào Ān. Nǐ ne?",
+      "normal": "/audio/hnl-original-v1/df35035d64ee634617552565.mp3",
+      "slow": "/audio/hnl-original-v1/df35035d64ee634617552565-slow.mp3",
+      "review": "unreviewed"
+    },
+    "你是越南人吗？␟Nǐ shì Yuènán rén ma?": {
+      "text": "你是越南人吗？",
+      "pinyin": "Nǐ shì Yuènán rén ma?",
+      "normal": "/audio/hnl-original-v1/e7a99cfa0a2f51cb50581c71.mp3",
+      "slow": "/audio/hnl-original-v1/e7a99cfa0a2f51cb50581c71-slow.mp3",
+      "review": "unreviewed"
+    },
+    "你家有几口人？␟Nǐ jiā yǒu jǐ kǒu rén?": {
+      "text": "你家有几口人？",
+      "pinyin": "Nǐ jiā yǒu jǐ kǒu rén?",
+      "normal": "/audio/hnl-original-v1/d71da784205daf11c5722bb2.mp3",
+      "slow": "/audio/hnl-original-v1/d71da784205daf11c5722bb2-slow.mp3",
+      "review": "unreviewed"
+    },
+    "我家有四口人。␟Wǒ jiā yǒu sì kǒu rén.": {
+      "text": "我家有四口人。",
+      "pinyin": "Wǒ jiā yǒu sì kǒu rén.",
+      "normal": "/audio/hnl-original-v1/e8d765be227c413fe124b855.mp3",
+      "slow": "/audio/hnl-original-v1/e8d765be227c413fe124b855-slow.mp3",
+      "review": "unreviewed"
+    },
+    "你去过北京吗？␟Nǐ qùguo Běijīng ma?": {
+      "text": "你去过北京吗？",
+      "pinyin": "Nǐ qùguo Běijīng ma?",
+      "normal": "/audio/hnl-original-v1/cc5d6e4e78432e666dde5ec9.mp3",
+      "slow": "/audio/hnl-original-v1/cc5d6e4e78432e666dde5ec9-slow.mp3",
+      "review": "unreviewed"
+    },
+    "你坐过飞机吗？␟Nǐ zuòguo fēijī ma?": {
+      "text": "你坐过飞机吗？",
+      "pinyin": "Nǐ zuòguo fēijī ma?",
+      "normal": "/audio/hnl-original-v1/ff1d0736fcabf34597097e5b.mp3",
+      "slow": "/audio/hnl-original-v1/ff1d0736fcabf34597097e5b-slow.mp3",
+      "review": "unreviewed"
+    },
+    "今天比昨天热。␟Jīntiān bǐ zuótiān rè.": {
+      "text": "今天比昨天热。",
+      "pinyin": "Jīntiān bǐ zuótiān rè.",
+      "normal": "/audio/hnl-original-v1/f8945036278e9bc234586ca4.mp3",
+      "slow": "/audio/hnl-original-v1/f8945036278e9bc234586ca4-slow.mp3",
+      "review": "unreviewed"
+    },
+    "你正在做什么？␟Nǐ zhèngzài zuò shénme?": {
+      "text": "你正在做什么？",
+      "pinyin": "Nǐ zhèngzài zuò shénme?",
+      "normal": "/audio/hnl-original-v1/80102d8aca7d66f55bbfcb2d.mp3",
+      "slow": "/audio/hnl-original-v1/80102d8aca7d66f55bbfcb2d-slow.mp3",
+      "review": "unreviewed"
+    },
+    "我正在看书呢。␟Wǒ zhèngzài kàn shū ne.": {
+      "text": "我正在看书呢。",
+      "pinyin": "Wǒ zhèngzài kàn shū ne.",
+      "normal": "/audio/hnl-original-v1/72877f2ede2770b1191cbe1e.mp3",
+      "slow": "/audio/hnl-original-v1/72877f2ede2770b1191cbe1e-slow.mp3",
+      "review": "unreviewed"
+    },
+    "我想在家休息。␟Wǒ xiǎng zài jiā xiūxi.": {
+      "text": "我想在家休息。",
+      "pinyin": "Wǒ xiǎng zài jiā xiūxi.",
+      "normal": "/audio/hnl-original-v1/bda08863c3f16b84e0e9a05f.mp3",
+      "slow": "/audio/hnl-original-v1/bda08863c3f16b84e0e9a05f-slow.mp3",
+      "review": "unreviewed"
+    },
+    "不是，我是学生。␟Bú shì, wǒ shì xuésheng.": {
+      "text": "不是，我是学生。",
+      "pinyin": "Bú shì, wǒ shì xuésheng.",
+      "normal": "/audio/hnl-original-v1/e44303c4c1ad170b85cbf170.mp3",
+      "slow": "/audio/hnl-original-v1/e44303c4c1ad170b85cbf170-slow.mp3",
+      "review": "unreviewed"
+    },
+    "今天天气怎么样？␟Jīntiān tiānqì zěnmeyàng?": {
+      "text": "今天天气怎么样？",
+      "pinyin": "Jīntiān tiānqì zěnmeyàng?",
+      "normal": "/audio/hnl-original-v1/55249a91e1dc33dbefe424de.mp3",
+      "slow": "/audio/hnl-original-v1/55249a91e1dc33dbefe424de-slow.mp3",
+      "review": "unreviewed"
+    },
+    "我要一杯茶，谢谢。␟Wǒ yào yì bēi chá, xièxie.": {
+      "text": "我要一杯茶，谢谢。",
+      "pinyin": "Wǒ yào yì bēi chá, xièxie.",
+      "normal": "/audio/hnl-original-v1/b0d1ea7a14169aaec1754b28.mp3",
+      "slow": "/audio/hnl-original-v1/b0d1ea7a14169aaec1754b28-slow.mp3",
+      "review": "unreviewed"
+    },
+    "去过。我去年去的。␟Qùguo. Wǒ qùnián qù de.": {
+      "text": "去过。我去年去的。",
+      "pinyin": "Qùguo. Wǒ qùnián qù de.",
+      "normal": "/audio/hnl-original-v1/a2f78e0003bcc1d25625eefd.mp3",
+      "slow": "/audio/hnl-original-v1/a2f78e0003bcc1d25625eefd-slow.mp3",
+      "review": "unreviewed"
+    },
+    "我们去喝点儿水吧。␟Wǒmen qù hē diǎnr shuǐ ba.": {
+      "text": "我们去喝点儿水吧。",
+      "pinyin": "Wǒmen qù hē diǎnr shuǐ ba.",
+      "normal": "/audio/hnl-original-v1/feda4ac2229133613f019d8d.mp3",
+      "slow": "/audio/hnl-original-v1/feda4ac2229133613f019d8d-slow.mp3",
+      "review": "unreviewed"
+    },
+    "周末你有什么打算？␟Zhōumò nǐ yǒu shénme dǎsuàn?": {
+      "text": "周末你有什么打算？",
+      "pinyin": "Zhōumò nǐ yǒu shénme dǎsuàn?",
+      "normal": "/audio/hnl-original-v1/7183072f9fe99c6e44e6d165.mp3",
+      "slow": "/audio/hnl-original-v1/7183072f9fe99c6e44e6d165-slow.mp3",
+      "review": "unreviewed"
+    },
+    "下次早点儿出门吧。␟Xià cì zǎo diǎnr chū mén ba.": {
+      "text": "下次早点儿出门吧。",
+      "pinyin": "Xià cì zǎo diǎnr chū mén ba.",
+      "normal": "/audio/hnl-original-v1/918136c433d569b79edaa5fe.mp3",
+      "slow": "/audio/hnl-original-v1/918136c433d569b79edaa5fe-slow.mp3",
+      "review": "unreviewed"
+    },
+    "你觉得学汉语难吗？␟Nǐ juéde xué Hànyǔ nán ma?": {
+      "text": "你觉得学汉语难吗？",
+      "pinyin": "Nǐ juéde xué Hànyǔ nán ma?",
+      "normal": "/audio/hnl-original-v1/c1c429517db330de52af82a8.mp3",
+      "slow": "/audio/hnl-original-v1/c1c429517db330de52af82a8-slow.mp3",
+      "review": "unreviewed"
+    },
+    "我想坚持每天练习。␟Wǒ xiǎng jiānchí měitiān liànxí.": {
+      "text": "我想坚持每天练习。",
+      "pinyin": "Wǒ xiǎng jiānchí měitiān liànxí.",
+      "normal": "/audio/hnl-original-v1/468abd2475fd50b5d4f0a9e3.mp3",
+      "slow": "/audio/hnl-original-v1/468abd2475fd50b5d4f0a9e3-slow.mp3",
+      "review": "unreviewed"
+    },
+    "怎样才能提高听力？␟Zěnyàng cái néng tígāo tīnglì?": {
+      "text": "怎样才能提高听力？",
+      "pinyin": "Zěnyàng cái néng tígāo tīnglì?",
+      "normal": "/audio/hnl-original-v1/58f3b84b57fd8cedb721c4f9.mp3",
+      "slow": "/audio/hnl-original-v1/58f3b84b57fd8cedb721c4f9-slow.mp3",
+      "review": "unreviewed"
+    },
+    "我们可以讨论一下。␟Wǒmen kěyǐ tǎolùn yíxià.": {
+      "text": "我们可以讨论一下。",
+      "pinyin": "Wǒmen kěyǐ tǎolùn yíxià.",
+      "normal": "/audio/hnl-original-v1/50bbf3e1586999c4db88bd30.mp3",
+      "slow": "/audio/hnl-original-v1/50bbf3e1586999c4db88bd30-slow.mp3",
+      "review": "unreviewed"
+    },
+    "没有，我有一个姐姐。␟Méiyǒu, wǒ yǒu yí ge jiějie.": {
+      "text": "没有，我有一个姐姐。",
+      "pinyin": "Méiyǒu, wǒ yǒu yí ge jiějie.",
+      "normal": "/audio/hnl-original-v1/c8f808eb812b042bbfbe0a64.mp3",
+      "slow": "/audio/hnl-original-v1/c8f808eb812b042bbfbe0a64-slow.mp3",
+      "review": "unreviewed"
+    },
+    "没有，我没坐过飞机。␟Méiyǒu, wǒ méi zuòguo fēijī.": {
+      "text": "没有，我没坐过飞机。",
+      "pinyin": "Méiyǒu, wǒ méi zuòguo fēijī.",
+      "normal": "/audio/hnl-original-v1/033c64ff01e35008a0364fde.mp3",
+      "slow": "/audio/hnl-original-v1/033c64ff01e35008a0364fde-slow.mp3",
+      "review": "unreviewed"
+    },
+    "我打算去爬山。你呢？␟Wǒ dǎsuàn qù pá shān. Nǐ ne?": {
+      "text": "我打算去爬山。你呢？",
+      "pinyin": "Wǒ dǎsuàn qù pá shān. Nǐ ne?",
+      "normal": "/audio/hnl-original-v1/66d5113e2b288c24b419e354.mp3",
+      "slow": "/audio/hnl-original-v1/66d5113e2b288c24b419e354-slow.mp3",
+      "review": "unreviewed"
+    },
+    "你今天为什么迟到了？␟Nǐ jīntiān wèishénme chídào le?": {
+      "text": "你今天为什么迟到了？",
+      "pinyin": "Nǐ jīntiān wèishénme chídào le?",
+      "normal": "/audio/hnl-original-v1/2ac9e57e28ef9d45ae68b1d5.mp3",
+      "slow": "/audio/hnl-original-v1/2ac9e57e28ef9d45ae68b1d5-slow.mp3",
+      "review": "unreviewed"
+    },
+    "没听懂，请再说一遍。␟Méi tīngdǒng, qǐng zài shuō yí biàn.": {
+      "text": "没听懂，请再说一遍。",
+      "pinyin": "Méi tīngdǒng, qǐng zài shuō yí biàn.",
+      "normal": "/audio/hnl-original-v1/02496a7806a6afb9f14d3d35.mp3",
+      "slow": "/audio/hnl-original-v1/02496a7806a6afb9f14d3d35-slow.mp3",
+      "review": "unreviewed"
+    },
+    "好的，我说慢一点儿。␟Hǎo de, wǒ shuō màn yìdiǎnr.": {
+      "text": "好的，我说慢一点儿。",
+      "pinyin": "Hǎo de, wǒ shuō màn yìdiǎnr.",
+      "normal": "/audio/hnl-original-v1/11cf832c41aaeb52212e8766.mp3",
+      "slow": "/audio/hnl-original-v1/11cf832c41aaeb52212e8766-slow.mp3",
+      "review": "unreviewed"
+    },
+    "你认为哪种方法更好？␟Nǐ rènwéi nǎ zhǒng fāngfǎ gèng hǎo?": {
+      "text": "你认为哪种方法更好？",
+      "pinyin": "Nǐ rènwéi nǎ zhǒng fāngfǎ gèng hǎo?",
+      "normal": "/audio/hnl-original-v1/432c1792e1ef14a4cdf0a6ad.mp3",
+      "slow": "/audio/hnl-original-v1/432c1792e1ef14a4cdf0a6ad-slow.mp3",
+      "review": "unreviewed"
+    },
+    "因为下雨，路上车很多。␟Yīnwèi xià yǔ, lùshang chē hěn duō.": {
+      "text": "因为下雨，路上车很多。",
+      "pinyin": "Yīnwèi xià yǔ, lùshang chē hěn duō.",
+      "normal": "/audio/hnl-original-v1/59da0b11d60b09a911aa97bc.mp3",
+      "slow": "/audio/hnl-original-v1/59da0b11d60b09a911aa97bc-slow.mp3",
+      "review": "unreviewed"
+    },
+    "可以每天听一段短对话。␟Kěyǐ měitiān tīng yí duàn duǎn duìhuà.": {
+      "text": "可以每天听一段短对话。",
+      "pinyin": "Kěyǐ měitiān tīng yí duàn duǎn duìhuà.",
+      "normal": "/audio/hnl-original-v1/bc255f051476aa6b11c796e1.mp3",
+      "slow": "/audio/hnl-original-v1/bc255f051476aa6b11c796e1-slow.mp3",
+      "review": "unreviewed"
+    },
+    "只要有时间，我就练习。␟Zhǐyào yǒu shíjiān, wǒ jiù liànxí.": {
+      "text": "只要有时间，我就练习。",
+      "pinyin": "Zhǐyào yǒu shíjiān, wǒ jiù liànxí.",
+      "normal": "/audio/hnl-original-v1/dd26e190790101f53e4a0b93.mp3",
+      "slow": "/audio/hnl-original-v1/dd26e190790101f53e4a0b93-slow.mp3",
+      "review": "unreviewed"
+    },
+    "对我来说，每天练习更有效。␟Duì wǒ lái shuō, měitiān liànxí gèng yǒuxiào.": {
+      "text": "对我来说，每天练习更有效。",
+      "pinyin": "Duì wǒ lái shuō, měitiān liànxí gèng yǒuxiào.",
+      "normal": "/audio/hnl-original-v1/471910ef67346ac6f2029819.mp3",
+      "slow": "/audio/hnl-original-v1/471910ef67346ac6f2029819-slow.mp3",
+      "review": "unreviewed"
+    },
+    "虽然有点儿难，但是很有意思。␟Suīrán yǒudiǎnr nán, dànshì hěn yǒu yìsi.": {
+      "text": "虽然有点儿难，但是很有意思。",
+      "pinyin": "Suīrán yǒudiǎnr nán, dànshì hěn yǒu yìsi.",
+      "normal": "/audio/hnl-original-v1/e4fc2a172d97289ffd27bb2b.mp3",
+      "slow": "/audio/hnl-original-v1/e4fc2a172d97289ffd27bb2b-slow.mp3",
+      "review": "unreviewed"
+    }
+  }
+}

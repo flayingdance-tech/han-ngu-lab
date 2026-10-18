@@ -11,6 +11,8 @@ Quyết định chủ dự án ngày 18/10/2026 (+07:00): dùng bản chỉ tác
 - Đây là audio tổng hợp. Kiểm tra tín hiệu/ASR không xác nhận đúng thanh điệu hoặc duyệt chuyên môn.
 - Pinyin nằm trong key để không dùng nhầm file giữa hai reading; phiên bản OmniVoice này vẫn tổng hợp từ chữ Hán, chưa ép phát âm bằng Pinyin. Nghe duyệt riêng chữ đa âm và bốn thanh; không coi key đúng là phát âm đúng.
 
+Hiệu năng đo trên CPU máy hiện tại: các batch 8 mục đã mất khoảng 177–265 giây với INT8/16 bước, tùy độ dài và tải máy. Đây là quy trình tạo trước, không phải tổng hợp thời gian thực. Không suy từ kết quả này thành cam kết tốc độ cho máy khác hoặc toàn bộ giáo trình HSK4.
+
 ## Dữ liệu riêng và công khai
 
 Chỉ các file audio được tạo và manifest vào `public/audio/`. Bản ghi nguồn, transcript tham chiếu, prompt nhân bản, model và runtime ở `.local/` (gitignore). Không đưa reference/private voice profile vào frontend, log phục vụ hoặc bản public.
@@ -27,7 +29,7 @@ Chạy tại gốc repo bằng PowerShell UTF-8. Runtime hiện dùng Python 3.1
 
 1. API local đang chạy: `npm.cmd run audio:targets`. Chỉ lấy vocabulary/dialogue đã truy cập được qua API public; không xuất đáp án kín hoặc CMS draft. Local preview được đánh dấu rõ. Có thể đổi origin bằng `HNL_CONTENT_URL` khi được cấp quyền.
 2. Nếu cần tái tạo reference: `npm.cmd run audio:reference`. Cần model ASR local trong `.local/audio-preview/asr-model`. Giữ file nguồn và hash; không chạy lại chỉ vì đổi bài học.
-3. Tạo audio: `npm.cmd run audio:render -- --allow-preview --batch-size 8 --int8`. `--allow-preview` chỉ chấp nhận đầu vào thử nghiệm, không duyệt nội dung. Có `--limit N` để thử N mục, giảm batch-size nếu thiếu RAM. Mặc định 16 bước, seed cố định, ngôn ngữ zh và speed 0.9. INT8 chỉ lượng tử hóa Linear của backbone cho CPU; codec vẫn float32. Bỏ `--int8` để thử FP32; fingerprint khác, cần so sánh lại.
+3. Tạo audio: `npm.cmd run audio:render -- --allow-preview --batch-size 8 --int8`. `--allow-preview` chỉ chấp nhận đầu vào thử nghiệm, không duyệt nội dung. Có `--limit N` để giới hạn lượt tạo, giảm batch-size nếu thiếu RAM. Mặc định 16 bước, seed cố định, ngôn ngữ zh và speed 0.9. INT8 chỉ lượng tử hóa Linear của backbone cho CPU; codec vẫn float32. Đổi INT8/FP32, steps hoặc reference làm đổi fingerprint: renderer sẽ từ chối ghi lên manifest khác profile. Thử nghiệm profile mới cần workspace/output riêng và kế hoạch chuyển bộ có backup, không dùng lệnh thử để thay danh mục đang phát.
 4. `npm.cmd run audio:check`: kiểm tra schema, đọc đúng key, file/hash/độ phủ. Kiểm tra decode/duration/loudness riêng bằng FFmpeg; không thay thế nghe duyệt.
 5. `npm.cmd run audio:check -- --release` sẽ từ chối các mục chưa có `approved`. Chỉ người có chuyên môn và quyền duyệt mới được đánh dấu sau khi nghe đúng câu/reading; chưa có màn hình duyệt audio trong CMS. Không đổi trạng thái dựa vào ASR hoặc để làm test xanh.
 
@@ -51,4 +53,4 @@ Trên Windows, nếu reader/antivirus tạm giữ file, bước thay file nguyê
 
 File giọng là phần bổ sung cho backup DB/user/progress hiện có; không thay thế backup DB hoặc chứng minh đã chuyển nền tảng cloud. Giới hạn chi phí 150 USD/6 tháng vẫn áp dụng. Kiến trúc này loại phí API tổng hợp theo lượt nghe; lưu trữ, băng thông, domain và máy vận hành vẫn phải tính trong ngân sách, chưa xác minh tại AWS Console.
 
-`npm.cmd run audio:backup` tạo snapshot mới trong `.local/voice-backups/`, gồm bộ phát công khai và profile riêng/master, rồi copy restore thử sang `.local/voice-restore-check/` và đối chiếu SHA256 từng file. Snapshot không ghi đè dữ liệu cũ, không chứa model/runtime/DB. Đây là bản riêng tư; chỉ đưa nhánh `public/audio/` lên hosting. Kết quả này không chứng minh đã có backup ngoài máy hoặc ngoài AWS.
+`npm.cmd run audio:backup` tạo snapshot mới trong `.local/voice-backups/`, gồm bộ phát công khai và profile riêng/master, rồi copy restore thử sang `.local/voice-restore-check/` và đối chiếu SHA256 từng file. Snapshot không ghi đè dữ liệu cũ, không chứa model/runtime/DB hoặc WAV trung gian. WAV là cache có thể sao lưu riêng để phục hồi nhanh một lượt đang dở; không cần để phát bộ MP3 hoặc sinh câu mới từ reference. Đây là bản riêng tư; chỉ đưa nhánh `public/audio/` lên hosting. Kết quả này không chứng minh đã có backup ngoài máy hoặc ngoài AWS.

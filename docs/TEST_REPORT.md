@@ -113,3 +113,13 @@ Chạy local tests cần quyền loopback của môi trường; EACCES trong lư
 - AUDIO-06 19:58 +07:00: E2E audio chạy lại 32319 đạt 4/4 trong 1.6 phút, desktop/mobile, không retry; preview HTTP200. Lượt5264 trước đó chưa vào test do webServer cold start/khởi động trùng, exit1; đã chờ HTTP200 rồi chạy lại. Không có thay đổi CSS/theme. Full corpus/build vẫn chờ producer.
 
 - AUDIO-06 20:08 +07:00: test Python tests/test_voice_io.py đạt2/2 về Windows file lock và bảo toàn dữ liệu khi hết retry; AST6 file đạt. Cache recovery thật35192 phục hồi1 mục từ WAV, không nạp TTS (generated0,recovered1,total124,pending21). Producer trước đó WinError5 ở manifest, finalizer dừng đúng; chưa nghiệm thu build/corpus. Full21 mục tiếp tục bằng log *-final.*.
+
+## AUDIO-06 — kết quả kỹ thuật cuối 2026-10-18 20:24 +07:00
+
+- Finalizer thực chạy tới hết, report .local/voice/finalize-report.json lúc20:22:49 +07:00:145 entries,290 files,build/exportVerified/backupRoundtrip=true; deployed/humanReviewed=false.
+- Audit145/145,290 MP3,issues0; docs/reports/audio-inventory.json lưu SHA256. Signal QA decode290 file, mono24kHz, peak/finite/duration và tỷ lệ chậm/thường đạt. Không gọi đây là đánh giá đúng thanh điệu/độ tự nhiên.
+- ASR8 mẫu có nhận sai hoặc trống ở các từ/câu ngắn; mọi mục unreviewed, approved0. Nghe duyệt chuyên môn vẫn thiếu, không dùng ASR làm duyệt. Chưa kiểm tra âm bằng nghe, thiết bị thật/iOS Safari hoặc mọi trình duyệt.
+- Cache resume full:generated0,pending0,total145,cacheHittrue,apiCalls0. CLI đổi steps8 bị profile guard từ chối, manifest SHA256 không thay đổi; proof profile-guard-check.json. Khóa file Windows có2 regression tests đạt và phục hồi WAV thật1 mục đã đạt.
+- Backup/restore đủ297 file SHA256 khớp tại .local/voice-backups/2026-10-18T13-21-20-771Z và restore-check cùng timestamp. Đây là backup cùng máy có private profile, chưa có backup ngoài máy/AWS hoặc diễn tập cloud migration.
+- Build webpack và TypeScript thành công; manifest+290 MP3 trong out byte-identical với nguồn, không file tạm/reference/master/.pt/.safetensors.12 prototype chuyển vào private. Sau build, HTTP trang/API catalog/MP3 thường/chậm đều200 (20:23).
+- Kiểm thử mã đã ghi:unit/integration18/18,typecheck/lint đạt; audio E2E32319 đạt4/4 không retry; Python2/2; pip check đạt, production npm audit0. Các lượt lỗi trước và cách sửa được giữ ở WORK_LOG. Không suy kết quả thành toàn dự án/HSK4/cloud đã hoàn tất.

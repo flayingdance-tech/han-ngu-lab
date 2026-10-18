@@ -66,8 +66,9 @@ def main():
         previous = json.loads(manifest_path.read_text(encoding="utf-8"))
         if previous["voiceId"] != VOICE:
             raise ValueError("Refusing to overwrite another voice manifest")
-        if previous.get("profileFingerprint") == fingerprint:
-            manifest = previous
+        if previous.get("profileFingerprint") != fingerprint:
+            raise ValueError("Existing audio uses another profile. Preserve its manifest and use an isolated workspace for experiments; a profile migration must be explicit.")
+        manifest = previous
     done, failed = 0, []
     todo = []
     for item in targets["targets"]:
