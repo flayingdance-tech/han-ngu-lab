@@ -103,3 +103,4 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 - 2026-10-18 11:12 +07:00: 3 ca lỗi ban đầu chạy lại đều đạt (8411); theme 2/2 đạt (90201); build 86799 đạt. Xem ảnh mobile phát hiện ảnh nằm dưới caption và dấu câu bị giãn do flex; đã đưa ảnh xuống dưới, bọc đáp án thành một khối. Đang xác minh cuối: theme 25857, build 91120.
 
 - 2026-10-18 11:13 +07:00: UI-02 hoàn tất. Theme 25857 đạt 2/2, lint 61475 exit 0, build 91120 exit 0 (gồm TypeScript). Preview và asset HTTP 200. Đã xem ảnh mobile cuối; không còn test/build cần chờ. Không tạo cloud/không đổi dữ liệu học.
+- Commit UI đã xác minh: 37ac5d4 (local, chưa push).
