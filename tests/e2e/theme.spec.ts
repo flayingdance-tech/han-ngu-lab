@@ -11,8 +11,8 @@ test('pastel and lo-fi themes persist and Chinese stays readable on each viewpor
   await page.reload();
   await expect(page.locator('html')).toHaveAttribute('data-theme','dark');
   await expect(page.getByRole('button',{name:'Bắt đầu bài đầu tiên'})).toBeEnabled();
-  expect(await page.locator('.hero').evaluate(el=>getComputedStyle(el,'::before').backgroundImage)).toContain('study-night-room.webp');
-  expect((await page.request.get('/images/study-night-room.webp')).ok()).toBeTruthy();
+  expect(await page.locator('.hero').evaluate(el=>getComputedStyle(el,'::before').backgroundImage)).toContain('study-night.webp');
+  expect((await page.request.get('/images/study-night.webp')).ok()).toBeTruthy();
   await page.screenshot({path:`test-results/lofi-home-${info.project.name}.png`,fullPage:true});
   await page.getByRole('button',{name:'Bắt đầu bài đầu tiên'}).click();
   await expect(page.locator('.hanzi').first()).toBeVisible();

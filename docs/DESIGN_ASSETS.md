@@ -1,5 +1,12 @@
 # Giao diện pastel và lo-fi
 
+## UI-07 — làm rõ yêu cầu dark
+
+- Chủ dự án xác nhận chỉ bỏ trẻ chibi ở dark, giữ nữ lo-fi và giữ nguyên chế độ sáng.
+- Dark hero khôi phục `public/images/study-night.webp` gốc. `study-night-room.webp` không còn dùng làm hero; giữ lại như bản thử trước.
+- Không tạo/chỉnh ảnh hoặc đổi style light trong mốc này. Các rule ẩn page-mascot/sidebar-companion của trẻ ở dark vẫn áp dụng.
+- Mục UI-06 bên dưới là lịch sử đã được điều chỉnh bởi quyết định D-023.
+
 ## UI-06 — dark không có chibi
 
 - Theo yêu cầu mới nhất, dark ẩn toàn bộ page-mascot/sidebar-companion và bỏ cột trống trong header; light vẫn có chibi.

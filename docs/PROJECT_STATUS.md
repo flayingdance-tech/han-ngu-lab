@@ -1,12 +1,13 @@
 # Trạng thái hiện tại — đọc đầu tiên khi tiếp tục
 
-- Checkpoint: 2026-10-18 14:54 +07:00, Asia/Bangkok. UI-06 DONE: dark ẩn toàn bộ mascot/sidebar chibi, hero dùng study-night-room.webp không nhân vật; light giữ nguyên.
+- Checkpoint: 2026-10-18, Asia/Bangkok. UI-07 DONE: dark khôi phục nữ lo-fi study-night.webp, chỉ ẩn trẻ chibi; light giữ nguyên. Thay cách hiểu ảnh nền ở UI-06.
 - Workspace: D:\Hán Ngữ Lab. Đã được giao triển khai, không hỏi lại lệnh bắt đầu.
 - Mốc UI-04: bố cục/tỉ lệ sát collage đã triển khai. Home banner ~3:1 + 3 thẻ ngang, header gọn/cảnh nền, bé trai sidebar desktop lớn, review scene, StudyActivity dùng dữ liệu thật. Chưa trùng hoàn toàn ảnh gốc; UI-05 phụ thuộc bộ asset riêng lẻ.
 - File chính: app/themes.css, app/components/ThemeToggle.tsx, ChineseText.tsx, LessonPlayer.tsx, app/page.tsx, app/layout.tsx; thêm app/reference-ui.css, StudyActivity.tsx; assets/prompt trong DESIGN_ASSETS.md, REFERENCE_UI_PROMPTS.json.
 - Xác minh UI-04: typecheck/lint 25412 đạt, lint cuối đạt; build 64823 exit 0. E2E 29130 10/10; sau chỉnh sidebar, theme 29815 4/4. Đã xem desktop/mobile sáng/tối, lịch tháng/đổi tháng và sáu asset trong out/images.
 - Lỗi đã sửa: fixture CMS trùng tên giữa các lượt (UUID); tên accessible radio khi tách chữ Hán; dấu câu bị giãn trong flex. Đã xem ảnh desktop/mobile sáng/tối và bài học.
 - Preview loopback http://localhost:3000/ và ảnh WebP trả HTTP 200. Giữ server hiện hành; kiểm tra port/process trước chạy mới, không giả định session cũ còn sống.
+- UI-07: theme 56696 đạt 4/4, build 26032 exit 0 (gồm TypeScript), lint test exit 0; đã xem dark home desktop. Diff CSS chỉ đổi biến ảnh dark và comment.
 - Không còn build/test đang chạy. Không có .codegraph/ tại lần kiểm tra, không tự index.
 - Backend hiện có: Express, SQLite local; auth email mô phỏng, role, chấm server/idempotency, progress/SRS, CMS revision/rollback/import JSON, backup AES-GCM.
 - CMS-EDIT-01: DONE; soạn choice/input/order, alternatives, Pinyin ví dụ, thứ tự; 2 CMS E2E đạt.

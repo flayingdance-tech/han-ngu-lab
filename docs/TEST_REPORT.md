@@ -92,3 +92,10 @@ Chạy local tests cần quyền loopback của môi trường; EACCES trong lư
 - Build cuối node node_modules/next/dist/bin/next build --webpack — exit 0 (21044), có study-night-room.webp trong out/images.
 - Đã xem ảnh room nguồn (không người/động vật), dark review desktop và home mobile; không còn khung hình chibi trống.
 - CSS/asset/theme test thay đổi; không chạy lại backend/CMS E2E hoặc unit/integration trong lượt này.
+
+## 2026-10-18 +07:00 — UI-07 khôi phục nữ lo-fi
+
+- CSS chỉ đổi biến ảnh của :root[data-theme=dark] về study-night.webp; rule ẩn trẻ chibi giữ nguyên, không đổi light.
+- node node_modules/@playwright/test/cli.js test tests/e2e/theme.spec.ts — 4/4 đạt (56696), desktop/mobile, đúng hero nữ lo-fi, dark không child mascot và light còn hình.
+- node node_modules/next/dist/bin/next build --webpack — exit 0 (26032), gồm TypeScript; node node_modules/eslint/bin/eslint.js tests/e2e/theme.spec.ts — exit 0.
+- Đã xem home tối desktop. Không chạy lại backend/CMS tests vì không thay logic; không tạo ảnh mới.

@@ -37,3 +37,5 @@ D-020 ACCEPTED (2026-10-18 +07:00): bốn tab Lộ trình/Ôn tập/Sổ từ v�
 D-021 ACCEPTED (2026-10-18 +07:00): ưu tiên bố cục, tỉ lệ hình và minh họa sát collage chủ dự án. Bản hiện có 821x461, tái dựng có reference không phải asset gốc trùng pixel; vẫn giữ chữ Trung dễ đọc và chế độ tối.
 
 D-022 ACCEPTED (2026-10-18 +07:00): dark không hiển thị chibi; dùng góc học lo-fi không nhân vật, giữ minh họa của chế độ sáng.
+
+D-023 ACCEPTED (2026-10-18 +07:00), thay phần ảnh nền của D-022: dark giữ nữ lo-fi study-night.webp, chỉ ẩn chibi trẻ em. Chế độ sáng giữ nguyên. Không tạo ảnh mới.

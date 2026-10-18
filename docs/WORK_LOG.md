@@ -127,3 +127,8 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 - Đang tạo ảnh góc học đêm không nhân vật thay hero cũ có người/mèo. Cần chốt asset, theme E2E và build.
 - 2026-10-18 14:52 +07:00: ảnh góc học không nhân vật đã xem và lưu study-night-room.webp; typecheck/lint 14722 exit 0. Theme 29847 và build 9457 đang chạy. CSS dark ẩn cả nền ảnh mascot và cột trống.
 - 2026-10-18 14:54 +07:00: UI-06 hoàn tất. Lượt theme 29847 đạt 3/4, lỗi desktop hero do :root[data-theme=dark] cũ ưu tiên cao hơn rule mới. Đã tăng selector đúng nguồn; ca lỗi chạy lại 50383 đạt 1/1. Build cuối 21044 exit 0, out/images có room asset. Đã xem dark review desktop/home mobile; light qua test vẫn có hình. Không còn lệnh cần chờ.
+
+## 2026-10-18 14:58 +07:00 — UI-07 khôi phục nữ lo-fi
+- Đã hiểu lại yêu cầu: dark chỉ bỏ chibi trẻ em, giữ ảnh nữ lo-fi gốc; light giữ nguyên.
+- Đổi đúng biến --hero-art của :root[data-theme=dark] về study-night.webp; giữ các rule ẩn child mascot. Đang xác minh theme/build.
+- 2026-10-18 15:00 +07:00: UI-07 hoàn tất. Theme 56696 đạt 4/4 desktop/mobile, hero nữ lo-fi đúng nguồn và dark không trẻ chibi; light vẫn có hình. Build 26032 exit 0 gồm TypeScript, lint test exit 0. Đã xem screenshot home tối desktop. Không tạo/chỉnh ảnh, không còn lệnh chờ.
