@@ -36,3 +36,4 @@ Trạng thái: TODO / IN_PROGRESS / BLOCKED / DONE. Phạm vi đã chốt; nghi�
 | UI-03 | Minh họa chibi riêng cho bốn tab học | DONE | 4 WebP alpha, 10/10 E2E học/theme/chibi; typecheck/lint/build đạt; screenshot desktop/mobile sáng/tối |
 | UI-04 | Bố cục/tỉ lệ và minh họa sát collage gốc | DONE | Home 3 thẻ/banner ~3:1, header gọn/scenery, dữ liệu lịch thật; 10 E2E + 4 theme cuối, typecheck/lint/build đạt |
 | UI-05 | Dùng đúng minh họa gốc trùng hoàn toàn mẫu | BLOCKED | Cần bộ asset gốc riêng lẻ; hiện chỉ có collage 821x461, bản tái dựng không trùng pixel |
+| UI-06 | Bỏ chibi khỏi dark | DONE | Ẩn mascot/header/sidebar, hero góc học trống; 4 ca theme đạt qua sửa và chạy lại; typecheck/lint/build đạt |

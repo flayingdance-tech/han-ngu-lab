@@ -83,3 +83,12 @@ Chạy local tests cần quyền loopback của môi trường; EACCES trong lư
 - Đã xem home desktop/mobile, roadmap/review desktop, progress desktop/mobile, các theme. Ảnh progress giữ ở .local/qa/ui-04; ảnh khác test-results/ (không commit). HTTP preview 200.
 - Chỉ so khớp trực quan với collage, không có đo lường pixel chứng minh giống hoàn toàn. UI-05 phụ thuộc asset gốc tách riêng; bộ ảnh đang dùng là tái dựng qua ImageGen với reference thật.
 - Backend không đổi. Không chạy lại unit/integration hoặc CMS E2E trong lượt này; chưa kiểm tra mọi thiết bị thật/cloud.
+
+## 2026-10-18 +07:00 — UI-06: dark không chibi
+
+- Typecheck/lint 14722 exit 0: node node_modules/typescript/bin/tsc --noEmit --incremental false; node node_modules/eslint/bin/eslint.js tests/e2e/theme.spec.ts.
+- node node_modules/@playwright/test/cli.js test tests/e2e/theme.spec.ts — 3/4 đạt (29847); desktop hero còn trỏ ảnh cũ vì selector :root[data-theme=dark] ưu tiên cao. Đã sửa selector và chạy node node_modules/@playwright/test/cli.js test --last-failed — 1/1 đạt (50383).
+- Các ca xác minh dark không có mascot hiện hoặc nền mascot, header vẫn có tiêu đề/không tràn ngang; light giữ ảnh; hero dark trỏ ảnh room mới và HTTP asset thành công; theme nhớ sau reload và cỡ chữ học giữ nguyên.
+- Build cuối node node_modules/next/dist/bin/next build --webpack — exit 0 (21044), có study-night-room.webp trong out/images.
+- Đã xem ảnh room nguồn (không người/động vật), dark review desktop và home mobile; không còn khung hình chibi trống.
+- CSS/asset/theme test thay đổi; không chạy lại backend/CMS E2E hoặc unit/integration trong lượt này.

@@ -1,8 +1,8 @@
 # Trạng thái hiện tại — đọc đầu tiên khi tiếp tục
 
-- Checkpoint: 2026-10-18, Asia/Bangkok. Chi tiết thời gian và lệnh trong WORK_LOG.
+- Checkpoint: 2026-10-18 14:54 +07:00, Asia/Bangkok. UI-06 DONE: dark ẩn toàn bộ mascot/sidebar chibi, hero dùng study-night-room.webp không nhân vật; light giữ nguyên.
 - Workspace: D:\Hán Ngữ Lab. Đã được giao triển khai, không hỏi lại lệnh bắt đầu.
-- Mốc mới nhất UI-04: bố cục/tỉ lệ sát collage đã triển khai. Home banner ~3:1 + 3 thẻ ngang, header gọn/cảnh nền, bé trai sidebar desktop lớn, review scene, StudyActivity dùng dữ liệu thật. Chưa trùng hoàn toàn ảnh gốc; UI-05 phụ thuộc bộ asset riêng lẻ.
+- Mốc UI-04: bố cục/tỉ lệ sát collage đã triển khai. Home banner ~3:1 + 3 thẻ ngang, header gọn/cảnh nền, bé trai sidebar desktop lớn, review scene, StudyActivity dùng dữ liệu thật. Chưa trùng hoàn toàn ảnh gốc; UI-05 phụ thuộc bộ asset riêng lẻ.
 - File chính: app/themes.css, app/components/ThemeToggle.tsx, ChineseText.tsx, LessonPlayer.tsx, app/page.tsx, app/layout.tsx; thêm app/reference-ui.css, StudyActivity.tsx; assets/prompt trong DESIGN_ASSETS.md, REFERENCE_UI_PROMPTS.json.
 - Xác minh UI-04: typecheck/lint 25412 đạt, lint cuối đạt; build 64823 exit 0. E2E 29130 10/10; sau chỉnh sidebar, theme 29815 4/4. Đã xem desktop/mobile sáng/tối, lịch tháng/đổi tháng và sáu asset trong out/images.
 - Lỗi đã sửa: fixture CMS trùng tên giữa các lượt (UUID); tên accessible radio khi tách chữ Hán; dấu câu bị giãn trong flex. Đã xem ảnh desktop/mobile sáng/tối và bài học.
@@ -20,3 +20,4 @@
 - Ngân sách tối đa 150 USD/6 tháng gồm credit, không tiền trả thêm. 200 USD credit và hạn 5 tháng 20 ngày là thông tin chủ dự án cung cấp 16/10, chưa kiểm tra Console.
 - Dependency audit mốc trước: 5 high trong dev ESLint/braces, cần kiểm tra lại trước release.
 - Bước tiếp: NEXT_STEPS. Chưa hoàn thành toàn dự án; không quảng cáo độ phủ học liệu/triển khai vượt bằng chứng.
+- Xác minh UI-06: typecheck/lint 14722 exit 0; build cuối 21044 exit 0. Theme lượt đầu 3 đạt/1 lỗi do CSS specificity; đã sửa, ca đó chạy lại 50383 đạt. Đã xem dark review desktop và home mobile. Không còn test/build cần chờ.

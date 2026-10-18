@@ -121,3 +121,9 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 - 2026-10-18 14:45 +07:00: typecheck/lint 25412 đạt; E2E 29130 đạt 10/10 gồm lịch, đổi tháng, đăng xuất. Sau xem ảnh đã đưa bé trai sang sidebar ở desktop lớn để sát mẫu; đang chốt theme/build mới. Ảnh gốc tái dựng có reference, chưa thể nhận trùng pixel.
 
 - 2026-10-18 14:46 +07:00: chốt UI-04. Build 64823 exit 0, lint cuối exit 0; theme 29815 4/4 sau chỉnh sidebar; E2E trước 29130 10/10 có lịch, đổi tháng, logout. HTTP preview 200, out/images đủ 6 reference assets. Đã xem home/roadmap/review/progress desktop và mobile. UI-05 chờ bộ asset gốc nếu cần trùng ảnh 100%; không coi tái dựng là ảnh gốc. Không còn lệnh test/build đang chạy.
+
+## 2026-10-18 14:50 +07:00 — UI-06 dark bỏ chibi
+- Yêu cầu trực tiếp: bỏ hình chibi trong chế độ tối. Đã ẩn mascot/sidebar companion, thu gọn cột trống; chế độ sáng giữ hình.
+- Đang tạo ảnh góc học đêm không nhân vật thay hero cũ có người/mèo. Cần chốt asset, theme E2E và build.
+- 2026-10-18 14:52 +07:00: ảnh góc học không nhân vật đã xem và lưu study-night-room.webp; typecheck/lint 14722 exit 0. Theme 29847 và build 9457 đang chạy. CSS dark ẩn cả nền ảnh mascot và cột trống.
+- 2026-10-18 14:54 +07:00: UI-06 hoàn tất. Lượt theme 29847 đạt 3/4, lỗi desktop hero do :root[data-theme=dark] cũ ưu tiên cao hơn rule mới. Đã tăng selector đúng nguồn; ca lỗi chạy lại 50383 đạt 1/1. Build cuối 21044 exit 0, out/images có room asset. Đã xem dark review desktop/home mobile; light qua test vẫn có hình. Không còn lệnh cần chờ.

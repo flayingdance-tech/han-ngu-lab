@@ -11,3 +11,4 @@ Checkpoint 2026-10-18, Asia/Bangkok.
 7. Backup ngoài AWS và diễn tập migration giữ user/progress/content/media/auth/email; local roundtrip không thay thế diễn tập cloud.
 8. Giữ trần 150 USD gồm credit/6 tháng, không phát sinh tiền trả thêm, tuổi 18+, AI tùy chọn.
 9. Cập nhật hồ sơ sau mỗi mốc; không ghi mật khẩu/token. Chỉ nghiệm thu toàn dự án khi đủ phạm vi đã chốt.
+- UI-06 đã bàn giao: dark không chibi, hero góc học trống, light giữ hình; các kiểm tra đã chốt. Giữ quy tắc này khi đổi giao diện tiếp theo.

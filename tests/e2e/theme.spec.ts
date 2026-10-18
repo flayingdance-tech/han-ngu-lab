@@ -11,6 +11,8 @@ test('pastel and lo-fi themes persist and Chinese stays readable on each viewpor
   await page.reload();
   await expect(page.locator('html')).toHaveAttribute('data-theme','dark');
   await expect(page.getByRole('button',{name:'Bắt đầu bài đầu tiên'})).toBeEnabled();
+  expect(await page.locator('.hero').evaluate(el=>getComputedStyle(el,'::before').backgroundImage)).toContain('study-night-room.webp');
+  expect((await page.request.get('/images/study-night-room.webp')).ok()).toBeTruthy();
   await page.screenshot({path:`test-results/lofi-home-${info.project.name}.png`,fullPage:true});
   await page.getByRole('button',{name:'Bắt đầu bài đầu tiên'}).click();
   await expect(page.locator('.hanzi').first()).toBeVisible();
@@ -32,7 +34,7 @@ test('pastel and lo-fi themes persist and Chinese stays readable on each viewpor
   await page.screenshot({path:`test-results/pastel-quiz-${info.project.name}.png`,fullPage:true});
 });
 
-test('all four learning spaces show their own chibi without covering the heading',async({page},info)=>{
+test('learning spaces show chibi in light mode and hide all mascots in dark mode',async({page},info)=>{
   await page.emulateMedia({colorScheme:'light'});
   await page.goto('/');
   const tabs=[['Lộ trình học','roadmap'],['Ôn tập','review'],['Sổ từ vựng','vocab'],['Tiến độ của tôi','progress']];
@@ -45,11 +47,16 @@ test('all four learning spaces show their own chibi without covering the heading
       const heading=page.locator('.illustrated-heading');
       await expect(heading.getByRole('heading',{level:1})).toBeVisible();
       const mascot=page.locator('.page-mascot:visible, .sidebar-companion:visible');
-      await expect(mascot).toBeVisible();
-      expect(await mascot.evaluate(el=>getComputedStyle(el).backgroundImage)).toContain(`reference-${art}.webp`);
-      expect((await page.request.get(`/images/reference-${art}.webp`)).ok()).toBeTruthy();
-      const copy=await heading.locator('.page-heading-copy').boundingBox(),image=await mascot.boundingBox();
-      expect(copy&&image&&(copy.x+copy.width<=image.x+1||image.x+image.width<=copy.x+1||copy.y+copy.height<=image.y+1||image.y+image.height<=copy.y+1)).toBeTruthy();
+      if(theme==='dark'){
+        await expect(mascot).toHaveCount(0);
+        for(const element of await page.locator('.page-mascot, .sidebar-companion').all())expect(await element.evaluate(el=>getComputedStyle(el).backgroundImage)).toBe('none');
+      }else{
+        await expect(mascot).toBeVisible();
+        expect(await mascot.evaluate(el=>getComputedStyle(el).backgroundImage)).toContain(`reference-${art}.webp`);
+        expect((await page.request.get(`/images/reference-${art}.webp`)).ok()).toBeTruthy();
+        const copy=await heading.locator('.page-heading-copy').boundingBox(),image=await mascot.boundingBox();
+        expect(copy&&image&&(copy.x+copy.width<=image.x+1||image.x+image.width<=copy.x+1||copy.y+copy.height<=image.y+1||image.y+image.height<=copy.y+1)).toBeTruthy();
+      }
       expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBeTruthy();
       await page.screenshot({path:`test-results/chibi-${art}-${theme}-${info.project.name}.png`,fullPage:false});
     }

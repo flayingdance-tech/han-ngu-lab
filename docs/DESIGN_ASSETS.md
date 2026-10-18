@@ -1,5 +1,11 @@
 # Giao diện pastel và lo-fi
 
+## UI-06 — dark không có chibi
+
+- Theo yêu cầu mới nhất, dark ẩn toàn bộ page-mascot/sidebar-companion và bỏ cột trống trong header; light vẫn có chibi.
+- Hero tối dùng `public/images/study-night-room.webp` (1536×1024, 160.374 byte), góc học đêm không người/động vật. ImageGen tích hợp sửa từ `public/images/study-night.webp`; bản cũ được giữ làm nguồn.
+- Prompt chỉnh ảnh: Edit the supplied lo-fi study room illustration. Remove the girl completely, including face, body, hands, hair and all human features; remove the cat completely too. Reconstruct the naturally visible empty chair, wooden desk and open blank notebook where they were. Retain the exact cozy midnight-indigo and amber study room, round moonlit window, distant Chinese mountains and pagoda, cherry blossoms, warm desk lamp, books, tea and stationery. Keep the left 45 percent calm dark empty wall as negative space for website text. A quiet empty study corner with absolutely NO people, NO animals, NO characters, NO chibi, NO faces anywhere. No text, no letters, no watermark. Preserve wide composition and soft lo-fi lighting.
+
 ## UI-04 — tỉ lệ và ảnh sát bản tham khảo
 
 - Mẫu lưu bền tại `docs/references/ui-design-collage.png` (821×461). Tệp D: gốc đã không còn tại lần kiểm tra; không coi collage là bộ asset nguồn độ phân giải cao.
