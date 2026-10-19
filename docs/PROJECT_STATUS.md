@@ -1,3 +1,5 @@
+Mẫu EQ thanh nhẹ (2026-10-19T21:48:29.8968579+07:00): pilot-v4-bright-mix.mp3,giảm300Hz1.5dB/tăng2800Hz1.2dB/highshelf6500Hz0.8dB; không pitch/tốc độ; nềnv4 nguyên stereo. -22.62LUFS/-4.07dBTP. Chờ chủ dự án so sánh, chưa đổi lựa chọn giọng hay web. Recipe+QA nằm cạnh file.
+
 POD-04 v4 2026-10-19T21:45:53.6503584+07:00 — Mẫu mới pilot-v4-mix.mp3,87.060s: khôi phục nền video tham chiếu theo D-035; giữ nguyên WAV giọng chậm v3 (SHA lưu report). Bỏ Dreams Become Real khỏi lựa chọn hiện hành. Nền range1.386dB,không duck,mix -21.96LUFS/true peak -4.36dBTP. Nguồn24giây có nối nền, không hứa không lặp. D-033: chờ chủ dự án nghe/chốt, chưa sửa web/full. Tạo lại mẫu hiện hành bằng scripts/radio-remix-reference.py; radio-pilot.py là phương án v3 đã bị từ chối.
 
 # Trạng thái hiện tại — đọc đầu tiên khi tiếp tục

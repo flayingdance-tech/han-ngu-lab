@@ -412,3 +412,7 @@ Render session1709 không còn trong tool; kiểm tra log/file thực tế thấ
 - D-035: không dùng Dreams Become Real. scripts/radio-remix-reference.py kiểm hash reference stem, tái dùng WAVgiọng chậm v3 nguyên SHA, nối nền equal-power/cân mức độc lập; không speech duck/masterdynamic.87.060s,range1.386dB,-21.96LUFS/-4.36dBTP. Filev4 riêng,không ghi đèv1–v3.
 - Render exit0; không ASR lại vì giọng WAV nguyên v3 đã ASR,nhạc tham chiếu đã dùngv2; không tuyên bố đã nghe hoặc duyệt cảm xúc. Backup8file hashkhớp .local\podcast-backups\radio-v4-20261019-214553,cùngmáy.
 - Không đổi web/backend/giáo trình,không chạy build/E2E. Chờ chủ dự án chốt theo D-033. Không tiến trình còn chạy.
+
+## 2026-10-19T21:48:29.8968579+07:00 — Mẫu giọng thanh nhẹ bằng EQ
+FFmpeg xử lý giọng riêng,giảm300Hz/tăng2800Hz và6500Hz nhẹ; không pitch/formant/tốc độ. Nền v4 giữ nguyên,giọng pan stereo trước amix. MP3 pilot-v4-bright-mix.mp3; -22.62LUFS/-4.07dBTP,decode2kênh87.10s có MP3padding. Recipe/hash/QA cạnhfile. Không ASR lại: chỉ EQ nhẹ giọng đã được triage,không tạo text/giọng mới; chưa duyệt cảm nhận,không sửaweb.
+Backup3file sample/recipe/QA hashkhớp ở .local\podcast-backups\radio-bright-20261019-214830,cùngmáy. git diff --check trướccommit.

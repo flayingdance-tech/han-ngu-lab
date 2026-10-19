@@ -71,3 +71,5 @@ D-033 ACCEPTED 2026-10-19T15:39:18.2339527+07:00 : bắt buộc gửi mẫu audi
 D-034 2026-10-19T19:14:00.8940793+07:00 — Yêu cầu đã chốt: đọc chậm, nhẹ; nền êm cho nghe ngủ/buổi sáng, tránh lặp/nhiễu. Phương án v3 CHỜ DUYỆT: giọngA tốc độ.84, Dreams Become Real (Kevin MacLeod) CC BY4.0, bản dài6:50, trích liên tục không loop. Chỉ mẫu, chưa được chủ dự án chốt nhạc mới hoặc triển khai full; D-033 giữ nguyên.
 
 D-035 ACCEPTED 2026-10-19T21:45:29.9680080+07:00 : chủ dự án từ chối nhạc Dreams Become Real trong mẫu v3, yêu cầu dùng lại nhạc cũ (nền tách từ video tham chiếu ở v1/v2). Giữ giọng chậm v3, xuất mẫu v4 riêng bằng scripts/radio-remix-reference.py. Nguồn24giây vẫn phải nối nền, không tuyên bố loopCount0. Chờ nghe/chốt trước áp dụng full theo D-033.
+
+D-036 PROPOSED 2026-10-19T21:48:29.8968579+07:00 : chủ dự án hỏi làm giọng thanh hơn; tạo mẫu EQ nhẹ từv4 để so sánh, không đổi pitch/formant hoặc tốc độ. Chưa được chọn thay giọng hiện hành. D-033 vẫn yêu cầu chốt mẫu trước áp dụng full.

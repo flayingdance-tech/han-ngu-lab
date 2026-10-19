@@ -44,3 +44,6 @@ Bảnv1 duck50% làm nền chênh6dB theo khoảng nghỉ; master loudnorm độ
 
 ## POD-14 — Nền tham chiếu ngắn và artefact tách nguồn (2026-10-19T19:14:00.8940793+07:00)
 Nguồn24giây phải loop để đủ tập; cân RMS không loại được lặp giai điệu hoặc artefact do tách giọng. Mẫu v3 dùng bản nhạc instrumental dài từ tác giả có giấy phép, một excerpt liên tục, assert đủ độ dài và loopCount0, không thêm vinyl/mưa/reverb. Không hứa hết mọi nhiễu chỉ từ số liệu; cần chủ dự án nghe mẫu.
+
+## POD-15 — Amix mono làm mất stereo nền (2026-10-19T21:48:29.8968579+07:00)
+Khi input đầu là giọng mono, FFmpeg amix có thể chọn output mono. Sửa bằng pan stereo nhân bản giọng sang2kênh trước amix; giữ nền stereo riêng,normalize0. Kiểm tra log decode cuối2kênh; không chấp nhận bản mono tạm làm mẫu.
