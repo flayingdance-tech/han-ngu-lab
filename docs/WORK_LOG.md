@@ -399,3 +399,11 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 - ASR cuối exit0,nhận đủ nội dung; sai chữ đồng âm 他/她,的/地,在/再,không kết luận lỗi âm chỉ từ ASR. Vẫn chưa duyệt cảm xúc bằng người.
 - Backup11file ở .local\podcast-backups\radio-v2-20261019-154133,hashkhớp,cùngmáy. Không sửa web/backend; không chạy build/E2E không liên quan. git diff --check là kiểm tra diff.
 - D-033: gửi mẫu cho chủ dự án trước và chờ chốt; không tự áp dụng full. Không tiến trình render/ASR còn chạy.
+
+## 2026-10-19T19:14:24.7035942+07:00 — Tiếp tục mẫu v3 sau gián đoạn
+Render session1709 không còn trong tool; kiểm tra log/file thực tế thấy đã hoàn thành87.060s,7đoạn,musicrange1.217dB. Không render lại. Chạy ASR session77536, log asr-v3.log, chưa kết luận khi đang chạy. Nguồn nhạc trực tiếp incompetech pieces.json, MP3 hash a8ea5df5...,license/source HTML và track.json lưu music-v3. Không gọi paidAPI,không sửa web.
+
+## 2026-10-19T19:15:07.5198195+07:00 — Mẫu v3 hoàn tất để nghe duyệt
+- ASR exit0,đủ nội dung từ mở đến kết; sai chữ đồng âm 他/她/的/地/在/再,không phải chứng cứ lỗi phát âm. Không tuyên bố đã nghe/duyệt cảm xúc hoặc tuyệt đối không nhiễu.
+- Backup14file hashkhớp tại .local\podcast-backups\radio-v3-20261019-191507,cùngmáy,không offsite. Metadata MP3 và docs có credit Kevin MacLeod CC BY4.0; config kèm SHA và đoạn30–117.060s. Không loop/source separation/noise FX,nhạc targetRMS.010 so với.018 ởv2; giọngtarget.10 so với.12.
+- git diff --check đạt; không chạy build/E2E vì không đổi web/backend. Không tiến trình còn chạy. Chờ chốt mẫu; không tự triển khai full.

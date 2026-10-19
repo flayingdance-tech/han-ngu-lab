@@ -7,7 +7,8 @@ from faster_whisper import WhisperModel
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'.local/podcasts/radio-pilot'
-report=json.loads((OUT/'report-v2.json').read_text(encoding='utf-8'))
+report=json.loads((OUT/'report-v3.json').read_text(encoding='utf-8'))
+assert report['musicLoopCount']==0 and report['speechDucking'] is False
 model=WhisperModel(str(ROOT/'.local/audio-preview/asr-model'),device='cpu',compute_type='int8',cpu_threads=2)
 result={'humanReviewed':False,'purpose':'Independent ASR triage of final mix; does not judge music or emotion','recognized':[]}
 asset=Path(report['assets']['mix']['file'])
@@ -21,4 +22,4 @@ for segment in segments:
     result['recognized'].append(item)
     print(segment.text,flush=True)
 result['expected']=''.join(s['text'] for s in report['segments'])
-(OUT/'asr-triage-v2.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+(OUT/'asr-triage-v3.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')

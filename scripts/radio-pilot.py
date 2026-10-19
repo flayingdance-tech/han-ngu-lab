@@ -15,9 +15,9 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / '.local/podcasts/radio-pilot'
 OUT.mkdir(parents=True, exist_ok=True)
 SPEC = json.loads((ROOT / 'content/radio-pilot.json').read_text(encoding='utf-8'))
-SOURCE = Path('D:/FDown.vn_Tai_video_Facebook_MP3_34ee.mp4')
+MUSIC = json.loads((ROOT/'content/radio-pilot-music.json').read_text(encoding='utf-8-sig'))
 RATE = 24000
-REVISION = 'v2'
+REVISION = 'v3'
 
 def ff(*args):
     return subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y',*map(str,args)],check=True,capture_output=True)
@@ -32,28 +32,9 @@ def main():
     assert '今天的小短语' not in ''.join(s['text'] for s in SPEC['segments'])
     torch.set_num_threads(2)
     torch.manual_seed(20261019)
-    bed_path = OUT/'reference-instrumental.wav'
-    source_sha = sha(SOURCE)
-    provenance = OUT/'music-provenance.json'
-    if not bed_path.exists() or not provenance.exists() or json.loads(provenance.read_text(encoding='utf-8'))['sourceSha256'] != source_sha:
-        from demucs.apply import apply_model
-        from demucs.pretrained import get_model
-        torch.hub.set_dir(str(ROOT/'.local/audio-preview/models/hub'))
-        decoded = OUT/'source-stereo.wav'
-        ff('-i',SOURCE,'-vn','-ar',44100,'-ac',2,decoded)
-        audio, sr = sf.read(decoded,dtype='float32',always_2d=True)
-        model = get_model('htdemucs').cpu().eval()
-        mixture = torch.from_numpy(audio.T.copy())
-        mean, std = mixture.mean(0).mean(), mixture.mean(0).std()
-        assert std > 1e-8
-        with torch.inference_mode():
-            stems = apply_model(model,((mixture-mean)/std)[None],device='cpu',shifts=1,split=True,overlap=.25,progress=False)[0]
-        stems = stems * std + mean
-        instrumental = sum(stems[i] for i,name in enumerate(model.sources) if name != 'vocals')
-        sf.write(bed_path,instrumental.T.numpy(),sr,subtype='FLOAT')
-        provenance.write_text(json.dumps({'sourceSha256':source_sha,'sourceFile':str(SOURCE),'method':'htdemucs non-vocal stems, original stereo 44.1kHz','rights':SPEC['musicRights'],'sha256':sha(bed_path)},ensure_ascii=False,indent=2),encoding='utf-8')
-        del model, stems
-    print('Reference instrumental ready',flush=True)
+    bed_path = ROOT/MUSIC['localFile']
+    assert sha(bed_path)==MUSIC['sha256'], 'Music hash mismatch'
+    print('Full-length licensed music ready; no separation or looping',flush=True)
     from kokoro import KModel, KPipeline
     model_dir = ROOT/'.local/kokoro-model'
     model = KModel(repo_id='hexgrad/Kokoro-82M-v1.1-zh',config=str(model_dir/'config.json'),model=str(model_dir/'kokoro-v1_1-zh.pth')).eval()
@@ -83,26 +64,22 @@ def main():
     chunks.append(np.zeros(RATE*4,dtype='float32'))
     voice=np.concatenate(chunks)
     active=voice[np.abs(voice)>.015]
-    voice*=min(.7/np.max(np.abs(voice)),.12/np.sqrt(np.mean(active**2)))
+    voice*=min(.65/np.max(np.abs(voice)),.10/np.sqrt(np.mean(active**2)))
     n=len(voice)
     assert 60<=n/RATE<=120, f'Duration outside request: {n/RATE}'
-    raw=ff('-i',bed_path,'-ar',RATE,'-ac',2,'-f','f32le','pipe:1').stdout
+    raw=ff('-ss',MUSIC['offsetSeconds'],'-i',bed_path,'-t',n/RATE,'-ar',RATE,'-ac',2,'-f','f32le','pipe:1').stdout
     music=np.frombuffer(raw,dtype='<f4').reshape(-1,2).copy()
     music*=min(.035/max(np.sqrt(np.mean(music**2)),1e-6),.2/max(np.max(np.abs(music)),1e-6))
-    overlap=RATE*3
-    phase=np.linspace(0,np.pi/2,overlap)[:,None]
-    loop=music.copy()
-    while len(loop)<n:
-        loop=np.concatenate([loop[:-overlap],loop[-overlap:]*np.cos(phase)+music[:overlap]*np.sin(phase),music[overlap:]])
-    bed=loop[:n].copy()
+    assert len(music)>=n, 'Music must cover the episode without repeating'
+    bed=music[:n].copy()
     # Slow, music-only leveling. Never modulate the bed from speech activity.
     rms=np.sqrt(np.maximum(uniform_filter1d(np.mean(bed**2,axis=1),size=RATE*2),1e-10))
-    leveling=uniform_filter1d(np.clip(.018/rms,.15,3.),size=RATE*3)
+    leveling=uniform_filter1d(np.clip(.010/rms,.15,3.),size=RATE*3)
     bed*=leveling[:,None]
-    # Refine slow loudness differences left by the short source and loop joins.
+    # Level music independently; do not add noise, reverb or speech-triggered gain.
     for _ in range(8):
         rms=np.sqrt(np.maximum(uniform_filter1d(np.mean(bed**2,axis=1),size=RATE),1e-10))
-        correction=np.clip(.018/rms,.5,2.)
+        correction=np.clip(.010/rms,.5,2.)
         bed*=correction[:,None]
     def window_db(wave):
         return [float(20*np.log10(max(np.sqrt(np.mean(wave[i:i+RATE*3]**2)),1e-8))) for i in range(RATE*4,len(wave)-RATE*7,RATE)]
@@ -117,10 +94,11 @@ def main():
     sf.write(OUT/f'pilot-{REVISION}-mix.wav',mixed*gain,RATE,subtype='FLOAT')
     sf.write(OUT/f'pilot-{REVISION}-voice.wav',voice*gain,RATE,subtype='FLOAT')
     sf.write(OUT/f'pilot-{REVISION}-music.wav',bed*gain,RATE,subtype='FLOAT')
-    report={'revision':REVISION,'review':'unreviewed','duration':n/RATE,'voice':'Kokoro zf_001','pitchChanged':False,'speechDucking':False,'masterGain':gain,'musicWindowDbRange':max(music_levels)-min(music_levels),'segments':timeline,'assets':{}}
+    report={'revision':REVISION,'review':'unreviewed','duration':n/RATE,'voice':'Kokoro zf_001','pitchChanged':False,'speechDucking':False,'musicLoopCount':0,'music':MUSIC,'masterGain':gain,'musicWindowDbRange':max(music_levels)-min(music_levels),'segments':timeline,'assets':{}}
     for kind in ('mix','voice'):
         dest=OUT/f'pilot-{REVISION}-{kind}.mp3'
-        ff('-i',OUT/f'pilot-{REVISION}-{kind}.wav','-ar',RATE,'-c:a','libmp3lame','-b:a','192k','-metadata','artist=Hán Ngữ Lab','-metadata',f'title={SPEC["title"]}',dest)
+        credit=f"Music: {MUSIC['title']} by {MUSIC['author']} (incompetech.com), {MUSIC['license']}, {MUSIC['licenseUrl']}. {MUSIC['changes']}"
+        ff('-i',OUT/f'pilot-{REVISION}-{kind}.wav','-ar',RATE,'-c:a','libmp3lame','-b:a','192k','-metadata','artist=Hán Ngữ Lab','-metadata',f'title={SPEC["title"]}','-metadata',f'comment={credit if kind=="mix" else "Mandarin A, slow radio audition"}',dest)
         stats=subprocess.run(['ffmpeg','-hide_banner','-i',str(dest),'-af','loudnorm=print_format=json','-f','null','-'],capture_output=True,text=True,check=True)
         loudness=json.JSONDecoder().raw_decode(stats.stderr[stats.stderr.rfind('{'):])[0]
         assert float(loudness['input_tp']) < -1

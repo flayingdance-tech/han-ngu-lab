@@ -41,3 +41,6 @@ ASR check dùng -ac1 khiến FFmpeg downmix cộng hai kênh tương quan, tăng
 
 ## POD-13 — Nhạc nền lên xuống theo lời và điểm nối (2026-10-19T15:41:10.4719983+07:00)
 Bảnv1 duck50% làm nền chênh6dB theo khoảng nghỉ; master loudnorm động và nối linear có thể làm biến thiên thêm. V2 bỏ speech duck, dùng gain master cố định, nối equal-power, cân RMS nền độc lập với lời, fade chỉ đầu/cuối. Thử cân cửa sổ2–4s không đạt mục tiêu nội bộ2dB; giữ assertion, sửa cân nền cửa sổ1s. Render cuối đạt biên độ RMS cửa sổ3s dao động1.386dB (bỏ fade), kiểm tra true peak đạt. Đây là bằng chứng kỹ thuật, chờ chủ dự án nghe; không kết luận chất lượng chủ quan được duyệt.
+
+## POD-14 — Nền tham chiếu ngắn và artefact tách nguồn (2026-10-19T19:14:00.8940793+07:00)
+Nguồn24giây phải loop để đủ tập; cân RMS không loại được lặp giai điệu hoặc artefact do tách giọng. Mẫu v3 dùng bản nhạc instrumental dài từ tác giả có giấy phép, một excerpt liên tục, assert đủ độ dài và loopCount0, không thêm vinyl/mưa/reverb. Không hứa hết mọi nhiễu chỉ từ số liệu; cần chủ dự án nghe mẫu.

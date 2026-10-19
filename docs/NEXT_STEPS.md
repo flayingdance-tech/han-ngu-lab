@@ -1,4 +1,4 @@
-POD-04 v2 2026-10-19T15:41:10.4719983+07:00 — Mẫu riêng .local/podcasts/radio-pilot/pilot-v2-mix.mp3,78.28s,7đoạn; bỏ đọc thường/chậm lặp và mục cụm từ cần nhớ. Nhạc không duck theo lời, master gain cố định; musicWindowDbRange1.386dB. D-033: BẮT BUỘC chủ dự án nghe và chốt mẫu trước khi áp dụng full; chưa sửa danh mục/UI web hoặc sinh hàng loạt.
+POD-04 v3 2026-10-19T19:14:24.7035942+07:00 — Đã render mẫu private pilot-v3-mix.mp3,87.060s,giọngA tốc độ.84; Dreams Become Real (Kevin MacLeod),CC BY4.0,excerpt liên tục từ30s,loopCount0,không tách giọng. Music RMS3s range1.217dB,mix -21.96LUFS,true peak -4.13dBTP. ASR exit0, nhận đủ câu, đồng âm 他/她/的/地/在/再; không thay duyệt nghe. D-033: chờ chủ dự án nghe/chốt, chưa áp dụng web/full.
 
 # Bước tiếp theo
 
