@@ -1,0 +1,50 @@
+[
+  {
+    "id": "office-hello-v1", "title": "Ngày đầu gặp đồng nghiệp", "topic": "Giao tiếp công sở", "level": "Cơ bản", "description": "Chào hỏi, giới thiệu tên và làm quen với một đồng nghiệp mới.",
+    "tip": "Nghe một lượt, sau đó bấm vào từng câu để nghe lại và nói theo. Thay 李明 bằng tên của bạn.",
+    "segments": [
+      {"zh":"欢迎来到汉语实验室。今天，我们一起练习在公司认识新同事。","pinyin":"Huānyíng láidào Hànyǔ Shíyànshì. Jīntiān, wǒmen yìqǐ liànxí zài gōngsī rènshi xīn tóngshì.","vi":"Chào mừng đến Hán Ngữ Lab. Hôm nay, chúng ta luyện làm quen với đồng nghiệp mới ở công ty.","speaker":"Dẫn chuyện"},
+      {"zh":"你好，我叫李明。今天是我第一天上班。","pinyin":"Nǐ hǎo, wǒ jiào Lǐ Míng. Jīntiān shì wǒ dì yī tiān shàngbān.","vi":"Xin chào, tôi là Lý Minh. Hôm nay là ngày đầu tôi đi làm.","speaker":"Lý Minh"},
+      {"zh":"你好，我叫王丽。欢迎你加入我们！","pinyin":"Nǐ hǎo, wǒ jiào Wáng Lì. Huānyíng nǐ jiārù wǒmen!","vi":"Chào bạn, tôi là Vương Lệ. Chào mừng bạn đến với chúng tôi!","speaker":"Vương Lệ"},
+      {"zh":"谢谢！请问，我的座位在哪里？","pinyin":"Xièxie! Qǐngwèn, wǒ de zuòwèi zài nǎlǐ?","vi":"Cảm ơn! Cho tôi hỏi, chỗ ngồi của tôi ở đâu?","speaker":"Lý Minh"},
+      {"zh":"就在窗户旁边。我带你过去。","pinyin":"Jiù zài chuānghu pángbiān. Wǒ dài nǐ guòqu.","vi":"Ngay cạnh cửa sổ. Tôi dẫn bạn qua đó.","speaker":"Vương Lệ"},
+      {"zh":"太好了，谢谢你的帮助。","pinyin":"Tài hǎo le, xièxie nǐ de bāngzhù.","vi":"Tốt quá, cảm ơn bạn đã giúp đỡ.","speaker":"Lý Minh"},
+      {"zh":"不用客气。有问题可以问我。","pinyin":"Bú yòng kèqi. Yǒu wèntí kěyǐ wèn wǒ.","vi":"Đừng khách sáo. Có vấn đề gì bạn có thể hỏi tôi.","speaker":"Vương Lệ"},
+      {"zh":"现在，请跟着读：今天是我第一天上班。","pinyin":"Xiànzài, qǐng gēnzhe dú: Jīntiān shì wǒ dì yī tiān shàngbān.","vi":"Bây giờ, hãy đọc theo: Hôm nay là ngày đầu tôi đi làm.","speaker":"Luyện nói","pause":3},
+      {"zh":"请问，我的座位在哪里？","pinyin":"Qǐngwèn, wǒ de zuòwèi zài nǎlǐ?","vi":"Cho tôi hỏi, chỗ ngồi của tôi ở đâu?","speaker":"Luyện nói","pause":3},
+      {"zh":"谢谢你的帮助。今天就练习到这里。明天见！","pinyin":"Xièxie nǐ de bāngzhù. Jīntiān jiù liànxí dào zhèlǐ. Míngtiān jiàn!","vi":"Cảm ơn bạn đã giúp đỡ. Hôm nay luyện đến đây thôi. Hẹn gặp ngày mai!","speaker":"Kết thúc"}
+    ]
+  },
+  {
+    "id":"office-meeting-v1", "title":"Hẹn một cuộc họp", "topic":"Công việc hằng ngày", "level":"Cơ bản → trung cấp", "description":"Hỏi thời gian rảnh, thống nhất lịch và chuẩn bị tài liệu.",
+    "tip":"Luyện thay 三点 bằng giờ phù hợp với bạn. 注意: 一起 thường đọc yìqǐ khi nói; chữ và nghĩa không thay đổi.",
+    "segments":[
+      {"zh":"欢迎回来。今天的话题是安排会议。先听一段对话。","pinyin":"Huānyíng huílái. Jīntiān de huàtí shì ānpái huìyì. Xiān tīng yí duàn duìhuà.","vi":"Chào mừng quay lại. Chủ đề hôm nay là sắp xếp cuộc họp. Trước tiên nghe một đoạn hội thoại.","speaker":"Dẫn chuyện"},
+      {"zh":"你明天下午有时间吗？","pinyin":"Nǐ míngtiān xiàwǔ yǒu shíjiān ma?","vi":"Chiều mai bạn có thời gian không?","speaker":"Đồng nghiệp A"},
+      {"zh":"有。我们几点开会？","pinyin":"Yǒu. Wǒmen jǐ diǎn kāihuì?","vi":"Có. Chúng ta họp lúc mấy giờ?","speaker":"Đồng nghiệp B"},
+      {"zh":"三点可以吗？我们一起讨论一下这个计划。","pinyin":"Sān diǎn kěyǐ ma? Wǒmen yìqǐ tǎolùn yíxià zhège jìhuà.","vi":"Ba giờ được không? Chúng ta cùng thảo luận một chút về kế hoạch này.","speaker":"Đồng nghiệp A"},
+      {"zh":"可以。会议大概需要多长时间？","pinyin":"Kěyǐ. Huìyì dàgài xūyào duō cháng shíjiān?","vi":"Được. Cuộc họp dự kiến cần bao lâu?","speaker":"Đồng nghiệp B"},
+      {"zh":"大概半个小时。我会提前把资料发给你。","pinyin":"Dàgài bàn ge xiǎoshí. Wǒ huì tíqián bǎ zīliào fā gěi nǐ.","vi":"Khoảng nửa tiếng. Tôi sẽ gửi tài liệu cho bạn trước.","speaker":"Đồng nghiệp A"},
+      {"zh":"好的，那我们明天下午三点见。","pinyin":"Hǎo de, nà wǒmen míngtiān xiàwǔ sān diǎn jiàn.","vi":"Được, vậy hẹn gặp chiều mai lúc ba giờ.","speaker":"Đồng nghiệp B"},
+      {"zh":"现在轮到你了。请说：你明天下午有时间吗？","pinyin":"Xiànzài lúndào nǐ le. Qǐng shuō: Nǐ míngtiān xiàwǔ yǒu shíjiān ma?","vi":"Bây giờ đến lượt bạn. Hãy nói: Chiều mai bạn có thời gian không?","speaker":"Luyện nói","pause":3},
+      {"zh":"会议大概需要多长时间？","pinyin":"Huìyì dàgài xūyào duō cháng shíjiān?","vi":"Cuộc họp dự kiến cần bao lâu?","speaker":"Luyện nói","pause":3},
+      {"zh":"很好。试着用自己的时间，再说一遍。我们下次见！","pinyin":"Hěn hǎo. Shìzhe yòng zìjǐ de shíjiān, zài shuō yí biàn. Wǒmen xià cì jiàn!","vi":"Rất tốt. Thử thay bằng thời gian của bạn rồi nói lại. Hẹn lần sau!","speaker":"Kết thúc"}
+    ]
+  },
+  {
+    "id":"office-help-v1", "title":"Nhờ giúp đỡ thật lịch sự", "topic":"Giao tiếp công sở", "level":"Cơ bản → trung cấp", "description":"Nêu khó khăn, hỏi khi nào tiện và cảm ơn đồng nghiệp.",
+    "tip":"可以帮我看一下吗？ dùng để nhờ xem giúp. Đổi 这个表格 thành 这份文件 (tài liệu này) khi luyện thêm.",
+    "segments":[
+      {"zh":"今天，我们练习怎样礼貌地请别人帮忙。请听。","pinyin":"Jīntiān, wǒmen liànxí zěnyàng lǐmào de qǐng biéren bāngmáng. Qǐng tīng.","vi":"Hôm nay, chúng ta luyện cách nhờ người khác giúp đỡ một cách lịch sự. Mời bạn nghe.","speaker":"Dẫn chuyện"},
+      {"zh":"不好意思，你现在方便吗？","pinyin":"Bù hǎoyìsi, nǐ xiànzài fāngbiàn ma?","vi":"Xin lỗi, bây giờ bạn có tiện không?","speaker":"Đồng nghiệp A"},
+      {"zh":"怎么了？有什么事吗？","pinyin":"Zěnme le? Yǒu shénme shì ma?","vi":"Sao vậy? Có chuyện gì không?","speaker":"Đồng nghiệp B"},
+      {"zh":"我不太明白这个表格。可以帮我看一下吗？","pinyin":"Wǒ bú tài míngbai zhège biǎogé. Kěyǐ bāng wǒ kàn yíxià ma?","vi":"Tôi chưa hiểu rõ bảng này. Bạn có thể xem giúp tôi một chút không?","speaker":"Đồng nghiệp A"},
+      {"zh":"当然可以。你先把文件发给我吧。","pinyin":"Dāngrán kěyǐ. Nǐ xiān bǎ wénjiàn fā gěi wǒ ba.","vi":"Tất nhiên rồi. Bạn gửi tệp cho tôi trước nhé.","speaker":"Đồng nghiệp B"},
+      {"zh":"好的。你什么时候有空？","pinyin":"Hǎo de. Nǐ shénme shíhou yǒu kòng?","vi":"Được. Khi nào bạn rảnh?","speaker":"Đồng nghiệp A"},
+      {"zh":"十分钟以后，我过去找你。","pinyin":"Shí fēnzhōng yǐhòu, wǒ guòqu zhǎo nǐ.","vi":"Mười phút nữa tôi qua chỗ bạn.","speaker":"Đồng nghiệp B"},
+      {"zh":"太感谢了！麻烦你了。","pinyin":"Tài gǎnxiè le! Máfan nǐ le.","vi":"Cảm ơn nhiều! Làm phiền bạn rồi.","speaker":"Đồng nghiệp A"},
+      {"zh":"请跟着读：你现在方便吗？可以帮我看一下吗？","pinyin":"Qǐng gēnzhe dú: Nǐ xiànzài fāngbiàn ma? Kěyǐ bāng wǒ kàn yíxià ma?","vi":"Hãy đọc theo: Bây giờ bạn có tiện không? Bạn có thể xem giúp tôi một chút không?","speaker":"Luyện nói","pause":4},
+      {"zh":"记得先问对方是否方便，再说明需要什么帮助。今天就到这里。再见！","pinyin":"Jìde xiān wèn duìfāng shìfǒu fāngbiàn, zài shuōmíng xūyào shénme bāngzhù. Jīntiān jiù dào zhèlǐ. Zàijiàn!","vi":"Nhớ hỏi người kia có tiện không trước, rồi nói rõ bạn cần giúp gì. Hôm nay đến đây thôi. Tạm biệt!","speaker":"Kết thúc"}
+    ]
+  }
+]

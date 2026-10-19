@@ -339,3 +339,19 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 - Mã/assets/báo cáo mẫu A đã lưu commit dcd031d; mốc dừng giọng lỗi trước đó54c0070. Git sạch sau commit nguồn.
 - HTTProot/API/MP3thường/chậm200 sau build; export290SHA256khớp, cache0generated. Preview vẫn chạy API10660/web3516.
 - Không còn renderer/QA đang dở. Tiếp theo theo NEXT_STEPS: duyệt chuyên môn/CMS/podcast/học liệu/cloud, không chạy lại mốc thay giọng.
+
+## 2026-10-19T08:03:30+07:00 — Podcast checkpoint đang làm
+- Đã thêm 3 kịch bản/30 đoạn, renderer giọng A, API draft riêng, UI player/transcript, test schema/route/E2E.
+- Nhạc Almost in F tải chính thức, CC BY 4.0, SHA lưu PODCAST_RUNBOOK. Lỗi TLS hostname, JSON FFmpeg và chèn JSX đã ghi ERRORS_AND_FIXES.
+- Renderer chạy ở .local/podcasts/render.log; chưa coi hoàn thành cho tới catalog/QA/test/build/backup xong. DB không đổi.
+- Tiếp: kiểm tra render, E2E, chất lượng kỹ thuật, cập nhật hồ sơ cuối.
+
+## 2026-10-19T08:11:21+07:00 — POD-01 hoàn tất kỹ thuật local
+- 3 tập,30 đoạn,6MP3 giọng A; âm nền Almost in F của Kevin MacLeod CC BY4.0. 59.45s/59.65s/57.375s. Không phí API, không sửa DB.
+- npm run typecheck/lint/test: đạt,20/20 test. npx playwright test tests/e2e/podcast.spec.ts tests/e2e/audio.spec.ts:10/10 desktop/mobile,1.6m. npm run build exit0.
+- MP3 QA loudness -22.53..-22.80LUFS,max true peak -2.97dBTP; ASR3tập không thấy mất nguyên câu, không thay human review. Ảnh desktop/mobile light/dark lưu .local/podcasts/; đã xem desktop-dark và mobile-light.
+- python scripts/audio-export-check.py:145entries/290MP3 bộ A nguyên vẹn,SHA khớp,no privateLeaks. out có0podcast MP3. RootHTTP200 sau build.
+- npm run podcast:backup:19file SHA khớp ở backup/restore-check timestamp2026-10-19T01-09-10.153Z; cùng máy, chưa offsite, không DB/model/runtime đầy đủ.
+- Lỗi đã sửa và phòng tránh trong ERRORS_AND_FIXES (POD01..07,TEST01); vòng E2E đầu thất bại được lưu e2e.log/e2e-v2.log, vòng cuối đạt e2e-v3.log.
+- API launcher8028/listener gần nhất4712; web3516; kiểm tra lại PID trước tác vụ. Không renderer đang chạy. Không tự tạo lại file.
+- POD-02 còn TODO: duyệt chuyên môn/CMS xuất bản. Bản nháp phục vụ private .local qua route whitelist local; production404. Toàn dự án HSK4/cloud chưa hoàn thành.

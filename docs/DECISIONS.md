@@ -51,3 +51,6 @@ D-027 ACCEPTED (2026-10-18 20:39 +07:00), cập nhật D-026: chủ dự án ngh
 
 
 D-028 ACCEPTED (2026-10-19T06:58:24+07:00): chủ dự án chọn mẫu A, Kokoro zf_001. Dùng giọng này thay bộ OmniVoice lỗi ở bản thử nghiệm; chọn âm sắc không tương đương duyệt chuyên môn toàn bộ clip. Sinh file offline, không phí API, giữ unreviewed, lưu bộ cũ và voice ID riêng.
+
+## D-029 — Đã chốt, 2026-10-19 (+07): ưu tiên podcast
+Chủ dự án giao toàn quyền xử lý podcast, tự chọn/tải nhạc phù hợp giọng A và ghi lỗi/cách sửa. Triển khai 3 tập công sở thử nghiệm; chọn Almost in F (Kevin MacLeod), CC BY 4.0 có ghi công. Không mua dịch vụ. Bản nháp không phát hành công khai; duyệt chuyên môn vẫn chưa hoàn tất.

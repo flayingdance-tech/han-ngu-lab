@@ -1,0 +1,91 @@
+{
+  "checkedAt": "2026-10-19T08:08:23.6599085+07:00",
+  "humanReviewed": false,
+  "voice": "hnl-kokoro-zf001-v1",
+  "music": {
+    "title": "Almost in F",
+    "author": "Kevin MacLeod",
+    "license": "CC BY 4.0",
+    "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100394",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "changes": "Trích đoạn, lọc dải cao, giảm âm lượng, tự hạ nền khi có lời và fade đầu/cuối."
+  },
+  "episodes": [
+    {
+      "id": "office-hello-v1",
+      "title": "Ngày đầu gặp đồng nghiệp",
+      "duration": 59.45,
+      "segments": 10,
+      "review": "unreviewed",
+      "assets": {
+        "voice": {
+          "url": "/api/podcasts/media/office-hello-v1-8f3bcc21075d-voice.mp3",
+          "seconds": 59.45,
+          "peak": 0.6676863431930542,
+          "lufs": -22.53,
+          "truePeakDb": -3.41,
+          "sha256": "f576cd308862baa6dc1c7c4d8ad5500cc473eae568a6e7bad4485ef67a4ef6e0"
+        },
+        "mix": {
+          "url": "/api/podcasts/media/office-hello-v1-8f3bcc21075d-mix.mp3",
+          "seconds": 59.45,
+          "peak": 0.6628522872924805,
+          "lufs": -22.59,
+          "truePeakDb": -3.48,
+          "sha256": "2527a0cb6f645030a7aa23aeaa80c76d5b2c899b455c62118a6a648c6ed2a2c2"
+        }
+      }
+    },
+    {
+      "id": "office-meeting-v1",
+      "title": "Hẹn một cuộc họp",
+      "duration": 59.65,
+      "segments": 10,
+      "review": "unreviewed",
+      "assets": {
+        "voice": {
+          "url": "/api/podcasts/media/office-meeting-v1-8f3bcc21075d-voice.mp3",
+          "seconds": 59.65,
+          "peak": 0.7056412696838379,
+          "lufs": -22.64,
+          "truePeakDb": -3.01,
+          "sha256": "af447cdae6258adb314467cf358d783e637510e28dccaaa3c3418cc9f47e1491"
+        },
+        "mix": {
+          "url": "/api/podcasts/media/office-meeting-v1-8f3bcc21075d-mix.mp3",
+          "seconds": 59.65,
+          "peak": 0.7088548541069031,
+          "lufs": -22.8,
+          "truePeakDb": -2.97,
+          "sha256": "79dacc388c5b314a2a882cf6075893c5edd0bcc215a2f27d982793a2f80428e3"
+        }
+      }
+    },
+    {
+      "id": "office-help-v1",
+      "title": "Nhờ giúp đỡ thật lịch sự",
+      "duration": 57.375,
+      "segments": 10,
+      "review": "unreviewed",
+      "assets": {
+        "voice": {
+          "url": "/api/podcasts/media/office-help-v1-8f3bcc21075d-voice.mp3",
+          "seconds": 57.375,
+          "peak": 0.573920726776123,
+          "lufs": -22.6,
+          "truePeakDb": -4.8,
+          "sha256": "b63477bc1d08339ca5f0e142a2759d9823f0cea793a598de15e5abef52c44640"
+        },
+        "mix": {
+          "url": "/api/podcasts/media/office-help-v1-8f3bcc21075d-mix.mp3",
+          "seconds": 57.375,
+          "peak": 0.5881304740905762,
+          "lufs": -22.76,
+          "truePeakDb": -4.59,
+          "sha256": "05921ae2400595247d5ff626215196659ca1eacad925ab86f2dd5db88f345df9"
+        }
+      }
+    }
+  ],
+  "asr": "All three mixed files transcribed locally; no entire missing sentence observed. Homophone differences remain; not a tone or human review."
+}

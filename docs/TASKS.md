@@ -1,6 +1,6 @@
 # Bảng công việc
 
-Cập nhật: 2026-10-17, Asia/Bangkok.
+Cập nhật: 2026-10-19, Asia/Bangkok.
 Trạng thái: TODO / IN_PROGRESS / BLOCKED / DONE. Phạm vi đã chốt; nghiệm thu trọn dự án còn các mục chưa xong.
 
 | ID | Việc | Trạng thái | Điều kiện xong / bằng chứng |
@@ -50,3 +50,6 @@ Trạng thái: TODO / IN_PROGRESS / BLOCKED / DONE. Phạm vi đã chốt; nghi�
 
 
 | AUDIO-08 | Thay giọng lỗi bằng mẫu A — tích hợp kỹ thuật | DONE | D-028 chọn A;145/145 mục,290MP3; Pinyin/打算 regression3/3,unit18/18,E2E6/6,build/export SHA256 đạt,backup/restore295file. Toàn bank vẫn unreviewed, duyệt ở AUDIO-07 |
+
+| POD-01 | Podcast local bằng giọng A và nhạc miễn phí có giấy phép | DONE | 3 tập/30 đoạn/6MP3; CC BY4.0 credit; transcript/seek/music switch/rate/retry; unit20/20,E2E10/10,typecheck/lint/build đạt; QA6file; restore19file SHA256; PODCAST_RUNBOOK, ERRORS_AND_FIXES, reports/podcast-inventory.json. Chỉ DONE phạm vi kỹ thuật local |
+| POD-02 | Duyệt và xuất bản podcast | TODO | Người có chuyên môn duyệt chữ/Pinyin/phát âm; CMS revision, reviewer/publication và đường phục vụ bản approved; hiện toàn bộ unreviewed và live API chặn |

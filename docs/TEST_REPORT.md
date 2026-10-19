@@ -138,3 +138,9 @@ Chạy local tests cần quyền loopback của môi trường; EACCES trong lư
 - ASR lại clip sửa 打算 nhận đúng 打算. Không coi ASR là duyệt thanh điệu. ASR16v1 còn sai từ ngắn, mọi clip unreviewed.
 - Backup/restore cuối295file đạt, chỉ cùng máy; archive580file không tham chiếu đã kiểm tra SHA256. Không xóa/reset DB, không deploy/cloud/API sinh giọng có phí.
 - HTTProot/API200 saubuild; listeners3516/10660. Giữ preview chạy. next-env importdev được khôi phục saubuild. AUDIO-08 DONE technical, AUDIO-07 TODO duyệt; CMS/podcast/HSK4/cloud còn theoNEXT_STEPS.
+
+## 2026-10-19T08:11:21+07:00 — Podcast local
+- Typecheck/lint đạt,unit+API20/20; E2E audio+podcast10/10 (desktop/mobile),build đạt.
+- Bao phủ timeline/schema,path whitelist,live chặn draft,Range206 từ dot-directory; phát/seek/đổi nhạc giữ vị trí/rate giữ pitch/đổi tập/dừng khi rời trang/lỗi mạng retry; không overflow light/dark.
+- Sáu MP3 decode/peak/LUFS đạt; ASR3tập dùng để rà bỏ câu, chưa human review. reports/podcast-inventory.json.
+- Backup/restore19file hash khớp cùng máy; export bài học290MP3 nguyên vẹn,no privateLeaks,0podcast draft trong out. Log .local/podcasts/.

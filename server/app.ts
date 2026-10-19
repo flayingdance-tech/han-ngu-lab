@@ -7,6 +7,7 @@ import { z } from 'zod';
 import { lessonSchema, publicLesson, grade, scheduleReview, type Role, type User } from '../lib/domain';
 import { type Database, transaction } from './database';
 import { hashPassword, checkPassword, token, digest } from './security';
+import { mountPodcasts } from './podcasts';
 
 type UserRow = { id: string; email: string; name: string; password: string; role: Role; verified: number; status: string; timezone: string; daily_goal: number };
 type Revision = { id: string; lesson_id: string; content: string; status: string; author_id: string; reviewer_id: string | null; created_at: number };
@@ -65,6 +66,7 @@ export function createApp(db: Database, options: AppOptions) {
   }
 
   app.get('/api/health', (_req, res) => res.json({ ok: true, mode: options.localPreview ? 'local-preview' : 'live', aiEnabled: false }));
+  mountPodcasts(app, options.localPreview);
   app.post('/api/auth/register', async (req, res) => {
     const input = registration.parse(req.body), existing = db.prepare('SELECT id FROM users WHERE email=?').get(input.email);
     assert(!existing, 409, 'Email đã được sử dụng. Hãy đăng nhập hoặc khôi phục mật khẩu.');
