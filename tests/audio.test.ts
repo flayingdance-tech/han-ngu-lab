@@ -18,6 +18,11 @@ test('manifest refuses external URLs, path traversal, another voice and invented
     assert.equal(audioManifestSchema.safeParse(invalid).success,false);
   }
   assert.equal(audioManifestSchema.safeParse({...base,voiceId:'another-voice'}).success,false);
+  const mixed=structuredClone(base);Object.values(mixed.entries)[0].normal='/audio/hnl-kokoro-zf001-v1/0123456789abcdef01234567.mp3';
+  assert.equal(audioManifestSchema.safeParse(mixed).success,false);
+  const replacement=structuredClone(base);replacement.voiceId='hnl-kokoro-zf001-v1';
+  for(const item of Object.values(replacement.entries)) {item.normal=item.normal.replace('hnl-original-v1',replacement.voiceId);item.slow=item.slow.replace('hnl-original-v1',replacement.voiceId);}
+  assert.equal(audioManifestSchema.safeParse(replacement).success,true);
   const invalid=structuredClone(base); Object.values(invalid.entries)[0].review='AI-approved';
   assert.equal(audioManifestSchema.safeParse(invalid).success,false);
 });

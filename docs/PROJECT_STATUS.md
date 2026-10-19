@@ -1,46 +1,37 @@
 # Trạng thái hiện tại — đọc đầu tiên khi tiếp tục
 
-Checkpoint: 2026-10-18 20:44 +07:00, Asia/Bangkok. Workspace: D:\Hán Ngữ Lab.
+Checkpoint: 2026-10-19T07:16:36+07:00, Asia/Bangkok. Workspace: D:\Hán Ngữ Lab.
 
-## Sự cố chất lượng giọng — ưu tiên AUDIO-08
+## Mốc hiện tại: mẫu A đã thay bộ giọng lỗi
 
-Chủ dự án đã nghe và từ chối bộ nhân bản do méo/sai/không ra âm. D-027 cho phép giọng khác. Bộ cũ tạm dừng cả preview bằng disabledReason; đang thử Kokoro Mandarin ở workspace riêng.
+- D-028: chủ dự án chọn mẫu A (Kokoro zf_001) ngày19/10/2026. Website local dùng hnl-kokoro-zf001-v1,145 mục/290 MP3 thường-chậm,3,666,688bytes; không API tạo giọng trả phí, không giọng thiết bị, không chỉnh pitch/formant.
+- AUDIO-08 DONE về thay thế và tích hợp kỹ thuật; mọi clip vẫn unreviewed. Chọn âm sắc không tương đương duyệt ngữ âm toàn bộ giáo trình. AUDIO-07 còn TODO.
+- Offline CPU FP32, speed1.0, bản chậm atempo0.8. Model pin01e7505bd6a7a2ac4975463114c3a7650a9f7218; SHA256b1d8410f... theo model card. Runtime .local/kokoro-venv, model .local/kokoro-model.
+- scripts/voice_pronunciation.py căn95 cụm (94 mục từ + 还书) theo Pinyin. Mục từ giữ lexical tone và biến điệu thanh3; câu dùng frontend có tone sandhi/erhua. Regression 打算 giữsuàn4, 谢谢 giữxie5, 你好变调ni2, 还要/还书 phân biệt.
+- V2 profile f01aa4136b3673244590e4e98d93542d89e931c5fa0869f78b8580ce8789cb3c.1 clip sửa sau đối chiếu,144 giữ nguyên khi phoneme/model/speaker/speed/encoding khớp. Metadata docs/reports/audio-pronunciation.json; inventory docs/reports/audio-inventory.json.
+- Bộ OmniVoice trước bị chủ dự án nghe và từ chối vì méo/sai/không ra âm (D-027).580 MP3 cũ/không còn tham chiếu đã chuyển vào .local/voice-retired/20261019T001158148707Z, SHA256 kiểm tra sau từng lần chuyển; không xóa file.
+- Bộ preset v1 trước sửa 打算 ở .local/voice-kokoro-v1; bản cuối .local/voice-kokoro. Không chạy lại v1 để ghi vào website.
 
-## Mốc tích hợp kỹ thuật trước sự cố
+## Bằng chứng kiểm thử
 
-- AUDIO-06 DONE về tích hợp kỹ thuật: 145 đoạn, 290 MP3 thường/chậm, đủ các nút nghe hiện có trong 16 bài preview, hội thoại và sổ từ vựng. Không đồng nghĩa đã nghiệm thu phát âm hoặc hoàn thành HSK4.
-- Nguồn của bộ cũ (D-026, cập nhật bởi D-027): bản chỉ tách nhạc, không đổi pitch/formant; quyền dùng/nhân bản đã được chủ dự án xác nhận. Master .local/audio-preview/vocals.wav; reference 4.11 giây, metadata/hash tại .local/voice/reference.json.
-- Native OmniVoice từ VoiceStudio source pinned, CPU offline; website phát MP3 cùng origin, không API tạo giọng có phí hoặc giọng thiết bị thay thế. Không cài full desktop GUI/backend VoiceStudio.
-- Finalizer .local/voice/finalize-report.json thành công lúc 20:22:49 +07:00: 145 entries/290 files, build và static export đạt, 12 prototype đã chuyển vào private, không reference/model/prompt trong out. Render/finalizer đã kết thúc; không chạy lại nếu không có thay đổi.
-- Backup/restore thực: .local/voice-backups/2026-10-18T13-21-20-771Z và .local/voice-restore-check cùng timestamp, 297 file khớp SHA256. Có master/profile riêng; không chứa DB/model/runtime/WAV cache. Đây là backup cùng máy, chưa ngoài máy/AWS.
-- Signal QA: decode toàn bộ 290 MP3; tần số mono 24 kHz, dữ liệu hữu hạn, mức đỉnh, thời lượng và tỷ lệ chậm/thường đạt ngưỡng kỹ thuật; issues 0. Inventory public: docs/reports/audio-inventory.json. Cache no-op: generated0/pending0/cacheHittrue.
-- ASR 8 mẫu có nhiều từ/câu ngắn nhận sai hoặc trống; F0 bốn thanh trước đó chưa rõ. Mọi audio vẫn unreviewed; hiện đã chặn cả preview do phản hồi chất lượng. AUDIO-02 còn đánh giá nghe; AUDIO-07 TODO duyệt chuyên môn. Không gọi kết quả ASR là kiểm định thanh điệu.
-- Pinyin phân biệt key nhưng chưa điều khiển trực tiếp phát âm model. MOSS prototype có dấu hiệu thiếu cuối câu, chưa thay engine chính. Hướng dẫn: VOICE_RUNBOOK.
+- Typecheck/lint đạt; unit18/18, pronunciation Python3/3, audio E2E6/6 desktop/mobile (1.2m), kiểm tra thường/chậm, dừng khi chuyển tab, lỗi mạng/retry, chặn bộ bị từ chối.
+- QA v2 decode/hash290file issues0. ASR16 là v1; chỉ 打算 thay ở v2 và ASR riêng nhận lại đúng 打算. Các âm đơn/từ khác có sai nhận dạng, không coi ASR là kiểm định thanh điệu. Chưa có duyệt chuyên môn.
+- Build Next thành công; export145entries/290MP3, SHA256 khớp public, không reference giọng/model/prompt/DB. Ảnh thiết kế reference-*.webp là asset công khai hợp lệ; phép kiểm tra tên rộng ban đầu đã được sửa để không nhầm chúng với reference giọng.
+- Cache no-op generated0/recovered0/reused0,total145,0.05s sau khởi tạo; không nạp model. cache-check.json riêng, không ghi đè render-report.
+- Backup/restore bộ cuối: .local/voice-backups/2026-10-19T00-11-01-948Z và .local/voice-restore-check cùng timestamp,295file khớp SHA256; gồm MP3/manifest/metadata/targets, không model/runtime hoặc DB. Đây là cùng máy, chưa backup ngoài máy/AWS.
+- Backup trước switch bộ cũ: timestamp2026-10-19T00-01-34-646Z,297file khớp, có master/reference riêng. Không đưa private profile vào web/Git.
 
-## Kiểm thử và vận hành local
+## Vận hành local và dữ liệu
 
-- Unit/integration 18/18; typecheck/lint đạt mốc mã tích hợp. Audio E2E mới 32319 đạt 4/4 desktop/mobile không retry; learning/theme mốc trước 14 ca đã đạt qua sửa/chạy lại. Python file-lock regression 2/2; phục hồi WAV thật 35192 và từ chối đổi profile với manifest SHA256 giữ nguyên đều đạt. Xem TEST_REPORT/WORK_LOG để biết các lượt lỗi trước.
-- Đã sửa Windows WinError5 bằng atomic replace có retry hữu hạn, lưu cả batch WAV trước encode và phục hồi WAV cùng fingerprint. Mã mốc f7cf56e, 9fe0a0d; bộ asset cuối theo Git log. Không xóa/reset dữ liệu để sửa.
-- Preview http://localhost:3000/; sau build trang/API catalog/MP3 thường và chậm đều HTTP200 lúc20:23. API listener 10460, web 1472 (launcher3296/2988); phải kiểm tra PID/listener trước khi khởi động lại. Không dump log auth; .local/dev-*-resume.log/.err.
-- Không có .codegraph/ ở lần kiểm tra, không tự index. AGENTS 96 dòng. Giữ .local/ và tài khoản/DB. Model/reference/prompt không vào Git/public; chỉ audio tổng hợp và manifest được commit.
-- pip check runtime đạt; npm audit --omit=dev hiện 0 vulnerability. Cảnh báo 5 high trong dev mốc cũ chưa rà lại; không kết luận toàn hệ thống đã an toàn.
+- Preview http://localhost:3000/, API3001; HTTP200 sau build. API launcher13088/listener10660; web launcher15056/listener3516. Kiểm tra PID/port thật trước khởi động lại. Log .local/dev-*-kokoro.log/.err; không dump stdout auth.
+- Không còn renderer chạy; không tự chạy lại render/QA dài đã hoàn tất. npm run audio:render có cache, audio:publish yêu cầu đủ stage + hash QA, audio:backup phù hợp voice hiện hành. VOICE_RUNBOOK có quy trình.
+- .codegraph/ không có ở lần kiểm tra; không tự index. Giữ .local/hanngulab.sqlite, tài khoản/tiến độ. Chỉ thay audio và thông báo tên giọng; không đổi layout sáng/tối.
+- UI tối giữ nữ lo-fi, ẩn trẻ chibi; sáng giữ thiết kế hiện có. UI-05 còn cần asset gốc riêng nếu yêu cầu trùng pixel collage.
 
-## Phần dự án còn lại
+## Công việc dự án còn lại
 
-- UI-07 DONE: tối giữ nữ lo-fi study-night.webp, chỉ ẩn trẻ chibi; sáng giữ nguyên. UI-05 cần asset gốc riêng nếu muốn trùng hoàn toàn collage.
-- Backend local: Express/SQLite, auth email mô phỏng, phân quyền, chấm server/idempotency, progress/SRS, CMS revision/rollback/import JSON và editor, backup AES-GCM; nút đăng xuất đã kiểm thử.
-- 16 bài draft, 94 word IDs, 80 câu hỏi, 39 ví dụ: chưa đủ giáo trình HSK4 hoặc duyệt chuyên môn. Podcast chưa có thư viện hoàn chỉnh. Không tự publish.
-- Cloud chưa truy cập/tạo tài nguyên/deploy; production còn cần HTTPS/email. Backup ngoài AWS và diễn tập migration chưa thực hiện. Bản local không chứng minh các việc này.
-- Phạm vi: nhập môn–HSK4, miễn phí 18+, AI tùy chọn, thay giáo trình/mở rộng HSK5–6; tối đa 150 USD/6 tháng gồm credit, không tiền trả thêm. Credit 200 USD/hạn còn 5 tháng 20 ngày là chủ dự án cung cấp, chưa kiểm tra Console.
-- Chưa hoàn thành toàn dự án. Bước tiếp: NEXT_STEPS; lịch sử và bằng chứng: WORK_LOG/TEST_REPORT.
-
-
-Cập nhật ưu tiên 2026-10-18 20:39 +07:00: chủ dự án từ chối chất lượng nghe bộ OmniVoice hiện tại (D-027). AUDIO-08 IN_PROGRESS: thử preset Mandarin Kokoro v1.1-zh, offline, mẫu riêng; chưa chọn giọng hoặc thay 145 đoạn. Manifest có disabledReason, chặn cả preview để không tiếp tục phát âm sai. Các kiểm thử kỹ thuật trước không phải bằng chứng đạt chất lượng nghe.
-
-
-### 2026-10-18T20:49:20+07:00 — mẫu thay thế đã tạo, chờ đánh giá nghe
-- Kokoro0.9.4/misaki0.9.4, CPU FP32, speed1.0, không pitch/formant; model SHA256 khớp bản chính thức. Hai giọng A zf_001 (31.5s), B zf_002 (34.4s); file WAV/MP3 ở .local/voice-candidates/kokoro-zh. Hai MP3 decode24k mono, peak0.473/0.442, hữu hạn.
-- 12 mẫu câu/từ ghép +12 mẫu từ đơn đã sinh và ASR; báo cáo đã bỏ đường dẫn riêng ở docs/reports/audio-candidates.json. G2P 还书 đã sửa huán shū, vẫn giữ 还要 hái yào; assert đạt. 过 trong giáo trình hiện là trợ từ guo thanh nhẹ, khớp G2P5; không suy ra mọi ngữ cảnh đều thanh nhẹ.
-- ASR: câu phần lớn có nội dung đầy đủ, hai giọng nhận 姐姐 thành 杰杰 trong câu; B nhận sai cụm 妈妈麻烦马路; từ đơn 谢谢/姐姐/准备/认真 nhận đúng, 你/过 nhận sai. Đây là triage, chưa biết lỗi nào do ASR hay âm thanh; không đủ chứng nhận thanh điệu/độ tự nhiên.
-- Đã gửi hai mẫu nghe và hỏi lựa chọn âm sắc; chưa có phản hồi tại checkpoint này. Không chọn thay người dùng hoặc tự đánh dấu approved. AUDIO-08 IN_PROGRESS; mẫu khả thi nhưng chưa nghiệm thu. Giữ disabledReason ở public và out, đều145entries; không đổi UI/DB.
-- Lệnh render/QA session99406,72255 đã kết thúc; không cần chạy lại. Tiếp: nhận phản hồi mẫu; nếu vẫn không đạt, thử engine khác. Nếu chọn được, kiểm soát từng Pinyin/đa âm rồi tái tạo thư viện bằng ID riêng; vẫn cần duyệt chuyên môn.
+- 16 bài draft/94 word IDs/80 câu hỏi/39 ví dụ: chưa đủ giáo trình HSK4, chưa duyệt chuyên môn. Nội dung AI không tự publish.
+- Backend local Express/SQLite có auth email mô phỏng, phân quyền, chấm server/idempotency, progress/SRS, CMS revision/import JSON/rollback/editor, backup AES-GCM. CMS còn thiếu CSV/media/reviewer/publication/audit/users, kiểm tra phiên hết hạn/lỗi mạng.
+- Podcast chưa có thư viện hoàn chỉnh; dùng giọng A cho bước tạo draft tiếp theo. Không quảng cáo tính năng chưa làm.
+- Cloud/email/HTTPS chưa cấu hình/deploy; backup ngoài AWS và diễn tập migration chưa làm. Budget150 USD/6 tháng gồm credit, không chi thêm; credit200 USD/hạn là chủ dự án báo, chưa xác minh Console. Website miễn phí18+, AI tùy chọn.
+- Production npm audit mốc trước0 vulnerability; dev5high cũ chưa rà lại, không coi hệ thống đã kiểm toán an toàn. Chưa hoàn thành toàn dự án.

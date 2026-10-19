@@ -60,3 +60,12 @@ File giọng là phần bổ sung cho backup DB/user/progress hiện có; không
 Manifest public hiện có disabledReason, client chặn cả preview. Không xóa cờ chỉ để nghe lại bộ cũ. Backup cũ vẫn giữ để phục hồi dữ liệu, không phải nguồn đã duyệt.
 Thử riêng: `.local/kokoro-venv/Scripts/python.exe -B -X utf8 scripts/voice-candidate.py`; QA: `.local/audio-preview/venv/Scripts/python.exe -B -X utf8 scripts/voice-candidate-qa.py`. Xem AUDIO_QUALITY.md. Môi trường Kokoro có shared-runtime.pth trỏ site-packages runtime cũ (chỉ đọc), gói bổ sung cài riêng; pip freeze tại .local/kokoro-requirements-lock.txt. Cần backup cả hai môi trường hoặc tái cài đúng dependency, không coi venv mới tự chứa toàn bộ.
 Model nằm .local/kokoro-model; download bằng snapshot_download với revision pin trong script. Chỉ download config.json, kokoro-v1_1-zh.pth, voices/zf_001.pt, voices/zf_002.pt, README.md. Inference offline. Mẫu không xuất bản, không tự đổi approved.
+
+
+## Giọng hiện hành — mẫu A (2026-10-19T07:00:31+07:00)
+D-028: chủ dự án đã chọn Kokoro zf_001. Giữ mẫu cũ riêng; không chạy render-original để ghi vào bank mới. `npm run audio:render` dùng .local/kokoro-venv và stage vào .local/voice-kokoro/public. `voice_pronunciation.py` căn Pinyin cho mục từ, frontend giữ tone sandhi/erhua ở câu; xung đột chữ đa âm phải xử lý riêng.
+Trước chuyển: chạy voice-qa.py với --public-dir .local/voice-kokoro/public --report .local/voice-kokoro/signal-qa.json. Sau QA: npm run audio:publish (kiểm tra đủ145 mục, từng hash khớp QA, switch manifest sau copy file). audio:backup lưu file đang tham chiếu và metadata sinh giọng; bộ preset không cần master/prompt riêng.
+Lệnh legacy: dùng `npx tsx scripts/voice-command.ts render-original ...` chỉ để thử engine cũ. Runtime mới có dependency đã pin scripts/requirements-kokoro.txt; FFmpeg cần trên PATH. Không coi preset license Apache2 là duyệt ngữ âm cho file đã sinh.
+
+
+Bổ sung bản cuối: word_phonemes giữ thanh từ vựng theo Pinyin và chỉ áp dụng biến điệu thanh3, tránh tự chuyển 打算/suàn4 về5. Khi thay logic, giữ workspace cũ; --reuse-cache .local/voice-kokoro-v1 chỉ tái dùng clip nếu phoneme và cấu hình model/speaker/speed/encoding giống nhau. Cache no-op ghi cache-check.json riêng. audio-retire.py chuyển file không còn tham chiếu vào .local/voice-retired có kiểm tra SHA256, không xóa file; audio-export-check.py kiểm tra đúng file private giọng, cho phép ảnh thiết kế reference-*.webp. Bộ cuối backup timestamp2026-10-19T00-11-01-948Z,295file, cùng máy.

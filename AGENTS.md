@@ -56,8 +56,8 @@
 - HSK 0 là tên nội bộ cho nhập môn; ánh xạ chuẩn HSK phải có phiên bản và nguồn.
 - Bài học có mục tiêu, nội dung, ví dụ, bài tập, lời giải và tài nguyên phù hợp.
 - Kiểm tra chữ Hán, Pinyin, nghĩa Việt, đáp án, giấy phép và xuất xứ media.
-- Giọng: chủ dự án cho phép thay giọng khác ngày 18/10/2026 vì bản nhân bản bị méo/sai âm; ưu tiên phát âm và độ tự nhiên. Quyền giọng gốc đã xác nhận, không tự chỉnh pitch/formant.
-- VoiceStudio tạo audio cục bộ thành file dùng lại; không tự đổi sang giọng thiết bị hoặc bật API tạo giọng có phí theo lượt nghe.
+- Giọng: chủ dự án chọn mẫu A (Kokoro zf_001) ngày 19/10/2026 thay bản nhân bản lỗi; ưu tiên phát âm và tự nhiên. Quyền giọng gốc đã xác nhận, không tự chỉnh pitch/formant.
+- Tạo audio cục bộ thành file dùng lại; bộ hiện hành dùng Kokoro, VoiceStudio giữ cho thử nghiệm giọng gốc; không tự đổi sang giọng thiết bị hoặc API có phí theo lượt nghe.
 - Nội dung AI chưa được duyệt giữ trạng thái draft/unreviewed.
 - Không coi kiểm tra schema hoặc tự đánh giá AI là duyệt chuyên môn của con người.
 - Quy trình duyệt học liệu phải được chốt trước khi cam kết xuất bản toàn bộ giáo trình.

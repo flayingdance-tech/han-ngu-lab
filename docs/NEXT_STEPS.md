@@ -1,14 +1,13 @@
 # Bước tiếp theo
 
-Checkpoint 2026-10-18 20:49 +07:00. Lịch sử: WORK_LOG và DECISIONS.
+Checkpoint 2026-10-19T07:16:36+07:00. Đọc PROJECT_STATUS và WORK_LOG trước khi tiếp tục.
 
-1. AUDIO-06 tích hợp kỹ thuật đã xong:145 đoạn/290 MP3, build/export, signal QA, cache và backup/restore đạt. Không chạy lại render/finalizer đã hoàn tất. Đọc STATUS, kiểm tra Git/process và giữ DB/account trước khi làm tiếp.
-2. Ưu tiên AUDIO-08: đã có mẫu Kokoro A(zf_001)/B(zf_002) ở .local/voice-candidates/kokoro-zh; chờ phản hồi nghe đã hỏi trong chat. Bộ cũ đã chặn. Không tự thay toàn thư viện chỉ dựa ASR; cần kiểm soát cách đọc theo Pinyin, từ đơn và chữ đa âm. Sau đó AUDIO-07: quy trình người có chuyên môn nghe duyệt chữ Hán/Pinyin, bốn thanh, chữ đa âm và độ tự nhiên. ASR8 mẫu còn nhận sai/bỏ trống, không được đổi unreviewed thành approved dựa vào ASR/F0. Chưa xuất bản audio như tài liệu phát âm chuẩn.
-3. D-027 mới nhất cho phép thay giọng do bộ cũ không đạt; thử preset Mandarin, quyền giọng gốc vẫn đã xác nhận. Thử profile/engine khác ở workspace riêng, không ghi đè manifest đang phát. VOICE_RUNBOOK có lệnh và giới hạn; không API có phí/fallback giọng thiết bị.
-4. Hoàn thiện thư viện podcast học theo chủ đề ở trạng thái draft, sau khi có quy trình giọng đạt. Hiện chưa có mục podcast hoàn chỉnh; không quảng cáo đã có.
-5. Phần CMS còn thiếu: CSV/media, giao diện reviewer/publication, audit/users, kiểm tra phiên hết hạn/lỗi mạng. Giữ revision đã xuất bản và tiến độ người học.
-6. Hoàn thiện ma trận nhập môn–HSK4 theo chuẩn xác định và quy trình duyệt.16 bài hiện tại là draft, chưa phải giáo trình HSK4 đầy đủ; không tự publish.
-7. Giữ giao diện sáng hiện có; tối dùng nữ lo-fi, chỉ ẩn trẻ chibi. UI-05 cần asset gốc riêng nếu yêu cầu trùng hoàn toàn collage.
-8. Cloud/email và dự toán tải cần quyền truy cập tài khoản; chưa tạo tài nguyên/deploy. Trần150 USD/6 tháng gồm credit, không tiền trả thêm,18+, AI tùy chọn. Rà cả dependency dev trước release; production audit hiện0 không thay thế kiểm thử bảo mật.
-9. Backup ngoài AWS và diễn tập migration user/progress/content/media/auth/email còn phải thực hiện. Snapshot297 file giọng hiện có ở cùng máy; không phải bản ngoài máy. Giữ private profile ngoài web server.
-10. Sau mỗi mốc cập nhật STATUS/TASKS/NEXT_STEPS/WORK_LOG theo kết quả thực. Không ghi secret và không coi cả dự án đã hoàn thành khi còn các mục trên.
+1. Mẫu A đã thay xong145 mục,290MP3. Không render lại hoặc quay về OmniVoice. Kiểm tra manifest active hnl-kokoro-zf001-v1 và cache trước khi bổ sung học liệu. D-028 đã chọn giọng, không hỏi lại.
+2. AUDIO-07: hoàn thiện quy trình người có chuyên môn duyệt chữ Hán/Pinyin/thanh điệu/đa âm/độ tự nhiên; mọi clip vẫn unreviewed. ASR/F0/schema không thay thế người duyệt.
+3. Hoàn thiện CMS: reviewer/publication, CSV/media, audit/users, hết phiên và lỗi mạng. Giữ revision bài đã xuất bản bất biến và tiến độ người học.
+4. Podcast theo chủ đề: tạo bản draft bằng preset A offline; chưa có thư viện podcast hoàn chỉnh. Không API tạo giọng có phí.
+5. Hoàn thiện ma trận và học liệu nhập môn–HSK4 theo chuẩn đã xác định, hỗ trợ thay giáo trình/mở HSK5–6.16 bài hiện tại là draft.
+6. Giữ UI sáng hiện có; tối giữ nữ lo-fi và chỉ ẩn trẻ chibi. Asset trùng pixel collage cần nguồn riêng (UI-05).
+7. Cloud/email/HTTPS và dự toán tải cần quyền truy cập tài khoản. Không tạo dịch vụ trả phí hoặc vượt150USD/6 tháng gồm credit; kiểm tra hạn credit thật trước triển khai.
+8. Backup bộ giọng đã restore295file cùng máy, chưa ngoài máy. Còn backup ngoài AWS và diễn tập migration toàn bộ user/progress/content/media/auth/email. Rà dev dependencies trước release.
+9. Tiếp tục cập nhật STATUS/TASKS/NEXT_STEPS/WORK_LOG theo bằng chứng thực; không coi toàn dự án hoàn thành.

@@ -48,3 +48,6 @@ D-026 ACCEPTED (2026-10-18 +07:00), cập nhật D-024: chủ dự án chốt b�
 
 
 D-027 ACCEPTED (2026-10-18 20:39 +07:00), cập nhật D-026: chủ dự án nghe và báo bộ nhân bản méo/sai/không ra âm; cho phép dùng giọng khác để ưu tiên chất lượng và tự nhiên. Tạm dừng bộ cũ; thử mẫu ngắn ở workspace riêng trước khi thay thư viện. Không phí API, không tự coi ASR là duyệt phát âm.
+
+
+D-028 ACCEPTED (2026-10-19T06:58:24+07:00): chủ dự án chọn mẫu A, Kokoro zf_001. Dùng giọng này thay bộ OmniVoice lỗi ở bản thử nghiệm; chọn âm sắc không tương đương duyệt chuyên môn toàn bộ clip. Sinh file offline, không phí API, giữ unreviewed, lưu bộ cũ và voice ID riêng.

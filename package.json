@@ -24,6 +24,7 @@
     "audio:render": "tsx scripts/voice-command.ts render",
     "audio:reference": "tsx scripts/voice-command.ts reference",
     "audio:check": "tsx scripts/audio-audit.ts",
+    "audio:publish": "tsx scripts/audio-publish.ts",
     "audio:backup": "tsx scripts/audio-backup.ts"
   },
   "dependencies": {

@@ -6,6 +6,7 @@ import { audioKey, audioManifestSchema } from '../lib/audio-catalog';
 const manifest = audioManifestSchema.parse(JSON.parse(readFileSync('public/audio/manifest.json','utf8')));
 const targets = JSON.parse(readFileSync('.local/voice/targets.json','utf8')) as {targets:{key:string}[]};
 const issues:string[]=[], files:{path:string;bytes:number;sha256:string}[]=[];
+if(process.argv.includes('--release')&&manifest.disabledReason)issues.push(`Disabled voice: ${manifest.disabledReason}`);
 for(const target of targets.targets) if(!Object.hasOwn(manifest.entries,target.key)) issues.push(`Missing: ${target.key}`);
 for(const [key,item] of Object.entries(manifest.entries)) {
   if(key!==audioKey(item.text,item.pinyin)) issues.push(`Key mismatch: ${key}`);

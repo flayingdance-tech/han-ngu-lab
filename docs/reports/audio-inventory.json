@@ -1,1459 +1,1459 @@
 {
-  "generatedAt": "2026-10-18T13:20:08.456Z",
-  "voiceId": "hnl-original-v1",
+  "generatedAt": "2026-10-19T00:11:00.740Z",
+  "voiceId": "hnl-kokoro-zf001-v1",
   "entries": 145,
   "expected": 145,
   "approved": 0,
   "files": [
     {
-      "path": "/audio/hnl-original-v1/ec3b7eb8757bf7eda09ba41d.mp3",
-      "bytes": 12284,
-      "sha256": "322c811af944eec11599c6a1f429a70c15ef3a8fda8d93544f4fff23c74e4c9a"
+      "path": "/audio/hnl-kokoro-zf001-v1/6eeeddba5e00f31014e14fcd.mp3",
+      "bytes": 7028,
+      "sha256": "5b55eba5309e8c3828cff982585b9e6ff1d00c2ad3a8e245fd3e33bf8a5cb9ba"
     },
     {
-      "path": "/audio/hnl-original-v1/ec3b7eb8757bf7eda09ba41d-slow.mp3",
-      "bytes": 14684,
-      "sha256": "6e506b67334d66c24cdffc0296e297b821e486162fa6d0c2cf9da62215be8a2f"
+      "path": "/audio/hnl-kokoro-zf001-v1/6eeeddba5e00f31014e14fcd-slow.mp3",
+      "bytes": 7436,
+      "sha256": "f2036c4d83e1efcb33ff4881072ac5f9a36c7cda2b7e2263e77e161ba8250996"
     },
     {
-      "path": "/audio/hnl-original-v1/8f897b3eaf42d6be5f690486.mp3",
-      "bytes": 13532,
-      "sha256": "f8510265f12377e360cf4d21328daabe5e5267a8a111029e88071eb021767893"
+      "path": "/audio/hnl-kokoro-zf001-v1/cae3ae5a164238628d35522f.mp3",
+      "bytes": 7436,
+      "sha256": "5a8ffc369f3701fbf191b56689e0322c7a96d75ecc6029dd37b45e79d22f2c8e"
     },
     {
-      "path": "/audio/hnl-original-v1/8f897b3eaf42d6be5f690486-slow.mp3",
-      "bytes": 17228,
-      "sha256": "f1db1008e5a2512dda1a4bf9c1ed0b947e62d1dfe93a2030526adb2a2f1e6cf3"
+      "path": "/audio/hnl-kokoro-zf001-v1/cae3ae5a164238628d35522f-slow.mp3",
+      "bytes": 7244,
+      "sha256": "3c9174b3b37c685a6ce0f5f9944edc028f31c2e05edd4d2b68f5eb9fb254a937"
     },
     {
-      "path": "/audio/hnl-original-v1/5f38b9ca1e9c7307c8bdce34.mp3",
-      "bytes": 14108,
-      "sha256": "31e47079c8e67779bf12fc2aa6d9a758784c60528d17adf0c263a7ef825cbe66"
+      "path": "/audio/hnl-kokoro-zf001-v1/28165b2601517e14565ffbf4.mp3",
+      "bytes": 8420,
+      "sha256": "5aed86f059ef71e10f63c9c8545cf4077b1baf97764b79b93797fb49addcf6d1"
     },
     {
-      "path": "/audio/hnl-original-v1/5f38b9ca1e9c7307c8bdce34-slow.mp3",
-      "bytes": 17180,
-      "sha256": "f80f507d99343f2fd4b0d81c80802b41418bf8706b31d4f9eca420b2ef3f5860"
+      "path": "/audio/hnl-kokoro-zf001-v1/28165b2601517e14565ffbf4-slow.mp3",
+      "bytes": 8876,
+      "sha256": "44b13f0d1339cb08b184e7c2adac8de33e446a99f19e2ef7ea95c793e32cd961"
     },
     {
-      "path": "/audio/hnl-original-v1/60a7a97436e4e1dcb82765ed.mp3",
-      "bytes": 17204,
-      "sha256": "35b42b064004ec9d3a516fd5e149504279bdf7468ae5748811909c2a49e492ec"
+      "path": "/audio/hnl-kokoro-zf001-v1/3b225ed7e624cce30c6a723b.mp3",
+      "bytes": 8996,
+      "sha256": "1047227e30212b4f697da56e0a3b6d83556fb7c267fcdf9049fa3b8ba3530155"
     },
     {
-      "path": "/audio/hnl-original-v1/60a7a97436e4e1dcb82765ed-slow.mp3",
-      "bytes": 20804,
-      "sha256": "c0453e69afe732a24d156dc705fbc1a807f79d82f8052e68084125cf880bf28d"
+      "path": "/audio/hnl-kokoro-zf001-v1/3b225ed7e624cce30c6a723b-slow.mp3",
+      "bytes": 9500,
+      "sha256": "3d48be93b05fda28ccccb8d26f495205d9499e9c64e053c36d2584059d2aa362"
     },
     {
-      "path": "/audio/hnl-original-v1/b3b5072a1bfe4b913c55d21d.mp3",
-      "bytes": 15572,
-      "sha256": "2361ef1a523fc6e4ed2a7ea40284cc6fb9d6a61c268aff162a42d821ea82a5fd"
+      "path": "/audio/hnl-kokoro-zf001-v1/23e61f9e30469b9cc921b814.mp3",
+      "bytes": 8804,
+      "sha256": "57f01225542924a0eb84b2004e74bf681aa0003c7baa6c00ade065cab722c8c0"
     },
     {
-      "path": "/audio/hnl-original-v1/b3b5072a1bfe4b913c55d21d-slow.mp3",
-      "bytes": 18404,
-      "sha256": "b0a14d8813ff451963dc9c4ade86ba17f3dd41e2d08bde62671724b44ac6c372"
+      "path": "/audio/hnl-kokoro-zf001-v1/23e61f9e30469b9cc921b814-slow.mp3",
+      "bytes": 8948,
+      "sha256": "6863368951918f94cea8f70977eb3c78beac731af7929a0d4e36a0e2ccc9cfe7"
     },
     {
-      "path": "/audio/hnl-original-v1/501e527e1f8049238e1adb36.mp3",
-      "bytes": 14756,
-      "sha256": "b281b5d326c5c707b6e744daf7655af405b7eb678ce4b36f86d68c2cdeaabe96"
+      "path": "/audio/hnl-kokoro-zf001-v1/924325374d0f123ac039d46c.mp3",
+      "bytes": 10676,
+      "sha256": "c8a4c1194b255d101cda153aaf70f3435842dcfa024ab8f03b80c8139eb7e12a"
     },
     {
-      "path": "/audio/hnl-original-v1/501e527e1f8049238e1adb36-slow.mp3",
-      "bytes": 17756,
-      "sha256": "b7c88fd20a75ed7aa50931f7380b88e62c2d1a8e24293804841c8642cc6876d0"
-    },
-    {
-      "path": "/audio/hnl-original-v1/162f50d0047d34646270808d.mp3",
-      "bytes": 13652,
-      "sha256": "2be7c189c508673802515b2774c0acefb6dc800326cfef5a221752cb59cb5007"
-    },
-    {
-      "path": "/audio/hnl-original-v1/162f50d0047d34646270808d-slow.mp3",
-      "bytes": 16436,
-      "sha256": "1a03b0b9603b1620f96d2bf0649cc939e9cc12b92878f70648b460aade64d932"
-    },
-    {
-      "path": "/audio/hnl-original-v1/d3a6bd44eb1e37a4a7c7159a.mp3",
-      "bytes": 16532,
-      "sha256": "420d270043e13e6485a37e95d1441231566673203c0e99dc12accd9b356bdd74"
-    },
-    {
-      "path": "/audio/hnl-original-v1/d3a6bd44eb1e37a4a7c7159a-slow.mp3",
-      "bytes": 20876,
-      "sha256": "d26a5f63ff1e9e361d3e67a20bcf93d4661048c45867279cac1ee32baa62b96f"
-    },
-    {
-      "path": "/audio/hnl-original-v1/b4bb9b3270add4c0362b1426.mp3",
-      "bytes": 10724,
-      "sha256": "f4f8453cd9cf73980a2d8c0e9528d0eedcf5c4a122152ebca918d7a0e94bd78d"
-    },
-    {
-      "path": "/audio/hnl-original-v1/b4bb9b3270add4c0362b1426-slow.mp3",
-      "bytes": 13508,
-      "sha256": "fa57665aafd443f1dc0995f08125f220886bda6d90c24fc46730e50571959975"
-    },
-    {
-      "path": "/audio/hnl-original-v1/3d55e83613cfb70faed0ad40.mp3",
+      "path": "/audio/hnl-kokoro-zf001-v1/924325374d0f123ac039d46c-slow.mp3",
       "bytes": 11108,
-      "sha256": "9f43c4c1494e22f58b5fc016c5422e5dd89493676d9fd663f702aba64efc9ad3"
+      "sha256": "801002707eaa72092416b431fe04104ce993814fa923dce31b9c532a4f1bfc92"
     },
     {
-      "path": "/audio/hnl-original-v1/3d55e83613cfb70faed0ad40-slow.mp3",
-      "bytes": 13844,
-      "sha256": "22c8005e3ea88f622e9573f69b90c120c732bdd6a5769d174e24bf2ae37301d4"
+      "path": "/audio/hnl-kokoro-zf001-v1/23a36cba9e37388113f563f4.mp3",
+      "bytes": 8852,
+      "sha256": "97edc932191c3923583584e42af9f0cf17302eb5e93b7ee453d0640228c87cd1"
     },
     {
-      "path": "/audio/hnl-original-v1/fc4eb2f2fa208e698d0f91a6.mp3",
-      "bytes": 11420,
-      "sha256": "c057cc67d190ae4550fd1681baf9867504281a4bc9fec6fa3306fa280394ab30"
+      "path": "/audio/hnl-kokoro-zf001-v1/23a36cba9e37388113f563f4-slow.mp3",
+      "bytes": 9500,
+      "sha256": "e72c72faf0d02b1eee2b54247136dbb0347a227fad93e78b15b37b1bd6931c88"
     },
     {
-      "path": "/audio/hnl-original-v1/fc4eb2f2fa208e698d0f91a6-slow.mp3",
-      "bytes": 13916,
-      "sha256": "9baff1df7718a80606794058cb6fe0ee06308562f2975b98c10615e819b93670"
-    },
-    {
-      "path": "/audio/hnl-original-v1/06242d4d6e083139c72d6c6b.mp3",
-      "bytes": 11612,
-      "sha256": "c93f96ac3cd48b1ffdb98ea0e9dd72b5f0614dfcb05ab6ee2e5a57fcc9bd2632"
-    },
-    {
-      "path": "/audio/hnl-original-v1/06242d4d6e083139c72d6c6b-slow.mp3",
+      "path": "/audio/hnl-kokoro-zf001-v1/5caa8c1e2d034878a475d3e3.mp3",
       "bytes": 13796,
-      "sha256": "e1f28ef68aa9777e3a0b33054d4b6ddd85c2325bb579e57ba497b02ee3975159"
+      "sha256": "617264a43da67d975096b3b6e6ea9dc1db5b82285997e3a4c64b90b36d7ea13b"
     },
     {
-      "path": "/audio/hnl-original-v1/40b4ade9cc614bc302b8f556.mp3",
-      "bytes": 11780,
-      "sha256": "d8472d599f2961064abaac6ff71da3d787ef67a2380973917cfa556b719f9195"
+      "path": "/audio/hnl-kokoro-zf001-v1/5caa8c1e2d034878a475d3e3-slow.mp3",
+      "bytes": 14324,
+      "sha256": "32b81c6e8a9177c34d6f63955e67c79afeffe40573317c991d77d97a47839b60"
     },
     {
-      "path": "/audio/hnl-original-v1/40b4ade9cc614bc302b8f556-slow.mp3",
-      "bytes": 14876,
-      "sha256": "b459637b51fff86197d52a89df5c89e9c62dc74107a6c595882ddbf8078c0465"
+      "path": "/audio/hnl-kokoro-zf001-v1/fd63be65b625813974573eb9.mp3",
+      "bytes": 17972,
+      "sha256": "74a6b261bba961e62730a81216823e249989509fd5b409465a3773c9a4c001dd"
     },
     {
-      "path": "/audio/hnl-original-v1/7ef20acdf8b83b32fd4ed509.mp3",
-      "bytes": 12908,
-      "sha256": "09e5910c67ce2b36d25b6d400d979621f14a01573cb4e52b1ebcfdecb30a404d"
+      "path": "/audio/hnl-kokoro-zf001-v1/fd63be65b625813974573eb9-slow.mp3",
+      "bytes": 18596,
+      "sha256": "0c1f80b9d275642995297c4230b796bfe4b7f58848ed8b1bf1813645fe68be74"
     },
     {
-      "path": "/audio/hnl-original-v1/7ef20acdf8b83b32fd4ed509-slow.mp3",
-      "bytes": 16028,
-      "sha256": "23a15263aa10489933b2ff53ecb12f371e5bf9fba78c0e958b5178814117b41e"
+      "path": "/audio/hnl-kokoro-zf001-v1/2fa365402b9400d6e3bcfb26.mp3",
+      "bytes": 7076,
+      "sha256": "7b50f71288a5b1467b7027e84a7018dc007896842bde157017348d8d1aae2562"
     },
     {
-      "path": "/audio/hnl-original-v1/f302ca268bfab9fc093cba62.mp3",
-      "bytes": 11444,
-      "sha256": "6d4a98c9ff7dd9308b5237280f90b3058754a672854ec7993e22f52644e05189"
+      "path": "/audio/hnl-kokoro-zf001-v1/2fa365402b9400d6e3bcfb26-slow.mp3",
+      "bytes": 6884,
+      "sha256": "15111f2bf3348ef9d35ecf783d7d57ebe765cceaaa4015c7d0bf73c1adf674e6"
     },
     {
-      "path": "/audio/hnl-original-v1/f302ca268bfab9fc093cba62-slow.mp3",
-      "bytes": 14108,
-      "sha256": "950155da78ff6981d61a4000b15da85ef70097c94a23b2544ef8f93bedf519a7"
+      "path": "/audio/hnl-kokoro-zf001-v1/83023fd60194fc3398efcfdf.mp3",
+      "bytes": 7052,
+      "sha256": "f761845c312a6aa169d378906e17aaf18f5cf640fbe9784d6c9667ee708cffc5"
     },
     {
-      "path": "/audio/hnl-original-v1/141db1b09397efbd63c9a950.mp3",
-      "bytes": 12236,
-      "sha256": "545b09d66e8893011ed4626b4cb5961c465515c7b845ec79b6ddba4e1b6f8909"
+      "path": "/audio/hnl-kokoro-zf001-v1/83023fd60194fc3398efcfdf-slow.mp3",
+      "bytes": 7484,
+      "sha256": "5252d784d6fa0c69039322ccdba5afbdfe872503728d652d02702d7935c05bd4"
     },
     {
-      "path": "/audio/hnl-original-v1/141db1b09397efbd63c9a950-slow.mp3",
-      "bytes": 14612,
-      "sha256": "209b725e21d5ec64d3575b6d2e3126077717bd7273c6c8ee30ccb3ad67343124"
+      "path": "/audio/hnl-kokoro-zf001-v1/63dcc88dd1dc99beeae4939b.mp3",
+      "bytes": 7052,
+      "sha256": "31a3f02cbf456b7fc8c06fdccc10d5d48b5c660cac9465385f8bc25887adf73c"
     },
     {
-      "path": "/audio/hnl-original-v1/8dc017de76a4581fa1df78e3.mp3",
-      "bytes": 11684,
-      "sha256": "22eab343ea3a6117dfdf6a05a5d9d6c796a54744e73905a316dc71db7dbf7785"
+      "path": "/audio/hnl-kokoro-zf001-v1/63dcc88dd1dc99beeae4939b-slow.mp3",
+      "bytes": 7340,
+      "sha256": "0e6b91be84e36a1bd38c9b592bf4f9ec2610976b3a523ad7ce8ea450cef94afb"
     },
     {
-      "path": "/audio/hnl-original-v1/8dc017de76a4581fa1df78e3-slow.mp3",
-      "bytes": 14204,
-      "sha256": "d44de5008b6b04a4d6595318bc249447d0547434bc3cee5a94777e7418b9fb61"
+      "path": "/audio/hnl-kokoro-zf001-v1/e74b565787dd3e7734725690.mp3",
+      "bytes": 6980,
+      "sha256": "9010abbe23832c9b856d2c0c3c0487f1752cc42e726c65c1718a8b3ee4f7c907"
     },
     {
-      "path": "/audio/hnl-original-v1/a4de97706b18cbd8d42b260c.mp3",
-      "bytes": 9572,
-      "sha256": "e39f1466b0815f15cae160a8e48f426e3400d31231062ea29a799d62ac160250"
+      "path": "/audio/hnl-kokoro-zf001-v1/e74b565787dd3e7734725690-slow.mp3",
+      "bytes": 7100,
+      "sha256": "75a7970c1f5fe365e687dcbdb3693ff31b54e4548dacd36b61d2b62e5d8dd851"
     },
     {
-      "path": "/audio/hnl-original-v1/a4de97706b18cbd8d42b260c-slow.mp3",
-      "bytes": 11732,
-      "sha256": "b55a484fccf82e5068bc9151c427a50360a741e8173b1083fd504ca6ea831362"
+      "path": "/audio/hnl-kokoro-zf001-v1/1c0138dfdc40222806d87af6.mp3",
+      "bytes": 8924,
+      "sha256": "eb482ecf16a1b48f85c49beac5be60fc6fcbead5c77692c74a9ae501cd79234f"
     },
     {
-      "path": "/audio/hnl-original-v1/442f09b3c76956fa89f8647a.mp3",
-      "bytes": 11132,
-      "sha256": "2f8b0064f482594ae28aadb2f6d79dd3417a9ea6033d1175af222791c1e1e19d"
+      "path": "/audio/hnl-kokoro-zf001-v1/1c0138dfdc40222806d87af6-slow.mp3",
+      "bytes": 9092,
+      "sha256": "28cfe32b74d8a4219f598f0fe036b25705ff85117e62097bfc60228646fbd0bf"
     },
     {
-      "path": "/audio/hnl-original-v1/442f09b3c76956fa89f8647a-slow.mp3",
-      "bytes": 14060,
-      "sha256": "64e9bb56086c716649d2fc40d9e3ba7c978a0af4d0437104166768f53d1d665f"
+      "path": "/audio/hnl-kokoro-zf001-v1/694e626bcb86e2c609f74506.mp3",
+      "bytes": 15932,
+      "sha256": "b8deedc7359d2bba116af69a68aee6d2bfd68959768f1160b7782f021cdc8024"
     },
     {
-      "path": "/audio/hnl-original-v1/42c74e3063d2d5f70cd2306f.mp3",
-      "bytes": 11324,
-      "sha256": "4dbb4dd01ccee733dac00228e63591e4a21c7e3c120cf24e9adff993633342e6"
+      "path": "/audio/hnl-kokoro-zf001-v1/694e626bcb86e2c609f74506-slow.mp3",
+      "bytes": 15860,
+      "sha256": "58b6bb57e1d4dad47b3c3887b1dd25303bb79ba8cc8fe0adf1287b1e12a89579"
     },
     {
-      "path": "/audio/hnl-original-v1/42c74e3063d2d5f70cd2306f-slow.mp3",
-      "bytes": 13916,
-      "sha256": "be8d0564a6ca147b52d303bec6ce40643d24ef9ba6bcc73da81620248e433479"
+      "path": "/audio/hnl-kokoro-zf001-v1/cc5dfedb6721368e67e03fbf.mp3",
+      "bytes": 7388,
+      "sha256": "50ba7fd21278c4cb804e21af60d7d941c1f531c535b08f250f42fae8d969f3b5"
     },
     {
-      "path": "/audio/hnl-original-v1/1a94f7fb63237dc5830fbd33.mp3",
-      "bytes": 12020,
-      "sha256": "69e9f366d5a6d8986cf1771054797d5215f1d12c41d039b1498dc3eb544a4cf2"
+      "path": "/audio/hnl-kokoro-zf001-v1/cc5dfedb6721368e67e03fbf-slow.mp3",
+      "bytes": 7100,
+      "sha256": "0d654650888c8f715ef3601946c9db6715211f2406c529cede51981cc41334df"
     },
     {
-      "path": "/audio/hnl-original-v1/1a94f7fb63237dc5830fbd33-slow.mp3",
-      "bytes": 14564,
-      "sha256": "ea19f90f8ed16a8583d01bb3004de15c038c24f2e1df2db20ef84c623b1a54e8"
+      "path": "/audio/hnl-kokoro-zf001-v1/c87221bc59036dde436a1deb.mp3",
+      "bytes": 6956,
+      "sha256": "4f0d87ea460425ff09825f2a9db333bb4a4aecc9541e16fdd81d36db556d4ccb"
     },
     {
-      "path": "/audio/hnl-original-v1/231b57af12f3743a7d531706.mp3",
-      "bytes": 10892,
-      "sha256": "c1861f5a37594315686e6c3b1cf035740c4261063585160b1be0a62d504d546f"
+      "path": "/audio/hnl-kokoro-zf001-v1/c87221bc59036dde436a1deb-slow.mp3",
+      "bytes": 7292,
+      "sha256": "b276160500758f25f6441f1d1373623d4ff5717e55bed7ce25483f6169bac6b5"
     },
     {
-      "path": "/audio/hnl-original-v1/231b57af12f3743a7d531706-slow.mp3",
-      "bytes": 13100,
-      "sha256": "cc6beade17cbfd3bfd1be41fc662c12ba59a673251c01c2d401a52f5fa7a5989"
+      "path": "/audio/hnl-kokoro-zf001-v1/e23d4733b135eb66f1913adf.mp3",
+      "bytes": 7988,
+      "sha256": "3ed5f6c5bc7c8e55bb562ef34ae39a289cd4825d1f2e0d78ab4b913bf4fff22b"
     },
     {
-      "path": "/audio/hnl-original-v1/a16c85a50c5fe55d537f272a.mp3",
-      "bytes": 11156,
-      "sha256": "1e2f7993366967bdbbd5fa08dd7deb287f51a99d79500a0eed56a8fc1e571cc9"
+      "path": "/audio/hnl-kokoro-zf001-v1/e23d4733b135eb66f1913adf-slow.mp3",
+      "bytes": 8228,
+      "sha256": "d049f4a9df3c5c1a5e39731d855a457343c51e942a761cfb6ff1a14a93bf3ddf"
     },
     {
-      "path": "/audio/hnl-original-v1/a16c85a50c5fe55d537f272a-slow.mp3",
-      "bytes": 13940,
-      "sha256": "a5d4fa1eb0186bd3a079d1bb559ae0dfdaca57102f338c2189c10422ea40d85c"
+      "path": "/audio/hnl-kokoro-zf001-v1/2f99ff1b52d35712ce18296d.mp3",
+      "bytes": 9380,
+      "sha256": "12938a282841d4369bc0c48ae5acfa6b276e7a69b730852a14ab3f286c2054d2"
     },
     {
-      "path": "/audio/hnl-original-v1/ebe104790b8154872eceb1f3.mp3",
-      "bytes": 11948,
-      "sha256": "6178c72887e8db4a7a546424b72ee7c20af9249783fee3d26c46a85647d206d1"
+      "path": "/audio/hnl-kokoro-zf001-v1/2f99ff1b52d35712ce18296d-slow.mp3",
+      "bytes": 9596,
+      "sha256": "8402e41c44c24d94994f5667f4f94a0dba45144d8f3dc509516059ef9700a774"
     },
     {
-      "path": "/audio/hnl-original-v1/ebe104790b8154872eceb1f3-slow.mp3",
-      "bytes": 14204,
-      "sha256": "c51122b218eddf9144a62982969f26ba2399bc3b399f729afa9ae50827070f19"
+      "path": "/audio/hnl-kokoro-zf001-v1/f253928715c0f8dcb2f81278.mp3",
+      "bytes": 7076,
+      "sha256": "5dd4338ce18ce11711b9a3ddc8dcb16815f6b4c9d853ce84c194f52080c5123f"
     },
     {
-      "path": "/audio/hnl-original-v1/11112aa208201e831c64e93c.mp3",
-      "bytes": 13028,
-      "sha256": "a282615565bb58f854dd872469270af09872f6471de143055527b51bdcd562e2"
+      "path": "/audio/hnl-kokoro-zf001-v1/f253928715c0f8dcb2f81278-slow.mp3",
+      "bytes": 6908,
+      "sha256": "d0264687dfe4a1b790488cd75839696f8c1754be7bd3d51fd551184bcf6677a6"
     },
     {
-      "path": "/audio/hnl-original-v1/11112aa208201e831c64e93c-slow.mp3",
-      "bytes": 15596,
-      "sha256": "2253bb44de8405ed546af1c2dd8a21ff32f618a2190c76e17abfa5ca6b7696df"
-    },
-    {
-      "path": "/audio/hnl-original-v1/d76d4fe5cdd28ea54793b923.mp3",
-      "bytes": 11108,
-      "sha256": "dc3d304381ad9f5e84b5f30462195712d33af771bf285b52345ec3b35e0d6d28"
-    },
-    {
-      "path": "/audio/hnl-original-v1/d76d4fe5cdd28ea54793b923-slow.mp3",
-      "bytes": 13628,
-      "sha256": "49a1c7fcea849bdc654c358377806cb7f59b826dc60bc6c2fb93006ce3927dae"
-    },
-    {
-      "path": "/audio/hnl-original-v1/ca7aeadc2cc82a7aa8c5ea3e.mp3",
-      "bytes": 11204,
-      "sha256": "37d8dea157e1b89733d441b32c1506093f6aeaef80f76f041d2226587315313c"
-    },
-    {
-      "path": "/audio/hnl-original-v1/ca7aeadc2cc82a7aa8c5ea3e-slow.mp3",
-      "bytes": 13820,
-      "sha256": "9974ec3c29ccb48061dca18165d2f4a1ec42d4ab11acb88390ba3828bf66b561"
-    },
-    {
-      "path": "/audio/hnl-original-v1/fcd5fa36d28e9d8fd23d2d44.mp3",
-      "bytes": 12836,
-      "sha256": "3e5f275be56bf224bc07ded1b22283ec37fc305dd5039461f3d8005bbf09a315"
-    },
-    {
-      "path": "/audio/hnl-original-v1/fcd5fa36d28e9d8fd23d2d44-slow.mp3",
-      "bytes": 15620,
-      "sha256": "85826cc2463a56a37e0ee93811512e6ccb61cafd35b1f506f0dcc95b4eb4cf36"
-    },
-    {
-      "path": "/audio/hnl-original-v1/83add2af41d31c54c28ab4d8.mp3",
-      "bytes": 10700,
-      "sha256": "a737496484f0d134c382e752f7d2b66762926cd1178761dc54573388f066cda0"
-    },
-    {
-      "path": "/audio/hnl-original-v1/83add2af41d31c54c28ab4d8-slow.mp3",
-      "bytes": 12980,
-      "sha256": "f45ae711b2e98e9fb291f3591f840410534e47f3d03835dc90b7d178bcac6c0d"
-    },
-    {
-      "path": "/audio/hnl-original-v1/de29f9ca7e308d7280446bb8.mp3",
-      "bytes": 10628,
-      "sha256": "beee7a2b9dd546f10753682e4a991e3dd0ce31fa8221472b235ddf16ac0696be"
-    },
-    {
-      "path": "/audio/hnl-original-v1/de29f9ca7e308d7280446bb8-slow.mp3",
-      "bytes": 13172,
-      "sha256": "9a5da639d56be4536ab7ca73031b4ac9459e3f78f135a3ed058d0dd1513bea7b"
-    },
-    {
-      "path": "/audio/hnl-original-v1/4a469fdb1b5a305cf2b2df85.mp3",
-      "bytes": 11348,
-      "sha256": "3df47a9698cff9a1b8e26aebadccd8ca22e5a3adba30e833422b6d11c1ff1d83"
-    },
-    {
-      "path": "/audio/hnl-original-v1/4a469fdb1b5a305cf2b2df85-slow.mp3",
-      "bytes": 13964,
-      "sha256": "ff656496d2553f9e15f649049ecbada8cee08347960f18ba61f20d13c15145a4"
-    },
-    {
-      "path": "/audio/hnl-original-v1/78cae412294ed19ce50b88c1.mp3",
-      "bytes": 10268,
-      "sha256": "0da31aa74332b4e80a1c80b6dbffc1d579dd592afae4f33004fbd60e289d7187"
-    },
-    {
-      "path": "/audio/hnl-original-v1/78cae412294ed19ce50b88c1-slow.mp3",
-      "bytes": 13052,
-      "sha256": "88a3a0b192467af37d7ad4359b8bbdbb925bc398cb756756249f3e13aab1a243"
-    },
-    {
-      "path": "/audio/hnl-original-v1/262d47fcf8ac2a7707abbb83.mp3",
-      "bytes": 11300,
-      "sha256": "c33bcbef75f8e514cdbef5cf5d1d2e2f35e5573864f7db4733ea0ec456b0765c"
-    },
-    {
-      "path": "/audio/hnl-original-v1/262d47fcf8ac2a7707abbb83-slow.mp3",
-      "bytes": 13796,
-      "sha256": "52e60fbf171e6cb1e699cd0cda67e9b69b096616780682f1cb74dacedc93f6d1"
-    },
-    {
-      "path": "/audio/hnl-original-v1/46184c288e87b9837db11cfb.mp3",
-      "bytes": 12092,
-      "sha256": "6b9c022e64470bd90fad816d85743a8897acfc62adde04639a376425f1c2fad4"
-    },
-    {
-      "path": "/audio/hnl-original-v1/46184c288e87b9837db11cfb-slow.mp3",
-      "bytes": 15164,
-      "sha256": "6c359b253f7c912936893cbb13c71cf01fa8e01383591851d5e2d242e089080a"
-    },
-    {
-      "path": "/audio/hnl-original-v1/a16bfbadeea3b4b9e0bc09fb.mp3",
-      "bytes": 13316,
-      "sha256": "e7ca989db1dfa23cc598d31d0b5bd77b00715c1082c795758e23269d7c6d3f76"
-    },
-    {
-      "path": "/audio/hnl-original-v1/a16bfbadeea3b4b9e0bc09fb-slow.mp3",
-      "bytes": 15092,
-      "sha256": "6b540c4a977b15f050ec25fd1d064112e0b89cbca28f8b9dfbb025b21e76d206"
-    },
-    {
-      "path": "/audio/hnl-original-v1/6a79e8c142c70983a02c767b.mp3",
-      "bytes": 15644,
-      "sha256": "c5fc6a228345b9a0f3ac6a2392811fd2f7e5a15e4df966eba15d4595daeacb96"
-    },
-    {
-      "path": "/audio/hnl-original-v1/6a79e8c142c70983a02c767b-slow.mp3",
-      "bytes": 19268,
-      "sha256": "fd41470f79372534ee435d183d7b147cb8ed5c3f769a308dea33d1330faa7125"
-    },
-    {
-      "path": "/audio/hnl-original-v1/250592a7c43818fc36cbf6d4.mp3",
-      "bytes": 13988,
-      "sha256": "f6b443b893607e45f0c5ac903d353371dea6cb078ad42db59dc3be2cf519034e"
-    },
-    {
-      "path": "/audio/hnl-original-v1/250592a7c43818fc36cbf6d4-slow.mp3",
-      "bytes": 16748,
-      "sha256": "a85afae1da4434bad55f0ba6b0d5c4fe629eae5f07a0479917ac33d4dc4a882d"
-    },
-    {
-      "path": "/audio/hnl-original-v1/1c22b7b7c31c97dff5293aed.mp3",
-      "bytes": 12860,
-      "sha256": "8f10d9a4f3f0afde7bda089637284920d67001f47fbbcdad50db8f289386cb51"
-    },
-    {
-      "path": "/audio/hnl-original-v1/1c22b7b7c31c97dff5293aed-slow.mp3",
-      "bytes": 15764,
-      "sha256": "5b292abd3c4ae451e2bd1aec1cd498728db57680e0e3077eb9e68946325836ee"
-    },
-    {
-      "path": "/audio/hnl-original-v1/aaaead9febbde8cf815f719a.mp3",
-      "bytes": 14972,
-      "sha256": "b8aaeeef66138d18e3b20b70874d8e433af757ebbdeaeb92dbc65e3870fcfc36"
-    },
-    {
-      "path": "/audio/hnl-original-v1/aaaead9febbde8cf815f719a-slow.mp3",
-      "bytes": 17588,
-      "sha256": "4bce2c7560f5b583d5c4d14d25bd2640f07c0360e7ee3c6e03b4bca51e44d8f9"
-    },
-    {
-      "path": "/audio/hnl-original-v1/fc01e7be5296100ac53c9059.mp3",
-      "bytes": 13556,
-      "sha256": "6c898fcd6394a68d1a5dfcfa279d0004bfa54c0519161929a5432349c86b4df4"
-    },
-    {
-      "path": "/audio/hnl-original-v1/fc01e7be5296100ac53c9059-slow.mp3",
-      "bytes": 16580,
-      "sha256": "3c2289c1d021e1d51e53150e16dcca8e4832c0c759d6313b36405b81d38b4224"
-    },
-    {
-      "path": "/audio/hnl-original-v1/13ab08165f3770ea62a13469.mp3",
-      "bytes": 15812,
-      "sha256": "9b96c8bfdf1380823aaeefdda860d3dba71e939e54dea3562da8e7e0324130da"
-    },
-    {
-      "path": "/audio/hnl-original-v1/13ab08165f3770ea62a13469-slow.mp3",
-      "bytes": 19292,
-      "sha256": "b3b859495b5083a717254ce9989507eeb0b33ef64b2f015c3fbc125b7bf47818"
-    },
-    {
-      "path": "/audio/hnl-original-v1/54bb1e441797860be914da69.mp3",
-      "bytes": 13292,
-      "sha256": "bf4872bde63309b106d60ceb9cd910ad5633e8c6f66a41862a42275c3914c0fa"
-    },
-    {
-      "path": "/audio/hnl-original-v1/54bb1e441797860be914da69-slow.mp3",
-      "bytes": 16652,
-      "sha256": "44214a161046a3212b9af47386100e57c138768631219b4afd6717816bde94e2"
-    },
-    {
-      "path": "/audio/hnl-original-v1/16a202faef3ef7bc5320786c.mp3",
-      "bytes": 16268,
-      "sha256": "852891d31c8225fe7a468013aa9958ad04b9c97596e9fc78133d1d3a8dde9d1c"
-    },
-    {
-      "path": "/audio/hnl-original-v1/16a202faef3ef7bc5320786c-slow.mp3",
-      "bytes": 19532,
-      "sha256": "199ce3967b0352bca088562f489d6ebd3a1c922fe4031ce2d68933780177dc77"
-    },
-    {
-      "path": "/audio/hnl-original-v1/3c6af54fbbad062cf958d419.mp3",
-      "bytes": 17132,
-      "sha256": "7b556bfd52b49098f215032e123e3d728a44186f37c3dc82cb323a29241249b3"
-    },
-    {
-      "path": "/audio/hnl-original-v1/3c6af54fbbad062cf958d419-slow.mp3",
-      "bytes": 20012,
-      "sha256": "83275f0c6fd52b7b57201db64ba0cf55581fffb2ad6f12a0629330da262a5533"
-    },
-    {
-      "path": "/audio/hnl-original-v1/c162d1c726b625bd96c20cdb.mp3",
-      "bytes": 13556,
-      "sha256": "c84f2b5866286280c49e18bdbc1bf37612194a42ee06493d14e71e6d14715961"
-    },
-    {
-      "path": "/audio/hnl-original-v1/c162d1c726b625bd96c20cdb-slow.mp3",
-      "bytes": 16988,
-      "sha256": "6d3f030b75dac225380f1d9f4b6f5877f79b856e433e596f234880152f9c5d75"
-    },
-    {
-      "path": "/audio/hnl-original-v1/cb14b5e09a64e8cc2fdcd61b.mp3",
-      "bytes": 14804,
-      "sha256": "9f432db6b8a8bc3401617469745d04e5836dc59775ce1c926606fcf787501054"
-    },
-    {
-      "path": "/audio/hnl-original-v1/cb14b5e09a64e8cc2fdcd61b-slow.mp3",
-      "bytes": 17708,
-      "sha256": "8b8ac825e6d91424eeaa618f53f17ef96918fede9d346ed31cc7b774849ee432"
-    },
-    {
-      "path": "/audio/hnl-original-v1/43c74b6b641cf4bccb91fec1.mp3",
-      "bytes": 15284,
-      "sha256": "146196a5c705e691877b79f6ea29882c9fe5bddbb1e18c2543d358fd65f210fd"
-    },
-    {
-      "path": "/audio/hnl-original-v1/43c74b6b641cf4bccb91fec1-slow.mp3",
-      "bytes": 18452,
-      "sha256": "8d1b0ac3b9ea91019ef0724d2bb065db83cba6da67996ca1644c1af23f5f5033"
-    },
-    {
-      "path": "/audio/hnl-original-v1/2684542b382b2910e2d2f0b3.mp3",
-      "bytes": 17564,
-      "sha256": "b7c7e30c3315be758fef04e7b93d3ebe6de1f2e2b92ace796fd887561aa28428"
-    },
-    {
-      "path": "/audio/hnl-original-v1/2684542b382b2910e2d2f0b3-slow.mp3",
-      "bytes": 19604,
-      "sha256": "33a7a31ec5d35ef14b65c1c53fb037ad497f1a920d05111ed277356b0ff36f9c"
-    },
-    {
-      "path": "/audio/hnl-original-v1/9d840cd485fa2da58a486c12.mp3",
-      "bytes": 14228,
-      "sha256": "2a179478899b7dee2817f3ba9f87b6556898ff04360b918bace374e5ce4b7987"
-    },
-    {
-      "path": "/audio/hnl-original-v1/9d840cd485fa2da58a486c12-slow.mp3",
-      "bytes": 16604,
-      "sha256": "c13322d5970a83acee804c5ad3977133691b4ac2b6292d1e451adb287707b8dc"
-    },
-    {
-      "path": "/audio/hnl-original-v1/cf1eb1dd84d144729cc3383c.mp3",
-      "bytes": 13676,
-      "sha256": "b251890c001a3b1edc1c3d4b81ae4b6b53700929ab90c421bcd02e7935244c26"
-    },
-    {
-      "path": "/audio/hnl-original-v1/cf1eb1dd84d144729cc3383c-slow.mp3",
-      "bytes": 16508,
-      "sha256": "8b38c9b6c3f398dba5c0b58d8cbb91f7d4e14d76f3aca364e5f95247f8cc382b"
-    },
-    {
-      "path": "/audio/hnl-original-v1/cf8d086e401391616578c516.mp3",
-      "bytes": 13220,
-      "sha256": "3fb88d32aa3fb22ac8f4b9190d6bda50f69a9142a2fc5e76f0efdf4d0a315d09"
-    },
-    {
-      "path": "/audio/hnl-original-v1/cf8d086e401391616578c516-slow.mp3",
-      "bytes": 16388,
-      "sha256": "99f63e93b546bafc50f5c71323f8b1671260d62cea931cf79cf8e82e3ad8a04e"
-    },
-    {
-      "path": "/audio/hnl-original-v1/30fab62fe101d89ea7110f43.mp3",
-      "bytes": 13340,
-      "sha256": "d117f985bc7998cf7a8a391952234eb7ad8fe0099e0ce9bddb61a15ebe14ca7a"
-    },
-    {
-      "path": "/audio/hnl-original-v1/30fab62fe101d89ea7110f43-slow.mp3",
-      "bytes": 16124,
-      "sha256": "ebe7ed89ae77614df0dd2051ea063f1c3a45ad95906f2f8975df03d59cc2a4f8"
-    },
-    {
-      "path": "/audio/hnl-original-v1/99a2cd4bfe1947acfdc6c9b4.mp3",
-      "bytes": 9764,
-      "sha256": "4b2adfc075e34cca7677c7b520f05f6ffd8409af0ca5d8cd38e00db5a3af7331"
-    },
-    {
-      "path": "/audio/hnl-original-v1/99a2cd4bfe1947acfdc6c9b4-slow.mp3",
-      "bytes": 11684,
-      "sha256": "101c8a0f1d0f61b66a5fc41c76df1242ccf60e481494d267a7a74a9159d78ca2"
-    },
-    {
-      "path": "/audio/hnl-original-v1/a58897d7732180fec1bd9fb8.mp3",
-      "bytes": 15620,
-      "sha256": "ff44e3d820bfc393aa3c3cc6d4829c7ca5d518efb36d55f08db4cae09f72f807"
-    },
-    {
-      "path": "/audio/hnl-original-v1/a58897d7732180fec1bd9fb8-slow.mp3",
-      "bytes": 18356,
-      "sha256": "47e0f36bef91e9562a03a725f8eb5c6e65d96b26a30989697bc0df28addd6d12"
-    },
-    {
-      "path": "/audio/hnl-original-v1/805791a181b4448231ab8795.mp3",
-      "bytes": 16844,
-      "sha256": "5d04ea7b4a58c57dc3a78228db88276a7266e16e82a40a420f8437f27d5d4fc5"
-    },
-    {
-      "path": "/audio/hnl-original-v1/805791a181b4448231ab8795-slow.mp3",
-      "bytes": 19964,
-      "sha256": "43a62dc6fab80891af035768e821084bf1984e337517838d8d929c66b2f1803f"
-    },
-    {
-      "path": "/audio/hnl-original-v1/26b868fcea197881629cb0d8.mp3",
-      "bytes": 15644,
-      "sha256": "8c4251e6db8802823a9064187c18f33927a519e7961151e5e243e8dfe7d8956a"
-    },
-    {
-      "path": "/audio/hnl-original-v1/26b868fcea197881629cb0d8-slow.mp3",
-      "bytes": 18980,
-      "sha256": "06b6061cf2d855d6a951163021dbaae07a2a362e3278d65fda04a3ccd45afe67"
-    },
-    {
-      "path": "/audio/hnl-original-v1/ff9607fc92785259eb1f9c98.mp3",
-      "bytes": 15356,
-      "sha256": "2362ab6518619d887a40136a4baff6be2de3539d646fba52bdce5e64a5493e86"
-    },
-    {
-      "path": "/audio/hnl-original-v1/ff9607fc92785259eb1f9c98-slow.mp3",
-      "bytes": 19148,
-      "sha256": "2cabb6afc302c8d2d1d3681aab8c5cf69851b38ddbcbebfbd16afdbeb40f33cb"
-    },
-    {
-      "path": "/audio/hnl-original-v1/8cc50cfcae0b79e963302bd0.mp3",
-      "bytes": 13076,
-      "sha256": "9aac0e8bba52cfa3adf5f52496abbf6f5faf89c8a6adc9c6ff90fd49b23934ea"
-    },
-    {
-      "path": "/audio/hnl-original-v1/8cc50cfcae0b79e963302bd0-slow.mp3",
-      "bytes": 16412,
-      "sha256": "0c0296111027055a3836008113b2a3c54d5830375dfe29900ffc3873a2f4a637"
-    },
-    {
-      "path": "/audio/hnl-original-v1/2abbf3c27d4ddb9d0c402415.mp3",
-      "bytes": 14780,
-      "sha256": "9cc7a4da0fbc42cf873d8c662583f9b199dae8a72bdc9d3a56609e5420017264"
-    },
-    {
-      "path": "/audio/hnl-original-v1/2abbf3c27d4ddb9d0c402415-slow.mp3",
-      "bytes": 17228,
-      "sha256": "8e213301681b3c9b5d66acb5f7f1f9b04904655556f2073e8213ea782c744ea4"
-    },
-    {
-      "path": "/audio/hnl-original-v1/baf2f685f2c58d506a140986.mp3",
-      "bytes": 14516,
-      "sha256": "e3f600d551406a9ab35ab1db2c17f4badc78024d3d4130224a22949a70cfeeb7"
-    },
-    {
-      "path": "/audio/hnl-original-v1/baf2f685f2c58d506a140986-slow.mp3",
-      "bytes": 18500,
-      "sha256": "9155cbf64a72a467da2755a1aaded1cdf8f9447b5c7188f58c7c3642db6d289c"
-    },
-    {
-      "path": "/audio/hnl-original-v1/265b07d9b74f7f3b3817101f.mp3",
-      "bytes": 13652,
-      "sha256": "e04c3eddb206075feeabd7b12df6ad3893668183f042e98132605110c6e977fb"
-    },
-    {
-      "path": "/audio/hnl-original-v1/265b07d9b74f7f3b3817101f-slow.mp3",
-      "bytes": 17180,
-      "sha256": "0a5a85648cf31888e49521647c8d1c91910daad9deccc66865eccdd60aebb13d"
-    },
-    {
-      "path": "/audio/hnl-original-v1/7d4eecd2286f04bc3e036792.mp3",
-      "bytes": 15548,
-      "sha256": "b28a5cb7ab9dc92f527d56c214cd27f1a1d60b328c2cc68c15863895b6574f58"
-    },
-    {
-      "path": "/audio/hnl-original-v1/7d4eecd2286f04bc3e036792-slow.mp3",
-      "bytes": 19268,
-      "sha256": "ffdb5b64e671fd1b045a131aa35fce2dddb4c2c76c7215b19405bbd83a0fc82a"
-    },
-    {
-      "path": "/audio/hnl-original-v1/a7ad6b4537701f556c13c0dd.mp3",
-      "bytes": 16412,
-      "sha256": "df4e1529cff3aa90a091fab8c044e2045ba4401529f5eb0b8fe3d8c9c3ab3b5e"
-    },
-    {
-      "path": "/audio/hnl-original-v1/a7ad6b4537701f556c13c0dd-slow.mp3",
-      "bytes": 19604,
-      "sha256": "c5d3e3b88e470353651bd7a49aeb7e1cd85c31aeadfa2151aeada82167f8e844"
-    },
-    {
-      "path": "/audio/hnl-original-v1/f2250ad8e5e06f7b99b0610c.mp3",
-      "bytes": 15764,
-      "sha256": "6537a1bc1f99bcca94bb726e70da0920fdcd1fc2b297be8c4d5176a401abd375"
-    },
-    {
-      "path": "/audio/hnl-original-v1/f2250ad8e5e06f7b99b0610c-slow.mp3",
-      "bytes": 17828,
-      "sha256": "a7705ea05c3448a8336274d9dffa45c3de96fb46281eb78b3ffec6181f410502"
-    },
-    {
-      "path": "/audio/hnl-original-v1/62a94d0697d96ee45e176a97.mp3",
-      "bytes": 16580,
-      "sha256": "e61e55ff5886f18392c12f56ac0dbee73f1fd93704df3af474e101dad1c42916"
-    },
-    {
-      "path": "/audio/hnl-original-v1/62a94d0697d96ee45e176a97-slow.mp3",
-      "bytes": 19316,
-      "sha256": "6a683e74c980097b5c3ada4eaf86ff33a607c95a63d5d311c90f2aa5d6fccf07"
-    },
-    {
-      "path": "/audio/hnl-original-v1/98e472f482b9e6c9c6113680.mp3",
-      "bytes": 13796,
-      "sha256": "4489abaaafa1d5a047527c5ba890a35ac9bd963c109882ec0eaa80da423e9f0c"
-    },
-    {
-      "path": "/audio/hnl-original-v1/98e472f482b9e6c9c6113680-slow.mp3",
-      "bytes": 17396,
-      "sha256": "384f0e3e35a60aad5a223c68af830760765c8c4e6589a24ea922d6ca0bd0b983"
-    },
-    {
-      "path": "/audio/hnl-original-v1/a05282904aa3c1bc119a6b84.mp3",
-      "bytes": 15596,
-      "sha256": "f5fc91021b83559ef7615d9abd405b2fe68a2d3bd4925cf489e11259abee5722"
-    },
-    {
-      "path": "/audio/hnl-original-v1/a05282904aa3c1bc119a6b84-slow.mp3",
-      "bytes": 19460,
-      "sha256": "9481be3dddcdc495b1b7b701f8afe452f33f535fee62c8dd88a0421ff822e079"
-    },
-    {
-      "path": "/audio/hnl-original-v1/11eb66e73788f082d6cede65.mp3",
-      "bytes": 14036,
-      "sha256": "dfdca0418f03d0c2beedfd60f063a19ae3c64847ec44aab9e15faf02d1d3fa4c"
-    },
-    {
-      "path": "/audio/hnl-original-v1/11eb66e73788f082d6cede65-slow.mp3",
-      "bytes": 16748,
-      "sha256": "b271360a5f073be01727ffaa9cb621e4c097006e4c56d723a1b288b2f2b116ff"
-    },
-    {
-      "path": "/audio/hnl-original-v1/a3abcffba7ece2f5bea4a7d2.mp3",
-      "bytes": 14252,
-      "sha256": "aac2ee59c1a3e96a2f73bbb1080c85f4e92f3c080b1c27ebd857dff9361f6d20"
-    },
-    {
-      "path": "/audio/hnl-original-v1/a3abcffba7ece2f5bea4a7d2-slow.mp3",
-      "bytes": 17876,
-      "sha256": "bf3c7b8f3dd8c4c52780387f96e5c97d299dfff180bd274801396c8e424dbce8"
-    },
-    {
-      "path": "/audio/hnl-original-v1/39234f1cdada6e10c8f4bb6f.mp3",
-      "bytes": 17180,
-      "sha256": "0297304b9a70c68713f8d8aa27c4c49e977a3ac388d47873c817d23d8e814539"
-    },
-    {
-      "path": "/audio/hnl-original-v1/39234f1cdada6e10c8f4bb6f-slow.mp3",
-      "bytes": 19652,
-      "sha256": "07d089d1cbba6a16be8bf2ca754055ad2c526b0131e5f14bcfd535a6635f9c29"
-    },
-    {
-      "path": "/audio/hnl-original-v1/3d57e3992a42f597f4d231d7.mp3",
-      "bytes": 14468,
-      "sha256": "2446a2a5d84dbbbcb56a6e9f42c8c2ae6755193a4179cac5acc0aa314c28079d"
-    },
-    {
-      "path": "/audio/hnl-original-v1/3d57e3992a42f597f4d231d7-slow.mp3",
+      "path": "/audio/hnl-kokoro-zf001-v1/904cecfcce0bd9b67840624a.mp3",
       "bytes": 18620,
-      "sha256": "6cf05f6fadd4fd62a94613396a5f70e96efcfd76d364db87c6eba050df9ebcea"
+      "sha256": "02e1f7dfe4041462cebf1b3227e70a4096e3d30f73270c81ce5d12f272888d3a"
     },
     {
-      "path": "/audio/hnl-original-v1/83596847de26576263fdead6.mp3",
-      "bytes": 16004,
-      "sha256": "ff1475b3f88caad566ee7191b115762a010aa6d4941af56cff03d329204e468f"
+      "path": "/audio/hnl-kokoro-zf001-v1/904cecfcce0bd9b67840624a-slow.mp3",
+      "bytes": 20372,
+      "sha256": "b28a26c71ab33df72c1d80d42310096005fd7896ed2508141a7a8376247b3338"
     },
     {
-      "path": "/audio/hnl-original-v1/83596847de26576263fdead6-slow.mp3",
-      "bytes": 19244,
-      "sha256": "7aa5e70e65022576ea6039e2688336465dd2d74312457eb5693d384fc1f2034c"
+      "path": "/audio/hnl-kokoro-zf001-v1/717cde0d6932288a940404bc.mp3",
+      "bytes": 16364,
+      "sha256": "3ccafd8c8de2e65b5183b930d855e69923c14b767ea5de90f32426e1bc425801"
     },
     {
-      "path": "/audio/hnl-original-v1/a21a7632fb6e9f373883de5a.mp3",
-      "bytes": 13244,
-      "sha256": "a50cf19bccff01c1ce1415c35acb84eff7b59286288f4e27a5b9de3ba07b6b90"
+      "path": "/audio/hnl-kokoro-zf001-v1/717cde0d6932288a940404bc-slow.mp3",
+      "bytes": 17684,
+      "sha256": "04ea427f4290357855c2e49af5960e10177dc59eeaf1d13a8367e40c1525552a"
     },
     {
-      "path": "/audio/hnl-original-v1/a21a7632fb6e9f373883de5a-slow.mp3",
-      "bytes": 17060,
-      "sha256": "3bdd8e9766a262366f7a51dab64010f38ac138dc8f50facc4d158aeeaeeecd49"
+      "path": "/audio/hnl-kokoro-zf001-v1/738eed274d4ae42995fe5a18.mp3",
+      "bytes": 14804,
+      "sha256": "c005c3468adf1869dd30cb1832f746e48e51aa513b9bbd02cf8b65cde42bfb88"
     },
     {
-      "path": "/audio/hnl-original-v1/bb2ac507e5a67a17425a38c9.mp3",
-      "bytes": 14684,
-      "sha256": "77275627b97459cba41fb8b586b84a327bc0ae8afc6aa54e3aa9d5e7b56df66d"
+      "path": "/audio/hnl-kokoro-zf001-v1/738eed274d4ae42995fe5a18-slow.mp3",
+      "bytes": 15284,
+      "sha256": "0ffd2f01cddfa7bf557be404f71d6ecb6b942cf9873ac8ab20a5fa99b1f4cb6b"
     },
     {
-      "path": "/audio/hnl-original-v1/bb2ac507e5a67a17425a38c9-slow.mp3",
-      "bytes": 17540,
-      "sha256": "06ea5781c207bd91e7bcb130141cdd2898f2796425e695e32240e143cdd28c52"
+      "path": "/audio/hnl-kokoro-zf001-v1/f56a0cb2da6fa0f6aa500707.mp3",
+      "bytes": 8660,
+      "sha256": "d98b2eb0476fec5573915036890e9ff6e9f11386efe11ed8825f4d37ee72d523"
     },
     {
-      "path": "/audio/hnl-original-v1/6a7caa59d172a811271179b4.mp3",
-      "bytes": 12908,
-      "sha256": "824ef314fca911f94b6f77790bd94e4e27ba3367a267dbf954ec57f5ff07c2f0"
+      "path": "/audio/hnl-kokoro-zf001-v1/f56a0cb2da6fa0f6aa500707-slow.mp3",
+      "bytes": 8924,
+      "sha256": "e32445d494f3207679d3231bc6eb6392d7fa6c210c87b66930bac2fa64716a17"
     },
     {
-      "path": "/audio/hnl-original-v1/6a7caa59d172a811271179b4-slow.mp3",
-      "bytes": 15548,
-      "sha256": "96e69f0e1cc2cb70b2b9f4488f88ab020e45d2ecbadd569fbac0678760bbbe6c"
+      "path": "/audio/hnl-kokoro-zf001-v1/abfdece661a46865d93a6add.mp3",
+      "bytes": 8924,
+      "sha256": "e912e9213225c7fd83f8b9f61f9a90544cde40886a330bf0bcc3fba0d6ac45fb"
     },
     {
-      "path": "/audio/hnl-original-v1/333a151cde66b05aec32f271.mp3",
-      "bytes": 13628,
-      "sha256": "c99def2e2002cb6c3f8a47aa1f60d3929a11ada9e5e45ef59673cd0a6be08d4f"
+      "path": "/audio/hnl-kokoro-zf001-v1/abfdece661a46865d93a6add-slow.mp3",
+      "bytes": 9524,
+      "sha256": "00de20e913bb4a77d2a9a58e282d26e9a3b090f93feacfd55a83cab388e03a20"
     },
     {
-      "path": "/audio/hnl-original-v1/333a151cde66b05aec32f271-slow.mp3",
-      "bytes": 16916,
-      "sha256": "e26e4612d650e1c4a538044db21e476d439247658df9587477069debb0455469"
+      "path": "/audio/hnl-kokoro-zf001-v1/76cdc720927745a2fcde741b.mp3",
+      "bytes": 7436,
+      "sha256": "f657ef25f705bddaaf624b15b5a05e3bd4563e4926af30790154f646db5c9aa2"
     },
     {
-      "path": "/audio/hnl-original-v1/4e669cd364eac8db96f3a020.mp3",
-      "bytes": 15020,
-      "sha256": "4e8902f1485cb5ba7e4df3fe74849d8f3e7afd2fb6d8d56e8b248fa9b3fd4944"
+      "path": "/audio/hnl-kokoro-zf001-v1/76cdc720927745a2fcde741b-slow.mp3",
+      "bytes": 7004,
+      "sha256": "1c7003b9df4b3c94a87a6a18b94c6ab41c808c475ed9fd270c00bdf34dca39da"
     },
     {
-      "path": "/audio/hnl-original-v1/4e669cd364eac8db96f3a020-slow.mp3",
-      "bytes": 18236,
-      "sha256": "c0a4ef78934813493bc5baf18ea5e702f3d684358274398a5fb4cc4a71488d14"
+      "path": "/audio/hnl-kokoro-zf001-v1/7767ec23370c0268744d5f79.mp3",
+      "bytes": 7652,
+      "sha256": "f836a3adc09e41a20a0e3f827e21e3f74a0876127a212c346edad705b8907157"
     },
     {
-      "path": "/audio/hnl-original-v1/3ac5f20caaff1798a87b8038.mp3",
-      "bytes": 14588,
-      "sha256": "3318cdd034626bd40ec8d268e86b5f45884006628d071a4fd919b09e77ddc56f"
+      "path": "/audio/hnl-kokoro-zf001-v1/7767ec23370c0268744d5f79-slow.mp3",
+      "bytes": 7100,
+      "sha256": "7a182bfbe0d5085702d539a11d714482c89af3f1c27bdc43689839572aed40d5"
     },
     {
-      "path": "/audio/hnl-original-v1/3ac5f20caaff1798a87b8038-slow.mp3",
-      "bytes": 17348,
-      "sha256": "9c4198e863ed2a070ba972265a61f740fc55320ce9947c1748501e4ae5769e8f"
+      "path": "/audio/hnl-kokoro-zf001-v1/999bc2f9d89ace1c92979665.mp3",
+      "bytes": 8684,
+      "sha256": "f207b4df533dfd866146ed6f45fc8d6601d123bd9fd46d246dfc9cbd8c769d16"
     },
     {
-      "path": "/audio/hnl-original-v1/b7f51540f2725dcc8d635223.mp3",
-      "bytes": 14204,
-      "sha256": "44425ab8524387dc71ed8840a5ac4c3424c2df3a8605af9a34eadfd350211320"
+      "path": "/audio/hnl-kokoro-zf001-v1/999bc2f9d89ace1c92979665-slow.mp3",
+      "bytes": 8900,
+      "sha256": "8995bca0f9af54151b04af55bba0c22563e8dc2729a645942406372c44264558"
     },
     {
-      "path": "/audio/hnl-original-v1/b7f51540f2725dcc8d635223-slow.mp3",
-      "bytes": 17444,
-      "sha256": "c9f4fd6cc856fd57375e55d1a3ca375e4db0925e93f045b45130a5a00ce3d622"
+      "path": "/audio/hnl-kokoro-zf001-v1/b54899f64e831b62767615bf.mp3",
+      "bytes": 8396,
+      "sha256": "2b759466994d8d9b84b5c6b38f6fdc90b83da0dc2e3ec35c26521a4400f43a0a"
     },
     {
-      "path": "/audio/hnl-original-v1/5fa1fae24d602b1525fd77ad.mp3",
-      "bytes": 17492,
-      "sha256": "efb54b9e0868d117a11aabc541973e0b29d4c387d2859f439b6148213469dc62"
+      "path": "/audio/hnl-kokoro-zf001-v1/b54899f64e831b62767615bf-slow.mp3",
+      "bytes": 8540,
+      "sha256": "251cd52dbda1d25466089b12dd3fe0c5dd228ab5162448db5112f36254e5e812"
     },
     {
-      "path": "/audio/hnl-original-v1/5fa1fae24d602b1525fd77ad-slow.mp3",
-      "bytes": 21572,
-      "sha256": "e4d9842cf59e037bad345cdad0914edff2ce5cdbe68b2669b0f3f0ee0a11865e"
-    },
-    {
-      "path": "/audio/hnl-original-v1/3d6b5b17e7beaabe50f600e5.mp3",
-      "bytes": 14300,
-      "sha256": "2aed24a527403a82f9a8d09da69d056fc4448d9cb79d157b9579f064f4ef3517"
-    },
-    {
-      "path": "/audio/hnl-original-v1/3d6b5b17e7beaabe50f600e5-slow.mp3",
-      "bytes": 16796,
-      "sha256": "f092d57f04a4c24686635e6313bffe83cbe6a67aecf780fd59269630f5208e4a"
-    },
-    {
-      "path": "/audio/hnl-original-v1/5e009f86b859874b92e7f43f.mp3",
-      "bytes": 14036,
-      "sha256": "8c0e7b9cede237911e45003b1edebdacdbcef3b176ba8fc4803f4c0a3e6f83fb"
-    },
-    {
-      "path": "/audio/hnl-original-v1/5e009f86b859874b92e7f43f-slow.mp3",
-      "bytes": 17204,
-      "sha256": "27eecebc885e47e1b07f50237d4482d3e66f398494fb18bf4d5ce68d6f8ec581"
-    },
-    {
-      "path": "/audio/hnl-original-v1/af38869af2a91b3222a81f4c.mp3",
-      "bytes": 14228,
-      "sha256": "46a67edf98c12ad9289008ac529c0e5f833ee37e6ede748873447bb2b4facbec"
-    },
-    {
-      "path": "/audio/hnl-original-v1/af38869af2a91b3222a81f4c-slow.mp3",
-      "bytes": 17276,
-      "sha256": "a8a3b39bd64fc900e896517317b474d315e66b28a290b0d3d9e015db5f9d396c"
-    },
-    {
-      "path": "/audio/hnl-original-v1/12a653c708f7c4a46c50a0b5.mp3",
-      "bytes": 12668,
-      "sha256": "7768397716481c15e2f59ca44aa30832e5a9f06496f1c11ba5c8bc96e97de40e"
-    },
-    {
-      "path": "/audio/hnl-original-v1/12a653c708f7c4a46c50a0b5-slow.mp3",
-      "bytes": 16340,
-      "sha256": "5fe233d86526a0142d05a36df96733ead532518b50d1ef682ebe086a2dd53995"
-    },
-    {
-      "path": "/audio/hnl-original-v1/7e91f95b08727b7a048d23f5.mp3",
-      "bytes": 13844,
-      "sha256": "9c532d1b07de70e07808c436e42b3bd16fea0e3fb5a73960c5ff952802af56d1"
-    },
-    {
-      "path": "/audio/hnl-original-v1/7e91f95b08727b7a048d23f5-slow.mp3",
-      "bytes": 16556,
-      "sha256": "1dee86991deef764b7bad0cc1cc9f19b2b58c6fe042cbc34df8de37544de0d0d"
-    },
-    {
-      "path": "/audio/hnl-original-v1/c571dc42177de15c787269d5.mp3",
-      "bytes": 14492,
-      "sha256": "165c2eb4edfef875c6d8e02cf4c5ac3c30dcdd3742f230fd867d12b013a4e7d4"
-    },
-    {
-      "path": "/audio/hnl-original-v1/c571dc42177de15c787269d5-slow.mp3",
-      "bytes": 17516,
-      "sha256": "9d26d30996fccb4cd25232d6516b5bf58bcb61c70471e8194991dd49ec4b0011"
-    },
-    {
-      "path": "/audio/hnl-original-v1/0eb80daf5dd4e253dc7c080e.mp3",
-      "bytes": 13820,
-      "sha256": "81611e6cdff93dff1e1ec779e776331af830cc65052096f76b4bebaa0f8021d5"
-    },
-    {
-      "path": "/audio/hnl-original-v1/0eb80daf5dd4e253dc7c080e-slow.mp3",
-      "bytes": 16940,
-      "sha256": "a240ff1e07da854849837f14d875bdde4c72a0921eee5de07343ecf060d5dcae"
-    },
-    {
-      "path": "/audio/hnl-original-v1/6653b491614ed3b4028b8d4c.mp3",
-      "bytes": 14780,
-      "sha256": "0a589c9202e364e1094dd5b8b0fa6409fa92a13d218181a1a80b65d217d36598"
-    },
-    {
-      "path": "/audio/hnl-original-v1/6653b491614ed3b4028b8d4c-slow.mp3",
-      "bytes": 18092,
-      "sha256": "50002fe27785b4ce08eeeb4739b7576a48b3cd89c619327e009db83d41e11173"
-    },
-    {
-      "path": "/audio/hnl-original-v1/1729386b7f5de45b292012d8.mp3",
-      "bytes": 14636,
-      "sha256": "829efe4f059177dbba5ed37283d918f61396625edee329ecca2a906d8da9b71b"
-    },
-    {
-      "path": "/audio/hnl-original-v1/1729386b7f5de45b292012d8-slow.mp3",
-      "bytes": 17612,
-      "sha256": "820ff2674005e7282a02d2f67ce467db706a216991b11dadca38b2b23680eb3f"
-    },
-    {
-      "path": "/audio/hnl-original-v1/5863a7eb9cf2bc51afa8f738.mp3",
+      "path": "/audio/hnl-kokoro-zf001-v1/883f60fd9c417676f1b9713f.mp3",
       "bytes": 16244,
-      "sha256": "0179e1be6a070239d0d60f3b1ed58636fdc102e29b7dc40e3fd7335a6b597f68"
+      "sha256": "1381d3b416706c60bcb9faf246a56acc29422b514d20fbd6c33262561e4296cb"
     },
     {
-      "path": "/audio/hnl-original-v1/5863a7eb9cf2bc51afa8f738-slow.mp3",
-      "bytes": 20012,
-      "sha256": "95dd704681d9cd36b355a28859af2ab6c4ea927099a359379ad58a79d564d68c"
+      "path": "/audio/hnl-kokoro-zf001-v1/883f60fd9c417676f1b9713f-slow.mp3",
+      "bytes": 16268,
+      "sha256": "68132a01e5e836c2bead89e43a06887830286275b15f6eaf74ff190e0317da73"
     },
     {
-      "path": "/audio/hnl-original-v1/9072d2f31c22b7e46beaab5b.mp3",
-      "bytes": 14756,
-      "sha256": "b0384a7ae9c0a7063b467b7de395e88248f01f95e101a2b0892ec0d97cb19fad"
+      "path": "/audio/hnl-kokoro-zf001-v1/65827e2584aa1953fe0104b1.mp3",
+      "bytes": 18428,
+      "sha256": "6e33adec5b66d6c144e41428737863618a2a8fc7da1dd612b2409ce4e1976b29"
     },
     {
-      "path": "/audio/hnl-original-v1/9072d2f31c22b7e46beaab5b-slow.mp3",
-      "bytes": 18164,
-      "sha256": "59a4d4f3a7c889a27782cc3d771de1790597a43aa1885f5f7b49b7d5f9d6986d"
+      "path": "/audio/hnl-kokoro-zf001-v1/65827e2584aa1953fe0104b1-slow.mp3",
+      "bytes": 19772,
+      "sha256": "c348f22c21cee7db6ea6386c99b77117d153a6c4a095d3e425efb7b2f3a9fce0"
     },
     {
-      "path": "/audio/hnl-original-v1/743477c4815ab4f551045cbd.mp3",
-      "bytes": 14492,
-      "sha256": "2fff5cc2e2080a29b35bfab7630a475b36340cddae81e6d17726488dcd49a143"
+      "path": "/audio/hnl-kokoro-zf001-v1/fd2aba7f98f76b5357fb609c.mp3",
+      "bytes": 18932,
+      "sha256": "cd23b46c0b52991d66a25b17a2e00a308acfdf1e29396d839fb47a5cedef3872"
     },
     {
-      "path": "/audio/hnl-original-v1/743477c4815ab4f551045cbd-slow.mp3",
-      "bytes": 17180,
-      "sha256": "a2200d5123b7235e89b39acd47db254c85eed1c16fc50963b164b46e9ff0ccc7"
+      "path": "/audio/hnl-kokoro-zf001-v1/fd2aba7f98f76b5357fb609c-slow.mp3",
+      "bytes": 20300,
+      "sha256": "1a75847832be42d71fb5eedc5f4bcc3aeadd6b53775ccead2a1b4724bcb52a8d"
     },
     {
-      "path": "/audio/hnl-original-v1/1c7613d245692debd5821013.mp3",
-      "bytes": 15788,
-      "sha256": "139451854e8f782233c2b1fd16b434f031b02d8d87905fd79ec477c3704f6d67"
+      "path": "/audio/hnl-kokoro-zf001-v1/5fbfd4f4d73c0bd67fae08b7.mp3",
+      "bytes": 9404,
+      "sha256": "901b3f6bf95fb33b1a531f2cd48cceabf8bbb1cb65eb19183a9c54cdf2dc0cbe"
     },
     {
-      "path": "/audio/hnl-original-v1/1c7613d245692debd5821013-slow.mp3",
-      "bytes": 19148,
-      "sha256": "935534246688a3b4755f7f27f665a57abfdd0531fb173302b4eb91f373827501"
+      "path": "/audio/hnl-kokoro-zf001-v1/5fbfd4f4d73c0bd67fae08b7-slow.mp3",
+      "bytes": 9284,
+      "sha256": "4e7311472ea7d0880a2b348fcad56ecc1e45e349754c293a445173009c1d98e0"
     },
     {
-      "path": "/audio/hnl-original-v1/54ea5f3ca9d3e57e787bab5a.mp3",
-      "bytes": 13340,
-      "sha256": "bf7a90fec98baf14c141175b87cf060b285793f409d27902ce96d628798d7ceb"
+      "path": "/audio/hnl-kokoro-zf001-v1/a1390eeae58ca81a93b1c3ad.mp3",
+      "bytes": 7076,
+      "sha256": "7c5bc5bef7268c660e7478d9622bd310e489c115215835a3ee71a0e2059d3277"
     },
     {
-      "path": "/audio/hnl-original-v1/54ea5f3ca9d3e57e787bab5a-slow.mp3",
-      "bytes": 16820,
-      "sha256": "d28d213c2466c484e104c6ea561a663d7e264aea935f833e1964939d5f7a502d"
+      "path": "/audio/hnl-kokoro-zf001-v1/a1390eeae58ca81a93b1c3ad-slow.mp3",
+      "bytes": 7916,
+      "sha256": "a501c2f5642a37f0f8428cc6401968da7b262e659db898a4b2bfb2fb23593f91"
     },
     {
-      "path": "/audio/hnl-original-v1/55484454d20e7a107f0d81a9.mp3",
-      "bytes": 14180,
-      "sha256": "6e66679e284d509301e2f871620e4fbaa75912ecbf9d2707fe5ff73cd71868fd"
+      "path": "/audio/hnl-kokoro-zf001-v1/f53d879fa3b3dbb8bfe89da6.mp3",
+      "bytes": 8684,
+      "sha256": "0c02b1347b5aa516aef33c9a0694bc3b4a36f654c8eb0b10dec7ed5ba306eb18"
     },
     {
-      "path": "/audio/hnl-original-v1/55484454d20e7a107f0d81a9-slow.mp3",
-      "bytes": 18284,
-      "sha256": "ccafe0ee65477f4b0b70d62f7877f854709d75289504d0114a84945846ac6fc9"
+      "path": "/audio/hnl-kokoro-zf001-v1/f53d879fa3b3dbb8bfe89da6-slow.mp3",
+      "bytes": 9140,
+      "sha256": "23c631dd2e92255ef8e16c22b35f4963c38807719d7f45da704e3815f480bfea"
     },
     {
-      "path": "/audio/hnl-original-v1/cda91e31adbbfc8f357403f5.mp3",
-      "bytes": 14348,
-      "sha256": "9aff7214fd8a55863c712268d1ffc7cde1e5aa6ecde0d268a96f4ab1a7b0aa59"
+      "path": "/audio/hnl-kokoro-zf001-v1/4f81c581a1f7692cdd44c4d3.mp3",
+      "bytes": 8420,
+      "sha256": "6ef50eab23c37d5921e05b2418a09c66ccd046819d443d9724f2286e04f9657a"
     },
     {
-      "path": "/audio/hnl-original-v1/cda91e31adbbfc8f357403f5-slow.mp3",
-      "bytes": 17084,
-      "sha256": "26cfc2f90e0e30b745ed525c4db6f264fdfb326d01957aaa93cc4b595f13aa12"
+      "path": "/audio/hnl-kokoro-zf001-v1/4f81c581a1f7692cdd44c4d3-slow.mp3",
+      "bytes": 8780,
+      "sha256": "11de293f1ad74b6dfe43ccd354957d9cc071509938a96b3a4faad068b5958c71"
     },
     {
-      "path": "/audio/hnl-original-v1/16d0b33ccc72df779d7e7e48.mp3",
-      "bytes": 16100,
-      "sha256": "cbef5b38bb816659f2d1cfd941ad3b0f1b21942e2191e2c80f70a0f545e11ccc"
+      "path": "/audio/hnl-kokoro-zf001-v1/92f07e6153bd6fbd5a868660.mp3",
+      "bytes": 8828,
+      "sha256": "3e7d661b4cf8274b717e79e1d0e16d1423e965225e5bf40891aa16530b8400f0"
     },
     {
-      "path": "/audio/hnl-original-v1/16d0b33ccc72df779d7e7e48-slow.mp3",
-      "bytes": 19148,
-      "sha256": "cce65ff863155f1a1538011e1eb834e1dc3c030ee0eb4ad88db57890d4393d64"
+      "path": "/audio/hnl-kokoro-zf001-v1/92f07e6153bd6fbd5a868660-slow.mp3",
+      "bytes": 9284,
+      "sha256": "33136adbdd7d5a7d058bc8c8fa61cd068ebea0aa8308f228f8c6753561274dcd"
     },
     {
-      "path": "/audio/hnl-original-v1/ca3e60868b03bd63027f8325.mp3",
-      "bytes": 17132,
-      "sha256": "f09026cd92e51de2de5ebe85c6b5edf5e5db10b78a0f74493d17e6aafc9df615"
+      "path": "/audio/hnl-kokoro-zf001-v1/a5db4a778c7db19e0cf8a48f.mp3",
+      "bytes": 8444,
+      "sha256": "5978d884d9f2e8f636f7eaae65dbcd768c89a14cd97caf6c9ad270096a9ed1f7"
     },
     {
-      "path": "/audio/hnl-original-v1/ca3e60868b03bd63027f8325-slow.mp3",
-      "bytes": 20828,
-      "sha256": "1d9981ee8ad5d2d67d97ba46bae5c07003194fe8460b79f6f4711c5b1baacea2"
+      "path": "/audio/hnl-kokoro-zf001-v1/a5db4a778c7db19e0cf8a48f-slow.mp3",
+      "bytes": 8300,
+      "sha256": "2e405eb36b43966a053e1d644b81892f36f6e66039a39e68f4f7ed3730d11021"
     },
     {
-      "path": "/audio/hnl-original-v1/11d719e432dd4cf4574b92bd.mp3",
-      "bytes": 21956,
-      "sha256": "7a1cf12ee8d26748a88f910e7bd2d16e9a7644121b2f96e1b38cc3a60cf6b5b8"
+      "path": "/audio/hnl-kokoro-zf001-v1/cf155fa8b5d7cf0e70d4c4e8.mp3",
+      "bytes": 8420,
+      "sha256": "642d46d9fbb895f677cbb2c395a5ca69a30fca66b72e4b6d131c95c498f72070"
     },
     {
-      "path": "/audio/hnl-original-v1/11d719e432dd4cf4574b92bd-slow.mp3",
-      "bytes": 25508,
-      "sha256": "ade3e82b040f5ff5cb07690c9e0056af411a5f5fd30269e8b468d0d216b7ae9e"
+      "path": "/audio/hnl-kokoro-zf001-v1/cf155fa8b5d7cf0e70d4c4e8-slow.mp3",
+      "bytes": 8996,
+      "sha256": "8f9a5dd20c13de550d70520fe4ad78751c61928a443bf4e45200f8f66842848d"
     },
     {
-      "path": "/audio/hnl-original-v1/d756a90a53518e35b2f4c69b.mp3",
-      "bytes": 18716,
-      "sha256": "6baf3fc9655655cc215a9f5a5a5ca45161746b986d6a7afc4dafea88f9c12f2d"
+      "path": "/audio/hnl-kokoro-zf001-v1/8a91a013b8a0178863a95fa3.mp3",
+      "bytes": 19844,
+      "sha256": "73823bd4bb01756d28de8da363744654819c2057dbb51a20e57f3e9d15f98a5e"
     },
     {
-      "path": "/audio/hnl-original-v1/d756a90a53518e35b2f4c69b-slow.mp3",
-      "bytes": 22724,
-      "sha256": "a6eb088c859d6050616b807006500b3765dd0453aabf6ef17e23e08b35880200"
+      "path": "/audio/hnl-kokoro-zf001-v1/8a91a013b8a0178863a95fa3-slow.mp3",
+      "bytes": 19364,
+      "sha256": "34855a7f21888af35acfb93bd55ade15bab9e3e061a6433cd26bf10981d6cde3"
     },
     {
-      "path": "/audio/hnl-original-v1/22023ccca158aff711250d5e.mp3",
-      "bytes": 17900,
-      "sha256": "4fcdd539c02a504b85520fee68fb543602321703b94888d64bf7831820e3ba0e"
+      "path": "/audio/hnl-kokoro-zf001-v1/862a8acd59c10c47adc8ec71.mp3",
+      "bytes": 18236,
+      "sha256": "13e5bc8b9e58b4c039b9d37672e7a240be23224310cb1cb4d27af16121527fca"
     },
     {
-      "path": "/audio/hnl-original-v1/22023ccca158aff711250d5e-slow.mp3",
-      "bytes": 21716,
-      "sha256": "fd61e9ec309dfa8eb4e1c9f7cd79986206c103db8e447fef4aa7c81ecace5607"
-    },
-    {
-      "path": "/audio/hnl-original-v1/79e3e052b4bf536b7561c17f.mp3",
-      "bytes": 18356,
-      "sha256": "6af017f678f98eaf1a16c5ef24339e3088954e4589dc6c6539a6c227c03b1dcb"
-    },
-    {
-      "path": "/audio/hnl-original-v1/79e3e052b4bf536b7561c17f-slow.mp3",
-      "bytes": 22532,
-      "sha256": "e6a4b2bc55f5506171e7a86a132e698b3b5a1ac49cc1a5fefcb1a38022e3a979"
-    },
-    {
-      "path": "/audio/hnl-original-v1/baea48628f6f03028fd914e7.mp3",
-      "bytes": 18476,
-      "sha256": "3249c7b1ddde877ab8c23d4fc5173f3f2d96a129eeae7b667cf0ee3e6ba3f2aa"
-    },
-    {
-      "path": "/audio/hnl-original-v1/baea48628f6f03028fd914e7-slow.mp3",
-      "bytes": 22220,
-      "sha256": "777c6c9d0ef79b6ca3649cc048817e5f338ce66e9f53ad1bf9324c32c14603ab"
-    },
-    {
-      "path": "/audio/hnl-original-v1/aa0118805a6f324c231ba99e.mp3",
-      "bytes": 17516,
-      "sha256": "23d398af3bd5662963d2cf96a884d332cb7e19c18b7861bf3f1100802f079693"
-    },
-    {
-      "path": "/audio/hnl-original-v1/aa0118805a6f324c231ba99e-slow.mp3",
-      "bytes": 20924,
-      "sha256": "10f85a06429ee7954b97b426c16d6843414abb585af3e91bfc1e872bdbf9b5e5"
-    },
-    {
-      "path": "/audio/hnl-original-v1/04f37af2835d9666107951ab.mp3",
-      "bytes": 21572,
-      "sha256": "28f1a300f7e4a05608326a914f13b64a07634e652b238cb3f762777c20e70432"
-    },
-    {
-      "path": "/audio/hnl-original-v1/04f37af2835d9666107951ab-slow.mp3",
-      "bytes": 26588,
-      "sha256": "2b4981709744f3084ec3a03416cb45a626f111d9abd803316996526c9efcafdb"
-    },
-    {
-      "path": "/audio/hnl-original-v1/cb3ae72f92669230d3ac1e4a.mp3",
-      "bytes": 20060,
-      "sha256": "23cc4660d38bd2a16f691f2e96fc6e747ee6d9981676f135e15bb93abf93eac9"
-    },
-    {
-      "path": "/audio/hnl-original-v1/cb3ae72f92669230d3ac1e4a-slow.mp3",
-      "bytes": 24716,
-      "sha256": "2d17077e81d179afbed8f4c6ebb2d6a93a874e7fd3a20007523137100857db81"
-    },
-    {
-      "path": "/audio/hnl-original-v1/6cd915639b7f6ffa1d1e7412.mp3",
-      "bytes": 21260,
-      "sha256": "8e879f5c8a8395e84887d399499b4a6ffbf298fda3c342540a9809241cf08ef5"
-    },
-    {
-      "path": "/audio/hnl-original-v1/6cd915639b7f6ffa1d1e7412-slow.mp3",
-      "bytes": 25100,
-      "sha256": "ee8fdd769c40e5b8363d89d5a714259220b8e6e347794d8a3bdbb4fa54f90593"
-    },
-    {
-      "path": "/audio/hnl-original-v1/3e0a059e507c7016a2711e80.mp3",
+      "path": "/audio/hnl-kokoro-zf001-v1/862a8acd59c10c47adc8ec71-slow.mp3",
       "bytes": 19508,
-      "sha256": "ce738b2dc51029ae015a2751b8f81061f4b4fad058c5fcc3397d4d2b82ec4f78"
+      "sha256": "76a552f429cb5443a9d641dace0e96c9069100488f9d745ac15d66b4691acf3d"
     },
     {
-      "path": "/audio/hnl-original-v1/3e0a059e507c7016a2711e80-slow.mp3",
-      "bytes": 24308,
-      "sha256": "fa71ef664f680db4580b6a2a3342369df0c47c464b4013eaf2a182a774066149"
+      "path": "/audio/hnl-kokoro-zf001-v1/b0989f908573c23211e75cbe.mp3",
+      "bytes": 15548,
+      "sha256": "2d6d64be5cd26c46bf697da89dd603809f070e4741bf22a6865ed5648d835c67"
     },
     {
-      "path": "/audio/hnl-original-v1/3662dee421653bffa602e85d.mp3",
+      "path": "/audio/hnl-kokoro-zf001-v1/b0989f908573c23211e75cbe-slow.mp3",
+      "bytes": 15668,
+      "sha256": "f935b31ce40e602c2ae7b86c413a2ac39cda74ac26d3714a26e41c71c2e11072"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/18d897d0a8ed3d117312492d.mp3",
+      "bytes": 22532,
+      "sha256": "efee5c3980a9d94490121cd012433ea19e3694d0c7b56dade944ec272093b454"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/18d897d0a8ed3d117312492d-slow.mp3",
+      "bytes": 23684,
+      "sha256": "08d842147e1ac23e12f73daa7b1156b1f422c8dd5a8edf47501ce016da4ecf08"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/2f043d65f72e04728d248573.mp3",
+      "bytes": 9476,
+      "sha256": "6aabd554da1e82399bcd60ff778a22ab6302795f94dd6037227af7ab2044591d"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/2f043d65f72e04728d248573-slow.mp3",
+      "bytes": 9572,
+      "sha256": "f775a46355ab1343542f7bd07a8bf92df475f5898134e765b4df1e8efde24c17"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/6afe67cb7bbc1cb98ee477c5.mp3",
+      "bytes": 7100,
+      "sha256": "2a6c6a285e42463932fbb1a3ecab5a3b6215c8110f53b0add1c5f962d12d30c8"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/6afe67cb7bbc1cb98ee477c5-slow.mp3",
+      "bytes": 6716,
+      "sha256": "2257fe890c3aad74cba65a402f1aa462d0b2d2fd2c3874830825b8630363c4ea"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/219e4392454e8fcf41baf7b5.mp3",
+      "bytes": 7220,
+      "sha256": "70ff635f1b6a79269ac3a27507e3e59873d5b861faf6740fd1a7f3c7f19a6dac"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/219e4392454e8fcf41baf7b5-slow.mp3",
+      "bytes": 7076,
+      "sha256": "aeee6a9c2369de6af8f0566ff7eb325f6c3801b4837b70c7a737cf08b681685b"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/b6d1a0978e84375bced6287a.mp3",
+      "bytes": 6668,
+      "sha256": "9243f2ed857f8e5c86f9cea0e1779f3a93f10cab01d35dcb3da56eb14c7539ee"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/b6d1a0978e84375bced6287a-slow.mp3",
+      "bytes": 6668,
+      "sha256": "b59b7c11eb3650e6663dc54c71c33fbb816228d9f8d75d4ef107c1e99a046aa0"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/e19ba5247f7e0a1e7348a322.mp3",
+      "bytes": 9212,
+      "sha256": "e917e4fe2ef7e351019dfe6a184e7c25debdf59315541258832e62f7c21ccbf6"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/e19ba5247f7e0a1e7348a322-slow.mp3",
+      "bytes": 9308,
+      "sha256": "0a1ef333598b63647bf14e2dc5bd096fdb5bb439e481d072e72196ba813ab87a"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/dfa29f6308d9d75561dd0583.mp3",
+      "bytes": 9548,
+      "sha256": "6677763cd58e58f2c66fe9e6d593a00054a898d0bddc26f25a16b6a5514c47e9"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/dfa29f6308d9d75561dd0583-slow.mp3",
+      "bytes": 9068,
+      "sha256": "04647180c5c0c4e68e3a1b50b7f20d7f555b7aca84ecf6f255cd9bcffc789b0f"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/710b602badff50dd184a7835.mp3",
+      "bytes": 17132,
+      "sha256": "3f95255b438efbd6a64aa726af00c8d4f652089a0c07216a0ac9544df17d8e5a"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/710b602badff50dd184a7835-slow.mp3",
+      "bytes": 17516,
+      "sha256": "d674fdb9cc0e63d6473189d6a1ea620ab5b2973aeb52c266572c68e4777dec11"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/7841955b36f7bfe95bff4ed6.mp3",
+      "bytes": 18956,
+      "sha256": "756604dcad6f7b47d29cda876b15e671c275b1a352e9365caa35e315f9ee8140"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/7841955b36f7bfe95bff4ed6-slow.mp3",
+      "bytes": 18044,
+      "sha256": "ab67d6f734182bf854c7879d2bbe019706727acb9bc8305a0c62a56950e960dc"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/24a927b804893dcab252af7b.mp3",
       "bytes": 17492,
-      "sha256": "03d1b4d93c3a99d377bbd5216fc50ae6e96141b8916a8534e4dee7e3e4508150"
+      "sha256": "f5debbb2bdb4649bd44c39fc57cc77479aa68719d1ce11aee0037b893447ccfe"
     },
     {
-      "path": "/audio/hnl-original-v1/3662dee421653bffa602e85d-slow.mp3",
-      "bytes": 21812,
-      "sha256": "587ea8cdae9ed8d5396b39db1eb3cbabd46aad06e2a68470c182a136b4a91099"
+      "path": "/audio/hnl-kokoro-zf001-v1/24a927b804893dcab252af7b-slow.mp3",
+      "bytes": 17228,
+      "sha256": "b562d6e3be8e0230bd9371b5875c923e45bff4e874051101c2043401094013d0"
     },
     {
-      "path": "/audio/hnl-original-v1/a7c219a51a1de5cd73f3f1f0.mp3",
-      "bytes": 19196,
-      "sha256": "0fc6ff6832ca76fb0d8db62f90e0e73c7a0911fe62a6e2eaeef0529b34e4f90f"
+      "path": "/audio/hnl-kokoro-zf001-v1/bc6b650be76efba502272714.mp3",
+      "bytes": 17468,
+      "sha256": "7f886ea73608f78660c3ec7bd2e73fdd45619e7828a8524ae8a061265fcea748"
     },
     {
-      "path": "/audio/hnl-original-v1/a7c219a51a1de5cd73f3f1f0-slow.mp3",
-      "bytes": 23612,
-      "sha256": "ed18e9d2f39761070f47eb8f8b680c48a8ffc83c412083d4d483ba7ac86c215f"
+      "path": "/audio/hnl-kokoro-zf001-v1/bc6b650be76efba502272714-slow.mp3",
+      "bytes": 18428,
+      "sha256": "91539f95925c980d2be118a2b3539b5cfeb1fdd3aa222623764e168a1383992a"
     },
     {
-      "path": "/audio/hnl-original-v1/2a58f3512f2709c64997e9f8.mp3",
-      "bytes": 19940,
-      "sha256": "660b2037cbed98aaed3cb23eae1c9be58d568f1d4a0e3a599b9ded143226f7a5"
+      "path": "/audio/hnl-kokoro-zf001-v1/5de71f9b32474173ca04b6fa.mp3",
+      "bytes": 7292,
+      "sha256": "9e74a301e1d0755a47308c92904a42732114a20377f0bb4ce53fd6af7548838d"
     },
     {
-      "path": "/audio/hnl-original-v1/2a58f3512f2709c64997e9f8-slow.mp3",
-      "bytes": 24836,
-      "sha256": "5342fc85623d08a8d6c127debe52070a2e633ee16befd3d9757c7284ae9ae153"
+      "path": "/audio/hnl-kokoro-zf001-v1/5de71f9b32474173ca04b6fa-slow.mp3",
+      "bytes": 7700,
+      "sha256": "600a1318e14dc8ce6539544bea33b03aea0535866bc6a13505b0bff3babb5c14"
     },
     {
-      "path": "/audio/hnl-original-v1/c789f85553ba0e195a318a04.mp3",
-      "bytes": 21908,
-      "sha256": "59cf9a414f4109da30f4e0089755046532e2eadfacde30048a06f8e3905f0c37"
+      "path": "/audio/hnl-kokoro-zf001-v1/1d120c5e9d015ae401ee2c38.mp3",
+      "bytes": 7796,
+      "sha256": "4520c3f4c0b2fce8733d4aadcb8e02ddea2d4d8a305c27e9f9c774e2e277e417"
     },
     {
-      "path": "/audio/hnl-original-v1/c789f85553ba0e195a318a04-slow.mp3",
-      "bytes": 27164,
-      "sha256": "2ba63cee92abc3f5163c2ba562d45d454b93a4d1604f92c868a276f5d76f0a5b"
+      "path": "/audio/hnl-kokoro-zf001-v1/1d120c5e9d015ae401ee2c38-slow.mp3",
+      "bytes": 7604,
+      "sha256": "0acf11e53eb9a082c676b2567e61072753597362778a71616bea3739c94cd0cf"
     },
     {
-      "path": "/audio/hnl-original-v1/df35035d64ee634617552565.mp3",
-      "bytes": 19652,
-      "sha256": "0c92251a154cf75b03ff59d9119da5158ab06ef1a2bb28b4a7b0c3cfa531f341"
+      "path": "/audio/hnl-kokoro-zf001-v1/5d5390ebbbd6e447022c8020.mp3",
+      "bytes": 7940,
+      "sha256": "3e8fa7aafa85066d176855793bb17be848e6f6a3d1468aeec9d02766eec7056f"
     },
     {
-      "path": "/audio/hnl-original-v1/df35035d64ee634617552565-slow.mp3",
-      "bytes": 23588,
-      "sha256": "b2389c42b03802b96b6611e93019e79843022abbd685b03ba14424b2695508e5"
+      "path": "/audio/hnl-kokoro-zf001-v1/5d5390ebbbd6e447022c8020-slow.mp3",
+      "bytes": 7532,
+      "sha256": "74601cb6009aaf60dbb93c75e774a8a6301f9cb9669cddd89f69303a2b3e9cc4"
     },
     {
-      "path": "/audio/hnl-original-v1/e7a99cfa0a2f51cb50581c71.mp3",
-      "bytes": 22148,
-      "sha256": "240ff4d58969c3bd22266078eaec916c0a7d4a10c9aedb442734b6abd022c62d"
+      "path": "/audio/hnl-kokoro-zf001-v1/3041359694ba80feaf51c5a5.mp3",
+      "bytes": 8756,
+      "sha256": "d62f8f593c2117190ea76daba13ae5d39e490dceded0ef085f687cf060d262ac"
     },
     {
-      "path": "/audio/hnl-original-v1/e7a99cfa0a2f51cb50581c71-slow.mp3",
-      "bytes": 27404,
-      "sha256": "5d714a11a9232763bfb71f18acec48a296fe8666dcae851dc174909ba5799c78"
+      "path": "/audio/hnl-kokoro-zf001-v1/3041359694ba80feaf51c5a5-slow.mp3",
+      "bytes": 9260,
+      "sha256": "415f3a05f7a5ee4e4c26831795639700c9c97f5ebbc7cdc59480361d1594f00e"
     },
     {
-      "path": "/audio/hnl-original-v1/d71da784205daf11c5722bb2.mp3",
-      "bytes": 21068,
-      "sha256": "546ff236c0a592c0475e1ad742621ecd816522d1a4f4a2102f6c3139b8ea767d"
+      "path": "/audio/hnl-kokoro-zf001-v1/942aad89851cfa5ab2f056ba.mp3",
+      "bytes": 6644,
+      "sha256": "7febf870d3fae7f2f3043f6d978cfd9b191d35e54b18c6a6bb4d4a13885e092b"
     },
     {
-      "path": "/audio/hnl-original-v1/d71da784205daf11c5722bb2-slow.mp3",
-      "bytes": 25316,
-      "sha256": "b083ebd0f5d6295168ea90b86e10a31f85437569a6e724e90398277727fbd6b9"
+      "path": "/audio/hnl-kokoro-zf001-v1/942aad89851cfa5ab2f056ba-slow.mp3",
+      "bytes": 6500,
+      "sha256": "f65ddadee392e7b1249bb65e759822446e526b0f6cf755571c4de0412cc2a8c4"
     },
     {
-      "path": "/audio/hnl-original-v1/e8d765be227c413fe124b855.mp3",
-      "bytes": 24284,
-      "sha256": "ebf30e0f74ad6f3824764994215ef795140257c45355c733d1864ac82fa9062a"
+      "path": "/audio/hnl-kokoro-zf001-v1/819b5e5fcf1cecf7343b4d03.mp3",
+      "bytes": 7076,
+      "sha256": "e8dfbe81f134366b895587d014764c7bb85919a75c692ee7994a9ebf942bf5c5"
     },
     {
-      "path": "/audio/hnl-original-v1/e8d765be227c413fe124b855-slow.mp3",
-      "bytes": 28052,
-      "sha256": "eb3edce08e7ca168010158f93a020a0324bafb86e7ab431a2195ab2989f4871a"
+      "path": "/audio/hnl-kokoro-zf001-v1/819b5e5fcf1cecf7343b4d03-slow.mp3",
+      "bytes": 7196,
+      "sha256": "ea83e9dcfc37f7fc155417908b2fb089438e64a2cd3791dab5bb21197ab999f8"
     },
     {
-      "path": "/audio/hnl-original-v1/cc5d6e4e78432e666dde5ec9.mp3",
-      "bytes": 22820,
-      "sha256": "ac993e266971124c585a102c1e9233b7d87d70be77cdc7b41c62afd5dd0ab23d"
+      "path": "/audio/hnl-kokoro-zf001-v1/83b0f1421ac6130e60b242c2.mp3",
+      "bytes": 16100,
+      "sha256": "55da7b3c47047aa6ee119626780eb8b8cb29a1bbef2af8a790d80946b5c81fe0"
     },
     {
-      "path": "/audio/hnl-original-v1/cc5d6e4e78432e666dde5ec9-slow.mp3",
-      "bytes": 27428,
-      "sha256": "33462a5391b518621276c62b349de169e0290566985ca9c0624f41440f982134"
+      "path": "/audio/hnl-kokoro-zf001-v1/83b0f1421ac6130e60b242c2-slow.mp3",
+      "bytes": 16244,
+      "sha256": "0eff006ea3fcaadc5db1113483340e8b09a501fd61754f318c1b1ebd31638caf"
     },
     {
-      "path": "/audio/hnl-original-v1/ff1d0736fcabf34597097e5b.mp3",
-      "bytes": 20540,
-      "sha256": "442a3ba50e4dba90062bc97593ef4cc28db0554dd9a3cf6997d709dfcd645a14"
+      "path": "/audio/hnl-kokoro-zf001-v1/f455d9af85dc451b67deaf65.mp3",
+      "bytes": 15836,
+      "sha256": "a1cdb264ccea210ee89fe95b2e1015e5775fbd67f01929a7ac1db00d383fccee"
     },
     {
-      "path": "/audio/hnl-original-v1/ff1d0736fcabf34597097e5b-slow.mp3",
-      "bytes": 24596,
-      "sha256": "ccec0aad83ebdc60ef3fba5b1eb919c19472d6f1d4eec31ea7321510f3da2073"
+      "path": "/audio/hnl-kokoro-zf001-v1/f455d9af85dc451b67deaf65-slow.mp3",
+      "bytes": 15908,
+      "sha256": "ccbe78e04d070dfa923993823e76a2da4289536272a0b69b578e60510cad3fd0"
     },
     {
-      "path": "/audio/hnl-original-v1/f8945036278e9bc234586ca4.mp3",
-      "bytes": 23060,
-      "sha256": "69c3c0b168f20474ca89be29b757a903c220590f49bc84df588c7802ce644d3f"
+      "path": "/audio/hnl-kokoro-zf001-v1/528d439acb318f88cd533e82.mp3",
+      "bytes": 22028,
+      "sha256": "85100efa7939f3fcc180fa02af52c83083153a8f779f7d11c141948e713bb91c"
     },
     {
-      "path": "/audio/hnl-original-v1/f8945036278e9bc234586ca4-slow.mp3",
-      "bytes": 28172,
-      "sha256": "aeb47544124fc9cf84ba874bb8a93cdfec6c643f4b035ed9b66408c2733823fc"
+      "path": "/audio/hnl-kokoro-zf001-v1/528d439acb318f88cd533e82-slow.mp3",
+      "bytes": 22964,
+      "sha256": "eb4228e0db4eefc26da9389e04c0ffccfb3c6615c5362aef2019576c083a87db"
     },
     {
-      "path": "/audio/hnl-original-v1/80102d8aca7d66f55bbfcb2d.mp3",
-      "bytes": 22124,
-      "sha256": "91332def67f7fbd59d71ba74c79ac142513c2c6fa426763ca518d9dc6f3bf526"
+      "path": "/audio/hnl-kokoro-zf001-v1/cd3a88349f733560958bfd21.mp3",
+      "bytes": 7916,
+      "sha256": "4874b3117ef3d4feffe5c9bec2eb318de3e618dd69b4fac2d197c4b2898f8296"
     },
     {
-      "path": "/audio/hnl-original-v1/80102d8aca7d66f55bbfcb2d-slow.mp3",
-      "bytes": 26060,
-      "sha256": "1aa665fa2eecf25bf889ed0b0069a344a01889d8ed9e3a7e36b0a632c702a350"
+      "path": "/audio/hnl-kokoro-zf001-v1/cd3a88349f733560958bfd21-slow.mp3",
+      "bytes": 8852,
+      "sha256": "ecb48cdb43be9cef18f65669574ea9755e691c1c3748f413d7583a8d7f5d594f"
     },
     {
-      "path": "/audio/hnl-original-v1/72877f2ede2770b1191cbe1e.mp3",
-      "bytes": 19460,
-      "sha256": "ac4793614b977d366b2713c71045053515540f5bccc2452e00cca02f9574ccdd"
+      "path": "/audio/hnl-kokoro-zf001-v1/11bf527e8327c118c9cc6596.mp3",
+      "bytes": 9356,
+      "sha256": "de174e58ac5068adde2713ed2c7e2022fe67ae27ffaac73c356be19895c73e74"
     },
     {
-      "path": "/audio/hnl-original-v1/72877f2ede2770b1191cbe1e-slow.mp3",
-      "bytes": 24020,
-      "sha256": "e0d1f74c07de4db37b6605784b08ccd6c6fe7cf7b00374b1ef1b0267daeb717f"
+      "path": "/audio/hnl-kokoro-zf001-v1/11bf527e8327c118c9cc6596-slow.mp3",
+      "bytes": 9764,
+      "sha256": "cc75be49ecbc6f9bcbd12bd4f77d5ea56c97516969ae1c747c93e3872ea6f4fb"
     },
     {
-      "path": "/audio/hnl-original-v1/bda08863c3f16b84e0e9a05f.mp3",
-      "bytes": 23924,
-      "sha256": "18b802d08e1458b5bf23195808cb163633af94a8cea63f796242aaca247fe6b1"
+      "path": "/audio/hnl-kokoro-zf001-v1/d6e771e387641e3e0ec6a2f9.mp3",
+      "bytes": 8684,
+      "sha256": "efdfd2bc01309f7f8a049679ea990b2fb733935185a197b814cc869ccc122e83"
     },
     {
-      "path": "/audio/hnl-original-v1/bda08863c3f16b84e0e9a05f-slow.mp3",
-      "bytes": 29276,
-      "sha256": "aa70c4355562eb5960ffb3c4c78648595556f617194b8e7fb2f15498a042812c"
+      "path": "/audio/hnl-kokoro-zf001-v1/d6e771e387641e3e0ec6a2f9-slow.mp3",
+      "bytes": 8684,
+      "sha256": "2ff1babda8aef8c4f3ac217af8b8807d65aff170969b596572544ce74653b324"
     },
     {
-      "path": "/audio/hnl-original-v1/e44303c4c1ad170b85cbf170.mp3",
+      "path": "/audio/hnl-kokoro-zf001-v1/0ec7461e7689044b3d20d37c.mp3",
+      "bytes": 6860,
+      "sha256": "2f4cd6b97d77b07ece48f342f4f8a13d235a977e6aaca8ddcba5085db70039f0"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/0ec7461e7689044b3d20d37c-slow.mp3",
+      "bytes": 7004,
+      "sha256": "d02cdbbe8dd33d9287f47376d76da2398dc54d391deb98b06fc3ea8758dd228f"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/4f74982f1b0f5efd5f8173b3.mp3",
+      "bytes": 9596,
+      "sha256": "914a750fdaf38ae3277954b0146e71c0e67485e3782224a6cde88a17f3e91a46"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/4f74982f1b0f5efd5f8173b3-slow.mp3",
+      "bytes": 10316,
+      "sha256": "2b27671360bc644914c901712217fdf844c947e5b8488452b807340e67f2b0f7"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/294db1d0813e55bce5bce407.mp3",
+      "bytes": 8900,
+      "sha256": "f580a02d608434dd4a87df9629a794fa402e716fc1fb560c75999e4076b4660b"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/294db1d0813e55bce5bce407-slow.mp3",
+      "bytes": 9068,
+      "sha256": "7e017d68b26dbdce831601c23f8b2c76ba20fdd4cff1da63d29ce9d551000623"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/657c72fab103f91ec931d169.mp3",
+      "bytes": 18836,
+      "sha256": "052580b34d1a1508e0ea84615a9f08f31e78dafcd24f93b4ec55404ca4bca63b"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/657c72fab103f91ec931d169-slow.mp3",
+      "bytes": 20852,
+      "sha256": "2de82b2eedc39e439db1bce42f609ffb48a706ffaf6fb51cc7efa90c8e12a774"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/eebb22aa7b74ca4f8b622a25.mp3",
+      "bytes": 21260,
+      "sha256": "cd4cde0563fb6e39eaaab7e199223b2357a214a3810e5b570f0bf41bb714039e"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/eebb22aa7b74ca4f8b622a25-slow.mp3",
+      "bytes": 22940,
+      "sha256": "feccd182739edfd1bb2c1c43d6a87df567a28b8d65a09302756f8345b7c72c5a"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/95385beccfed3efe89f0ecca.mp3",
+      "bytes": 18716,
+      "sha256": "e153197872c728353e610899766c98ea6cc2291a5f4ccfb0437367196c4c8bfa"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/95385beccfed3efe89f0ecca-slow.mp3",
+      "bytes": 20300,
+      "sha256": "9106f3686211308f6f709456dbb1202d186d4773e0a7fbfc1bfb0d6e9c51af1f"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/d38e263a16284671dfc2ff8d.mp3",
+      "bytes": 23108,
+      "sha256": "2568b53816168ec4523b78bcb12a8a27e3b51be9730cf1af1547bf6300d2ad20"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/d38e263a16284671dfc2ff8d-slow.mp3",
+      "bytes": 25796,
+      "sha256": "93f0581124de9314ebbdd668ce6e35d7f0ae334da6ab3b0732ce6f70dc5561e2"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/6a374b69791e701d739c7d5e.mp3",
+      "bytes": 9404,
+      "sha256": "432af8a00659712f899dc5bd48dedc6e81e3c4fd3bb7b0bbc9bff3a0015dc364"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/6a374b69791e701d739c7d5e-slow.mp3",
+      "bytes": 9956,
+      "sha256": "42c3735e7051bd0e197d56465ee85ee72d26abe2f085b0035d8b87b49f448533"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/34a4b414594f7d8df3b44e4e.mp3",
+      "bytes": 8876,
+      "sha256": "7b408385aa1b92ece731b3f7aac83e017fc0d6d8dab6da1ce729e9bdf9694862"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/34a4b414594f7d8df3b44e4e-slow.mp3",
+      "bytes": 9404,
+      "sha256": "be3f1255263b0ff3096da269c425b1317292ba8698a62a5d21fbafa1af1a4af5"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/2ade394b72628bd72379b5ca.mp3",
+      "bytes": 7412,
+      "sha256": "09d3c205a0d441ba18ba35d1a43e64c3e541741d9bb992c6afab94eb2d06c108"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/2ade394b72628bd72379b5ca-slow.mp3",
+      "bytes": 7484,
+      "sha256": "cf459c8379b5df519ebc41a242571aa53678be3e031d1d666c65d68e131f1283"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/05c4c3631f9a1f8348352731.mp3",
+      "bytes": 7436,
+      "sha256": "44667161d4649a6270e33b017f7e9bc43ed6fdc4eb623d37d2ab806f74cc11c0"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/05c4c3631f9a1f8348352731-slow.mp3",
+      "bytes": 6812,
+      "sha256": "82a8ea10341b2ed6554fd23ca59887b4a64dd548f5552d0c90b666c544d32013"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/a37f7fd30291d4cd821336d0.mp3",
+      "bytes": 6980,
+      "sha256": "4b52528a204a8b4727709bd8415fbd896f3780cf5c97ae82ada1e279f7c9881f"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/a37f7fd30291d4cd821336d0-slow.mp3",
+      "bytes": 6860,
+      "sha256": "eb0b1714c5ad6b1904901aca366ebf89153fb35620867852c20e5cacd6e17f12"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/79b69c9eb1123991fef3d403.mp3",
+      "bytes": 7436,
+      "sha256": "75cde4371c9679b33a0c8fba70606c0729d12e328c868343f0588857b4c8bc85"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/79b69c9eb1123991fef3d403-slow.mp3",
+      "bytes": 7388,
+      "sha256": "0e5ee84ae68311575e82b3db6abce4d40e0f4b096790211214027e01022663a1"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/a65cfe36041d490683c5c941.mp3",
+      "bytes": 20012,
+      "sha256": "e1c6d279c61d8fc059f7df2bc7cfb46edd90e2dc607214db0cc7fd5cdaeed50a"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/a65cfe36041d490683c5c941-slow.mp3",
       "bytes": 21140,
-      "sha256": "e425d1407d3eca64400bd583099a17817180eed8e8daab69ba97758a92385f84"
+      "sha256": "4dfc382835bde9bdb50bbc0148023aa56ff5cc77970f1d75cae081c4918d1da0"
     },
     {
-      "path": "/audio/hnl-original-v1/e44303c4c1ad170b85cbf170-slow.mp3",
-      "bytes": 24908,
-      "sha256": "f7e03553808ea305a7815e472cae3f8961cddca90cdefed39a606fa5becf2a02"
+      "path": "/audio/hnl-kokoro-zf001-v1/22e553331ef314487557e835.mp3",
+      "bytes": 20396,
+      "sha256": "a08f36c1fc461536ef618ee4a55bf2b6c65c070ff74f8ee3d3b4c4268a6dbb81"
     },
     {
-      "path": "/audio/hnl-original-v1/55249a91e1dc33dbefe424de.mp3",
-      "bytes": 25028,
-      "sha256": "13fae0a1bf5be6c49a5688248f9dcaf8a61b7c5cd08483e9c27c340e24e4f227"
+      "path": "/audio/hnl-kokoro-zf001-v1/22e553331ef314487557e835-slow.mp3",
+      "bytes": 20516,
+      "sha256": "7e9d5c34a05b0094fdc5505e1500ff52a6d7387eab1a6009b0b3dc2ba602b553"
     },
     {
-      "path": "/audio/hnl-original-v1/55249a91e1dc33dbefe424de-slow.mp3",
-      "bytes": 29492,
-      "sha256": "d14e9a41a6879d780a07797122ac5afd058842f03d5baf1734eee249f6934ac8"
+      "path": "/audio/hnl-kokoro-zf001-v1/c947558c9d4422b23fa9da07.mp3",
+      "bytes": 21212,
+      "sha256": "feb3b9a66e045bfd0bf8a4cd65d84d70227f6371a99b7e7c0a76e5b633a34e5f"
     },
     {
-      "path": "/audio/hnl-original-v1/b0d1ea7a14169aaec1754b28.mp3",
-      "bytes": 21404,
-      "sha256": "a64e6dca09478858c4f1ca35bf00886e3eb5cf1e6505e8a5ebe223e4f3b46d47"
+      "path": "/audio/hnl-kokoro-zf001-v1/c947558c9d4422b23fa9da07-slow.mp3",
+      "bytes": 23180,
+      "sha256": "8fbef7635fcc5411439bbd88d6a039864ed26cb4302f93cc137b9baf0c15d894"
     },
     {
-      "path": "/audio/hnl-original-v1/b0d1ea7a14169aaec1754b28-slow.mp3",
-      "bytes": 25964,
-      "sha256": "16fa364aafd2df2afdb3ebcf1ba4f8035d0af72a0cf594a79036824de14b8476"
+      "path": "/audio/hnl-kokoro-zf001-v1/4e959da4670d3b1d8a79d715.mp3",
+      "bytes": 8828,
+      "sha256": "0b09f34c7e181eb3415de3beab38e5033284c82c218bb4aaabcfdc4c30009a58"
     },
     {
-      "path": "/audio/hnl-original-v1/a2f78e0003bcc1d25625eefd.mp3",
-      "bytes": 24428,
-      "sha256": "a83cbd24e5f2c6de5efbef423d6a3e86bb9f60bea8dc369a6f9fe0c280ee044f"
+      "path": "/audio/hnl-kokoro-zf001-v1/4e959da4670d3b1d8a79d715-slow.mp3",
+      "bytes": 9452,
+      "sha256": "e5c72b51121952a6e735ee81192b68dd3265ff107c2d3a70828f599014fb25bf"
     },
     {
-      "path": "/audio/hnl-original-v1/a2f78e0003bcc1d25625eefd-slow.mp3",
-      "bytes": 29012,
-      "sha256": "03b6f3186898297634a7550b0bc4bb4861cc80a298687cd9f3a76529581ccade"
+      "path": "/audio/hnl-kokoro-zf001-v1/ef1a81a3482dec4f24c52f0b.mp3",
+      "bytes": 8828,
+      "sha256": "98c8d9687c2e414d58705acfeac07fc1a3930a1cfd89d61e037634f695b41e6d"
     },
     {
-      "path": "/audio/hnl-original-v1/feda4ac2229133613f019d8d.mp3",
-      "bytes": 28028,
-      "sha256": "3ff3e7101ad327511c6863474233ec7d498cecc7be3c45e85dcdbb2e16d2dc04"
+      "path": "/audio/hnl-kokoro-zf001-v1/ef1a81a3482dec4f24c52f0b-slow.mp3",
+      "bytes": 9092,
+      "sha256": "77f691b116676c356c1b039fef224cae5e79eab4ea83750d1026007f5d2ac297"
     },
     {
-      "path": "/audio/hnl-original-v1/feda4ac2229133613f019d8d-slow.mp3",
-      "bytes": 33764,
-      "sha256": "e06f186f642412d611b93a922047d26740cb8debf913b5aca43d5e32bc6def8e"
+      "path": "/audio/hnl-kokoro-zf001-v1/ee336a3e22c387b0f46e4299.mp3",
+      "bytes": 9020,
+      "sha256": "575e5b6f587dae3a715f5f33ea85f76378cba3c989903fd56ca896042efd840e"
     },
     {
-      "path": "/audio/hnl-original-v1/7183072f9fe99c6e44e6d165.mp3",
-      "bytes": 25844,
-      "sha256": "c16a1fca11e6bda30d7134a9cef3ef476db03f885551bc2f833f0625c1d3dddb"
+      "path": "/audio/hnl-kokoro-zf001-v1/ee336a3e22c387b0f46e4299-slow.mp3",
+      "bytes": 9020,
+      "sha256": "59418c127b171906a4c3365ddc3b45439f58c3c8a6af395ca04d2ddd9df9b329"
     },
     {
-      "path": "/audio/hnl-original-v1/7183072f9fe99c6e44e6d165-slow.mp3",
-      "bytes": 32924,
-      "sha256": "c1346539679f0bbaf1eef77a54b2cb5973b5936a93148984e725b7f4087b6b93"
+      "path": "/audio/hnl-kokoro-zf001-v1/32a9f8d4598e95fe2f7be61e.mp3",
+      "bytes": 8756,
+      "sha256": "9814b3bf2551901eab8276641d772f29d9a8d31a20649b7bd770e3a49b9e8b08"
     },
     {
-      "path": "/audio/hnl-original-v1/918136c433d569b79edaa5fe.mp3",
-      "bytes": 28148,
-      "sha256": "d44ca69ba1737c0bea8032da19d7654074c331f979136790a6e6efe66f6181fe"
+      "path": "/audio/hnl-kokoro-zf001-v1/32a9f8d4598e95fe2f7be61e-slow.mp3",
+      "bytes": 8636,
+      "sha256": "8addfee1c866a56dd3dfe33ce8599455ed09a7d0482aba83d5127e8fcfd9ca75"
     },
     {
-      "path": "/audio/hnl-original-v1/918136c433d569b79edaa5fe-slow.mp3",
-      "bytes": 34532,
-      "sha256": "6b451c2a3014309e9225398bd75f5a03880ad3ccbd272223a63a65554c266bff"
+      "path": "/audio/hnl-kokoro-zf001-v1/14e86a420500e0ca09bfc281.mp3",
+      "bytes": 10436,
+      "sha256": "56b20c74da4afceb70bee6ef7370cf0a42b8db5337b9697d830cb6ef9b189ecb"
     },
     {
-      "path": "/audio/hnl-original-v1/c1c429517db330de52af82a8.mp3",
-      "bytes": 31076,
-      "sha256": "4598a0821776f68f456b628d68be756ab684ee135076046577b92d6c57168500"
+      "path": "/audio/hnl-kokoro-zf001-v1/14e86a420500e0ca09bfc281-slow.mp3",
+      "bytes": 10436,
+      "sha256": "24966dae51f931bb6b86ac4da7727b164e47729fe93710513916ea16acefc113"
     },
     {
-      "path": "/audio/hnl-original-v1/c1c429517db330de52af82a8-slow.mp3",
-      "bytes": 35900,
-      "sha256": "553eac8b980420a3228e6a1905a8019e0ab852a542abf488f48474d4803a5ee0"
+      "path": "/audio/hnl-kokoro-zf001-v1/340c338c2d83b9173b398aa4.mp3",
+      "bytes": 7220,
+      "sha256": "1711517db1ae8c1969dd0cac8adde9e8e78ff89898ef58cbb68c73f5e8b4b9d1"
     },
     {
-      "path": "/audio/hnl-original-v1/468abd2475fd50b5d4f0a9e3.mp3",
-      "bytes": 29636,
-      "sha256": "b7a7da4d06ffdad28195e5fd70866ef3fe1519ad7df443f9f6e00033a149eac6"
+      "path": "/audio/hnl-kokoro-zf001-v1/340c338c2d83b9173b398aa4-slow.mp3",
+      "bytes": 6908,
+      "sha256": "8b60196c3c56eec201c248a53956ef64e5b63f80fd1326a381d2549ca50b8b10"
     },
     {
-      "path": "/audio/hnl-original-v1/468abd2475fd50b5d4f0a9e3-slow.mp3",
-      "bytes": 34940,
-      "sha256": "b8d217da997fe49f17286dbd178ddb09df6d80a85df4db82045b54082ab29386"
+      "path": "/audio/hnl-kokoro-zf001-v1/ae0a8aba7f792ccb65b10fb2.mp3",
+      "bytes": 18788,
+      "sha256": "c6821000c89614648dda2f663e1c0d86ea97c459784aed686c80d8da9cc23530"
     },
     {
-      "path": "/audio/hnl-original-v1/58f3b84b57fd8cedb721c4f9.mp3",
-      "bytes": 24860,
-      "sha256": "f09ca9fb9647f562b95c8f89bd693ccc82a148b5f0ab4d968a20b8cb62c20c7d"
+      "path": "/audio/hnl-kokoro-zf001-v1/ae0a8aba7f792ccb65b10fb2-slow.mp3",
+      "bytes": 20492,
+      "sha256": "76e016e2a3aed9f1e55e1924e94f5136ccd7972993df7386ebcece29bbd393ee"
     },
     {
-      "path": "/audio/hnl-original-v1/58f3b84b57fd8cedb721c4f9-slow.mp3",
-      "bytes": 30980,
-      "sha256": "8086344ee2f14f8e901a68b23ad43109a0fa6de86d40e26a6e1b9e3f54a604ae"
+      "path": "/audio/hnl-kokoro-zf001-v1/9267da2377b290d96aafde01.mp3",
+      "bytes": 18356,
+      "sha256": "7229355509152b7d94987a0dec3fec09a2707cd1b2ddf10b2cd53b4f923939f7"
     },
     {
-      "path": "/audio/hnl-original-v1/50bbf3e1586999c4db88bd30.mp3",
-      "bytes": 26324,
-      "sha256": "17e08322897fba417505020529c57b7499ea34dfb5d1a61d1592f9a4443d3055"
+      "path": "/audio/hnl-kokoro-zf001-v1/9267da2377b290d96aafde01-slow.mp3",
+      "bytes": 20156,
+      "sha256": "93b5821b1d2044b14363b104c643c669f2af355d947f7ea2d70b076bb2007c8e"
     },
     {
-      "path": "/audio/hnl-original-v1/50bbf3e1586999c4db88bd30-slow.mp3",
-      "bytes": 32948,
-      "sha256": "bbf4c87063c4b2f164e780c6d13cbc7abb1f02777022160ad066d35b20bd0e69"
+      "path": "/audio/hnl-kokoro-zf001-v1/355148518914752fd97ddefb.mp3",
+      "bytes": 17492,
+      "sha256": "17bfb883c0b73fb01e4897f3c9805d338ca2c75c1468edf3d88db98273109f2b"
     },
     {
-      "path": "/audio/hnl-original-v1/c8f808eb812b042bbfbe0a64.mp3",
-      "bytes": 29828,
-      "sha256": "92967715c9fe7357cced2c6df7e31c6cb7f7af1643d7768768844490965c4735"
+      "path": "/audio/hnl-kokoro-zf001-v1/355148518914752fd97ddefb-slow.mp3",
+      "bytes": 17228,
+      "sha256": "5e9f61bd7a856d8f8194ec5541def7c2269bdffcdf795dbe42917ec39987d292"
     },
     {
-      "path": "/audio/hnl-original-v1/c8f808eb812b042bbfbe0a64-slow.mp3",
-      "bytes": 35996,
-      "sha256": "708b4c6e8246c36c10b7abec539f75b24a3d9bcaf432f92b14137296e28517b6"
+      "path": "/audio/hnl-kokoro-zf001-v1/f7fad2b5e2745ca54d882815.mp3",
+      "bytes": 12380,
+      "sha256": "a2315f301d5a94397f14aca83d88e9217117e524926751008d87d32595a678e0"
     },
     {
-      "path": "/audio/hnl-original-v1/033c64ff01e35008a0364fde.mp3",
-      "bytes": 26420,
-      "sha256": "1dc47b2d86ac52458c09c224bd30c2df4ad85edee2874ad436186e02916196eb"
+      "path": "/audio/hnl-kokoro-zf001-v1/f7fad2b5e2745ca54d882815-slow.mp3",
+      "bytes": 12428,
+      "sha256": "6a00b8795fd42fe0904a93a6f00a2ede0fcfe9d885e97f61f8f8edd32486e80a"
     },
     {
-      "path": "/audio/hnl-original-v1/033c64ff01e35008a0364fde-slow.mp3",
-      "bytes": 32108,
-      "sha256": "93d7ab594c321e3c72e2f4ee27fa32147a3c2796e7fa2b6f6fc2f22cc4aa3ce7"
+      "path": "/audio/hnl-kokoro-zf001-v1/99000f8feae6b90e14d68506.mp3",
+      "bytes": 8636,
+      "sha256": "faa92efff2bb446f138eec23515697cd9190a6b0468c5200446927d57c106dd6"
     },
     {
-      "path": "/audio/hnl-original-v1/66d5113e2b288c24b419e354.mp3",
-      "bytes": 25436,
-      "sha256": "6657fc44b5b698dc5dafa6531513b7b05d16475a52fe85a1ec7733a448973b0a"
+      "path": "/audio/hnl-kokoro-zf001-v1/99000f8feae6b90e14d68506-slow.mp3",
+      "bytes": 9044,
+      "sha256": "06400e1ff0c613cff0d308ba6341d757f57046585c8ea04a52054275b6b6f07f"
     },
     {
-      "path": "/audio/hnl-original-v1/66d5113e2b288c24b419e354-slow.mp3",
-      "bytes": 31388,
-      "sha256": "49e8af46a2fc6a34b226acd2b712637f8f1d12ca48ebc96e86ce177a0041799b"
+      "path": "/audio/hnl-kokoro-zf001-v1/9b577e97a6c4e505ef96015e.mp3",
+      "bytes": 8012,
+      "sha256": "4a8a9dd705675d05f3ef24b85bbc4d15a75003193c8ad0fc4c4581eb2b498e16"
     },
     {
-      "path": "/audio/hnl-original-v1/2ac9e57e28ef9d45ae68b1d5.mp3",
-      "bytes": 31004,
-      "sha256": "b9d1571b86aafeb2f4871f050ed59a67df14092258f7f5bfc304de9d261cabdf"
+      "path": "/audio/hnl-kokoro-zf001-v1/9b577e97a6c4e505ef96015e-slow.mp3",
+      "bytes": 8612,
+      "sha256": "2f94d290a2b33963246c518dc5c59bfb5537b58a4b409c9213c7c7cea5db97d8"
     },
     {
-      "path": "/audio/hnl-original-v1/2ac9e57e28ef9d45ae68b1d5-slow.mp3",
-      "bytes": 37556,
-      "sha256": "c13f345ca1d2974a2bbf0b7165511c9500b8071968ca8c8c43f4483da1b9e7f3"
+      "path": "/audio/hnl-kokoro-zf001-v1/bf634c69d3f9224a05b25fa1.mp3",
+      "bytes": 8756,
+      "sha256": "74572918432756c53ed15d9f877e110719b6b5503ad8c2297b260bf6fd5e91f6"
     },
     {
-      "path": "/audio/hnl-original-v1/02496a7806a6afb9f14d3d35.mp3",
-      "bytes": 26636,
-      "sha256": "079a834b96b4a6bf4f5834328360bba1bc88b97e8ddf758fe3224ba5a4810e08"
+      "path": "/audio/hnl-kokoro-zf001-v1/bf634c69d3f9224a05b25fa1-slow.mp3",
+      "bytes": 8996,
+      "sha256": "2a4e3433be8db16349c8c3de141ba85037c2e0f0eaa7b45e4a02a815b88aea64"
     },
     {
-      "path": "/audio/hnl-original-v1/02496a7806a6afb9f14d3d35-slow.mp3",
-      "bytes": 30908,
-      "sha256": "d66f9917dd1cf15dee8d9285d08cc88c313b05634d95d9f8599730cb0709a78b"
+      "path": "/audio/hnl-kokoro-zf001-v1/8735bf5d5c11a4b7a70dd59c.mp3",
+      "bytes": 8756,
+      "sha256": "4904c9b222caa80b69482e2b5154412376e0d3329057daf2b6dbd5c91738dd07"
     },
     {
-      "path": "/audio/hnl-original-v1/11cf832c41aaeb52212e8766.mp3",
-      "bytes": 28148,
-      "sha256": "d900b56cd481fcc81125bc5a4336693b0c3c65543436c6108a0371492d436e41"
+      "path": "/audio/hnl-kokoro-zf001-v1/8735bf5d5c11a4b7a70dd59c-slow.mp3",
+      "bytes": 8948,
+      "sha256": "eb429baf3b8d3ff3d4454f3730a3aefdc0779941b4c615117474ad7b914d5928"
     },
     {
-      "path": "/audio/hnl-original-v1/11cf832c41aaeb52212e8766-slow.mp3",
-      "bytes": 34604,
-      "sha256": "dc6f825c71521da305df7aef16e7af644e8d50838b556f04c9dfe32a039ec3c5"
+      "path": "/audio/hnl-kokoro-zf001-v1/75aabc2e4a59502998445d91.mp3",
+      "bytes": 8852,
+      "sha256": "71c68f5b2d18216947ff2ecc32e93d92b16a0736fdc78648c6ff4f01860c2460"
     },
     {
-      "path": "/audio/hnl-original-v1/432c1792e1ef14a4cdf0a6ad.mp3",
+      "path": "/audio/hnl-kokoro-zf001-v1/75aabc2e4a59502998445d91-slow.mp3",
+      "bytes": 8756,
+      "sha256": "8a0f21916e4ebea067cd9595e1577ac2634311917803a3635aecb4aff08aa2af"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/8865d0eecddfaad551df2b1f.mp3",
+      "bytes": 8564,
+      "sha256": "7fa159bd82c25a201ee765cbdb5bc01b6e16388ccfd63c73a0fd24b38bbd26df"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/8865d0eecddfaad551df2b1f-slow.mp3",
+      "bytes": 9284,
+      "sha256": "04a55cc0297f727154ba83c1809373e572525f4f5e18c33d8a240cdf3d5d9662"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/76c9c32335acccfd27e65122.mp3",
+      "bytes": 23204,
+      "sha256": "7784f47efc11533f370aaea7ac553c1d3fe6f24214e93ca33ecbc27f7e11bee0"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/76c9c32335acccfd27e65122-slow.mp3",
+      "bytes": 23516,
+      "sha256": "293d90551a9cafa2a9e2ef259f88404b96876729cce84477c0927d97ffbd4b27"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/d7213fc6f5f4f518ac3cad73.mp3",
+      "bytes": 25004,
+      "sha256": "8162a7130d70deba1767d63211ec9f3c4b490dcee4e13ea1ead5f6c8cff7a056"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/d7213fc6f5f4f518ac3cad73-slow.mp3",
+      "bytes": 26756,
+      "sha256": "0af2b163d85dd9d0679ef994092bc96b3b39d0c94a7599d273f64e75e6c3b383"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/407e55c888b15f6c69e9e6d8.mp3",
+      "bytes": 19340,
+      "sha256": "68d7ca4c7aa2425a7f48ba05b49377b8cc36ceb0122719d50785f9fd358a83b7"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/407e55c888b15f6c69e9e6d8-slow.mp3",
+      "bytes": 20252,
+      "sha256": "e0170309062804689889f4a5207a5a1f2bf1ad0487f6435801bf6c06053f5d44"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/6a069a14a45a4c492acc99b0.mp3",
+      "bytes": 8732,
+      "sha256": "cdfb24623edf3f7d9d7e37c160e53a9d2b35a3fe74923dfb417e8ab51a5c4539"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/6a069a14a45a4c492acc99b0-slow.mp3",
+      "bytes": 8612,
+      "sha256": "d275a1582cfced1217b15583f7ea03152c362d00ba92a3265c108251432c6388"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/092bd078deb55f87b9469a53.mp3",
+      "bytes": 8588,
+      "sha256": "f27acf0917ea421423bae39aac513ef22e03f6bfe4a63fccd0510d3a556642ee"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/092bd078deb55f87b9469a53-slow.mp3",
+      "bytes": 9044,
+      "sha256": "61e6564d57b6e928810ead0f51b5ad72c7fc2f11e779ae8481f8ddca6229e529"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/bbd2dd0555d749e84db81c06.mp3",
+      "bytes": 8540,
+      "sha256": "161ba5c92c6b164a4b09f6d5f4181f2642d24f79c94be0a3b979d87032f72519"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/bbd2dd0555d749e84db81c06-slow.mp3",
+      "bytes": 9044,
+      "sha256": "6b7d0f35309130b14764c22797647f5a9d5a457683d5ce17dc8676b767eca7c4"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/9223b00fcdf88eec758cbc5a.mp3",
+      "bytes": 8948,
+      "sha256": "1d6cfd3f389b191516d80287b258b738cee22690679107dbf837fd4d7249f9bb"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/9223b00fcdf88eec758cbc5a-slow.mp3",
+      "bytes": 9044,
+      "sha256": "32e435deed7a1ea6499fd5e384bec70f1726424df90fd873b99af1bbe238f540"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/0ca35e6c532b9730aa2c35f6.mp3",
+      "bytes": 8228,
+      "sha256": "6bda9ee31bbbd3dd6dda8e840acc645ba8c08e445ed25daebf6ead17f1bdef72"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/0ca35e6c532b9730aa2c35f6-slow.mp3",
+      "bytes": 8780,
+      "sha256": "b06f9ad5aac68fa82040d0d69f2dd84aeb39b5afd5bd8122133aee59d8bf917c"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/c6d31c6b89311da3a4973a09.mp3",
+      "bytes": 8348,
+      "sha256": "671b08820c0e26f620b037283e51cc446c3d3aa3d2c8b68a7796052c8ea74223"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/c6d31c6b89311da3a4973a09-slow.mp3",
+      "bytes": 8924,
+      "sha256": "c7fde09e4c61f741fadbc6d0620d5cb700d6d20e1978940254434324e3e4a085"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/a33816c07a4d44c134e570ce.mp3",
+      "bytes": 23420,
+      "sha256": "dc7d824b7227824dd351226a53d21becb3d4bab22dbd6918f2509b5e36e7a18a"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/a33816c07a4d44c134e570ce-slow.mp3",
       "bytes": 25940,
-      "sha256": "b2a9668cd83d277c037b4c5e77b93e37ea5e85295286f3e7ca21faa735e20381"
+      "sha256": "4109f5386183be34414a3c4947ed2ed4b1897e439de43003abb87ea84edec119"
     },
     {
-      "path": "/audio/hnl-original-v1/432c1792e1ef14a4cdf0a6ad-slow.mp3",
-      "bytes": 32012,
-      "sha256": "6790e2178517a8fce9ad433cb9751e2ae23beaf003f39d83006675bcc2df7a54"
+      "path": "/audio/hnl-kokoro-zf001-v1/e9f15e24202b76460defa9e1.mp3",
+      "bytes": 26468,
+      "sha256": "cd168234d3b0e6981b2f6c48c50ecc2680cd0182e654400b69d861194dfbbc85"
     },
     {
-      "path": "/audio/hnl-original-v1/59da0b11d60b09a911aa97bc.mp3",
-      "bytes": 29156,
-      "sha256": "9b674a5660ae8505ca918f719cd7661951b8c9dbd1515cc12c7e71c6dc993759"
+      "path": "/audio/hnl-kokoro-zf001-v1/e9f15e24202b76460defa9e1-slow.mp3",
+      "bytes": 28460,
+      "sha256": "bc500b5f9a3a51bc8786db3c9abbc8fecb516ca76ea628348da689a2c28c78ed"
     },
     {
-      "path": "/audio/hnl-original-v1/59da0b11d60b09a911aa97bc-slow.mp3",
-      "bytes": 35996,
-      "sha256": "bf016d12966aa2ed2245ef4102681d2daded452d4f416c30e5e78793ccc5a275"
+      "path": "/audio/hnl-kokoro-zf001-v1/095b40efeb6b4208f97e56bb.mp3",
+      "bytes": 22148,
+      "sha256": "f0d832b80cb104b5e6b6becda56bd96662549be302c2b26f5ee2e0e35466f683"
     },
     {
-      "path": "/audio/hnl-original-v1/bc255f051476aa6b11c796e1.mp3",
-      "bytes": 36140,
-      "sha256": "4c03dd907b9a106e08244a36befe554bf69a0d903e89bda1f60c8578375a3095"
+      "path": "/audio/hnl-kokoro-zf001-v1/095b40efeb6b4208f97e56bb-slow.mp3",
+      "bytes": 24068,
+      "sha256": "624c0e66affdda4e8e324da4042ce8600950d8361f3941c4b95a0b8b73ff99ca"
     },
     {
-      "path": "/audio/hnl-original-v1/bc255f051476aa6b11c796e1-slow.mp3",
-      "bytes": 43796,
-      "sha256": "48f38c24f8f22db8e416c8e055d68819de55989b702748326eeef41b6693c690"
+      "path": "/audio/hnl-kokoro-zf001-v1/127005e303728f2ff3b43223.mp3",
+      "bytes": 6860,
+      "sha256": "cf89bd08cd95957ba5ce57312acef02e17282d344c2d89f039c4c4fdb7095aca"
     },
     {
-      "path": "/audio/hnl-original-v1/dd26e190790101f53e4a0b93.mp3",
-      "bytes": 30284,
-      "sha256": "1719867898c7ca91a8213006f7fb8c3f22f815146614c0e42f1bd72af7502bd6"
+      "path": "/audio/hnl-kokoro-zf001-v1/127005e303728f2ff3b43223-slow.mp3",
+      "bytes": 7220,
+      "sha256": "3121f09d4e778ce28dfcb30757e92b04a80045bb6dcbd15ac4ac5dc2d63b166c"
     },
     {
-      "path": "/audio/hnl-original-v1/dd26e190790101f53e4a0b93-slow.mp3",
-      "bytes": 36476,
-      "sha256": "34947b38e861b69c821ba781cdc19f47e03b81eedefd4eb9b7d02ff31226132b"
+      "path": "/audio/hnl-kokoro-zf001-v1/f21a3a4064d2c1787cfe4e01.mp3",
+      "bytes": 7772,
+      "sha256": "444f42e5ef091c607c6f2bb54183bf15557ebd640d7b5c4d9519410ed39fd9d8"
     },
     {
-      "path": "/audio/hnl-original-v1/471910ef67346ac6f2029819.mp3",
-      "bytes": 37196,
-      "sha256": "b4f4f94de48996bc09b5ce3fc07cf38ee02b1069ce7e20f291eb8391bd80b74e"
+      "path": "/audio/hnl-kokoro-zf001-v1/f21a3a4064d2c1787cfe4e01-slow.mp3",
+      "bytes": 7916,
+      "sha256": "82137e317a8d76e058db53d82e6fdff41a17d304d860135259e2bcbf121a6375"
     },
     {
-      "path": "/audio/hnl-original-v1/471910ef67346ac6f2029819-slow.mp3",
-      "bytes": 45380,
-      "sha256": "7b4f0fb50339615e3991114c9ae4c9a620a71b6d33123bec1a1ced70b9037007"
+      "path": "/audio/hnl-kokoro-zf001-v1/a9c4b9e3cb651f24d5934ee0.mp3",
+      "bytes": 9140,
+      "sha256": "7c9bd2d0da87fa8a32b722146dcabcbd43fa3d022023a636a1ba946329a791b0"
     },
     {
-      "path": "/audio/hnl-original-v1/e4fc2a172d97289ffd27bb2b.mp3",
-      "bytes": 37892,
-      "sha256": "9a4f4613adfa533bf1ecaafed112a0157d67ca812c42b72192e96a4a8e70653e"
+      "path": "/audio/hnl-kokoro-zf001-v1/a9c4b9e3cb651f24d5934ee0-slow.mp3",
+      "bytes": 9284,
+      "sha256": "e1a1df491321488b4b3ccb06d369445b50dde04dc7050176d964a7d4ba408e75"
     },
     {
-      "path": "/audio/hnl-original-v1/e4fc2a172d97289ffd27bb2b-slow.mp3",
-      "bytes": 46460,
-      "sha256": "cac3b31ee531ec2a2095bd57c4b617ed4e011a2799a53bdc519e59e816229ac1"
+      "path": "/audio/hnl-kokoro-zf001-v1/3412d30e8206d613f7d5e9fa.mp3",
+      "bytes": 8924,
+      "sha256": "5bf4655da38cfa070387febb5461046d46b137f184ca5f26e2a9e4f51090fe9b"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/3412d30e8206d613f7d5e9fa-slow.mp3",
+      "bytes": 9428,
+      "sha256": "17b3940f1b628e65e4475895e29b0a84027a97308fc67477d831a5e96d83f3e4"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/954871bc8b8f4030358c9b01.mp3",
+      "bytes": 9452,
+      "sha256": "1c8551b186ff8fcf61a4f201ece6794e3a06a146b8aca78e7cf61142653ffa5b"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/954871bc8b8f4030358c9b01-slow.mp3",
+      "bytes": 9956,
+      "sha256": "e2d318dd9cb015d4c147b8cada2a158c3b43a00dd2db5ca3b49b5136d3281525"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/628d5357418548e02209a69c.mp3",
+      "bytes": 9188,
+      "sha256": "04a963e5412cab5f16393d3d0ffbd6877ee3a7565fa0143e2d03b2b723d8c57e"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/628d5357418548e02209a69c-slow.mp3",
+      "bytes": 9620,
+      "sha256": "b1f6b086c2c4bbd3383aa346989f216f4980d9b3c41df7aa25d0b69226886d7c"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/46f8181f453a102fe3b07a51.mp3",
+      "bytes": 15644,
+      "sha256": "32b1add6fa2cf6075bfcd7febb79296c0f7cd8ee9fdb04ba8330e857821078c8"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/46f8181f453a102fe3b07a51-slow.mp3",
+      "bytes": 15980,
+      "sha256": "108156925296c5361e5bffd5bea38e95ea88eb1ee8ed2af9a387bfd3df373dc4"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/5c89d428044b860e3091ce11.mp3",
+      "bytes": 25148,
+      "sha256": "7968467e2d5104720c946ce832d9933d302346a7bfae7c507c9b590229d7884b"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/5c89d428044b860e3091ce11-slow.mp3",
+      "bytes": 27812,
+      "sha256": "b81ba09c6e14bf4cdb5a114806a8e7ab128d1078683c9517a48caa4713d12dc5"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/9226180443cd07bdbb57e56c.mp3",
+      "bytes": 20516,
+      "sha256": "7e6ded40a976b00a23ef6116191b869fa00be2da2e44e10eef1726164dda7b3c"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/9226180443cd07bdbb57e56c-slow.mp3",
+      "bytes": 21644,
+      "sha256": "8ad1f800496a971abbec05c4f80e6559925996a426c468771114d655435c4a52"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/54f203bfe09df28bcb42400b.mp3",
+      "bytes": 8876,
+      "sha256": "0acdcccc23e40588f6a8fb99ed36a7f56859726f3c6b7bde728c2c1672b7bbba"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/54f203bfe09df28bcb42400b-slow.mp3",
+      "bytes": 8972,
+      "sha256": "ccf2f06579561e9fdf5f64a5f59ab10aa728deca3ee188062d971874983feb35"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/b24592c7e67138dc056b1d03.mp3",
+      "bytes": 8732,
+      "sha256": "6d95d10d4d8595bddaa71d72fdccd48f31432f636e68f9b49897495b62bc1c5d"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/b24592c7e67138dc056b1d03-slow.mp3",
+      "bytes": 9116,
+      "sha256": "70fdb7b828710a3f8b866ca583a7a6a61673d4171da094377380ed9d1df22071"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/54dac5e49faf5b76029dd6a0.mp3",
+      "bytes": 8396,
+      "sha256": "414994442c83a72437e209cec2c4c43ea827bb5f5157d9fe400716a9f2d57a9e"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/54dac5e49faf5b76029dd6a0-slow.mp3",
+      "bytes": 8900,
+      "sha256": "c7f2c050a443f4b4f10ecaa5f8e3ed09fd10df6033ac01dfeb32de7be8ece7f5"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/ed43eff033f517006ae814d1.mp3",
+      "bytes": 9020,
+      "sha256": "61e2d5ffc497553de9488350b9994f5cede08d58ae5839611ed8c2ec382aaec0"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/ed43eff033f517006ae814d1-slow.mp3",
+      "bytes": 9188,
+      "sha256": "461f03714236e62ee3e0fa006c77aeca3fbba6e76e567ce7467888bd7bd257e7"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/06353f245a321bd44d9b7721.mp3",
+      "bytes": 9188,
+      "sha256": "b29fb3537e432cc302f27daf75e550abd638abaa21a451afb21c0fd27c97ddd6"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/06353f245a321bd44d9b7721-slow.mp3",
+      "bytes": 9500,
+      "sha256": "72ebb8577383a3aadf16a3e224f8b697f2e5544cf5f8453581bf4bfe68724baf"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/9ec6c9e6deabd69a1c4fc416.mp3",
+      "bytes": 8876,
+      "sha256": "84fa7420898fca106a735212a222953d8e93acebf049721d1ca3475c57b342d5"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/9ec6c9e6deabd69a1c4fc416-slow.mp3",
+      "bytes": 9596,
+      "sha256": "869a652830698b5aef62d4b1ae87ad897c8b374b8e07c5691d8a8f3a81529b1d"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/053d947b1e188a2670d477ba.mp3",
+      "bytes": 21980,
+      "sha256": "bd5ca79cfafff183425c01fd745d68279dc4e822acff9d610815726e1066572c"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/053d947b1e188a2670d477ba-slow.mp3",
+      "bytes": 24452,
+      "sha256": "75220ded3cbaa015a2c174a6324e0fabc3a224bc527ae7e9ce5c787215584b81"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/c8c6329978b177ab12422356.mp3",
+      "bytes": 30044,
+      "sha256": "dec9df21ce96768d6cde43e836c4746ae2536bb65771c1e0cd4251ec4f2d5267"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/c8c6329978b177ab12422356-slow.mp3",
+      "bytes": 32852,
+      "sha256": "21b54899feac804ad2caf801abf9f10a9e56f8b9320abe79945854add5d3d67c"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/a0af5957e945e58ed1aecef6.mp3",
+      "bytes": 22940,
+      "sha256": "e0946e13093f4e49ba62e411a757fcc170c79dfaa472e8c654445a19131cc0db"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/a0af5957e945e58ed1aecef6-slow.mp3",
+      "bytes": 24860,
+      "sha256": "936e87f2c783a8d343073bd8e08819efc9d4e02943b157eb4479a9038d673ce9"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/0e35d387a61722c6b7922888.mp3",
+      "bytes": 8228,
+      "sha256": "49fe6fc6d215bb2b31941b52b111ab09985a61bcb995e106629d4ab2a3128179"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/0e35d387a61722c6b7922888-slow.mp3",
+      "bytes": 9236,
+      "sha256": "7d59baa9ac2c6fb56319576c3af7be9f913e0feb05b3cc2f5b23a00c3896d759"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/85d41835607602bb0e49cda9.mp3",
+      "bytes": 9068,
+      "sha256": "14ffdaec83226e877ef130df4d4629c3b16a743ca9493b94913dad26070d995d"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/85d41835607602bb0e49cda9-slow.mp3",
+      "bytes": 9476,
+      "sha256": "a86120df46298ccb9143bbc5ef500cb7e9a3ab42e18ad3fac52f180c585115d4"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/28d1c738a2b60ec02584b6e5.mp3",
+      "bytes": 8396,
+      "sha256": "533854cf881e84d9ce12a9e7eebea905eba01d7998a7b6973cdad5b4ca878901"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/28d1c738a2b60ec02584b6e5-slow.mp3",
+      "bytes": 8636,
+      "sha256": "bc57846faaa2f7c68a4fef8307aba574dd9e496a4063413714303ab14d0408c8"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/077dd862081d6281abe4e7d7.mp3",
+      "bytes": 9284,
+      "sha256": "226aca16d6b2446c02ab64b04b84c260ca17df34add23419dc2a6a6f1544985b"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/077dd862081d6281abe4e7d7-slow.mp3",
+      "bytes": 9668,
+      "sha256": "d364e854e422c0bc8d99b99957479dfa6699723246dee759240acb7fc18880f7"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/ebd4343702d25175b8475ecc.mp3",
+      "bytes": 9596,
+      "sha256": "cb31e573c38a26e45fa5c31b32b5cc37b487e06733aa08628cca368d0e5c3295"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/ebd4343702d25175b8475ecc-slow.mp3",
+      "bytes": 9572,
+      "sha256": "353e1a4b8d98c0575367015cc34aff95432207a2221c6a86e13cca9f9ee35b6f"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/da15c77d58179063222c3f31.mp3",
+      "bytes": 9260,
+      "sha256": "ce4651fe4f6f135b227adfa948dcdc47b36df8a833400c31c16152ae37b86bb8"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/da15c77d58179063222c3f31-slow.mp3",
+      "bytes": 8732,
+      "sha256": "62a1ff2a7acc0632446c09e504a42c198670963ed5366481675974d98ce12bf6"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/748772e6debc7774c83478df.mp3",
+      "bytes": 23276,
+      "sha256": "60c366885673f423b2621739de4ae93ec7a16f0dd75514f953c12bd5cebbdf3a"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/748772e6debc7774c83478df-slow.mp3",
+      "bytes": 25004,
+      "sha256": "67f6209e673efc6614aab93b67794e69ca2e5a7bb04ec95b1dc48212befecb71"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/55e6b6091b62f26f2db01dc1.mp3",
+      "bytes": 25580,
+      "sha256": "4e48122f94d8b5338dc6f2781696887fddfbf2a4a37eefe0a32056f7bef2fe90"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/55e6b6091b62f26f2db01dc1-slow.mp3",
+      "bytes": 28292,
+      "sha256": "903bf5117e8bed1662b4153d209f16d4760ede2ecbdbd30bac04dc1cac0bfdba"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/6da15663900c87c1bb3dfbfe.mp3",
+      "bytes": 25004,
+      "sha256": "87d942e7dce27d5a8685eb28bd210f9a1561a75625f6b5aa23fe5a1b01598726"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/6da15663900c87c1bb3dfbfe-slow.mp3",
+      "bytes": 26324,
+      "sha256": "ee919692aace1cb5d12b83fc607dbfc2ded47c2d760448dcd37599c0eb14b122"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/adbde240ce165586fd7cdbd8.mp3",
+      "bytes": 9116,
+      "sha256": "3ea593226f17e9a25abf7a9e31c09fccb84c53a54e8d741632904c24eaa6ead2"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/adbde240ce165586fd7cdbd8-slow.mp3",
+      "bytes": 9332,
+      "sha256": "0c26c0983e680ee34f539918d82ea8f6dff751ff8eabf49c65006530fdcc441d"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/1f8a3d45fa8f868fbc842c0f.mp3",
+      "bytes": 8852,
+      "sha256": "7abea5038a453aa2716f0b7787b1f6471a25a33e3740df52698104430e44ed6c"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/1f8a3d45fa8f868fbc842c0f-slow.mp3",
+      "bytes": 8876,
+      "sha256": "e7b80e7ed40c6c1c9f4d7568a8985f2161e159ee1ce59fbcb303c8296e4a54cd"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/37e344aabd9ef7eaf39988f0.mp3",
+      "bytes": 8564,
+      "sha256": "3d20c441ccad4155c3ef372e6879fd2380d53501ee1549eb42b82ea7358e534d"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/37e344aabd9ef7eaf39988f0-slow.mp3",
+      "bytes": 8804,
+      "sha256": "d9a1fae903a5dad5cb5a9fb27623b6b6bd6241c97586007608576cf005dbfc84"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/c9b163bbff7622e105cc9551.mp3",
+      "bytes": 8804,
+      "sha256": "b0ee06dc59d0fd873b0a3a947e831ac22f2f0d8cade1f9c26d2938bd661f93b7"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/c9b163bbff7622e105cc9551-slow.mp3",
+      "bytes": 9524,
+      "sha256": "cff88639bdae6d438214b85a6ce9e7c9ef2b0c5917ffd8c9f2c3208bf3ebff06"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/cd76f61f2fc79ea1fc969ed0.mp3",
+      "bytes": 8612,
+      "sha256": "e30b2c37b627488f434f0ccbb7e6036406f8946ec62fec71cafe392652891c9b"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/cd76f61f2fc79ea1fc969ed0-slow.mp3",
+      "bytes": 8924,
+      "sha256": "52ba61f619cf313ee98f8db09fe064d05f435bea2615f7078955eef58bd66f5c"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/a99b89201f036f0416e01bd5.mp3",
+      "bytes": 8900,
+      "sha256": "c0dc3bf4318d479bcd9f950d10c2b54690a73354eab7e1feeb17ede2484ab59b"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/a99b89201f036f0416e01bd5-slow.mp3",
+      "bytes": 9332,
+      "sha256": "bafcb09fb6c51da2c503a33ad19b5709546f871a3bd374e3cf5bcbb595d4c4b0"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/93bda6c1703eb20df1735143.mp3",
+      "bytes": 26084,
+      "sha256": "e32bb544d831e0d6a7304fc3524fd4a5b1a7258ba53764504d0d79a81f048e92"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/93bda6c1703eb20df1735143-slow.mp3",
+      "bytes": 25964,
+      "sha256": "e1b665bb4be52af41fbf2c7512dcad2df518ef99c2a30cce225a52c4d0ac2bf2"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/027a181dda63acdd0c27e621.mp3",
+      "bytes": 30812,
+      "sha256": "969a6ac84b99508796d07bfded1cec3c4cbf3b92e9c32f7cbcfcf78aecb01cb5"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/027a181dda63acdd0c27e621-slow.mp3",
+      "bytes": 32564,
+      "sha256": "1e8671b5872631d37d6e643ef0605cc5cdcd29e7c0e681fce8ee2cfba65063d1"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/1c8f088d7b51b910adb25753.mp3",
+      "bytes": 20684,
+      "sha256": "5081e7884f86eba33fab10f910b72826dccd7093a3168c7ac06481a1fc7222ff"
+    },
+    {
+      "path": "/audio/hnl-kokoro-zf001-v1/1c8f088d7b51b910adb25753-slow.mp3",
+      "bytes": 21380,
+      "sha256": "533818b14ff41bb7880151b9471f55bb8d7c69eaaf6af4ca2f54bb107ff6e696"
     }
   ],
   "issues": []

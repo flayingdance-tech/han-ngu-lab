@@ -1,0 +1,1173 @@
+{
+  "voiceId": "hnl-kokoro-zf001-v1",
+  "profileFingerprint": "f01aa4136b3673244590e4e98d93542d89e931c5fa0869f78b8580ce8789cb3c",
+  "humanReviewed": false,
+  "clips": [
+    {
+      "text": "你",
+      "pinyin": "nǐ",
+      "phonemes": "ㄋㄧ3",
+      "nativeSeconds": 0.65,
+      "nativePeak": 0.2060035765171051,
+      "humanReviewed": false
+    },
+    {
+      "text": "好",
+      "pinyin": "hǎo",
+      "phonemes": "ㄏㄠ3",
+      "nativeSeconds": 0.75,
+      "nativePeak": 0.3171048164367676,
+      "humanReviewed": false
+    },
+    {
+      "text": "你好",
+      "pinyin": "nǐ hǎo",
+      "phonemes": "ㄋㄧ2ㄏㄠ3",
+      "nativeSeconds": 0.975,
+      "nativePeak": 0.2864396870136261,
+      "humanReviewed": false
+    },
+    {
+      "text": "谢谢",
+      "pinyin": "xièxie",
+      "phonemes": "ㄒㄝ4ㄒㄝ5",
+      "nativeSeconds": 0.975,
+      "nativePeak": 0.35117149353027344,
+      "humanReviewed": false
+    },
+    {
+      "text": "再见",
+      "pinyin": "zàijiàn",
+      "phonemes": "ㄗㄞ4ㄐ言4",
+      "nativeSeconds": 0.975,
+      "nativePeak": 0.3901362121105194,
+      "humanReviewed": false
+    },
+    {
+      "text": "不客气",
+      "pinyin": "bú kèqi",
+      "phonemes": "ㄅㄨ2ㄎㄜ4ㄑㄧ5",
+      "nativeSeconds": 1.25,
+      "nativePeak": 0.4332756996154785,
+      "humanReviewed": false
+    },
+    {
+      "text": "你好！",
+      "pinyin": "Nǐ hǎo!",
+      "phonemes": "ㄋㄧ2ㄏㄠ3!",
+      "nativeSeconds": 1.05,
+      "nativePeak": 0.2848401963710785,
+      "humanReviewed": false
+    },
+    {
+      "text": "谢谢你。",
+      "pinyin": "Xièxie nǐ.",
+      "phonemes": "ㄒㄝ4ㄒㄝ5/ㄋㄧ3.",
+      "nativeSeconds": 1.65,
+      "nativePeak": 0.3907448351383209,
+      "humanReviewed": false
+    },
+    {
+      "text": "不客气。再见！",
+      "pinyin": "Bú kèqi. Zàijiàn!",
+      "phonemes": "ㄅㄨ2ㄎㄜ4ㄑㄧ5. ㄗㄞ4ㄐ言4!",
+      "nativeSeconds": 2.2,
+      "nativePeak": 0.43406394124031067,
+      "humanReviewed": false
+    },
+    {
+      "text": "妈",
+      "pinyin": "mā",
+      "phonemes": "ㄇㄚ1",
+      "nativeSeconds": 0.725,
+      "nativePeak": 0.35479116439819336,
+      "humanReviewed": false
+    },
+    {
+      "text": "麻",
+      "pinyin": "má",
+      "phonemes": "ㄇㄚ2",
+      "nativeSeconds": 0.725,
+      "nativePeak": 0.32331833243370056,
+      "humanReviewed": false
+    },
+    {
+      "text": "马",
+      "pinyin": "mǎ",
+      "phonemes": "ㄇㄚ3",
+      "nativeSeconds": 0.725,
+      "nativePeak": 0.36460626125335693,
+      "humanReviewed": false
+    },
+    {
+      "text": "骂",
+      "pinyin": "mà",
+      "phonemes": "ㄇㄚ4",
+      "nativeSeconds": 0.725,
+      "nativePeak": 0.38228145241737366,
+      "humanReviewed": false
+    },
+    {
+      "text": "妈妈",
+      "pinyin": "māma",
+      "phonemes": "ㄇㄚ1ㄇㄚ5",
+      "nativeSeconds": 1.0,
+      "nativePeak": 0.36545202136039734,
+      "humanReviewed": false
+    },
+    {
+      "text": "妈妈，你好！",
+      "pinyin": "Māma, nǐ hǎo!",
+      "phonemes": "ㄇㄚ1ㄇㄚ5, ㄋㄧ2ㄏㄠ3!",
+      "nativeSeconds": 1.975,
+      "nativePeak": 0.33741462230682373,
+      "humanReviewed": false
+    },
+    {
+      "text": "我",
+      "pinyin": "wǒ",
+      "phonemes": "我3",
+      "nativeSeconds": 0.725,
+      "nativePeak": 0.32954415678977966,
+      "humanReviewed": false
+    },
+    {
+      "text": "叫",
+      "pinyin": "jiào",
+      "phonemes": "ㄐ要4",
+      "nativeSeconds": 0.75,
+      "nativePeak": 0.45637357234954834,
+      "humanReviewed": false
+    },
+    {
+      "text": "什么",
+      "pinyin": "shénme",
+      "phonemes": "ㄕㄣ2ㄇㄜ5",
+      "nativeSeconds": 0.925,
+      "nativePeak": 0.5166006684303284,
+      "humanReviewed": false
+    },
+    {
+      "text": "名字",
+      "pinyin": "míngzi",
+      "phonemes": "ㄇ应2ㄗㄭ5",
+      "nativeSeconds": 0.95,
+      "nativePeak": 0.3129333257675171,
+      "humanReviewed": false
+    },
+    {
+      "text": "呢",
+      "pinyin": "ne",
+      "phonemes": "ㄋㄜ5",
+      "nativeSeconds": 0.725,
+      "nativePeak": 0.30365660786628723,
+      "humanReviewed": false
+    },
+    {
+      "text": "你叫什么名字？",
+      "pinyin": "Nǐ jiào shénme míngzi?",
+      "phonemes": "ㄋㄧ3/ㄐ要4/ㄕㄣ2ㄇㄜ5/ㄇ应2ㄗㄭ5?",
+      "nativeSeconds": 2.275,
+      "nativePeak": 0.39171379804611206,
+      "humanReviewed": false
+    },
+    {
+      "text": "我叫安。你呢？",
+      "pinyin": "Wǒ jiào Ān. Nǐ ne?",
+      "phonemes": "我3/ㄐ要4ㄢ1. ㄋㄧ3/ㄋㄜ5?",
+      "nativeSeconds": 2.075,
+      "nativePeak": 0.48327872157096863,
+      "humanReviewed": false
+    },
+    {
+      "text": "我叫李明。",
+      "pinyin": "Wǒ jiào Lǐ Míng.",
+      "phonemes": "我3/ㄐ要4/ㄌㄧ3ㄇ应2.",
+      "nativeSeconds": 1.9,
+      "nativePeak": 0.49119260907173157,
+      "humanReviewed": false
+    },
+    {
+      "text": "越南",
+      "pinyin": "Yuènán",
+      "phonemes": "月4ㄋㄢ2",
+      "nativeSeconds": 0.95,
+      "nativePeak": 0.33014002442359924,
+      "humanReviewed": false
+    },
+    {
+      "text": "中国",
+      "pinyin": "Zhōngguó",
+      "phonemes": "ㄓ中1ㄍ我2",
+      "nativeSeconds": 0.95,
+      "nativePeak": 0.31367719173431396,
+      "humanReviewed": false
+    },
+    {
+      "text": "人",
+      "pinyin": "rén",
+      "phonemes": "ㄖㄣ2",
+      "nativeSeconds": 0.725,
+      "nativePeak": 0.4981747567653656,
+      "humanReviewed": false
+    },
+    {
+      "text": "是",
+      "pinyin": "shì",
+      "phonemes": "ㄕ十4",
+      "nativeSeconds": 0.725,
+      "nativePeak": 0.35694804787635803,
+      "humanReviewed": false
+    },
+    {
+      "text": "学生",
+      "pinyin": "xuésheng",
+      "phonemes": "ㄒ月2ㄕㄥ5",
+      "nativeSeconds": 0.925,
+      "nativePeak": 0.3976942002773285,
+      "humanReviewed": false
+    },
+    {
+      "text": "老师",
+      "pinyin": "lǎoshī",
+      "phonemes": "ㄌㄠ3ㄕ十1",
+      "nativeSeconds": 0.95,
+      "nativePeak": 0.4175471067428589,
+      "humanReviewed": false
+    },
+    {
+      "text": "你是老师吗？",
+      "pinyin": "Nǐ shì lǎoshī ma?",
+      "phonemes": "ㄋㄧ3/ㄕ十4/ㄌㄠ3ㄕ十1/ㄇㄚ5?",
+      "nativeSeconds": 2.0,
+      "nativePeak": 0.33726394176483154,
+      "humanReviewed": false
+    },
+    {
+      "text": "不是，我是学生。",
+      "pinyin": "Bú shì, wǒ shì xuésheng.",
+      "phonemes": "ㄅㄨ2ㄕ十4, 我3/ㄕ十4/ㄒ月2ㄕㄥ5.",
+      "nativeSeconds": 2.4,
+      "nativePeak": 0.5009683966636658,
+      "humanReviewed": false
+    },
+    {
+      "text": "你是越南人吗？",
+      "pinyin": "Nǐ shì Yuènán rén ma?",
+      "phonemes": "ㄋㄧ3/ㄕ十4/月4ㄋㄢ2/ㄖㄣ2/ㄇㄚ5?",
+      "nativeSeconds": 2.325,
+      "nativePeak": 0.3580155670642853,
+      "humanReviewed": false
+    },
+    {
+      "text": "是的。",
+      "pinyin": "Shì de.",
+      "phonemes": "ㄕ十4/ㄉㄜ5.",
+      "nativeSeconds": 1.1,
+      "nativePeak": 0.33344531059265137,
+      "humanReviewed": false
+    },
+    {
+      "text": "家",
+      "pinyin": "jiā",
+      "phonemes": "ㄐ压1",
+      "nativeSeconds": 0.75,
+      "nativePeak": 0.5155293941497803,
+      "humanReviewed": false
+    },
+    {
+      "text": "爸爸",
+      "pinyin": "bàba",
+      "phonemes": "ㄅㄚ4ㄅㄚ5",
+      "nativeSeconds": 0.95,
+      "nativePeak": 0.3899560570716858,
+      "humanReviewed": false
+    },
+    {
+      "text": "哥哥",
+      "pinyin": "gēge",
+      "phonemes": "ㄍㄜ1ㄍㄜ5",
+      "nativeSeconds": 0.9,
+      "nativePeak": 0.30161285400390625,
+      "humanReviewed": false
+    },
+    {
+      "text": "姐姐",
+      "pinyin": "jiějie",
+      "phonemes": "ㄐㄝ3ㄐㄝ5",
+      "nativeSeconds": 0.975,
+      "nativePeak": 0.4032230079174042,
+      "humanReviewed": false
+    },
+    {
+      "text": "有",
+      "pinyin": "yǒu",
+      "phonemes": "又3",
+      "nativeSeconds": 0.75,
+      "nativePeak": 0.359222412109375,
+      "humanReviewed": false
+    },
+    {
+      "text": "没有",
+      "pinyin": "méiyǒu",
+      "phonemes": "ㄇㄟ2又3",
+      "nativeSeconds": 0.9,
+      "nativePeak": 0.298417866230011,
+      "humanReviewed": false
+    },
+    {
+      "text": "你家有几口人？",
+      "pinyin": "Nǐ jiā yǒu jǐ kǒu rén?",
+      "phonemes": "ㄋㄧ3ㄐ压1/又3ㄐㄧ2ㄎㄡ3/ㄖㄣ2?",
+      "nativeSeconds": 2.4,
+      "nativePeak": 0.3598645031452179,
+      "humanReviewed": false
+    },
+    {
+      "text": "我家有四口人。",
+      "pinyin": "Wǒ jiā yǒu sì kǒu rén.",
+      "phonemes": "我3ㄐ压1/又3/ㄙㄭ4ㄎㄡ3/ㄖㄣ2.",
+      "nativeSeconds": 2.425,
+      "nativePeak": 0.5231632590293884,
+      "humanReviewed": false
+    },
+    {
+      "text": "你有哥哥吗？",
+      "pinyin": "Nǐ yǒu gēge ma?",
+      "phonemes": "ㄋㄧ2又3/ㄍㄜ1ㄍㄜ5/ㄇㄚ5?",
+      "nativeSeconds": 1.925,
+      "nativePeak": 0.37826764583587646,
+      "humanReviewed": false
+    },
+    {
+      "text": "没有，我有一个姐姐。",
+      "pinyin": "Méiyǒu, wǒ yǒu yí ge jiějie.",
+      "phonemes": "ㄇㄟ2又3, 我2又3/ㄧ2ㄍㄜ5/ㄐㄝ3ㄐㄝ5.",
+      "nativeSeconds": 2.675,
+      "nativePeak": 0.4123189449310303,
+      "humanReviewed": false
+    },
+    {
+      "text": "现在",
+      "pinyin": "xiànzài",
+      "phonemes": "ㄒ言4ㄗㄞ4",
+      "nativeSeconds": 1.025,
+      "nativePeak": 0.3338909447193146,
+      "humanReviewed": false
+    },
+    {
+      "text": "点",
+      "pinyin": "diǎn",
+      "phonemes": "ㄉ言3",
+      "nativeSeconds": 0.675,
+      "nativePeak": 0.37752166390419006,
+      "humanReviewed": false
+    },
+    {
+      "text": "分",
+      "pinyin": "fēn",
+      "phonemes": "ㄈㄣ1",
+      "nativeSeconds": 0.75,
+      "nativePeak": 0.47533848881721497,
+      "humanReviewed": false
+    },
+    {
+      "text": "半",
+      "pinyin": "bàn",
+      "phonemes": "ㄅㄢ4",
+      "nativeSeconds": 0.725,
+      "nativePeak": 0.4015711843967438,
+      "humanReviewed": false
+    },
+    {
+      "text": "早上",
+      "pinyin": "zǎoshang",
+      "phonemes": "ㄗㄠ3ㄕㄤ5",
+      "nativeSeconds": 0.975,
+      "nativePeak": 0.38962191343307495,
+      "humanReviewed": false
+    },
+    {
+      "text": "上课",
+      "pinyin": "shàng kè",
+      "phonemes": "ㄕㄤ4ㄎㄜ4",
+      "nativeSeconds": 0.975,
+      "nativePeak": 0.3904423713684082,
+      "humanReviewed": false
+    },
+    {
+      "text": "现在几点？",
+      "pinyin": "Xiànzài jǐ diǎn?",
+      "phonemes": "ㄒ言4ㄗㄞ4/ㄐㄧ2ㄉ言3?",
+      "nativeSeconds": 2.0,
+      "nativePeak": 0.38530176877975464,
+      "humanReviewed": false
+    },
+    {
+      "text": "现在八点半。",
+      "pinyin": "Xiànzài bā diǎn bàn.",
+      "phonemes": "ㄒ言4ㄗㄞ4/ㄅㄚ1ㄉ言3ㄅㄢ4.",
+      "nativeSeconds": 2.225,
+      "nativePeak": 0.3378754258155823,
+      "humanReviewed": false
+    },
+    {
+      "text": "你几点上课？",
+      "pinyin": "Nǐ jǐ diǎn shàng kè?",
+      "phonemes": "ㄋㄧ3ㄐㄧ2ㄉ言3/ㄕㄤ4ㄎㄜ4?",
+      "nativeSeconds": 2.175,
+      "nativePeak": 0.39441269636154175,
+      "humanReviewed": false
+    },
+    {
+      "text": "我九点上课。",
+      "pinyin": "Wǒ jiǔ diǎn shàng kè.",
+      "phonemes": "我3ㄐ又2ㄉ言3/ㄕㄤ4ㄎㄜ4.",
+      "nativeSeconds": 2.2,
+      "nativePeak": 0.4233171343803406,
+      "humanReviewed": false
+    },
+    {
+      "text": "喝",
+      "pinyin": "hē",
+      "phonemes": "ㄏㄜ1",
+      "nativeSeconds": 0.775,
+      "nativePeak": 0.45635783672332764,
+      "humanReviewed": false
+    },
+    {
+      "text": "茶",
+      "pinyin": "chá",
+      "phonemes": "ㄔㄚ2",
+      "nativeSeconds": 0.75,
+      "nativePeak": 0.2519141137599945,
+      "humanReviewed": false
+    },
+    {
+      "text": "水",
+      "pinyin": "shuǐ",
+      "phonemes": "ㄕ为3",
+      "nativeSeconds": 0.775,
+      "nativePeak": 0.4362098276615143,
+      "humanReviewed": false
+    },
+    {
+      "text": "咖啡",
+      "pinyin": "kāfēi",
+      "phonemes": "ㄎㄚ1ㄈㄟ1",
+      "nativeSeconds": 0.975,
+      "nativePeak": 0.3158840537071228,
+      "humanReviewed": false
+    },
+    {
+      "text": "杯",
+      "pinyin": "bēi",
+      "phonemes": "ㄅㄟ1",
+      "nativeSeconds": 0.7,
+      "nativePeak": 0.4082150161266327,
+      "humanReviewed": false
+    },
+    {
+      "text": "想",
+      "pinyin": "xiǎng",
+      "phonemes": "ㄒ阳3",
+      "nativeSeconds": 0.675,
+      "nativePeak": 0.4820810854434967,
+      "humanReviewed": false
+    },
+    {
+      "text": "你想喝什么？",
+      "pinyin": "Nǐ xiǎng hē shénme?",
+      "phonemes": "ㄋㄧ2ㄒ阳3/ㄏㄜ1/ㄕㄣ2ㄇㄜ5?",
+      "nativeSeconds": 2.05,
+      "nativePeak": 0.39093050360679626,
+      "humanReviewed": false
+    },
+    {
+      "text": "我想喝茶。",
+      "pinyin": "Wǒ xiǎng hē chá.",
+      "phonemes": "我2ㄒ阳3/ㄏㄜ1ㄔㄚ2.",
+      "nativeSeconds": 1.95,
+      "nativePeak": 0.4065150320529938,
+      "humanReviewed": false
+    },
+    {
+      "text": "我要一杯茶，谢谢。",
+      "pinyin": "Wǒ yào yì bēi chá, xièxie.",
+      "phonemes": "我3/要4/ㄧ4ㄅㄟ1/ㄔㄚ2, ㄒㄝ4ㄒㄝ5.",
+      "nativeSeconds": 2.675,
+      "nativePeak": 0.40875640511512756,
+      "humanReviewed": false
+    },
+    {
+      "text": "北京",
+      "pinyin": "Běijīng",
+      "phonemes": "ㄅㄟ3ㄐ应1",
+      "nativeSeconds": 0.95,
+      "nativePeak": 0.4743598699569702,
+      "humanReviewed": false
+    },
+    {
+      "text": "上海",
+      "pinyin": "Shànghǎi",
+      "phonemes": "ㄕㄤ4ㄏㄞ3",
+      "nativeSeconds": 1.075,
+      "nativePeak": 0.5333843231201172,
+      "humanReviewed": false
+    },
+    {
+      "text": "旅游",
+      "pinyin": "lǚyóu",
+      "phonemes": "ㄌㄩ3又2",
+      "nativeSeconds": 0.925,
+      "nativePeak": 0.31310513615608215,
+      "humanReviewed": false
+    },
+    {
+      "text": "过",
+      "pinyin": "guo",
+      "phonemes": "ㄍ我5",
+      "nativeSeconds": 0.725,
+      "nativePeak": 0.39852967858314514,
+      "humanReviewed": false
+    },
+    {
+      "text": "机场",
+      "pinyin": "jīchǎng",
+      "phonemes": "ㄐㄧ1ㄔㄤ3",
+      "nativeSeconds": 1.0,
+      "nativePeak": 0.2515091896057129,
+      "humanReviewed": false
+    },
+    {
+      "text": "飞机",
+      "pinyin": "fēijī",
+      "phonemes": "ㄈㄟ1ㄐㄧ1",
+      "nativeSeconds": 0.975,
+      "nativePeak": 0.5299664735794067,
+      "humanReviewed": false
+    },
+    {
+      "text": "你去过北京吗？",
+      "pinyin": "Nǐ qùguo Běijīng ma?",
+      "phonemes": "ㄋㄧ3/ㄑㄩ4ㄍ我5/ㄅㄟ3ㄐ应1/ㄇㄚ5?",
+      "nativeSeconds": 2.3,
+      "nativePeak": 0.4496498107910156,
+      "humanReviewed": false
+    },
+    {
+      "text": "去过。我去年去的。",
+      "pinyin": "Qùguo. Wǒ qùnián qù de.",
+      "phonemes": "ㄑㄩ4ㄍ我5. 我3/ㄑㄩ4ㄋ言2/ㄑㄩ4/ㄉㄜ5.",
+      "nativeSeconds": 2.475,
+      "nativePeak": 0.4322187602519989,
+      "humanReviewed": false
+    },
+    {
+      "text": "你坐过飞机吗？",
+      "pinyin": "Nǐ zuòguo fēijī ma?",
+      "phonemes": "ㄋㄧ3/ㄗ我4/ㄍ我5/ㄈㄟ1ㄐㄧ1/ㄇㄚ5?",
+      "nativeSeconds": 2.275,
+      "nativePeak": 0.4558854401111603,
+      "humanReviewed": false
+    },
+    {
+      "text": "没有，我没坐过飞机。",
+      "pinyin": "Méiyǒu, wǒ méi zuòguo fēijī.",
+      "phonemes": "ㄇㄟ2又3, 我3/ㄇㄟ2/ㄗ我4/ㄍ我5/ㄈㄟ1ㄐㄧ1.",
+      "nativeSeconds": 2.775,
+      "nativePeak": 0.44722044467926025,
+      "humanReviewed": false
+    },
+    {
+      "text": "今天",
+      "pinyin": "jīntiān",
+      "phonemes": "ㄐ阴1ㄊ言1",
+      "nativeSeconds": 1.0,
+      "nativePeak": 0.3497651517391205,
+      "humanReviewed": false
+    },
+    {
+      "text": "昨天",
+      "pinyin": "zuótiān",
+      "phonemes": "ㄗ我2ㄊ言1",
+      "nativeSeconds": 0.975,
+      "nativePeak": 0.39880210161209106,
+      "humanReviewed": false
+    },
+    {
+      "text": "热",
+      "pinyin": "rè",
+      "phonemes": "ㄖㄜ4",
+      "nativeSeconds": 0.725,
+      "nativePeak": 0.3365660011768341,
+      "humanReviewed": false
+    },
+    {
+      "text": "冷",
+      "pinyin": "lěng",
+      "phonemes": "ㄌㄥ3",
+      "nativeSeconds": 0.7,
+      "nativePeak": 0.4175525903701782,
+      "humanReviewed": false
+    },
+    {
+      "text": "高",
+      "pinyin": "gāo",
+      "phonemes": "ㄍㄠ1",
+      "nativeSeconds": 0.725,
+      "nativePeak": 0.39794921875,
+      "humanReviewed": false
+    },
+    {
+      "text": "比",
+      "pinyin": "bǐ",
+      "phonemes": "ㄅㄧ3",
+      "nativeSeconds": 0.675,
+      "nativePeak": 0.21822205185890198,
+      "humanReviewed": false
+    },
+    {
+      "text": "今天天气怎么样？",
+      "pinyin": "Jīntiān tiānqì zěnmeyàng?",
+      "phonemes": "ㄐ阴1ㄊ言1/ㄊ言1ㄑㄧ4/ㄗㄣ3ㄇㄜ5阳4?",
+      "nativeSeconds": 2.475,
+      "nativePeak": 0.4041998088359833,
+      "humanReviewed": false
+    },
+    {
+      "text": "今天比昨天热。",
+      "pinyin": "Jīntiān bǐ zuótiān rè.",
+      "phonemes": "ㄐ阴1ㄊ言1/ㄅㄧ3/ㄗ我2ㄊ言1/ㄖㄜ4.",
+      "nativeSeconds": 2.45,
+      "nativePeak": 0.4145486354827881,
+      "humanReviewed": false
+    },
+    {
+      "text": "我们去喝点儿水吧。",
+      "pinyin": "Wǒmen qù hē diǎnr shuǐ ba.",
+      "phonemes": "我3ㄇㄣ5/ㄑㄩ4/ㄏㄜ1/ㄉ言R3/ㄕ为3ㄅㄚ5.",
+      "nativeSeconds": 2.5,
+      "nativePeak": 0.4149816334247589,
+      "humanReviewed": false
+    },
+    {
+      "text": "正在",
+      "pinyin": "zhèngzài",
+      "phonemes": "ㄓㄥ4ㄗㄞ4",
+      "nativeSeconds": 0.975,
+      "nativePeak": 0.3169565796852112,
+      "humanReviewed": false
+    },
+    {
+      "text": "学习",
+      "pinyin": "xuéxí",
+      "phonemes": "ㄒ月2ㄒㄧ2",
+      "nativeSeconds": 1.025,
+      "nativePeak": 0.4705062210559845,
+      "humanReviewed": false
+    },
+    {
+      "text": "汉语",
+      "pinyin": "Hànyǔ",
+      "phonemes": "ㄏㄢ4ㄩ3",
+      "nativeSeconds": 1.0,
+      "nativePeak": 0.4251576066017151,
+      "humanReviewed": false
+    },
+    {
+      "text": "看书",
+      "pinyin": "kàn shū",
+      "phonemes": "ㄎㄢ4ㄕㄨ1",
+      "nativeSeconds": 1.0,
+      "nativePeak": 0.35200566053390503,
+      "humanReviewed": false
+    },
+    {
+      "text": "打电话",
+      "pinyin": "dǎ diànhuà",
+      "phonemes": "ㄉㄚ3ㄉ言4ㄏ穵4",
+      "nativeSeconds": 1.2,
+      "nativePeak": 0.3770798444747925,
+      "humanReviewed": false
+    },
+    {
+      "text": "忙",
+      "pinyin": "máng",
+      "phonemes": "ㄇㄤ2",
+      "nativeSeconds": 0.725,
+      "nativePeak": 0.34755948185920715,
+      "humanReviewed": false
+    },
+    {
+      "text": "你正在做什么？",
+      "pinyin": "Nǐ zhèngzài zuò shénme?",
+      "phonemes": "ㄋㄧ3/ㄓㄥ4ㄗㄞ4/ㄗ我4/ㄕㄣ2ㄇㄜ5?",
+      "nativeSeconds": 2.25,
+      "nativePeak": 0.35133227705955505,
+      "humanReviewed": false
+    },
+    {
+      "text": "我正在看书呢。",
+      "pinyin": "Wǒ zhèngzài kàn shū ne.",
+      "phonemes": "我3/ㄓㄥ4ㄗㄞ4/ㄎㄢ4ㄕㄨ1/ㄋㄜ5.",
+      "nativeSeconds": 2.325,
+      "nativePeak": 0.5349072813987732,
+      "humanReviewed": false
+    },
+    {
+      "text": "你现在忙吗？",
+      "pinyin": "Nǐ xiànzài máng ma?",
+      "phonemes": "ㄋㄧ3/ㄒ言4ㄗㄞ4/ㄇㄤ2/ㄇㄚ5?",
+      "nativeSeconds": 2.1,
+      "nativePeak": 0.3863219618797302,
+      "humanReviewed": false
+    },
+    {
+      "text": "有一点儿。",
+      "pinyin": "Yǒu yìdiǎnr.",
+      "phonemes": "又3/ㄧ4ㄉ言R3.",
+      "nativeSeconds": 1.475,
+      "nativePeak": 0.3765493929386139,
+      "humanReviewed": false
+    },
+    {
+      "text": "打算",
+      "pinyin": "dǎsuàn",
+      "phonemes": "ㄉㄚ3ㄙ万4",
+      "nativeSeconds": 0.975,
+      "nativePeak": 0.3956182897090912,
+      "humanReviewed": false
+    },
+    {
+      "text": "周末",
+      "pinyin": "zhōumò",
+      "phonemes": "ㄓㄡ1ㄇㄛ4",
+      "nativeSeconds": 0.95,
+      "nativePeak": 0.5242002606391907,
+      "humanReviewed": false
+    },
+    {
+      "text": "爬山",
+      "pinyin": "pá shān",
+      "phonemes": "ㄆㄚ2ㄕㄢ1",
+      "nativeSeconds": 0.975,
+      "nativePeak": 0.3462691009044647,
+      "humanReviewed": false
+    },
+    {
+      "text": "还是",
+      "pinyin": "háishi",
+      "phonemes": "ㄏㄞ2ㄕ十5",
+      "nativeSeconds": 0.85,
+      "nativePeak": 0.3019125163555145,
+      "humanReviewed": false
+    },
+    {
+      "text": "准备",
+      "pinyin": "zhǔnbèi",
+      "phonemes": "ㄓ文3ㄅㄟ4",
+      "nativeSeconds": 0.95,
+      "nativePeak": 0.3676523268222809,
+      "humanReviewed": false
+    },
+    {
+      "text": "放松",
+      "pinyin": "fàngsōng",
+      "phonemes": "ㄈㄤ4ㄙ中1",
+      "nativeSeconds": 1.0,
+      "nativePeak": 0.46771541237831116,
+      "humanReviewed": false
+    },
+    {
+      "text": "周末你有什么打算？",
+      "pinyin": "Zhōumò nǐ yǒu shénme dǎsuàn?",
+      "phonemes": "ㄓㄡ1ㄇㄛ4/ㄋㄧ2又3/ㄕㄣ2ㄇㄜ5/ㄉㄚ3ㄙ万5?",
+      "nativeSeconds": 2.625,
+      "nativePeak": 0.38560622930526733,
+      "humanReviewed": false
+    },
+    {
+      "text": "我打算去爬山。你呢？",
+      "pinyin": "Wǒ dǎsuàn qù pá shān. Nǐ ne?",
+      "phonemes": "我2ㄉㄚ3ㄙ万5/ㄑㄩ4/ㄆㄚ2ㄕㄢ1. ㄋㄧ3/ㄋㄜ5?",
+      "nativeSeconds": 2.925,
+      "nativePeak": 0.3876509666442871,
+      "humanReviewed": false
+    },
+    {
+      "text": "我想在家休息。",
+      "pinyin": "Wǒ xiǎng zài jiā xiūxi.",
+      "phonemes": "我2ㄒ阳3/ㄗㄞ4ㄐ压1/ㄒ又1ㄒㄧ5.",
+      "nativeSeconds": 2.475,
+      "nativePeak": 0.4702542722225189,
+      "humanReviewed": false
+    },
+    {
+      "text": "因为",
+      "pinyin": "yīnwèi",
+      "phonemes": "阴1为4",
+      "nativeSeconds": 0.95,
+      "nativePeak": 0.3345224857330322,
+      "humanReviewed": false
+    },
+    {
+      "text": "所以",
+      "pinyin": "suǒyǐ",
+      "phonemes": "ㄙ我2ㄧ3",
+      "nativeSeconds": 0.925,
+      "nativePeak": 0.48776689171791077,
+      "humanReviewed": false
+    },
+    {
+      "text": "下雨",
+      "pinyin": "xià yǔ",
+      "phonemes": "ㄒ压4ㄩ3",
+      "nativeSeconds": 0.95,
+      "nativePeak": 0.46441519260406494,
+      "humanReviewed": false
+    },
+    {
+      "text": "公园",
+      "pinyin": "gōngyuán",
+      "phonemes": "ㄍ中1元2",
+      "nativeSeconds": 0.95,
+      "nativePeak": 0.34115418791770935,
+      "humanReviewed": false
+    },
+    {
+      "text": "迟到",
+      "pinyin": "chídào",
+      "phonemes": "ㄔ十2ㄉㄠ4",
+      "nativeSeconds": 0.9,
+      "nativePeak": 0.37822869420051575,
+      "humanReviewed": false
+    },
+    {
+      "text": "原因",
+      "pinyin": "yuányīn",
+      "phonemes": "元2阴1",
+      "nativeSeconds": 1.0,
+      "nativePeak": 0.45736610889434814,
+      "humanReviewed": false
+    },
+    {
+      "text": "你今天为什么迟到了？",
+      "pinyin": "Nǐ jīntiān wèishénme chídào le?",
+      "phonemes": "ㄋㄧ3/ㄐ阴1ㄊ言1/为4ㄕㄣ2ㄇㄜ5/ㄔ十2ㄉㄠ4/ㄌㄜ5?",
+      "nativeSeconds": 2.925,
+      "nativePeak": 0.47027385234832764,
+      "humanReviewed": false
+    },
+    {
+      "text": "因为下雨，路上车很多。",
+      "pinyin": "Yīnwèi xià yǔ, lùshang chē hěn duō.",
+      "phonemes": "阴1为4/ㄒ压4ㄩ3, ㄌㄨ4ㄕㄤ4ㄔㄜ1/ㄏㄣ3ㄉ我1.",
+      "nativeSeconds": 3.1,
+      "nativePeak": 0.3199649751186371,
+      "humanReviewed": false
+    },
+    {
+      "text": "下次早点儿出门吧。",
+      "pinyin": "Xià cì zǎo diǎnr chū mén ba.",
+      "phonemes": "ㄒ压4ㄘㄭ4/ㄗㄠ2ㄉ言R3/ㄔㄨ1ㄇㄣ2/ㄅㄚ5.",
+      "nativeSeconds": 2.625,
+      "nativePeak": 0.4475959241390228,
+      "humanReviewed": false
+    },
+    {
+      "text": "懂",
+      "pinyin": "dǒng",
+      "phonemes": "ㄉ中3",
+      "nativeSeconds": 0.675,
+      "nativePeak": 0.470834344625473,
+      "humanReviewed": false
+    },
+    {
+      "text": "完",
+      "pinyin": "wán",
+      "phonemes": "万2",
+      "nativeSeconds": 0.775,
+      "nativePeak": 0.4353475570678711,
+      "humanReviewed": false
+    },
+    {
+      "text": "句子",
+      "pinyin": "jùzi",
+      "phonemes": "ㄐㄩ4ㄗㄭ5",
+      "nativeSeconds": 0.95,
+      "nativePeak": 0.2861436605453491,
+      "humanReviewed": false
+    },
+    {
+      "text": "再说",
+      "pinyin": "zài shuō",
+      "phonemes": "ㄗㄞ4ㄕ我1",
+      "nativeSeconds": 0.975,
+      "nativePeak": 0.3728112280368805,
+      "humanReviewed": false
+    },
+    {
+      "text": "清楚",
+      "pinyin": "qīngchu",
+      "phonemes": "ㄑ应1ㄔㄨ5",
+      "nativeSeconds": 0.975,
+      "nativePeak": 0.3133677840232849,
+      "humanReviewed": false
+    },
+    {
+      "text": "练习",
+      "pinyin": "liànxí",
+      "phonemes": "ㄌ言4ㄒㄧ2",
+      "nativeSeconds": 1.05,
+      "nativePeak": 0.4188104271888733,
+      "humanReviewed": false
+    },
+    {
+      "text": "你听懂了吗？",
+      "pinyin": "Nǐ tīngdǒng le ma?",
+      "phonemes": "ㄋㄧ3/ㄊ应1ㄉ中3/ㄌㄜ5/ㄇㄚ5?",
+      "nativeSeconds": 1.95,
+      "nativePeak": 0.40691864490509033,
+      "humanReviewed": false
+    },
+    {
+      "text": "没听懂，请再说一遍。",
+      "pinyin": "Méi tīngdǒng, qǐng zài shuō yí biàn.",
+      "phonemes": "ㄇㄟ2/ㄊ应1ㄉ中3, ㄑ应3/ㄗㄞ4ㄕ我1/ㄧ2ㄅ言4.",
+      "nativeSeconds": 2.975,
+      "nativePeak": 0.42409729957580566,
+      "humanReviewed": false
+    },
+    {
+      "text": "好的，我说慢一点儿。",
+      "pinyin": "Hǎo de, wǒ shuō màn yìdiǎnr.",
+      "phonemes": "ㄏㄠ3/ㄉㄜ5, 我3/ㄕ我1/ㄇㄢ4/ㄧ4ㄉ言R3.",
+      "nativeSeconds": 2.45,
+      "nativePeak": 0.4164894223213196,
+      "humanReviewed": false
+    },
+    {
+      "text": "虽然",
+      "pinyin": "suīrán",
+      "phonemes": "ㄙ为1ㄖㄢ2",
+      "nativeSeconds": 0.95,
+      "nativePeak": 0.3443617820739746,
+      "humanReviewed": false
+    },
+    {
+      "text": "但是",
+      "pinyin": "dànshì",
+      "phonemes": "ㄉㄢ4ㄕ十4",
+      "nativeSeconds": 1.025,
+      "nativePeak": 0.4204570949077606,
+      "humanReviewed": false
+    },
+    {
+      "text": "继续",
+      "pinyin": "jìxù",
+      "phonemes": "ㄐㄧ4ㄒㄩ4",
+      "nativeSeconds": 0.925,
+      "nativePeak": 0.24085533618927002,
+      "humanReviewed": false
+    },
+    {
+      "text": "机会",
+      "pinyin": "jīhuì",
+      "phonemes": "ㄐㄧ1ㄏ为4",
+      "nativeSeconds": 0.9,
+      "nativePeak": 0.4457589089870453,
+      "humanReviewed": false
+    },
+    {
+      "text": "坚持",
+      "pinyin": "jiānchí",
+      "phonemes": "ㄐ言1ㄔ十2",
+      "nativeSeconds": 1.025,
+      "nativePeak": 0.4929138123989105,
+      "humanReviewed": false
+    },
+    {
+      "text": "困难",
+      "pinyin": "kùnnan",
+      "phonemes": "ㄎ文4ㄋㄢ5",
+      "nativeSeconds": 0.95,
+      "nativePeak": 0.2885073721408844,
+      "humanReviewed": false
+    },
+    {
+      "text": "你觉得学汉语难吗？",
+      "pinyin": "Nǐ juéde xué Hànyǔ nán ma?",
+      "phonemes": "ㄋㄧ3/ㄐ月2ㄉㄜ5/ㄒ月2/ㄏㄢ4ㄩ3/ㄋㄢ2/ㄇㄚ5?",
+      "nativeSeconds": 2.725,
+      "nativePeak": 0.44152677059173584,
+      "humanReviewed": false
+    },
+    {
+      "text": "虽然有点儿难，但是很有意思。",
+      "pinyin": "Suīrán yǒudiǎnr nán, dànshì hěn yǒu yìsi.",
+      "phonemes": "ㄙ为1ㄖㄢ2/又2ㄉ言R3/ㄋㄢ2, ㄉㄢ4ㄕ十4/ㄏㄣ3/又3ㄧ4ㄙㄭ5.",
+      "nativeSeconds": 3.675,
+      "nativePeak": 0.40004825592041016,
+      "humanReviewed": false
+    },
+    {
+      "text": "我想坚持每天练习。",
+      "pinyin": "Wǒ xiǎng jiānchí měitiān liànxí.",
+      "phonemes": "我2ㄒ阳3/ㄐ言1ㄔ十2/ㄇㄟ3ㄊ言1/ㄌ言4ㄒㄧ2.",
+      "nativeSeconds": 2.825,
+      "nativePeak": 0.5856606364250183,
+      "humanReviewed": false
+    },
+    {
+      "text": "只要",
+      "pinyin": "zhǐyào",
+      "phonemes": "ㄓ十3要4",
+      "nativeSeconds": 0.9,
+      "nativePeak": 0.3235306143760681,
+      "humanReviewed": false
+    },
+    {
+      "text": "只有",
+      "pinyin": "zhǐyǒu",
+      "phonemes": "ㄓ十2又3",
+      "nativeSeconds": 1.025,
+      "nativePeak": 0.32081177830696106,
+      "humanReviewed": false
+    },
+    {
+      "text": "认真",
+      "pinyin": "rènzhēn",
+      "phonemes": "ㄖㄣ4ㄓㄣ1",
+      "nativeSeconds": 0.95,
+      "nativePeak": 0.3288607895374298,
+      "humanReviewed": false
+    },
+    {
+      "text": "方法",
+      "pinyin": "fāngfǎ",
+      "phonemes": "ㄈㄤ1ㄈㄚ3",
+      "nativeSeconds": 1.075,
+      "nativePeak": 0.5322082042694092,
+      "humanReviewed": false
+    },
+    {
+      "text": "效果",
+      "pinyin": "xiàoguǒ",
+      "phonemes": "ㄒ要4ㄍ我3",
+      "nativeSeconds": 0.95,
+      "nativePeak": 0.3986523449420929,
+      "humanReviewed": false
+    },
+    {
+      "text": "进步",
+      "pinyin": "jìnbù",
+      "phonemes": "ㄐ阴4ㄅㄨ4",
+      "nativeSeconds": 0.9,
+      "nativePeak": 0.28721925616264343,
+      "humanReviewed": false
+    },
+    {
+      "text": "怎样才能提高听力？",
+      "pinyin": "Zěnyàng cái néng tígāo tīnglì?",
+      "phonemes": "ㄗㄣ3阳4ㄘㄞ2ㄋㄥ2/ㄊㄧ2ㄍㄠ1/ㄊ应1ㄌㄧ4?",
+      "nativeSeconds": 2.75,
+      "nativePeak": 0.4270254671573639,
+      "humanReviewed": false
+    },
+    {
+      "text": "可以每天听一段短对话。",
+      "pinyin": "Kěyǐ měitiān tīng yí duàn duǎn duìhuà.",
+      "phonemes": "ㄎㄜ2ㄧ3/ㄇㄟ3ㄊ言1/ㄊ应1/ㄧ2ㄉ万4/ㄉ万3/ㄉ为4ㄏ穵4.",
+      "nativeSeconds": 3.15,
+      "nativePeak": 0.5200260281562805,
+      "humanReviewed": false
+    },
+    {
+      "text": "只要有时间，我就练习。",
+      "pinyin": "Zhǐyào yǒu shíjiān, wǒ jiù liànxí.",
+      "phonemes": "ㄓ十3要4/又3/ㄕ十2ㄐ言1, 我3/ㄐ又4/ㄌ言4ㄒㄧ2.",
+      "nativeSeconds": 2.975,
+      "nativePeak": 0.3999881446361542,
+      "humanReviewed": false
+    },
+    {
+      "text": "认为",
+      "pinyin": "rènwéi",
+      "phonemes": "ㄖㄣ4为2",
+      "nativeSeconds": 0.95,
+      "nativePeak": 0.3071924149990082,
+      "humanReviewed": false
+    },
+    {
+      "text": "重要",
+      "pinyin": "zhòngyào",
+      "phonemes": "ㄓ中4要4",
+      "nativeSeconds": 0.95,
+      "nativePeak": 0.3350869417190552,
+      "humanReviewed": false
+    },
+    {
+      "text": "经验",
+      "pinyin": "jīngyàn",
+      "phonemes": "ㄐ应1言4",
+      "nativeSeconds": 0.975,
+      "nativePeak": 0.3422054052352905,
+      "humanReviewed": false
+    },
+    {
+      "text": "建议",
+      "pinyin": "jiànyì",
+      "phonemes": "ㄐ言4ㄧ4",
+      "nativeSeconds": 0.975,
+      "nativePeak": 0.5012208819389343,
+      "humanReviewed": false
+    },
+    {
+      "text": "讨论",
+      "pinyin": "tǎolùn",
+      "phonemes": "ㄊㄠ3ㄌ文4",
+      "nativeSeconds": 0.975,
+      "nativePeak": 0.29067668318748474,
+      "humanReviewed": false
+    },
+    {
+      "text": "选择",
+      "pinyin": "xuǎnzé",
+      "phonemes": "ㄒ元3ㄗㄜ2",
+      "nativeSeconds": 1.0,
+      "nativePeak": 0.4242313504219055,
+      "humanReviewed": false
+    },
+    {
+      "text": "你认为哪种方法更好？",
+      "pinyin": "Nǐ rènwéi nǎ zhǒng fāngfǎ gèng hǎo?",
+      "phonemes": "ㄋㄧ3/ㄖㄣ4为2/ㄋㄚ2ㄓ中3/ㄈㄤ1ㄈㄚ3/ㄍㄥ4ㄏㄠ3?",
+      "nativeSeconds": 2.975,
+      "nativePeak": 0.3995085656642914,
+      "humanReviewed": false
+    },
+    {
+      "text": "对我来说，每天练习更有效。",
+      "pinyin": "Duì wǒ lái shuō, měitiān liànxí gèng yǒuxiào.",
+      "phonemes": "ㄉ为4/我3/ㄌㄞ2ㄕ我1, ㄇㄟ3ㄊ言1/ㄌ言4ㄒㄧ2/ㄍㄥ4/又3ㄒ要4.",
+      "nativeSeconds": 3.55,
+      "nativePeak": 0.3766889274120331,
+      "humanReviewed": false
+    },
+    {
+      "text": "我们可以讨论一下。",
+      "pinyin": "Wǒmen kěyǐ tǎolùn yíxià.",
+      "phonemes": "我3ㄇㄣ5/ㄎㄜ2ㄧ3/ㄊㄠ3ㄌ文4/ㄧ2ㄒ压4.",
+      "nativeSeconds": 2.55,
+      "nativePeak": 0.4086228311061859,
+      "humanReviewed": false
+    }
+  ],
+  "generated": 1,
+  "recovered": 0,
+  "reusedIdenticalPhonemes": 144,
+  "entries": 145,
+  "seconds": 10.39,
+  "apiCalls": 0
+}

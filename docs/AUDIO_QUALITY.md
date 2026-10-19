@@ -37,3 +37,12 @@ bản thu người bản ngữ có quyền sử dụng là phương án dự ph�
 ## Kết quả mẫu
 
 A zf_001:31.5 giây; B zf_002:34.4 giây. 24 mẫu tổng cộng (12 câu/từ ghép và12 từ sinh riêng), vẫn unreviewed. ASR nhận đúng nhiều câu và từ đôi nhưng sai âm đơn; B nhận sai chuỗi bốn thanh nhiều hơn A. Không suy ra A tự nhiên hơn chỉ từ ASR. Đã sửa frontend đọc 还书 bằng từ điển cụm, không sửa cao độ. Báo cáo: reports/audio-candidates.json. Chờ phản hồi nghe, chưa thay thư viện web.
+
+
+## Mẫu A đã được chủ dự án chọn (2026-10-19T07:00:31+07:00)
+D-028 xác nhận chọn âm sắc A. Đang tái tạo145 mục bằng Kokoro FP32 với voice IDhnl-kokoro-zf001-v1; nhận dạng tự động và kiểm tra tín hiệu chỉ là sàng lọc. Cả bank vẫn unreviewed đến khi có duyệt chuyên môn. Từ điển Pinyin có95 cụm (94 từ hiện tại + 还书), không dùng giọng thiết bị hoặc API sinh giọng trả phí.
+
+
+## Bản hiện hành đã tích hợp
+
+Mẫu A đã hoạt động trên website local:145 mục/290 MP3,3,666,688bytes. Đã sửa riêng 打算 theo dǎsuàn (4), giữ biến điệu thanh3 tự nhiên và thanh nhẹ theo Pinyin. Unit18/18,pronunciation3/3,E2E6/6,build/export/backup295file đạt. Đánh giá ngữ âm độc lập vẫn chưa có, mọi clip unreviewed; không đồng nhất việc chủ dự án chọn âm sắc với duyệt toàn bộ học liệu. Chi tiết mới nhất: PROJECT_STATUS.md.

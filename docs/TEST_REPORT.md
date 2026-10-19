@@ -130,3 +130,11 @@ Chạy local tests cần quyền loopback của môi trường; EACCES trong lư
 - npx playwright test tests/e2e/audio.spec.ts:6/6 desktop/mobile (1.8m), gồm chặn manifest lỗi ngay cả preview, không request MP3; các ca transport dùng fixture bỏ disabledReason rõ ràng, không xác nhận chất lượng giọng cũ.
 - pip check cả runtime gốc và Kokoro:đạt; hash model B1D8410F... khớp model card chính thức.
 - Log .local/audio-replacement-*.log. Không thay đổi giao diện sáng/tối hoặc dữ liệu học.
+
+
+### 2026-10-19T07:16:36+07:00 — mẫu A v2 hoàn tất tích hợp kỹ thuật
+-145 mục/290 MP3 active,3,666,688bytes; QAhash/decode0issues; E2E6/6,typecheck/lint/unit18/18,Python3/3,build đạt. Cache không sinh lại.
+- Đã kiểm tra export:145entries,290files, SHA256 khớp. Kiểm tra ban đầu báo nhầm ảnh reference-*.webp là giọng riêng; đã sửa đúng phạm vi reference giọng/model/prompt/DB, chạy lại đạt. scripts/audio-export-check.py lưu phép kiểm tra rõ ràng, không bỏ kiểm tra private files.
+- ASR lại clip sửa 打算 nhận đúng 打算. Không coi ASR là duyệt thanh điệu. ASR16v1 còn sai từ ngắn, mọi clip unreviewed.
+- Backup/restore cuối295file đạt, chỉ cùng máy; archive580file không tham chiếu đã kiểm tra SHA256. Không xóa/reset DB, không deploy/cloud/API sinh giọng có phí.
+- HTTProot/API200 saubuild; listeners3516/10660. Giữ preview chạy. next-env importdev được khôi phục saubuild. AUDIO-08 DONE technical, AUDIO-07 TODO duyệt; CMS/podcast/HSK4/cloud còn theoNEXT_STEPS.

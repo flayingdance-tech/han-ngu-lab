@@ -40,7 +40,7 @@ Trạng thái: TODO / IN_PROGRESS / BLOCKED / DONE. Phạm vi đã chốt; nghi�
 | UI-07 | Khôi phục nữ lo-fi, dark chỉ bỏ trẻ chibi | DONE | Đổi đúng dark hero về study-night.webp; theme 4/4, lint/build đạt, light không đổi |
 
 | AUDIO-01 | Khảo sát VoiceStudio và podcast | DONE | Đọc tài liệu chính thức, kiểm tra audio hiện tại/GPU/file; WORK_LOG. Chưa thử chất lượng |
-| AUDIO-02 | Thử tách nhạc/chỉnh và nhân bản giọng | IN_PROGRESS | Đã tách nhạc và chạy nhân bản/TTS thật cục bộ; quyền giọng xác nhận, master theo D-026. Còn nghe duyệt ngữ âm/độ tự nhiên; ASR/F0 không thay thế duyệt |
+| AUDIO-02 | Thử tách nhạc/chỉnh và nhân bản giọng | DONE | Đã thử thật; bộ nhân bản bị chủ dự án từ chối chất lượng (D-027), chuyển mẫu A theo D-028/AUDIO-08. Đây là kết quả thử nghiệm, không nghiệm thu giọng gốc |
 
 | AUDIO-03 | Xuất mẫu nghe bản thu gốc/tách nhạc/chỉnh nhẹ | DONE | 3 MP3 24.5 giây, CPU pipeline 42.95s, ffprobe/FFmpeg đạt; WORK_LOG và .local/audio-preview/report.json |
 | AUDIO-04 | Mẫu giọng trẻ nhẹ/vừa | DONE | Hai MP3 24.5s +0.75/+1 cung, ffprobe/decode/loudness đạt; chờ đánh giá âm sắc |
@@ -49,4 +49,4 @@ Trạng thái: TODO / IN_PROGRESS / BLOCKED / DONE. Phạm vi đã chốt; nghi�
 | AUDIO-07 | Nghe duyệt audio trước xuất bản | TODO | Người có chuyên môn đối chiếu chữ Hán/Pinyin, bốn thanh, chữ đa âm, độ tự nhiên và quyền media; lưu bằng chứng trước approved. Chưa có output nào approved |
 
 
-| AUDIO-08 | Khắc phục âm méo/sai và thử giọng Mandarin thay thế | IN_PROGRESS | Chủ dự án báo không đạt; chặn bộ cũ, thử mẫu Kokoro riêng, đối chiếu nội dung và nghe trước thay hàng loạt. Không tự approved |
+| AUDIO-08 | Thay giọng lỗi bằng mẫu A — tích hợp kỹ thuật | DONE | D-028 chọn A;145/145 mục,290MP3; Pinyin/打算 regression3/3,unit18/18,E2E6/6,build/export SHA256 đạt,backup/restore295file. Toàn bank vẫn unreviewed, duyệt ở AUDIO-07 |

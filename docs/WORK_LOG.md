@@ -288,3 +288,48 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 - ASR: câu phần lớn có nội dung đầy đủ, hai giọng nhận 姐姐 thành 杰杰 trong câu; B nhận sai cụm 妈妈麻烦马路; từ đơn 谢谢/姐姐/准备/认真 nhận đúng, 你/过 nhận sai. Đây là triage, chưa biết lỗi nào do ASR hay âm thanh; không đủ chứng nhận thanh điệu/độ tự nhiên.
 - Đã gửi hai mẫu nghe và hỏi lựa chọn âm sắc; chưa có phản hồi tại checkpoint này. Không chọn thay người dùng hoặc tự đánh dấu approved. AUDIO-08 IN_PROGRESS; mẫu khả thi nhưng chưa nghiệm thu. Giữ disabledReason ở public và out, đều145entries; không đổi UI/DB.
 - Lệnh render/QA session99406,72255 đã kết thúc; không cần chạy lại. Tiếp: nhận phản hồi mẫu; nếu vẫn không đạt, thử engine khác. Nếu chọn được, kiểm soát từng Pinyin/đa âm rồi tái tạo thư viện bằng ID riêng; vẫn cần duyệt chuyên môn.
+
+
+### 2026-10-19T06:58:24+07:00 — AUDIO-08 thay thư viện bằng mẫu A
+- Chủ dự án đã chọn A. Mốc trước được lưu commit54c0070.
+- Tạo scripts/voice-kokoro.py, voice_pronunciation.py; stage .local/voice-kokoro/public, không đổi manifest web đến khi145/145 và QA đạt. CPU FP32, presetzf_001, không pitch/formant, atempo0.8 cho chậm.
+- Pinyin từ vựng tạo phrase lexicon, giữ tone sandhi/erhua frontend ở câu; phát hiện xung đột chữ đa âm phải dừng, không lấy ngẫu nhiên một reading.
+- Renderer session13382 PID5720, log .local/kokoro-bank-render.log; còn đang import/load. Mã schema cho hai voice ID có kiểm tra path khớp voice; publisher cần hash QA đúng. Tiếp: render/QA, publish atomically, backup/restore, kiểm thử và build. Không sửa DB/giao diện.
+
+
+### 2026-10-19T07:03:03+07:00 — checkpoint render mẫu A
+- ~50/145 clip stage; không PID cũ render, chỉ renderer5720/session13382. Pinyin95 cụm căn đủ; Python pronunciation3/3 đạt.
+- Backup trước switch .local/voice-backups/2026-10-19T00-01-34-646Z, restore-check cùng timestamp:297 file SHA256 khớp, chứa profile riêng nguồn cũ, cùng máy.
+- Preview sáng nay chưa chạy; đã kiểm tra port/HTTP rồi khởi động hidden API13088/web15056; log dev-*-kokoro. Không đọc stdout auth.
+- npm typecheck đã chạy không có lỗi; chuỗi session21651 đang lint10616, test chưa bắt đầu; không coi test đã đạt.
+- Tiếp: đợi render, signalQA/hash +ASR16 mẫu stage, npm audio:publish, backup bộ mới, testE2E/build/static export, lưu Git. Không chạy lại render từ đầu, giữ cache stage.
+
+
+### 2026-10-19T07:06:15+07:00 — render mẫu A hoàn tất
+- stage145/145,290 MP3; generated145/recovered0,339.48s sau khởi tạo. Fingerprint 1ebcb1f4c823a10288b1407187671b75ef6e2357d0299f19dbdbe66d2d0b13f4. Source model0.9.4 presetzf_001 FP32.
+- Report .local/voice-kokoro/render-report.json; bản metadata cho duyệt docs/reports/audio-pronunciation.json. Các clip đều unreviewed.
+- Renderer13382 đã kết thúc; QA chờ1808 đang decode/hash và ASR16, log kokoro-bank-qa.log. Chưa publish. Unit18/18,Python3/3,typecheck/lint đạt; audit thêm chặn release nếu disabledReason.
+
+
+### 2026-10-19T07:10:56+07:00 — sửa thanh nhẹ ngoài Pinyin
+- QA v1:290file đạt signal,16ASR có sai từ ngắn. Đối chiếu metadata phát hiện 打算 dǎsuàn bị frontend tự giảm 算 về5; đã sửa word_phonemes để mục từ giữ lexical tone theo Pinyin và chỉ áp dụng biến điệu thanh3. Câu vẫn dùng frontend tự nhiên.
+- V1 đã switch/backup nhưng sau phát hiện đã chặn tạm; workspace v1 được chuyển an toàn vào .local/voice-kokoro-v1. Không mất file.
+- V2 render:145 entries,1 clip mới (打算),144 clip reuse chỉ khi phonemes + model/speaker/speed/encoding khớp.10.39s; fingerprint f01aa4136b3673244590e4e98d93542d89e931c5fa0869f78b8580ce8789cb3c. Python3/3 có regression 打算 giữ4/谢谢 giữ5/你好变调2.
+- Session publish v2 đang QAhash290 rồi switch/audit/backup. Tiếp: nghe/trình duyệtE2E, kiểm tra export, archive file không còn tham chiếu, docs/Git. ASR vẫn không thay duyệt chuyên môn.
+
+
+### 2026-10-19T07:13:41+07:00 — bộ mẫu A v2 đang hoạt động
+-145entries/290MP3,3,666,688 bytes; profilef01aa413..., không disabledReason, mọi clip unreviewed. V2QA decode/hash290issues0. ASR16 là bộv1, chỉ clip打算 thay đổi; không ghi ASR v1 thành kết quả ASR v2.
+- Publish/audit v2 đạt; backup .local/voice-backups/2026-10-19T00-11-01-948Z và restore-check cùng timestamp:295file SHA256khớp, metadata preset, không private master. Cùng máy, chưa ngoài máy.
+- Archive580MP3không còn tham chiếu ->.local/voice-retired/20261019T001158148707Z, mỗi file kiểm traSHA256; còn290active. Không xóa dữ liệu.
+- E2Eaudio6/6 desktop/mobile (1.2m), nút thường/chậm phátfile thật, đổi tab dừng, lỗi mạng/retry, ngăn giọng lỗi. Python3/3,unit18/18,typecheck/lint đạt, eslint2file cuốiđạt.
+- Cache no-op:generated0/recovered0/reused0,total145,0.05s, không khởi tạo model; cache-check.json riêng, giữ render-report gốc.
+- Build đang chạy log kokoro-build.log. Tiếp: kiểm tra export290SHA256/không private leak, kiểm traHTTP sau build, cập nhậtSTATUS/TASKS/NEXT/TEST_REPORT, commit.
+
+
+### 2026-10-19T07:16:36+07:00 — mẫu A v2 hoàn tất tích hợp kỹ thuật
+-145 mục/290 MP3 active,3,666,688bytes; QAhash/decode0issues; E2E6/6,typecheck/lint/unit18/18,Python3/3,build đạt. Cache không sinh lại.
+- Đã kiểm tra export:145entries,290files, SHA256 khớp. Kiểm tra ban đầu báo nhầm ảnh reference-*.webp là giọng riêng; đã sửa đúng phạm vi reference giọng/model/prompt/DB, chạy lại đạt. scripts/audio-export-check.py lưu phép kiểm tra rõ ràng, không bỏ kiểm tra private files.
+- ASR lại clip sửa 打算 nhận đúng 打算. Không coi ASR là duyệt thanh điệu. ASR16v1 còn sai từ ngắn, mọi clip unreviewed.
+- Backup/restore cuối295file đạt, chỉ cùng máy; archive580file không tham chiếu đã kiểm tra SHA256. Không xóa/reset DB, không deploy/cloud/API sinh giọng có phí.
+- HTTProot/API200 saubuild; listeners3516/10660. Giữ preview chạy. next-env importdev được khôi phục saubuild. AUDIO-08 DONE technical, AUDIO-07 TODO duyệt; CMS/podcast/HSK4/cloud còn theoNEXT_STEPS.

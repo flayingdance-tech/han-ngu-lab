@@ -14,6 +14,7 @@ test.beforeEach(async ({page}) => {
 
 test('quality-rejected library cannot play even in local preview',async({page})=>{
   await page.unroute('**/audio/manifest.json');
+  await page.route('**/audio/manifest.json',route=>route.fulfill({json:{version:1,voiceId:'hnl-original-v1',label:'Giọng đã dừng',engine:'OmniVoice',generatedAt:'2026-10-18',disabledReason:'Bộ cũ chất lượng chưa đạt.',entries:{}}}));
   const requests:string[]=[];
   page.on('request',request=>{if(request.url().endsWith('.mp3')) requests.push(request.url());});
   await page.goto('/');
@@ -33,7 +34,7 @@ test('chosen project voice plays real normal and slow files without browser spee
   });
   await page.goto('/');
   await page.getByRole('button',{name:'Bắt đầu bài đầu tiên'}).click();
-  const normal=page.waitForResponse(r=>/\/audio\/hnl-original-v1\/[a-f0-9]+\.mp3/.test(r.url())&&r.ok());
+  const normal=page.waitForResponse(r=>/\/audio\/hnl-kokoro-zf001-v1\/[a-f0-9]+\.mp3/.test(r.url())&&r.ok());
   await page.getByRole('button',{name:'Nghe 你',exact:true}).click();
   await normal;
   await expect.poll(()=>page.evaluate(()=>(window as unknown as AudioWindow).hnlAudio.at(-1)?.readyState??0)).toBeGreaterThanOrEqual(2);
@@ -53,7 +54,7 @@ test('chosen project voice plays real normal and slow files without browser spee
   await expect(page.getByRole('heading',{name:'Sổ từ vựng.'})).toBeVisible();
   await page.getByRole('button',{name:'Nghe 你',exact:true}).click();
   await expect.poll(()=>page.evaluate(()=>(window as unknown as AudioWindow).hnlAudio.at(-1)?.readyState??0)).toBeGreaterThanOrEqual(2);
-  expect(await page.evaluate(()=>(window as unknown as AudioWindow).hnlAudio.at(-1)?.src)).toContain('/audio/hnl-original-v1/');
+  expect(await page.evaluate(()=>(window as unknown as AudioWindow).hnlAudio.at(-1)?.src)).toContain('/audio/hnl-kokoro-zf001-v1/');
   expect(await page.evaluate(()=>(window as unknown as AudioWindow).hnlBrowserTts)).toBe(0);
 });
 
