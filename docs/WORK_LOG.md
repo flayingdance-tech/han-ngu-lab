@@ -370,3 +370,7 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 - Export audio145/290 SHA khớp/no privateLeaks,root/API200,media Range206 sau build. Backup/restore33file timestamp2026-10-19T05-41-04.088Z SHA khớp,cùng máy,chưa offsite;không DB/model/runtime đầy đủ.
 - Lưu resume/preferences/yêu thích chỉthiếtbị; loop/liêntục/transcript có credit. Nguồn nhạc/config và lỗi POD08..10/OPS01 ở runbook/sổlỗi. APIlauncher11404/listener16032,weblauncher14680/listener14116; kiểm tra lại PID khi tiếp tục.
 - Không còn render/ASR cần chờ; không tự tạo lại audio. POD-02 còn TODO: duyệt bằng người/CMS publication. Toàn dự án/cloud/HSK4 còn backlog.
+
+## 2026-10-19T12:42:53+07:00 — Checkpoint mã nguồn POD-03
+- Commit triển khai9feac85 (Switch podcasts to study lo-fi and complete daily listening). Checks/backup/media đã ghi ở mốc trên; không tác vụ sinh audio còn dở. Working tree sạch sau commit triển khai.
+- Tiếp tục từ PROJECT_STATUS/NEXT_STEPS; giữ lựa chọn lo-fi/giọng A, không render lại. POD-02 vẫn cần duyệt chuyên môn và CMS xuất bản.
