@@ -1,4 +1,4 @@
-POD-04 v3 2026-10-19T19:14:24.7035942+07:00 — Đã render mẫu private pilot-v3-mix.mp3,87.060s,giọngA tốc độ.84; Dreams Become Real (Kevin MacLeod),CC BY4.0,excerpt liên tục từ30s,loopCount0,không tách giọng. Music RMS3s range1.217dB,mix -21.96LUFS,true peak -4.13dBTP. ASR exit0, nhận đủ câu, đồng âm 他/她/的/地/在/再; không thay duyệt nghe. D-033: chờ chủ dự án nghe/chốt, chưa áp dụng web/full.
+POD-04 v4 2026-10-19T21:45:53.6503584+07:00 — Mẫu mới pilot-v4-mix.mp3,87.060s: khôi phục nền video tham chiếu theo D-035; giữ nguyên WAV giọng chậm v3 (SHA lưu report). Bỏ Dreams Become Real khỏi lựa chọn hiện hành. Nền range1.386dB,không duck,mix -21.96LUFS/true peak -4.36dBTP. Nguồn24giây có nối nền, không hứa không lặp. D-033: chờ chủ dự án nghe/chốt, chưa sửa web/full. Tạo lại mẫu hiện hành bằng scripts/radio-remix-reference.py; radio-pilot.py là phương án v3 đã bị từ chối.
 
 # Bước tiếp theo
 

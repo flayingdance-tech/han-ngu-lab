@@ -1,8 +1,8 @@
-# Kịch bản radio v3 — Chào tuần mới
+# Kịch bản radio v4 — Chào tuần mới
 
 Ngày19/10/2026, thứ Hai. Một người dẫn, giọngA tốc độ tổng hợp .84. Mỗi câu một lần; không mục ghi nhớ. Audio-only, chưa duyệt chuyên môn.
 
-Nhạc: Dreams Become Real — Kevin MacLeod (incompetech.com), CC BY4.0 https://creativecommons.org/licenses/by/4.0/ . Nguồn https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500027 . Trích đoạn liên tục từ giây30, cân mức nền và fade; không loop hoặc tách giọng. Mẫu chờ chủ dự án chốt trước áp dụng web.
+Nhạc v4: nền video chủ dự án cung cấp, quyền sử dụng do chủ dự án xác nhận. Nguồn24giây có nối equal-power/cân mức/fade; không duck theo lời. Giữ giọng chậm v3. Chờ nghe/chốt mẫu trước khi áp dụng web.
 
 早上好，欢迎收听汉语时光。今天是十月十九日，星期一。新的一周，我们一起，慢慢开始。
 [Không đọc: nghỉ 1 giây; tốc độ 0.84]

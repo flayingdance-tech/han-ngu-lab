@@ -69,3 +69,5 @@ D-032 ACCEPTED 2026-10-19T15:37:04.9248927+07:00 : bỏ hoàn toàn mục đọc
 D-033 ACCEPTED 2026-10-19T15:39:18.2339527+07:00 : bắt buộc gửi mẫu audio cho chủ dự án nghe và chốt trước khi áp dụng vào dự án full. Chỉ làm mẫu private trong lượt hiện tại; không thay danh mục/UI hay sinh hàng loạt nếu chưa được chốt.
 
 D-034 2026-10-19T19:14:00.8940793+07:00 — Yêu cầu đã chốt: đọc chậm, nhẹ; nền êm cho nghe ngủ/buổi sáng, tránh lặp/nhiễu. Phương án v3 CHỜ DUYỆT: giọngA tốc độ.84, Dreams Become Real (Kevin MacLeod) CC BY4.0, bản dài6:50, trích liên tục không loop. Chỉ mẫu, chưa được chủ dự án chốt nhạc mới hoặc triển khai full; D-033 giữ nguyên.
+
+D-035 ACCEPTED 2026-10-19T21:45:29.9680080+07:00 : chủ dự án từ chối nhạc Dreams Become Real trong mẫu v3, yêu cầu dùng lại nhạc cũ (nền tách từ video tham chiếu ở v1/v2). Giữ giọng chậm v3, xuất mẫu v4 riêng bằng scripts/radio-remix-reference.py. Nguồn24giây vẫn phải nối nền, không tuyên bố loopCount0. Chờ nghe/chốt trước áp dụng full theo D-033.

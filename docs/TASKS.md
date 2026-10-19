@@ -63,3 +63,5 @@ POD-04 bằng chứng mẫu (2026-10-19T14:50:19.8021012+07:00): pilot-mix.mp3 7
 POD-04 v2 (2026-10-19T15:41:10.4719983+07:00): mẫu78.28s/7đoạn, không đọc lặp/cụm ghi nhớ; nền ổn định không speech duck. IN_PROGRESS, chờ chủ dự án chốt mẫu theo D-033 trước áp dụng full. File và report có hậu tố v2; giữ v1.
 
 POD-04 v3 (2026-10-19T19:15:07.5198195+07:00): mẫu87.060s, tốc độ.84, nhạc dài CC BY4.0 excerpt liên tục,loopCount0,range1.217dB; render/ASR đạt,backup14file hashkhớp. IN_PROGRESS chờ chủ dự án nghe/chốt theo D-033; chưa đổi web.
+
+POD-04 v4 (2026-10-19T21:45:53.6503584+07:00): chủ dự án từ chối nhạc v3; mẫu87.060s nền tham chiếu cũ + WAVgiọng chậm v3 giữ SHA. Render/true peak đạt,backup8file SHAkhớp. IN_PROGRESS chờ nghe/chốt; không áp dụng full.

@@ -407,3 +407,8 @@ Render session1709 không còn trong tool; kiểm tra log/file thực tế thấ
 - ASR exit0,đủ nội dung từ mở đến kết; sai chữ đồng âm 他/她/的/地/在/再,không phải chứng cứ lỗi phát âm. Không tuyên bố đã nghe/duyệt cảm xúc hoặc tuyệt đối không nhiễu.
 - Backup14file hashkhớp tại .local\podcast-backups\radio-v3-20261019-191507,cùngmáy,không offsite. Metadata MP3 và docs có credit Kevin MacLeod CC BY4.0; config kèm SHA và đoạn30–117.060s. Không loop/source separation/noise FX,nhạc targetRMS.010 so với.018 ởv2; giọngtarget.10 so với.12.
 - git diff --check đạt; không chạy build/E2E vì không đổi web/backend. Không tiến trình còn chạy. Chờ chốt mẫu; không tự triển khai full.
+
+## 2026-10-19T21:45:53.6503584+07:00 — Khôi phục nhạc tham chiếu, mẫu v4
+- D-035: không dùng Dreams Become Real. scripts/radio-remix-reference.py kiểm hash reference stem, tái dùng WAVgiọng chậm v3 nguyên SHA, nối nền equal-power/cân mức độc lập; không speech duck/masterdynamic.87.060s,range1.386dB,-21.96LUFS/-4.36dBTP. Filev4 riêng,không ghi đèv1–v3.
+- Render exit0; không ASR lại vì giọng WAV nguyên v3 đã ASR,nhạc tham chiếu đã dùngv2; không tuyên bố đã nghe hoặc duyệt cảm xúc. Backup8file hashkhớp .local\podcast-backups\radio-v4-20261019-214553,cùngmáy.
+- Không đổi web/backend/giáo trình,không chạy build/E2E. Chờ chủ dự án chốt theo D-033. Không tiến trình còn chạy.
