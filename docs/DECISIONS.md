@@ -73,3 +73,7 @@ D-034 2026-10-19T19:14:00.8940793+07:00 — Yêu cầu đã chốt: đọc chậ
 D-035 ACCEPTED 2026-10-19T21:45:29.9680080+07:00 : chủ dự án từ chối nhạc Dreams Become Real trong mẫu v3, yêu cầu dùng lại nhạc cũ (nền tách từ video tham chiếu ở v1/v2). Giữ giọng chậm v3, xuất mẫu v4 riêng bằng scripts/radio-remix-reference.py. Nguồn24giây vẫn phải nối nền, không tuyên bố loopCount0. Chờ nghe/chốt trước áp dụng full theo D-033.
 
 D-036 PROPOSED 2026-10-19T21:48:29.8968579+07:00 : chủ dự án hỏi làm giọng thanh hơn; tạo mẫu EQ nhẹ từv4 để so sánh, không đổi pitch/formant hoặc tốc độ. Chưa được chọn thay giọng hiện hành. D-033 vẫn yêu cầu chốt mẫu trước áp dụng full.
+
+D-037 ACCEPTED 2026-10-19T22:00:14.1539291+07:00 : chủ dự án yêu cầu thay nền bằng file 海来阿木 - 不如见一面 (钢琴版) - (320 Kbps).mp3 và nâng nhạc hòa với giọng nhưng rõ lời. Làm mẫu v5 riêng,giữ giọng chậm EQ nhẹ. Nhạc78.878s,atempo.89 không đổi pitch đủ87.060s,không loop. Chưa xác minh giấy phép phát hành công khai của file mới; chỉ mẫu private,không tự gán quyền nhạc video cũ sang file này. D-033 chờ chốt trước áp dụng full.
+
+D-038 ACCEPTED 2026-10-19T22:03:19.1731098+07:00 : chủ dự án làm rõ phải CẮT/GHÉP đoạn piano để nhạc nối tiếp liên tục,giữ nguyên nhịp/cao độ và toàn bộ lời dẫn. Thay phương án kéo nhịpv5 và cắt lờiv6 (cảhai không được chốt). Mẫuv7 chèn đoạn nguồn35–49s tại55s,nối2điểm bằng crossfade2s,đủ87.060s. Nâng nền hòa giọng nhưng rõ lời; giữ yêu cầu duyệt mẫu D-033 trước full.

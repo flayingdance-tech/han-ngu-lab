@@ -416,3 +416,12 @@ Render session1709 không còn trong tool; kiểm tra log/file thực tế thấ
 ## 2026-10-19T21:48:29.8968579+07:00 — Mẫu giọng thanh nhẹ bằng EQ
 FFmpeg xử lý giọng riêng,giảm300Hz/tăng2800Hz và6500Hz nhẹ; không pitch/formant/tốc độ. Nền v4 giữ nguyên,giọng pan stereo trước amix. MP3 pilot-v4-bright-mix.mp3; -22.62LUFS/-4.07dBTP,decode2kênh87.10s có MP3padding. Recipe/hash/QA cạnhfile. Không ASR lại: chỉ EQ nhẹ giọng đã được triage,không tạo text/giọng mới; chưa duyệt cảm nhận,không sửaweb.
 Backup3file sample/recipe/QA hashkhớp ở .local\podcast-backups\radio-bright-20261019-214830,cùngmáy. git diff --check trướccommit.
+
+## 2026-10-19T22:00:14.1539291+07:00 — Mẫu v5 dùng piano do chủ dự án gửi
+- scripts/radio-user-piano.py render exit0,87.060s; voice sáng EQ như mẫu trước,nhạc RMS target.040 thay.010,balance -5.665dB so với voiceactive. Nhạc35Hzhighpass/2400Hz-2dB tránh lấn lời;không speechduck,mastergaincốđịnh. True peak -3.56dBTP,-21.65LUFS.
+- File nguồnstereo44.1kHz78.878s,tempo.89 không đổi cao độ/khôngloop. Hash nguồn trong report-v5.json;không chỉnh file nguồn. ASR đang chạy session53705, xem log asr-v5.log; kiểm tra process khi tiếp tục. Chưa sửaweb.
+
+## 2026-10-19T22:04:19.8363573+07:00 — V7 theo chỉ dẫn cắt-ghép nhạc liên tục
+- Chủ dự án sửa2lần: v5tempo.89 vàv6rútđoạndẫn đều bị thay thế trước áp dụngweb. Không dùng2mẫu này. V7 giữ đủ7đoạn/tốcđộ.84,giọngEQnhẹ,nềnnguyênnhịp/caođộ;chèn nguồn35–49s tại55s với2crossfade2s,trim87.060s. Không speechduck/masterdynamic. Nhạc RMS target.040,balance -5.57dB;mix -21.72LUFS/-3.58dBTP.
+- ASRfinalv7 exit0,đủnội dung,đồngâm他/她/的/地/在/再;không kếtluận duyệtnghe. Renderexit0;không đổiweb/backend,không chạybuild/E2E. Backup11file nguồn/script/sample/QA hashkhớp .local\podcast-backups\radio-v7-20261019-220419,cùngmáy.
+- Không tiến trình còn chạy. Gửi mẫu v7 nghe/chốt theo D-033. Giấy phép công khai của piano mới chưa được xác minh;không gán quyền từnhạcvideocũ.

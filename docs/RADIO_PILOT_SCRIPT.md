@@ -1,8 +1,8 @@
-# Kịch bản radio v4 — Chào tuần mới
+# Kịch bản radio v7 — Chào tuần mới
 
 Ngày19/10/2026, thứ Hai. Một người dẫn, giọngA tốc độ tổng hợp .84. Mỗi câu một lần; không mục ghi nhớ. Audio-only, chưa duyệt chuyên môn.
 
-Nhạc v4: nền video chủ dự án cung cấp, quyền sử dụng do chủ dự án xác nhận. Nguồn24giây có nối equal-power/cân mức/fade; không duck theo lời. Giữ giọng chậm v3. Chờ nghe/chốt mẫu trước khi áp dụng web.
+Nhạc v7: piano file chủ dự án cung cấp. Giữ nhịp/cao độ gốc;chèn đoạn nguồn35–49s tại55s,crossfade2s hai đầu rồi cắt đủ87.060s. Giữ đủ lời chậm EQnhẹ;nhạc nền nổi hơn nhưng giọng được ưu tiên. Chờ chủ dự án nghe/chốt trước áp dụng web.
 
 早上好，欢迎收听汉语时光。今天是十月十九日，星期一。新的一周，我们一起，慢慢开始。
 [Không đọc: nghỉ 1 giây; tốc độ 0.84]

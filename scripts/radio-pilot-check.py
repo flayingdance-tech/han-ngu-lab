@@ -1,5 +1,6 @@
 """Decode actual draft MP3s; ASR is diagnostic, never a human listening review."""
 import json
+import argparse
 import subprocess
 from pathlib import Path
 import numpy as np
@@ -7,8 +8,16 @@ from faster_whisper import WhisperModel
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'.local/podcasts/radio-pilot'
-report=json.loads((OUT/'report-v3.json').read_text(encoding='utf-8'))
-assert report['musicLoopCount']==0 and report['speechDucking'] is False
+parser=argparse.ArgumentParser()
+parser.add_argument('--revision',choices=['v3','v5','v6','v7'],default='v3')
+revision=parser.parse_args().revision
+report=json.loads((OUT/f'report-{revision}.json').read_text(encoding='utf-8'))
+assert report['speechDucking'] is False
+if revision=='v7':
+    assert report['musicLoopCount']==1 and report['music']['tempo']==1.
+    assert len(report['segments'])==7
+else:
+    assert report['musicLoopCount']==0
 model=WhisperModel(str(ROOT/'.local/audio-preview/asr-model'),device='cpu',compute_type='int8',cpu_threads=2)
 result={'humanReviewed':False,'purpose':'Independent ASR triage of final mix; does not judge music or emotion','recognized':[]}
 asset=Path(report['assets']['mix']['file'])
@@ -22,4 +31,4 @@ for segment in segments:
     result['recognized'].append(item)
     print(segment.text,flush=True)
 result['expected']=''.join(s['text'] for s in report['segments'])
-(OUT/'asr-triage-v3.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+(OUT/f'asr-triage-{revision}.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
