@@ -9,11 +9,11 @@ from faster_whisper import WhisperModel
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'.local/podcasts/radio-pilot'
 parser=argparse.ArgumentParser()
-parser.add_argument('--revision',choices=['v3','v5','v6','v7','v8'],default='v3')
+parser.add_argument('--revision',choices=['v3','v5','v6','v7','v8','v9'],default='v3')
 revision=parser.parse_args().revision
 report=json.loads((OUT/f'report-{revision}.json').read_text(encoding='utf-8'))
 assert report['speechDucking'] is False
-if revision in ('v7','v8'):
+if revision in ('v7','v8','v9'):
     assert report['musicLoopCount']==1 and report['music']['tempo']==1.
     assert len(report['segments'])==7
 else:

@@ -79,3 +79,5 @@ D-037 ACCEPTED 2026-10-19T22:00:14.1539291+07:00 : chủ dự án yêu cầu tha
 D-038 ACCEPTED 2026-10-19T22:03:19.1731098+07:00 : chủ dự án làm rõ phải CẮT/GHÉP đoạn piano để nhạc nối tiếp liên tục,giữ nguyên nhịp/cao độ và toàn bộ lời dẫn. Thay phương án kéo nhịpv5 và cắt lờiv6 (cảhai không được chốt). Mẫuv7 chèn đoạn nguồn35–49s tại55s,nối2điểm bằng crossfade2s,đủ87.060s. Nâng nền hòa giọng nhưng rõ lời; giữ yêu cầu duyệt mẫu D-033 trước full.
 
 D-039 ACCEPTED 2026-10-19T22:06:00.9306503+07:00 : chủ dự án yêu cầu nâng nhạc gần mức giọng hơn. Mẫuv8 tăng nền thêm3.52dB so v7,targetRMS.060 thay.040,balance -2.05dB so với giọngactive. Giọng/cácđiểmnối/nhịp/caođộ giữ nguyên;chưa chốt áp dụngweb D-033.
+
+D-040 ACCEPTED 2026-10-19T22:11:05.2640722+07:00 : chủ dự án yêu cầu giọng dẫn radio/kể chuyện và KHÔNG ĐỔI NHẠC. Mẫu v9 chỉ tổng hợp lại phần dẫn (A): nhịp đoạn.82–.90/ngắt theo ý,thay câu giới thiệu4câu bằng lời tâm tình;giữ nội dung chính. Dùng nguyên PCM pilot-v8-music.wav kể cả mứcâm/điểmnối/thờilượng;assert SHA nguồn và residualmix. Chưa chốt mẫu/triểnkhaifull theo D-033.

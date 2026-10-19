@@ -71,3 +71,5 @@ POD-04 EQ (2026-10-19T21:48:29.8968579+07:00): mẫu thanh nhẹ87s,samev4music,
 POD-04 v7 (2026-10-19T22:04:19.8363573+07:00): piano file mới chủ dự án,cắt-ghép14s vào nguồn55s,crossfade2s,nguyênnhịp/caođộ,đủ7đoạn87.060s. Nềnbalance -5.57dB/true peak -3.58dBTP;ASR đạt,backup11file hashkhớp. IN_PROGRESS chờ chủ dự án nghe/chốt; không áp dụngweb.
 
 POD-04 v8 (2026-10-19T22:06:51.6085568+07:00): tăng nền3.52dB/balance-2.05dB,87.060s,voiceSHA giữ nguyên. Render/ASR đủ nội dung,true peak-3.26dBTP;backup5file hashkhớp. IN_PROGRESS chờ chủ dự án nghe/chốt,không đổiweb.
+
+POD-04 v9 (2026-10-19T22:16:59.3083211+07:00): mẫu dẫn/kểchuyện87.060s,lờikết80.98s;giọngA nhịp.82–.90/ngắt theoý,nhạcPCMv8giữSHA bbcd3e0f... (full trong report) và residualmix<1e-7. Render/ASR chạy đạt;ASR 好→号 còn cần nghe,không tựduyệt. Backup11file hashkhớp. IN_PROGRESS chờ chủ dự án chốt,không đổiweb.

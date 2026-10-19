@@ -1,3 +1,5 @@
+POD-04 v9 2026-10-19T22:16:00.4213511+07:00 — Mẫu giọng kể đã tạo pilot-v9-mix.mp3,87.060s,lời kết80.98s. Nhịp kể/điểmngắt theo content/radio-storyteller.json;giọngA,không pitch/formant. Nhạc nguyên PCM v8 (SHA+mix residual đã kiểm),không đổi âm lượng/điểm nối/thời lượng. -20.36LUFS/-3.52dBTP. ASR exit0,không thấy mất nguyên câu; có 好→号 cần người nghe xác nhận,không coi ASR là duyệt thanh điệu;chờ chủ dự án nghe/chốt trước full.
+
 POD-04 v8 2026-10-19T22:06:00.9306503+07:00 — pilot-v8-mix.mp3,87.060s; nâng nền piano thêm3.52dB so v7,balance -2.05dB,true peak -3.26dBTP. Giữ nguyên lời/giọng/nhịp/cao độ/cáchghép. ASRfinalmix exit0,nhận đủ nội dung; chờ chủ dự án nghe/chốt,không sửaweb.
 
 Mẫu EQ thanh nhẹ (2026-10-19T21:48:29.8968579+07:00): pilot-v4-bright-mix.mp3,giảm300Hz1.5dB/tăng2800Hz1.2dB/highshelf6500Hz0.8dB; không pitch/tốc độ; nềnv4 nguyên stereo. -22.62LUFS/-4.07dBTP. Chờ chủ dự án so sánh, chưa đổi lựa chọn giọng hay web. Recipe+QA nằm cạnh file.

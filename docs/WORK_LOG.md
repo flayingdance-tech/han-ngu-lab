@@ -430,3 +430,11 @@ Backup3file sample/recipe/QA hashkhớp ở .local\podcast-backups\radio-bright-
 Renderexit0,87.060s,target.060từ.040 (+3.52dB). Balance -2.049dB,mix -20.26LUFS/true peak -3.26dBTP. Filevoicev8/v7SHA trùng4fffa6f4...,giọng không đổi;nhịp/caođộ/cácđiểmghép nguyên. ASRfinalmix đang chạy session93307/logasr-v8.log. Không sửaweb.
 
 2026-10-19T22:06:51.6085568+07:00 — ASRv8exit0,nhậnđủnội dung; đồngâm 他/她/的/地/在/再 như cácbảntrước,không thay duyệt nghe. Backup5filehashkhớp .local\podcast-backups\radio-v8-20261019-220651,cùngmáy;nguồn/voiceđầyđủởbackupv7. Không tiến trình còn chạy,không chạybuild/E2E vì không đổiweb. Chờ chủ dự án chốt.
+
+## 2026-10-19T22:11:05.2640722+07:00 — Đang tạo giọng kể radio v9
+content/radio-storyteller.json và scripts/radio-storyteller.py: mởthânthiện,tâmsựchậm,kểchuyện.90,kết.82,ngắt.7–1.1s;không pitch/formant. Nhạc bắtbuộc nguyênv8,sốmẫu/thờilượng không đổi,khôngmastergainchung. Session27161/logrender-v9.log;chưa báo hoànthành khi chưaQA.
+
+## 2026-10-19T22:16:59.3083211+07:00 — Mẫu giọng kể v9 sẵn sàng nghe
+- Renderexit0,7đoạn,87.060s,lờikết80.98s. GiọngA thay pacing/punctuation/câudẫngiớithiệu,không pitch/formant. VoiceEQấmnhẹ,không reverb/SFX. Music v8 nguyên PCM SHA BBCD3E0F2D936B8CC6CE5D4597A4DD44CFF130A4FB5E6612179439028548878B;assertresidualmix<1e-7,không đổi gain/điểm nối/độdài nền. Mix -20.36LUFS/-3.52dBTP.
+- ASRexit0 không thấy mất nguyêncâu; 好→号 khác thanh điệu,他/她,的/地,在/再 khác chữ. Không suyra phátâm đúng hoặc sai chỉtừASR;giữunreviewed và cần nghe mẫu. Không tự nhận đã nghe/duyệt cảm xúc.
+- Backup11filehashkhớp .local\podcast-backups\radio-v9-20261019-221659,cùngmáy,không kèmruntime/model. Không đổiweb/backend,không chạybuild/E2E. Không tiến trình còn chạy. D-033 chờ chủ dự án nghe/chốt trước full.
