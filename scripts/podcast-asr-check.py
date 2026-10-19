@@ -16,5 +16,5 @@ for episode in catalog['episodes']:
     segments,_=model.transcribe(np.frombuffer(raw,dtype='<f4').copy(),language='zh',beam_size=5,initial_prompt='以下是普通话简体中文学习内容。')
     actual=[{'start':s.start,'end':s.end,'text':s.text} for s in segments]
     report['episodes'].append({'id':episode['id'],'expected':' '.join(s['zh'] for s in episode['segments']),'recognized':actual})
-    (WORK/'asr-triage.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+    (WORK/'lofi/asr-triage.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
     print(episode['id'],''.join(s['text'] for s in actual),flush=True)

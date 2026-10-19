@@ -54,3 +54,6 @@ D-028 ACCEPTED (2026-10-19T06:58:24+07:00): chủ dự án chọn mẫu A, Kokor
 
 ## D-029 — Đã chốt, 2026-10-19 (+07): ưu tiên podcast
 Chủ dự án giao toàn quyền xử lý podcast, tự chọn/tải nhạc phù hợp giọng A và ghi lỗi/cách sửa. Triển khai 3 tập công sở thử nghiệm; chọn Almost in F (Kevin MacLeod), CC BY 4.0 có ghi công. Không mua dịch vụ. Bản nháp không phát hành công khai; duyệt chuyên môn vẫn chưa hoàn tất.
+
+## D-030 — Đã chốt, 2026-10-19T12:35:04+07:00 : lo-fi chill học tập
+Chủ dự án đổi lựa chọn từ Chinese ambient/guzheng sang lo-fi chill học tập. Nhạc mới Watching Rain Together — Pamela Yuen, nguồn FMA và trang quyền tác giả, CC BY4.0; ghi công tại UI/metadata/lời thoại tải. Không dùng nguồn trả phí; không đăng nhạc lên dịch vụ phân phối/Content ID. Hoàn thiện kỹ thuật nghe hằng ngày với 7 tập, nhớ vị trí cục bộ, yêu thích, lặp/nghe liên tục và tải lời thoại. Duyệt chuyên môn vẫn riêng, không tự approved. Lựa chọn nhạc Almost in F của D-029 bị thay thế.

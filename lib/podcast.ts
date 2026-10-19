@@ -17,6 +17,6 @@ export const podcastSchema = z.object({
   }
   if(Math.abs(episode.assets.voice.seconds-episode.assets.mix.seconds)>.1||Math.abs(episode.duration-episode.assets.voice.seconds)>.1)ctx.addIssue({code:'custom',message:'Voice and mix must share a timeline'});
 });
-export const podcastCatalogSchema=z.object({version:z.literal(1),generatedAt:z.string(),music:z.object({title:z.string(),author:z.string(),license:z.literal('CC BY 4.0'),source:z.url(),licenseUrl:z.literal('https://creativecommons.org/licenses/by/4.0/'),changes:z.string()}),episodes:z.array(podcastSchema)});
+export const podcastCatalogSchema=z.object({version:z.literal(1),generatedAt:z.string(),music:z.object({title:z.string(),author:z.string(),artistUrl:z.url().optional(),genre:z.string().optional(),license:z.literal('CC BY 4.0'),source:z.url(),licenseUrl:z.literal('https://creativecommons.org/licenses/by/4.0/'),changes:z.string()}),episodes:z.array(podcastSchema)});
 export type Podcast=z.infer<typeof podcastSchema>;
 export type PodcastCatalog=z.infer<typeof podcastCatalogSchema>;

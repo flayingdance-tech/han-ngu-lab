@@ -1,0 +1,13 @@
+{
+  "title":"Watching Rain Together",
+  "author":"Pamela Yuen",
+  "artistUrl":"https://linktr.ee/pamelayuen",
+  "license":"CC BY 4.0",
+  "source":"https://freemusicarchive.org/music/pamela-yuen/paws-for-a-while/watching-rain-together/",
+  "licenseUrl":"https://creativecommons.org/licenses/by/4.0/",
+  "artistLicenseUrl":"https://pamelayuen.blogspot.com/p/cc-by-4.html",
+  "genre":"Lo-fi Instrumental / Ambient",
+  "localFile":".local/podcasts/lofi/watching-rain-together.mp3",
+  "sha256":"ca7820469ffec765553f010f321bec705708ea8e9c93d230917bd26810e05f2b",
+  "changes":"Trích đoạn, nối vòng bằng crossfade, lọc dải cao, giảm nền khi có lời và fade đầu/cuối."
+}

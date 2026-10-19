@@ -144,3 +144,9 @@ Chạy local tests cần quyền loopback của môi trường; EACCES trong lư
 - Bao phủ timeline/schema,path whitelist,live chặn draft,Range206 từ dot-directory; phát/seek/đổi nhạc giữ vị trí/rate giữ pitch/đổi tập/dừng khi rời trang/lỗi mạng retry; không overflow light/dark.
 - Sáu MP3 decode/peak/LUFS đạt; ASR3tập dùng để rà bỏ câu, chưa human review. reports/podcast-inventory.json.
 - Backup/restore19file hash khớp cùng máy; export bài học290MP3 nguyên vẹn,no privateLeaks,0podcast draft trong out. Log .local/podcasts/.
+
+## 2026-10-19T12:41:57+07:00 — POD-03 lo-fi và nghe hằng ngày
+- Typecheck/lint đạt;unit21/21;E2E14/14 (audio+podcast,desktop/mobile),buildexit0.
+- Mới: dữ liệu localStorage lỗi/clamp/resume/completed; reload giữ vị trí/tốc độ/nhạc/yêu thích; tìm7tập,tải transcript có chữ Hán/credit; lặp và auto-next từ kết thúc audio thật. Luồng cũ seek/source switch/retry/nav cancellation/live draft/Range tiếp tục đạt.
+- QA14MP3:peak/finite/decode/loudness/truepeak đạt;mix -22.71..-22.56LUFS,truepeakmax -3.05dBTP. ASR7tập rà bỏ câu,không thay human approval.
+- Backup/restore33filehashkhớp;3voicecũhashgiữnguyên,mixhashthayđổi;bank học145mục/290MP3exportkhớp,no privateLeaks. Log .local/podcasts/lofi/.

@@ -4,6 +4,7 @@ os.environ.update(HF_HUB_OFFLINE='1', TRANSFORMERS_OFFLINE='1', HF_HUB_DISABLE_T
 import hashlib
 import json
 import subprocess
+import shutil
 from pathlib import Path
 from datetime import datetime, timezone
 import numpy as np
@@ -22,15 +23,23 @@ OUT = WORK/'rendered'
 OUT.mkdir(parents=True, exist_ok=True)
 RATE = 24000
 sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
-MUSIC_SHA = '9c35f03fd6a747baed3f6a7e0a39fe43483f174ad80aaad73cc18e8472c50641'
-assert sha(WORK/'almost-in-f.mp3') == MUSIC_SHA, 'Music source changed'
+music_config=json.loads((ROOT/'content/podcast-music.json').read_text(encoding='utf-8'))
+music_file=ROOT/music_config['localFile']
+assert sha(music_file) == music_config['sha256'], 'Music source changed'
 assert sha(MODEL/'kokoro-v1_1-zh.pth') == 'b1d8410fa44dfb5c15471fd6c4225ea6b4e9ac7fa03c98e8bea47a9928476e2b'
 episodes = json.loads((ROOT/'content/podcasts.json').read_text(encoding='utf-8'))
 profile = {'voiceId':'hnl-kokoro-zf001-v1', 'speakerSha256':sha(MODEL/'voices/zf_001.pt'),
-           'rendererSha256':sha(Path(__file__)), 'musicSha256':MUSIC_SHA,
+           'modelSha256':sha(MODEL/'kokoro-v1_1-zh.pth'),'synthesisVersion':1,
            'precision':'float32', 'speed':1, 'pitchChanged':False,
            'lexicon':{'有空':['you3','kong4'],'长时间':['chang2','shi2','jian1']}}
 fingerprint = hashlib.sha256(json.dumps(profile,sort_keys=True).encode()).hexdigest()
+render_profile={**profile,'rendererSha256':sha(Path(__file__)), 'musicSha256':music_config['sha256'],
+                'synthesisFingerprint':fingerprint,'mixVersion':2}
+render_fingerprint=hashlib.sha256(json.dumps(render_profile,sort_keys=True).encode()).hexdigest()
+previous=json.loads((OUT/'catalog.json').read_text(encoding='utf-8')) if (OUT/'catalog.json').exists() else None
+legacy_fingerprint=hashlib.sha256(json.dumps(previous['profile'],sort_keys=True).encode()).hexdigest() if previous else ''
+compatible=previous and all(previous['profile'].get(k)==profile[k] for k in ('voiceId','speakerSha256','precision','speed','pitchChanged','lexicon'))
+generated=reused=0
 
 def run(*args):
     return subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y',*map(str,args)],check=True,capture_output=True)
@@ -47,19 +56,24 @@ def measure(path):
             'lufs':float(data['input_i']),'truePeakDb':float(data['input_tp']),'sha256':sha(path)}
 
 with FileLock(str(WORK/'render.lock'),timeout=1):
-    music_raw = run('-i',WORK/'almost-in-f.mp3','-t',600,'-af','lowpass=f=2400','-ar',RATE,'-ac',1,'-f','f32le','pipe:1').stdout
+    music_raw = run('-i',music_file,'-t',600,'-af','lowpass=f=3000','-ar',RATE,'-ac',1,'-f','f32le','pipe:1').stdout
     music = np.frombuffer(music_raw,dtype='<f4').copy()
-    music *= .012 / max(float(np.sqrt(np.mean(music**2))), .00001)
+    assert len(music)>RATE*4 and np.isfinite(music).all(), 'Empty or invalid music'
+    music *= min(.014 / max(float(np.sqrt(np.mean(music**2))), .00001), .05/max(float(np.max(np.abs(music))),.00001))
+    # Crossfade instead of resizing an empty tail or abruptly jumping at a loop seam.
+    overlap=RATE*2
+    loop=music.copy()
+    weights=np.linspace(0,1,overlap)
+    while len(loop)<RATE*600:
+        seam=loop[-overlap:]*(1-weights)+music[:overlap]*weights
+        loop=np.concatenate([loop[:-overlap],seam,music[overlap:]])
     torch.set_num_threads(2)
     torch.manual_seed(20261018)
     pipeline = KPipeline(lang_code='z',repo_id='hexgrad/Kokoro-82M-v1.1-zh',model=False,en_callable=lambda text:'')
     install_lexicon(profile['lexicon'])
     model = None
-    catalog = {'version':1,'profile':profile,'generatedAt':datetime.now(timezone.utc).isoformat(),
-               'music':{'title':'Almost in F','author':'Kevin MacLeod','license':'CC BY 4.0',
-                        'source':'https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100394',
-                        'licenseUrl':'https://creativecommons.org/licenses/by/4.0/',
-                        'changes':'Trích đoạn, lọc dải cao, giảm âm lượng, tự hạ nền khi có lời và fade đầu/cuối.'},'episodes':[]}
+    catalog = {'version':1,'profile':render_profile,'generatedAt':datetime.now(timezone.utc).isoformat(),
+               'music':{k:v for k,v in music_config.items() if k not in ('localFile','sha256')},'episodes':[]}
     for number,episode in enumerate(episodes):
         chunks=[np.zeros(RATE*2,dtype='float32')]
         segments=[]
@@ -71,6 +85,10 @@ with FileLock(str(WORK/'render.lock'),timeout=1):
             assert phones and len(phones)<400 and '❓' not in phones, text
             key=hashlib.sha256(f'{fingerprint}|{phones}'.encode()).hexdigest()
             wav=WORK/f'{key}.wav'
+            legacy=WORK/f"{hashlib.sha256(f'{legacy_fingerprint}|{phones}'.encode()).hexdigest()}.wav"
+            if not wav.exists() and compatible and legacy.exists():
+                shutil.copyfile(legacy,wav)
+                reused+=1
             if not wav.exists():
                 if model is None:
                     model=KModel(repo_id='hexgrad/Kokoro-82M-v1.1-zh',config=str(MODEL/'config.json'),model=str(MODEL/'kokoro-v1_1-zh.pth')).eval()
@@ -82,6 +100,7 @@ with FileLock(str(WORK/'render.lock'),timeout=1):
                 temp=wav.with_suffix('.tmp.wav')
                 sf.write(temp,wave,RATE,subtype='FLOAT')
                 atomic_replace(temp,wav)
+                generated+=1
             wave,sr=sf.read(wav,dtype='float32')
             assert sr==RATE
             start=sum(map(len,chunks))/RATE
@@ -93,8 +112,9 @@ with FileLock(str(WORK/'render.lock'),timeout=1):
         active=speech[np.abs(speech)>.015]
         speech *= min(.75/float(np.max(np.abs(speech))), .11/float(np.sqrt(np.mean(active**2))))
         n=len(speech)
-        offset=number*RATE*120
-        bed=np.resize(music[offset:],n).copy()
+        offset=number*RATE*7
+        assert offset+n<=len(loop), 'Episode exceeds prepared music loop'
+        bed=loop[offset:offset+n].copy()
         envelope=uniform_filter1d(np.abs(speech),size=int(RATE*.1))
         duck=uniform_filter1d(np.where(envelope>.012,.3,1.),size=int(RATE*.4))
         bed*=duck
@@ -107,11 +127,18 @@ with FileLock(str(WORK/'render.lock'),timeout=1):
         for kind,wave in [('voice',speech),('mix',speech+bed)]:
             source=WORK/f"{episode['id']}-{kind}.wav"
             sf.write(source,wave,RATE,subtype='FLOAT')
-            filename=f"{episode['id']}-{fingerprint[:12]}-{kind}.mp3"
+            filename=f"{episode['id']}-{render_fingerprint[:12]}-{kind}.mp3"
             dest=OUT/filename
             temp=dest.with_suffix('.tmp.mp3')
-            run('-i',source,'-c:a','libmp3lame','-b:a','128k','-metadata','artist=Hán Ngữ Lab; music: Kevin MacLeod',
-                '-metadata','comment=Music: Almost in F by Kevin MacLeod, incompetech.com, CC BY 4.0 https://creativecommons.org/licenses/by/4.0/ ; excerpt, filtered, ducked and mixed with narration.',temp)
+            old=next((e for e in previous['episodes'] if e['id']==episode['id']),None) if compatible else None
+            if kind=='voice' and old and [s['zh'] for s in old['segments']]==[s['zh'] for s in segments] and abs(old['duration']-episode_out['duration'])<.001:
+                old_file=OUT/Path(old['assets']['voice']['url']).name
+                if old_file.exists() and sha(old_file)==old['assets']['voice']['sha256']:
+                    episode_out['assets'][kind]=old['assets']['voice']
+                    continue
+            credit=f"Music: {music_config['title']} by {music_config['author']}, {music_config['artistUrl']}, CC BY 4.0 https://creativecommons.org/licenses/by/4.0/ ; excerpt, crossfade loop, filtered and ducked under narration."
+            run('-i',source,'-c:a','libmp3lame','-b:a','128k','-metadata','artist=Hán Ngữ Lab',
+                '-metadata',f"comment={credit if kind=='mix' else 'Mandarin A / Kokoro zf_001; no music; unreviewed teaching draft.'}",temp)
             qa=measure(temp)
             atomic_replace(temp,dest)
             episode_out['assets'][kind]={'url':f'/api/podcasts/media/{filename}',**qa}
@@ -120,4 +147,5 @@ with FileLock(str(WORK/'render.lock'),timeout=1):
     temp=OUT/'catalog.tmp.json'
     temp.write_text(json.dumps(catalog,ensure_ascii=False,indent=2),encoding='utf-8')
     atomic_replace(temp,OUT/'catalog.json')
+    (WORK/'render-summary.json').write_text(json.dumps({'generatedSegments':generated,'reusedLegacySegments':reused,'episodes':len(episodes),'synthesisFingerprint':fingerprint,'renderFingerprint':render_fingerprint},indent=2),encoding='utf-8')
     print('Published local draft catalog atomically. No human review claimed.',flush=True)

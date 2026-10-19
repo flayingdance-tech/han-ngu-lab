@@ -1,18 +1,20 @@
 # Trạng thái hiện tại — đọc đầu tiên khi tiếp tục
 
-Checkpoint: 2026-10-19T08:11:37+07:00, Asia/Bangkok. Workspace: D:\Hán Ngữ Lab.
+Checkpoint: 2026-10-19T12:41:57+07:00, Asia/Bangkok. Workspace: D:\Hán Ngữ Lab.
 
-## Mốc mới nhất: podcast local đã có thể nghe
+## Mốc mới nhất: lo-fi chill và podcast nghe hằng ngày
 
-- D-029 / POD-01: 3 tập công sở, 30 đoạn, 6 MP3 (có nhạc / chỉ giọng), giọng A offline. Thời lượng 59.45s / 59.65s / 57.375s. Không phát sinh API trả phí.
-- UI tab Podcast: transcript Hán/Pinyin/Việt, bấm câu để seek, tốc độ 0.8/1/1.1 giữ pitch, bật/tắt nhạc giữ vị trí, retry lỗi mạng, dừng khi đổi tập/rời trang; tối dùng nữ lo-fi.
-- Nhạc Almost in F — Kevin MacLeod, CC BY 4.0, tải trực tiếp trang chính thức; credit UI/metadata MP3, nguồn/hash/license ở PODCAST_RUNBOOK. Nhạc đã giảm âm, lọc dải cao, duck theo lời, fade đầu/cuối.
-- Nội dung và audio **unreviewed**. File nằm `.local/podcasts/rendered`, API chỉ phục vụ trong local preview; live chặn danh mục và media. Không có podcast draft trong public/out.
-- QA 6 MP3: LUFS -22.53 đến -22.80; true peak cao nhất -2.97dBTP, không clipping theo kiểm tra số. ASR 3 tập không thấy mất nguyên câu; có chữ đồng âm/gần âm, chưa duyệt ngữ âm bằng người.
-- Typecheck/lint đạt; unit/API20/20; E2E audio+podcast10/10 desktop/mobile (1.6m); build đạt. Xem `.local/podcasts/*log`, `docs/reports/podcast-inventory.json`.
-- Backup và restore hash **19/19 file**: `.local/podcast-backups/2026-10-19T01-09-10.153Z` và `.local/podcast-restore-check/2026-10-19T01-09-10.153Z`. Gồm media, kịch bản, nhạc/license, renderer/helpers; không model/runtime/DB đầy đủ, chưa ngoài máy.
-- Sổ lỗi và cách phòng ngừa: `docs/ERRORS_AND_FIXES.md`. Đã sửa lỗi Strict Mode xóa src, Express chặn dot-directory, parser thống kê FFmpeg, watcher cũ và locator E2E trùng.
-- Không cần render lại. Source `content/podcasts.json`; runtime/renderer/runbook đã lưu. Bước tiếp là quy trình duyệt/xuất bản và mở rộng nội dung theo backlog, không tự nâng trạng thái approved.
+- D-030/POD-03: theo quyết định cuối, dùng lo-fi chill học tập. Watching Rain Together — Pamela Yuen, CC BY4.0; nguồn FMA + trang quyền tác giả, cấu hình `content/podcast-music.json`. Không dùng guzheng hoặc Almost in F trong mix hiện hành.
+- 7 tập/70 đoạn/14 MP3: 3 tập công sở cũ và 4 tập mới (đồ uống, hỏi đường, tiến độ, cuối tuần), mỗi tập khoảng1phút. Giọng A offline, không đổi pitch/formant, không phí API.
+- 3 MP3 chỉ giọng cũ giữ nguyên SHA; 30 WAV cũ tái dùng,39 đoạn mới sinh và1 đoạn dùng cache lặp. Tách fingerprint synthesis/mix để đổi nhạc không sinh lại giọng. `render-summary.json` và `lofi/bank-diff.json` có bằng chứng.
+- Nhạc lo-fi loop crossfade2s, low-pass3kHz, duck30% khi có lời, fade đầu/cuối. Credit UI/metadata mix/lời thoại tải, nguồn/hash/license trong PODCAST_RUNBOOK và backup. Không đăng nhạc lên dịch vụ phân phối/Content ID.
+- UI: nhớ tập/vị trí/tùy chọn trên thiết bị, yêu thích/tìm kiếm, ±10s, từ đầu, lặp một tập/nghe liên tục, tải transcript có credit; mobile danh sách vuốt ngang; dark giữ nữ lo-fi. LocalStorage schema/clamp/fallback, không đồng bộ tài khoản.
+- Tất cả unreviewed. File private `.local/podcasts/rendered`; API live vẫn chặn danh mục/media, không podcast draft trong public/out. POD-02 (duyệt chuyên môn/CMS xuất bản) còn TODO.
+- QA14MP3 đạt; mix -22.71..-22.56LUFS, true peak mix cao nhất -3.05dBTP. ASR7tập không thấy mất nguyên câu khi đối chiếu, có chữ đồng âm/gần âm; không chứng nhận thanh điệu.
+- Typecheck/lint/unit21/21; E2E audio+podcast14/14 desktop/mobile,2.2m; build exit0. Export bank bài học145mục/290MP3 hash khớp,no privateLeaks. Log `.local/podcasts/lofi/`, inventory `docs/reports/podcast-inventory.json`.
+- Backup/restore33file SHA khớp: `.local/podcast-backups/2026-10-19T05-41-04.088Z` và `.local/podcast-restore-check/2026-10-19T05-41-04.088Z`. Gồm14MP3,catalog,kịch bản/cấu hình,nhạc/license,renderer/helpers,QA/ASR; chưa offsite, không model/runtime/DB đầy đủ.
+- Backup trước đổi lo-fi timestamp2026-10-19T05-29-18.416Z giữ19file; không xóa file cũ. Catalog chỉ tham chiếu bộ mới; file cũ không tham chiếu không được route phục vụ.
+- Sổ lỗi `docs/ERRORS_AND_FIXES.md`, runbook `docs/PODCAST_RUNBOOK.md`. Không render lại hoặc chọn lại nhạc/giọng nếu không có yêu cầu mới. Bước tiếp: quy trình người duyệt/xuất bản, không tự approved.
 
 ## Mốc hiện tại: mẫu A đã thay bộ giọng lỗi
 
@@ -35,7 +37,7 @@ Checkpoint: 2026-10-19T08:11:37+07:00, Asia/Bangkok. Workspace: D:\Hán Ngữ La
 
 ## Vận hành local và dữ liệu
 
-- Preview http://localhost:3000/, API3001; HTTP200 sau build podcast. API launcher8028, listener gần nhất4712 (watch có thể đổi); web launcher15056/listener3516. Kiểm tra PID/port thật trước khởi động lại. API log `.local/podcasts/api.log/.err`; web `.local/dev-web-kokoro.log/.err`; không dump stdout auth.
+- Preview http://localhost:3000/, API3001; HTTP200 sau build podcast. API launcher11404, listener gần nhất16032 (watch có thể đổi); web launcher14680/listener14116. Kiểm tra PID/port thật trước khởi động lại. API log `.local/podcasts/lofi/api.log/.err`; web `.local/podcasts/lofi/web.log/.err`; không dump stdout auth.
 - Không còn renderer chạy; không tự chạy lại render/QA dài đã hoàn tất. npm run audio:render có cache, audio:publish yêu cầu đủ stage + hash QA, audio:backup phù hợp voice hiện hành. VOICE_RUNBOOK có quy trình.
 - .codegraph/ không có ở lần kiểm tra; không tự index. Giữ .local/hanngulab.sqlite, tài khoản/tiến độ. Podcast là module mới; không thay bộ âm bài học hoặc thiết kế các tab cũ.
 - UI tối giữ nữ lo-fi, ẩn trẻ chibi; sáng giữ thiết kế hiện có. UI-05 còn cần asset gốc riêng nếu yêu cầu trùng pixel collage.
@@ -44,6 +46,6 @@ Checkpoint: 2026-10-19T08:11:37+07:00, Asia/Bangkok. Workspace: D:\Hán Ngữ La
 
 - 16 bài draft/94 word IDs/80 câu hỏi/39 ví dụ: chưa đủ giáo trình HSK4, chưa duyệt chuyên môn. Nội dung AI không tự publish.
 - Backend local Express/SQLite có auth email mô phỏng, phân quyền, chấm server/idempotency, progress/SRS, CMS revision/import JSON/rollback/editor, backup AES-GCM. CMS còn thiếu CSV/media/reviewer/publication/audit/users, kiểm tra phiên hết hạn/lỗi mạng.
-- Podcast có 3 tập local; chưa có CMS duyệt/xuất bản podcast, chưa duyệt chuyên môn và chưa phát hành công khai. Không quảng cáo độ phủ nội dung vượt 3 tập đã có.
+- Podcast có 7 tập local; chưa có CMS duyệt/xuất bản podcast, chưa duyệt chuyên môn và chưa phát hành công khai. Không quảng cáo độ phủ nội dung vượt 7 tập đã có.
 - Cloud/email/HTTPS chưa cấu hình/deploy; backup ngoài AWS và diễn tập migration chưa làm. Budget150 USD/6 tháng gồm credit, không chi thêm; credit200 USD/hạn là chủ dự án báo, chưa xác minh Console. Website miễn phí18+, AI tùy chọn.
 - Production npm audit mốc trước0 vulnerability; dev5high cũ chưa rà lại, không coi hệ thống đã kiểm toán an toàn. Chưa hoàn thành toàn dự án.

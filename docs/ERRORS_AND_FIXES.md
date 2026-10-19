@@ -18,6 +18,10 @@ Cập nhật: 2026-10-19, Asia/Bangkok (+07). Không ghi secret hoặc thông ti
 | POD-06 | API watch cũ vẫn trả 404 route mới dù source đã thay đổi. | Xác minh HTTP trực tiếp và PID; restart đúng launcher/listener local, không chạm DB hoặc khởi tạo server trùng port. Không mặc định watcher đã cập nhật. | `.local/podcasts/api.err`, kiểm tra `/api/podcasts` trả 200 |
 | POD-07 | Express sendFile mặc định chặn đường dẫn bên trong `.local`; catalog tải được nhưng MP3 không phát. Test đầu dùng thư mục thường nên chưa bắt được. | Cho phép dotfiles chỉ trong route kiểm tra preview + filename whitelist; test dùng thư mục `.private` và Range thật. Không mở static cả `.local`. | `server/podcasts.ts`, `tests/podcast.test.ts` |
 | TEST-01 | Locator role alert chung trùng với Next route announcer. | Scope vào podcast player để xác minh đúng thông báo; không tắt alert của ứng dụng. | `tests/e2e/podcast.spec.ts` |
+| POD-08 | Fingerprint cũ gộp cả nhạc và mã mixer vào cache giọng; chỉ đổi nhạc cũng có thể sinh lại toàn bộ giọng. | Tách synthesis và mix fingerprint; chỉ dùng lại WAV khi profile và phoneme khớp. Giữ checksum 3 MP3 voice cũ khi đổi lo-fi. | `.local/podcasts/render-summary.json`, `scripts/podcast-render.py` |
+| POD-09 | Lấy đoạn nhạc theo offset tăng dần có thể vượt file ngắn; `np.resize` ở đuôi rỗng có thể tạo nền im lặng. Rủi ro phát hiện trước khi phối lo-fi. | Kiểm tra nguồn không rỗng, tạo loop bằng crossfade 2s đủ dài và kiểm tra offset+n. Không ghép vòng cắt cứng. | `scripts/podcast-render.py` |
+| POD-10 | Bộ nhớ trình duyệt có thể hỏng, chứa vị trí quá dài hoặc bị chặn. | Parse schema, clamp vị trí, tập đã nghe hết mở từ đầu; nghe vẫn hoạt động khi storage bị chặn và thông báo phạm vi lưu. | `lib/podcast-listening.ts`, tests unit/E2E |
+| OPS-01 | Ghi đè file log lint khi một lượt lint cũ còn giữ file gây sharing violation trên Windows. | Chờ tiến trình cũ hoàn tất; dùng log tên riêng cho lần kiểm tra sau thay đổi. Không coi lỗi ghi log là test đã chạy. | `.local/podcasts/lofi/final-lint.log` |
 
 ## Quy tắc trước khi giao audio mới
 

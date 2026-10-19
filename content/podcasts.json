@@ -46,5 +46,69 @@
       {"zh":"请跟着读：你现在方便吗？可以帮我看一下吗？","pinyin":"Qǐng gēnzhe dú: Nǐ xiànzài fāngbiàn ma? Kěyǐ bāng wǒ kàn yíxià ma?","vi":"Hãy đọc theo: Bây giờ bạn có tiện không? Bạn có thể xem giúp tôi một chút không?","speaker":"Luyện nói","pause":4},
       {"zh":"记得先问对方是否方便，再说明需要什么帮助。今天就到这里。再见！","pinyin":"Jìde xiān wèn duìfāng shìfǒu fāngbiàn, zài shuōmíng xūyào shénme bāngzhù. Jīntiān jiù dào zhèlǐ. Zàijiàn!","vi":"Nhớ hỏi người kia có tiện không trước, rồi nói rõ bạn cần giúp gì. Hôm nay đến đây thôi. Tạm biệt!","speaker":"Kết thúc"}
     ]
+  },
+  {
+    "id":"daily-coffee-v1", "title":"Gọi đồ uống trong giờ nghỉ", "topic":"Đời sống hằng ngày", "level":"Cơ bản", "description":"Gọi một cốc cà phê, chọn nóng hay lạnh và hỏi giá.",
+    "tip":"Thử thay 咖啡 (kāfēi — cà phê) bằng 茶 (chá — trà). Nhớ nói 请 và 谢谢 khi gọi món.",
+    "segments":[
+      {"zh":"今天，我们去买一杯咖啡。请先听一段对话。","pinyin":"Jīntiān, wǒmen qù mǎi yì bēi kāfēi. Qǐng xiān tīng yí duàn duìhuà.","vi":"Hôm nay chúng ta đi mua một cốc cà phê. Hãy nghe hội thoại trước nhé.","speaker":"Dẫn chuyện"},
+      {"zh":"你好，请给我一杯咖啡。","pinyin":"Nǐ hǎo, qǐng gěi wǒ yì bēi kāfēi.","vi":"Xin chào, cho tôi một cốc cà phê.","speaker":"Khách"},
+      {"zh":"好的。您要热的还是冰的？","pinyin":"Hǎo de. Nín yào rè de háishi bīng de?","vi":"Vâng. Anh/chị muốn loại nóng hay đá?","speaker":"Nhân viên"},
+      {"zh":"热的，不加糖。谢谢。","pinyin":"Rè de, bù jiā táng. Xièxie.","vi":"Loại nóng, không thêm đường. Cảm ơn.","speaker":"Khách"},
+      {"zh":"还需要别的吗？","pinyin":"Hái xūyào bié de ma?","vi":"Anh/chị cần thêm gì nữa không?","speaker":"Nhân viên"},
+      {"zh":"不用了。一共多少钱？","pinyin":"Bú yòng le. Yígòng duōshao qián?","vi":"Không cần nữa. Tổng cộng bao nhiêu tiền?","speaker":"Khách"},
+      {"zh":"二十块钱。请稍等。","pinyin":"Èrshí kuài qián. Qǐng shāo děng.","vi":"Hai mươi tệ. Xin chờ một chút.","speaker":"Nhân viên"},
+      {"zh":"现在，请跟着读：您要热的还是冰的？","pinyin":"Xiànzài, qǐng gēnzhe dú: Nín yào rè de háishi bīng de?","vi":"Bây giờ hãy đọc theo: Anh/chị muốn loại nóng hay đá?","speaker":"Luyện nói","pause":3},
+      {"zh":"热的，不加糖。谢谢。","pinyin":"Rè de, bù jiā táng. Xièxie.","vi":"Loại nóng, không thêm đường. Cảm ơn.","speaker":"Luyện nói","pause":3},
+      {"zh":"很好！下次买饮料的时候，试着说一说。我们下次见！","pinyin":"Hěn hǎo! Xià cì mǎi yǐnliào de shíhou, shìzhe shuō yi shuō. Wǒmen xià cì jiàn!","vi":"Rất tốt! Lần tới mua đồ uống, hãy thử nói nhé. Hẹn gặp lần sau!","speaker":"Kết thúc"}
+    ]
+  },
+  {
+    "id":"daily-directions-v1", "title":"Hỏi đường đến ga tàu", "topic":"Đời sống hằng ngày", "level":"Cơ bản", "description":"Hỏi vị trí, nghe hướng đi và xác nhận thời gian đi bộ.",
+    "tip":"Chú ý 左 (zuǒ — trái), 右 (yòu — phải), 一直走 (yìzhí zǒu — đi thẳng). Dừng âm thanh rồi tự nhắc lại đường đi.",
+    "segments":[
+      {"zh":"今天的话题是问路。我们要去地铁站。","pinyin":"Jīntiān de huàtí shì wènlù. Wǒmen yào qù dìtiězhàn.","vi":"Chủ đề hôm nay là hỏi đường. Chúng ta muốn đến ga tàu điện ngầm.","speaker":"Dẫn chuyện"},
+      {"zh":"不好意思，请问地铁站怎么走？","pinyin":"Bù hǎoyìsi, qǐngwèn dìtiězhàn zěnme zǒu?","vi":"Xin lỗi, cho tôi hỏi đến ga tàu điện ngầm đi thế nào?","speaker":"Người hỏi"},
+      {"zh":"沿着这条路一直走。","pinyin":"Yánzhe zhè tiáo lù yìzhí zǒu.","vi":"Đi thẳng theo con đường này.","speaker":"Người chỉ đường"},
+      {"zh":"到前面的路口，再往右拐。","pinyin":"Dào qiánmiàn de lùkǒu, zài wǎng yòu guǎi.","vi":"Đến ngã đường phía trước rồi rẽ phải.","speaker":"Người chỉ đường"},
+      {"zh":"地铁站就在超市旁边。","pinyin":"Dìtiězhàn jiù zài chāoshì pángbiān.","vi":"Ga tàu điện ngầm ở ngay cạnh siêu thị.","speaker":"Người chỉ đường"},
+      {"zh":"走路大概要几分钟？","pinyin":"Zǒulù dàgài yào jǐ fēnzhōng?","vi":"Đi bộ mất khoảng mấy phút?","speaker":"Người hỏi"},
+      {"zh":"大概十分钟，不太远。","pinyin":"Dàgài shí fēnzhōng, bú tài yuǎn.","vi":"Khoảng mười phút, không xa lắm.","speaker":"Người chỉ đường"},
+      {"zh":"谢谢您！现在，请跟着读：地铁站怎么走？","pinyin":"Xièxie nín! Xiànzài, qǐng gēnzhe dú: Dìtiězhàn zěnme zǒu?","vi":"Cảm ơn! Bây giờ hãy đọc theo: Đến ga tàu điện ngầm đi thế nào?","speaker":"Luyện nói","pause":3},
+      {"zh":"一直走，再往右拐。","pinyin":"Yìzhí zǒu, zài wǎng yòu guǎi.","vi":"Đi thẳng rồi rẽ phải.","speaker":"Luyện nói","pause":3},
+      {"zh":"请用自己的话，再说一次路线。今天就到这里。再见！","pinyin":"Qǐng yòng zìjǐ de huà, zài shuō yí cì lùxiàn. Jīntiān jiù dào zhèlǐ. Zàijiàn!","vi":"Hãy dùng lời của bạn để nói lại đường đi một lần. Hôm nay đến đây thôi. Tạm biệt!","speaker":"Kết thúc"}
+    ]
+  },
+  {
+    "id":"office-update-v1", "title":"Báo tiến độ và hẹn hạn gửi", "topic":"Công việc hằng ngày", "level":"Cơ bản → trung cấp", "description":"Nói việc đã xong, phần còn lại và thời điểm gửi báo cáo.",
+    "tip":"还差 (hái chà — còn thiếu) diễn tả phần chưa hoàn thành. Tránh nhầm 差 trong 差不多 (chàbuduō).",
+    "segments":[
+      {"zh":"今天，我们练习向同事说明工作进度。","pinyin":"Jīntiān, wǒmen liànxí xiàng tóngshì shuōmíng gōngzuò jìndù.","vi":"Hôm nay chúng ta luyện cách báo tiến độ công việc với đồng nghiệp.","speaker":"Dẫn chuyện"},
+      {"zh":"这份报告准备得怎么样了？","pinyin":"Zhè fèn bàogào zhǔnbèi de zěnmeyàng le?","vi":"Bản báo cáo này chuẩn bị đến đâu rồi?","speaker":"Đồng nghiệp A"},
+      {"zh":"大部分已经完成了，还差最后一部分。","pinyin":"Dà bùfen yǐjīng wánchéng le, hái chà zuìhòu yí bùfen.","vi":"Phần lớn đã hoàn thành, còn thiếu phần cuối cùng.","speaker":"Đồng nghiệp B"},
+      {"zh":"你今天能发给我吗？","pinyin":"Nǐ jīntiān néng fā gěi wǒ ma?","vi":"Hôm nay bạn gửi cho tôi được không?","speaker":"Đồng nghiệp A"},
+      {"zh":"可以。我下午五点以前发给你。","pinyin":"Kěyǐ. Wǒ xiàwǔ wǔ diǎn yǐqián fā gěi nǐ.","vi":"Được. Tôi sẽ gửi cho bạn trước năm giờ chiều.","speaker":"Đồng nghiệp B"},
+      {"zh":"好的。如果需要帮助，请告诉我。","pinyin":"Hǎo de. Rúguǒ xūyào bāngzhù, qǐng gàosu wǒ.","vi":"Được. Nếu cần giúp đỡ thì nói với tôi nhé.","speaker":"Đồng nghiệp A"},
+      {"zh":"谢谢。我会先检查一下数据。","pinyin":"Xièxie. Wǒ huì xiān jiǎnchá yíxià shùjù.","vi":"Cảm ơn. Tôi sẽ kiểm tra lại số liệu trước.","speaker":"Đồng nghiệp B"},
+      {"zh":"请跟着读：大部分已经完成了。","pinyin":"Qǐng gēnzhe dú: Dà bùfen yǐjīng wánchéng le.","vi":"Hãy đọc theo: Phần lớn đã hoàn thành.","speaker":"Luyện nói","pause":3},
+      {"zh":"我下午五点以前发给你。","pinyin":"Wǒ xiàwǔ wǔ diǎn yǐqián fā gěi nǐ.","vi":"Tôi sẽ gửi cho bạn trước năm giờ chiều.","speaker":"Luyện nói","pause":3},
+      {"zh":"试着换一个时间，再说一遍。我们下次见！","pinyin":"Shìzhe huàn yí ge shíjiān, zài shuō yí biàn. Wǒmen xià cì jiàn!","vi":"Thử đổi sang một thời gian khác rồi nói lại. Hẹn gặp lần sau!","speaker":"Kết thúc"}
+    ]
+  },
+  {
+    "id":"daily-weekend-v1", "title":"Hẹn bạn vào cuối tuần", "topic":"Đời sống hằng ngày", "level":"Cơ bản", "description":"Hỏi kế hoạch, rủ bạn đi dạo và thống nhất điểm hẹn.",
+    "tip":"Dùng 你有空吗？ để hỏi bạn có rảnh không. Trong 有空, 空 đọc kòng, nghĩa là có thời gian rảnh.",
+    "segments":[
+      {"zh":"忙了一周，周末有什么安排？今天我们练习约朋友。","pinyin":"Máng le yì zhōu, zhōumò yǒu shénme ānpái? Jīntiān wǒmen liànxí yuē péngyou.","vi":"Sau một tuần bận rộn, cuối tuần có kế hoạch gì? Hôm nay chúng ta luyện hẹn bạn bè.","speaker":"Dẫn chuyện"},
+      {"zh":"你星期六有空吗？","pinyin":"Nǐ xīngqīliù yǒu kòng ma?","vi":"Thứ Bảy bạn có rảnh không?","speaker":"Bạn A"},
+      {"zh":"有啊。你有什么计划？","pinyin":"Yǒu a. Nǐ yǒu shénme jìhuà?","vi":"Có chứ. Bạn có kế hoạch gì?","speaker":"Bạn B"},
+      {"zh":"我们一起去公园散步吧。","pinyin":"Wǒmen yìqǐ qù gōngyuán sànbù ba.","vi":"Chúng ta cùng đến công viên đi dạo nhé.","speaker":"Bạn A"},
+      {"zh":"好主意！上午还是下午？","pinyin":"Hǎo zhǔyi! Shàngwǔ háishi xiàwǔ?","vi":"Ý hay đấy! Buổi sáng hay buổi chiều?","speaker":"Bạn B"},
+      {"zh":"下午三点怎么样？我们在公园门口见。","pinyin":"Xiàwǔ sān diǎn zěnmeyàng? Wǒmen zài gōngyuán ménkǒu jiàn.","vi":"Ba giờ chiều được không? Chúng ta gặp ở cổng công viên.","speaker":"Bạn A"},
+      {"zh":"没问题。到时候见！","pinyin":"Méi wèntí. Dào shíhou jiàn!","vi":"Không vấn đề gì. Hẹn lúc đó nhé!","speaker":"Bạn B"},
+      {"zh":"现在，请跟着读：你星期六有空吗？","pinyin":"Xiànzài, qǐng gēnzhe dú: Nǐ xīngqīliù yǒu kòng ma?","vi":"Bây giờ hãy đọc theo: Thứ Bảy bạn có rảnh không?","speaker":"Luyện nói","pause":3},
+      {"zh":"我们在公园门口见。","pinyin":"Wǒmen zài gōngyuán ménkǒu jiàn.","vi":"Chúng ta gặp ở cổng công viên.","speaker":"Luyện nói","pause":3},
+      {"zh":"你想约朋友做什么？试着说一说。祝你周末愉快！","pinyin":"Nǐ xiǎng yuē péngyou zuò shénme? Shìzhe shuō yi shuō. Zhù nǐ zhōumò yúkuài!","vi":"Bạn muốn hẹn bạn bè làm gì? Hãy thử nói nhé. Chúc bạn cuối tuần vui vẻ!","speaker":"Kết thúc"}
+    ]
   }
 ]

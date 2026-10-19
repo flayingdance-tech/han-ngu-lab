@@ -4,8 +4,11 @@ import { createHash } from 'node:crypto';
 import { podcastCatalogSchema } from '../lib/podcast';
 
 const root=resolve('.local/podcasts'),catalog=podcastCatalogSchema.parse(JSON.parse(readFileSync(resolve(root,'rendered/catalog.json'),'utf8')));
-const files=['content/podcasts.json','scripts/podcast-render.py','scripts/podcast-asr-check.py','scripts/voice_io.py','scripts/voice_pronunciation.py','scripts/requirements-kokoro.txt','docs/PODCAST_RUNBOOK.md','docs/ERRORS_AND_FIXES.md','.local/podcasts/rendered/catalog.json','.local/podcasts/music-source.html','.local/podcasts/music-track.json','.local/podcasts/CC-BY-4.0.txt','.local/podcasts/almost-in-f.mp3'];
+const music=JSON.parse(readFileSync('content/podcast-music.json','utf8')) as {localFile:string;sha256:string};
+const files=['content/podcasts.json','content/podcast-music.json','scripts/podcast-render.py','scripts/podcast-asr-check.py','scripts/voice_io.py','scripts/voice_pronunciation.py','scripts/requirements-kokoro.txt','docs/PODCAST_RUNBOOK.md','docs/ERRORS_AND_FIXES.md','.local/podcasts/rendered/catalog.json','.local/podcasts/lofi/source.html','.local/podcasts/lofi/track.json','.local/podcasts/lofi/artist-license.html','.local/podcasts/CC-BY-4.0.txt',music.localFile];
+files.push('.local/podcasts/render-summary.json','.local/podcasts/lofi/asr-triage.json','.local/podcasts/lofi/bank-diff.json','docs/reports/podcast-inventory.json');
 const hash=(path:string)=>createHash('sha256').update(readFileSync(path)).digest('hex');
+if(hash(music.localFile)!==music.sha256)throw new Error('Music source checksum mismatch');
 for(const episode of catalog.episodes){
   for(const asset of Object.values(episode.assets)){
     const file=`.local/podcasts/rendered/${basename(asset.url)}`;

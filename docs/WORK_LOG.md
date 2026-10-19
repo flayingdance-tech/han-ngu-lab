@@ -355,3 +355,18 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 - Lỗi đã sửa và phòng tránh trong ERRORS_AND_FIXES (POD01..07,TEST01); vòng E2E đầu thất bại được lưu e2e.log/e2e-v2.log, vòng cuối đạt e2e-v3.log.
 - API launcher8028/listener gần nhất4712; web3516; kiểm tra lại PID trước tác vụ. Không renderer đang chạy. Không tự tạo lại file.
 - POD-02 còn TODO: duyệt chuyên môn/CMS xuất bản. Bản nháp phục vụ private .local qua route whitelist local; production404. Toàn dự án HSK4/cloud chưa hoàn thành.
+
+## 2026-10-19T12:35:04+07:00 — Đang làm POD-03 theo yêu cầu mới
+- Nhạc lo-fi Watching Rain Together tải trực tiếp từ FMA, SHA ca782046...05f2b, tác giả Pamela Yuen xác nhận CC BY4.0 trên blog; source/track/license ở .local/podcasts/lofi/.
+- Trước đổi đã backup/restore19file timestamp2026-10-19T05-29-18.416Z. Giữ bản cũ; renderer giờ tách fingerprint synthesis khỏi mix để thay nhạc không sinh lại giọng.
+- Đang tạo4tập mới thêm3tập cũ, cache WAV cũ được tận dụng; log .local/podcasts/lofi/render.log. UI/resume/yêu thích/loop/liên tục/tải lời thoại và test đã viết; chưa kết luận test/build/QA hoàn thành.
+- API launcher11404/web14680 vừa khởi động vì port3000/3001 ban đầu đều vắng; kiểm tra HTTP trước E2E, không dump stdout auth.
+- Tiếp: chờ catalog7tập, test/ASR/QA, chỉnh lỗi, backup mới và cập nhật docs cuối.
+
+## 2026-10-19T12:41:57+07:00 — POD-03 hoàn tất kỹ thuật
+- Lo-fi Watching Rain Together CC BY4.0;7tập/70đoạn/14MP3,total394.625s. Source FMA/bloglicense lưu và backup. Chọn cuối của chủ dự án là lo-fi, không guzheng.
+- GiọngA3tập cũ SHA nguyên vẹn,mixhash đổi;cache30WAVcũ,39đoạnmới,1duplicatecache. Synth fingerprint62f7fa3d...,render1b49bc8d...; không pitch/formant/API có phí.
+- Typecheck/lint đạt,unit21/21; E2E podcast+audio14/14 desktop/mobile2.2m,buildexit0. ASR7tập không thấy bỏ nguyên câu; vẫn unreviewed. Ảnh desktop-dark/mobile-dark đã xem; light/dark không overflow.
+- Export audio145/290 SHA khớp/no privateLeaks,root/API200,media Range206 sau build. Backup/restore33file timestamp2026-10-19T05-41-04.088Z SHA khớp,cùng máy,chưa offsite;không DB/model/runtime đầy đủ.
+- Lưu resume/preferences/yêu thích chỉthiếtbị; loop/liêntục/transcript có credit. Nguồn nhạc/config và lỗi POD08..10/OPS01 ở runbook/sổlỗi. APIlauncher11404/listener16032,weblauncher14680/listener14116; kiểm tra lại PID khi tiếp tục.
+- Không còn render/ASR cần chờ; không tự tạo lại audio. POD-02 còn TODO: duyệt bằng người/CMS publication. Toàn dự án/cloud/HSK4 còn backlog.

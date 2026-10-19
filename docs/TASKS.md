@@ -53,3 +53,5 @@ Trạng thái: TODO / IN_PROGRESS / BLOCKED / DONE. Phạm vi đã chốt; nghi�
 
 | POD-01 | Podcast local bằng giọng A và nhạc miễn phí có giấy phép | DONE | 3 tập/30 đoạn/6MP3; CC BY4.0 credit; transcript/seek/music switch/rate/retry; unit20/20,E2E10/10,typecheck/lint/build đạt; QA6file; restore19file SHA256; PODCAST_RUNBOOK, ERRORS_AND_FIXES, reports/podcast-inventory.json. Chỉ DONE phạm vi kỹ thuật local |
 | POD-02 | Duyệt và xuất bản podcast | TODO | Người có chuyên môn duyệt chữ/Pinyin/phát âm; CMS revision, reviewer/publication và đường phục vụ bản approved; hiện toàn bộ unreviewed và live API chặn |
+
+| POD-03 | Lo-fi chill và hoàn thiện nghe hằng ngày | DONE | 7 tập/70 đoạn/14MP3; giữ3voice SHA; CC BY4.0 credit; resume/yêu thích/tìm/lặp/liên tục/transcript; unit21/21,E2E14/14,typecheck/lint/build/QA14file đạt; restore33file hash khớp. Chỉ DONE kỹ thuật local; duyệt/xuất bản ở POD-02 |

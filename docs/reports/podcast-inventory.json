@@ -1,14 +1,17 @@
 {
-  "checkedAt": "2026-10-19T08:08:23.6599085+07:00",
+  "checkedAt": "2026-10-19T12:40:39.9100383+07:00",
   "humanReviewed": false,
   "voice": "hnl-kokoro-zf001-v1",
   "music": {
-    "title": "Almost in F",
-    "author": "Kevin MacLeod",
+    "title": "Watching Rain Together",
+    "author": "Pamela Yuen",
+    "artistUrl": "https://linktr.ee/pamelayuen",
     "license": "CC BY 4.0",
-    "source": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100394",
+    "source": "https://freemusicarchive.org/music/pamela-yuen/paws-for-a-while/watching-rain-together/",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-    "changes": "Trích đoạn, lọc dải cao, giảm âm lượng, tự hạ nền khi có lời và fade đầu/cuối."
+    "artistLicenseUrl": "https://pamelayuen.blogspot.com/p/cc-by-4.html",
+    "genre": "Lo-fi Instrumental / Ambient",
+    "changes": "Trích đoạn, nối vòng bằng crossfade, lọc dải cao, giảm nền khi có lời và fade đầu/cuối."
   },
   "episodes": [
     {
@@ -27,12 +30,12 @@
           "sha256": "f576cd308862baa6dc1c7c4d8ad5500cc473eae568a6e7bad4485ef67a4ef6e0"
         },
         "mix": {
-          "url": "/api/podcasts/media/office-hello-v1-8f3bcc21075d-mix.mp3",
+          "url": "/api/podcasts/media/office-hello-v1-1b49bc8da41e-mix.mp3",
           "seconds": 59.45,
-          "peak": 0.6628522872924805,
+          "peak": 0.6635828614234924,
           "lufs": -22.59,
-          "truePeakDb": -3.48,
-          "sha256": "2527a0cb6f645030a7aa23aeaa80c76d5b2c899b455c62118a6a648c6ed2a2c2"
+          "truePeakDb": -3.47,
+          "sha256": "192e742591ba45c31bd4b30969ea4e02f3ee8297dd027c31eabc9687c78d115a"
         }
       }
     },
@@ -52,12 +55,12 @@
           "sha256": "af447cdae6258adb314467cf358d783e637510e28dccaaa3c3418cc9f47e1491"
         },
         "mix": {
-          "url": "/api/podcasts/media/office-meeting-v1-8f3bcc21075d-mix.mp3",
+          "url": "/api/podcasts/media/office-meeting-v1-1b49bc8da41e-mix.mp3",
           "seconds": 59.65,
-          "peak": 0.7088548541069031,
-          "lufs": -22.8,
-          "truePeakDb": -2.97,
-          "sha256": "79dacc388c5b314a2a882cf6075893c5edd0bcc215a2f27d982793a2f80428e3"
+          "peak": 0.702739953994751,
+          "lufs": -22.67,
+          "truePeakDb": -3.05,
+          "sha256": "0b04f4459b112a0758bb466376a89a28da50379023f55326db2c217a4bfb9cea"
         }
       }
     },
@@ -77,15 +80,132 @@
           "sha256": "b63477bc1d08339ca5f0e142a2759d9823f0cea793a598de15e5abef52c44640"
         },
         "mix": {
-          "url": "/api/podcasts/media/office-help-v1-8f3bcc21075d-mix.mp3",
+          "url": "/api/podcasts/media/office-help-v1-1b49bc8da41e-mix.mp3",
           "seconds": 57.375,
-          "peak": 0.5881304740905762,
-          "lufs": -22.76,
+          "peak": 0.5740923881530762,
+          "lufs": -22.62,
+          "truePeakDb": -4.8,
+          "sha256": "eb45bccb447858c94480863bfb99e1223368e51f0c41c94876ce3b802574a98b"
+        }
+      }
+    },
+    {
+      "id": "daily-coffee-v1",
+      "title": "Gọi đồ uống trong giờ nghỉ",
+      "duration": 52.9,
+      "segments": 10,
+      "review": "unreviewed",
+      "assets": {
+        "voice": {
+          "url": "/api/podcasts/media/daily-coffee-v1-1b49bc8da41e-voice.mp3",
+          "seconds": 52.9,
+          "peak": 0.5884650945663452,
+          "lufs": -22.58,
           "truePeakDb": -4.59,
-          "sha256": "05921ae2400595247d5ff626215196659ca1eacad925ab86f2dd5db88f345df9"
+          "sha256": "de7dd67c8e7dd7834a9d2a18fe16167cd6e8e2795a2b58ba19dafda63fe057ff"
+        },
+        "mix": {
+          "url": "/api/podcasts/media/daily-coffee-v1-1b49bc8da41e-mix.mp3",
+          "seconds": 52.9,
+          "peak": 0.5878722667694092,
+          "lufs": -22.67,
+          "truePeakDb": -4.61,
+          "sha256": "432d24ae7e451e73c21acc4657ee6d8334a85e7280aa8f0e7349817f011f8709"
+        }
+      }
+    },
+    {
+      "id": "daily-directions-v1",
+      "title": "Hỏi đường đến ga tàu",
+      "duration": 54.6,
+      "segments": 10,
+      "review": "unreviewed",
+      "assets": {
+        "voice": {
+          "url": "/api/podcasts/media/daily-directions-v1-1b49bc8da41e-voice.mp3",
+          "seconds": 54.6,
+          "peak": 0.5901442766189575,
+          "lufs": -22.64,
+          "truePeakDb": -4.44,
+          "sha256": "ec197e0c1f46901c60a20ff0e0d5da85b5ca59a18cb54a018d3328b26cedef03"
+        },
+        "mix": {
+          "url": "/api/podcasts/media/daily-directions-v1-1b49bc8da41e-mix.mp3",
+          "seconds": 54.6,
+          "peak": 0.5924841165542603,
+          "lufs": -22.71,
+          "truePeakDb": -4.39,
+          "sha256": "b9696153adc0939bdcd4f02a0f27042470bfae431c8379b5b3b80f9a13dc45fe"
+        }
+      }
+    },
+    {
+      "id": "office-update-v1",
+      "title": "Báo tiến độ và hẹn hạn gửi",
+      "duration": 56.45,
+      "segments": 10,
+      "review": "unreviewed",
+      "assets": {
+        "voice": {
+          "url": "/api/podcasts/media/office-update-v1-1b49bc8da41e-voice.mp3",
+          "seconds": 56.45,
+          "peak": 0.6712801456451416,
+          "lufs": -22.62,
+          "truePeakDb": -3.42,
+          "sha256": "f2b3ea2c5f59915ce0bbd4930c63d2e23e58012a5648eb7816cb4d237847f994"
+        },
+        "mix": {
+          "url": "/api/podcasts/media/office-update-v1-1b49bc8da41e-mix.mp3",
+          "seconds": 56.45,
+          "peak": 0.6808990240097046,
+          "lufs": -22.68,
+          "truePeakDb": -3.26,
+          "sha256": "daafeb0a8a6cf998bd384266aa17879aa7f0a9f137006252fe67f6736d80f822"
+        }
+      }
+    },
+    {
+      "id": "daily-weekend-v1",
+      "title": "Hẹn bạn vào cuối tuần",
+      "duration": 54.2,
+      "segments": 10,
+      "review": "unreviewed",
+      "assets": {
+        "voice": {
+          "url": "/api/podcasts/media/daily-weekend-v1-1b49bc8da41e-voice.mp3",
+          "seconds": 54.2,
+          "peak": 0.653326690196991,
+          "lufs": -22.51,
+          "truePeakDb": -3.69,
+          "sha256": "c9639be46b8da57574854f8173acef1ba5c1b7d507d564762c114ea8effaf8ba"
+        },
+        "mix": {
+          "url": "/api/podcasts/media/daily-weekend-v1-1b49bc8da41e-mix.mp3",
+          "seconds": 54.2,
+          "peak": 0.658772349357605,
+          "lufs": -22.56,
+          "truePeakDb": -3.62,
+          "sha256": "ac7fa838524e8f3265c821b07d565aa808c3dab1ffd6bf331974c875157ac995"
         }
       }
     }
   ],
-  "asr": "All three mixed files transcribed locally; no entire missing sentence observed. Homophone differences remain; not a tone or human review."
+  "asr": "Seven mixed files transcribed locally: no entire missing sentence observed. Homophone/near-homophone differences; not human tone approval.",
+  "bankDiff": [
+    {
+      "id": "office-hello-v1",
+      "voiceShaUnchanged": true,
+      "mixShaChanged": true
+    },
+    {
+      "id": "office-meeting-v1",
+      "voiceShaUnchanged": true,
+      "mixShaChanged": true
+    },
+    {
+      "id": "office-help-v1",
+      "voiceShaUnchanged": true,
+      "mixShaChanged": true
+    }
+  ]
 }
