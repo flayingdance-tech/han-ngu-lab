@@ -390,3 +390,12 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 - ASR kiểm tra lại exit0; không thấy mất câu/đọc nhạc chen vào transcript; đồng âm 他/她/的/地 là khác chữ ASR. Không khẳng định đã nghe hoặc duyệt cảm xúc. Report+asr-triage lưu cạnh file. Đã hiển thị player mẫu trong chat.
 - Backup9file cùng máy hashverified radio-pilot-20261019-144858; sẽ cập nhật script check và ASR vào bản backup này. Không chạy build/E2E vì không sửa web/backend; chỉ script/media/docs. Còn tích hợp danh mục radio/UI audio-only, chống lặp nhiều tập và duyệt nghe.
 - Không còn tiến trình render/ASR cần chờ. Giữ file/website cũ; không báo toàn bộ podcast hoàn thành.
+
+## 2026-10-19T15:37:04.9248927+07:00 — Radio v2 đang render
+Đã bỏ đọc lặp/cụm ghi nhớ, gộp4câu động viên và thêm đoạn tâm sự để giữ1–2phút. Bỏ duck50% gây nền tăng6dB trong khoảng nghỉ; bỏ master loudnorm động, dùng gain cố định; cân mức nền theo chính nhạc và nối equal-power. Cache nền/giọng cũ được tái dùng. Output phiên bản v2 riêng, giữ v1. Lệnh scripts/radio-pilot.py; session26327; log radio-pilot/render-v2.log.
+
+## 2026-10-19T15:41:33.8374892+07:00 — Mẫu v2 sẵn sàng gửi duyệt
+- Render cuối exit0;7đoạn78.27896s. Bỏ đọc lặp/cụm nhớ; giọngA không pitch. Mix -21.66LUFS,true peak -3.48dBTP; nền RMS3s range1.386dB,không speech duck/masterdynamic. Giữ filev1 riêng.
+- ASR cuối exit0,nhận đủ nội dung; sai chữ đồng âm 他/她,的/地,在/再,không kết luận lỗi âm chỉ từ ASR. Vẫn chưa duyệt cảm xúc bằng người.
+- Backup11file ở .local\podcast-backups\radio-v2-20261019-154133,hashkhớp,cùngmáy. Không sửa web/backend; không chạy build/E2E không liên quan. git diff --check là kiểm tra diff.
+- D-033: gửi mẫu cho chủ dự án trước và chờ chốt; không tự áp dụng full. Không tiến trình render/ASR còn chạy.

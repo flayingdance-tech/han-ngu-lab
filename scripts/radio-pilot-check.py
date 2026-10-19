@@ -7,10 +7,10 @@ from faster_whisper import WhisperModel
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'.local/podcasts/radio-pilot'
-report=json.loads((OUT/'report.json').read_text(encoding='utf-8'))
+report=json.loads((OUT/'report-v2.json').read_text(encoding='utf-8'))
 model=WhisperModel(str(ROOT/'.local/audio-preview/asr-model'),device='cpu',compute_type='int8',cpu_threads=2)
 result={'humanReviewed':False,'purpose':'Independent ASR triage of final mix; does not judge music or emotion','recognized':[]}
-asset=OUT/'pilot-mix.mp3'
+asset=Path(report['assets']['mix']['file'])
 raw=subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-i',str(asset),'-af','pan=mono|c0=0.5*c0+0.5*c1','-ar','16000','-f','f32le','pipe:1'],capture_output=True,check=True).stdout
 wave=np.frombuffer(raw,dtype='<f4').copy()
 assert np.isfinite(wave).all() and np.max(np.abs(wave))<.99
@@ -21,4 +21,4 @@ for segment in segments:
     result['recognized'].append(item)
     print(segment.text,flush=True)
 result['expected']=''.join(s['text'] for s in report['segments'])
-(OUT/'asr-triage.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+(OUT/'asr-triage-v2.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')

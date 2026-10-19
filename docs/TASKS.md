@@ -59,3 +59,5 @@ Trạng thái: TODO / IN_PROGRESS / BLOCKED / DONE. Phạm vi đã chốt; nghi�
 | POD-04 | Làm lại podcast radio theo file tham chiếu | IN_PROGRESS | Mẫu 60–120 giây, lời liền mạch, nhạc phù hợp có nguồn/giấy phép, audio-only; chưa có mẫu mới hoặc bản nhạc thay thế được chốt |
 
 POD-04 bằng chứng mẫu (2026-10-19T14:50:19.8021012+07:00): pilot-mix.mp3 76.94s,14đoạn; nhạc nguồn chủ dự án; render/ASR exit0; báo cáo true peak -1.94dBTP. Trạng thái IN_PROGRESS vì mới mẫu local, còn tích hợp radio và luân phiên tập.
+
+POD-04 v2 (2026-10-19T15:41:10.4719983+07:00): mẫu78.28s/7đoạn, không đọc lặp/cụm ghi nhớ; nền ổn định không speech duck. IN_PROGRESS, chờ chủ dự án chốt mẫu theo D-033 trước áp dụng full. File và report có hậu tố v2; giữ v1.

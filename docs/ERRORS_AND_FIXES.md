@@ -38,3 +38,6 @@ Chủ dự án phản hồi nhạc không phù hợp, lời rời rạc/thiếu 
 
 ## POD-12 — Kiểm tra stereo xuống mono sai gain (2026-10-19T14:50:19.8021012+07:00)
 ASR check dùng -ac1 khiến FFmpeg downmix cộng hai kênh tương quan, tăng đỉnh và assertion thất bại dù file stereo true peak -1.94dBTP. Sửa đầu vào ASR bằng pan=mono|c0=0.5*c0+0.5*c1; giữ kiểm tra finite/peak/duration. Chạy lại đạt và nhận đủ các câu. Không sửa giảm chất lượng file nhạc hoặc bỏ assertion.
+
+## POD-13 — Nhạc nền lên xuống theo lời và điểm nối (2026-10-19T15:41:10.4719983+07:00)
+Bảnv1 duck50% làm nền chênh6dB theo khoảng nghỉ; master loudnorm động và nối linear có thể làm biến thiên thêm. V2 bỏ speech duck, dùng gain master cố định, nối equal-power, cân RMS nền độc lập với lời, fade chỉ đầu/cuối. Thử cân cửa sổ2–4s không đạt mục tiêu nội bộ2dB; giữ assertion, sửa cân nền cửa sổ1s. Render cuối đạt biên độ RMS cửa sổ3s dao động1.386dB (bỏ fade), kiểm tra true peak đạt. Đây là bằng chứng kỹ thuật, chờ chủ dự án nghe; không kết luận chất lượng chủ quan được duyệt.

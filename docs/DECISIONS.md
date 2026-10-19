@@ -63,3 +63,7 @@ Chủ dự án đổi lựa chọn từ Chinese ambient/guzheng sang lo-fi chill
 Chủ dự án không chấp nhận chất lượng cảm nhận của bản POD-03: nhạc chưa phù hợp, giọng rời rạc/thiếu cảm xúc. Làm lại mẫu 1–2 phút, một người dẫn, chỉ audio, không hình/phụ đề; chào ngày/thứ chính xác, 3–4 câu động viên 4–8 chữ Hán đọc thường rồi chậm, cụm từ nhắc hai lần, kết hẹn ngày mai. Luân phiên chủ đề văn hóa/thành ngữ/truyện/thơ/nhật ký, tránh lặp nội dung. Nhạc nền là tiêu chí chính, ưu tiên gần không khí file MP4 chủ dự án gửi và có giấy phép miễn phí phù hợp. VoiceStudio có thể hỗ trợ xử lý giọng/tách và trộn nền; chưa xác minh khả năng sáng tác nhạc. Không coi tách nhạc là thay đổi quyền tác giả. Giữ mẫu A, không quay lại clone lỗi hay đổi pitch. Phải làm mẫu mới trước khi nhân rộng; QA kỹ thuật cũ không phải chấp nhận chất lượng nghe.
 
 D-031 bổ sung 2026-10-19T14:44:01.3290555+07:00 : chủ dự án xác nhận nhạc nền trong MP4 miễn bản quyền và yêu cầu tự tách; không yêu cầu chủ dự án tách hoặc cung cấp thêm. Dùng nguồn này cho mẫu local, ghi rõ quyền do chủ dự án xác nhận, không tự gán CC BY.
+
+D-032 ACCEPTED 2026-10-19T15:37:04.9248927+07:00 : bỏ hoàn toàn mục đọc thường/chậm lặp lại và cụm từ cần nhớ hai lần. Podcast kể một lượt. Chỉnh nhạc ổn định, bỏ duck theo lời và xử lý master gây tăng giảm nền. Giữ cùng nhạc tham chiếu và giọngA.
+
+D-033 ACCEPTED 2026-10-19T15:39:18.2339527+07:00 : bắt buộc gửi mẫu audio cho chủ dự án nghe và chốt trước khi áp dụng vào dự án full. Chỉ làm mẫu private trong lượt hiện tại; không thay danh mục/UI hay sinh hàng loạt nếu chưa được chốt.
