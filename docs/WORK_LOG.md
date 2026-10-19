@@ -438,3 +438,16 @@ content/radio-storyteller.json và scripts/radio-storyteller.py: mởthânthiệ
 - Renderexit0,7đoạn,87.060s,lờikết80.98s. GiọngA thay pacing/punctuation/câudẫngiớithiệu,không pitch/formant. VoiceEQấmnhẹ,không reverb/SFX. Music v8 nguyên PCM SHA BBCD3E0F2D936B8CC6CE5D4597A4DD44CFF130A4FB5E6612179439028548878B;assertresidualmix<1e-7,không đổi gain/điểm nối/độdài nền. Mix -20.36LUFS/-3.52dBTP.
 - ASRexit0 không thấy mất nguyêncâu; 好→号 khác thanh điệu,他/她,的/地,在/再 khác chữ. Không suyra phátâm đúng hoặc sai chỉtừASR;giữunreviewed và cần nghe mẫu. Không tự nhận đã nghe/duyệt cảm xúc.
 - Backup11filehashkhớp .local\podcast-backups\radio-v9-20261019-221659,cùngmáy,không kèmruntime/model. Không đổiweb/backend,không chạybuild/E2E. Không tiến trình còn chạy. D-033 chờ chủ dự án nghe/chốt trước full.
+
+## 2026-10-19T22:21:40.6210815+07:00 — Bắt đầu áp dụng radio vào web
+Đọc hồ sơ/code/tests,.codegraph không có,Git sạch. D-041:không làm mẫu/xin chốt tiếp,boostvoice1.3dB,giữ âm thanh v9 và nềnv8. Đang backup catalog7dialogue cũ trước thay,logpre-radio-backup.log. Kế hoạch thay7tập thành thư việnradio,UIaudio-only/bỏ ảnh lời thoại,giữresume/yêu thích/seek/music switch;metadata nguồn nhạcowner-supplied không gán CC BY. Tạo audiooffline,giữprivate/unreviewed/livegate;cloudcầnquyềntruycập chưacó.
+
+## 2026-10-19T22:29:34.7615394+07:00 — Tiến độ áp dụng radio
+Typecheck/lint banđầuđạt;unit22/22. Thưviện7tậpradio,đầudùngWAVv9boost1.3dB,6tậpmớitheocùngpreset,nềnfrozenv8hash. Schema phânbiệt owner-supplied vớiCCBY,không lộproduction/privateprofile;UIbỏlờithoại/phụđề/tảitext/ảnhpodcast,giữplayercontrols/resume/favorite. Renderer80344 đangchạy,progressfile ghiđủtậpQA,katalogcũchưaswap. KhởidộngAPI/weblauncher 15964/10560,logs riêng khôngdumpauth.
+
+## 2026-10-19T22:45:22.9461980+07:00 — D-041 áp dụng xong trên web local
+- 7radio/14MP3,mỗi87.060s;36đoạn mới sinh,đầu táidùngWAVv9voicechỉboost1.3dB. Nềnfrozenv8SHA bbcd3e0f...,auditpersistedWAV residual<1e-7 vàvoicefirstboostdiff<1e-7. Sourcefingerprint5842ce04d6aa...;publicmetadataowner-supplied/noprofile/production/transcript. UIaudio-only,vịtrí/yêuthích/seek/loop/liêntục/music-switch/ratekhôngđổicácmodulekhác.
+- Typecheck/lintđạt;unit22/22,E2Eaudio6/6+podcast8/8 desktopmobile,lỗi mạng/lightdark,buildexit0. Đã xem ảnhdesktop-dark/mobile-light:không ảnhpodcast hoặc overflow. Export145/290SHAkhớp/privateLeaks0. HTTPweb200,catalog7radio,MP3Range206 sau build.
+- ASRraw7tập+reviewexit0,khôngflagmấtđoạn;char similarity.965–.987,minparagraph.85. OutroASR cóhallucinations/kểcảtimestamp>duration;WAVvoiceimlặngđượcđốichiếu vàrawgiữ,kếtquảkhôngthayngườiduyệtthanhđiệu/cảmxúc. Khácchữ好/号vẫnchờngườinghe,khôngchữaviệcđó bằngđổi giọngđãchọn.
+- Backup/restore34filehashkhớp timestamp2026-10-19T15-42-58.166Z;cùngmáy,khôngoffsite/model/runtime/DBđầyđủ. Backup trước33filetimestamp2026-10-19T15-21-57.954Z. Không xoálegacyassets;APIwhitelistchỉbộmới.
+- Không còn renderer/ASR/E2E/buildđangchạy. APILauncher15964/web10560;logs riêngradio-api/radio-web. GiữDB/tàikhoản/tiếnđộ. Chưa cấu hìnhcloud/email/HTTPS,côngkhaiquyềnnhạcvàduyệthọcliệucònPOD-02;khôngđượcbáođãxongHSK4hoặctoànbộdựán. D-033samplegatebịthaybằngD-041,khônghỏiownerchốtlại.

@@ -1,0 +1,11 @@
+{
+  "title":"不如见一面 · Bản piano",
+  "author":"Bản nhạc do chủ dự án cung cấp",
+  "license":"owner-supplied",
+  "rightsStatus":"owner-provided-unverified",
+  "genre":"Piano",
+  "localFile":".local/podcasts/music/radio-piano-bed.wav",
+  "sha256":"bbcd3e0f2d936b8cc6ce5d4597a4dd44cff130a4fb5e6612179439028548878b",
+  "originalFile":".local/podcasts/music/owner-piano.mp3",
+  "changes":"Giữ bản phối piano đã chọn: cắt-ghép liên tục, nguyên nhịp và cao độ. Chỉ tăng nhẹ giọng dẫn."
+}

@@ -4,12 +4,17 @@ import { createHash } from 'node:crypto';
 import { podcastCatalogSchema } from '../lib/podcast';
 
 const root=resolve('.local/podcasts'),catalog=podcastCatalogSchema.parse(JSON.parse(readFileSync(resolve(root,'rendered/catalog.json'),'utf8')));
-const music=JSON.parse(readFileSync('content/podcast-music.json','utf8')) as {localFile:string;sha256:string};
-const files=['content/podcasts.json','content/podcast-music.json','scripts/podcast-render.py','scripts/podcast-asr-check.py','scripts/voice_io.py','scripts/voice_pronunciation.py','scripts/requirements-kokoro.txt','docs/PODCAST_RUNBOOK.md','docs/ERRORS_AND_FIXES.md','.local/podcasts/rendered/catalog.json','.local/podcasts/lofi/source.html','.local/podcasts/lofi/track.json','.local/podcasts/lofi/artist-license.html','.local/podcasts/CC-BY-4.0.txt',music.localFile];
-files.push('.local/podcasts/render-summary.json','.local/podcasts/lofi/asr-triage.json','.local/podcasts/lofi/bank-diff.json','docs/reports/podcast-inventory.json');
+const music=JSON.parse(readFileSync('content/podcast-radio-music.json','utf8')) as {localFile:string;sha256:string;originalFile:string};
+const files=['content/podcast-radio.json','content/podcast-radio-music.json','content/radio-storyteller.json','scripts/podcast-radio-render.py','scripts/podcast-asr-check.py','scripts/voice_io.py','scripts/requirements-kokoro.txt','docs/PODCAST_RUNBOOK.md','docs/ERRORS_AND_FIXES.md','.local/podcasts/rendered/catalog.json',music.localFile,music.originalFile,'.local/podcasts/radio-pilot/pilot-v9-voice.wav','.local/podcasts/radio-pilot/report-v9.json','.local/podcasts/render-summary.json','.local/podcasts/radio-asr-triage.json'];
 const hash=(path:string)=>createHash('sha256').update(readFileSync(path)).digest('hex');
+files.push('scripts/podcast-radio-audit.py','docs/reports/podcast-radio-integrity.json');
+files.push('scripts/podcast-asr-review.py','.local/podcasts/radio-asr-reviewed.json');
+const triage=JSON.parse(readFileSync(resolve(root,'radio-asr-triage.json'),'utf8')) as {humanReviewed:boolean;episodes:{id:string}[]};
+const checkedIds=new Set(triage.episodes.map(e=>e.id));
+if(triage.humanReviewed!==false||checkedIds.size!==catalog.episodes.length||triage.episodes.length!==catalog.episodes.length||catalog.episodes.some(e=>!checkedIds.has(e.id)))throw new Error('ASR triage has not completed for this radio catalog');
 if(hash(music.localFile)!==music.sha256)throw new Error('Music source checksum mismatch');
 for(const episode of catalog.episodes){
+  if(episode.format!=='radio'||episode.segments.length)throw new Error('Expected an audio-only radio catalog');
   for(const asset of Object.values(episode.assets)){
     const file=`.local/podcasts/rendered/${basename(asset.url)}`;
     if(hash(file)!==asset.sha256)throw new Error(`Audio checksum mismatch: ${file}`);

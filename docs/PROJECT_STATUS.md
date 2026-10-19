@@ -1,59 +1,39 @@
-POD-04 v9 2026-10-19T22:16:00.4213511+07:00 — Mẫu giọng kể đã tạo pilot-v9-mix.mp3,87.060s,lời kết80.98s. Nhịp kể/điểmngắt theo content/radio-storyteller.json;giọngA,không pitch/formant. Nhạc nguyên PCM v8 (SHA+mix residual đã kiểm),không đổi âm lượng/điểm nối/thời lượng. -20.36LUFS/-3.52dBTP. ASR exit0,không thấy mất nguyên câu; có 好→号 cần người nghe xác nhận,không coi ASR là duyệt thanh điệu;chờ chủ dự án nghe/chốt trước full.
-
-POD-04 v8 2026-10-19T22:06:00.9306503+07:00 — pilot-v8-mix.mp3,87.060s; nâng nền piano thêm3.52dB so v7,balance -2.05dB,true peak -3.26dBTP. Giữ nguyên lời/giọng/nhịp/cao độ/cáchghép. ASRfinalmix exit0,nhận đủ nội dung; chờ chủ dự án nghe/chốt,không sửaweb.
-
-Mẫu EQ thanh nhẹ (2026-10-19T21:48:29.8968579+07:00): pilot-v4-bright-mix.mp3,giảm300Hz1.5dB/tăng2800Hz1.2dB/highshelf6500Hz0.8dB; không pitch/tốc độ; nềnv4 nguyên stereo. -22.62LUFS/-4.07dBTP. Chờ chủ dự án so sánh, chưa đổi lựa chọn giọng hay web. Recipe+QA nằm cạnh file.
-
-POD-04 v4 2026-10-19T21:45:53.6503584+07:00 — Mẫu mới pilot-v4-mix.mp3,87.060s: khôi phục nền video tham chiếu theo D-035; giữ nguyên WAV giọng chậm v3 (SHA lưu report). Bỏ Dreams Become Real khỏi lựa chọn hiện hành. Nền range1.386dB,không duck,mix -21.96LUFS/true peak -4.36dBTP. Nguồn24giây có nối nền, không hứa không lặp. D-033: chờ chủ dự án nghe/chốt, chưa sửa web/full. Tạo lại mẫu hiện hành bằng scripts/radio-remix-reference.py; radio-pilot.py là phương án v3 đã bị từ chối.
-
 # Trạng thái hiện tại — đọc đầu tiên khi tiếp tục
 
-Checkpoint: 2026-10-19T12:41:57+07:00, Asia/Bangkok. Workspace: D:\Hán Ngữ Lab.
+Checkpoint: 2026-10-19T22:45:22.9461980+07:00, Asia/Bangkok (+07). Workspace D:\Hán Ngữ Lab.
 
-## Mốc mới nhất: lo-fi chill và podcast nghe hằng ngày
+## Hiện hành: đã áp dụng podcast radio theo D-041
 
-- D-030/POD-03: theo quyết định cuối, dùng lo-fi chill học tập. Watching Rain Together — Pamela Yuen, CC BY4.0; nguồn FMA + trang quyền tác giả, cấu hình `content/podcast-music.json`. Không dùng guzheng hoặc Almost in F trong mix hiện hành.
-- 7 tập/70 đoạn/14 MP3: 3 tập công sở cũ và 4 tập mới (đồ uống, hỏi đường, tiến độ, cuối tuần), mỗi tập khoảng1phút. Giọng A offline, không đổi pitch/formant, không phí API.
-- 3 MP3 chỉ giọng cũ giữ nguyên SHA; 30 WAV cũ tái dùng,39 đoạn mới sinh và1 đoạn dùng cache lặp. Tách fingerprint synthesis/mix để đổi nhạc không sinh lại giọng. `render-summary.json` và `lofi/bank-diff.json` có bằng chứng.
-- Nhạc lo-fi loop crossfade2s, low-pass3kHz, duck30% khi có lời, fade đầu/cuối. Credit UI/metadata mix/lời thoại tải, nguồn/hash/license trong PODCAST_RUNBOOK và backup. Không đăng nhạc lên dịch vụ phân phối/Content ID.
-- UI: nhớ tập/vị trí/tùy chọn trên thiết bị, yêu thích/tìm kiếm, ±10s, từ đầu, lặp một tập/nghe liên tục, tải transcript có credit; mobile danh sách vuốt ngang; dark giữ nữ lo-fi. LocalStorage schema/clamp/fallback, không đồng bộ tài khoản.
-- Tất cả unreviewed. File private `.local/podcasts/rendered`; API live vẫn chặn danh mục/media, không podcast draft trong public/out. POD-02 (duyệt chuyên môn/CMS xuất bản) còn TODO.
-- QA14MP3 đạt; mix -22.71..-22.56LUFS, true peak mix cao nhất -3.05dBTP. ASR7tập không thấy mất nguyên câu khi đối chiếu, có chữ đồng âm/gần âm; không chứng nhận thanh điệu.
-- Typecheck/lint/unit21/21; E2E audio+podcast14/14 desktop/mobile,2.2m; build exit0. Export bank bài học145mục/290MP3 hash khớp,no privateLeaks. Log `.local/podcasts/lofi/`, inventory `docs/reports/podcast-inventory.json`.
-- Backup/restore33file SHA khớp: `.local/podcast-backups/2026-10-19T05-41-04.088Z` và `.local/podcast-restore-check/2026-10-19T05-41-04.088Z`. Gồm14MP3,catalog,kịch bản/cấu hình,nhạc/license,renderer/helpers,QA/ASR; chưa offsite, không model/runtime/DB đầy đủ.
-- Backup trước đổi lo-fi timestamp2026-10-19T05-29-18.416Z giữ19file; không xóa file cũ. Catalog chỉ tham chiếu bộ mới; file cũ không tham chiếu không được route phục vụ.
-- Sổ lỗi `docs/ERRORS_AND_FIXES.md`, runbook `docs/PODCAST_RUNBOOK.md`. Không render lại hoặc chọn lại nhạc/giọng nếu không có yêu cầu mới. Bước tiếp: quy trình người duyệt/xuất bản, không tự approved.
+- Chủ dự án đã chốt giọng kể v9 và nhạc piano hiện hành; tăng nhẹ giọng1.3dB, áp dụng trực tiếp, không làm mẫu hoặc hỏi duyệt mẫu nữa. D-033 đã bị thay thế trong phạm vi này.
+- 7 tập radio/14MP3, mỗi tập87.060s: tuần mới, thành ngữ, nhật ký, văn hóa trà, thơ, truyện cuối tuần, tâm sự buổi tối. Ngày19–25/10/2026 có thứ tương ứng; đây là thư viện soạn sẵn, không tự sinh vô hạn.
+- Tập đầu tái dùng nguyên WAV v9, chỉ nhân gain1.3dB. 6 tập mới/36 đoạn dùng cùng Kokoro zf_001, preset kể chuyện, EQ, model/speaker pinned; không đổi pitch/formant hoặc nhắc câu thường/chậm.
+- Nền v8 giữ nguyên PCM trên cả7tập, gồm âm lượng/nhịp/cao độ/điểm nối/thời lượng. SHA bbcd3e0f2d936b8cc6ce5d4597a4dd44cff130a4fb5e6612179439028548878b. `docs/reports/podcast-radio-integrity.json` kiểm WAV lưu thực, residual<1e-7; tập đầu đối chiếu voice boost cũng<1e-7.
+- Nguồn hiện hành: content/podcast-radio.json, podcast-radio-music.json, radio-storyteller.json. `npm run podcast:render` dùng scripts/podcast-radio-render.py. Không chạy renderer hội thoại/lo-fi cũ để ghi đè.
+- UI audio-only: bỏ ảnh/phụ đề/Pinyin/nghĩa Việt/tải lời thoại; giữ seek, nhạc/giọng riêng, tốc độ, yêu thích/tìm, resume, lặp/nghe liên tục. Dữ liệu nghe lưu trên thiết bị; ID mới không đè lịch sử cũ.
+- Nội dung/phonetics vẫn unreviewed. Nhạc chủ dự án cung cấp là owner-supplied/owner-provided-unverified, không gán CC BY; quyền phát hành công khai chưa xác minh. API live chặn draft, local preview phát được. API không lộ profile/production hoặc transcript radio.
 
-## Mốc hiện tại: mẫu A đã thay bộ giọng lỗi
+## Kiểm tra và sao lưu
 
-- D-028: chủ dự án chọn mẫu A (Kokoro zf_001) ngày19/10/2026. Website local dùng hnl-kokoro-zf001-v1,145 mục/290 MP3 thường-chậm,3,666,688bytes; không API tạo giọng trả phí, không giọng thiết bị, không chỉnh pitch/formant.
-- AUDIO-08 DONE về thay thế và tích hợp kỹ thuật; mọi clip vẫn unreviewed. Chọn âm sắc không tương đương duyệt ngữ âm toàn bộ giáo trình. AUDIO-07 còn TODO.
-- Offline CPU FP32, speed1.0, bản chậm atempo0.8. Model pin01e7505bd6a7a2ac4975463114c3a7650a9f7218; SHA256b1d8410f... theo model card. Runtime .local/kokoro-venv, model .local/kokoro-model.
-- scripts/voice_pronunciation.py căn95 cụm (94 mục từ + 还书) theo Pinyin. Mục từ giữ lexical tone và biến điệu thanh3; câu dùng frontend có tone sandhi/erhua. Regression 打算 giữsuàn4, 谢谢 giữxie5, 你好变调ni2, 还要/还书 phân biệt.
-- V2 profile f01aa4136b3673244590e4e98d93542d89e931c5fa0869f78b8580ce8789cb3c.1 clip sửa sau đối chiếu,144 giữ nguyên khi phoneme/model/speaker/speed/encoding khớp. Metadata docs/reports/audio-pronunciation.json; inventory docs/reports/audio-inventory.json.
-- Bộ OmniVoice trước bị chủ dự án nghe và từ chối vì méo/sai/không ra âm (D-027).580 MP3 cũ/không còn tham chiếu đã chuyển vào .local/voice-retired/20261019T001158148707Z, SHA256 kiểm tra sau từng lần chuyển; không xóa file.
-- Bộ preset v1 trước sửa 打算 ở .local/voice-kokoro-v1; bản cuối .local/voice-kokoro. Không chạy lại v1 để ghi vào website.
+- Typecheck/lint đạt; unit/API22/22. E2E podcast8/8 + audio bài học6/6, desktop/mobile, cả hai theme; build Next exit0.
+- 14MP3 decode/peak/LUFS/hash qua QA renderer. Radio audit xác nhận giọng tập đầu chỉ tăng gain, toàn bộ nền không đổi. Xem `.local/podcasts/radio-integrity.log` và report JSON.
+- ASR7/7 hoàn tất; triage theo đoạn không flag mất nội dung, min character coverage.85 trở lên. Có nhầm chữ/âm và bịa lời trên outro nhạc (kể cả timestamp vượt độ dài file); raw giữ nguyên, `podcast-asr-review.py` tách music-only bằng thời gian và WAVvoice. Không coi ASR là duyệt thanh điệu/cảm xúc; 好→号 còn cần người nghe.
+- Export bài học145mục/290MP3 SHA khớp, privateLeaks0. Không đổi bộ âm bài học.
+- Backup/restore mới34file hash khớp: `.local/podcast-backups/2026-10-19T15-42-58.166Z` và `.local/podcast-restore-check/2026-10-19T15-42-58.166Z`. Bao gồm nguồn/preset/renderer, nhạc gốc/PCM, WAVv9, catalog/14MP3, QA/ASR/runbook. Cùng máy, không offsite/model/runtime/DB đầy đủ.
+- Trước thay đã backup/restore33file cũ tại timestamp2026-10-19T15-21-57.954Z; không xóa asset cũ. Chỉ file trong catalog mới được route phục vụ.
+- Log kiểm tra `.local/podcasts/radio-*.log`; thông tin nguồn/quy trình `docs/PODCAST_RUNBOOK.md`, lỗi `docs/ERRORS_AND_FIXES.md`.
 
-## Bằng chứng mốc bộ giọng A trước podcast
+## Vận hành local
 
-- Typecheck/lint đạt; unit18/18, pronunciation Python3/3, audio E2E6/6 desktop/mobile (1.2m), kiểm tra thường/chậm, dừng khi chuyển tab, lỗi mạng/retry, chặn bộ bị từ chối.
-- QA v2 decode/hash290file issues0. ASR16 là v1; chỉ 打算 thay ở v2 và ASR riêng nhận lại đúng 打算. Các âm đơn/từ khác có sai nhận dạng, không coi ASR là kiểm định thanh điệu. Chưa có duyệt chuyên môn.
-- Build Next thành công; export145entries/290MP3, SHA256 khớp public, không reference giọng/model/prompt/DB. Ảnh thiết kế reference-*.webp là asset công khai hợp lệ; phép kiểm tra tên rộng ban đầu đã được sửa để không nhầm chúng với reference giọng.
-- Cache no-op generated0/recovered0/reused0,total145,0.05s sau khởi tạo; không nạp model. cache-check.json riêng, không ghi đè render-report.
-- Backup/restore bộ cuối: .local/voice-backups/2026-10-19T00-11-01-948Z và .local/voice-restore-check cùng timestamp,295file khớp SHA256; gồm MP3/manifest/metadata/targets, không model/runtime hoặc DB. Đây là cùng máy, chưa backup ngoài máy/AWS.
-- Backup trước switch bộ cũ: timestamp2026-10-19T00-01-34-646Z,297file khớp, có master/reference riêng. Không đưa private profile vào web/Git.
+- Web http://localhost:3000/, API3001. Sau build root200, catalog7radio và MP3 Range206; không lộ production/profile. Chưa triển khai Internet.
+- API launcher15964, web launcher10560; listener con có thể đổi, kiểm PID/port trước restart. Logs radio-api.log/.err và radio-web.log/.err. Không dump stdout auth/email mô phỏng.
+- Không còn renderer/ASR/E2E/build cần chờ tại checkpoint này; không render lại bộ âm nếu nguồn không đổi.
+- Giữ .local/hanngulab.sqlite, tài khoản/tiến độ. .codegraph/ không có, không tự index. Sáng giữ thiết kế pastel, tối các tab khác giữ nữ lo-fi/ẩn chibi như trước.
 
-## Vận hành local và dữ liệu
+## Bộ âm bài học và phạm vi dự án còn lại
 
-- Preview http://localhost:3000/, API3001; HTTP200 sau build podcast. API launcher11404, listener gần nhất16032 (watch có thể đổi); web launcher14680/listener14116. Kiểm tra PID/port thật trước khởi động lại. API log `.local/podcasts/lofi/api.log/.err`; web `.local/podcasts/lofi/web.log/.err`; không dump stdout auth.
-- Không còn renderer chạy; không tự chạy lại render/QA dài đã hoàn tất. npm run audio:render có cache, audio:publish yêu cầu đủ stage + hash QA, audio:backup phù hợp voice hiện hành. VOICE_RUNBOOK có quy trình.
-- .codegraph/ không có ở lần kiểm tra; không tự index. Giữ .local/hanngulab.sqlite, tài khoản/tiến độ. Podcast là module mới; không thay bộ âm bài học hoặc thiết kế các tab cũ.
-- UI tối giữ nữ lo-fi, ẩn trẻ chibi; sáng giữ thiết kế hiện có. UI-05 còn cần asset gốc riêng nếu yêu cầu trùng pixel collage.
-
-## Công việc dự án còn lại
-
-- 16 bài draft/94 word IDs/80 câu hỏi/39 ví dụ: chưa đủ giáo trình HSK4, chưa duyệt chuyên môn. Nội dung AI không tự publish.
-- Backend local Express/SQLite có auth email mô phỏng, phân quyền, chấm server/idempotency, progress/SRS, CMS revision/import JSON/rollback/editor, backup AES-GCM. CMS còn thiếu CSV/media/reviewer/publication/audit/users, kiểm tra phiên hết hạn/lỗi mạng.
-- Podcast có 7 tập local; chưa có CMS duyệt/xuất bản podcast, chưa duyệt chuyên môn và chưa phát hành công khai. Không quảng cáo độ phủ nội dung vượt 7 tập đã có.
-- Cloud/email/HTTPS chưa cấu hình/deploy; backup ngoài AWS và diễn tập migration chưa làm. Budget150 USD/6 tháng gồm credit, không chi thêm; credit200 USD/hạn là chủ dự án báo, chưa xác minh Console. Website miễn phí18+, AI tùy chọn.
-- Production npm audit mốc trước0 vulnerability; dev5high cũ chưa rà lại, không coi hệ thống đã kiểm toán an toàn. Chưa hoàn thành toàn dự án.
+- D-028: giọngA hnl-kokoro-zf001-v1,145mục/290MP3 thường-chậm. Dùng file offline, không browser TTS/API trả phí. Lexicon/đa âm theo VOICE_RUNBOOK; AUDIO-07 còn duyệt chuyên môn. Bộ OmniVoice bị từ chối đã được lưu/quarantine, không quay lại.
+- 16 bài draft/94 word IDs/80 câu hỏi/39 ví dụ chưa đủ HSK4, chưa duyệt chuyên môn. Không quảng cáo hoàn thành toàn giáo trình.
+- Backend local Express/SQLite có auth email mô phỏng, phân quyền, chấm server/idempotency, progress/SRS và CMS revision/import JSON/rollback/editor. Còn reviewer/publication, CSV/media, audit/users và kiểm tra hết phiên/lỗi mạng.
+- POD-02 còn CMS/người duyệt/quyền nhạc để phát hành công khai; POD-04 chỉ DONE kỹ thuật local theo preset đã chốt.
+- Cloud/email/HTTPS chưa cấu hình; backup ngoài AWS/ngoài máy và migration toàn bộ chưa diễn tập. Ngân sách150USD/6tháng gồm credit, không chi thêm; số dư/hạn AWS chủ dự án báo chưa kiểm Console.
+- Website miễn phí18+, AI tùy chọn. Chưa hoàn thành toàn dự án hoặc kiểm toán an toàn toàn hệ thống.

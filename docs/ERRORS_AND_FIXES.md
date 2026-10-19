@@ -47,3 +47,9 @@ Nguồn24giây phải loop để đủ tập; cân RMS không loại được l�
 
 ## POD-15 — Amix mono làm mất stereo nền (2026-10-19T21:48:29.8968579+07:00)
 Khi input đầu là giọng mono, FFmpeg amix có thể chọn output mono. Sửa bằng pan stereo nhân bản giọng sang2kênh trước amix; giữ nền stereo riêng,normalize0. Kiểm tra log decode cuối2kênh; không chấp nhận bản mono tạm làm mẫu.
+
+## POD-16 — ASR tưởng tượng lời trên outro piano (2026-10-19T22:42:53.1923371+07:00)
+Whisper sinh thêm '字幕by…',lặp đoạn thơ hoặc lời kêu gọi sau khi giọng đã kết thúc; có timestamp86–96s vượt cả file87.060s. Giữ nguyênrawASR để kiểmtoán. scripts/podcast-asr-review.py đối chiếu cửa sổ narration từ catalog và WAVvoice (silence sau end+1s),tách riêng nhậndạngmusic-only,đánhdấu timestampngoàibiên và đo coverage theo từngđoạn. Không sửa nhạc/giọng chỉ vì cácchữnày,không tự xuấtphụđềASR.7tập mincoverage.85 trởlên,khôngflagmấtđoạn;đây khôngphải duyệtthanhđiệu/cảmxúc. 好→号 và cácnhầmchữ/âmvẫncầnngườinghe,giữunreviewed.
+
+## POD-17 — Schema nhạc chỉ nhận CC BY (2026-10-19T22:42:53.1923371+07:00)
+Schema cũ chỉcho CC BY4.0 dù nhạc mới là file chủ dự án gửi. Sửa union owner-supplied/owner-provided-unverified,khôngcho licenseUrlCCgắn vào nguồnowner;unitkiểmtrakhônggánnhầmgiấyphép và bỏprofile/production khỏiAPI. Khôngtuyênbố quyềnpháthan côngkhai khi chưa xácminh.

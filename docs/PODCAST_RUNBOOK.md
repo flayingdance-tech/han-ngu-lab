@@ -1,59 +1,62 @@
-# Podcast — vận hành và bàn giao
+# Podcast radio — vận hành và bàn giao
 
-Cập nhật: 2026-10-19, Asia/Bangkok (+07).
+Cập nhật: 19/10/2026, Asia/Bangkok (+07). D-041 cho phép áp dụng trực tiếp cấu hình đã chọn, không cần làm mẫu hoặc hỏi chốt lại.
 
-## Phạm vi
+## Cấu hình hiện hành
 
-Bảy tập ngắn tự biên soạn: gặp đồng nghiệp, hẹn họp, nhờ hỗ trợ, gọi đồ uống, hỏi đường, báo tiến độ, hẹn cuối tuần. Mỗi tập có 10 đoạn, chữ Hán/Pinyin/nghĩa Việt, khoảng nghỉ luyện nói. Giọng A `Kokoro-82M-v1.1-zh / zf_001`, CPU FP32 offline, không đổi pitch/formant. Cùng một giọng cho các vai, không giả lập nhiều người nói.
+- Nguồn: `content/podcast-radio.json`, 7 tập radio một người dẫn cho ngày19–25/10/2026: tuần mới, thành ngữ, nhật ký, văn hóa trà, thơ, truyện cuối tuần, tâm sự buổi tối.
+- Giọng A Kokoro zf_001 FP32 offline, cùng model/speaker với mẫu v9. Nhịp kể/ngắt theo `content/radio-storyteller.json`, không pitch/formant, không đọc thường/chậm lặp và không mục cụm từ cần nhớ.
+- Tập đầu dùng nguyên WAV lời v9, chỉ tăng1.3dB. Các tập khác dùng cùng preset và mức tăng. Không gọi API tạo giọng khi người dùng bấm nghe.
+- Nhạc giữ nguyên PCM bản piano v8, cùng mức âm, cao độ, nhịp, điểm nối và thời lượng87.060s. Không duck theo lời, không master gain chung. Renderer kiểm hash nguồn và residual mix để phát hiện thay nhạc.
+- Nhạc: `不如见一面 · Bản piano`, file do chủ dự án cung cấp. Metadata là `owner-supplied / owner-provided-unverified`; không gán CC BY hoặc giấy phép của nhạc cũ cho bản này. Giấy phép công khai của file này chưa được xác minh.
+- Các tập/học liệu vẫn unreviewed. Việc chủ dự án chọn âm sắc không phải duyệt chuyên môn chữ Hán/thanh điệu hay giấy phép nhạc. API production còn chặn podcast draft; chưa phát hành cloud.
+- Bộ bài học145mục/290MP3 vẫn dùng giọngA hiện hành; không chèn nhạc hoặc đổi nhịp kể vào mục từ/câu luyện phát âm.
 
-UI có nhớ tập/vị trí, tốc độ/nhạc/nghĩa Việt, yêu thích, tìm kiếm, ±10 giây, lặp một tập/nghe liên tục, chọn tập chưa nghe và tải lời thoại kèm credit. Lưu trong localStorage `hnl-podcasts-v1`, không đồng bộ tài khoản; dữ liệu hỏng quay về mặc định, chặn lưu trữ vẫn nghe được. Đổi tập bằng danh sách dừng bản cũ; tự phát tập kế chỉ khi chọn Nghe liên tục. Điện thoại vuốt danh sách ngang để trình phát không bị đẩy xuống sau bảy thẻ.
+## Giao diện
 
-Đây là bản nháp địa phương, chưa được người có chuyên môn duyệt. API live trả 404 cho cả danh mục và file. Không đưa file nháp vào `public/` hoặc `out/`. Cần thêm quy trình duyệt/xuất bản trước khi mở podcast công khai.
+Podcast chỉ nghe: không ảnh minh họa, phụ đề, Pinyin, nghĩa Việt hoặc tải lời thoại. Giữ native audio, nhạc/giọng riêng, tốc độ có preservesPitch, từ đầu/±10s, tập trước/sau, yêu thích, tìm kiếm, lặp một/nghe liên tục và nhớ vị trí trên thiết bị.
 
-## Nguồn nhạc và quyền sử dụng
+LocalStorage `hnl-podcasts-v1` giữ dữ liệu nghe cũ; ID mới không ghi đè tiến độ của các tập hội thoại cũ. Gợi ý chọn tập chưa nghe, sau khi hết thư viện mới quay lại đầu. Đây là thư viện7tập có ngày soạn sẵn, chưa phải dịch vụ tự sinh nội dung hằng ngày vô hạn.
 
-- Theo quyết định cuối của chủ dự án: **lo-fi chill học tập**, thay lựa chọn Chinese ambient/guzheng trước đó.
-- **Watching Rain Together — Pamela Yuen**, thể loại Ambient / Lo-fi Instrumental trên trang tác giả ở FMA, không lời.
-- Trang nguồn: https://freemusicarchive.org/music/pamela-yuen/paws-for-a-while/watching-rain-together/
-- Tác giả và quyền sử dụng: https://pamelayuen.blogspot.com/p/cc-by-4.html ; profile https://linktr.ee/pamelayuen
-- Download được lấy từ `fileUrl` trong metadata HTML chính thức, lưu `.local/podcasts/lofi/track.json`; không tải từ bản reupload.
-- **CC BY 4.0**: https://creativecommons.org/licenses/by/4.0/ ; được chia sẻ/phối lại, kể cả thương mại, với ghi công/liên kết giấy phép/thông báo thay đổi. Không gọi đây là tác phẩm hết bản quyền.
-- SHA256 bản tải: `ca7820469ffec765553f010f321bec705708ea8e9c93d230917bd26810e05f2b`.
-- Chọn bản không lời, nền chậm/ít gây phân tâm theo thể loại tác giả. Đây là lựa chọn biên tập, không phải khẳng định đã được duyệt nghe độc lập.
-- Chỉnh sửa: trích đoạn, loop crossfade 2 giây, low-pass 3 kHz, RMS nền mục tiêu .014/peak giới hạn .05, duck còn 30% khi có lời, fade đầu/cuối. Giọng nói không đổi pitch/formant. Credit UI/metadata bản mix/lời thoại tải; giữ link nguồn, tác giả, license và thông báo chỉnh sửa.
-- Chứng cứ nguồn: `.local/podcasts/lofi/source.html`, `track.json`, `artist-license.html`; license đầy đủ `.local/podcasts/CC-BY-4.0.txt`; cấu hình `content/podcast-music.json`.
-- Nhạc dùng làm nền podcast miễn phí trên web; không đăng nhạc lên Spotify/dịch vụ phân phối/Content ID, không bán lại nhạc độc lập. Tác giả cho phép podcast và yêu cầu ghi công; nguồn gốc được lưu trong backup.
-- Bản Almost in F cũ giữ ở backup trước đổi, không còn là nhạc được chọn trong catalog hiện hành.
+## File và lệnh
 
-## Tạo lại và kiểm tra
+- `scripts/podcast-radio-render.py`: renderer hiện hành; `npm run podcast:render` trỏ tới đây.
+- `content/podcast-radio-music.json`: config nền, hash và bản nhạc gốc phục vụ backup.
+- `.local/podcasts/music/radio-piano-bed.wav`: PCM nền đã chọn, SHA256 `bbcd3e0f2d936b8cc6ce5d4597a4dd44cff130a4fb5e6612179439028548878b`.
+- `.local/podcasts/music/owner-piano.mp3`: sao chép file gốc, không sửa file trên ổD.
+- `.local/podcasts/radio-pilot/pilot-v9-voice.wav` và `report-v9.json`: nguồn bất biến của tập đầu.
+- `.local/podcasts/rendered/catalog.json`: catalog private, metadata/timing/profile/QA. API dùng Zod để bỏ profile/production trước khi trả về. Radio không có transcript public.
+- `.local/podcasts/rendered/*-mix.mp3` và `*-voice.mp3`: file có fingerprint; chỉ URL trong catalog được API phục vụ. Không đặt draft vào public/out.
+- `.local/podcasts/radio-render-progress.json`: checkpoint số tập đã qua QA; API không đọc file này. Catalog chỉ được đổi atomically sau khi toàn bộ tập hoàn thành.
+- `.local/podcasts/radio-asr-triage.json`: ASR final MP3 chỉ để tìm lỗi, không duyệt ngữ âm/cảm xúc.
 
 ```powershell
-& '.local/kokoro-venv/Scripts/python.exe' -B -X utf8 scripts/podcast-render.py
+npm.cmd run podcast:render
+& '.local/kokoro-venv/Scripts/python.exe' -B -X utf8 scripts/podcast-asr-check.py
+& '.local/kokoro-venv/Scripts/python.exe' -B -X utf8 scripts/podcast-asr-review.py
 npm.cmd run typecheck
 npm.cmd run lint
 npm.cmd test
-npx.cmd playwright test tests/e2e/podcast.spec.ts
+npx.cmd playwright test tests/e2e/podcast.spec.ts tests/e2e/audio.spec.ts
 npm.cmd run build
 npm.cmd run podcast:check
 npm.cmd run podcast:backup
 ```
 
-- Nguồn học liệu: `content/podcasts.json`. Không sửa revision đã xuất bản; hiện các tập đều v1 nháp.
-- Model/runtime dùng lại cấu hình giọng A; xem `docs/VOICE_RUNBOOK.md`. Không tải model mới hoặc gọi API trả phí khi nghe.
-- Renderer khóa file để không chạy hai bản cùng lúc, cache mỗi đoạn theo fingerprint synthesis riêng với fingerprint mix; thay nhạc không sinh lại giọng. Xác minh model/music hash, báo lỗi nếu phoneme dài/thiếu/không hỗ trợ. 有空 và 长时间 có phrase override theo ngữ cảnh. Lần đổi lo-fi tái dùng 30 đoạn cũ, sinh 39 đoạn mới và dùng cache cho 1 đoạn lặp; 3 MP3 voice cũ giữ nguyên checksum. `render-summary.json` lưu số lượng thực.
-- Đầu ra `.local/podcasts/rendered/catalog.json` gồm timestamp, transcript/timing, profile, URL, hash và QA của cả hai bản. API chỉ phục vụ filename trong catalog.
-- Hai bản cùng timeline; đổi nhạc giữ vị trí và tốc độ. Tốc độ trình duyệt bật `preservesPitch`.
-- QA yêu cầu MP3 peak <0.99, true peak <-1 dBTP, loudness giữa -26 và -14 LUFS; đo thực từng file. Không thay thế kiểm tra nghe và duyệt chữ/Pinyin.
-- Không chạy build đồng thời E2E. Nhật ký dưới `.local/podcasts/`; lỗi và phòng tránh trong `docs/ERRORS_AND_FIXES.md`.
+ASR có thể bịa chữ trên outro nhạc; giữ raw và chạy podcast-asr-review.py để tách phần ngoài cửa sổ lời, kiểm WAV giọng và coverage từng đoạn. Không coi kết quả này là duyệt phát âm/cảm xúc.
 
-## Backup / khôi phục
+Không chạy build đồng thời E2E. Không render lại nếu chưa có thay đổi nguồn; kiểm progress/log và tiến trình trước khi tiếp tục. Cache phoneme/voice/speed tái dùng nếu một lần render bị ngắt; không đổi nhạc hoặc giọng để chữa lỗi độ dài, hãy rút gọn phần văn bản draft.
 
-Backup cần giữ `content/podcasts.json`, mã renderer, tài liệu nguồn/license và toàn bộ `.local/podcasts/rendered`. Nếu cần tái tạo không tải lại: giữ MP3 nhạc gốc, model, runtime requirements và cache WAV. DB người học không bị đổi bởi tính năng này; backup DB vẫn là quy trình riêng.
+`content/podcasts.json`, `content/podcast-music.json` và renderer cũ là nguồn hội thoại/lo-fi đã bị thay thế; không chạy renderer cũ để ghi đè catalog hiện hành. Mẫu v1–v9 giữ để đối chiếu, không cần gửi lại mẫu để xin phép sau D-041.
 
-Kiểm tra khôi phục bằng so sánh SHA256 từng file, rồi chạy API local đọc catalog. Backup cùng máy chỉ là checkpoint, chưa phải bản ngoài AWS/ngoài máy.
+## Backup và khôi phục
 
-`podcast:backup` tạo snapshot timestamp mới, sao chép sang thư mục restore-check khác và đối chiếu toàn bộ hash. Không xóa backup cũ. Kết quả mới nhất: `.local/podcasts/verification.json`. Khôi phục catalog và 14 MP3 về `.local/podcasts/rendered` trước khi mở preview; giữ nguyên tên hash. Bản backup này chưa chứa model/runtime đầy đủ hoặc DB.
+`podcast:backup` chép snapshot timestamp riêng và khôi phục thử vào `.local/podcast-restore-check`, so SHA256 từng file. Bao gồm nguồn radio/preset/config, renderer/helpers/requirements, runbook/sổ lỗi, nhạc gốc/PCM, WAV nguồn v9, catalog, summary, ASR và14MP3. Không bao gồm toàn bộ model/runtime hoặc DB. Đây là checkpoint cùng máy, chưa offsite.
 
-## Đối chiếu ASR bổ sung
+Trước đổi radio đã backup/restore33file cũ ở timestamp `2026-10-19T15-21-57.954Z`; không xóa các bản nhạc/file cũ. Các asset không còn trong catalog không được route media phục vụ.
 
-Chạy `scripts/podcast-asr-check.py` bằng `.local/audio-preview/venv/Scripts/python.exe -B -X utf8`. Công cụ decode MP3 có nhạc thành float32 16 kHz, dùng Whisper local, không đưa transcript mong đợi vào prompt. Kết quả mới `.local/podcasts/lofi/asr-triage.json`. Bản cũ ở `.local/podcasts/asr-triage.json` chỉ có ba tập trước đổi nhạc. Phân biệt chữ đồng âm/gần âm với chất lượng phát âm; không lấy ASR làm quyết định approved.
+Khôi phục catalog và MP3 theo đường dẫn inventory, giữ đúng hash. Với bản radio, khôi phục thêm nguồn preset/nhạc/WAV nếu cần tái tạo; kiểm npm run podcast:check trước mở web. DB tài khoản/tiến độ không đổi; backup DB là luồng riêng.
+
+## Hạng mục còn lại
+
+Duyệt chuyên môn, CMS reviewer/publication, xác minh quyền nhạc để công khai, cấu hình cloud/email/HTTPS và backup ngoài máy chưa hoàn tất. Không báo đã triển khai Internet chỉ vì local playback hoặc build thành công.

@@ -24,6 +24,16 @@ test('podcast timeline and transport reject unsafe or mismatched assets',()=>{
   assert.equal(podcastCatalogSchema.safeParse(overlap).success,false);
 });
 
+test('radio is audio-only and owner-supplied music cannot acquire a fabricated CC license',()=>{
+  const radio={...fixture,music:{title:'Piano',author:'Owner supplied',license:'owner-supplied',rightsStatus:'owner-provided-unverified',changes:'Selected mix unchanged'},episodes:[{...fixture.episodes[0],format:'radio',segments:[],broadcastDate:'2026-10-19',production:{segments:[{text:'Private authoring notes'}]}}],profile:{modelPath:'private-model'}};
+  const parsed=podcastCatalogSchema.parse(radio);
+  assert.equal(parsed.episodes[0].format,'radio');
+  assert.equal(Object.hasOwn(parsed.episodes[0],'production'),false);
+  assert.equal(Object.hasOwn(parsed,'profile'),false);
+  assert.equal(podcastCatalogSchema.safeParse({...radio,music:{...radio.music,licenseUrl:'https://creativecommons.org/licenses/by/4.0/'}}).success,false);
+  assert.equal(podcastCatalogSchema.safeParse({...radio,episodes:[{...radio.episodes[0],segments:fixture.episodes[0].segments}]}).success,false);
+});
+
 test('draft metadata and media blocked in live mode; preview supports seek and whitelists files',async()=>{
   const root=mkdtempSync(join(tmpdir(),'hnl-podcast-'));
   const dir=join(root,'.private');mkdirSync(dir);

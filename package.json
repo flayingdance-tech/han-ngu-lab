@@ -26,7 +26,7 @@
     "audio:check": "tsx scripts/audio-audit.ts",
     "audio:publish": "tsx scripts/audio-publish.ts",
     "audio:backup": "tsx scripts/audio-backup.ts",
-    "podcast:render": ".local/kokoro-venv/Scripts/python.exe -B -X utf8 scripts/podcast-render.py",
+    "podcast:render": ".local/kokoro-venv/Scripts/python.exe -B -X utf8 scripts/podcast-radio-render.py",
     "podcast:check": "tsx scripts/podcast-check.ts",
     "podcast:backup": "tsx scripts/podcast-check.ts --backup"
   },
