@@ -451,3 +451,6 @@ Typecheck/lint banđầuđạt;unit22/22. Thưviện7tậpradio,đầudùngWAVv9
 - ASRraw7tập+reviewexit0,khôngflagmấtđoạn;char similarity.965–.987,minparagraph.85. OutroASR cóhallucinations/kểcảtimestamp>duration;WAVvoiceimlặngđượcđốichiếu vàrawgiữ,kếtquảkhôngthayngườiduyệtthanhđiệu/cảmxúc. Khácchữ好/号vẫnchờngườinghe,khôngchữaviệcđó bằngđổi giọngđãchọn.
 - Backup/restore34filehashkhớp timestamp2026-10-19T15-42-58.166Z;cùngmáy,khôngoffsite/model/runtime/DBđầyđủ. Backup trước33filetimestamp2026-10-19T15-21-57.954Z. Không xoálegacyassets;APIwhitelistchỉbộmới.
 - Không còn renderer/ASR/E2E/buildđangchạy. APILauncher15964/web10560;logs riêngradio-api/radio-web. GiữDB/tàikhoản/tiếnđộ. Chưa cấu hìnhcloud/email/HTTPS,côngkhaiquyềnnhạcvàduyệthọcliệucònPOD-02;khôngđượcbáođãxongHSK4hoặctoànbộdựán. D-033samplegatebịthaybằngD-041,khônghỏiownerchốtlại.
+
+## 2026-10-19T22:46:21.2172868+07:00 — Checkpoint mã nguồn D-041
+Commit triển khai ea1a654 (Apply selected radio voice and fixed piano to the podcast library). Bộradio/QA/backup đã ghi ởmốc trên. Workingtree sạch saucommit triểnkhai. Đã yêu cầu mở browserlocalhost3000 trongCodex,trảqueued;không coi đó làđãđiềukhiển tabPodcast hoặcdeployInternet. Không cần ownerduyệtmẫu nữa.
