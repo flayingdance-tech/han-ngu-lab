@@ -77,3 +77,5 @@ D-036 PROPOSED 2026-10-19T21:48:29.8968579+07:00 : chủ dự án hỏi làm gi�
 D-037 ACCEPTED 2026-10-19T22:00:14.1539291+07:00 : chủ dự án yêu cầu thay nền bằng file 海来阿木 - 不如见一面 (钢琴版) - (320 Kbps).mp3 và nâng nhạc hòa với giọng nhưng rõ lời. Làm mẫu v5 riêng,giữ giọng chậm EQ nhẹ. Nhạc78.878s,atempo.89 không đổi pitch đủ87.060s,không loop. Chưa xác minh giấy phép phát hành công khai của file mới; chỉ mẫu private,không tự gán quyền nhạc video cũ sang file này. D-033 chờ chốt trước áp dụng full.
 
 D-038 ACCEPTED 2026-10-19T22:03:19.1731098+07:00 : chủ dự án làm rõ phải CẮT/GHÉP đoạn piano để nhạc nối tiếp liên tục,giữ nguyên nhịp/cao độ và toàn bộ lời dẫn. Thay phương án kéo nhịpv5 và cắt lờiv6 (cảhai không được chốt). Mẫuv7 chèn đoạn nguồn35–49s tại55s,nối2điểm bằng crossfade2s,đủ87.060s. Nâng nền hòa giọng nhưng rõ lời; giữ yêu cầu duyệt mẫu D-033 trước full.
+
+D-039 ACCEPTED 2026-10-19T22:06:00.9306503+07:00 : chủ dự án yêu cầu nâng nhạc gần mức giọng hơn. Mẫuv8 tăng nền thêm3.52dB so v7,targetRMS.060 thay.040,balance -2.05dB so với giọngactive. Giọng/cácđiểmnối/nhịp/caođộ giữ nguyên;chưa chốt áp dụngweb D-033.

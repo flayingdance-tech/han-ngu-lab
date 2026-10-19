@@ -1,4 +1,4 @@
-"""Private V7: splice piano continuously at original tempo; retain full narration."""
+"""Private V8: louder spliced piano at original tempo; retain full narration."""
 import hashlib
 import json
 import subprocess
@@ -37,7 +37,7 @@ def join(left,right):
 music=join(join(music[:RATE*55],music[RATE*35:RATE*49]),music[RATE*55:])
 assert len(music)>=len(voice), 'Spliced music must cover the full narration'
 bed=music[:len(voice)].copy()
-target=.040
+target=.060
 bed*=target/max(float(np.sqrt(np.mean(bed**2))),1e-6)
 # Modest music-only leveling retains the piano dynamics and never follows speech.
 env=np.sqrt(np.maximum(uniform_filter1d(np.mean(bed**2,axis=1),size=RATE*3),1e-10))
@@ -48,18 +48,18 @@ mix=voice+bed
 gain=min(1.,.78/max(float(np.max(np.abs(mix))),1e-6))
 mix*=gain
 assert np.isfinite(mix).all()
-sf.write(OUT/'pilot-v7-mix.wav',mix,RATE,subtype='FLOAT')
-sf.write(OUT/'pilot-v7-voice.wav',voice*gain,RATE,subtype='FLOAT')
-sf.write(OUT/'pilot-v7-music.wav',bed*gain,RATE,subtype='FLOAT')
-dest=OUT/'pilot-v7-mix.mp3'
-ff('-i',OUT/'pilot-v7-mix.wav','-c:a','libmp3lame','-b:a','192k','-metadata','artist=Hán Ngữ Lab','-metadata','title=Hán Ngữ Lab — piano ghép nối liên tục','-metadata','comment=Private audition; user-supplied piano spliced at original tempo and pitch with two crossfades. Full slow light-EQ Mandarin narration retained.',dest)
-voice_dest=OUT/'pilot-v7-voice.mp3'
-ff('-i',OUT/'pilot-v7-voice.wav','-c:a','libmp3lame','-b:a','192k',voice_dest)
+sf.write(OUT/'pilot-v8-mix.wav',mix,RATE,subtype='FLOAT')
+sf.write(OUT/'pilot-v8-voice.wav',voice*gain,RATE,subtype='FLOAT')
+sf.write(OUT/'pilot-v8-music.wav',bed*gain,RATE,subtype='FLOAT')
+dest=OUT/'pilot-v8-mix.mp3'
+ff('-i',OUT/'pilot-v8-mix.wav','-c:a','libmp3lame','-b:a','192k','-metadata','artist=Hán Ngữ Lab','-metadata','title=Hán Ngữ Lab — piano gần mức giọng','-metadata','comment=Private audition; piano raised 3.52 dB relative to V7. Original tempo and pitch, same two crossfades and full narration.',dest)
+voice_dest=OUT/'pilot-v8-voice.mp3'
+ff('-i',OUT/'pilot-v8-voice.wav','-c:a','libmp3lame','-b:a','192k',voice_dest)
 stats=subprocess.run(['ffmpeg','-hide_banner','-i',str(dest),'-af','loudnorm=print_format=json','-f','null','-'],capture_output=True,text=True,check=True)
 loudness=json.JSONDecoder().raw_decode(stats.stderr[stats.stderr.rfind('{'):])[0]
 assert float(loudness['input_tp']) < -1
 active=np.sqrt(np.mean(voice**2,axis=1))>.015
 balance=float(20*np.log10(np.sqrt(np.mean(bed[active]**2))/np.sqrt(np.mean(voice[active]**2))))
-report={**previous,'revision':'v7','duration':len(mix)/RATE,'segments':timeline,'music':{'sourceFile':str(SOURCE),'sha256':sha(SOURCE),'musicFilter':music_filter,'tempo':1.,'pitchChanged':False,'edit':{'insertAtSourceSecond':55,'insertSourceSeconds':[35,49],'crossfadeSeconds':2,'outputSeconds':len(mix)/RATE},'rights':'User-provided file for private audition; no public distribution license verified'},'voiceFilter':voice_filter,'musicLoopCount':1,'speechDucking':False,'masterGain':gain,'musicToActiveVoiceRmsDb':balance,'assets':{'voice':{'file':str(voice_dest),'sha256':sha(voice_dest)},'mix':{'file':str(dest),'sha256':sha(dest),'loudness':loudness}}}
-(OUT/'report-v7.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+report={**previous,'revision':'v8','duration':len(mix)/RATE,'segments':timeline,'music':{'sourceFile':str(SOURCE),'sha256':sha(SOURCE),'musicFilter':music_filter,'tempo':1.,'pitchChanged':False,'edit':{'insertAtSourceSecond':55,'insertSourceSeconds':[35,49],'crossfadeSeconds':2,'outputSeconds':len(mix)/RATE},'rights':'User-provided file for private audition; no public distribution license verified'},'voiceFilter':voice_filter,'musicLoopCount':1,'speechDucking':False,'masterGain':gain,'musicToActiveVoiceRmsDb':balance,'assets':{'voice':{'file':str(voice_dest),'sha256':sha(voice_dest)},'mix':{'file':str(dest),'sha256':sha(dest),'loudness':loudness}}}
+(OUT/'report-v8.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps({'duration':len(mix)/RATE,'musicToVoiceDb':balance,'loudness':loudness},ensure_ascii=False),flush=True)

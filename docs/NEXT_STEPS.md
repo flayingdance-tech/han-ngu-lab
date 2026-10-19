@@ -1,4 +1,4 @@
-POD-04 v7 2026-10-19T22:03:19.1731098+07:00 — Mẫu private pilot-v7-mix.mp3,87.060s; piano chủ dự án cắt-ghép nối liên tục,nguyên nhịp/cao độ,giữ đủ7đoạn giọng chậm EQ. Nền nổi hơn,balance -5.57dB so với giọng active,true peak -3.58dBTP. ASR final-mix exit0,nhận đủ nội dung,đồng âm 他/她/的/地/在/再; không thay duyệt nghe. V5 kéo nhịp/V6 cắt lời đã bị thay thế theo D-038. Chờ nghe/chốt trước áp dụng web. Tạo lại bằng scripts/radio-user-piano.py.
+POD-04 v8 2026-10-19T22:06:00.9306503+07:00 — pilot-v8-mix.mp3,87.060s; nâng nền piano thêm3.52dB so v7,balance -2.05dB,true peak -3.26dBTP. Giữ nguyên lời/giọng/nhịp/cao độ/cáchghép. ASRfinalmix exit0,nhận đủ nội dung; chờ chủ dự án nghe/chốt,không sửaweb.
 
 Mẫu EQ thanh nhẹ (2026-10-19T21:48:29.8968579+07:00): pilot-v4-bright-mix.mp3,giảm300Hz1.5dB/tăng2800Hz1.2dB/highshelf6500Hz0.8dB; không pitch/tốc độ; nềnv4 nguyên stereo. -22.62LUFS/-4.07dBTP. Chờ chủ dự án so sánh, chưa đổi lựa chọn giọng hay web. Recipe+QA nằm cạnh file.
 

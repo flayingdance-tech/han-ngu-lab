@@ -425,3 +425,8 @@ Backup3file sample/recipe/QA hashkhớp ở .local\podcast-backups\radio-bright-
 - Chủ dự án sửa2lần: v5tempo.89 vàv6rútđoạndẫn đều bị thay thế trước áp dụngweb. Không dùng2mẫu này. V7 giữ đủ7đoạn/tốcđộ.84,giọngEQnhẹ,nềnnguyênnhịp/caođộ;chèn nguồn35–49s tại55s với2crossfade2s,trim87.060s. Không speechduck/masterdynamic. Nhạc RMS target.040,balance -5.57dB;mix -21.72LUFS/-3.58dBTP.
 - ASRfinalv7 exit0,đủnội dung,đồngâm他/她/的/地/在/再;không kếtluận duyệtnghe. Renderexit0;không đổiweb/backend,không chạybuild/E2E. Backup11file nguồn/script/sample/QA hashkhớp .local\podcast-backups\radio-v7-20261019-220419,cùngmáy.
 - Không tiến trình còn chạy. Gửi mẫu v7 nghe/chốt theo D-033. Giấy phép công khai của piano mới chưa được xác minh;không gán quyền từnhạcvideocũ.
+
+## 2026-10-19T22:06:22.3814741+07:00 — Mẫu v8 tăng nền gần giọng
+Renderexit0,87.060s,target.060từ.040 (+3.52dB). Balance -2.049dB,mix -20.26LUFS/true peak -3.26dBTP. Filevoicev8/v7SHA trùng4fffa6f4...,giọng không đổi;nhịp/caođộ/cácđiểmghép nguyên. ASRfinalmix đang chạy session93307/logasr-v8.log. Không sửaweb.
+
+2026-10-19T22:06:51.6085568+07:00 — ASRv8exit0,nhậnđủnội dung; đồngâm 他/她/的/地/在/再 như cácbảntrước,không thay duyệt nghe. Backup5filehashkhớp .local\podcast-backups\radio-v8-20261019-220651,cùngmáy;nguồn/voiceđầyđủởbackupv7. Không tiến trình còn chạy,không chạybuild/E2E vì không đổiweb. Chờ chủ dự án chốt.

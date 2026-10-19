@@ -1,4 +1,4 @@
-# Kịch bản radio v7 — Chào tuần mới
+# Kịch bản radio v8 — Chào tuần mới
 
 Ngày19/10/2026, thứ Hai. Một người dẫn, giọngA tốc độ tổng hợp .84. Mỗi câu một lần; không mục ghi nhớ. Audio-only, chưa duyệt chuyên môn.
 
@@ -24,3 +24,5 @@ Nhạc v7: piano file chủ dự án cung cấp. Giữ nhịp/cao độ gốc;ch
 
 愿你带着一点勇气，开始今天的生活。这里是汉语时光，我们明天见。
 [Không đọc: nghỉ 0 giây; tốc độ 0.84]
+
+Mẫu v8: tăng nền thêm3.52dB,targetRMS.060,balance -2.05dB so giọng active;giữ nguyên kịch bản/giọng/cáchghép. Chờ chủ dự án nghe/chốt.

@@ -69,3 +69,5 @@ POD-04 v4 (2026-10-19T21:45:53.6503584+07:00): chủ dự án từ chối nhạc
 POD-04 EQ (2026-10-19T21:48:29.8968579+07:00): mẫu thanh nhẹ87s,samev4music,không pitch/speed; đo true peak -4.07dBTP. IN_PROGRESS chờ nghe/chốt.
 
 POD-04 v7 (2026-10-19T22:04:19.8363573+07:00): piano file mới chủ dự án,cắt-ghép14s vào nguồn55s,crossfade2s,nguyênnhịp/caođộ,đủ7đoạn87.060s. Nềnbalance -5.57dB/true peak -3.58dBTP;ASR đạt,backup11file hashkhớp. IN_PROGRESS chờ chủ dự án nghe/chốt; không áp dụngweb.
+
+POD-04 v8 (2026-10-19T22:06:51.6085568+07:00): tăng nền3.52dB/balance-2.05dB,87.060s,voiceSHA giữ nguyên. Render/ASR đủ nội dung,true peak-3.26dBTP;backup5file hashkhớp. IN_PROGRESS chờ chủ dự án nghe/chốt,không đổiweb.
