@@ -374,3 +374,19 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 ## 2026-10-19T12:42:53+07:00 — Checkpoint mã nguồn POD-03
 - Commit triển khai9feac85 (Switch podcasts to study lo-fi and complete daily listening). Checks/backup/media đã ghi ở mốc trên; không tác vụ sinh audio còn dở. Working tree sạch sau commit triển khai.
 - Tiếp tục từ PROJECT_STATUS/NEXT_STEPS; giữ lựa chọn lo-fi/giọng A, không render lại. POD-02 vẫn cần duyệt chuyên môn và CMS xuất bản.
+
+## 2026-10-19T14:24:01.0539223+07:00 — POD-04 nhận phản hồi và xác minh công cụ
+- Đọc hồ sơ; Git sạch lúc đầu. Tham chiếu audio-preview/report.json: file gốc 24.5 giây, đã tách Demucs CPU trước đây; còn source/vocals WAV.
+- Đã kiểm tra README và tài liệu VoiceStudio cục bộ, GitHub chính thức; có luồng giọng/tách-trộn, chưa xác minh bộ tạo nhạc. Tìm được ứng viên Pixabay Soft Daydream nhưng chưa tải/chốt/đánh giá giấy phép chi tiết.
+- Chưa có bản mix mới, chưa sửa UI, không chạy test ứng dụng vì chỉ cập nhật hồ sơ. Bước tiếp: đối chiếu nhạc tham chiếu, tuyển nhạc hợp lệ, làm mẫu radio trước khi thay danh mục. Không coi nguồn nhạc cũ được user duyệt.
+
+## 2026-10-19T14:44:01.3290555+07:00 — Đang tạo mẫu radio từ nền tham chiếu
+- Đã viết content/radio-pilot.json: chào thứ Hai19/10,4câu động viên thường/chậm,câu chuyện hư cấu học3từ/ngày,cụm 慢慢来 hai lần trong phần ghi nhớ,kết hẹn mai.
+- scripts/radio-pilot.py tách non-vocal bằng htdemucs từ MP4 stereo, tổng hợp từng đoạn dẫn liền bằng giọng A và nối nhạc crossfade, không pitch/formant. Xuất private radio-pilot/pilot-mix.mp3 và báo cáo; không tự thay danh mục trước khi kiểm tra.
+- Đang chạy Python, log .local/podcasts/radio-pilot-render.log, session72944. Chưa báo thành công khi chưa có file/QA.
+
+## 2026-10-19T14:50:19.8021012+07:00 — Mẫu radio đã tạo và kiểm tra
+- Render exit0,76.94s,14đoạn; MP3mix/voice .local/podcasts/radio-pilot. Nền stereo từ nguồn gốc, loop crossfade3s, duck50%, không lọc cắt3kHz như bản trước; giọngA theo đoạn kể, ngắt .45–1s, slow .82 chỉ câu luyện.
+- ASR kiểm tra lại exit0; không thấy mất câu/đọc nhạc chen vào transcript; đồng âm 他/她/的/地 là khác chữ ASR. Không khẳng định đã nghe hoặc duyệt cảm xúc. Report+asr-triage lưu cạnh file. Đã hiển thị player mẫu trong chat.
+- Backup9file cùng máy hashverified radio-pilot-20261019-144858; sẽ cập nhật script check và ASR vào bản backup này. Không chạy build/E2E vì không sửa web/backend; chỉ script/media/docs. Còn tích hợp danh mục radio/UI audio-only, chống lặp nhiều tập và duyệt nghe.
+- Không còn tiến trình render/ASR cần chờ. Giữ file/website cũ; không báo toàn bộ podcast hoàn thành.

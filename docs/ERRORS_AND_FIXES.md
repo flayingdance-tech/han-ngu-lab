@@ -32,3 +32,9 @@ Cập nhật: 2026-10-19, Asia/Bangkok (+07). Không ghi secret hoặc thông ti
 5. Test đổi nguồn giữ vị trí, seek, lỗi mạng/retry, dừng khi đổi tập/rời trang, desktop/mobile.
 6. Giữ trạng thái unreviewed cho tới duyệt chuyên môn; không gọi kết quả kỹ thuật là chứng nhận phát âm đúng.
 7. Ghi lỗi mới cùng điều kiện tái hiện, cách sửa và bằng chứng; không lặp lại thao tác thất bại mà không đổi giả thuyết.
+
+## POD-11 — Đạt kiểm tra kỹ thuật nhưng không đạt trải nghiệm nghe (2026-10-19T14:24:01.0539223+07:00)
+Chủ dự án phản hồi nhạc không phù hợp, lời rời rạc/thiếu cảm xúc. Không dùng ASR/LUFS/test để kết luận nghe tự nhiên. Khắc phục đang làm: mẫu radio 1–2 phút dựa trên tham chiếu, chọn nhạc theo cảm xúc, nhịp ngắt có chủ đích; chỉ nhân rộng sau khi đánh giá mẫu. Bản cũ chưa được chấp nhận về nghệ thuật.
+
+## POD-12 — Kiểm tra stereo xuống mono sai gain (2026-10-19T14:50:19.8021012+07:00)
+ASR check dùng -ac1 khiến FFmpeg downmix cộng hai kênh tương quan, tăng đỉnh và assertion thất bại dù file stereo true peak -1.94dBTP. Sửa đầu vào ASR bằng pan=mono|c0=0.5*c0+0.5*c1; giữ kiểm tra finite/peak/duration. Chạy lại đạt và nhận đủ các câu. Không sửa giảm chất lượng file nhạc hoặc bỏ assertion.

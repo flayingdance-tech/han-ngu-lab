@@ -1,0 +1,24 @@
+{
+  "id": "radio-2026-10-19-morning",
+  "date": "2026-10-19",
+  "title": "Chào tuần mới — Mỗi ngày một chút",
+  "review": "unreviewed",
+  "musicRights": "Chủ dự án xác nhận nhạc nền file tham chiếu được miễn bản quyền ngày 19/10/2026; chưa xác minh độc lập tác giả hoặc giấy phép.",
+  "productionNotes": "Một người dẫn. Nhạc nền tách từ file do chủ dự án cung cấp, mở 3 giây, nhỏ dưới giọng, kết 4 giây. Không đọc chú thích. Bản mẫu chỉ âm thanh, không phụ đề/hình. Các câu luyện đọc được nhắc thường rồi chậm; tốc độ tổng hợp thay đổi, không chỉnh pitch/formant.",
+  "segments": [
+    {"text":"早上好，欢迎收听汉语时光。今天是十月十九日，星期一。新的一周，我们一起，慢慢开始。", "speed":0.95,"pause":0.7,"note":"Mở đầu ấm, đọc thành một đoạn liền."},
+    {"text":"如果你今天有一点累，也没有关系。先喝一口水，轻轻地呼吸。学习中文，不用着急。今天，送给你四句话。", "speed":0.95,"pause":0.8},
+    {"text":"每天进步一点。", "speed":1.0,"pause":0.45,"practice":"normal"},
+    {"text":"每天进步一点。", "speed":0.82,"pause":0.9,"practice":"slow"},
+    {"text":"慢慢来别着急。", "speed":1.0,"pause":0.45,"practice":"normal"},
+    {"text":"慢慢来别着急。", "speed":0.82,"pause":0.9,"practice":"slow"},
+    {"text":"专心做好小事。", "speed":1.0,"pause":0.45,"practice":"normal"},
+    {"text":"专心做好小事。", "speed":0.82,"pause":0.9,"practice":"slow"},
+    {"text":"今天也要加油。", "speed":1.0,"pause":0.45,"practice":"normal"},
+    {"text":"今天也要加油。", "speed":0.82,"pause":1.0,"practice":"slow"},
+    {"text":"我想起一个学中文的朋友。以前，她总想一天记住很多词，结果很快就累了。后来，她每天只学三个词，再说一句简单的话。慢慢地，她发现，自己真的能开口了。", "speed":0.96,"pause":0.8,"note":"Câu chuyện hư cấu, kể liền mạch, không đóng hai vai."},
+    {"text":"所以，今天不用做很多。记住一个词，说好一句话，就很好。今天的小短语是：慢慢来。", "speed":0.94,"pause":1.0,"note":"Cụm cần nhớ lần 1."},
+    {"text":"慢慢来。", "speed":0.82,"pause":1.0,"note":"Cụm cần nhớ lần 2."},
+    {"text":"愿你带着一点勇气，开始今天的生活。这里是汉语时光，我们明天见。", "speed":0.94,"pause":0.0,"note":"Kết nhẹ, nhạc ở lại 4 giây."}
+  ]
+}

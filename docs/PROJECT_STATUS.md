@@ -1,3 +1,5 @@
+POD-04 checkpoint 2026-10-19T14:50:19.8021012+07:00 — ĐÃ CÓ MẪU AUDIO: .local/podcasts/radio-pilot/pilot-mix.mp3 (76.94s), nền tách htdemucs từ video được chủ dự án xác nhận quyền, giọng A, không pitch/formant. Kịch bản content/radio-pilot.json và docs/RADIO_PILOT_SCRIPT.md. ASR final-mix không thấy mất nguyên câu; thay 他/她 và 的/地 đồng âm, không thay thế duyệt người. Mix -19.62LUFS, true peak -1.94dBTP. Chưa đổi danh mục/UI web; còn tích hợp radio audio-only, luân phiên nội dung tránh lặp, các chủ đề có giải thích Việt và duyệt chất lượng nghe.
+
 # Trạng thái hiện tại — đọc đầu tiên khi tiếp tục
 
 Checkpoint: 2026-10-19T12:41:57+07:00, Asia/Bangkok. Workspace: D:\Hán Ngữ Lab.

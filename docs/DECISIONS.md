@@ -57,3 +57,9 @@ Chủ dự án giao toàn quyền xử lý podcast, tự chọn/tải nhạc ph�
 
 ## D-030 — Đã chốt, 2026-10-19T12:35:04+07:00 : lo-fi chill học tập
 Chủ dự án đổi lựa chọn từ Chinese ambient/guzheng sang lo-fi chill học tập. Nhạc mới Watching Rain Together — Pamela Yuen, nguồn FMA và trang quyền tác giả, CC BY4.0; ghi công tại UI/metadata/lời thoại tải. Không dùng nguồn trả phí; không đăng nhạc lên dịch vụ phân phối/Content ID. Hoàn thiện kỹ thuật nghe hằng ngày với 7 tập, nhớ vị trí cục bộ, yêu thích, lặp/nghe liên tục và tải lời thoại. Duyệt chuyên môn vẫn riêng, không tự approved. Lựa chọn nhạc Almost in F của D-029 bị thay thế.
+
+2026-10-19T14:24:01.0539223+07:00
+## D-031 — Đã chốt: podcast đài phát thanh, nhạc theo tham chiếu
+Chủ dự án không chấp nhận chất lượng cảm nhận của bản POD-03: nhạc chưa phù hợp, giọng rời rạc/thiếu cảm xúc. Làm lại mẫu 1–2 phút, một người dẫn, chỉ audio, không hình/phụ đề; chào ngày/thứ chính xác, 3–4 câu động viên 4–8 chữ Hán đọc thường rồi chậm, cụm từ nhắc hai lần, kết hẹn ngày mai. Luân phiên chủ đề văn hóa/thành ngữ/truyện/thơ/nhật ký, tránh lặp nội dung. Nhạc nền là tiêu chí chính, ưu tiên gần không khí file MP4 chủ dự án gửi và có giấy phép miễn phí phù hợp. VoiceStudio có thể hỗ trợ xử lý giọng/tách và trộn nền; chưa xác minh khả năng sáng tác nhạc. Không coi tách nhạc là thay đổi quyền tác giả. Giữ mẫu A, không quay lại clone lỗi hay đổi pitch. Phải làm mẫu mới trước khi nhân rộng; QA kỹ thuật cũ không phải chấp nhận chất lượng nghe.
+
+D-031 bổ sung 2026-10-19T14:44:01.3290555+07:00 : chủ dự án xác nhận nhạc nền trong MP4 miễn bản quyền và yêu cầu tự tách; không yêu cầu chủ dự án tách hoặc cung cấp thêm. Dùng nguồn này cho mẫu local, ghi rõ quyền do chủ dự án xác nhận, không tự gán CC BY.
