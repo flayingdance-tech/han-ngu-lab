@@ -333,3 +333,9 @@ Yêu cầu: đọc gói prompt, nêu nhận xét/ý tưởng, tạo chỉ dẫn 
 - ASR lại clip sửa 打算 nhận đúng 打算. Không coi ASR là duyệt thanh điệu. ASR16v1 còn sai từ ngắn, mọi clip unreviewed.
 - Backup/restore cuối295file đạt, chỉ cùng máy; archive580file không tham chiếu đã kiểm tra SHA256. Không xóa/reset DB, không deploy/cloud/API sinh giọng có phí.
 - HTTProot/API200 saubuild; listeners3516/10660. Giữ preview chạy. next-env importdev được khôi phục saubuild. AUDIO-08 DONE technical, AUDIO-07 TODO duyệt; CMS/podcast/HSK4/cloud còn theoNEXT_STEPS.
+
+
+### 2026-10-19T07:17:53+07:00 — checkpoint Git cuối mốc
+- Mã/assets/báo cáo mẫu A đã lưu commit dcd031d; mốc dừng giọng lỗi trước đó54c0070. Git sạch sau commit nguồn.
+- HTTProot/API/MP3thường/chậm200 sau build; export290SHA256khớp, cache0generated. Preview vẫn chạy API10660/web3516.
+- Không còn renderer/QA đang dở. Tiếp theo theo NEXT_STEPS: duyệt chuyên môn/CMS/podcast/học liệu/cloud, không chạy lại mốc thay giọng.
