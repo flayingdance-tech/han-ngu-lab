@@ -4,6 +4,8 @@ Checkpoint: 2026-10-20T15:04:57.2408065+07:00, Asia/Bangkok (+07). Workspace D:\
 
 Mốc triển khai đổi tên: f42e345. Các kiểm tra và sao lưu D-043 đã hoàn tất.
 
+Mốc audit/safe fixes:9200c03; quét secret sau commit đạt, web200/API preview còn hoạt động.
+
 ## Hiện hành: DEP-01/D-044 — pre-GitHub audit đã hoàn tất
 
 - Đọc PRE_GITHUB_AUDIT.md, docs/DEPLOYMENT.md và docs/reports/pre-github-security.json trước publish. Private GitHub: source có thể chuẩn bị với WARNING dev advisories; full production AWS: FAIL vì thiếu email adapter/API HTTPS/DB persistent/proxy và đường podcast production. Chưa remote/push/deploy/AWS Console.
