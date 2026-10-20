@@ -15,6 +15,7 @@ normalize=lambda text:''.join(re.findall(r'[\u4e00-\u9fff]',text))
 report={'humanReviewed':False,'purpose':'Triage only; character coverage is not tone or emotional quality approval','episodes':[]}
 for episode in catalog['episodes']:
     recognition=next(e for e in raw['episodes'] if e['id']==episode['id'])
+    assert recognition['assetSha256']==episode['assets']['mix']['sha256'],'ASR is stale for this audio'
     script=episode['production']['segments']
     end=script[-1]['end']
     wave,rate=sf.read(WORK/f"{episode['id']}-voice.wav",dtype='float32')
@@ -36,8 +37,11 @@ for episode in catalog['episodes']:
         coverage.append(matched/max(1,len(paragraph)))
         offset=stop
     report['episodes'].append({'id':episode['id'],'narrationEnd':end,'voiceOutroPeak':tail_peak,'narrationCharacterSimilarity':matcher.ratio(),'paragraphCharacterCoverage':coverage,'requiresMissingContentCheck':any(c<.65 for c in coverage),'musicOnlyAsrText':outside,'outOfBoundsAsrTiming':any(s['end']>episode['duration']+.2 for s in recognition['recognized'])})
+    if episode['production'].get('brandUpdate'):
+        report['episodes'][-1].update(recognizedNewBrandMentions=actual.count('汉语实验室'),oldBrandDetected='汉语时光' in actual,requiresBrandNameCheck=actual.count('汉语实验室')<2 or '汉语时光' in actual)
 dest=WORK/'radio-asr-reviewed.json'
 dest.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
 for item in report['episodes']:
     print(f"{item['id']}: similarity={item['narrationCharacterSimilarity']:.3f}, min paragraph={min(item['paragraphCharacterCoverage']):.3f}, music-only ASR={len(item['musicOnlyAsrText'])}, missing-content flag={item['requiresMissingContentCheck']}",flush=True)
 assert not any(item['requiresMissingContentCheck'] for item in report['episodes']),'Inspect flagged narration before completion'
+assert not any(item.get('requiresBrandNameCheck') for item in report['episodes']),'Inspect branded paragraphs before completion'

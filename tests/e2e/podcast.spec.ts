@@ -66,8 +66,11 @@ test('authored captions follow real audio, seek by paragraph and preserve transl
   const catalog=await (await page.request.get('/api/podcasts')).json();
   expect(catalog.episodes.map((e:{segments:unknown[]})=>e.segments.length)).toEqual([7,6,6,6,6,6,6]);
   expect(catalog.episodes.every((e:object)=>!('production' in e))).toBe(true);
+  expect(catalog.episodes.every((e:{segments:{zh:string;vi:string}[]})=>e.segments.filter(s=>s.zh.includes('汉语实验室')&&s.vi.includes('Hán Ngữ Lab')).length===2)).toBe(true);
   const rows=page.locator('.podcast-transcript li');
   await expect(rows.first().locator('.transcript-hanzi')).toContainText('早上好');
+  await expect(rows.first().locator('.transcript-hanzi')).toContainText('汉语实验室');
+  await expect(rows.first().locator('.transcript-pinyin')).toContainText('shí yàn shì');
   await expect(rows.first().locator('.transcript-pinyin')).toContainText('zǎo');
   await expect(rows.first().locator('.transcript-meaning')).toContainText('Chào buổi sáng');
   await expect.poll(()=>page.locator('audio').evaluate((a:HTMLAudioElement)=>a.readyState)).toBeGreaterThanOrEqual(2);

@@ -10,9 +10,19 @@ const hash=(path:string)=>createHash('sha256').update(readFileSync(path)).digest
 files.push('scripts/podcast-radio-audit.py','docs/reports/podcast-radio-integrity.json');
 files.push('scripts/podcast-asr-review.py','.local/podcasts/radio-asr-reviewed.json');
 files.push('content/podcast-subtitles.json','content/podcast-subtitles.vi.json','scripts/podcast-subtitles.py','scripts/podcast_subtitles_core.py','.local/podcasts/subtitles-update.json');
-const triage=JSON.parse(readFileSync(resolve(root,'radio-asr-triage.json'),'utf8')) as {humanReviewed:boolean;episodes:{id:string}[]};
+const definitions=JSON.parse(readFileSync('content/podcast-radio.json','utf8')) as {id:string;sourceVoice?:string;sourceReport?:string}[];
+if(existsSync(resolve(root,'brand-update.json'))){
+  files.push('scripts/podcast-rebrand.py','scripts/audio-brand-audit.py','.local/podcasts/brand-update.json','.local/podcasts/brand-lab/lesson-before.json','docs/reports/audio-brand-audit.json','.local/podcasts/brand-lab/before/catalog.json');
+  for(const name of ['podcast-radio.json','radio-storyteller.json','podcast-subtitles.json','podcast-subtitles.vi.json'])files.push(`.local/podcasts/brand-lab/before/${name}`);
+  for(const e of definitions){
+    if(!e.sourceVoice||!e.sourceReport)throw new Error('Missing preserved narration source');
+    files.push(e.sourceVoice,e.sourceReport,`.local/podcasts/brand-lab/before/${e.id}-voice.wav`);
+  }
+}
+const triage=JSON.parse(readFileSync(resolve(root,'radio-asr-triage.json'),'utf8')) as {humanReviewed:boolean;episodes:{id:string;assetSha256?:string}[]};
 const checkedIds=new Set(triage.episodes.map(e=>e.id));
 if(triage.humanReviewed!==false||checkedIds.size!==catalog.episodes.length||triage.episodes.length!==catalog.episodes.length||catalog.episodes.some(e=>!checkedIds.has(e.id)))throw new Error('ASR triage has not completed for this radio catalog');
+if(catalog.episodes.some(e=>triage.episodes.find(t=>t.id===e.id)?.assetSha256!==e.assets.mix.sha256))throw new Error('ASR evidence does not match active audio hashes');
 if(hash(music.localFile)!==music.sha256)throw new Error('Music source checksum mismatch');
 for(const episode of catalog.episodes){
   if(episode.format!=='radio'||!episode.segments.length)throw new Error('Expected radio episodes with timed subtitles');

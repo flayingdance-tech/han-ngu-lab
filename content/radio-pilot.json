@@ -7,7 +7,7 @@
   "productionNotes": "Một người dẫn, đọc chậm .84, nhẹ, mỗi câu một lần; không mục ghi nhớ. Nền piano/synth dài, dùng một đoạn liên tục, không loop/tách giọng/hiệu ứng vinyl hoặc mưa. Mẫu v3 chờ chủ dự án duyệt, chưa áp dụng web.",
   "segments": [
     {
-      "text": "早上好，欢迎收听汉语时光。今天是十月十九日，星期一。新的一周，我们一起，慢慢开始。",
+      "text": "早上好，欢迎收听汉语实验室。今天是十月十九日，星期一。新的一周，我们一起，慢慢开始。",
       "speed": 0.84,
       "pause": 1.0,
       "note": "Mở đầu ấm, đọc thành một đoạn liền."
@@ -41,7 +41,7 @@
       "note": "Đoạn tâm sự nối mạch kể; không hướng dẫn học thuộc hoặc đọc lặp."
     },
     {
-      "text": "愿你带着一点勇气，开始今天的生活。这里是汉语时光，我们明天见。",
+      "text": "愿你带着一点勇气，开始今天的生活。这里是汉语实验室，我们明天见。",
       "speed": 0.84,
       "pause": 0.0,
       "note": "Kết nhẹ, nhạc ở lại 4 giây."

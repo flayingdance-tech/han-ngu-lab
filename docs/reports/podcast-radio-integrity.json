@@ -11,19 +11,22 @@
       "audio": [
         {
           "kind": "voice",
-          "sha256": "151c344d3766d38a89f319ab4df3455f9cc402f2e9bbfc6e94788e11c078063b",
-          "lufs": -24.54,
-          "truePeakDb": -3.65
+          "sha256": "c55084be782f361e4ea95450ed159681dd2d35a54e67a1e414aef760c49b3f74",
+          "lufs": -24.67,
+          "truePeakDb": -3.84
         },
         {
           "kind": "mix",
-          "sha256": "ef1fa7e0c39fa5a2db332b6be5447b0a1bbd191119f73b8552f0b986fb1ec02b",
-          "lufs": -19.7,
-          "truePeakDb": -2.44
+          "sha256": "42d5bfcbe5ea75cc83d7b4d6a1b493f957e93191daabdb39587e655fe78927ba",
+          "lufs": -19.73,
+          "truePeakDb": -3.26
         }
       ],
-      "selectedVoiceUnchangedExceptGain": true,
-      "voiceBoostMaxError": 0.0
+      "preservedBaseVoiceMatchesGain": true,
+      "voiceBoostMaxError": 5.960464477539063e-08,
+      "replacedBrandedParagraphs": 2,
+      "unchangedNarrationPcmSegments": 5,
+      "modelAndSpeakerUnchanged": true
     },
     {
       "id": "radio-persistence-v1",
@@ -32,17 +35,22 @@
       "audio": [
         {
           "kind": "voice",
-          "sha256": "3a702704324dec4000c76d6c6738d5b6cede07d63e9e4f56ee5760896b96c27d",
-          "lufs": -23.57,
-          "truePeakDb": -3.75
+          "sha256": "dfed295de291424800e5bbbef410dedd891276ec30e64d407dfb53ca01697d4b",
+          "lufs": -23.79,
+          "truePeakDb": -3.7
         },
         {
           "kind": "mix",
-          "sha256": "565916d5bb6d39e32037d7082d6d445d9a26d6c131467b95b8113a42984fb51e",
-          "lufs": -19.37,
-          "truePeakDb": -2.7
+          "sha256": "25ead19bdcd3bf7d6764f7f7c3ff647b359ab22ae4dfda6122d1d4cfd650db2d",
+          "lufs": -19.43,
+          "truePeakDb": -3.4
         }
-      ]
+      ],
+      "preservedBaseVoiceMatchesGain": true,
+      "voiceBoostMaxError": 5.960464477539063e-08,
+      "replacedBrandedParagraphs": 2,
+      "unchangedNarrationPcmSegments": 4,
+      "modelAndSpeakerUnchanged": true
     },
     {
       "id": "radio-learning-diary-v1",
@@ -51,17 +59,22 @@
       "audio": [
         {
           "kind": "voice",
-          "sha256": "faf84334b901cded394ec174d809ec83e29c8dd63b110213af40b5b63da27df0",
-          "lufs": -22.87,
-          "truePeakDb": -3.13
+          "sha256": "0e531cfddeed3c8477b17521e17215a1d03f806e9a43c63daf52ef0b45fbdf78",
+          "lufs": -23.01,
+          "truePeakDb": -3.11
         },
         {
           "kind": "mix",
-          "sha256": "e2d77c34171d5993b1dfed9877b11636f374b61a041f058a00836948f6fae463",
-          "lufs": -19.02,
-          "truePeakDb": -2.06
+          "sha256": "99de1e7a8634b80745b39174ff807f71718d8c02390ae35f840174d12baee162",
+          "lufs": -19.09,
+          "truePeakDb": -2.55
         }
-      ]
+      ],
+      "preservedBaseVoiceMatchesGain": true,
+      "voiceBoostMaxError": 5.960464477539063e-08,
+      "replacedBrandedParagraphs": 2,
+      "unchangedNarrationPcmSegments": 4,
+      "modelAndSpeakerUnchanged": true
     },
     {
       "id": "radio-tea-culture-v1",
@@ -70,17 +83,22 @@
       "audio": [
         {
           "kind": "voice",
-          "sha256": "3accbedddb45af26b35e455711bb8603db233eb78eceddf5beb2a7303f87a719",
-          "lufs": -23.28,
-          "truePeakDb": -3.85
+          "sha256": "3e4c04822261dd82a4b09e6aa2f82cb993686c183242031b2f0462eea9412a09",
+          "lufs": -23.58,
+          "truePeakDb": -3.83
         },
         {
           "kind": "mix",
-          "sha256": "88e4d5b855f260b1787322a461faf6d3e5237241fc8482622723a95bec11daf3",
-          "lufs": -19.24,
-          "truePeakDb": -2.24
+          "sha256": "287c69a257cb1997aced116c1877b97d0a5cf3399d1c1fe28e92e8bc99d63808",
+          "lufs": -19.39,
+          "truePeakDb": -2.88
         }
-      ]
+      ],
+      "preservedBaseVoiceMatchesGain": true,
+      "voiceBoostMaxError": 5.960464477539063e-08,
+      "replacedBrandedParagraphs": 2,
+      "unchangedNarrationPcmSegments": 4,
+      "modelAndSpeakerUnchanged": true
     },
     {
       "id": "radio-moon-poem-v1",
@@ -89,17 +107,22 @@
       "audio": [
         {
           "kind": "voice",
-          "sha256": "dd9f92d1a0b26ce359bdf7a5a66f788945e00999498d714a582d64c7fa3a6550",
-          "lufs": -23.99,
-          "truePeakDb": -3.03
+          "sha256": "3cbb46d4d7ecdd070d63077ef7f7c2344fae5b6cb4f89ac35e268b07475be92d",
+          "lufs": -24.08,
+          "truePeakDb": -3.27
         },
         {
           "kind": "mix",
-          "sha256": "12164bf84e3fcf10ce949c48aaa21a5baea496b13ed18e54324eb7c35880ed36",
-          "lufs": -19.68,
-          "truePeakDb": -2.01
+          "sha256": "34c248fbae7ad246cd803c371d4ce76273b1deaf128d768f3e993c8e9b0e4067",
+          "lufs": -19.72,
+          "truePeakDb": -2.48
         }
-      ]
+      ],
+      "preservedBaseVoiceMatchesGain": true,
+      "voiceBoostMaxError": 5.960464477539063e-08,
+      "replacedBrandedParagraphs": 2,
+      "unchangedNarrationPcmSegments": 4,
+      "modelAndSpeakerUnchanged": true
     },
     {
       "id": "radio-weekend-story-v1",
@@ -108,17 +131,22 @@
       "audio": [
         {
           "kind": "voice",
-          "sha256": "4a591e549b4a16ae0977a20f40e61fa32848c2dbc6b194e3f73dcf422e149845",
-          "lufs": -23.83,
-          "truePeakDb": -4.0
+          "sha256": "13aee2e2a458c6a68014e1a5f5c2994b51aa1bb4eeb05136e38870daf548c74c",
+          "lufs": -23.96,
+          "truePeakDb": -4.1
         },
         {
           "kind": "mix",
-          "sha256": "f901d884ab95f58e1642670059cdb9da43c0b5e786ccb2fd48597dff0643675e",
-          "lufs": -19.45,
-          "truePeakDb": -3.1
+          "sha256": "817e4c5388aa31572e475de6a0cc175ab5e1a5aef70dedb165bba06005ae4def",
+          "lufs": -19.47,
+          "truePeakDb": -2.55
         }
-      ]
+      ],
+      "preservedBaseVoiceMatchesGain": true,
+      "voiceBoostMaxError": 5.960464477539063e-08,
+      "replacedBrandedParagraphs": 2,
+      "unchangedNarrationPcmSegments": 4,
+      "modelAndSpeakerUnchanged": true
     },
     {
       "id": "radio-sunday-evening-v1",
@@ -127,17 +155,22 @@
       "audio": [
         {
           "kind": "voice",
-          "sha256": "614a7431a515425f02a9cc118b68afa344521e15bdb539ae367b462ec8e6df27",
-          "lufs": -23.06,
-          "truePeakDb": -3.36
+          "sha256": "e2a8d8dec539a9f931ee8ef76aba7e6a7ad4ecad20e1a8edc8daa5f9fc023db1",
+          "lufs": -23.42,
+          "truePeakDb": -3.37
         },
         {
           "kind": "mix",
-          "sha256": "77bef9f26e11bfedc279d4367fd09378fa3ea605bb6177a279ca5b6b62aebcfb",
-          "lufs": -18.87,
-          "truePeakDb": -2.9
+          "sha256": "09229e36a997ac8fd0a7dd9a28976b9a3fbe6ec1301f7f4b53487e873a80566e",
+          "lufs": -19.07,
+          "truePeakDb": -3.03
         }
-      ]
+      ],
+      "preservedBaseVoiceMatchesGain": true,
+      "voiceBoostMaxError": 2.9802322387695312e-08,
+      "replacedBrandedParagraphs": 2,
+      "unchangedNarrationPcmSegments": 4,
+      "modelAndSpeakerUnchanged": true
     }
   ],
   "humanReviewed": false

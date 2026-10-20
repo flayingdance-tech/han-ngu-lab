@@ -59,3 +59,7 @@ Triệu chứng: '.local' is not recognized khi npm dùng cmd và đường dẫ
 
 ### POD-19 — Phụ đề biến mất sau đổi podcast radio
 Nguyên nhân: schema/UI audio-only trước đây cố ý loại timeline. Theo D-042 khôi phục 43 đoạn từ kịch bản, timing production, Pinyin/nghĩa Việt; renderer giữ timeline khi tái tạo. Không lấy ASR làm phụ đề vì outro có ảo giác chữ. Script ràng buộc hash nguồn và kiểm 14MP3 giữ nguyên; test kiểm highlight/seek/cuộn/ẩn nghĩa Việt.
+
+### POD-20 — Đổi thương hiệu phải đổi cả lời trong âm thanh
+D-043 yêu cầu Hán Ngữ Lab / 汉语实验室. Không chỉ thay phụ đề/metadata hoặc rename MP3: lời mở/kết trong14đoạn phải được tạo lại bằng đúng model/speaker/speed/EQ hiện hành. Ghép các đoạn không đổi từ PCM baseline, giữ nguồn/nhịp/cao độ/mức piano, sau đó cập nhật timeline và cả3 lớp phụ đề. Không kéo nhạc để chữa độ dài; dừng nếu lời mới không vừa nền cố định.
+Bằng chứng ASR phải gắn SHA của file mix đang dùng; check/review từ chối report của file cũ dù cùng episodeID. Giữ baseline/mẫu/backup lịch sử để rollback, chỉ URL trong catalog mới được phục vụ.

@@ -6,7 +6,7 @@ Cập nhật: 20/10/2026, Asia/Bangkok (+07). D-041 cho phép áp dụng trực 
 
 - Nguồn: `content/podcast-radio.json`, 7 tập radio một người dẫn cho ngày19–25/10/2026: tuần mới, thành ngữ, nhật ký, văn hóa trà, thơ, truyện cuối tuần, tâm sự buổi tối.
 - Giọng A Kokoro zf_001 FP32 offline, cùng model/speaker với mẫu v9. Nhịp kể/ngắt theo `content/radio-storyteller.json`, không pitch/formant, không đọc thường/chậm lặp và không mục cụm từ cần nhớ.
-- Tập đầu dùng nguyên WAV lời v9, chỉ tăng1.3dB. Các tập khác dùng cùng preset và mức tăng. Không gọi API tạo giọng khi người dùng bấm nghe.
+- D-043: 14 đoạn mở/kết đã đổi tên thành 汉语实验室 bằng cùng giọng/preset; 29 đoạn còn lại sao chép PCM cũ, không tạo lại. Mức giọng theo D-041; WAV nền v8 giữ nguyên. Không gọi API tạo giọng khi người dùng bấm nghe.
 - Nhạc giữ nguyên PCM bản piano v8, cùng mức âm, cao độ, nhịp, điểm nối và thời lượng87.060s. Không duck theo lời, không master gain chung. Renderer kiểm hash nguồn và residual mix để phát hiện thay nhạc.
 - Nhạc: `不如见一面 · Bản piano`, file do chủ dự án cung cấp. Metadata là `owner-supplied / owner-provided-unverified`; không gán CC BY hoặc giấy phép của nhạc cũ cho bản này. Giấy phép công khai của file này chưa được xác minh.
 - Các tập/học liệu vẫn unreviewed. Việc chủ dự án chọn âm sắc không phải duyệt chuyên môn chữ Hán/thanh điệu hay giấy phép nhạc. API production còn chặn podcast draft; chưa phát hành cloud.
@@ -24,7 +24,7 @@ LocalStorage `hnl-podcasts-v1` giữ dữ liệu nghe cũ; ID mới không ghi �
 - `content/podcast-radio-music.json`: config nền, hash và bản nhạc gốc phục vụ backup.
 - `.local/podcasts/music/radio-piano-bed.wav`: PCM nền đã chọn, SHA256 `bbcd3e0f2d936b8cc6ce5d4597a4dd44cff130a4fb5e6612179439028548878b`.
 - `.local/podcasts/music/owner-piano.mp3`: sao chép file gốc, không sửa file trên ổD.
-- `.local/podcasts/radio-pilot/pilot-v9-voice.wav` và `report-v9.json`: nguồn bất biến của tập đầu.
+- `.local/podcasts/radio-pilot/pilot-v9-voice.wav` và `report-v9.json`: mẫu lịch sử trước D-043, không dùng để ghi đè tên mới. Nguồn hiện hành của cả7tập được tham chiếu sourceVoice/sourceReport trong content/podcast-radio.json, ở brand-lab.
 - `.local/podcasts/rendered/catalog.json`: catalog private, metadata/timing/profile/QA. API dùng Zod để bỏ profile/production trước khi trả về. API trả phụ đề đã biên soạn; không trả production/profile.
 - `.local/podcasts/rendered/*-mix.mp3` và `*-voice.mp3`: file có fingerprint; chỉ URL trong catalog được API phục vụ. Không đặt draft vào public/out.
 - `.local/podcasts/radio-render-progress.json`: checkpoint số tập đã qua QA; API không đọc file này. Catalog chỉ được đổi atomically sau khi toàn bộ tập hoàn thành.
@@ -65,3 +65,7 @@ Duyệt chuyên môn, CMS reviewer/publication, xác minh quyền nhạc để c
 ## Cập nhật riêng phụ đề (không render âm thanh)
 Nguồn content/podcast-subtitles.json và podcast-subtitles.vi.json. Pinyin dùng thanh từ điển, có hiệu chỉnh hư từ; biến điệu khi nói có thể khác chữ ghi, chưa duyệt chuyên môn. scripts/podcast-subtitles.py ràng buộc hash kịch bản với bản dịch và timing production, kiểm khớp từng đoạn, sao lưu catalog rồi đổi atomically; report .local/podcasts/subtitles-update.json giữ SHA toàn bộ14MP3.
 Chạy npm.cmd run podcast:subtitles để làm mới Pinyin từ kịch bản/bản dịch. Nếu đã sửa Pinyin thủ công, chạy Python scripts/podcast-subtitles.py KHÔNG có --refresh-pinyin để áp dụng nguyên nguồn đã sửa. Không chạy TTS/ASR chỉ vì sửa hiển thị phụ đề. Renderer radio cũng ghép nguồn phụ đề này khi thật sự cần tạo lại âm.
+
+## Đổi tên chương trình theo D-043 (20/10/2026)
+Tên hiện hành Hán Ngữ Lab / 汉语实验室. scripts/podcast-rebrand.py chỉ thay hai đoạn có tên trong mỗi tập bằng cùng model/speaker/speed/EQ, ghép PCM các đoạn khác từ baseline cũ và giữ nguyên toàn bộ piano v8. Thời gian phụ đề cập nhật theo độ dài lời mới; không kéo/đổi nhịp nhạc. Các nguồn base WAV/report ở .local/podcasts/brand-lab được content/podcast-radio.json tham chiếu để tái tạo không mất phần lời đã giữ. Renderer thường từ chối nếu preserved voice không khớp kịch bản đã sửa; không sửa report để che lỗi.
+Chỉ chạy rebrand cho việc đổi tên D-043, không dùng để tạo tập mới. Baseline trước đổi nằm brand-lab/before, không ghi đè; các bản mẫu/cache/backup lịch sử giữ để đối chiếu và không được web phục vụ. scripts/audio-brand-audit.py lập danh mục media, so nguồn hiện hành và 290SHA bài học; không tuyên bố đã nghe/ASR toàn bộ cache lưu trữ. ASR radio phải khớp SHA của14MP3 hiện hành, không tái dùng report từ file cũ. Nội dung vẫn unreviewed.

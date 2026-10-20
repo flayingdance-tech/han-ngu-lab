@@ -83,6 +83,8 @@ with FileLock(str(WORK/'render.lock'),timeout=1):
             assert sr==RATE and voice.ndim==1 and len(voice)==len(bed)
             source=read(ROOT/episode['sourceReport'])
             timeline=source['segments']
+            if episode.get('segments'):
+                assert [s['text'] for s in timeline]==episode['segments'],'Preserved narration no longer matches edited script'
             assert source['musicPcmSha256']==profile['musicPcmSha256']
             source_voice_sha=sha(ROOT/episode['sourceVoice'])
         else:

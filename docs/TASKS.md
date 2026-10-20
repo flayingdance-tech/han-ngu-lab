@@ -56,6 +56,7 @@ Trạng thái: TODO / IN_PROGRESS / BLOCKED / DONE. Phạm vi đã chốt; nghi�
 
 | POD-03 | Lo-fi chill và hoàn thiện nghe hằng ngày | DONE | 7 tập/70 đoạn/14MP3; giữ3voice SHA; CC BY4.0 credit; resume/yêu thích/tìm/lặp/liên tục/transcript; unit21/21,E2E14/14,typecheck/lint/build/QA14file đạt; restore33file hash khớp. Chỉ DONE kỹ thuật local; duyệt/xuất bản ở POD-02 |
 
+| POD-06 | Thống nhất tên Hán Ngữ Lab trong âm thanh | DONE | D-043:14đoạn/7tập và phụ đề tên mới; cùng giọngA,29đoạn PCM/nền giữ nguyên;290file bài học giữ SHA;ASR7tập nhận tên mới2lần/tập;unit22/E2E10/typecheck/lint/build đạt;backup/restore70file khớp. Chỉ DONE kỹ thuật local |
 | POD-05 | Khôi phục phụ đề podcast | DONE | D-042: 43 đoạn/7 tập, chữ Hán/Pinyin/nghĩa Việt, highlight/seek/tự cuộn; typecheck/lint/build đạt, unit22/22,E2E10/10; backup/restore39file khớp SHA; 14MP3 không đổi. Duyệt chuyên môn còn ở POD-02 |
 | POD-04 | Áp dụng radio theo preset chủ dự án chốt | DONE | D-041:v9+1.3dB/nhạc v8 nguyên;7tập/14MP3;integrity/sourcevoice+music đạt;unit22/22,E2E14/14,typecheck/lint/build/export/ASRtriage7tập đạt;restore34file hashkhớp. Chỉ DONE kỹ thuật local;POD-02 còn duyệt/xuất bản |
 
