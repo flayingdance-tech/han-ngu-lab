@@ -463,3 +463,5 @@ Typecheck exit0; trình duyệt10/10 đạt (desktop/mobile, phụ đề/seek/cu
 
 ### 2026-10-20T08:13:28.5011329+07:00 — POD-05 DONE kỹ thuật local
 Typecheck/lint/build exit0; npm test22/22 và Playwright10/10 đạt. Phụ đề43đoạn/7tập có chữ Hán/Pinyin/nghĩa Việt, aria-current theo đoạn, bấm seek/phát, tự cuộn nội bộ, checkbox nghĩa Việt lưu trên thiết bị. Giọng/nhạc giữ nguyên14SHA; không tổng hợp hoặc ASR lại. Backup/restore39file tại2026-10-20T01-12-20.407Z, hash khớp. Web200/catalog7/Range206 sau build. D-042/TASKS/STATUS/NEXT/runbook/sổ lỗi cập nhật; phần chuyên môn/xuất bản vẫn POD-02. Không còn build/test/render cần chờ; API10644/web11608 đang phục vụ local.
+
+2026-10-20T08:13:47.5424912+07:00 : Mốc mã nguồn POD-05 cb4a773; working tree sạch sau commit triển khai. Bước tiếp theo đọc STATUS/NEXT, không render lại âm thanh khi chỉ đổi phụ đề.

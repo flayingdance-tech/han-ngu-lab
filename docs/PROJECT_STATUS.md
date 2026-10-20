@@ -2,6 +2,8 @@
 
 Checkpoint: 2026-10-20T08:13:28.5011329+07:00, Asia/Bangkok (+07). Workspace D:\Hán Ngữ Lab.
 
+Mốc triển khai phụ đề: cb4a773; các kiểm tra D-042 và backup39file đã hoàn tất.
+
 ## Hiện hành: podcast radio D-041 và phụ đề D-042
 
 - Chủ dự án đã chốt giọng kể v9 và nhạc piano hiện hành; tăng nhẹ giọng1.3dB, áp dụng trực tiếp, không làm mẫu hoặc hỏi duyệt mẫu nữa. D-033 đã bị thay thế trong phạm vi này.
