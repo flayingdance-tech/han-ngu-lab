@@ -1,3 +1,9 @@
+## D-048 — push SES đã được phê duyệt — 2026-10-21T00:39:38.5050715+07:00
+
+- Chủ dự án xác nhận push57f3a3b lên Private main; yêu cầu fetch/merge an toàn, giữ nguyên amplify.yml baseDirectory:.next từ GitHub, không force/xóa; dừng nếu conflict hoặc cần sửa cấu hình Amplify. Chỉ theo dõi auto-deploy nếu được kích hoạt, không deploy Lightsail/SMTP credentials/DB/tài nguyên AWS.
+- Fetch origin/main nhận1b23772 (chỉ amplify.yml out→.next). Merge9a2acec giữ hai parent57f3a3b và1b23772, không conflict; git diff origin/main -- amplify.yml rỗng. Lần merge đầu thiếu identity nên chưa thực hiện; lặp với identity Codex cục bộ theo lệnh thành công, không đổi global config.
+- Sau merge: lint/test31/31/build/typecheck/smoke exit0. Logs .local/pre-github-audit/ses-merge-*.log. Gitleaks toàn lịch sử reachable exit0; không track populated env/credentialCSV/privateDB/key. next-env sinh tự động đã về nội dung trước build. Không chạm UI/media/DB.
+- Đang push commit checkpoint kế tiếp sau xác minh Private và remote chưa đổi, rồi chờ CI. AWS CLI không có trong PATH; GitHub chưa có Amplify check/deployment; Console mở tới màn đăng nhập. Đã yêu cầu chủ dự án tự đăng nhập riêng để đọc Amplify, không yêu cầu secret trong chat. Không khẳng định auto-deploy đã kích hoạt/thành công.
 ## MAIL-01 / D-047 — 2026-10-21T00:35:12.4760766+07:00
 
 - Tích hợp cục bộ hoàn tất: Nodemailer10.1.7 runtime, SMTP Sydney587 requireTLS/certificate validation; biến SMTP_USERNAME/SMTP_PASSWORD/SMTP_FROM_EMAIL chỉ server. Production cấu hình sai chặn trước mở DB; preview không gửi thư.
