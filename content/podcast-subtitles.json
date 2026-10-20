@@ -1,0 +1,257 @@
+{
+  "version": 1,
+  "review": "unreviewed",
+  "pinyinConvention": "Dictionary tones, with neutral grammatical particles; spoken tone sandhi may differ",
+  "episodes": {
+    "radio-weekstart-v1": {
+      "sourceTextSha256": "5acbc5c0825bd525f3b64a1b8d7ea7d0115ef597fb90c3aa2fd59f926d783a1f",
+      "segments": [
+        {
+          "zh": "早上好。欢迎收听汉语时光。今天是十月十九日，星期一。新的一周，我们一起，慢慢开始。",
+          "pinyin": "zǎo shàng hǎo。 huān yíng shōu tīng hàn yǔ shí guāng。 jīn tiān shì shí yuè shí jiǔ rì， xīng qī yī。 xīn de yī zhōu， wǒ men yì qǐ， màn màn kāi shǐ。",
+          "vi": "Chào buổi sáng. Chào mừng bạn đến với Hán Ngữ Thời Quang. Hôm nay là thứ Hai, ngày 19 tháng 10. Một tuần mới, chúng ta cùng chậm rãi bắt đầu nhé."
+        },
+        {
+          "zh": "如果你今天有一点累，也没有关系。先喝一口水，轻轻地呼吸。学习中文，不用着急。有几句话，想轻轻地说给你听。",
+          "pinyin": "rú guǒ nǐ jīn tiān yǒu yì diǎn lèi， yě méi yǒu guān xì。 xiān hē yī kǒu shuǐ， qīng qīng de hū xī。 xué xí zhōng wén， bù yòng zháo jí。 yǒu jǐ jù huà， xiǎng qīng qīng de shuō gěi nǐ tīng。",
+          "vi": "Nếu hôm nay bạn hơi mệt thì cũng không sao. Trước hết hãy uống một ngụm nước, hít thở nhẹ nhàng. Học tiếng Trung không cần vội. Có vài lời, tôi muốn nhẹ nhàng nói với bạn."
+        },
+        {
+          "zh": "每天进步一点，慢慢来，别着急。专心做好小事，今天，也要加油。",
+          "pinyin": "měi tiān jìn bù yì diǎn， màn màn lái， bié zháo jí。 zhuān xīn zuò hǎo xiǎo shì， jīn tiān， yě yào jiā yóu。",
+          "vi": "Mỗi ngày tiến bộ một chút, cứ từ từ, đừng vội. Chú tâm làm tốt những việc nhỏ. Hôm nay cũng hãy cố gắng nhé."
+        },
+        {
+          "zh": "我想起一个学中文的朋友。以前，她总想一天记住很多词，结果，很快就累了。后来，她每天只学三个词，再说一句简单的话。慢慢地，她发现，自己真的能开口了。",
+          "pinyin": "wǒ xiǎng qǐ yí gè xué zhōng wén de péng yǒu。 yǐ qián， tā zǒng xiǎng yī tiān jì zhù hěn duō cí， jié guǒ， hěn kuài jiù lèi le。 hòu lái， tā měi tiān zhǐ xué sān gè cí， zài shuō yī jù jiǎn dān de huà。 màn màn de， tā fā xiàn， zì jǐ zhēn de néng kāi kǒu le。",
+          "vi": "Tôi nhớ đến một người bạn học tiếng Trung. Trước kia, cô ấy luôn muốn nhớ thật nhiều từ trong một ngày, rồi nhanh chóng thấy mệt. Sau đó, mỗi ngày cô chỉ học ba từ và nói một câu đơn giản. Dần dần, cô nhận ra mình thực sự đã có thể mở lời."
+        },
+        {
+          "zh": "所以，今天不用做很多。记住一个词，说好一句话，就很好。你付出的每一点努力，都在帮你走向更远的地方。",
+          "pinyin": "suǒ yǐ， jīn tiān bù yòng zuò hěn duō。 jì zhù yí gè cí， shuō hǎo yī jù huà， jiù hěn hǎo。 nǐ fù chū de měi yì diǎn nǔ lì， dōu zài bāng nǐ zǒu xiàng gèng yuǎn de dì fāng。",
+          "vi": "Vì vậy, hôm nay không cần làm quá nhiều. Nhớ một từ, nói tốt một câu cũng đã rất tốt rồi. Mỗi chút nỗ lực bạn bỏ ra đều đang giúp bạn đi xa hơn."
+        },
+        {
+          "zh": "也许，今天的路上，你会遇到一点小困难。请给自己一点时间，看看窗外的天空，听听身边的声音。等心安静下来，再做眼前的事。新的开始，就藏在这些小小的行动里。",
+          "pinyin": "yě xǔ， jīn tiān de lù shàng， nǐ huì yù dào yì diǎn xiǎo kùn nán。 qǐng gěi zì jǐ yì diǎn shí jiān， kàn kàn chuāng wài de tiān kōng， tīng tīng shēn biān de shēng yīn。 děng xīn ān jìng xià lái， zài zuò yǎn qián de shì。 xīn de kāi shǐ， jiù cáng zài zhè xiē xiǎo xiǎo de xíng dòng lǐ。",
+          "vi": "Có lẽ trên hành trình hôm nay, bạn sẽ gặp một chút khó khăn. Hãy cho mình chút thời gian, ngắm bầu trời ngoài cửa sổ, lắng nghe âm thanh xung quanh. Khi lòng yên lại, hãy tiếp tục việc trước mắt. Khởi đầu mới nằm trong chính những hành động nhỏ ấy."
+        },
+        {
+          "zh": "愿你带着一点勇气，开始今天的生活。这里是汉语时光。我们，明天见。",
+          "pinyin": "yuàn nǐ dài zhe yì diǎn yǒng qì， kāi shǐ jīn tiān de shēng huó。 zhè lǐ shì hàn yǔ shí guāng。 wǒ men， míng tiān jiàn。",
+          "vi": "Mong bạn mang theo một chút can đảm để bắt đầu ngày hôm nay. Đây là Hán Ngữ Thời Quang. Hẹn gặp bạn ngày mai."
+        }
+      ]
+    },
+    "radio-persistence-v1": {
+      "sourceTextSha256": "7e65ec6fd3c75ff0e035dbeb3e9f32347b5eb8731b7b01fa86c1a6a4c21e9e6e",
+      "segments": [
+        {
+          "zh": "早上好，欢迎收听汉语时光。今天是十月二十日，星期二。窗外的世界慢慢醒来，我们也给自己一点安静的时间。",
+          "pinyin": "zǎo shàng hǎo， huān yíng shōu tīng hàn yǔ shí guāng。 jīn tiān shì shí yuè èr shí rì， xīng qī èr。 chuāng wài de shì jiè màn màn xǐng lái， wǒ men yě gěi zì jǐ yì diǎn ān jìng de shí jiān。",
+          "vi": "Chào buổi sáng, chào mừng bạn đến với Hán Ngữ Thời Quang. Hôm nay là thứ Ba, ngày 20 tháng 10. Thế giới ngoài cửa sổ đang dần thức giấc, chúng ta cũng dành cho mình một chút thời gian yên tĩnh nhé."
+        },
+        {
+          "zh": "今天，想和你分享一个成语，水滴石穿。它说的是，小小的水滴，经过很长时间，也能在石头上留下痕迹。听起来很慢，却很有力量。",
+          "pinyin": "jīn tiān， xiǎng hé nǐ fēn xiǎng yí gè chéng yǔ， shuǐ dī shí chuān。 tā shuō de shì， xiǎo xiǎo de shuǐ dī， jīng guò hěn zhǎng shí jiān， yě néng zài shí tou shàng liú xià hén jì。 tīng qǐ lái hěn màn， què hěn yǒu lì liàng。",
+          "vi": "Hôm nay, tôi muốn chia sẻ với bạn thành ngữ ‘nước chảy đá mòn’. Những giọt nước nhỏ bé, qua thời gian rất dài, cũng có thể để lại dấu vết trên đá. Nghe có vẻ chậm, nhưng lại rất có sức mạnh."
+        },
+        {
+          "zh": "想象一下，屋檐下有一块石头。下雨的时候，水一滴一滴地落下来。开始，石头没有什么变化。可是日子久了，上面渐渐出现了一个小洞。",
+          "pinyin": "xiǎng xiàng yī xià， wū yán xià yǒu yī kuài shí tóu。 xià yǔ de shí hòu， shuǐ yī dī yī dī de là xià lái。 kāi shǐ， shí tou méi yǒu shén me biàn huà。 kě shì rì zi jiǔ le， shàng miàn jiàn jiàn chū xiàn le yí gè xiǎo dòng。",
+          "vi": "Hãy tưởng tượng dưới mái hiên có một hòn đá. Khi trời mưa, nước rơi xuống từng giọt. Ban đầu, hòn đá chẳng có gì thay đổi. Nhưng lâu dần, trên mặt đá xuất hiện một lỗ nhỏ."
+        },
+        {
+          "zh": "学中文，也有一点像这样。今天记住一个词，明天听懂一句话。每一次练习，看起来都很小，但它们并没有白费。你正在一点一点地向前走。",
+          "pinyin": "xué zhōng wén， yě yǒu yì diǎn xiàng zhè yàng。 jīn tiān jì zhù yí gè cí， míng tiān tīng dǒng yī jù huà。 měi yī cì liàn xí， kàn qǐ lái dōu hěn xiǎo， dàn tā men bìng méi yǒu bái fèi。 nǐ zhèng zài yī diǎn yī diǎn de xiàng qián zǒu。",
+          "vi": "Học tiếng Trung cũng hơi giống như vậy. Hôm nay nhớ một từ, ngày mai nghe hiểu một câu. Mỗi lần luyện tập trông đều rất nhỏ, nhưng không hề uổng phí. Bạn đang từng chút một tiến về phía trước."
+        },
+        {
+          "zh": "如果今天遇到了不懂的地方，先别责怪自己。停一会儿，喝一点水，再试一次。坚持，不一定是一直用力，也可以是休息以后，愿意回来。",
+          "pinyin": "rú guǒ jīn tiān yù dào le bù dǒng de dì fāng， xiān bié zé guài zì jǐ。 tíng yī huì er， hē yì diǎn shuǐ， zài shì yī cì。 jiān chí， bù yí dìng shì yì zhí yòng lì， yě kě yǐ shì xiū xī yǐ hòu， yuàn yì huí lái。",
+          "vi": "Nếu hôm nay gặp điều chưa hiểu, trước hết đừng trách mình. Dừng lại một lát, uống chút nước, rồi thử lại. Kiên trì không nhất thiết là luôn gắng sức; đó cũng có thể là sẵn lòng quay lại sau khi nghỉ ngơi."
+        },
+        {
+          "zh": "这里是汉语时光。愿这个早晨，带给你一点耐心，一点勇气。我们明天见。",
+          "pinyin": "zhè lǐ shì hàn yǔ shí guāng。 yuàn zhè ge zǎo chén， dài gěi nǐ yì diǎn nài xīn， yì diǎn yǒng qì。 wǒ men míng tiān jiàn。",
+          "vi": "Đây là Hán Ngữ Thời Quang. Mong buổi sáng này mang đến cho bạn một chút kiên nhẫn, một chút can đảm. Hẹn gặp bạn ngày mai."
+        }
+      ]
+    },
+    "radio-learning-diary-v1": {
+      "sourceTextSha256": "fcc610171bf4dea2d5b264aebb53fa081737e53ff8d6cbc9d6a70b99cff963d8",
+      "segments": [
+        {
+          "zh": "早上好，这里是汉语时光。今天是十月二十一日，星期三。一周已经走到中间，你现在的心情，还好吗？",
+          "pinyin": "zǎo shàng hǎo， zhè lǐ shì hàn yǔ shí guāng。 jīn tiān shì shí yuè èr shí yī rì， xīng qī sān。 yī zhōu yǐ jīng zǒu dào zhōng jiān， nǐ xiàn zài de xīn qíng， hái hǎo ma？",
+          "vi": "Chào buổi sáng, đây là Hán Ngữ Thời Quang. Hôm nay là thứ Tư, ngày 21 tháng 10. Một tuần đã đi đến giữa chặng, lúc này tâm trạng bạn thế nào?"
+        },
+        {
+          "zh": "今天，想读给你听一段小小的学习日记。没有特别厉害的成绩，只有一个普通人，和中文慢慢熟悉的过程。",
+          "pinyin": "jīn tiān， xiǎng dú gěi nǐ tīng yī duàn xiǎo xiǎo de xué xí rì jì。 méi yǒu tè bié lì hài de chéng jì， zhǐ yǒu yí gè pǔ tōng rén， hé zhōng wén màn màn shú xī de guò chéng。",
+          "vi": "Hôm nay, tôi muốn đọc cho bạn nghe một trang nhật ký học tập nhỏ. Không có thành tích đặc biệt xuất sắc, chỉ có một người bình thường đang dần làm quen với tiếng Trung."
+        },
+        {
+          "zh": "早上，我打开昨天的笔记。有几个词，我又忘了。刚开始，我有一点失望。后来想一想，忘记也是学习的一部分，想不起来，就再认识它一次。",
+          "pinyin": "zǎo shàng， wǒ dǎ kāi zuó tiān de bǐ jì。 yǒu jǐ gè cí， wǒ yòu wàng le。 gāng kāi shǐ， wǒ yǒu yì diǎn shī wàng。 hòu lái xiǎng yī xiǎng， wàng jì yě shì xué xí de yī bù fèn， xiǎng bù qǐ lái， jiù zài rèn shí tā yī cì。",
+          "vi": "Buổi sáng, tôi mở ghi chép hôm qua. Có vài từ tôi lại quên mất. Ban đầu, tôi hơi thất vọng. Rồi nghĩ lại, quên cũng là một phần của việc học; không nhớ ra thì cứ làm quen với từ ấy thêm một lần nữa."
+        },
+        {
+          "zh": "我把一个新词，放进自己的生活里。看到桌上的杯子，就用中文说出来。想到今天要做的事，就试着写一句话。这样，课本里的词，好像离我近了一点。",
+          "pinyin": "wǒ bǎ yí gè xīn cí， fàng jìn zì jǐ de shēng huó lǐ。 kàn dào zhuō shàng de bēi zi， jiù yòng zhōng wén shuō chū lái。 xiǎng dào jīn tiān yào zuò de shì， jiù shì zhe xiě yī jù huà。 zhè yàng， kè běn lǐ de cí， hǎo xiàng lí wǒ jìn le yì diǎn。",
+          "vi": "Tôi đưa một từ mới vào cuộc sống của mình. Nhìn thấy chiếc cốc trên bàn thì nói tên nó bằng tiếng Trung. Nghĩ đến việc cần làm hôm nay thì thử viết một câu. Nhờ vậy, những từ trong sách dường như gần tôi hơn một chút."
+        },
+        {
+          "zh": "今天没有学很多，可是有一句话，我终于能自然地说出来了。那一刻，我发现，进步有时候很安静，只有自己知道。",
+          "pinyin": "jīn tiān méi yǒu xué hěn duō， kě shì yǒu yī jù huà， wǒ zhōng yú néng zì rán de shuō chū lái le。 nà yī kè， wǒ fā xiàn， jìn bù yǒu shí hòu hěn ān jìng， zhǐ yǒu zì jǐ zhī dào。",
+          "vi": "Hôm nay tôi không học nhiều, nhưng cuối cùng đã có một câu tôi nói ra thật tự nhiên. Khi ấy, tôi nhận ra đôi khi tiến bộ rất lặng lẽ, chỉ bản thân mình biết."
+        },
+        {
+          "zh": "新的一天，继续和中文做朋友吧。这里是汉语时光，愿你学得自在，也活得轻松。我们明天见。",
+          "pinyin": "xīn de yī tiān， jì xù hé zhōng wén zuò péng yǒu ba。 zhè lǐ shì hàn yǔ shí guāng， yuàn nǐ xué de zì zài， yě huó de qīng sōng。 wǒ men míng tiān jiàn。",
+          "vi": "Ngày mới, hãy tiếp tục làm bạn với tiếng Trung nhé. Đây là Hán Ngữ Thời Quang, mong bạn học thật thoải mái và sống thật nhẹ nhàng. Hẹn gặp ngày mai."
+        }
+      ]
+    },
+    "radio-tea-culture-v1": {
+      "sourceTextSha256": "20cd1b5736f35ef7fb292624dccc100867c8dfee964c75e35f378b2083e23d1f",
+      "segments": [
+        {
+          "zh": "早上好，欢迎来到汉语时光。今天是十月二十二日，星期四。今天，我们把脚步放慢一点，聊一聊，一杯茶里的时光。",
+          "pinyin": "zǎo shàng hǎo， huān yíng lái dào hàn yǔ shí guāng。 jīn tiān shì shí yuè èr shí èr rì， xīng qī sì。 jīn tiān， wǒ men bǎ jiǎo bù fàng màn yì diǎn， liáo yī liáo， yī bēi chá lǐ de shí guāng。",
+          "vi": "Chào buổi sáng, chào mừng đến với Hán Ngữ Thời Quang. Hôm nay là thứ Năm, ngày 22 tháng 10. Chúng ta hãy chậm bước một chút, cùng trò chuyện về khoảng thời gian bên một chén trà."
+        },
+        {
+          "zh": "在中国，茶不只是杯子里的水和茶叶。有时候，它也是一次见面，一个休息的理由，或者，一段慢慢开始的聊天。",
+          "pinyin": "zài zhōng guó， chá bù zhǐ shì bēi zi lǐ de shuǐ hé chá yè。 yǒu shí hòu， tā yě shì yī cì jiàn miàn， yí gè xiū xī de lǐ yóu， huò zhě， yī duàn màn màn kāi shǐ de liáo tiān。",
+          "vi": "Ở Trung Quốc, trà không chỉ là nước và lá trà trong cốc. Đôi khi, trà còn là một cuộc gặp gỡ, một lý do để nghỉ ngơi, hoặc một cuộc trò chuyện chậm rãi bắt đầu."
+        },
+        {
+          "zh": "有些地方，人们喜欢和朋友坐下来，一边喝茶，一边说说最近的生活。不同的地方，有不同的茶，也有不同的习惯。没有一种方式，能代表所有人的日常。",
+          "pinyin": "yǒu xiē dì fāng， rén men xǐ huān hé péng yǒu zuò xià lái， yī biān hē chá， yī biān shuō shuō zuì jìn de shēng huó。 bù tóng de dì fāng， yǒu bù tóng de chá， yě yǒu bù tóng de xí guàn。 méi yǒu yī zhǒng fāng shì， néng dài biǎo suǒ yǒu rén de rì cháng。",
+          "vi": "Ở một số nơi, mọi người thích ngồi cùng bạn bè, vừa uống trà vừa kể chuyện cuộc sống gần đây. Mỗi vùng có những loại trà và thói quen khác nhau. Không có một cách nào đại diện được cho sinh hoạt thường ngày của tất cả mọi người."
+        },
+        {
+          "zh": "想象一个安静的早晨。热水倒进杯子，茶叶慢慢展开。你不需要马上做什么，只是看一看，闻一闻，让自己真正坐在这一刻。",
+          "pinyin": "xiǎng xiàng yí gè ān jìng de zǎo chén。 rè shuǐ dào jìn bēi zi， chá yè màn màn zhǎn kāi。 nǐ bù xū yào mǎ shàng zuò shén me， zhǐ shì kàn yī kàn， wén yī wén， ràng zì jǐ zhēn zhèng zuò zài zhè yī kè。",
+          "vi": "Hãy hình dung một buổi sáng yên tĩnh. Nước nóng được rót vào cốc, lá trà từ từ mở ra. Bạn không cần lập tức làm gì; chỉ ngắm nhìn, cảm nhận hương thơm và thực sự ở lại với khoảnh khắc này."
+        },
+        {
+          "zh": "学习一门语言，也是在认识别人的生活。一个普通的词后面，可能藏着一张桌子，一次相聚，还有许多温柔的小故事。",
+          "pinyin": "xué xí yī mén yǔ yán， yě shì zài rèn shí bié rén de shēng huó。 yí gè pǔ tōng de cí hòu miàn， kě néng cáng zhe yī zhāng zhuō zi， yī cì xiāng jù， hái yǒu xǔ duō wēn róu de xiǎo gù shì。",
+          "vi": "Học một ngôn ngữ cũng là tìm hiểu cuộc sống của người khác. Đằng sau một từ bình thường có thể là một chiếc bàn, một lần sum họp và nhiều câu chuyện nhỏ dịu dàng."
+        },
+        {
+          "zh": "愿你的今天，有一点清香，也有一点从容。这里是汉语时光。谢谢你的陪伴，我们明天见。",
+          "pinyin": "yuàn nǐ de jīn tiān， yǒu yì diǎn qīng xiāng， yě yǒu yì diǎn cóng róng。 zhè lǐ shì hàn yǔ shí guāng。 xiè xiè nǐ de péi bàn， wǒ men míng tiān jiàn。",
+          "vi": "Mong ngày hôm nay của bạn có một chút hương thơm và một chút thong dong. Đây là Hán Ngữ Thời Quang. Cảm ơn bạn đã đồng hành, hẹn gặp ngày mai."
+        }
+      ]
+    },
+    "radio-moon-poem-v1": {
+      "sourceTextSha256": "b54ef51700549aeca21186d0473586fa60395b39e2fc4e0f80e3f285b127ceca",
+      "segments": [
+        {
+          "zh": "早上好，这里是汉语时光。今天是十月二十三日，星期五。今天，想陪你读一首很短的诗，李白的静夜思。",
+          "pinyin": "zǎo shàng hǎo， zhè lǐ shì hàn yǔ shí guāng。 jīn tiān shì shí yuè èr shí sān rì， xīng qī wǔ。 jīn tiān， xiǎng péi nǐ dú yī shǒu hěn duǎn de shī， lǐ bái de jìng yè sī。",
+          "vi": "Chào buổi sáng, đây là Hán Ngữ Thời Quang. Hôm nay là thứ Sáu, ngày 23 tháng 10. Tôi muốn cùng bạn đọc một bài thơ rất ngắn của Lý Bạch, ‘Cảm nghĩ trong đêm thanh tĩnh’."
+        },
+        {
+          "zh": "床前明月光，疑是地上霜。举头望明月，低头思故乡。短短的四句诗，把一个安静的夜晚，留在了我们面前。",
+          "pinyin": "chuáng qián míng yuè guāng， yí shì dì shàng shuāng。 jǔ tóu wàng míng yuè， dī tóu sī gù xiāng。 duǎn duǎn de sì jù shī， bǎ yí gè ān jìng de yè wǎn， liú zài le wǒ men miàn qián。",
+          "vi": "Trước giường ánh trăng sáng, ngỡ mặt đất phủ sương. Ngẩng đầu ngắm trăng sáng, cúi đầu nhớ quê hương. Chỉ bốn câu thơ ngắn đã đưa một đêm yên tĩnh đến trước mắt chúng ta."
+        },
+        {
+          "zh": "月光落在床前，看起来很亮，好像地上铺了一层白霜。诗人抬起头，看见天上的月亮，又低下头，想起远方的家乡。",
+          "pinyin": "yuè guāng luò zài chuáng qián， kàn qǐ lái hěn liàng， hǎo xiàng dì shàng pū le yī céng bái shuāng。 shī rén tái qǐ tóu， kàn jiàn tiān shàng de yuè liàng， yòu dī xià tou， xiǎng qǐ yuǎn fāng de jiā xiāng。",
+          "vi": "Ánh trăng rơi xuống trước giường, sáng như thể mặt đất được phủ một lớp sương trắng. Nhà thơ ngẩng đầu nhìn trăng trên trời, rồi cúi đầu nhớ quê nhà xa xôi."
+        },
+        {
+          "zh": "有时候，我们也会在一个普通的瞬间，突然想家。一种熟悉的味道，一句亲切的话，或者窗外的一点光，都可能让回忆慢慢走近。",
+          "pinyin": "yǒu shí hòu， wǒ men yě huì zài yí gè pǔ tōng de shùn jiān， tū rán xiǎng jiā。 yī zhǒng shú xī de wèi dào， yī jù qīn qiè de huà， huò zhě chuāng wài de yì diǎn guāng， dōu kě néng ràng huí yì màn màn zǒu jìn。",
+          "vi": "Đôi khi, chúng ta cũng bỗng nhớ nhà trong một khoảnh khắc bình thường. Một mùi hương quen thuộc, một lời nói thân thương, hay chút ánh sáng ngoài cửa sổ đều có thể đưa kỷ niệm chậm rãi trở về."
+        },
+        {
+          "zh": "读诗，不一定要一下子明白所有的字。先看见里面的画面，感受那一点心情，就已经和这首诗，建立了自己的联系。",
+          "pinyin": "dú shī， bù yí dìng yào yī xià zi míng bái suǒ yǒu de zì。 xiān kàn jiàn lǐ miàn de huà miàn， gǎn shòu nà yì diǎn xīn qíng， jiù yǐ jīng hé zhè shǒu shī， jiàn lì le zì jǐ de lián xì。",
+          "vi": "Đọc thơ không nhất thiết phải hiểu ngay mọi chữ. Chỉ cần hình dung cảnh vật bên trong và cảm nhận đôi chút tâm tình, bạn đã tạo được mối liên hệ riêng với bài thơ ấy rồi."
+        },
+        {
+          "zh": "愿你心里的牵挂，都能找到温柔的去处。这里是汉语时光，陪你读一点中文，也陪你听听自己的心。明天见。",
+          "pinyin": "yuàn nǐ xīn lǐ de qiān guà， dōu néng zhǎo dào wēn róu de qù chù。 zhè lǐ shì hàn yǔ shí guāng， péi nǐ dú yì diǎn zhōng wén， yě péi nǐ tīng tīng zì jǐ de xīn。 míng tiān jiàn。",
+          "vi": "Mong những điều bạn thương nhớ đều tìm được một nơi dịu dàng để gửi gắm. Đây là Hán Ngữ Thời Quang, cùng bạn đọc một chút tiếng Trung và lắng nghe lòng mình. Hẹn gặp ngày mai."
+        }
+      ]
+    },
+    "radio-weekend-story-v1": {
+      "sourceTextSha256": "3a8a2b349859c6caccc3c330bfef83d65e4afdbd02a7066812afb920ca48415d",
+      "segments": [
+        {
+          "zh": "早上好，欢迎收听汉语时光。今天是十月二十四日，星期六。周末到了。今天，我们不赶路，听一个轻轻的小故事。",
+          "pinyin": "zǎo shàng hǎo， huān yíng shōu tīng hàn yǔ shí guāng。 jīn tiān shì shí yuè èr shí sì rì， xīng qī liù。 zhōu mò dào le。 jīn tiān， wǒ men bù gǎn lù， tīng yí gè qīng qīng de xiǎo gù shì。",
+          "vi": "Chào buổi sáng, chào mừng bạn đến với Hán Ngữ Thời Quang. Hôm nay là thứ Bảy, ngày 24 tháng 10. Cuối tuần đến rồi. Hôm nay, chúng ta không vội đi đâu, hãy nghe một câu chuyện nhỏ thật nhẹ nhàng."
+        },
+        {
+          "zh": "一个周六的早晨，小林走进一家旧书店。他本来没有想买什么，只想找一个安静的地方，让忙了一周的自己，休息一会儿。",
+          "pinyin": "yí gè zhōu liù de zǎo chén， xiǎo lín zǒu jìn yī jiā jiù shū diàn。 tā běn lái méi yǒu xiǎng mǎi shén me， zhǐ xiǎng zhǎo yí gè ān jìng de dì fāng， ràng máng le yī zhōu de zì jǐ， xiū xī yī huì er。",
+          "vi": "Một sáng thứ Bảy, Tiểu Lâm bước vào một hiệu sách cũ. Ban đầu, anh không định mua gì, chỉ muốn tìm một nơi yên tĩnh để bản thân được nghỉ ngơi sau một tuần bận rộn."
+        },
+        {
+          "zh": "窗边放着一本薄薄的书。他随手翻开，看见一张旧书签。上面没有特别的句子，只写着，愿你今天，发现一件开心的小事。",
+          "pinyin": "chuāng biān fàng zhe yī běn báo báo de shū。 tā suí shǒu fān kāi， kàn jiàn yī zhāng jiù shū qiān。 shàng miàn méi yǒu tè bié de jù zi， zhǐ xiě zhe， yuàn nǐ jīn tiān， fā xiàn yī jiàn kāi xīn de xiǎo shì。",
+          "vi": "Bên cửa sổ có một cuốn sách mỏng. Anh tiện tay mở ra và thấy một tấm đánh dấu sách cũ. Trên đó không có lời gì đặc biệt, chỉ viết: mong hôm nay bạn tìm được một điều nhỏ khiến mình vui."
+        },
+        {
+          "zh": "走出书店以后，小林开始留意身边。路边开了一朵小花，面包店飘来香味，还有一只小猫，正懒懒地晒着太阳。原来，平常的早晨，也藏着这么多小小的快乐。",
+          "pinyin": "zǒu chū shū diàn yǐ hòu， xiǎo lín kāi shǐ liú yì shēn biān。 lù biān kāi le yī duǒ xiǎo huā， miàn bāo diàn piāo lái xiāng wèi， hái yǒu yī zhī xiǎo māo， zhèng lǎn lǎn de shài zhe tài yáng。 yuán lái， píng cháng de zǎo chén， yě cáng zhe zhè me duō xiǎo xiǎo de kuài lè。",
+          "vi": "Ra khỏi hiệu sách, Tiểu Lâm bắt đầu chú ý xung quanh. Ven đường có một bông hoa nhỏ, tiệm bánh tỏa hương thơm, còn một chú mèo đang lười biếng sưởi nắng. Hóa ra một buổi sáng bình thường cũng giấu nhiều niềm vui nhỏ đến vậy."
+        },
+        {
+          "zh": "我们常常等着，一件很大的好事发生。可是生活里的温柔，有时候很小。只有慢下来，才看得见。这个故事，也想把那张书签，送给正在听的你。",
+          "pinyin": "wǒ men cháng cháng děng zhe， yī jiàn hěn dà de hǎo shì fā shēng。 kě shì shēng huó lǐ de wēn róu， yǒu shí hòu hěn xiǎo。 zhǐ yǒu màn xià lái， cái kàn de jiàn。 zhè ge gù shì， yě xiǎng bǎ nà zhāng shū qiān， sòng gěi zhèng zài tīng de nǐ。",
+          "vi": "Chúng ta thường chờ một chuyện thật tốt đẹp và lớn lao xảy ra. Nhưng sự dịu dàng trong cuộc sống đôi khi rất nhỏ, phải chậm lại mới nhìn thấy. Câu chuyện này cũng muốn gửi tấm đánh dấu sách ấy đến bạn đang lắng nghe."
+        },
+        {
+          "zh": "愿这个周末，让你重新找回一点轻松。这里是汉语时光。谢谢你听到这里，我们明天见。",
+          "pinyin": "yuàn zhè ge zhōu mò， ràng nǐ chóng xīn zhǎo huí yì diǎn qīng sōng。 zhè lǐ shì hàn yǔ shí guāng。 xiè xiè nǐ tīng dào zhè lǐ， wǒ men míng tiān jiàn。",
+          "vi": "Mong cuối tuần này giúp bạn tìm lại chút nhẹ nhõm. Đây là Hán Ngữ Thời Quang. Cảm ơn bạn đã nghe đến đây, hẹn gặp ngày mai."
+        }
+      ]
+    },
+    "radio-sunday-evening-v1": {
+      "sourceTextSha256": "c634a296a762752ae10e590a44d74b109c61ca05ef2ff5733b5bc335bb3edcfc",
+      "segments": [
+        {
+          "zh": "晚上好，这里是汉语时光。今天是十月二十五日，星期日。一周又慢慢走到了这里。忙了一天的你，现在，可以稍微放松一点了。",
+          "pinyin": "wǎn shàng hǎo， zhè lǐ shì hàn yǔ shí guāng。 jīn tiān shì shí yuè èr shí wǔ rì， xīng qī rì。 yī zhōu yòu màn màn zǒu dào le zhè lǐ。 máng le yī tiān de nǐ， xiàn zài， kě yǐ shāo wēi fàng sōng yì diǎn le。",
+          "vi": "Chào buổi tối, đây là Hán Ngữ Thời Quang. Hôm nay là Chủ nhật, ngày 25 tháng 10. Một tuần lại chậm rãi đi đến lúc này. Bạn đã bận rộn cả ngày, giờ có thể thả lỏng một chút rồi."
+        },
+        {
+          "zh": "今晚，我们不急着给这一周打分。没有做完的事，先放在一边。有些努力，暂时看不到结果，也没有关系。你已经认真地，走过了这些日子。",
+          "pinyin": "jīn wǎn， wǒ men bù jí zhe gěi zhè yī zhōu dǎ fēn。 méi yǒu zuò wán de shì， xiān fàng zài yī biān。 yǒu xiē nǔ lì， zàn shí kàn bú dào jié guǒ， yě méi yǒu guān xì。 nǐ yǐ jīng rèn zhēn de， zǒu guò le zhè xiē rì zi。",
+          "vi": "Tối nay, chúng ta không vội chấm điểm tuần vừa qua. Những việc chưa xong hãy tạm để sang một bên. Có những nỗ lực chưa thấy kết quả cũng không sao. Bạn đã nghiêm túc đi qua những ngày ấy rồi."
+        },
+        {
+          "zh": "回想一下，这一周有没有一个小小的瞬间，让你觉得温暖？也许是一顿热饭，一次聊天，或者，终于听懂了一句中文。那些很小的事情，也在悄悄照亮生活。",
+          "pinyin": "huí xiǎng yī xià， zhè yī zhōu yǒu méi yǒu yí gè xiǎo xiǎo de shùn jiān， ràng nǐ jué de wēn nuǎn？ yě xǔ shì yī dùn rè fàn， yī cì liáo tiān， huò zhě， zhōng yú tīng dǒng le yī jù zhōng wén。 nà xiē hěn xiǎo de shì qíng， yě zài qiāo qiāo zhào liàng shēng huó。",
+          "vi": "Hãy nhớ lại, tuần này có khoảnh khắc nhỏ nào làm bạn thấy ấm lòng không? Có thể là một bữa cơm nóng, một cuộc trò chuyện, hoặc cuối cùng nghe hiểu được một câu tiếng Trung. Những điều rất nhỏ ấy cũng âm thầm thắp sáng cuộc sống."
+        },
+        {
+          "zh": "如果有让你难过的事，也不必假装没有发生。允许自己累，允许自己慢一点。休息，不是在放弃，而是在照顾那个，明天还要继续向前的自己。",
+          "pinyin": "rú guǒ yǒu ràng nǐ nán guò de shì， yě bù bì jiǎ zhuāng méi yǒu fā shēng。 yǔn xǔ zì jǐ lèi， yǔn xǔ zì jǐ màn yì diǎn。 xiū xī， bú shì zài fàng qì， ér shì zài zhào gù nà ge， míng tiān hái yào jì xù xiàng qián de zì jǐ。",
+          "vi": "Nếu có chuyện khiến bạn buồn, không cần giả vờ rằng nó chưa xảy ra. Cho phép mình mệt và chậm lại một chút. Nghỉ ngơi không phải là từ bỏ, mà là chăm sóc chính mình, người ngày mai vẫn sẽ tiếp tục bước tới."
+        },
+        {
+          "zh": "把肩膀放松，轻轻地呼吸。窗外的声音，可以远一点，心里的事情，也可以慢一点。今晚，先把这一小段安静，留给自己。",
+          "pinyin": "bǎ jiān bǎng fàng sōng， qīng qīng de hū xī。 chuāng wài de shēng yīn， kě yǐ yuǎn yì diǎn， xīn lǐ de shì qíng， yě kě yǐ màn yì diǎn。 jīn wǎn， xiān bǎ zhè yī xiǎo duàn ān jìng， liú gěi zì jǐ。",
+          "vi": "Thả lỏng vai và hít thở nhẹ nhàng. Âm thanh ngoài cửa sổ có thể lùi xa hơn một chút, những chuyện trong lòng cũng có thể chậm lại một chút. Tối nay, hãy dành khoảng yên tĩnh nhỏ này cho riêng mình."
+        },
+        {
+          "zh": "这里是汉语时光。谢谢你这一周的陪伴。愿你今晚睡得安稳，明天醒来，心里多一点力量。晚安，我们明天见。",
+          "pinyin": "zhè lǐ shì hàn yǔ shí guāng。 xiè xiè nǐ zhè yī zhōu de péi bàn。 yuàn nǐ jīn wǎn shuì de ān wěn， míng tiān xǐng lái， xīn lǐ duō yì diǎn lì liàng。 wǎn ān， wǒ men míng tiān jiàn。",
+          "vi": "Đây là Hán Ngữ Thời Quang. Cảm ơn bạn đã đồng hành suốt tuần qua. Mong bạn tối nay ngủ thật yên, sáng mai thức dậy có thêm chút sức mạnh trong lòng. Chúc ngủ ngon, hẹn gặp ngày mai."
+        }
+      ]
+    }
+  }
+}

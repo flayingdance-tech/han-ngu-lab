@@ -10,6 +10,7 @@ import numpy as np
 import soundfile as sf
 from filelock import FileLock
 from voice_io import atomic_replace
+from podcast_subtitles_core import timed_captions
 
 ROOT=Path(__file__).resolve().parents[1]
 WORK=ROOT/'.local/podcasts'
@@ -23,6 +24,7 @@ read=lambda p:json.loads(p.read_text(encoding='utf-8-sig'))
 episodes=read(ROOT/'content/podcast-radio.json')
 music_config=read(ROOT/'content/podcast-radio-music.json')
 preset=read(ROOT/'content/radio-storyteller.json')
+subtitles=read(ROOT/'content/podcast-subtitles.json')['episodes']
 music_file=ROOT/music_config['localFile']
 assert sha(music_file)==music_config['sha256']
 bed,sr=sf.read(music_file,dtype='float32',always_2d=True)
@@ -130,6 +132,9 @@ with FileLock(str(WORK/'render.lock'),timeout=1):
             atomic_replace(temp,dest)
             result['assets'][kind]={'url':f'/api/podcasts/media/{filename}',**metrics}
         catalog['episodes'].append(result)
+        caption_source=subtitles[episode['id']]
+        assert caption_source['sourceTextSha256']==text_hash,'Stale subtitles; update authored source'
+        result['segments']=timed_captions(caption_source['segments'],timeline,result['duration'])
         # Checkpoint is not served by the API; only the completed catalog is activated.
         (WORK/'radio-render-progress.json').write_text(json.dumps({'completed':[e['id'] for e in catalog['episodes']],'total':len(episodes),'generatedSegments':generated},indent=2),encoding='utf-8')
         print(f"QA passed {episode['id']}",flush=True)

@@ -13,7 +13,6 @@ export const podcastSchema = z.object({
   segments:z.array(z.object({zh:z.string().min(1),pinyin:z.string().min(1),vi:z.string().min(1),speaker:z.string(),start:z.number().nonnegative(),end:z.number().positive()})).default([]),
   assets:z.object({voice:asset,mix:asset}),
 }).superRefine((episode,ctx)=>{
-  if(episode.format==='radio'&&episode.segments.length)ctx.addIssue({code:'custom',message:'Radio playback is audio-only',path:['segments']});
   if(episode.format==='dialogue'&&!episode.segments.length)ctx.addIssue({code:'custom',message:'Dialogue requires a timeline',path:['segments']});
   for(const [i,s] of episode.segments.entries()){
     if(s.end<=s.start||s.end>episode.duration||i>0&&s.start<episode.segments[i-1].end)ctx.addIssue({code:'custom',message:'Transcript timestamps overlap or exceed audio',path:['segments',i]});

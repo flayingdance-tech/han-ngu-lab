@@ -1,6 +1,6 @@
 # Bảng công việc
 
-Cập nhật: 2026-10-19, Asia/Bangkok.
+Cập nhật: 2026-10-20, Asia/Bangkok.
 Trạng thái: TODO / IN_PROGRESS / BLOCKED / DONE. Phạm vi đã chốt; nghiệm thu trọn dự án còn các mục chưa xong.
 
 | ID | Việc | Trạng thái | Điều kiện xong / bằng chứng |
@@ -56,6 +56,7 @@ Trạng thái: TODO / IN_PROGRESS / BLOCKED / DONE. Phạm vi đã chốt; nghi�
 
 | POD-03 | Lo-fi chill và hoàn thiện nghe hằng ngày | DONE | 7 tập/70 đoạn/14MP3; giữ3voice SHA; CC BY4.0 credit; resume/yêu thích/tìm/lặp/liên tục/transcript; unit21/21,E2E14/14,typecheck/lint/build/QA14file đạt; restore33file hash khớp. Chỉ DONE kỹ thuật local; duyệt/xuất bản ở POD-02 |
 
+| POD-05 | Khôi phục phụ đề podcast | DONE | D-042: 43 đoạn/7 tập, chữ Hán/Pinyin/nghĩa Việt, highlight/seek/tự cuộn; typecheck/lint/build đạt, unit22/22,E2E10/10; backup/restore39file khớp SHA; 14MP3 không đổi. Duyệt chuyên môn còn ở POD-02 |
 | POD-04 | Áp dụng radio theo preset chủ dự án chốt | DONE | D-041:v9+1.3dB/nhạc v8 nguyên;7tập/14MP3;integrity/sourcevoice+music đạt;unit22/22,E2E14/14,typecheck/lint/build/export/ASRtriage7tập đạt;restore34file hashkhớp. Chỉ DONE kỹ thuật local;POD-02 còn duyệt/xuất bản |
 
 POD-04 bằng chứng mẫu (2026-10-19T14:50:19.8021012+07:00): pilot-mix.mp3 76.94s,14đoạn; nhạc nguồn chủ dự án; render/ASR exit0; báo cáo true peak -1.94dBTP. Trạng thái IN_PROGRESS vì mới mẫu local, còn tích hợp radio và luân phiên tập.

@@ -53,3 +53,9 @@ Whisper sinh thêm '字幕by…',lặp đoạn thơ hoặc lời kêu gọi sau 
 
 ## POD-17 — Schema nhạc chỉ nhận CC BY (2026-10-19T22:42:53.1923371+07:00)
 Schema cũ chỉcho CC BY4.0 dù nhạc mới là file chủ dự án gửi. Sửa union owner-supplied/owner-provided-unverified,khôngcho licenseUrlCCgắn vào nguồnowner;unitkiểmtrakhônggánnhầmgiấyphép và bỏprofile/production khỏiAPI. Khôngtuyênbố quyềnpháthan côngkhai khi chưa xácminh.
+
+### POD-18 — npm Windows không chạy đường dẫn Python tương đối
+Triệu chứng: '.local' is not recognized khi npm dùng cmd và đường dẫn .local/kokoro-venv/Scripts/python.exe. Sửa: dùng đường dẫn Windows có dấu ngoặc kép trong package.json, áp dụng podcast:render và podcast:subtitles. Lệnh podcast:subtitles đã exit0. Không đổi model hay cài lại runtime để xử lý lỗi gọi lệnh.
+
+### POD-19 — Phụ đề biến mất sau đổi podcast radio
+Nguyên nhân: schema/UI audio-only trước đây cố ý loại timeline. Theo D-042 khôi phục 43 đoạn từ kịch bản, timing production, Pinyin/nghĩa Việt; renderer giữ timeline khi tái tạo. Không lấy ASR làm phụ đề vì outro có ảo giác chữ. Script ràng buộc hash nguồn và kiểm 14MP3 giữ nguyên; test kiểm highlight/seek/cuộn/ẩn nghĩa Việt.

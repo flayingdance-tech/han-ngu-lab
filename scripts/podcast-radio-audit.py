@@ -15,7 +15,8 @@ assert sha(music_file)==config['sha256']
 bed,rate=sf.read(music_file,dtype='float32',always_2d=True)
 report={'format':'radio','musicPcmSha256':sha(music_file),'musicChanged':False,'voiceGainDb':1.3,'episodes':[],'humanReviewed':False}
 for episode in catalog['episodes']:
-    assert episode['format']=='radio' and not episode['segments']
+    assert episode['format']=='radio' and len(episode['segments'])==len(episode['production']['segments'])
+    assert all(c['zh']==s['text'] and c['pinyin'] and c['vi'] for c,s in zip(episode['segments'],episode['production']['segments']))
     voice,sr=sf.read(WORK/f"{episode['id']}-voice.wav",dtype='float32')
     mix,mr=sf.read(WORK/f"{episode['id']}-mix.wav",dtype='float32',always_2d=True)
     assert sr==mr==rate==24000 and len(voice)==len(bed) and mix.shape==bed.shape

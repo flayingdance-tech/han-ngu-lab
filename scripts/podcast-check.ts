@@ -9,12 +9,13 @@ const files=['content/podcast-radio.json','content/podcast-radio-music.json','co
 const hash=(path:string)=>createHash('sha256').update(readFileSync(path)).digest('hex');
 files.push('scripts/podcast-radio-audit.py','docs/reports/podcast-radio-integrity.json');
 files.push('scripts/podcast-asr-review.py','.local/podcasts/radio-asr-reviewed.json');
+files.push('content/podcast-subtitles.json','content/podcast-subtitles.vi.json','scripts/podcast-subtitles.py','scripts/podcast_subtitles_core.py','.local/podcasts/subtitles-update.json');
 const triage=JSON.parse(readFileSync(resolve(root,'radio-asr-triage.json'),'utf8')) as {humanReviewed:boolean;episodes:{id:string}[]};
 const checkedIds=new Set(triage.episodes.map(e=>e.id));
 if(triage.humanReviewed!==false||checkedIds.size!==catalog.episodes.length||triage.episodes.length!==catalog.episodes.length||catalog.episodes.some(e=>!checkedIds.has(e.id)))throw new Error('ASR triage has not completed for this radio catalog');
 if(hash(music.localFile)!==music.sha256)throw new Error('Music source checksum mismatch');
 for(const episode of catalog.episodes){
-  if(episode.format!=='radio'||episode.segments.length)throw new Error('Expected an audio-only radio catalog');
+  if(episode.format!=='radio'||!episode.segments.length)throw new Error('Expected radio episodes with timed subtitles');
   for(const asset of Object.values(episode.assets)){
     const file=`.local/podcasts/rendered/${basename(asset.url)}`;
     if(hash(file)!==asset.sha256)throw new Error(`Audio checksum mismatch: ${file}`);

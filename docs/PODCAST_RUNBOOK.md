@@ -1,6 +1,6 @@
 # Podcast radio — vận hành và bàn giao
 
-Cập nhật: 19/10/2026, Asia/Bangkok (+07). D-041 cho phép áp dụng trực tiếp cấu hình đã chọn, không cần làm mẫu hoặc hỏi chốt lại.
+Cập nhật: 20/10/2026, Asia/Bangkok (+07). D-041 cho phép áp dụng trực tiếp cấu hình đã chọn, không cần làm mẫu hoặc hỏi chốt lại.
 
 ## Cấu hình hiện hành
 
@@ -14,7 +14,7 @@ Cập nhật: 19/10/2026, Asia/Bangkok (+07). D-041 cho phép áp dụng trực 
 
 ## Giao diện
 
-Podcast chỉ nghe: không ảnh minh họa, phụ đề, Pinyin, nghĩa Việt hoặc tải lời thoại. Giữ native audio, nhạc/giọng riêng, tốc độ có preservesPitch, từ đầu/±10s, tập trước/sau, yêu thích, tìm kiếm, lặp một/nghe liên tục và nhớ vị trí trên thiết bị.
+D-042: có phụ đề chữ Hán, Pinyin và nghĩa Việt dưới player cho cả7tập/43đoạn; tô sáng theo đoạn, tự cuộn trong khung và bấm nghe lại. Có tùy chọn hiện nghĩa Việt và dừng tự cuộn; không ảnh minh họa hoặc tải lời thoại. Giữ native audio, nhạc/giọng riêng, tốc độ có preservesPitch, từ đầu/±10s, tập trước/sau, yêu thích, tìm kiếm, lặp một/nghe liên tục và nhớ vị trí trên thiết bị.
 
 LocalStorage `hnl-podcasts-v1` giữ dữ liệu nghe cũ; ID mới không ghi đè tiến độ của các tập hội thoại cũ. Gợi ý chọn tập chưa nghe, sau khi hết thư viện mới quay lại đầu. Đây là thư viện7tập có ngày soạn sẵn, chưa phải dịch vụ tự sinh nội dung hằng ngày vô hạn.
 
@@ -25,7 +25,7 @@ LocalStorage `hnl-podcasts-v1` giữ dữ liệu nghe cũ; ID mới không ghi �
 - `.local/podcasts/music/radio-piano-bed.wav`: PCM nền đã chọn, SHA256 `bbcd3e0f2d936b8cc6ce5d4597a4dd44cff130a4fb5e6612179439028548878b`.
 - `.local/podcasts/music/owner-piano.mp3`: sao chép file gốc, không sửa file trên ổD.
 - `.local/podcasts/radio-pilot/pilot-v9-voice.wav` và `report-v9.json`: nguồn bất biến của tập đầu.
-- `.local/podcasts/rendered/catalog.json`: catalog private, metadata/timing/profile/QA. API dùng Zod để bỏ profile/production trước khi trả về. Radio không có transcript public.
+- `.local/podcasts/rendered/catalog.json`: catalog private, metadata/timing/profile/QA. API dùng Zod để bỏ profile/production trước khi trả về. API trả phụ đề đã biên soạn; không trả production/profile.
 - `.local/podcasts/rendered/*-mix.mp3` và `*-voice.mp3`: file có fingerprint; chỉ URL trong catalog được API phục vụ. Không đặt draft vào public/out.
 - `.local/podcasts/radio-render-progress.json`: checkpoint số tập đã qua QA; API không đọc file này. Catalog chỉ được đổi atomically sau khi toàn bộ tập hoàn thành.
 - `.local/podcasts/radio-asr-triage.json`: ASR final MP3 chỉ để tìm lỗi, không duyệt ngữ âm/cảm xúc.
@@ -60,3 +60,8 @@ Khôi phục catalog và MP3 theo đường dẫn inventory, giữ đúng hash. 
 ## Hạng mục còn lại
 
 Duyệt chuyên môn, CMS reviewer/publication, xác minh quyền nhạc để công khai, cấu hình cloud/email/HTTPS và backup ngoài máy chưa hoàn tất. Không báo đã triển khai Internet chỉ vì local playback hoặc build thành công.
+
+
+## Cập nhật riêng phụ đề (không render âm thanh)
+Nguồn content/podcast-subtitles.json và podcast-subtitles.vi.json. Pinyin dùng thanh từ điển, có hiệu chỉnh hư từ; biến điệu khi nói có thể khác chữ ghi, chưa duyệt chuyên môn. scripts/podcast-subtitles.py ràng buộc hash kịch bản với bản dịch và timing production, kiểm khớp từng đoạn, sao lưu catalog rồi đổi atomically; report .local/podcasts/subtitles-update.json giữ SHA toàn bộ14MP3.
+Chạy npm.cmd run podcast:subtitles để làm mới Pinyin từ kịch bản/bản dịch. Nếu đã sửa Pinyin thủ công, chạy Python scripts/podcast-subtitles.py KHÔNG có --refresh-pinyin để áp dụng nguyên nguồn đã sửa. Không chạy TTS/ASR chỉ vì sửa hiển thị phụ đề. Renderer radio cũng ghép nguồn phụ đề này khi thật sự cần tạo lại âm.

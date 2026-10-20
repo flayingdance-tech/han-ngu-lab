@@ -454,3 +454,12 @@ Typecheck/lint banđầuđạt;unit22/22. Thưviện7tậpradio,đầudùngWAVv9
 
 ## 2026-10-19T22:46:21.2172868+07:00 — Checkpoint mã nguồn D-041
 Commit triển khai ea1a654 (Apply selected radio voice and fixed piano to the podcast library). Bộradio/QA/backup đã ghi ởmốc trên. Workingtree sạch saucommit triểnkhai. Đã yêu cầu mở browserlocalhost3000 trongCodex,trảqueued;không coi đó làđãđiềukhiển tabPodcast hoặcdeployInternet. Không cần ownerduyệtmẫu nữa.
+
+### 2026-10-20T08:06:25.0343047+07:00 — POD-05 khôi phục phụ đề (IN_PROGRESS)
+Đã tạo nguồn 43 đoạn/7 tập, bản dịch Việt gắn hash kịch bản, Pinyin và script cập nhật catalog atomically; report subtitles-update.json xác nhận 14MP3 giữ SHA. UI đã thêm 3 dòng, highlight theo đoạn, tự cuộn trong khung và bấm seek; test đang chạy. Không TTS/ASR lại. Dịch vụ cũ không còn listen; khởi động ẩn launcher API10644/web11608, không đọc stdout auth. Lỗi npm cmd không nhận .local/path đã sửa bằng đường dẫn exe Windows có dấu ngoặc kép. Bước tiếp: typecheck/lint/unit/E2E/build, audit, backup và cập nhật bàn giao.
+
+### 2026-10-20T08:13:01.4951101+07:00 — POD-05 kiểm tra gần cuối
+Typecheck exit0; trình duyệt10/10 đạt (desktop/mobile, phụ đề/seek/cuộn/ẩn nghĩa Việt/playback/mạng/theme). Npm launcher npx bị dừng lúc nạp chậm; tiến trình Playwright con vẫn chạy hết, report subtitles-e2e.log xác nhận10 passed; không xem exit -1 của launcher là kết quả test. Build exit0, đã trả next-env về dev/types; root200/catalog7/Range206. Audit7tập/14MP3 giữ nguyên; podcast:check exit0. Backup/restore39file SHA khớp tại timestamp2026-10-20T01-12-20.407Z. Đã xem screenshot desktop-light và mobile-dark. Lint còn nạp/chạy, unit trong chuỗi chờ lint; chưa báo hoàn tất.
+
+### 2026-10-20T08:13:28.5011329+07:00 — POD-05 DONE kỹ thuật local
+Typecheck/lint/build exit0; npm test22/22 và Playwright10/10 đạt. Phụ đề43đoạn/7tập có chữ Hán/Pinyin/nghĩa Việt, aria-current theo đoạn, bấm seek/phát, tự cuộn nội bộ, checkbox nghĩa Việt lưu trên thiết bị. Giọng/nhạc giữ nguyên14SHA; không tổng hợp hoặc ASR lại. Backup/restore39file tại2026-10-20T01-12-20.407Z, hash khớp. Web200/catalog7/Range206 sau build. D-042/TASKS/STATUS/NEXT/runbook/sổ lỗi cập nhật; phần chuyên môn/xuất bản vẫn POD-02. Không còn build/test/render cần chờ; API10644/web11608 đang phục vụ local.

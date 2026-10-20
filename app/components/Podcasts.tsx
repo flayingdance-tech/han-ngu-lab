@@ -34,7 +34,16 @@ type PlayerProps={episode:Podcast;memory:Listening;autoplay:boolean;favorite:boo
 function PodcastPlayer({episode,memory,autoplay,favorite,update,onProgress,onFavorite,onPrevious,onNext,onEnded}:PlayerProps){
   const audio=useRef<HTMLAudioElement>(null),pending=useRef<{time:number;play:boolean}|null>({time:resumePosition(memory,episode.id,episode.duration),play:autoplay}),savedAt=useRef(-10);
   const [time,setTime]=useState(0),[error,setError]=useState('');
-  const {music,speed,mode}=memory;
+  const {music,speed,mode,translation}=memory;
+  const transcript=useRef<HTMLOListElement>(null);
+  const [follow,setFollow]=useState(true);
+  const current=episode.segments.findIndex(s=>time>=s.start&&time<s.end);
+  useEffect(()=>{
+    const list=transcript.current,row=list?.children[current] as HTMLElement|undefined;
+    if(!follow||!list||!row)return;
+    const top=row.getBoundingClientRect().top-list.getBoundingClientRect().top+list.scrollTop-12;
+    list.scrollTo({top,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+  },[current,follow]);
   useEffect(()=>{stopSpeech();const element=audio.current;return()=>{if(element){element.pause();if(element.currentTime>0)onProgress(episode.id,Math.min(element.currentTime,episode.duration),episode.duration);}};},[episode.id,episode.duration,onProgress]);
   function play(){stopSpeech();setError('');void audio.current?.play().catch(()=>setError('Chưa phát được âm thanh. Bấm nghe lại để tiếp tục.'));}
   function changeMusic(){const a=audio.current;if(a){pending.current=pending.current??{time:a.currentTime,play:!a.paused};a.pause();}setError('');update(s=>({...s,music:!s.music}));}
@@ -47,6 +56,12 @@ function PodcastPlayer({episode,memory,autoplay,favorite,update,onProgress,onFav
     <div className="podcast-options"><label><input type="checkbox" checked={music} onChange={changeMusic}/>Nhạc piano</label><label>Tốc độ <select aria-label="Tốc độ podcast" value={speed} onChange={e=>{const value=Number(e.target.value) as Listening['speed'];update(s=>({...s,speed:value}));if(audio.current){audio.current.playbackRate=value;audio.current.preservesPitch=true;}}}>{[.8,1,1.1].map(s=><option key={s} value={s}>{s}×</option>)}</select></label><label>Phát lại <select aria-label="Chế độ phát podcast" value={mode} onChange={e=>update(s=>({...s,mode:e.target.value as Listening['mode']}))}><option value="off">Dừng khi hết tập</option><option value="one">Lặp tập này</option><option value="all">Nghe liên tục</option></select></label></div>
     {error&&<p className="notice error" role="alert">{error} <button className="text-button" onClick={()=>{if(audio.current){pending.current={time,play:true};audio.current.load();setError('');}}}>Thử lại âm thanh</button></p>}
     <div className="podcast-actions"><button className="button secondary" aria-pressed={favorite} onClick={onFavorite}><Heart size={17} fill={favorite?'currentColor':'none'}/>{favorite?'Đã yêu thích':'Yêu thích'}</button></div>
+    {episode.segments.length>0&&<section aria-label="Phụ đề podcast">
+      <h3>Chữ Hán · Pinyin · Nghĩa Việt</h3>
+      <div className="podcast-options"><label><input type="checkbox" checked={translation} onChange={()=>update(s=>({...s,translation:!s.translation}))}/>Hiện nghĩa Việt</label><label><input type="checkbox" checked={follow} onChange={e=>setFollow(e.target.checked)}/>Tự cuộn phụ đề</label></div>
+      <p className="tiny muted">Bấm vào một đoạn để nghe lại. Phụ đề sáng theo đoạn đang đọc.</p>
+      <ol ref={transcript} className="podcast-transcript" aria-label="Các đoạn phụ đề">{episode.segments.map((s,i)=><li key={s.start} className={current===i?'current':undefined}><button aria-label={`Nghe đoạn ${i+1}: ${s.zh}`} aria-current={current===i?'true':undefined} onClick={()=>jump(s.start)}><span className="transcript-meta">{clock(s.start)} · {s.speaker}</span><span className="transcript-hanzi" lang="zh-CN">{s.zh}</span><span className="transcript-pinyin" lang="zh-Latn">{s.pinyin}</span>{translation&&<span className="transcript-meaning" lang="vi">{s.vi}</span>}</button></li>)}</ol>
+    </section>}
     <p className="podcast-tip">{episode.tip}</p>
   </article>;
 }
