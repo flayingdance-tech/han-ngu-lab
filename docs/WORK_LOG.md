@@ -498,3 +498,11 @@ Gitleaks8.30.1 history/candidate reviewed exit0,2ngoại lệ đúng value/path 
 
 ### 2026-10-20T15:47:30.7933947+07:00 — PUB-01 IN_PROGRESS, chờ chủ dự án xác nhận
 Đã đọc PRE_GITHUB_AUDIT, không chạy lại học liệu/media/UI/build audits. GH CLI không trong PATH; GCM2.9.1 lưu account flayingdance-tech, dùng credential trong bộ nhớ gọi API GitHub/user xác minh thành công, không in/lưu credential. Repo https://github.com/flayingdance-tech/han-ngu-lab đã tồn tại, visibility private, empty (commits409,size0), defaultBranch main, canPushtrue, not archived. Local master, chưa remote, working tree ban đầu sạch tại6683576. Final Gitleaks all-history exit0; tracked sensitive-path check chỉ .env.example, khôngDB/privatekeys. Chưa tạo repo/chưa push/chưaAWS. Kế hoạch sau xác nhận: cấu hình origin đúng repo đã xác minh, push master:main không force, xác minh private và GitHub Actions. Không được tiếp tục push chỉ vì được tự động resume hoặc đọc checkpoint; phải có câu xác nhận trực tiếp của chủ dự án.
+
+## GitHub Private publication — 2026-10-20T16:29:50.6317986+07:00
+
+- Chủ dự án xác nhận trực tiếp D-046. GCM account flayingdance-tech; GET repository Private/push permission, git ls-remote xác minh trống trước push.
+- origin=https://github.com/flayingdance-tech/han-ngu-lab.git. git push -u origin master:main exit0; không force, không xóa, không rewrite. Toàn bộ lịch sử reachable của nhánh đã push.
+- GitHub main SHA97e562f8e663384313c03d9530f8c3af7b0897c2 khớp local; default main, Private=true.
+- Actions https://github.com/flayingdance-tech/han-ngu-lab/actions/runs/39400869176 success: Gitleaks toàn lịch sử, npm ci, production audit, lint, test, build, typecheck, production smoke đều đạt.
+- Bằng chứng không chứa secret: .local/pre-github-audit/github-push-verification.json. Không kiểm lại phần nghiệm thu; không AWS. Checkpoint tài liệu sẽ push riêng và kiểm CI của commit mới trước bàn giao.

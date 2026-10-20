@@ -1,3 +1,9 @@
+## GitHub Private đã xuất bản — 2026-10-20T16:29:50.6317986+07:00
+
+- D-046/PUB-01: chủ dự án xác nhận; origin đúng flayingdance-tech/han-ngu-lab Private, nhánh main. Đã push97e562f8e663384313c03d9530f8c3af7b0897c2 cùng lịch sử, không force/xóa/rewrite; SHA GitHub khớp.
+- Actions39400869176 success toàn bộ kiểm tra. URL https://github.com/flayingdance-tech/han-ngu-lab/actions/runs/39400869176. Nhánh local master theo dõi origin/main.
+- Checkpoint tài liệu sẽ push riêng rồi xác minh CI mới. Không AWS/Public; .local/database/media riêng vẫn giữ local theo ignore, không phải bản backup cloud toàn dự án. Các mục chờ xác nhận push ở checkpoint cũ đã bị D-046 thay thế.
+
 # Trạng thái hiện tại — đọc đầu tiên khi tiếp tục
 
 Checkpoint: 2026-10-20T15:47:30.7933947+07:00, Asia/Bangkok (+07). Workspace D:\Hán Ngữ Lab.
