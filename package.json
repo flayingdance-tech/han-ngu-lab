@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=24.0.0"
+    "node": ">=24.0.0 <25"
   },
   "scripts": {
     "dev": "concurrently -k -n api,web \"npm:dev:api\" \"npm:dev:web\"",
@@ -29,7 +29,8 @@
     "podcast:render": "\".local\\kokoro-venv\\Scripts\\python.exe\" -B -X utf8 scripts/podcast-radio-render.py",
     "podcast:check": "tsx scripts/podcast-check.ts",
     "podcast:subtitles": "\".local\\kokoro-venv\\Scripts\\python.exe\" -B -X utf8 scripts/podcast-subtitles.py --refresh-pinyin",
-    "podcast:backup": "tsx scripts/podcast-check.ts --backup"
+    "podcast:backup": "tsx scripts/podcast-check.ts --backup",
+    "smoke:production": "tsx scripts/production-smoke.ts"
   },
   "dependencies": {
     "cookie-parser": "1.4.7",
@@ -40,6 +41,7 @@
     "next": "16.4.2",
     "react": "19.3.1",
     "react-dom": "19.3.1",
+    "tsx": "4.23.15",
     "zod": "4.6.7"
   },
   "devDependencies": {
@@ -54,7 +56,6 @@
     "eslint": "9.39.5",
     "eslint-config-next": "16.4.2",
     "supertest": "7.3.1",
-    "tsx": "4.23.15",
     "typescript": "6.0.3"
   }
 }

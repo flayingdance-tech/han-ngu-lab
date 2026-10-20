@@ -63,3 +63,9 @@ Nguyên nhân: schema/UI audio-only trước đây cố ý loại timeline. Theo
 ### POD-20 — Đổi thương hiệu phải đổi cả lời trong âm thanh
 D-043 yêu cầu Hán Ngữ Lab / 汉语实验室. Không chỉ thay phụ đề/metadata hoặc rename MP3: lời mở/kết trong14đoạn phải được tạo lại bằng đúng model/speaker/speed/EQ hiện hành. Ghép các đoạn không đổi từ PCM baseline, giữ nguồn/nhịp/cao độ/mức piano, sau đó cập nhật timeline và cả3 lớp phụ đề. Không kéo nhạc để chữa độ dài; dừng nếu lời mới không vừa nền cố định.
 Bằng chứng ASR phải gắn SHA của file mix đang dùng; check/review từ chối report của file cũ dù cùng episodeID. Giữ baseline/mẫu/backup lịch sử để rollback, chỉ URL trong catalog mới được phục vụ.
+
+### SEC-01/DEP-01 — Token email trong query có thể lọt access log
+Chuyển link mới sang fragment, client đọc fragment/query cũ và dọn URL. Hashchange cùng trang không tự mount lại React nên thêm handler reload đúng verify/reset; browser test kiểm cả link mới/query cũ/click trong trang/reset và không có token fragment trong HTTP URL. Giữ no-referrer tại API và chuẩn bị static header trên Amplify; không log cookie/body/token.
+
+### DEP-02 — Production build khác production service
+Frontend export không chứa Express/SQLite/email; artifact out không mang theo rewrite localhost chỉ dành dev. Không bỏ guard/no-op mail hoặc bật preview công khai để sửa startup. tsx phải là runtime dependency vì npm start cần nó; đã cài sạch omitdev kiểm chứng. DB schema mới hơn phải fail closed, không ghi đè user_version1. Audit braces hiện đề xuất hạ major không an toàn; giữ cảnh báo có nguồn, không audit fix --force.

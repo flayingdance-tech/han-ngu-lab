@@ -1,0 +1,22 @@
+# Static frontend only. Configure Amplify platform WEB explicitly.
+# This does not deploy Express, SQLite or email. See PRE_GITHUB_AUDIT.md.
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - nvm install 24.15.0
+        - nvm use 24.15.0
+        - npm ci --include=dev --cache .npm --prefer-offline
+    build:
+      commands:
+        - npm run lint
+        - npm test
+        - npm run build
+  artifacts:
+    baseDirectory: out
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - .npm/**/*

@@ -10,7 +10,7 @@ test('editor changes exercise type, alternative answers and example Pinyin in a 
   const headers={Origin:'http://localhost:3000','X-HNL-Client':'web'};
   const reg=await page.request.post('/api/auth/register',{headers,data:{email,password,name:'Biên tập thử',adult:true,acceptedTerms:true}});
   expect(reg.status()).toBe(201);
-  const token=new URL((await reg.json()).devLink).searchParams.get('verify');
+  const token=new URLSearchParams(new URL((await reg.json()).devLink).hash.slice(1)).get('verify');
   expect((await page.request.post('/api/auth/verify',{headers,data:{token}})).ok()).toBeTruthy();
   // Local fixture promotes only this newly-created synthetic account.
   const db=openDatabase('.local/hanngulab.sqlite');

@@ -24,10 +24,19 @@ export default function Home() {
   const [page,setPage]=useState<Page>('home'),[user,setUser]=useState<User|null>(null),[catalog,setCatalog]=useState<LessonCard[]>([]),[progress,setProgress]=useState<Progress>(emptyProgress),[local,setLocal]=useState(false),[loading,setLoading]=useState(true),[error,setError]=useState(''),[notice,setNotice]=useState(''),[auth,setAuth]=useState(false),[resetToken,setResetToken]=useState(''),[selected,setSelected]=useState(''),[menu,setMenu]=useState(false),[level,setLevel]=useState(-1),[search,setSearch]=useState('');
   const refresh=useCallback(async()=>{try{setProgress(await api<Progress>('/progress'));}catch(e){setError((e as Error).message);}},[]);
   useEffect(()=>{
+    // A mail link clicked inside this open page changes only its fragment.
+    // Reload keeps the fragment off the HTTP request and lets initialization consume it once.
+    const receiveMailLink=()=>{const p=new URLSearchParams(location.hash.slice(1));if(p.has('verify')||p.has('reset'))location.reload();};
+    window.addEventListener('hashchange',receiveMailLink);
+    return()=>window.removeEventListener('hashchange',receiveMailLink);
+  },[]);
+  useEffect(()=>{
     let alive=true;
     async function initialize(){
       if(!entryAction.current){
         const params=new URLSearchParams(location.search);
+        const fragment=new URLSearchParams(location.hash.slice(1));
+        for(const purpose of ['verify','reset'])if(fragment.has(purpose))params.set(purpose,fragment.get(purpose)!);
         entryAction.current={};
         if(params.get('verify'))entryAction.current.verification=api<{message:string}>('/auth/verify',{token:params.get('verify')});
         if(params.get('reset'))entryAction.current.reset=params.get('reset')!;

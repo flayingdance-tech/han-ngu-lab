@@ -1,0 +1,18 @@
+title = "Han Ngu Lab secret scanning"
+[extend]
+useDefault = true
+
+# Public localStorage key, not a credential. Keep this exception value/path-specific.
+[[allowlists]]
+description = "Public podcast localStorage namespace"
+condition = "AND"
+paths = ['''(^|/)lib/podcast-listening\.ts$''']
+regexTarget = "secret"
+regexes = ['''^hnl-podcasts-v1$''']
+
+[[allowlists]]
+description = "Synthetic URL-fragment fixture used only by the browser security test"
+condition = "AND"
+paths = ['''(^|/)tests/e2e/auth-security\.spec\.ts$''']
+regexTarget = "secret"
+regexes = ['''^synthetic-verification-fragment-123456$''']

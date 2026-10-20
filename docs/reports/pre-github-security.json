@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-20T15:04:57.2408065+07:00",
+  "baseline": "5421706",
+  "scope": "Pre-GitHub technical audit; no content/media/responsive re-audit",
+  "historyAtBaseline": {
+    "commits": 35,
+    "reachableBlobs": 1009,
+    "textBlobs": 415,
+    "binaryBlobs": 594,
+    "prohibitedPaths": 0,
+    "credentialLikeFixtureCandidates": 8,
+    "nonReservedEmails": 0
+  },
+  "gitleaks": {
+    "version": "8.30.1",
+    "publisherChecksumVerified": true,
+    "confirmedCredentialExposures": 0,
+    "reviewedFalsePositives": 2,
+    "reviewedHistoryExit": 0,
+    "reviewedCandidateExit": 0,
+    "valuesRedacted": true
+  },
+  "dependencies": {
+    "productionVulnerabilities": 0,
+    "developmentHighWarnings": 5,
+    "advisory": "GHSA-vfj7-8cjw-p6xm",
+    "versionsChanged": 0,
+    "tsxMovedToRuntime": true,
+    "runtimeOnlyCleanInstall": true
+  },
+  "checks": {
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "unitTests": "25/25",
+    "authBrowser": "1/1 including in-page fragment verify/reset",
+    "build": "PASS static out",
+    "productionCompositionSmoke": "PASS with isolated DB/test email",
+    "productionEntry": "BLOCKED missing real mail adapter",
+    "yamlFiles": 3,
+    "gitFsckExit": 0,
+    "approvedMediaContentDesignFilesChanged": false
+  },
+  "readiness": {
+    "privateGitHub": "WARNING: source can be published after explicit instruction",
+    "awsFullApplication": "FAIL: production dependencies missing",
+    "pushed": false,
+    "infrastructureDeployed": false,
+    "awsConsoleVerified": false,
+    "offsiteBackupVerified": false
+  }
+}

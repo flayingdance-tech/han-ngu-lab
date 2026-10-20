@@ -1,7 +1,8 @@
 # Bước tiếp theo
 
-Checkpoint 2026-10-20T08:49:04.9029223+07:00, Asia/Bangkok (+07). Đọc PROJECT_STATUS và WORK_LOG trước.
+Checkpoint 2026-10-20T15:04:57.2408065+07:00, Asia/Bangkok (+07). Đọc PROJECT_STATUS và WORK_LOG trước.
 
+0. DEP-01/D-044 xong: đọc PRE_GITHUB_AUDIT.md/DEPLOYMENT. Không push GitHub hoặc tạo AWS resources khi chưa có yêu cầu. Bước sau là private repo visibility/remote, plan/credit/eligibility, email adapter, API HTTPS+DB persistent+backup ngoài máy+proxy /api và publication dữ liệu. Không bỏ production guard, không audit lại3phần owner đã duyệt. Dev advisory braces chưa có fix; CI chỉ validate và không có AWS secrets.
 1. POD-06/D-043 đã đổi tên thành Hán Ngữ Lab / 汉语实验室 trên7tập/14MP3 và phụ đề: cùng giọngA,29đoạn PCM và nềnv8 giữ nguyên. Không làm mẫu/hỏi chốt lại; chỉ đổi preset/nhạc khi chủ dự án yêu cầu mới. Không render lại hoặc chạy renderer lo-fi/hội thoại cũ. Sửa riêng phụ đề: đọc runbook, dùng podcast:subtitles và kiểm hash âm thanh.
 2. Nếu cần đổi nguồn hoặc thêm tập: đọc PODCAST_RUNBOOK; dùng content/podcast-radio.json và podcast-radio-music.json, npm run podcast:render. Giữ base WAV/report hiện hành ở brand-lab và PCM nền pinned; mẫu WAVv9 là lịch sử. kiểm hash/cache/checkpoint trước. ASR raw có thể bịa chữ ở outro, phải chạy podcast-asr-review.py và giữ unreviewed.
 3. POD-02: quy trình duyệt chuyên môn, CMS reviewer/publication và xác minh quyền nhạc cho phát hành công khai. Không tự approved chỉ vì owner chọn âm sắc hoặc ASR/schema đạt.

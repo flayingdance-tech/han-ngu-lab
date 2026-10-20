@@ -13,6 +13,7 @@ import { decryptBackup, encryptBackup, exportDatabase, restoreDatabase } from '.
 
 const origin = 'http://localhost:3000';
 const password = 'Synthetic-Test-Password-123!';
+const mailToken=(link:string,purpose:string)=>new URLSearchParams(new URL(link).hash.slice(1)).get(purpose);
 function setup() {
   const db = openDatabase(); seedPreview(db);
   let clock = Date.parse('2026-10-17T10:00:00Z');
@@ -25,7 +26,7 @@ function setup() {
   async function account(email: string, role = 'learner') {
     const reg = await post('/auth/register', { email, name: 'Người dùng thử', password, adult: true, acceptedTerms: true });
     assert.equal(reg.status, 201, JSON.stringify(reg.body));
-    const verifyToken = new URL(reg.body.devLink).searchParams.get('verify');
+    const verifyToken = mailToken(reg.body.devLink,'verify');
     assert.equal((await post('/auth/verify', { token: verifyToken })).status, 200);
     db.prepare('UPDATE users SET role=? WHERE email=?').run(role, email);
     const login = await post('/auth/login', { email, password });
@@ -43,7 +44,7 @@ test('registration enforces adult consent, forbids role injection, verifies once
   assert.equal((await s.post('/auth/register', { ...input, adult: true, role: 'admin' })).status, 400);
   const r = await s.post('/auth/register', { ...input, adult: true }); assert.equal(r.status, 201);
   assert.equal((await s.post('/auth/login', { email: input.email, password })).status, 403);
-  const token = new URL(r.body.devLink).searchParams.get('verify');
+  const token = mailToken(r.body.devLink,'verify');
   assert.equal((await s.post('/auth/verify', { token })).status, 200);
   assert.equal((await s.post('/auth/verify', { token })).status, 400);
   const login = await s.post('/auth/login', { email: input.email, password });
@@ -120,7 +121,7 @@ test('password reset is single-use and invalidates old sessions; revoked roles t
   s.db.prepare("UPDATE users SET role='learner' WHERE id=?").run(a.user.id);
   assert.equal((await s.get('/admin/users', a.cookie)).status, 403);
   const forgot = await s.post('/auth/forgot', {email:a.user.email});
-  const token = new URL(forgot.body.devLink).searchParams.get('reset');
+  const token = mailToken(forgot.body.devLink,'reset');
   assert.equal((await s.post('/auth/reset', {token,password:'New-synthetic-password-123!'})).status, 200);
   assert.equal((await s.post('/auth/reset', {token,password:'Other-synthetic-password-123!'})).status, 400);
   assert.equal((await s.get('/me', a.cookie)).status, 401);

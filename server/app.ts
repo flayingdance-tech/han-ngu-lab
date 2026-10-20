@@ -20,10 +20,14 @@ const loginSchema = z.object({ email: z.email().max(254).transform(s => s.toLowe
 const submissionSchema = z.object({ revisionId: z.string().max(100), idempotencyKey: z.uuid(), answers: z.record(z.string().max(80), z.string().max(1000)) }).strict();
 
 export function createApp(db: Database, options: AppOptions) {
-  if (!options.localPreview && (!options.sendMail || !options.origin.startsWith('https://'))) throw new Error('Production yêu cầu HTTPS và adapter email đã cấu hình.');
+  if (!options.localPreview) {
+    let validOrigin=false;
+    try { const url=new URL(options.origin); validOrigin=url.protocol==='https:'&&url.origin===options.origin; } catch { /* Fail closed on invalid configuration. */ }
+    if (!options.sendMail || !validOrigin) throw new Error('Production yêu cầu HTTPS origin hợp lệ và adapter email đã cấu hình.');
+  }
   const app = express(), now = options.now ?? Date.now;
   app.disable('x-powered-by');
-  app.use(helmet({ contentSecurityPolicy: false }));
+  app.use(helmet({ contentSecurityPolicy: false, referrerPolicy:{policy:'no-referrer'} }));
   app.use(express.json({ limit: '1mb' }), cookieParser());
   app.use('/api', (_req, res, next) => { res.setHeader('Cache-Control', 'no-store'); next(); });
   // Same-origin JSON + custom-header checks defend cookie-auth writes against CSRF.
@@ -54,7 +58,8 @@ export function createApp(db: Database, options: AppOptions) {
     return raw;
   }
   async function mail(email: string, purpose: string, raw: string) {
-    const link = `${options.origin}/?${purpose}=${encodeURIComponent(raw)}`;
+    // URL fragments are not sent in CDN/origin requests or access-log query strings.
+    const link = `${options.origin}/#${purpose}=${encodeURIComponent(raw)}`;
     if (options.localPreview) return link;
     await options.sendMail!(email, purpose, link);
     return undefined;
@@ -103,7 +108,7 @@ export function createApp(db: Database, options: AppOptions) {
     res.clearCookie('hnl_session', { path: '/', httpOnly: true, secure: !options.localPreview, sameSite: 'strict' }).json({ ok: true });
   });
   app.post('/api/auth/forgot', async (req, res) => {
-    const { email } = z.object({ email: z.email().transform(x => x.toLowerCase()) }).strict().parse(req.body);
+    const { email } = z.object({ email: z.email().max(254).transform(x => x.toLowerCase()) }).strict().parse(req.body);
     const u = db.prepare('SELECT id FROM users WHERE email=?').get(email) as { id: string } | undefined;
     let devLink: string | undefined;
     if (u) devLink = await mail(email, 'reset', issueToken(u.id, 'reset'));
@@ -265,6 +270,7 @@ export function createApp(db: Database, options: AppOptions) {
   app.use((error: unknown, _req: Request, res: Response, _next: NextFunction) => {
     if (error instanceof z.ZodError) { res.status(400).json({ error: 'Dữ liệu chưa hợp lệ.', issues: error.issues.map(x => ({ path: x.path.join('.'), message: x.message })) }); return; }
     if (error instanceof HttpError) { res.status(error.status).json({ error: error.message }); return; }
+    if (error && typeof error==='object' && 'type' in error && error.type==='entity.too.large') { res.status(413).json({error:'Nội dung yêu cầu vượt giới hạn cho phép.'}); return; }
     if (error instanceof SyntaxError) { res.status(400).json({ error: 'JSON không hợp lệ.' }); return; }
     console.error('Request failed:', error instanceof Error ? error.name : 'UnknownError');
     res.status(500).json({ error: 'Không thể xử lý yêu cầu. Vui lòng thử lại.' });

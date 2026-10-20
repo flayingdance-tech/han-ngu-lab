@@ -1,10 +1,17 @@
 # Trạng thái hiện tại — đọc đầu tiên khi tiếp tục
 
-Checkpoint: 2026-10-20T08:49:04.9029223+07:00, Asia/Bangkok (+07). Workspace D:\Hán Ngữ Lab.
+Checkpoint: 2026-10-20T15:04:57.2408065+07:00, Asia/Bangkok (+07). Workspace D:\Hán Ngữ Lab.
 
 Mốc triển khai đổi tên: f42e345. Các kiểm tra và sao lưu D-043 đã hoàn tất.
 
-## Hiện hành: podcast Hán Ngữ Lab theo D-041/D-042/D-043
+## Hiện hành: DEP-01/D-044 — pre-GitHub audit đã hoàn tất
+
+- Đọc PRE_GITHUB_AUDIT.md, docs/DEPLOYMENT.md và docs/reports/pre-github-security.json trước publish. Private GitHub: source có thể chuẩn bị với WARNING dev advisories; full production AWS: FAIL vì thiếu email adapter/API HTTPS/DB persistent/proxy và đường podcast production. Chưa remote/push/deploy/AWS Console.
+- Gitleaks history/candidate đã rà2false-positive công khai/fixture, không credential thật; không private DB/env/key bị track. Full npm audit5high dev (braces chưa có patched release), production0. Không force downgrade framework.
+- Sửa token link dùng fragment + xử lý hashchange trong trang, no-referrer, HTTPS origin,413, runtime tsx và chặn mở schema DB mới hơn. Unit25/25, auth-browser1/1 (không chạy lại responsive/content/media), typecheck/lint/build/smoke composition/test email và runtime-only npm ci đạt.
+- Thêm amplify.yml static WEB/out, customHttp.yml headers, CI chỉ validate/pin SHA/checksum, README/env/ignore; chưa chạy CI Linux/cloud. Không có render/ASR/E2E/build còn chạy. Tài khoản/DB thật không dùng cho test; media/học liệu/thiết kế giữ nguyên; chỉ sửa phần code bảo mật và cấu hình triển khai.
+
+## Podcast Hán Ngữ Lab theo D-041/D-042/D-043
 
 - POD-06 DONE kỹ thuật local: toàn bộ7tập/14MP3 hiện hành dùng tên Hán Ngữ Lab / 汉语实验室 trong lời mở và lời kết; đã tạo lại14đoạn chứa tên. Nguồn/43đoạn phụ đề/Pinyin/nghĩa Việt đồng bộ, không còn tên cũ trong content/app/lib/server.
 - Cùng giọngA Kokoro zf_001, model/speaker SHA pinned, tốc độ/EQ như trước; không đổi pitch/formant. 29đoạn khác sao chép nguyên PCM từ baseline, audit độc lập so từng đoạn đạt.

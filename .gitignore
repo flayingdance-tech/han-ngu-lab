@@ -1,4 +1,5 @@
 node_modules/
+.npm/
 .next/
 out/
 dist/
@@ -14,3 +15,24 @@ backups/
 .DS_Store
 __pycache__/
 *.pyc
+
+# Credentials, private databases and local deployment artifacts (any directory)
+.aws/
+.ssh/
+*.pem
+*.key
+*.p12
+*.pfx
+*.sqlite
+*.sqlite3
+*.sqlite-*
+*.sqlite3-*
+*.db
+*.db-*
+*.backup
+*.enc
+*.dump
+*.tfstate*
+.terraform/
+amplify_outputs.json
+aws-exports.js

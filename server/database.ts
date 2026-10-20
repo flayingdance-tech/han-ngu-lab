@@ -5,6 +5,8 @@ import { dirname } from 'node:path';
 export function openDatabase(path = ':memory:') {
   if (path !== ':memory:') mkdirSync(dirname(path), { recursive: true });
   const db = new DatabaseSync(path);
+  const version=Number(db.prepare('PRAGMA user_version').get()?.user_version??0);
+  if(version>1){db.close();throw new Error('Database schema mới hơn phiên bản ứng dụng; không được tự hạ version.');}
   db.exec(`PRAGMA foreign_keys=ON; PRAGMA journal_mode=WAL; PRAGMA busy_timeout=5000;
     CREATE TABLE IF NOT EXISTS users(id TEXT PRIMARY KEY, email TEXT UNIQUE NOT NULL, name TEXT NOT NULL, password TEXT NOT NULL, role TEXT NOT NULL DEFAULT 'learner', verified INTEGER NOT NULL DEFAULT 0, status TEXT NOT NULL DEFAULT 'active', timezone TEXT NOT NULL DEFAULT 'Asia/Ho_Chi_Minh', daily_goal INTEGER NOT NULL DEFAULT 20, created_at INTEGER NOT NULL);
     CREATE TABLE IF NOT EXISTS sessions(token TEXT PRIMARY KEY, user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE, expires_at INTEGER NOT NULL);
