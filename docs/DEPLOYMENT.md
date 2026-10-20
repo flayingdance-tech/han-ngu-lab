@@ -1,5 +1,7 @@
 # Triển khai Hán Ngữ Lab — chuẩn bị sau audit
 
+> Cập nhật 21/10/2026: GitHub Private đã push/CI thành công (645035a). Chủ dự án báo đã có SES Sydney và Lightsail Node24; chưa xác minh cloud từ phiên này. Adapter SMTP đã được bổ sung cục bộ theo [runbook SES/Lightsail](SES_SMTP_LIGHTSAIL.md), chờ kiểm thử và duyệt push; phần đánh giá bên dưới là snapshot audit20/10, không phải trạng thái triển khai hiện tại.
+
 Ngày20/10/2026. Tài liệu chuẩn bị, không phải bằng chứng đã triển khai. Chưa push GitHub, chưa tạo AWS resources. Không kiểm tra lại học liệu, chất lượng/quyền media hay UI đã được chủ dự án duyệt.
 
 ## 1. Kiến trúc giữ nguyên

@@ -1,3 +1,9 @@
+## MAIL-01 / D-047 — 2026-10-21T00:35:12.4760766+07:00
+
+- Tích hợp cục bộ hoàn tất: Nodemailer10.1.7 runtime, SMTP Sydney587 requireTLS/certificate validation; biến SMTP_USERNAME/SMTP_PASSWORD/SMTP_FROM_EMAIL chỉ server. Production cấu hình sai chặn trước mở DB; preview không gửi thư.
+- server/email.ts, server/index.ts, server/app.ts: verify/reset và API resend-verification, giữ token30phút/1lần, CSRF/giới hạn auth; lỗi SMTP503 đã bỏ nguyên nhân thô. Không đổi UI/giáo trình/audio/podcast/DB học viên.
+- Lint exit0; test31/31 (6email); typecheck/build/smoke exit0; production audit0vulnerabilities; stagedGitleaks exit0. Báo cáo docs/reports/ses-smtp-integration.json. Typecheck lỗi lần đầu do Next khai báo ProcessEnv.NODE_ENV bắt buộc; đã dùng input Record<string,string|undefined> và chạy lại đạt. next-env build sinh lại đã trả về nội dung trước build.
+- Runbook docs/SES_SMTP_LIGHTSAIL.md hướng dẫn Git pull --ff-only, env root600, systemd/Node24, DB đúng đường và kiểm gửi thật. Không cloud/credential/gửi thật, không push; phải chờ chủ dự án xác nhận trước push. SES sandbox/SMTP auth/HTTPS/Lightsail chưa kiểm chứng thực tế.
 ## GitHub Private đã xuất bản — 2026-10-20T16:29:50.6317986+07:00
 
 - D-046/PUB-01: chủ dự án xác nhận; origin đúng flayingdance-tech/han-ngu-lab Private, nhánh main. Đã push97e562f8e663384313c03d9530f8c3af7b0897c2 cùng lịch sử, không force/xóa/rewrite; SHA GitHub khớp.

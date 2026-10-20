@@ -506,3 +506,13 @@ Gitleaks8.30.1 history/candidate reviewed exit0,2ngoại lệ đúng value/path 
 - GitHub main SHA97e562f8e663384313c03d9530f8c3af7b0897c2 khớp local; default main, Private=true.
 - Actions https://github.com/flayingdance-tech/han-ngu-lab/actions/runs/39400869176 success: Gitleaks toàn lịch sử, npm ci, production audit, lint, test, build, typecheck, production smoke đều đạt.
 - Bằng chứng không chứa secret: .local/pre-github-audit/github-push-verification.json. Không kiểm lại phần nghiệm thu; không AWS. Checkpoint tài liệu sẽ push riêng và kiểm CI của commit mới trước bàn giao.
+
+## SES SMTP — 2026-10-21T00:28:07.8905748+07:00
+Đã đọc checkpoints/Git sạch tại645035a, không .codegraph. PID local API19188/web15052; không restart/chạm DB. Adapter sendMail hiện chưa nối entry, resend API chưa có. Đang thêm module SMTP/test/runbook; chưa credential, chưa gửi thật, chưa push.
+
+## MAIL-01 / D-047 — 2026-10-21T00:35:12.4760766+07:00
+
+- Tích hợp cục bộ hoàn tất: Nodemailer10.1.7 runtime, SMTP Sydney587 requireTLS/certificate validation; biến SMTP_USERNAME/SMTP_PASSWORD/SMTP_FROM_EMAIL chỉ server. Production cấu hình sai chặn trước mở DB; preview không gửi thư.
+- server/email.ts, server/index.ts, server/app.ts: verify/reset và API resend-verification, giữ token30phút/1lần, CSRF/giới hạn auth; lỗi SMTP503 đã bỏ nguyên nhân thô. Không đổi UI/giáo trình/audio/podcast/DB học viên.
+- Lint exit0; test31/31 (6email); typecheck/build/smoke exit0; production audit0vulnerabilities; stagedGitleaks exit0. Báo cáo docs/reports/ses-smtp-integration.json. Typecheck lỗi lần đầu do Next khai báo ProcessEnv.NODE_ENV bắt buộc; đã dùng input Record<string,string|undefined> và chạy lại đạt. next-env build sinh lại đã trả về nội dung trước build.
+- Runbook docs/SES_SMTP_LIGHTSAIL.md hướng dẫn Git pull --ff-only, env root600, systemd/Node24, DB đúng đường và kiểm gửi thật. Không cloud/credential/gửi thật, không push; phải chờ chủ dự án xác nhận trước push. SES sandbox/SMTP auth/HTTPS/Lightsail chưa kiểm chứng thực tế.

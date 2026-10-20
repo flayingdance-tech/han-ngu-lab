@@ -1,5 +1,5 @@
 // Production composition on a real loopback listener, with an isolated test email transport.
-// This does not claim that server/index.ts, TLS, SES or AWS are configured.
+// This does not claim that TLS, SES credentials or AWS delivery have been verified.
 import assert from 'node:assert/strict';
 import { existsSync, mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -13,7 +13,7 @@ const folder=mkdtempSync(join(tmpdir(),'hnl-production-smoke-'));
 const db=openDatabase(join(folder,'synthetic.sqlite'));
 const output=resolve('out');
 assert.ok(existsSync(join(output,'index.html')),'Build the static frontend before running this smoke test');
-const entry=spawnSync(process.execPath,['node_modules/tsx/dist/cli.mjs','server/index.ts'],{env:{...process.env,NODE_ENV:'production',LOCAL_PREVIEW:'false',DATABASE_PATH:join(folder,'entry.sqlite'),APP_ORIGIN:'https://example.test'},encoding:'utf8',timeout:20000});
+const entry=spawnSync(process.execPath,['node_modules/tsx/dist/cli.mjs','server/index.ts'],{env:{...process.env,NODE_ENV:'production',LOCAL_PREVIEW:'false',DATABASE_PATH:join(folder,'entry.sqlite'),APP_ORIGIN:'https://example.test',SMTP_USERNAME:'',SMTP_PASSWORD:'',SMTP_FROM_EMAIL:''},encoding:'utf8',timeout:20000});
 assert.notEqual(entry.status,0);assert.match(entry.stderr,/Production/);
 const app=createApp(db,{localPreview:false,origin:'https://example.test',sendMail:async()=>{throw new Error('Test transport must not send email');}});
 app.use(express.static(output,{extensions:['html']}));
@@ -27,7 +27,7 @@ try{
   for(const path of ['/api/me','/api/admin/users','/api/admin/audit'])assert.equal((await fetch(`${origin}${path}`)).status,401);
   for(const path of ['/.env','/server/index.ts','/.local/hanngulab.sqlite','/api/podcasts'])assert.equal((await fetch(`${origin}${path}`)).status,404);
   assert.deepEqual((await (await fetch(`${origin}/api/catalog`)).json()).lessons,[]);
-  console.log(JSON.stringify({mode:'production-composition',entry:'blocked by missing real email adapter as expected',httpListener:true,root:200,unauthorized:401,privatePaths:404,email:'isolated test transport; no mail sent',tls:'not tested; HTTPS origin simulated',database:'temporary synthetic SQLite only'}));
+  console.log(JSON.stringify({mode:'production-composition',entry:'blocked by missing SMTP configuration as expected',httpListener:true,root:200,unauthorized:401,privatePaths:404,email:'isolated test transport; no mail sent',tls:'not tested; HTTPS origin simulated',database:'temporary synthetic SQLite only'}));
 }finally{
   await new Promise<void>((resolve,reject)=>listener.close(error=>error?reject(error):resolve()));
   db.close();const target=relative(resolve(tmpdir()),resolve(folder));assert.ok(target&&!target.startsWith('..')&&!isAbsolute(target));rmSync(folder,{recursive:true,force:true});

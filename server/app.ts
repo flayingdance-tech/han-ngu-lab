@@ -8,10 +8,11 @@ import { lessonSchema, publicLesson, grade, scheduleReview, type Role, type User
 import { type Database, transaction } from './database';
 import { hashPassword, checkPassword, token, digest } from './security';
 import { mountPodcasts } from './podcasts';
+import { EmailDeliveryError, type SendMail, type MailPurpose } from './email';
 
 type UserRow = { id: string; email: string; name: string; password: string; role: Role; verified: number; status: string; timezone: string; daily_goal: number };
 type Revision = { id: string; lesson_id: string; content: string; status: string; author_id: string; reviewer_id: string | null; created_at: number };
-export type AppOptions = { localPreview: boolean; origin: string; now?: () => number; sendMail?: (email: string, purpose: string, link: string) => Promise<void> };
+export type AppOptions = { localPreview: boolean; origin: string; now?: () => number; sendMail?: SendMail };
 class HttpError extends Error { constructor(public status: number, message: string) { super(message); } }
 function assert(condition: unknown, status: number, message: string): asserts condition { if (!condition) throw new HttpError(status, message); }
 const userView = (u: UserRow): User => ({ id: u.id, email: u.email, name: u.name, role: u.role, verified: Boolean(u.verified), timezone: u.timezone, dailyGoal: u.daily_goal });
@@ -57,7 +58,7 @@ export function createApp(db: Database, options: AppOptions) {
     db.prepare('INSERT INTO tokens VALUES (?,?,?,?)').run(digest(raw), user, purpose, now() + 30 * 60_000);
     return raw;
   }
-  async function mail(email: string, purpose: string, raw: string) {
+  async function mail(email: string, purpose: MailPurpose, raw: string) {
     // URL fragments are not sent in CDN/origin requests or access-log query strings.
     const link = `${options.origin}/#${purpose}=${encodeURIComponent(raw)}`;
     if (options.localPreview) return link;
@@ -113,6 +114,13 @@ export function createApp(db: Database, options: AppOptions) {
     let devLink: string | undefined;
     if (u) devLink = await mail(email, 'reset', issueToken(u.id, 'reset'));
     res.json({ message: 'Nếu email đã đăng ký, bạn sẽ nhận được liên kết khôi phục.', ...(devLink ? { devLink } : {}) });
+  });
+  app.post('/api/auth/resend-verification', async (req, res) => {
+    const { email } = z.object({ email: z.email().max(254).transform(x => x.toLowerCase()) }).strict().parse(req.body);
+    const u = db.prepare("SELECT id FROM users WHERE email=? AND verified=0 AND status='active'").get(email) as { id: string } | undefined;
+    let devLink: string | undefined;
+    if (u) devLink = await mail(email, 'verify', issueToken(u.id, 'verify'));
+    res.json({ message: 'Nếu tài khoản cần xác minh, bạn sẽ nhận được liên kết mới.', ...(devLink ? { devLink } : {}) });
   });
   app.post('/api/auth/reset', async (req, res) => {
     const input = z.object({ token: z.string().min(20).max(200), password: z.string().min(12).max(128) }).strict().parse(req.body);
@@ -268,6 +276,7 @@ export function createApp(db: Database, options: AppOptions) {
   });
   app.use('/api', (_req, _res, next) => next(new HttpError(404, 'Đường dẫn không tồn tại.')));
   app.use((error: unknown, _req: Request, res: Response, _next: NextFunction) => {
+    if (error instanceof EmailDeliveryError) { res.status(503).json({ error: error.message }); return; }
     if (error instanceof z.ZodError) { res.status(400).json({ error: 'Dữ liệu chưa hợp lệ.', issues: error.issues.map(x => ({ path: x.path.join('.'), message: x.message })) }); return; }
     if (error instanceof HttpError) { res.status(error.status).json({ error: error.message }); return; }
     if (error && typeof error==='object' && 'type' in error && error.type==='entity.too.large') { res.status(413).json({error:'Nội dung yêu cầu vượt giới hạn cho phép.'}); return; }

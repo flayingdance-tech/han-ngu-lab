@@ -1,3 +1,9 @@
+## Ưu tiên MAIL-01 — 2026-10-21T00:35:12.4760766+07:00
+
+1. Code SES SMTP/test/runbook đã hoàn tất cục bộ, chưa push. Phải xin xác nhận trực tiếp mới trước push lên Private main. Không tự deploy Lightsail/AWS từ checkpoint này.
+2. Sau duyệt push: kiểm CI, rồi chỉ khi được giao triển khai mới áp dụng docs/SES_SMTP_LIGHTSAIL.md, credentials nhập riêng tại máy chủ; giữ nguyên DB/path/service/media. Nghiệm thu gửi thư thật còn chưa thực hiện; kiểm sandbox Sydney trước khi nhận người dùng thật.
+3. GitHub commit645035a đã push và Actions39401095500 success (thay checkpoint pending bên dưới).
+
 # Bước tiếp theo
 
 Checkpoint 2026-10-20T15:47:30.7933947+07:00, Asia/Bangkok (+07). Đọc PROJECT_STATUS và WORK_LOG trước.

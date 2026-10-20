@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-21T00:35:12.4760766+07:00",
+  "scope": "SES SMTP local integration only; no GitHub push or Lightsail deployment",
+  "runtimeMailDependency": "nodemailer@10.1.7",
+  "endpoint": "email-smtp.ap-southeast-2.amazonaws.com",
+  "port": 587,
+  "requireTLS": true,
+  "commands": {
+    "productionAudit": "exit 0, 0 vulnerabilities",
+    "test": "31/31 pass, including 6 email tests",
+    "productionSmoke": "exit 0, isolated DB, no mail",
+    "build": "exit 0, static export",
+    "stagedGitleaks": "exit 0, no findings",
+    "typecheck": "exit 0 after correcting env type and after production build",
+    "lint": "exit 0"
+  },
+  "notVerified": [
+    "SMTP credentials/authentication",
+    "real STARTTLS connection to SES",
+    "email inbox delivery",
+    "Lightsail/systemd service or HTTPS reverse proxy"
+  ],
+  "data": "no learner DB, UI, curriculum, audio or podcast changes"
+}

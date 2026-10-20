@@ -22,6 +22,8 @@ Web http://localhost:3000/, API loopback3001, DB .local/hanngulab.sqlite. Previe
 
 .env.example mô tả biến được API đọc từ môi trường process. API không tự load .env; cấu hình bằng môi trường shell/process manager. Next.js có cơ chế đọc .env riêng. Không ghi AWS key hoặc mật khẩu vào biến NEXT_PUBLIC_*.
 
+Production email đã có adapter Amazon SES SMTP Sydney/587 với STARTTLS bắt buộc. Cấu hình server bằng `SMTP_USERNAME`, `SMTP_PASSWORD`, `SMTP_FROM_EMAIL` và `APP_ORIGIN` HTTPS; thiếu cấu hình sẽ bị chặn khởi động. Xem [runbook SES/Lightsail](docs/SES_SMTP_LIGHTSAIL.md) để cập nhật qua Git pull/systemd và nghiệm thu gửi thật. Preview vẫn mô phỏng email; kiểm thử dùng transport giả lập, không cần credential.
+
 ## Kiểm tra kỹ thuật
 
 ```powershell
@@ -62,7 +64,7 @@ Repo đích phải private. Chưa cấu hình remote/push; workflow .github/work
 
 amplify.yml chuẩn bị frontend tĩnh với artifact out/, yêu cầu Amplify platform WEB. Không dùng nó để chạy Express hoặc lưu SQLite trong build/Lambda. Không chuyển sang WEB_COMPUTE chỉ vì framework là Next.js.
 
-Production hiện còn bị chặn: chưa nối email thật vào server/index.ts, chưa có API HTTPS/database persistent/reverse proxy /api đã kiểm chứng trên AWS. Không bỏ guard hoặc bật LOCAL_PREVIEW để vượt các điểm chặn này.
+Adapter SES SMTP đã nối vào server/index.ts; còn cần cấu hình riêng và nghiệm thu gửi thật trên máy chủ. API HTTPS/database persistent/reverse proxy /api chưa được kiểm chứng từ phiên này. Không bỏ guard hoặc bật LOCAL_PREVIEW để vượt các điểm chặn này.
 
 Đọc PRE_GITHUB_AUDIT.md và docs/DEPLOYMENT.md trước xuất bản/triển khai. Không chạy npm audit fix --force để tự hạ major version. Chi phí/credit AWS cần kiểm tra trong Console; báo động ngân sách không phải giới hạn chi tuyệt đối.
 
