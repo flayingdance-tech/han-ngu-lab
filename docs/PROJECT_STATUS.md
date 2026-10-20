@@ -2,6 +2,8 @@
 
 Checkpoint: 2026-10-20T08:49:04.9029223+07:00, Asia/Bangkok (+07). Workspace D:\Hán Ngữ Lab.
 
+Mốc triển khai đổi tên: f42e345. Các kiểm tra và sao lưu D-043 đã hoàn tất.
+
 ## Hiện hành: podcast Hán Ngữ Lab theo D-041/D-042/D-043
 
 - POD-06 DONE kỹ thuật local: toàn bộ7tập/14MP3 hiện hành dùng tên Hán Ngữ Lab / 汉语实验室 trong lời mở và lời kết; đã tạo lại14đoạn chứa tên. Nguồn/43đoạn phụ đề/Pinyin/nghĩa Việt đồng bộ, không còn tên cũ trong content/app/lib/server.
