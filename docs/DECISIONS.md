@@ -89,3 +89,5 @@ D-042 ACCEPTED 2026-10-20T08:06:25.0343047+07:00 : Chủ dự án yêu cầu kh�
 D-043 ACCEPTED 2026-10-20T08:33:09.9907809+07:00 : Chủ dự án yêu cầu rà podcast/âm thanh và thay tên chương trình cũ thành Hán Ngữ Lab / 汉语实验室. Cho phép tạo lại lời chứa tên bằng cùng giọngA/preset, giữ nguyên nhạc PCM/âm lượng/nhịp/cao độ. Đồng bộ nguồn, Pinyin, nghĩa Việt và timeline; bảo toàn âm không liên quan, lưu backup lịch sử không phục vụ lên web.
 
 D-044 ACCEPTED 2026-10-20T14:47:26.3797249+07:00 : Thực hiện yêu cầu PRE-GITHUB DEPLOYMENT AUDIT trong tệp đính kèm. Chỉ kiểm cấu trúc/Git secrets/build/auth/database/production/Amplify/chi phí và sửa lỗi kỹ thuật có bằng chứng; không kiểm lại học liệu/media/UI đã duyệt, không đổi giọng/nhạc. Chuẩn bị repo private, báo cáo PRE_GITHUB_AUDIT.md và CI/buildspec; không push, không tạo hạ tầng AWS.
+
+D-045 ACCEPTED 2026-10-20T15:47:30.7933947+07:00 : Chủ dự án yêu cầu chuẩn bị đưa source lên GitHub Private, kiểm auth Windows/GCM và bảo mật cuối, nhưng phải báo account/URL và CHỜ xác nhận trước khi tạo repo hoặc push. Sau xác nhận mới push và kiểm visibility/Actions. Không AWS, không hỏi password/access token.

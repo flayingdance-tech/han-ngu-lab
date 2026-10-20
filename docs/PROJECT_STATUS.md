@@ -1,12 +1,17 @@
 # Trạng thái hiện tại — đọc đầu tiên khi tiếp tục
 
-Checkpoint: 2026-10-20T15:04:57.2408065+07:00, Asia/Bangkok (+07). Workspace D:\Hán Ngữ Lab.
+Checkpoint: 2026-10-20T15:47:30.7933947+07:00, Asia/Bangkok (+07). Workspace D:\Hán Ngữ Lab.
 
 Mốc triển khai đổi tên: f42e345. Các kiểm tra và sao lưu D-043 đã hoàn tất.
 
 Mốc audit/safe fixes:9200c03; quét secret sau commit đạt, web200/API preview còn hoạt động.
 
-## Hiện hành: DEP-01/D-044 — pre-GitHub audit đã hoàn tất
+## Hiện hành: PUB-01/D-045 — chờ xác nhận push GitHub
+
+- GCM xác thực GitHub account flayingdance-tech; repo https://github.com/flayingdance-tech/han-ngu-lab đã tồn tại, Private và chưa có commit, default main, có quyền push. Chưa cấu hình remote/chưa push; không tạo thêm repo.
+- Đã đọc audit, final secrets scan đạt và local source sạch trước checkpoint. Chỉ sau câu xác nhận trực tiếp mới được push master:main (không force), xác minh Private và kiểm Actions. Không AWS; không yêu cầu password/token qua chat.
+
+## DEP-01/D-044 — pre-GitHub audit đã hoàn tất (trạng thái tại thời điểm audit)
 
 - Đọc PRE_GITHUB_AUDIT.md, docs/DEPLOYMENT.md và docs/reports/pre-github-security.json trước publish. Private GitHub: source có thể chuẩn bị với WARNING dev advisories; full production AWS: FAIL vì thiếu email adapter/API HTTPS/DB persistent/proxy và đường podcast production. Chưa remote/push/deploy/AWS Console.
 - Gitleaks history/candidate đã rà2false-positive công khai/fixture, không credential thật; không private DB/env/key bị track. Full npm audit5high dev (braces chưa có patched release), production0. Không force downgrade framework.

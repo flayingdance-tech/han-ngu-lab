@@ -1,7 +1,8 @@
 # Bước tiếp theo
 
-Checkpoint 2026-10-20T15:04:57.2408065+07:00, Asia/Bangkok (+07). Đọc PROJECT_STATUS và WORK_LOG trước.
+Checkpoint 2026-10-20T15:47:30.7933947+07:00, Asia/Bangkok (+07). Đọc PROJECT_STATUS và WORK_LOG trước.
 
+0.1 PUB-01 chờ xác nhận trực tiếp: account flayingdance-tech, repo Private trống https://github.com/flayingdance-tech/han-ngu-lab. Chưa remote/push. Không tự đẩy khi resume; sau xác nhận mới origin/push master:main không force và kiểm Private/Actions. Không AWS.
 0. DEP-01/D-044 xong: đọc PRE_GITHUB_AUDIT.md/DEPLOYMENT. Không push GitHub hoặc tạo AWS resources khi chưa có yêu cầu. Bước sau là private repo visibility/remote, plan/credit/eligibility, email adapter, API HTTPS+DB persistent+backup ngoài máy+proxy /api và publication dữ liệu. Không bỏ production guard, không audit lại3phần owner đã duyệt. Dev advisory braces chưa có fix; CI chỉ validate và không có AWS secrets.
 1. POD-06/D-043 đã đổi tên thành Hán Ngữ Lab / 汉语实验室 trên7tập/14MP3 và phụ đề: cùng giọngA,29đoạn PCM và nềnv8 giữ nguyên. Không làm mẫu/hỏi chốt lại; chỉ đổi preset/nhạc khi chủ dự án yêu cầu mới. Không render lại hoặc chạy renderer lo-fi/hội thoại cũ. Sửa riêng phụ đề: đọc runbook, dùng podcast:subtitles và kiểm hash âm thanh.
 2. Nếu cần đổi nguồn hoặc thêm tập: đọc PODCAST_RUNBOOK; dùng content/podcast-radio.json và podcast-radio-music.json, npm run podcast:render. Giữ base WAV/report hiện hành ở brand-lab và PCM nền pinned; mẫu WAVv9 là lịch sử. kiểm hash/cache/checkpoint trước. ASR raw có thể bịa chữ ở outro, phải chạy podcast-asr-review.py và giữ unreviewed.
