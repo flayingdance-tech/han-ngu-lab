@@ -1,5 +1,8 @@
 # Hán Ngữ Lab — 汉语实验室
 
+Cập nhật REC-07, 21/10/2026: website/API chính tại **https://54-253-61-113.sslip.io/** (hostname tạm). Amplify cũ redirect302, API cũ retired410; không còn external rewrite làm ingress. Xem [kết quả và rollback REC-07](docs/REC07_DIRECT_INGRESS_RESULT.md). Các ghi chú chưa nghiệm thu IP/SES bên dưới là lịch sử đã được thay thế.
+
+
 Website học tiếng Trung dành cho người Việt từ18tuổi. Đây là repo frontend/API hiện có; không tự triển khai AWS khi clone hoặc chạy CI.
 
 ## Kiến trúc và runtime

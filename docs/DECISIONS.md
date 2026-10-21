@@ -118,3 +118,5 @@ D-055 ACCEPTED 2026-10-21T19:49:43.3598763+07:00: Chủ dự án xác nhận CMS
 D-056 ACCEPTED 2026-10-21T20:43:31.9102473+07:00: Owner yêu cầu REC-07 không tự đổi kiến trúc; nếu external rewrite chặn secure ingress thì dừng trước triển khai, trình phương án nhỏ nhất. PROPOSED, chưaduyệt: chuyển public frontend+API sang sameoriginCaddy/Lightsail hiệncó, xem REC07_CLIENT_IP_DECISION.
 
 REC-07 APPROVED / D-057 2026-10-21T21:02:27.2328209+07:00 : Owner phê duyệt staged single-Lightsail, chỉcutoversau verification, giữAmplifyrollback, trustTCPonly, test2networks+forged+auth/CMS/content/SES/persistence; oldAPIkhôngbypass; rollbackconfigkhôngSQLite; khôngpaidresources. Đang staging exact2origin, loginemailhashguard10/15min, Caddypublicbuild riêng. Local check51tests/lint/typecheck/build vàsmoke đạt; chưadeploy/cutover.
+
+D-057 ACCEPTED / completed 2026-10-21T21:32:21.4202324+07:00: OwnerphêduyệtstagedsingleLightsail. Multi-clientproduction+forged/auth/CMS/SES/content/persistence+fullrollback/cutoverđạt. Canonicalsslip.iochỉtạm, Amplify302rollbackkept, APIcũretired410, REC07DONE.

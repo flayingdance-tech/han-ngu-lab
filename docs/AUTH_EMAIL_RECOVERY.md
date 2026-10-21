@@ -1,5 +1,8 @@
 # Khắc phục đăng ký, xác minh và Caddy — MAIL-02
 
+Cập nhật REC-07, 21/10/2026: website/API chính tại **https://54-253-61-113.sslip.io/** (hostname tạm). Amplify cũ redirect302, API cũ retired410; không còn external rewrite làm ingress. Xem [kết quả và rollback REC-07](REC07_DIRECT_INGRESS_RESULT.md). Các ghi chú chưa nghiệm thu IP/SES bên dưới là lịch sử đã được thay thế.
+
+
 Ngày21/10/2026, Asia/Bangkok (+07). Bản sửa cục bộ, chưa push và chưa cập nhật backend. Không cần xóa tài khoản cũ, reset SQLite hoặc đổi SMTP credentials.
 
 ## Nguyên nhân đã xác minh

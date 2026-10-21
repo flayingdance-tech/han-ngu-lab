@@ -1,5 +1,8 @@
 # Vận hành bản thử nghiệm công khai
 
+Cập nhật REC-07, 21/10/2026: website/API chính tại **https://54-253-61-113.sslip.io/** (hostname tạm). Amplify cũ redirect302, API cũ retired410; không còn external rewrite làm ingress. Xem [kết quả và rollback REC-07](REC07_DIRECT_INGRESS_RESULT.md). Các ghi chú chưa nghiệm thu IP/SES bên dưới là lịch sử đã được thay thế.
+
+
 Quyết định D-052/D-053, ngày 21/10/2026 (+07): chủ dự án cho phép 16 bài hiện có, bộ âm A (145 mục/290 MP3) và 7 podcast (14 MP3), xác nhận quyền đã kiểm tra trước đó. Không kiểm tra lại quyền, không đổi nhạc/giọng hoặc tái tạo file.
 
 Tất cả nội dung chưa được người có chuyên môn độc lập duyệt phải mang nhãn **Bản thử nghiệm — Chưa duyệt**. Không tuyên bố hoàn chỉnh HSK 4 hoặc bảo đảm độ chính xác giáo dục. `content/release-policy.json` là quyết định phát hành, không phải biên bản duyệt chuyên môn.

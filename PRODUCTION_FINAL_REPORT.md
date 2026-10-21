@@ -1,4 +1,16 @@
-## REC-03 / D-054 — cấp Admin production — 2026-10-21T16:46:42.3677431+07:00
+# Hán Ngữ Lab — Kết quả production
+
+## REC-07 DONE — staged single-Lightsail đã nghiệm thu — 2026-10-21T21:32:21.4202324+07:00
+
+- Owner đã duyệt D-057; runtime e25d6c5/CI39613379221SUCCESS/Amplify10SUCCEED. Canonical website/API **https://54-253-61-113.sslip.io/**, hostname chỉtạm; frontendpublicrelease riêng/CaddyTCPpeeronly/Expressloopback. APP_ORIGINcanonicalduynhất, stagingoriginđãbỏ; envnonorigin/SMTPbytekhớpsnapshot. Không thay .next/framework/IAM/SES/DBschema/media.
+- Staged trước khi chuyển: Windows/AWShai mạngthật táchkey, headergiảkhôngđổi; login/cookieSecureHttpOnlyStrict/CSRF/CMS16bài152media; SES verify/reset đếnmailboxthậtcanonical/token1lần/sessionrevoke; progress/idempotency/sessionpersistqua restart. Local lint/typecheck51tests/build/smokeđạt; khônglặpbộtest khichỉviếtbiênbản.
+- Cutover302Amplifyroot→canonical; APIcũ302fixedretirement410khôngforwardExpress; originAmplifywrite403. Browseroldemail#resetmởformcanonical/#verifygiảđếnverifiercanonical, fragmentđượcconsume/xóa khỏiURL. Khônglogtoken/IP/emailthô.
+- Đãdiễntập fullrollbackAWSrules+servercode/env/Caddyfallback21:28, oldsite200/newhost302back, linkresetnewhostvẫnmởformAmplify; SQLitekhôngrestore, originalrows14bảngnguyên. Sửahealthretry/ERRinheritance, Caddyfilepermission600→install644, timerstopidempotent; controllerlỗitimerđãrollbackcảAWS/server. Tái cutoverthànhcông21:29.
+- NghiệmthumulticlientSAUtáicutover21:30: Windowsaed763b3d05c63b3fb0c96d1/AWSf5fc598bfbe134d303713784 khác nhau; mỗinguồnthường/forgedcùngkey; actualRateLimitpkcũngtách, mộtXFF. Probeđãgỡ/unitstop, CloudFrontCIDRtimerdisabledkhôngcầnchoingresstrực tiếp.
+- Production304MP3SHAmatchgốc/14podcastRange206/cặpaudioRange206;16bài80câu145âmA7podcast43captions; browsermixready4/errornull/time13,79s. Giọng/nhạc/ngườihọcnguyên; synthetic1accounttestđãdisabled/trảlearner/revokesessions-tokens/audit, giữattempt/progresschínhfixture. ChưaduyệtchuyênmônkhôngcamkếtđủHSK4.
+- Backupmới20261021T142037Z-2fff33b7.sqlite.enc SHA82a5c4fde0b591f84c1ace70e43252b1ca5a0c479e97c9a4a4549a71393a0d5a; offsitecopy/decrypt/integrity/FK/inventoryđạt21:20. VMdailybackupactive/WindowsSchedulerhiệncó. SESGRANTED/Sendingtrue; SMTPdiagnosticcanonicalaccepted.
+- Runbookbằngchứng/rollback: docs/REC07_DIRECT_INGRESS_RESULT.md; privateartifacts .local/production-recovery/rec07. Khôngnewpaidresources/domain/upgrade. Rủirocònlại: sslip.iotạm, singleVM, RAMlimiterresetkhi restart, NATchung, trafficcostcầntheodõi; khôngphảiblockerREC07.
+- Đangchuẩnbịcommitdocs/runbookcuối→Privatepush→CI/Amplify→VMFFops-only, khôngrestart/import/testlặp. Lượtsauthựchiệntừcheckpointnày, khôngdùngtrạngtháichờduyệtcũ. .codegraphowneruntrackedgiữnguyên.
 
 ## REC-07 — chờ phê duyệt thay đổi đường phục vụ — 2026-10-21T20:43:31.9102473+07:00
 
