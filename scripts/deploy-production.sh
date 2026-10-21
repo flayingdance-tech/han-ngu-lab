@@ -4,7 +4,8 @@ set -Eeuo pipefail
 umask 077
 export GIT_TERMINAL_PROMPT=0 GIT_TRACE=0 GCM_TRACE=0
 export GIT_SSH_COMMAND='ssh -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=10'
-TARGET=${1:?Usage: bash scripts/deploy-production.sh FULL_COMMIT_SHA}
+TARGET=${1:?Usage: bash scripts/deploy-production.sh FULL_COMMIT_SHA [VERIFIED_GIT_BUNDLE]}
+BUNDLE=${2:-}
 [[ "$TARGET" =~ ^[a-f0-9]{40}$ ]] || { echo 'Expected a full commit SHA'; exit 1; }
 REPO=/home/ubuntu/han-ngu-lab
 DB=/var/lib/han-ngu-lab/hanngulab.sqlite
@@ -23,8 +24,17 @@ NODE=$(command -v node)
 [[ $(git branch --show-current) == main ]] || { echo 'Expected server main branch'; exit 1; }
 REMOTE=$(git remote get-url origin)
 [[ "$REMOTE" == https://github.com/flayingdance-tech/han-ngu-lab.git || "$REMOTE" == git@github.com:flayingdance-tech/han-ngu-lab.git ]] || { echo 'Unexpected remote'; exit 1; }
-git fetch --quiet origin main
-[[ $(git rev-parse origin/main) == "$TARGET" ]] || { echo 'Remote main differs from approved target'; exit 1; }
+if [[ -n "$BUNDLE" ]]; then
+  # Offline transfer from the owner-verified Private main; no token or new deploy key.
+  [[ -f "$BUNDLE" && ! -L "$BUNDLE" ]] || { echo 'Expected a regular bundle file'; exit 1; }
+  git bundle verify "$BUNDLE" >/dev/null
+  [[ $(git bundle list-heads "$BUNDLE" HEAD) == "$TARGET HEAD" ]] || { echo 'Bundle target mismatch'; exit 1; }
+  git fetch --quiet "$BUNDLE" HEAD
+  [[ $(git rev-parse FETCH_HEAD) == "$TARGET" ]] || { echo 'Fetched bundle mismatch'; exit 1; }
+else
+  git fetch --quiet origin main
+  [[ $(git rev-parse origin/main) == "$TARGET" ]] || { echo 'Remote main differs from approved target'; exit 1; }
+fi
 OLD=$(git rev-parse HEAD)
 git merge-base --is-ancestor "$OLD" "$TARGET" || { echo 'Not a fast-forward; stopped'; exit 1; }
 [[ -z $(git diff "$OLD" "$TARGET" -- amplify.yml) ]] || { echo 'Amplify configuration changed; stopped'; exit 1; }

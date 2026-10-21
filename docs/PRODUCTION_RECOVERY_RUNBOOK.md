@@ -8,6 +8,8 @@ Không dùng database local để thay DB production. Không bật `LOCAL_PREVIE
 
 Khi bản script chưa có ở checkout cũ: fetch `origin/main`, lấy script từ chính SHA đã xác minh vào file `mktemp`, rồi chạy `bash <file-tạm> <FULL_SHA>`. Không tải script từ URL lạ; không copy placeholder SHA rồi chạy. Đối chiếu CI trước khi thực hiện.
 
+Nếu GitHub SSH trên VM báo `Permission denied (publickey)`, không tạo key/quyền mới tự động. Có thể chuyển **Git bundle chỉ gồm commit đã kiểm chứng** qua phiên browser SSH hiện có: đối chiếu SHA256 file sau chuyển, `git bundle verify` kiểm prerequisites, HEAD phải đúng full SHA vừa xác minh từ Private main/CI. Script nhận đường dẫn bundle ở tham số thứ hai, fetch object từ bundle và fast-forward; không đổi origin/credential hoặc ghi đè nhánh. `origin/main` trên VM có thể còn cũ tới khi quyền GitHub được chủ dự án sửa, nhưng `main` và object lịch sử vẫn đầy đủ. Không dùng bundle không rõ nguồn hoặc SHA chưa qua CI.
+
 Quy trình: backup online WAL → mã hóa → giải mã sang file riêng → integrity/foreign-key/inventory check → stop API → git fast-forward → cài dependency production → import trong transaction → start API → live health → timer backup. Không cần build Next.js trên VM 2 GB; frontend build ở CI/Amplify.
 
 Importer chỉ thêm nguồn `content/lessons.ts`, mặc định draft, không sao chép fixtures, accounts hoặc progress. Mọi bảng người dùng được fingerprint trong cùng transaction; lệch sẽ rollback. Chạy lại không tạo trùng. Chỉ các ID được owner cho phép trong `content/release-policy.json` mới được phục vụ beta; nhãn chưa duyệt giữ nguyên.

@@ -565,3 +565,10 @@ Production read-only: users3/lessons0/revisions0; serviceubuntu /usr/bin/node24.
 
 ## REC-01 trước push — 2026-10-21T11:56:08.3842217+07:00
 Unit45/45; E2E26pass+2focus outdated lastbutton fixed and rerun2/2pass; lint/typecheck/build/smoke passed; production audit0 and historyGitleaks0. Scriptdeploy preflight backup restoreverified+draft importer+daily timer+code rollback prepared, Bash -n passed. AWSBilling due0/free176days13Apr2027/estimatedcredit197.84used2.16; SESfeedbackEnabled/suppressionBounceComplaintsEnabled, Requestproductiondisabled Domainverificationneeded. Pendingownerbeta/music, noreply; only draft import permitted. Next stagedsecretscan/privatecheck/pushCI and deploy. No prodDBchanges yet.
+
+## REC-01 rollout — 2026-10-21T11:59:42.4440660+07:00
+Push60c713e03db605948d23925df1e9d4f9aa2c94f7 Private main; CI39546789335 SUCCESS allsteps; AmplifyDeployment5 Deployed and commitlink exact60c713e. BrowserSSH invoked reviewed deploy script from exact GitSHA after CI. Waiting server result: do not assume backup/import/timer done. Policy remains pendingfalse, no media release. Next read terminal and validate users3/lessons16draft/no publication, backup timer, HTTP.
+
+
+## REC-01 GitHub SSH blocker — 2026-10-21T12:03:18.8439288+07:00
+VM fetch failed Permissiondeniedpublickey; bootstrap stopped beforebackup/service/DB. Clipboard paste verified with harmlessHNL_CLIPBOARD_OK. Implemented optional verifiedGitbundle path (exactHEAD/prerequisites/fullSHA), preservingmainhistory/remotes and avoidingnewkeys/tokens. Next pushfallbackscript, CI, transferbundle viaexistingbrowserSSH, compareSHA256, runbackup/import. No credentials copied.
