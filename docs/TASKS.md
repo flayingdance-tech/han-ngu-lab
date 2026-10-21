@@ -1,5 +1,10 @@
 # Bảng công việc
 
+## DOMAIN-01 — staging — 2026-10-21T22:25:41.9290910+07:00
+
+Owner phê duyệt chuyển DuckDNS cùngLightsail; DNS/TLS/health đạt, staged2origin/CaddyTCPonly; SESverify/reset/cookie/CSRF/CMS/progress và304MP3SHA/Range đạt; Windows+AWS distinctIP/buckets/forged ignored. Local51tests/lint/build/typecheck/smokePASS. Chưa cutover, giữsslip/Amplify nhưcũ. Rootprivate rollback domain-duck-20261021, tài liệu docs/DOMAIN_MIGRATION.md. Tiếp: browsermobile/CMS, thửrollback/restage, deploycanonicalstatic, cutover302+postgates+backup+PrivateCI. KhôngthaySQLite/SMTP/IAM/media.
+
+
 Cập nhật: 2026-10-20, Asia/Bangkok.
 Trạng thái: TODO / IN_PROGRESS / BLOCKED / DONE. Phạm vi đã chốt; nghiệm thu trọn dự án còn các mục chưa xong.
 
@@ -120,3 +125,5 @@ REC-07 IN_PROGRESS 2026-10-21T20:43:31.9102473+07:00: Rootcause/trustboundary x�
 REC-07 APPROVED / D-057 2026-10-21T21:02:27.2328209+07:00 : Owner phê duyệt staged single-Lightsail, chỉcutoversau verification, giữAmplifyrollback, trustTCPonly, test2networks+forged+auth/CMS/content/SES/persistence; oldAPIkhôngbypass; rollbackconfigkhôngSQLite; khôngpaidresources. Đang staging exact2origin, loginemailhashguard10/15min, Caddypublicbuild riêng. Local check51tests/lint/typecheck/build vàsmoke đạt; chưadeploy/cutover.
 
 REC-07 DONE 2026-10-21T21:32:21.4202324+07:00: DirectTCPonly, hai mạngthật+forged saufullrollback/táicutover21:30đạt; auth/CSRF/CMS/16lessons/7podcasts/304SHA/Range/SES/persistence/data14tables/backupđạt. Runbook REC07_DIRECT_INGRESS_RESULT.md.
+
+REC-07 HANDOFF DONE 2026-10-21T21:39:12.0982954+07:00: b9d8463Private/main/VMkhớp, CI39617833990success, canonicaldirectingressactive, actual2networks+forged/fullrollback/CSRF/auth/CMS/media/SES/SQLite/offsitepassed. Khôngcònrequiredwork củaREC07.

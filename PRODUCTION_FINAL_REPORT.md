@@ -1,5 +1,13 @@
 # Hán Ngữ Lab — Kết quả production
 
+## REC-07 — đồng bộ bàn giao hoàn tất — 2026-10-21T21:39:12.0982954+07:00
+
+- FinalHEAD **b9d8463e5ee71ff90ee03dd0eff71fba9716d3b9** local/PrivateGitHubmain/Lightsailkhớp; CI **39617833990 SUCCESS** https://github.com/flayingdance-tech/han-ngu-lab/actions/runs/39617833990 . Runtimee25d6c5khôngđổisau51tests; bảncuốichỉ10filedocs/README. VMFFbundleSHAe88c7753c38d59870fbaada7a368fe5ddfc48f14b87a5dec3158f1a034bb7cae/prereq/pins/clean/diffguard/Caddycmpđạt, khôngrestart/import/DB/testlặp.
+- AmplifybảnrollbackgầnnhấtđãđọcDeployment10SUCCEEDđúnge25; bảnbàngiaodocskhôngépbuildmới. Ruleshiện302canonical, APIcũ302fixed410, khôngcònexternalrewrite. CanonicalHTTPSlive/serviceactive; rootCaddyfilekhớptemplatepureTCP. AWSCLIlogoutđãxóacachedsession, khôngđưaAWScredentials lênVM.
+- REC07DONEbằngbằngchứngmulticlientSAUfullrollbackvàtáicutover21:30; toànbộcriticalgatespassed. Tàikhoảntestđãdisabled/revoke/trảlearner, credential/tokenfixturetrêniosPCđãdọnriêng; khôngđụngSMTP/key/DBdữliệuthật. Backupfresh/offsiteverify21:20vẫngiữ.
+- Hồsơ docs/REC07_DIRECT_INGRESS_RESULT.md đãtrênPrivateGit+VM. Kếtquảcuốicùngnàylưulocal, khôngpushchỉđểkíchnhiệubuildlặp. Khôngcònprobe/test/deploy/CIrunningcầnchờ; .codegraph owneruntrackedgiữnguyên.
+- Việctiếptheo khôngthuộcblockerREC07: theodõitraffic/credit, humanreviewhọcliệu, kếhoạchdomainổnđịnhkhichủdựánphêduyệt, backupPCphảibật/login/Internet. Khôngtựmuadomain/tạoresource/nângplan.
+
 ## REC-07 DONE — staged single-Lightsail đã nghiệm thu — 2026-10-21T21:32:21.4202324+07:00
 
 - Owner đã duyệt D-057; runtime e25d6c5/CI39613379221SUCCESS/Amplify10SUCCEED. Canonical website/API **https://54-253-61-113.sslip.io/**, hostname chỉtạm; frontendpublicrelease riêng/CaddyTCPpeeronly/Expressloopback. APP_ORIGINcanonicalduynhất, stagingoriginđãbỏ; envnonorigin/SMTPbytekhớpsnapshot. Không thay .next/framework/IAM/SES/DBschema/media.

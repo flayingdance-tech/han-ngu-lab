@@ -666,3 +666,14 @@ REC-07 APPROVED / D-057 2026-10-21T21:02:27.2328209+07:00 : Owner phê duyệt s
 - Backupmới20261021T142037Z-2fff33b7.sqlite.enc SHA82a5c4fde0b591f84c1ace70e43252b1ca5a0c479e97c9a4a4549a71393a0d5a; offsitecopy/decrypt/integrity/FK/inventoryđạt21:20. VMdailybackupactive/WindowsSchedulerhiệncó. SESGRANTED/Sendingtrue; SMTPdiagnosticcanonicalaccepted.
 - Runbookbằngchứng/rollback: docs/REC07_DIRECT_INGRESS_RESULT.md; privateartifacts .local/production-recovery/rec07. Khôngnewpaidresources/domain/upgrade. Rủirocònlại: sslip.iotạm, singleVM, RAMlimiterresetkhi restart, NATchung, trafficcostcầntheodõi; khôngphảiblockerREC07.
 - Đangchuẩnbịcommitdocs/runbookcuối→Privatepush→CI/Amplify→VMFFops-only, khôngrestart/import/testlặp. Lượtsauthựchiệntừcheckpointnày, khôngdùngtrạngtháichờduyệtcũ. .codegraphowneruntrackedgiữnguyên.
+## REC-07 — đồng bộ bàn giao hoàn tất — 2026-10-21T21:39:12.0982954+07:00
+
+- FinalHEAD **b9d8463e5ee71ff90ee03dd0eff71fba9716d3b9** local/PrivateGitHubmain/Lightsailkhớp; CI **39617833990 SUCCESS** https://github.com/flayingdance-tech/han-ngu-lab/actions/runs/39617833990 . Runtimee25d6c5khôngđổisau51tests; bảncuốichỉ10filedocs/README. VMFFbundleSHAe88c7753c38d59870fbaada7a368fe5ddfc48f14b87a5dec3158f1a034bb7cae/prereq/pins/clean/diffguard/Caddycmpđạt, khôngrestart/import/DB/testlặp.
+- AmplifybảnrollbackgầnnhấtđãđọcDeployment10SUCCEEDđúnge25; bảnbàngiaodocskhôngépbuildmới. Ruleshiện302canonical, APIcũ302fixed410, khôngcònexternalrewrite. CanonicalHTTPSlive/serviceactive; rootCaddyfilekhớptemplatepureTCP. AWSCLIlogoutđãxóacachedsession, khôngđưaAWScredentials lênVM.
+- REC07DONEbằngbằngchứngmulticlientSAUfullrollbackvàtáicutover21:30; toànbộcriticalgatespassed. Tàikhoảntestđãdisabled/revoke/trảlearner, credential/tokenfixturetrêniosPCđãdọnriêng; khôngđụngSMTP/key/DBdữliệuthật. Backupfresh/offsiteverify21:20vẫngiữ.
+- Hồsơ docs/REC07_DIRECT_INGRESS_RESULT.md đãtrênPrivateGit+VM. Kếtquảcuốicùngnàylưulocal, khôngpushchỉđểkíchnhiệubuildlặp. Khôngcònprobe/test/deploy/CIrunningcầnchờ; .codegraph owneruntrackedgiữnguyên.
+- Việctiếptheo khôngthuộcblockerREC07: theodõitraffic/credit, humanreviewhọcliệu, kếhoạchdomainổnđịnhkhichủdựánphêduyệt, backupPCphảibật/login/Internet. Khôngtựmuadomain/tạoresource/nângplan.
+
+## DOMAIN-01 — staging — 2026-10-21T22:25:41.9290910+07:00
+
+Owner phê duyệt chuyển DuckDNS cùngLightsail; DNS/TLS/health đạt, staged2origin/CaddyTCPonly; SESverify/reset/cookie/CSRF/CMS/progress và304MP3SHA/Range đạt; Windows+AWS distinctIP/buckets/forged ignored. Local51tests/lint/build/typecheck/smokePASS. Chưa cutover, giữsslip/Amplify nhưcũ. Rootprivate rollback domain-duck-20261021, tài liệu docs/DOMAIN_MIGRATION.md. Tiếp: browsermobile/CMS, thửrollback/restage, deploycanonicalstatic, cutover302+postgates+backup+PrivateCI. KhôngthaySQLite/SMTP/IAM/media.

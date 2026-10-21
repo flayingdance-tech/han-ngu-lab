@@ -1,4 +1,4 @@
-54-253-61-113.sslip.io {
+hanngulab.duckdns.org {
     header -Server
     @private path /.env /.env.* /.git /.git/* /.local /.local/* /server/* /scripts/* /docs/* /content/*
     handle @private {
@@ -28,4 +28,13 @@
         header X-Frame-Options "DENY"
         file_server
     }
+}
+
+54-253-61-113.sslip.io {
+    header -Server
+    header Cache-Control "no-store"
+    header Referrer-Policy "no-referrer"
+    @legacyApi path /api /api/*
+    redir @legacyApi https://hanngulab.duckdns.org/__legacy_api_retired 302
+    redir https://hanngulab.duckdns.org{uri} 302
 }
