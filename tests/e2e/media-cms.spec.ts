@@ -8,6 +8,8 @@ import { audioManifestSchema } from '../../lib/audio-catalog';
 import { podcastCatalogSchema } from '../../lib/podcast';
 import { releasePolicySchema } from '../../server/content-release';
 
+test.skip(process.env.HNL_ISOLATED_CMS_TEST!=='true','Use playwright.recovery.config.ts so this test only touches its isolated synthetic database.');
+
 test('admin can inspect media, create a draft and submit it without changing released bytes',async({page})=>{
   const health=await page.request.get('/api/health');expect((await health.json()).mode).toBe('local-preview');
   // This test is only supported by the isolated auth-playwright config, never the owner database.

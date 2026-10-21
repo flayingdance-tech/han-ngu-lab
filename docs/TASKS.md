@@ -89,3 +89,8 @@ POD-04 v9 (2026-10-19T22:16:59.3083211+07:00): mẫu dẫn/kểchuyện87.060s,l
 | REC-01 | Production content recovery và vận hành | IN_PROGRESS | D-051: inventory/backup/idempotent imports/media publication/pipeline/tests/deploy/report; giữDBngười học, chờreleasepolicy/quyềnnhạc, SSHCLIhiệnchưađủkết nối |
 
 | REC-02 | Public Beta 16 bài, bộ A, 7 podcast và CMS từng mục | IN_PROGRESS | D-052/D-053; local47unit/18E2E/allchecks đạt; chờ pushCI/Amplify/backend/proof. Quyền đã owner xác nhận, không kiểm tra lại |
+
+| REC-02 | Phát hành Public Beta và CMS từng mục | DONE | bcff32e Private main/CI39571450948 SUCCESS/Amplify7SUCCEED/Lightsailactive; HTTP16bài290audio14podsha/caption/protection đạt; CMS testsynthetic47unit18E2E. QuyềnD053ownerconfirmed |
+| REC-03 | Gán Admin production và nghiệm thu CMS tài khoản thật | BLOCKED | Cần ownerchọn tài khoản;3learner/1verified, đãhỏi21Oct2026, khôngtựnângquyền. Sauchốtbackup+CLIgrant/audit/revokesession |
+| OPS-02 | Backup vận hành và bản ngoài AWS | DONE | Timerdailyenabled/active/jobactualsuccess, AES256GCMrestore/FK/inventory; offsiteWindowsactualdecryptmatch. Đồngbộoffsiteauto cònTODO, khônghứađãtựđộng |
+| MAIL-03 | SES production access | BLOCKED | SydneySandbox,ConsolebuttondisabledDomainverificationneeded; khôngdomainownerđãverify/khôngmua/nânggói, requestdraft sẵn |

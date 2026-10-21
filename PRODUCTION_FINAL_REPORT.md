@@ -1,92 +1,77 @@
-# Cập nhật phát hành beta — 2026-10-21T15:42:51.5752606+07:00
+# Hán Ngữ Lab — Kết quả khôi phục production
 
-D-052/D-053 thay thế phần phụ thuộc chờ beta/quyền trong biên bản ban đầu bên dưới. Chủ dự án đã xác nhận tất cả quyền trước đó; không kiểm tra lại. Giữ nguyên bộ A và nhạc piano, công khai 16 bài/7 podcast ở trạng thái **Bản thử nghiệm — Chưa duyệt**, không tuyên bố hoàn chỉnh HSK4.
+Cập nhật: 2026-10-21T15:54:45.0463362+07:00 (Asia/Bangkok, +07). Báo cáo theo bằng chứng thực tế; không đồng nghĩa học liệu đã được duyệt chuyên môn hoặc dự án đã hoàn chỉnh HSK 4.
 
-CMS đã có review/edit/approve/unpublish/rollback từng bài/âm đọc/podcast, giữ revision/progress. Unit47/47, E2E18/18 desktop/mobile, lint/typecheck/build/smoke/dependency audit/Bashsyntax đạt. Xem docs/PUBLIC_BETA_OPERATIONS.md.
+## Phát hành đã hoàn thành
 
-Backup production đã mã hóa AES256GCM, restore/integrity/FK và inventory3users/1session/2tokens/3consent đạt; bản mã hóa đã chuyển ra Windows ngoàiAWS, keyseparate/ACLprivate, giải mã từ bản offsite kiểm lại thành công. Chưa có đồng bộ offsite tự động. VM vẫn099c26e, bản beta chưa rollout ở thời điểm checkpoint này. Deployscript có fix packageESM và regressiontest ngoài repo. Chờ CI/Amplify rồi deploy/HTTP/hash/playback thật; kết quả cuối sẽ cập nhật theo bằng chứng.
+- Website: https://main.d12mghkvifkghp.amplifyapp.com/ . API: https://54-253-61-113.sslip.io/api/health trả `ok:true`, `mode:live`.
+- GitHub `flayingdance-tech/han-ngu-lab` vẫn **Private**, nhánh main. Commit mã phát hành **bcff32e465291f5508cb7ec424a89a8e4a0dc7af**, lịch sử giữ nguyên, không force push. `amplify.yml` vẫn `baseDirectory: .next`.
+- GitHub Actions **39571450948 SUCCESS**: https://github.com/flayingdance-tech/han-ngu-lab/actions/runs/39571450948 . Quét lịch sử secret, dependency audit, lint, unit, build, typecheck và production smoke đều đạt.
+- Amplify app **d12mghkvifkghp**, Sydney **ap-southeast-2**, Deployment **7 Deployed / SUCCEED**, commit link khớp bcff32e. Console ghi tổng 2 phút 28 giây, build 2 phút 18 giây, deploy 9 giây.
+- Lightsail **han-ngu-lab-api** tại Sydney đã fast-forward từ 099c26e lên đúng bcff32e, systemd `han-ngu-lab-api` **active**, tracked tree sạch. Node 24.22.0; chỉ bind loopback3001 qua Caddy. Không thay SMTP env/IAM/SES hoặc reset SQLite.
+- VM chưa có GitHub SSH authentication; dùng Git bundle qua SSH hiện có, pin ED25519 đã đối chiếu Console, kiểm SHA256 **5feaa31cc5b0fb93bac0bbbbd95c15249b0063d6c56924cd6311ca292cc2abbe**, HEAD và prerequisite 099c26e trước fast-forward. Không tạo token/key/access mới hoặc tắt host verification.
 
-SES Sandbox và nút requestdisabled chưa giải quyết; không tạo tài nguyên/mua domain/nâng gói. Caddy chỉ trust localhop, chainclientIPAmplify chưa nghiệm thu. Số cập nhật Ubuntu mới26, restartrequired; chưa reboot.
+## Học liệu và media đang truy cập công khai
 
----
-Biên bản ban đầu dưới đây là lịch sử, các dòng chờ beta/quyền/backup không còn phản ánh trạng thái mới:
-# Hán Ngữ Lab — báo cáo khôi phục production
+| Loại | Số lượng đã kiểm qua production |
+| --- | --- |
+| Bài học | 16, gồm 80 câu luyện tập; đáp án/lời giải kín không nằm trong API công khai |
+| Mục từ vựng canonical | 94 mục theo inventory source |
+| Âm đọc bộ A | 145 mục, 290 MP3 normal/slow |
+| Podcast | 7 tập, 14 MP3 voice/mix, 43 đoạn phụ đề Hán/Pinyin/Việt |
 
-Checkpoint: 2026-10-21, Asia/Bangkok (+07). **Đang thực hiện; chưa nghiệm thu hoàn tất.**
+- D-052: Public Beta (Unreviewed). D-053: chủ dự án xác nhận tất cả quyền đã kiểm tra trước đó, yêu cầu không kiểm tra lại. Không tiếp tục chặn phát hành vì bản quyền.
+- Nhãn **Bản thử nghiệm — Chưa duyệt** hiển thị ở website/thư viện podcast/từng tập/CMS. `humanReviewed:false`, `review:unreviewed`; không tự tạo duyệt chuyên môn hoặc quảng cáo hoàn chỉnh HSK4.
+- Giữ nguyên giọng A Kokoro `zf_001`, nhạc piano và âm lượng bản đã chốt. Không tái tổng hợp, tách nhạc, pitch hoặc đổi nhạc. Cả **290 MP3 âm đọc và 14 MP3 podcast tải qua website thật có SHA256 khớp file gốc**; podcast Range trả206.
+- Trình duyệt production: mở bài đầu, phát 你 rồi trở về nút nghe bình thường, không báo lỗi. Podcast mix phát thật, `readyState:4`, `paused:false`, thời gian tăng tới19giây và54giây, duration87.060375, errornull; đã dừng sau kiểm tra. Phụ đề ba ngôn ngữ hiển thị. Đây là kiểm tra vận chuyển/phát, không phải nghiệm thu phát âm chuyên môn.
+- Bằng chứng máy: `.local/production-recovery/production-verification.json`, `production-beta-podcast.png`; không đưa dữ liệu private vào Git.
 
-## Hiện trạng đã xác minh
+## CMS và bảo toàn dữ liệu
 
-- GitHub: `flayingdance-tech/han-ngu-lab`, Private, `origin/main` và local cùng `099c26e07cc07778607af4b06798698001b033a0` trước bản sửa. Không force push. `amplify.yml` giữ `baseDirectory: .next`.
-- Amplify URL: https://main.d12mghkvifkghp.amplifyapp.com . Console đã xác minh app `d12mghkvifkghp` ở **Sydney, ap-southeast-2**, khác vùng Singapore được ghi trong yêu cầu. Không di chuyển hạ tầng.
-- Lightsail `han-ngu-lab-api`: Sydney, 2 GB RAM / 2 vCPU / 60 GB SSD, Static IPv4 `54.253.61.113`, đang chạy. API service `han-ngu-lab-api`, user `ubuntu`, working directory `/home/ubuntu/han-ngu-lab`, Node `v24.22.0`, Git `099c26e`.
-- API chỉ lắng nghe `127.0.0.1:3001`; Caddy `reverse_proxy 127.0.0.1:3001`. Không mở cổng API ra Internet. SMTP environment được giữ ở `/etc/han-ngu-lab/api.env`, không đọc giá trị hoặc thay credentials.
-- Kiểm tra HTTPS qua Amplify và trực tiếp Caddy: root 200, health 200 `live`, catalog 200 với 0 bài, podcast 404. Root không yêu cầu mật khẩu hosting; không cần tắt bảo vệ nào. Student authentication vẫn giữ nguyên.
+- Bài học và từng media có phiên bản riêng. 152 media item/152 revision ban đầu (145 âm +7 podcast), 16 lesson/16 revision beta. Sửa tạo draft, gửi duyệt, người khác duyệt, xuất bản; có thu hồi và khôi phục phiên bản cũ. Beta khôi phục vẫn chưa duyệt. Có audit và trình nghe chỉ dành cho staff để rà soát nội dung đã thu hồi.
+- Import chạy lại không tạo trùng, không ghi đè xuất bản độc lập và không tự hồi nội dung Admin đã thu hồi. Dry-run trên VM sau deploy: newLessons0/newRevisions0/betaPointers0.
+- Đã so fingerprint đầy đủ users/sessions/tokens/consent/attempts/progress/SRS/deletion_requests với **DB giải mã từ backup trước triển khai**: khớp hoàn toàn. Vẫn 3 tài khoản/1 session/2 tokens/3 consent, progress/attempts0 như trước; không migrate DB local có fixture vào production.
+- Media schema là hai bảng thêm tương thích v1; không drop/downgrade bảng người học. Backup JSON quản trị hỗ trợ media/beta và vẫn đọc được backup cũ; restore chỉ vào DB trống. Full backup vận hành giữ cả phiên/token.
+- **Production hiện 3 tài khoản đều là learner: 1 verified, 2 chưa verified; chưa có Admin.** Đã hỏi chủ dự án chọn tài khoản cấp Admin; chưa có câu trả lời, chưa tự nâng quyền hoặc sửa tài khoản. API/CMS đã triển khai và kiểm thử bằng tài khoản synthetic riêng; nghiệm thu đăng nhập CMS bằng Admin thật chờ chỉ định.
+- Thu hồi âm đọc chặn tra cứu/phát mới trong ứng dụng (manifest cache tối đa60giây). Các MP3 bài học ở đường dẫn tĩnh đã công khai không bị xóa khi thu hồi; bản đã tải không thể gọi lại. Không coi thu hồi CMS là khóa bảo mật đường dẫn tĩnh. Podcast công khai bị chặn theo publication pointer.
+- Hướng dẫn: `docs/PUBLIC_BETA_OPERATIONS.md`.
 
-## Nguyên nhân thiếu nội dung
+## Backup đã nghiệm thu thực tế
 
-1. Seed chỉ nhập cho local preview; production SQLite chưa có lessons/revisions. Không có migration chuyển học liệu sang production.
-2. API podcast trước đây trả 404 cho toàn bộ chế độ live. 14 MP3/catalog nằm trong `.local/` bị Git bỏ qua, chưa được đưa lên máy chủ.
-3. Bài học, audio và podcast hiện đều chưa được duyệt chuyên môn. Production chặn nội dung chưa xuất bản; đây là trạng thái thật, không được tự đổi thành đã duyệt.
+- Backup online SQLite gồm WAL, AES-256-GCM, key riêng root600, archive root-private. Mỗi lần backup đều giải mã file đã lưu sang DB riêng, kiểm integrity/FK/inventory; không ghi đè production.
+- Backup trước deploy: `20261021T084631Z-0475998d.sqlite.enc`. Backup sau deploy bằng **systemd service thực**: `20261021T084739Z-aff7a9ef.sqlite.enc`, SHA256 **e1bf4576f60beaab1c2fb6ac85cb857c468dcd753a0cc42a1a4e09b0e9431177**. Inventory16lessons/16revisions/152media_items/152media_revisions/3users khớp.
+- `han-ngu-lab-backup.timer` **enabled/active**. Lịch03:15UTC, random≤30phút; lần kế được systemd ghi **22/10/2026 03:25:43UTC**. Chạy thử service `Result=success`, `ExecMainStatus=0`; retention14ngày.
+- Mã backup JS root-owned trong `/usr/local/lib/han-ngu-lab-backup`, root timer không import ubuntu-owned npm packages. Key `/etc/han-ngu-lab/backup.key` tách khỏi `/var/backups/han-ngu-lab`.
+- Đã copy cả bản trước và sau phát hành ra Windows ngoài AWS: `.local/production-recovery/offsite/archives`; key ở `offsite/keys`, ACL chỉ currentuser+SYSTEM. **Giải mã từ bản offsite sau deploy sang SQLite riêng, integrity/FK/inventory khớp**, xóa plaintext tạm; key/bản DB không in ra chat/log/Git. Đã bỏ key trung chuyển VM, giữ key gốc.
+- **Đồng bộ offsite hiện thủ công, chưa chạy tự động hằng ngày.** Timer hằng ngày là bản trong VM; không coi cùng đĩa là offsite. Cần lấy bản mới sau thay đổi quan trọng và trước hết hạn Free Plan; giữ Git/media cùng backup/key để chuyển nền tảng.
 
-| Nội dung | Nguồn chuẩn local | Production trước thay đổi |
-|---|---:|---:|
-| Bài học | 16: nhập môn 3, HSK 1: 4, HSK 2: 3, HSK 3: 3, HSK 4: 3 | 0 |
-| Câu hỏi | 80 | 0 |
-| Mục từ vựng | 94 | 0 |
-| Audio bài học | 145 mục / 290 MP3 | Chưa kiểm hết file public thực tế |
-| Podcast | 7 tập / 14 MP3 / 43 đoạn phụ đề | API 404; chưa có manifest live |
-| Tài khoản | Không dùng local làm nguồn chuyển dữ liệu | 3 |
-| Attempts / progress | Không dùng local làm nguồn chuyển dữ liệu | 0 / 0 |
+## Kiểm thử
 
-Local SQLite có 22 lessons/42 revisions, gồm lịch sử và fixture kiểm thử; **không phải 22 bài học chuẩn**. Chỉ importer nguồn `content/lessons.ts` được dùng. Bộ 16 bài chưa phải giáo trình HSK 4 hoàn chỉnh; chưa có HSK 5–6.
+- Local: **47/47 unit/integration/CLI**, **18/18 E2E desktop/mobile** (âm đọc thật, podcast, caption/seek/switch/rate/preferences/errors/theme, media CMS edit/submit), lint/typecheck/build/production smoke đều đạt. DB synthetic, không DB học viên.
+- CI trên Ubuntu cũng đạt toàn bộ checks. Gitleaks staged0finding; CI history scan đạt. Dependency audit production0vulnerability. Bash `-n` đạt; script deploy đã chạy thật thành công.
+- HTTP production: health/catalog/16lesson/audioManifest/podcast200; 290+14files SHA khớp; podcast206Range; anonymous me/admin media/admin users401, privatepaths404. API root404 là bình thường; frontendroot200.
+- Đăng ký/resend/verify/login/reset được unit/integration test với transport giả lập; không tuyên bố đã nghiệm thu mailbox thật trong lượt này hoặc gửi được đến mọi Gmail khi SES còn Sandbox.
 
-## Bản sửa
+## SES và những phần còn chờ
 
-- Import dry-run mặc định, chạy lại không tạo trùng, revision bất biến, không ghi đè xuất bản của biên tập viên. Transaction kiểm fingerprint toàn bộ bảng tài khoản/phiên/token/tiến độ/SRS trước và sau; khác biệt sẽ rollback.
-- `--apply` đòi backup cùng DB, checksum đúng, vừa được giải mã/restore/integrity check trong 15 phút. Không tạo hoặc thay thế production DB.
-- Release policy mặc định **chưa cho phép beta công khai**. Có thể cho phép rõ danh sách ID với nhãn chưa duyệt sau quyết định chủ dự án; không giả mạo `humanReviewed`.
-- Podcast live theo manifest riêng, whitelist tên file, SHA256, chặn symlink, hỗ trợ Range. Không lộ authoring profile/production metadata. File giọng/nhạc không tái tổng hợp hay chỉnh âm.
-- Có bộ chuẩn bị asset phát hành theo quyền nhạc đã xác nhận; chưa chạy khi quyết định còn chờ.
-- `scripts/deploy-production.sh`: preflight repo/SHA/fast-forward/service/env permissions, backup WAL-safe mã hóa, restore test, nhập riêng học liệu, kiểm health, daily timer, rollback code không thay DB. Cần nghiệm thu trên Ubuntu; Bash syntax test không chứng minh đã chạy production.
+- SES Sydney **Sandbox/Healthy**, quota200email24h/1emailgiây; identity emailVerified. Feedback forwardingEnabled, suppressionBounceandcomplaintsEnabled,0entries; không tạo SNS/resources mới.
+- Console Getsetup báo **Domain verification needed / No domain identities found**, nút **Request production access disabled**. Chưa nộp yêu cầu, chưa mua domain/nâng gói để vượt chặn. `docs/SES_PRODUCTION_REQUEST.md` chứa dự thảo transactional và điều kiện nghiệm thu feedback. Gmail người nhận chưa verified tiếp tục bị SES chặn.
+- Caddy/Express chỉ tin hop loopback gần nhất; unit test header giả và rate limiting đạt. **Chưa nghiệm thu phân biệt IP của nhiều client thật qua chuỗi Amplify→Caddy**; không tin tất cả proxy hoặc header tự khai để giả vờ đã sửa.
+- Ubuntu hiện báo26updates/restartrequired (đã thay đổi từ kiểm tra95updates trước đó do bảo trì ngoài phiên). Không tự majorupgrade/reboot.
+- DNS `sslip.io` là phụ thuộc thử nghiệm; chưa có domain riêng do chủ dự án quản lý. Không tạo thêm resource/trả phí/nâng plan.
 
-## Sao lưu
+## Ngân sách đã đọc từ AWS
 
-- Node SQLite online backup bao gồm WAL; AES-256-GCM, key 32 byte riêng, file/directory private. Giải mã file đã lưu sang SQLite riêng, chạy integrity/foreign-key check và đối chiếu inventory.
-- Retention 14 ngày, chỉ dọn cặp backup do công cụ tạo và checksum hợp lệ sau khi backup mới đã được nghiệm thu.
-- Test WAL synthetic giữ cả users/sessions thành công. **Chưa tuyên bố đã tạo backup production hoặc bật timer** cho đến có kết quả máy chủ.
-- Sao lưu ngoài VM/AWS và cất key riêng chưa hoàn tất. Mất VM và cả key/backup cùng lúc vẫn có thể mất dữ liệu; không coi backup cùng đĩa là offsite.
+- Billing amountdue **0 USD**, estimatedmonth-to-date **2.16USD**; remainingcredit finalized200USD, estimated **197.84USD**. FreePlan còn176ngày, đến **13/04/2027**; creditexpiry **13/10/2027** là mốc khác. Số ước tính không phải hóa đơn cuối cùng.
+- Lightsail2GB dual-stack giá công khai khoảng12USD/tháng (72USD/6tháng), chưa gồm Amplify/SES/transfer/thuế. Không bảo đảm tải không giới hạn hoặc chi phí bằng0; không tự nâng gói. Duy trì backup và chuyển nền tảng trước hết FreePlan.
+- Nguồn giá chính thức đã dùng: https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-bundles.html ; https://aws.amazon.com/amplify/pricing/ .
 
-## Xác thực và bảo mật
+## Lỗi đã gặp và khắc phục
 
-- Giữ production guard SMTP/HTTPS, CSRF, cookie secure/HttpOnly, xác minh email, cooldown/chống dò email, giới hạn IP và email.
-- Unit test bao phủ register/resend/verify/login/logout/reset/expired token/permissions/cách ly user/idempotent progress. SMTP giả lập; **không chứng minh hộp thư thật nhận thư**.
-- Express chỉ tin hop Caddy loopback gần nhất. Qua Amplify, IP mà Caddy nhận có thể là proxy upstream; chưa nghiệm thu phân biệt nhiều client thật. Không bật trust mọi proxy hoặc tin header tự khai.
-- Ubuntu báo 95 updates, 69 security updates và restart required. Chưa tự nâng Ubuntu major hoặc reboot trong nhiệm vụ khôi phục; cần cửa sổ bảo trì sau backup.
+- VM GitHub SSH Permissiondenied: dừng an toàn, dùng bundle đã xác minh với SSH có sẵn; không đổi lịch sử/auth.
+- Backup trích xuất vào temp bị CJS/top-level-await: thêm packageESM; regressiontest chạy ngoài repo đạt. Windowsloader cần fileURL; test dùng pathToFileURL.
+- Deploy health probe nhận response rỗng ở2lượt ngay khi service khởi động, retry sau đó đạt; không phải lỗi dữ liệu. Service/timer sau deploy đã kiểm độc lập.
+- Rehearsal cleanup lần đầu còn SQLite WAL/SHM khiến rmdirENOTEMPTY sau fingerprint đã đạt: dọn đúng các sidecar của file temp do mình tạo, chạy lại thành công. Không recursive delete hoặc xóa production WAL.
+- Playwright JSONimport thiếu attribute: fixture đọc bằngfs+schema; E2E chạy lại18/18. Không tắt kiểm tra để đạt kết quả.
 
-## SES
-
-- Sydney Console đã đọc trong lượt này: Sandbox, Healthy, 200 email/24h, 1 email/giây, đã dùng 3/200 lượt. Sandbox chặn người nhận chưa verified.
-- Identity email đã Verified; email feedback forwarding **Enabled**; account suppression **Enabled, Bounce and complaints**, danh sách hiện 0 địa chỉ. Không có SNS topic; không tạo thêm.
-- Nút **Request production access bị disabled**, trang Get set up báo **Domain verification needed / No domain identities found**. Không thể nộp từ Console hiện tại; không mua domain hoặc nâng gói. Dự thảo transactional và điều kiện kiểm thử trong `docs/SES_PRODUCTION_REQUEST.md`; chưa xác nhận mailbox đã nhận feedback thử nghiệm.
-- Hướng dẫn: https://docs.aws.amazon.com/ses/latest/dg/request-production-access.html .
-
-## Chi phí và rủi ro
-
-- Lightsail bundle 2 GB dual-stack theo bảng giá công khai: khoảng **12 USD/tháng, 72 USD/6 tháng**, chưa bao gồm Amplify/SES/transfer vượt quota/thuế. Nguồn: https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-bundles.html .
-- Amplify build chuẩn 0.01 USD/phút, transfer/storage/SSR tính riêng; không bật WAF, không tạo tài nguyên trả phí mới. Nguồn: https://aws.amazon.com/amplify/pricing/ .
-- AWS Settings/Credits đã xác minh: tổng credit remaining **200 USD**, estimated remaining **197.84 USD**, estimated used **2.16 USD**, finalized used 0 USD. Có 100 USD Free Tier và 5 khoản Explore AWS 20 USD. Credit hết hạn **13/10/2027**; Billing ghi **Free Plan còn 176 ngày, đến 13/04/2027**, là hai mốc khác nhau. Amount due **0 USD**, project month-to-date **2.16 USD**, toàn bộ hiện được credit chi trả. Không nâng gói. Số ước tính cập nhật khoảng 24 giờ, chưa phải hóa đơn cuối cùng; điều kiện dịch vụ áp dụng cần xem từng credit. Cần chuyển nền tảng/backup ngoài AWS trước khi Free Plan kết thúc; không bảo đảm chi phí bằng 0 hoặc tải không giới hạn.
-- `sslip.io` là DNS thử nghiệm phụ thuộc nhà cung cấp ngoài; IP/DNS/HTTPS thay đổi có thể ảnh hưởng API và email links. Chưa mua domain.
-
-## Kiểm thử và phát hành
-
-- Đã chạy: unit **45/45**, lint và typecheck đạt. E2E desktop/mobile **26/28** lượt đầu; hai kiểm tra focus dùng tên nút cuối cũ, cập nhật đúng nút resend rồi chạy lại **2/2 đạt**. Không đổi app để né kiểm tra. Các luồng học/đăng nhập/âm thanh/phụ đề/seek đều dùng DB synthetic riêng, không DB người học. Bash `-n` đạt. CLI integration test chặn thiếu/stale/checksum sai backup, apply và chạy lại không tạo trùng sau restore thật.
-- Production build và smoke composition đạt. Build đầu phát hiện type literal của fixture policy trong test, đã parse bằng schema; build lại đạt. Production dependency audit0vulnerability, Gitleaks reachable history0finding. Staged scan và CI/Amplify/backend rollout sẽ cập nhật sau.
-- Chưa commit/push các thay đổi khôi phục. Không có dữ liệu người dùng, credential hoặc `.codegraph/` được stage.
-
-## Phụ thuộc cần chốt
-
-1. Chủ dự án quyết định công khai bản beta chưa duyệt hay chỉ nhập draft vào CMS.
-2. Quyền phân phối công khai bản piano `不如见一面` chưa được xác minh. Giữ nguyên bản local; không tự đổi nhạc, công khai nhạc hoặc bỏ nhạc khi chưa có lựa chọn.
-3. SES production cần quy trình bounce/complaint đúng thực tế và AWS phê duyệt; không nâng gói/mở rộng quyền để vượt chặn.
-
-Tài liệu này sẽ cập nhật theo kết quả thực tế; các dòng “chưa” không phải hạng mục hoàn tất.
+Báo cáo cuối và cấu hình kiểm thử cách ly được đồng bộ Git trong commit bàn giao kế tiếp; mã chức năng đã nghiệm thu làbcff32e. Cấu hình mới cũng chạy CMS desktop/mobile2/2 đạt, lint/typecheck đạt; không sửa runtime hoặc media. Chưa đánh dấu toàn dự án hoàn tất: chờ chỉ địnhAdmin, SES production, đồng bộ offsite tự động, proxyclientIP thực và duyệt chuyên môn/mở rộng học liệu.

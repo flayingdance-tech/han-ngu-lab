@@ -32,3 +32,7 @@ Tất cả nội dung chưa được người có chuyên môn độc lập duy�
 - Không render lại giọng/nhạc khi sửa metadata/phụ đề. Asset SHA256 phải giữ nguyên và xác minh với file phục vụ thật.
 
 SES vẫn Sandbox cho đến AWS chấp thuận. Không bỏ xác minh email/production guard để vượt chặn; không quảng cáo đăng ký cho mọi Gmail khi chưa hoàn thành bước này. Chi tiết `SES_PRODUCTION_REQUEST.md` và `AUTH_EMAIL_RECOVERY.md`.
+
+## Chạy lại kiểm thử UI an toàn
+
+Dùng `npx playwright test --config playwright.recovery.config.ts`. Cấu hình này không tái dùng server đang mở, chỉ dùng SQLite synthetic `.local/pre-github-audit/synthetic-auth-ui.sqlite`; media CMS test chỉ chạy khi có cờ cách ly do cấu hình đặt. Nếu port3000 đang được sử dụng, dừng với lỗi thay vì gắn nhầm DB. Không chạy CMS fixture cũ với DB người dùng. Bộ phát hành đã kiểm18/18 desktop/mobile; runner bàn giao mới kiểm riêng CMS2/2 đạt.
