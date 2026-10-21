@@ -40,7 +40,7 @@ export async function speak(text: string, pinyin: string, slow = false, preview 
   const key = audioKey(text, pinyin);
   const entry = Object.hasOwn(catalog.entries, key) ? catalog.entries[key] : undefined;
   if (!entry) throw new Error('Âm đọc này đang được chuẩn bị. Bạn có thể tiếp tục học và thử lại sau.');
-  if (entry.review !== 'approved' && !preview) throw new Error('Âm đọc này đang chờ duyệt phát âm.');
+  if (entry.review !== 'approved' && !preview && !catalog.betaRelease) throw new Error('Âm đọc này đang chờ duyệt phát âm.');
   const audio = new Audio(slow ? entry.slow : entry.normal);
   audio.preload = 'auto';
   await new Promise<void>((resolve, reject) => {

@@ -22,6 +22,7 @@ const navItems:{id:Page;title:string;icon:typeof BookOpen}[]=[{id:'home',title:'
 export default function Home() {
   const entryAction=useRef<{verification?:Promise<{message:string}>;reset?:string}|null>(null);
   const [page,setPage]=useState<Page>('home'),[user,setUser]=useState<User|null>(null),[catalog,setCatalog]=useState<LessonCard[]>([]),[progress,setProgress]=useState<Progress>(emptyProgress),[local,setLocal]=useState(false),[loading,setLoading]=useState(true),[error,setError]=useState(''),[notice,setNotice]=useState(''),[auth,setAuth]=useState(false),[resetToken,setResetToken]=useState(''),[selected,setSelected]=useState(''),[menu,setMenu]=useState(false),[level,setLevel]=useState(-1),[search,setSearch]=useState('');
+  const [releaseNotice,setReleaseNotice]=useState('');
   const refresh=useCallback(async()=>{try{setProgress(await api<Progress>('/progress'));}catch(e){setError((e as Error).message);}},[]);
   useEffect(()=>{
     // A mail link clicked inside this open page changes only its fragment.
@@ -44,7 +45,7 @@ export default function Home() {
       }
       if(entryAction.current.verification){try{const r=await entryAction.current.verification;if(alive){setNotice(r.message);setAuth(true);}}catch(e){if(alive)setError((e as Error).message);}}
       if(entryAction.current.reset&&alive){setResetToken(entryAction.current.reset);setAuth(true);}
-      try{const c=await api<{lessons:LessonCard[];localPreview:boolean}>('/catalog');if(alive){setCatalog(c.lessons);setLocal(c.localPreview);}}
+      try{const c=await api<{lessons:LessonCard[];localPreview:boolean;releaseNotice?:string}>('/catalog');if(alive){setCatalog(c.lessons);setLocal(c.localPreview);setReleaseNotice(c.releaseNotice??'');}}
       catch(e){if(alive)setError((e as Error).message);}
       try{const r=await api<{user:User}>('/me');const p=await api<Progress>('/progress');if(alive){setUser(r.user);setProgress(p);}}catch{/* Anonymous visitor has no session. */}
       if(alive)setLoading(false);
@@ -70,6 +71,7 @@ export default function Home() {
     </aside>
     <div className="main-shell"><header className="topbar"><div className="topbar-title"><button className="icon-button mobile-menu" onClick={()=>setMenu(!menu)} aria-label="Mở điều hướng"><Menu size={20}/></button><span>HỌC TIẾNG TRUNG, THEO CÁCH CỦA BẠN</span></div><div className="topbar-actions"><ThemeToggle/><span className="free-badge"><span className="live-dot"/>Miễn phí · 18+</span>{user?<button className="button secondary small-button" onClick={()=>void logout()}>Đăng xuất<LogOut size={15}/></button>:<button className="button secondary small-button" onClick={()=>setAuth(true)}>Đăng nhập<ArrowRight size={15}/></button>}</div></header>
     {local&&<div className="preview-strip">Bản thử nghiệm trên máy · Học liệu đang biên soạn, chưa duyệt độc lập · Chưa mở dịch vụ công khai</div>}
+    {!local&&releaseNotice&&<div className="preview-strip" role="note">{releaseNotice}</div>}
     <main id="main-content">{notice&&<div role="status" className="notice success">{notice}<button className="icon-button" aria-label="Đóng thông báo" onClick={()=>setNotice('')}><X size={15}/></button></div>}{error&&<div role="alert" className="notice error">{error}<button className="text-button" onClick={()=>location.reload()}>Thử tải lại</button></div>}
       {selected?<LessonPlayer key={selected} id={selected} user={user} onBack={()=>navigate('roadmap')} onLogin={()=>setAuth(true)} onComplete={()=>void refresh()}/>:<>
       {page==='home'&&<><div className="greeting"><div><span className="eyebrow">{today}</span><h1>{user?`Chào ${user.name.split(' ').at(-1)}, học một chút nhé.`:'Chào bạn, cùng bắt đầu nhé.'}<span className="greeting-dot">✦</span></h1><p className="muted">Một bước nhỏ hôm nay. Một thế giới rộng hơn ngày mai.</p></div><span className="daily-target"><Target size={18}/>{user?.dailyGoal??20} phút / ngày</span></div>

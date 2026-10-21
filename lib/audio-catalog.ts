@@ -7,6 +7,7 @@ export const audioManifestSchema = z.object({
   version: z.literal(1), voiceId: z.enum(['hnl-original-v1', projectVoiceId]),
   label: z.string().min(1), engine: z.string().min(1), generatedAt: z.string(),
   disabledReason: z.string().min(1).optional(),
+  betaRelease: z.object({ approvedAt: z.iso.datetime({ offset: true }), notice: z.string().min(1) }).optional(),
   entries: z.record(z.string(), z.object({
     text: z.string(), pinyin: z.string(), normal: audioPath, slow: audioPath,
     review: z.enum(['unreviewed', 'approved']),

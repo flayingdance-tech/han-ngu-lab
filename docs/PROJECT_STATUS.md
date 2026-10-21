@@ -1,3 +1,10 @@
+## PUB-03 / D-050 — hoàn tất push và frontend deploy — 2026-10-21T10:29:41.6985611+07:00
+
+- Commit phát hành099c26e07cc07778607af4b06798698001b033a0 đã push lên flayingdance-tech/han-ngu-lab Private main, remoteSHA khớp. Fetch origin/main=e12d719 là ancestor, không merge/force/rewrite. amplify.yml baseDirectory:.next khớp nguyên remote. Gitleaks allreachable exit0, không track credentialCSV/populatedenv/DB/key, chỉ .env.example.
+- GitHub Actions39538587917 SUCCESS đúng099c26e: secrets/dependency audit/lint/unit39/build/typecheck/smoke đều đạt. https://github.com/flayingdance-tech/han-ngu-lab/actions/runs/39538587917.
+- AWS Amplify Sydney appd12mghkvifkghp/main Deployment4 Deployed / SUCCEED cho đúng099c26e (Console authenticated đọc chỉ, không redeploy/config write). Build2phút4giây, deploy22giây; UI duration còn cập nhật nên không dùng làm chuẩn SLA. https://main.d12mghkvifkghp.amplifyapp.com.
+- Chưa cập nhật backend Lightsail, SMTP env, IAM/SES, hoặc DB. Hướng dẫn docs/AUTH_EMAIL_RECOVERY.md: backup DB đúng quy trình, git pull --ff-only, đối chiếuSHA, cửa sổ bảo trì npmci/checks và restart đúng systemdservice, giữDATABASE_PATH/env. Kiểm IP thật Caddy/CDN, chỉ nhậnrecipient SESsandboxđãVerified cho đến AWSproductionaccess.
+- Kết quả/checkpoint này lưu local chưacommit/push để giữSHApháthành và tránh thêm auto-deploy biên bản. .codegraph untracked giữ nguyên. Không còn CI/build/deploy cần chờ. Bằng chứng .local/pre-github-audit/github-push-verification.json và auth-publication-result.json.
 ## MAIL-02 / D-049 — bản sửa cục bộ đã hoàn tất — 2026-10-21T10:21:14.3269697+07:00
 
 - CodeGraph dùng trước để đọc AuthPanel/client/app/email và quan hệ callers. AuthPanel có resend/cooldown, giữ email và xử lý429/503; API generic register201/resend-forgot200 kể cả SMTP lỗi, bảo toàn tài khoản/password cũ. Kiểm tra credentials đúng mới báo login chưa verified.
@@ -82,3 +89,9 @@ Mốc audit/safe fixes:9200c03; quét secret sau commit đạt, web200/API previ
 - D-028 giọngA145mục/290MP3 thường-chậm, file offline, không browser TTS/API trả phí. AUDIO-07/POD-02 còn duyệt chuyên môn/CMS publication/quyền phát hành; không quay lại OmniVoice.
 - 16bài draft/94word IDs/80câu hỏi/39ví dụ chưa đủ HSK4 và chưa duyệt. Còn CMS CSV/media/audit/users và kiểm tra vận hành phù hợp; không quảng cáo hoàn thành giáo trình.
 - Cloud/email/HTTPS, backup ngoài máy/AWS và migration toàn bộ chưa hoàn tất. Ngân sách150USD/6tháng gồm credit, không chi thêm; thông tin AWS chưa kiểm Console. Website miễn phí18+, AI tùy chọn; chưa hoàn thành toàn dự án.
+
+## REC-01 checkpoint — 2026-10-21T11:45:13.1883341+07:00
+Production read-only: users3/lessons0/revisions0; serviceubuntu /usr/bin/node24.22 loopback3001. New importer/backup/release scripts, pending owner beta and piano rights (no reply). Unit43/43, lint/typecheck/Bash syntax passed; E2E isolated running session54278; new live beta test to run. No prod writes/push. Report PRODUCTION_FINAL_REPORT.md created. Next: finish tests/build/secrets, commit safe changes, CI/Amplify, backup and draft-only import unless owner enables beta.
+
+## REC-01 trước push — 2026-10-21T11:56:08.3842217+07:00
+Unit45/45; E2E26pass+2focus outdated lastbutton fixed and rerun2/2pass; lint/typecheck/build/smoke passed; production audit0 and historyGitleaks0. Scriptdeploy preflight backup restoreverified+draft importer+daily timer+code rollback prepared, Bash -n passed. AWSBilling due0/free176days13Apr2027/estimatedcredit197.84used2.16; SESfeedbackEnabled/suppressionBounceComplaintsEnabled, Requestproductiondisabled Domainverificationneeded. Pendingownerbeta/music, noreply; only draft import permitted. Next stagedsecretscan/privatecheck/pushCI and deploy. No prodDBchanges yet.

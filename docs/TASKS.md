@@ -83,3 +83,7 @@ POD-04 v9 (2026-10-19T22:16:59.3083211+07:00): mẫu dẫn/kểchuyện87.060s,l
 | PUB-02 | Push SES và theo dõi CI/Amplify | DONE | D-048 e12d719 Private main, giữ57f3a3b/1b23772 và .next, không force; CI39468035970 success, Amplify appd12mghkvifkghp Deployment3 SUCCEED đúngSHA. Chỉ frontend; chưa Lightsail/SMTP thật |
 
 | MAIL-02 | Khôi phục xác minh email và Caddy proxy | DONE | Chỉ kỹ thuật cục bộ D-049: resendUI/anti-enumeration/cooldown/proxy; unit39/39/E2E6/6/lint/typecheck/build/smoke/secrets đạt. SES Sandbox xác minh Console; runbook cập nhật Lightsail, chờ duyệt push và nghiệm thu thật/CDN IP |
+
+| PUB-03 | Push bản sửa MAIL-02 và theo dõi phát hành | DONE | D-050 099c26e Private main, không merge/force; .next giữ nguyên/secrets đạt; CI39538587917 SUCCESS, AmplifyDeployment4 Deployed/SUCCEED đúngSHA; backend chưa cập nhật, runbook AUTH_EMAIL_RECOVERY |
+
+| REC-01 | Production content recovery và vận hành | IN_PROGRESS | D-051: inventory/backup/idempotent imports/media publication/pipeline/tests/deploy/report; giữDBngười học, chờreleasepolicy/quyềnnhạc, SSHCLIhiệnchưađủkết nối |

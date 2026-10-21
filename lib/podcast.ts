@@ -23,6 +23,7 @@ const musicInfo=z.object({title:z.string(),author:z.string(),artistUrl:z.url().o
 const musicSchema=z.union([
   musicInfo.extend({license:z.literal('CC BY 4.0'),source:z.url(),licenseUrl:z.literal('https://creativecommons.org/licenses/by/4.0/')}),
   musicInfo.extend({license:z.literal('owner-supplied'),rightsStatus:z.literal('owner-provided-unverified'),source:z.url().optional(),licenseUrl:z.never().optional()}),
+  musicInfo.extend({license:z.literal('none'),source:z.never().optional(),licenseUrl:z.never().optional()}),
 ]);
 export const podcastCatalogSchema=z.object({version:z.literal(1),generatedAt:z.string(),music:musicSchema,episodes:z.array(podcastSchema).min(1)});
 export type Podcast=z.infer<typeof podcastSchema>;

@@ -10,10 +10,11 @@ import { hashPassword, checkPassword, token, digest } from './security';
 import { mountPodcasts } from './podcasts';
 import { EmailDeliveryError, type SendMail, type MailPurpose } from './email';
 import { authMailControl, AUTH_MAIL_MESSAGE, AUTH_MAIL_WAIT_SECONDS } from './auth-mail';
+import { betaLessonAllowed, betaNotice, type ReleasePolicy } from './content-release';
 
 type UserRow = { id: string; email: string; name: string; password: string; role: Role; verified: number; status: string; timezone: string; daily_goal: number };
 type Revision = { id: string; lesson_id: string; content: string; status: string; author_id: string; reviewer_id: string | null; created_at: number };
-export type AppOptions = { localPreview: boolean; origin: string; now?: () => number; sendMail?: SendMail };
+export type AppOptions = { localPreview: boolean; origin: string; now?: () => number; sendMail?: SendMail; releasePolicy?: ReleasePolicy; podcastDirectory?: string };
 class HttpError extends Error { constructor(public status: number, message: string) { super(message); } }
 function assert(condition: unknown, status: number, message: string): asserts condition { if (!condition) throw new HttpError(status, message); }
 const userView = (u: UserRow): User => ({ id: u.id, email: u.email, name: u.name, role: u.role, verified: Boolean(u.verified), timezone: u.timezone, dailyGoal: u.daily_goal });
@@ -73,12 +74,13 @@ export function createApp(db: Database, options: AppOptions) {
   }
   function published(id: string): Revision {
     let row = db.prepare('SELECT r.* FROM lessons l JOIN revisions r ON l.published_revision_id=r.id WHERE l.id=? AND r.status=?').get(id, 'published') as Revision | undefined;
+    if (!row && betaLessonAllowed(options.releasePolicy, id)) row = db.prepare("SELECT r.* FROM lessons l JOIN revisions r ON l.published_revision_id=r.id WHERE l.id=? AND r.status='beta' AND r.author_id=?").get(id, `system-release:${options.releasePolicy!.id}`) as Revision | undefined;
     if (!row && options.localPreview) row = db.prepare("SELECT * FROM revisions WHERE lesson_id=? AND status='sample' ORDER BY created_at DESC,rowid DESC LIMIT 1").get(id) as Revision | undefined;
     assert(row, 404, 'Bài học chưa được xuất bản.'); return row;
   }
 
   app.get('/api/health', (_req, res) => res.json({ ok: true, mode: options.localPreview ? 'local-preview' : 'live', aiEnabled: false }));
-  mountPodcasts(app, options.localPreview);
+  mountPodcasts(app, options.localPreview, options.podcastDirectory, options.releasePolicy);
   app.post('/api/auth/register', async (req, res) => {
     const input = registration.parse(req.body);
     if (!options.localPreview && !mailControl.reserve(input.email, res)) return;
@@ -163,14 +165,14 @@ export function createApp(db: Database, options: AppOptions) {
   app.get('/api/catalog', (_req, res) => {
     const rows = db.prepare('SELECT id FROM lessons').all() as { id: string }[];
     const lessons = rows.flatMap(row => {
-      try { const r = published(row.id), l = lessonSchema.parse(JSON.parse(r.content)); return [{ id: l.id, level: l.level, unit: l.unit, title: l.title, subtitle: l.subtitle, minutes: l.minutes, order: l.order, words: l.vocabulary.length, revisionId: r.id, preview: r.status === 'sample', humanReviewed: l.humanReviewed }]; }
+      try { const r = published(row.id), l = lessonSchema.parse(JSON.parse(r.content)); return [{ id: l.id, level: l.level, unit: l.unit, title: l.title, subtitle: l.subtitle, minutes: l.minutes, order: l.order, words: l.vocabulary.length, revisionId: r.id, preview: ['sample','beta'].includes(r.status), humanReviewed: l.humanReviewed }]; }
       catch (e) { if (e instanceof HttpError && e.status === 404) return []; throw e; }
     }).sort((a, b) => a.level - b.level || a.order - b.order);
-    res.json({ lessons, localPreview: options.localPreview });
+    res.json({ lessons, localPreview: options.localPreview, ...(options.releasePolicy?.betaPublicationApproved ? { releaseNotice: betaNotice } : {}) });
   });
   app.get('/api/lessons/:id', (req, res) => {
     const r = published(String(req.params.id));
-    res.json({ lesson: publicLesson(lessonSchema.parse(JSON.parse(r.content)), r.id, r.status === 'sample') });
+    res.json({ lesson: publicLesson(lessonSchema.parse(JSON.parse(r.content)), r.id, ['sample','beta'].includes(r.status)) });
   });
   app.post('/api/lessons/:id/submit', (req, res) => {
     const u = currentUser(req), input = submissionSchema.parse(req.body), lessonId = String(req.params.id);

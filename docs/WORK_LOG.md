@@ -545,3 +545,23 @@ MAIL-02 checkpoint 2026-10-21T10:15:32.3622909+07:00 : backend38/38 pass; SDK/te
 - Đã đọc SES Sydney Console: Sandbox/Healthy/200email24h/1emailgiây. Chưa gửi thử hoặc thaycloud/IAM/quota. Gmail người nhận chưa verified vẫn bị chặn cho đến khi AWS cấp production access.
 - Lint/full và lint2test mới exit0; unit39/39; E2E6/6 desktop/mobile; typecheck/build/smoke exit0; stagedGitleaks0finding. E2E lượt đầu4/6 do test đòi nút quay lại trong khi app đã chuyển login; sửa test, full rerun6/6, không sửa app để né test. E2E dùng SQLite synthetic riêng, unit DBmemory; không xóa/reset/chạm DB học viên.
 - Giữ amplify.yml baseDirectory:.next nguyên remote; frontendbuild không render lại media. Source/report/runbook docs/AUTH_EMAIL_RECOVERY.md và docs/reports/auth-email-recovery.json. Chưa push/deploy/backend email thật; chỉ sau xác nhận mới push. .codegraph untracked của chủ dự án giữ nguyên, không stage. Không còn test/build cần chờ.
+
+## PUB-03 — 2026-10-21T10:27:51.9842586+07:00
+Đã fetch origin/main=e12d719, không divergence/merge; origin đúng Private, .next khớp, Gitleaks allhistory exit0 và sensitive tracked paths chỉ .env.example. Pushmaster:main→099c26e exit0, remoteSHA khớp/Private. CI39538587917 đang chạy; AWS Console đọc Deployment4 cho đúng099c26e đang build. Không code/DB/Lightsail/IAM/SES write; checkpoint này local chưa push để tránh auto-build chỉ cho biên bản.
+
+## PUB-03 / D-050 — hoàn tất push và frontend deploy — 2026-10-21T10:29:41.6985611+07:00
+
+- Commit phát hành099c26e07cc07778607af4b06798698001b033a0 đã push lên flayingdance-tech/han-ngu-lab Private main, remoteSHA khớp. Fetch origin/main=e12d719 là ancestor, không merge/force/rewrite. amplify.yml baseDirectory:.next khớp nguyên remote. Gitleaks allreachable exit0, không track credentialCSV/populatedenv/DB/key, chỉ .env.example.
+- GitHub Actions39538587917 SUCCESS đúng099c26e: secrets/dependency audit/lint/unit39/build/typecheck/smoke đều đạt. https://github.com/flayingdance-tech/han-ngu-lab/actions/runs/39538587917.
+- AWS Amplify Sydney appd12mghkvifkghp/main Deployment4 Deployed / SUCCEED cho đúng099c26e (Console authenticated đọc chỉ, không redeploy/config write). Build2phút4giây, deploy22giây; UI duration còn cập nhật nên không dùng làm chuẩn SLA. https://main.d12mghkvifkghp.amplifyapp.com.
+- Chưa cập nhật backend Lightsail, SMTP env, IAM/SES, hoặc DB. Hướng dẫn docs/AUTH_EMAIL_RECOVERY.md: backup DB đúng quy trình, git pull --ff-only, đối chiếuSHA, cửa sổ bảo trì npmci/checks và restart đúng systemdservice, giữDATABASE_PATH/env. Kiểm IP thật Caddy/CDN, chỉ nhậnrecipient SESsandboxđãVerified cho đến AWSproductionaccess.
+- Kết quả/checkpoint này lưu local chưacommit/push để giữSHApháthành và tránh thêm auto-deploy biên bản. .codegraph untracked giữ nguyên. Không còn CI/build/deploy cần chờ. Bằng chứng .local/pre-github-audit/github-push-verification.json và auth-publication-result.json.
+
+## Production recovery bắt đầu — 2026-10-21T11:15:31.8335212+07:00
+HTTPจริง root200/healthlive200/catalog0/podcast404 qua Amplify và directCaddy. LocalreadOnlySQLite22lessons/42revisions(32sample10draft)/0published; canonical16seed/80exercises/94wordentries/145audioentries290MP3/7podcast14MP3/43segments, approved0. SSHCLI thiếuknownhost vàagent/config; không bỏhostkeycheck. BrowserLightsailđangmở, đã chọnAWSsession. Chờ quyết địnhowner về beta chưa duyệt và giấyphép piano; tiếp tục phầnđộc lập.
+
+## REC-01 checkpoint — 2026-10-21T11:45:13.1883341+07:00
+Production read-only: users3/lessons0/revisions0; serviceubuntu /usr/bin/node24.22 loopback3001. New importer/backup/release scripts, pending owner beta and piano rights (no reply). Unit43/43, lint/typecheck/Bash syntax passed; E2E isolated running session54278; new live beta test to run. No prod writes/push. Report PRODUCTION_FINAL_REPORT.md created. Next: finish tests/build/secrets, commit safe changes, CI/Amplify, backup and draft-only import unless owner enables beta.
+
+## REC-01 trước push — 2026-10-21T11:56:08.3842217+07:00
+Unit45/45; E2E26pass+2focus outdated lastbutton fixed and rerun2/2pass; lint/typecheck/build/smoke passed; production audit0 and historyGitleaks0. Scriptdeploy preflight backup restoreverified+draft importer+daily timer+code rollback prepared, Bash -n passed. AWSBilling due0/free176days13Apr2027/estimatedcredit197.84used2.16; SESfeedbackEnabled/suppressionBounceComplaintsEnabled, Requestproductiondisabled Domainverificationneeded. Pendingownerbeta/music, noreply; only draft import permitted. Next stagedsecretscan/privatecheck/pushCI and deploy. No prodDBchanges yet.

@@ -99,3 +99,7 @@ D-047 ACCEPTED 2026-10-21T00:28:07.8905748+07:00 : Tích hợp SES SMTP Sydney58
 D-048 ACCEPTED 2026-10-21T00:39:38.5050715+07:00 : Chủ dự án duyệt push57f3a3b, fetch/merge giữ lịch sử và amplify.yml baseDirectory:.next từ origin/main; không force/xóa; dừng trước push nếu conflict hoặc phải sửa Amplify. Theo dõi CI và Amplify auto-deploy nếu có; chưa backend Lightsail/credentials/DB/tài nguyên AWS.
 
 D-049 ACCEPTED 2026-10-21T10:03:49.6620411+07:00 : Sửa luồng verify/resend/login/register/forgot, chống enumeration/cooldown/throttling, trust proxy chỉ loopback Caddy; không xóa/reset dữ liệu, không học liệu/podcast; giữ Amplify .next, test và secret scan; phải xin trước push. Cloud hiện trạng do chủ dự án báo, chưa xác minh Sandbox phiên này.
+
+D-050 ACCEPTED 2026-10-21T10:27:51.9842586+07:00 : Chủ dự án duyệt push099c26e Private main, fetch/merge nếu cần/giữ .next/không force/không DB; dừng nếu conflict/testfail. Chỉ theo dõi CI và Amplify, không tự deploy Lightsail hoặc sửa IAM/SES. Fetch origin/main=e12d719 là ancestor, không merge; quét secret toàn reachable đạt, push099c26e thành công.
+
+D-051 ACCEPTED 2026-10-21T11:15:31.8335212+07:00 : Chủ dự án giao autonomous production recovery theo tệp8ea8029b, cho phép safe push/deploy/backup/idempotent import và kiểm cloud; giữAmplify.next, không thayDBbằnglocal/force/newpaidresources. Cần hỏi riêng credentials/MFA, quyềnnhạy cảm mới, giấyphép nội dung hoặc thayđổi bấtkhảphục. Chưa tự duyệthọc liệu/nhạc.

@@ -1,3 +1,10 @@
+## PUB-03 / D-050 — hoàn tất push và frontend deploy — 2026-10-21T10:29:41.6985611+07:00
+
+- Commit phát hành099c26e07cc07778607af4b06798698001b033a0 đã push lên flayingdance-tech/han-ngu-lab Private main, remoteSHA khớp. Fetch origin/main=e12d719 là ancestor, không merge/force/rewrite. amplify.yml baseDirectory:.next khớp nguyên remote. Gitleaks allreachable exit0, không track credentialCSV/populatedenv/DB/key, chỉ .env.example.
+- GitHub Actions39538587917 SUCCESS đúng099c26e: secrets/dependency audit/lint/unit39/build/typecheck/smoke đều đạt. https://github.com/flayingdance-tech/han-ngu-lab/actions/runs/39538587917.
+- AWS Amplify Sydney appd12mghkvifkghp/main Deployment4 Deployed / SUCCEED cho đúng099c26e (Console authenticated đọc chỉ, không redeploy/config write). Build2phút4giây, deploy22giây; UI duration còn cập nhật nên không dùng làm chuẩn SLA. https://main.d12mghkvifkghp.amplifyapp.com.
+- Chưa cập nhật backend Lightsail, SMTP env, IAM/SES, hoặc DB. Hướng dẫn docs/AUTH_EMAIL_RECOVERY.md: backup DB đúng quy trình, git pull --ff-only, đối chiếuSHA, cửa sổ bảo trì npmci/checks và restart đúng systemdservice, giữDATABASE_PATH/env. Kiểm IP thật Caddy/CDN, chỉ nhậnrecipient SESsandboxđãVerified cho đến AWSproductionaccess.
+- Kết quả/checkpoint này lưu local chưacommit/push để giữSHApháthành và tránh thêm auto-deploy biên bản. .codegraph untracked giữ nguyên. Không còn CI/build/deploy cần chờ. Bằng chứng .local/pre-github-audit/github-push-verification.json và auth-publication-result.json.
 ## MAIL-02 / D-049 — bản sửa cục bộ đã hoàn tất — 2026-10-21T10:21:14.3269697+07:00
 
 - CodeGraph dùng trước để đọc AuthPanel/client/app/email và quan hệ callers. AuthPanel có resend/cooldown, giữ email và xử lý429/503; API generic register201/resend-forgot200 kể cả SMTP lỗi, bảo toàn tài khoản/password cũ. Kiểm tra credentials đúng mới báo login chưa verified.
@@ -40,3 +47,5 @@ Checkpoint 2026-10-20T15:47:30.7933947+07:00, Asia/Bangkok (+07). Đọc PROJECT
 7. Backup mới70file podcast đã restore/hash khớp cùng máy (STATUS có đường dẫn); còn offsite và migration toàn bộ user/progress/content/media/auth/email. Runtime/model và DB không nằm đủ trong backup podcast.
 8. Giữ UI sáng; tối các tab khác giữ nữ lo-fi, chỉ ẩn trẻ chibi. D-042 khôi phục phụ đề 3 ngôn ngữ, podcast vẫn không ảnh. UI-05 cần asset gốc riêng nếu đòi trùng pixel collage.
 9. D-043 logs brand-* ghi typecheck/lint/unit22/E2E10/build/QA/ASR7tập/backup70file; ASR phải khớp SHA mix hiện hành. Bộ bài học290SHA và export không đổi. Không có tác vụ render/ASR/build còn chạy tại checkpoint. Kiểm PID web/API thật trước restart, không dump auth stdout.
+
+REC-01: hoàn thành kiểm thử local, chuẩn bị push/deploy draft-only bằng scripts/deploy-production.sh; xem PRODUCTION_FINAL_REPORT.md. Chờ owner chốt beta và quyền piano, không tự công khai. SES request hiện disabled do domain verification; không mua/nâng gói. Backup offsite chưa hoàn tất.

@@ -65,7 +65,7 @@ test('authentication dialog traps keyboard focus and returns focus on Escape',as
   const close=page.getByRole('button',{name:'Đóng đăng nhập'});
   await expect(close).toBeFocused();
   await page.keyboard.press('Shift+Tab');
-  await expect(page.getByRole('button',{name:'Quên mật khẩu?'})).toBeFocused();
+  await expect(page.getByRole('button',{name:'Gửi lại email xác minh',exact:true})).toBeFocused();
   await page.keyboard.press('Tab');
   await expect(close).toBeFocused();
   await page.keyboard.press('Escape');
