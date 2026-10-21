@@ -94,3 +94,21 @@ POD-04 v9 (2026-10-19T22:16:59.3083211+07:00): mẫu dẫn/kểchuyện87.060s,l
 | REC-03 | Gán Admin production và nghiệm thu CMS tài khoản thật | BLOCKED | Cần ownerchọn tài khoản;3learner/1verified, đãhỏi21Oct2026, khôngtựnângquyền. Sauchốtbackup+CLIgrant/audit/revokesession |
 | OPS-02 | Backup vận hành và bản ngoài AWS | DONE | Timerdailyenabled/active/jobactualsuccess, AES256GCMrestore/FK/inventory; offsiteWindowsactualdecryptmatch. Đồngbộoffsiteauto cònTODO, khônghứađãtựđộng |
 | MAIL-03 | SES production access | BLOCKED | SydneySandbox,ConsolebuttondisabledDomainverificationneeded; khôngdomainownerđãverify/khôngmua/nânggói, requestdraft sẵn |
+
+| PUB-04 | Đồng bộ biên bản và bộ kiểm thử cách ly | DONE | be8ebd8 Private main/CI39573514798 SUCCESS/Amplify8SUCCEED/VMFFclean/active, khôngrestartDBimport; CMSrunner2/2 đạt. REC03 chờ ownerchọnAdmin |
+
+
+| REC-03A | Cấp quyền Admin đã được owner chấp nhận | DONE | D054, uniqueverifiedactive đãroleadmin, revoke1session/audit/fieldkháckhôngđổi, before+afterbackuprestore/offsiteđạt; khôngđổipassword/code/cloudconfig |
+| REC-03B | Kiểm tra đăng nhập CMS bằng phiên thật của chủ dự án | TODO | Chủ dự án đăng nhập lại bằng mật khẩu hiện có; không mượn password/token hoặc mint phiên để giả lập owner |
+
+
+| REC-04 | Gửi yêu cầu email đặt lại mật khẩu Admin | DONE | APIforgotproduction200 lúc10:19:56Z, khônginPII/token và khôngđọclạipasswordbăm; chưađồngnghĩaxácnhậnhộpthưđãnhận, ownerdùnglink30phút |
+
+
+| ID | Trạng thái cập nhật 21/10/2026 (+07) | Điều kiện và bằng chứng |
+| --- | --- | --- |
+| REC-03B | DONE | Owner xác nhận CMS Admin login thật hoạt động |
+| REC-05 | DONE | SES Sydney GRANTED/ProductionAccessEnabledtrue; feedback simulator nhận cả bounce/complaint; adapter SMTP thật verify/reset accepted, xem SES_PRODUCTION_REQUEST |
+| REC-06 | DONE | ScheduledTask LastTaskResult0; archive ngoàiAWS SHA/decrypt/integrity/FK/inventory đạt; giới hạn PC on/login/Internet ghi runbook |
+| REC-07 | IN_PROGRESS | Chống forgedheaders đạt direct; peer Amplify ngoài CloudFront origin nên bucket chưa theo viewer. Phụ thuộc authenticated relay/ingress cần triển khai/test; không mở trust toànAWS |
+| REC-08 | IN_PROGRESS | Local lint/typecheck/49unit/build/smoke đạt; production16bài/7podcast/14MP3 SHA+Range đạt. Chờ stagedscan/push/CI/Amplify/VMFF |

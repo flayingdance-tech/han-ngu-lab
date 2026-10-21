@@ -109,3 +109,8 @@ D-052 ACCEPTED 2026-10-21T15:07:21.8981912+07:00: Chủ dự án chốt Public B
 
 ## D-053 — 2026-10-21T15:23:34.9482274+07:00 — Đã chốt
 Chủ dự án xác nhận tất cả quyền sử dụng/phân phối đã kiểm tra trước đó, không kiểm tra lại. Cho phép 16 bài, bộ A và 7 podcast theo D-052, giữ nguyên giọng và nhạc piano. D-053 thay thế các checkpoint còn chờ quyền; không đồng nghĩa duyệt chuyên môn.
+
+D-054 ACCEPTED 2026-10-21T16:46:42.3677431+07:00: Chủ dự án chấp nhận cấp quyền Admin (khôngsuper_admin) cho tài khoản production duy nhất đã xác minh email; dùng CLI hiện có, backup trước, thu hồi phiên và audit, giữ mật khẩu/dữ liệu khác.
+
+
+D-055 ACCEPTED 2026-10-21T19:49:43.3598763+07:00: Chủ dự án xác nhận CMS Admin login hoạt động, giao tiếp tục SES production access/API chính thức, kiểm bounce/complaint, IP thật và offsite tự động nếu không thêm chi phí. Giữ dữ liệu/resources/SMTP, không mua domain/nâng plan/newpaidresources/excessiveIAM. SES đãGRANTED; giới hạn IP Amplify vẫn chưa nghiệm thu đạt.

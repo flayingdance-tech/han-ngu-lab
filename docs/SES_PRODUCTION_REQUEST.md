@@ -1,4 +1,16 @@
-# SES Sydney — chuẩn bị xin production access
+# SES Sydney — Production access GRANTED
+
+Cập nhật **2026-10-21T19:44:38+07:00**: SESv2 `get-account` tại **ap-southeast-2** trả `ProductionAccessEnabled:true`, `ReviewDetails.Status:GRANTED`, `EnforcementStatus:HEALTHY`. Không nộp lại.
+
+- Nút Console bị disabled trong đường Get set up vì chưa có domain identity. API chính thức không bắt mua domain: dùng `aws sesv2 put-account-details`, mail type TRANSACTIONAL, website thật, được API chấp nhận (ban đầu PENDING, sau đó GRANTED). CloudShell bị account-verification chặn; dùng AWS CLI đăng nhập tạm cùng quyền Console hiện có, không thêm IAM/key/policy.
+- Chỉ có một email identity verified, feedback forwarding bật, chưa có domain/DKIM domain. Suppression tài khoản bật BOUNCE và COMPLAINT. Đã gửi success/bounce/complaint tới SES simulator và đọc được cả DSN bounce lẫn complaint trong đúng mailbox verified sender, marker chẩn đoán khớp. Không có dữ liệu học viên hoặc token trong thư thử.
+- Mô tả nộp đúng thực tế: miễn phí cho người lớn; verify/resend/reset do user yêu cầu; không marketing hoặc danh sách mua; giữ cooldown60giây/5lầngiờ theo hash recipient, IP limits, queue20 và1,1giây. Không nhận có SNS/webhook tự xử lý hoặc nhân sự trực liên tục. Người vận hành cần theo dõi feedback; simulator không chứng minh địa chỉ thật đã thêm suppression list.
+- Sau duyệt: adapter Nodemailer hiện có trên Lightsail dùng env production gửi verify và reset tới success simulator, cả hai SMTP587/STARTTLS accepted. Link chỉ là chẩn đoán, không phải token tài khoản; không sửa DB, không đọc/in/sửa SMTP secret. Admin login thật được chủ dự án xác nhận; chưa thay owner chạy đổi password thật.
+- AWS CLI sử dụng phiên tạm, không export credential. Giữ throttling hiện có; không tăng quota chỉ vì hết Sandbox. Theo dõi reputation/feedback, dừng gửi nếu bất thường.
+
+Nguồn: [SES Production](https://docs.aws.amazon.com/ses/latest/dg/request-production-access.html), [API CLI](https://docs.aws.amazon.com/cli/latest/reference/sesv2/put-account-details.html), [suppression](https://docs.aws.amazon.com/ses/latest/dg/sending-email-suppression-list.html).
+
+## Lịch sử trước khi nộp — đã được cập nhật bởi kết quả ở trên
 
 Trạng thái: **chưa nộp**. Yêu cầu chỉ cho email giao dịch, không marketing. Không gửi SMTP credentials hoặc danh sách tài khoản cho AWS support.
 

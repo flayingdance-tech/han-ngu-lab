@@ -1,0 +1,16 @@
+[Unit]
+Description=Refresh narrowly trusted CloudFront origin ranges
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/node /usr/local/lib/han-ngu-lab-backup/cloudfront-trust.mjs
+User=root
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/etc/caddy /var/lib/han-ngu-lab-proxy
+TimeoutStartSec=60

@@ -1,0 +1,15 @@
+{
+    servers {
+        import /etc/caddy/hnl-cloudfront-trust.caddy
+        trusted_proxies_strict
+        client_ip_headers X-Forwarded-For
+    }
+}
+
+54-253-61-113.sslip.io {
+    reverse_proxy 127.0.0.1:3001 {
+        header_up X-Forwarded-For {client_ip}
+        header_up -X-Real-IP
+        header_up -Forwarded
+    }
+}
