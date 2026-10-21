@@ -12,10 +12,12 @@ import { EmailDeliveryError, type SendMail, type MailPurpose } from './email';
 import { authMailControl, AUTH_MAIL_MESSAGE, AUTH_MAIL_WAIT_SECONDS } from './auth-mail';
 import { betaLessonAllowed, betaNotice, type ReleasePolicy } from './content-release';
 import { mountMediaEditorial, releasedPodcasts } from './media-editorial';
+import { applicationOrigins } from './origins';
+import { loginGuard } from './login-guard';
 
 type UserRow = { id: string; email: string; name: string; password: string; role: Role; verified: number; status: string; timezone: string; daily_goal: number };
 type Revision = { id: string; lesson_id: string; content: string; status: string; author_id: string; reviewer_id: string | null; created_at: number };
-export type AppOptions = { localPreview: boolean; origin: string; now?: () => number; sendMail?: SendMail; releasePolicy?: ReleasePolicy; podcastDirectory?: string };
+export type AppOptions = { localPreview: boolean; origin: string; stagingOrigin?: string; now?: () => number; sendMail?: SendMail; releasePolicy?: ReleasePolicy; podcastDirectory?: string };
 class HttpError extends Error { constructor(public status: number, message: string) { super(message); } }
 function assert(condition: unknown, status: number, message: string): asserts condition { if (!condition) throw new HttpError(status, message); }
 const userView = (u: UserRow): User => ({ id: u.id, email: u.email, name: u.name, role: u.role, verified: Boolean(u.verified), timezone: u.timezone, dailyGoal: u.daily_goal });
@@ -24,6 +26,7 @@ const loginSchema = z.object({ email: z.email().max(254).transform(s => s.toLowe
 const submissionSchema = z.object({ revisionId: z.string().max(100), idempotencyKey: z.uuid(), answers: z.record(z.string().max(80), z.string().max(1000)) }).strict();
 
 export function createApp(db: Database, options: AppOptions) {
+  const origins = options.localPreview ? new Set([options.origin]) : applicationOrigins(options.origin, options.stagingOrigin);
   if (!options.localPreview) {
     let validOrigin=false;
     try { const url=new URL(options.origin); validOrigin=url.protocol==='https:'&&url.origin===options.origin; } catch { /* Fail closed on invalid configuration. */ }
@@ -34,6 +37,7 @@ export function createApp(db: Database, options: AppOptions) {
   // Trust only one local hop, never arbitrary remote proxies or a forged leftmost IP.
   app.set('trust proxy', (ip: string, hop: number) => hop === 0 && ['127.0.0.1', '::1', '::ffff:127.0.0.1'].includes(ip));
   const mailControl = authMailControl(now);
+  const loginControl = loginGuard(now);
   app.locals.drainAuthMail = mailControl.drain;
   app.disable('x-powered-by');
   app.use(helmet({ contentSecurityPolicy: false, referrerPolicy:{policy:'no-referrer'} }));
@@ -42,7 +46,7 @@ export function createApp(db: Database, options: AppOptions) {
   // Same-origin JSON + custom-header checks defend cookie-auth writes against CSRF.
   app.use('/api', (req, _res, next) => {
     if (['POST', 'PATCH', 'PUT', 'DELETE'].includes(req.method)) {
-      if (req.get('Origin') !== options.origin || req.get('X-HNL-Client') !== 'web' || !req.is('application/json')) return next(new HttpError(403, 'Nguồn yêu cầu không hợp lệ.'));
+      if (!origins.has(req.get('Origin') ?? '') || req.get('X-HNL-Client') !== 'web' || !req.is('application/json')) return next(new HttpError(403, 'Nguồn yêu cầu không hợp lệ.'));
     }
     next();
   });
@@ -67,9 +71,10 @@ export function createApp(db: Database, options: AppOptions) {
     db.prepare('INSERT INTO tokens VALUES (?,?,?,?)').run(digest(raw), user, purpose, now() + 30 * 60_000);
     return raw;
   }
-  async function mail(email: string, purpose: MailPurpose, raw: string) {
+  async function mail(email: string, purpose: MailPurpose, raw: string, origin = options.origin) {
+    assert(origins.has(origin), 403, 'Nguồn email không hợp lệ.');
     // URL fragments are not sent in CDN/origin requests or access-log query strings.
-    const link = `${options.origin}/#${purpose}=${encodeURIComponent(raw)}`;
+    const link = `${origin}/#${purpose}=${encodeURIComponent(raw)}`;
     if (options.localPreview) return link;
     await mailControl.deliver(() => options.sendMail!(email, purpose, link));
     return undefined;
@@ -96,9 +101,9 @@ export function createApp(db: Database, options: AppOptions) {
       created = true;
     });
     let devLink: string | undefined;
-    if (options.localPreview && created) devLink = await mail(input.email, 'verify', issueToken(id, 'verify'));
+    if (options.localPreview && created) devLink = await mail(input.email, 'verify', issueToken(id, 'verify'), req.get('Origin'));
     else if (!options.localPreview) mailControl.dispatch(async () => {
-      if (created) await mail(input.email, 'verify', issueToken(id, 'verify'));
+      if (created) await mail(input.email, 'verify', issueToken(id, 'verify'), req.get('Origin'));
     });
     res.status(201).json({ message: AUTH_MAIL_MESSAGE, retryAfterSeconds: AUTH_MAIL_WAIT_SECONDS, ...(devLink ? { devLink } : {}) });
   });
@@ -111,11 +116,13 @@ export function createApp(db: Database, options: AppOptions) {
   });
   app.post('/api/auth/login', async (req, res) => {
     const input = loginSchema.parse(req.body);
+    if (!options.localPreview && !loginControl.reserve(input.email, res)) return;
     const u = db.prepare('SELECT * FROM users WHERE email=?').get(input.email) as UserRow | undefined;
     const dummy = 'scrypt:00112233445566778899aabbccddeeff:' + '00'.repeat(64);
     const valid = await checkPassword(input.password, u?.password ?? dummy);
     assert(u && valid && u.status === 'active', 401, 'Email hoặc mật khẩu chưa đúng.');
     assert(u.verified, 403, 'Hãy xác minh email trước khi đăng nhập.');
+    loginControl.success(input.email);
     const raw = token();
     db.prepare('DELETE FROM sessions WHERE expires_at<?').run(now());
     db.prepare('INSERT INTO sessions VALUES (?,?,?)').run(digest(raw), u.id, now() + 7 * 86400000);
@@ -130,8 +137,8 @@ export function createApp(db: Database, options: AppOptions) {
     if (!options.localPreview && !mailControl.reserve(email, res)) return;
     const u = db.prepare("SELECT id FROM users WHERE email=? AND status='active'").get(email) as { id: string } | undefined;
     let devLink: string | undefined;
-    if (options.localPreview && u) devLink = await mail(email, 'reset', issueToken(u.id, 'reset'));
-    else if (!options.localPreview) mailControl.dispatch(async () => { if (u) await mail(email, 'reset', issueToken(u.id, 'reset')); });
+    if (options.localPreview && u) devLink = await mail(email, 'reset', issueToken(u.id, 'reset'), req.get('Origin'));
+    else if (!options.localPreview) mailControl.dispatch(async () => { if (u) await mail(email, 'reset', issueToken(u.id, 'reset'), req.get('Origin')); });
     res.json({ message: AUTH_MAIL_MESSAGE, retryAfterSeconds: AUTH_MAIL_WAIT_SECONDS, ...(devLink ? { devLink } : {}) });
   });
   app.post('/api/auth/resend-verification', async (req, res) => {
@@ -139,8 +146,8 @@ export function createApp(db: Database, options: AppOptions) {
     if (!options.localPreview && !mailControl.reserve(email, res)) return;
     const u = db.prepare("SELECT id FROM users WHERE email=? AND verified=0 AND status='active'").get(email) as { id: string } | undefined;
     let devLink: string | undefined;
-    if (options.localPreview && u) devLink = await mail(email, 'verify', issueToken(u.id, 'verify'));
-    else if (!options.localPreview) mailControl.dispatch(async () => { if (u) await mail(email, 'verify', issueToken(u.id, 'verify')); });
+    if (options.localPreview && u) devLink = await mail(email, 'verify', issueToken(u.id, 'verify'), req.get('Origin'));
+    else if (!options.localPreview) mailControl.dispatch(async () => { if (u) await mail(email, 'verify', issueToken(u.id, 'verify'), req.get('Origin')); });
     res.json({ message: AUTH_MAIL_MESSAGE, retryAfterSeconds: AUTH_MAIL_WAIT_SECONDS, ...(devLink ? { devLink } : {}) });
   });
   app.post('/api/auth/reset', async (req, res) => {

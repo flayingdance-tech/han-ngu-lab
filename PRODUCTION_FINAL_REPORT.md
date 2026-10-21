@@ -1,5 +1,25 @@
 ## REC-03 / D-054 — cấp Admin production — 2026-10-21T16:46:42.3677431+07:00
 
+## REC-07 — chờ phê duyệt thay đổi đường phục vụ — 2026-10-21T20:43:31.9102473+07:00
+
+- Yêu cầu mới mục9–10 giới hạn tự chủ: không đổi kiến trúc khi chưa duyệt; nếu rewrite không có giải pháp an toàn thì báo phương án nhỏ nhất và dừng trước thực hiện. Chưa thay mã/runtime/config/cloud, chưa push/deploy trong lượt này.
+- Đọc CodeGraph app/auth-mail/nextconfig; đối chiếu SSH actual Caddy/HEAD1fab4bb/servicesactive với bằng chứng HMAC Windows+VM trước. Ranh giới hỏng ở external-rewrite proxy peer ngoài CloudFront origin trust, không phải Express hop0. Bucket sai/gộp và đổi giữa request; không nhận forgedXFF đã lấy được IP tùy chọn.
+- AWS CustomRule schema không có origin auth/signing field; customHeaders chỉ response. Static export không có runtime relay. Tài liệu Amplify managedSSR chỉ công bố tớiNext15, repoNext16.4.2; không tự chuyển SSR hoặc downgrade để thử production.
+- Phương án đề nghị nhỏ nhất: frontend tĩnh+API same-origin trên Caddy/Lightsail/HTTPS hostname hiện có, không thêmAWSresource; giữAmplify rollback. Cần owner chấp thuận đổiURLchính, đăngnhậplại do cookiekhácdomain, APP_ORIGIN/redirectemailcũ và trafficfrontendtrênVM. Chưa cấu hình hoặc cutover.
+- Chi tiết xác thực nguồn IP, bảo vệ email/account, nghiệm thu hai mạng sau sửa và rollback không đèDB: docs/REC07_CLIENT_IP_DECISION.md. Phương án giữ URLAmplify cần authenticated server relay lớn hơn và xác minh tương thích riêng, chưa cam kết hoạt động.
+- Readonlyproduction20:40 (+07): healthtrue/16bài/7podcast; Caddy/API/backup/rangetimeractive. Không chạmDB/SMTP/SES/media/CMS/backups, không mở endpointprobe. Không chạy lại bộtest cũ hoặc tuyên bố đã nghiệm thu mới.
+- REC-07 IN_PROGRESS, phụ thuộc quyết định origin/kiến trúc của chủ dự án; chưaDONE. Lượt sau chỉ triển khai phương án được chấp thuận; giữ toàn bộ thay đổi hồ sơ local chưapush, .codegraph owneruntracked nguyên.
+
+## REC-08 — đồng bộ hoàn tất — 2026-10-21T20:15:27.5757022+07:00
+
+- Commit **1fab4bb6c02920a75bfc3ec136f210caf30fdf71** đã Private main, remote SHA khớp; fetch/ancestor an toàn, không merge/force. amplify.yml baseDirectory:.next giữ nguyên. Staged và48commit reachable Gitleaks0finding.
+- GitHub Actions **39602877223 SUCCESS**, https://github.com/flayingdance-tech/han-ngu-lab/actions/runs/39602877223 . Amplify Sydney **Deployment9 SUCCEED** đúngSHA. Không chạy lại bộ test đã đạt theo yêu cầu đẩy nhanh tiến độ; chỉ kiểm CI/deploy và health/catalog sau triển khai.
+- VM be8→1fab FF bằng bundleSHA256 **1f51dd1d1b86a9478365e1323754e3adaa2c0c5480fe2bb54d66b526da3fd8f8**, prerequisite/HEAD/clean/whitelist kiểm trước; installed root exporter/range refresher SHA khớp sourceGit. Không npmci/restartAPI/import/DB/media. Caddy/API/2timer active.
+- Production20:14 (+07): frontend200, healthliveOK,16bài/7podcast. Trước đồng bộ14podcast MP3 SHA+Range206 đã đạt; không lặp tải lại. Local typecheck/lint49tests/build/smoke và CI đạt.
+- **SES Production đãGRANTED; offsite tự động đã chạy/restore thật; Admin được owner xác nhận. REC-07 vẫn IN_PROGRESS:** Amplify rewrite peer không có danh tính origin đã xác minh, không có IP thật an toàn từ header hiện có. Cần authenticated relay/ingress và nghiệm thu riêng, không trust mọiAWS. Không coi nângCaddy đã giải quyết điểm này. Không thay routing/API bằng kiến trúc mới chưa nghiệm thu trong mốc này.
+- AWS CLI temporarylogin đã logout/xóa cachedlogin profile, không thêm quyền/IAM. Không mua/nâng plan/tạo paidresources/đổiSMTP. Không có việc deploy/test/probe đang chạy.
+- Kết quả cuối này lưu local trong hồ sơ bàn giao, không push thêm chỉ để kích hoạt lại build biên bản. .codegraph owner giữ nguyên untracked. Bước tiếp theo chỉ REC-07 (relay có xác thực), sau đó đánh giá lại production readiness; học liệu beta vẫn chưa duyệt chuyên môn.
+
 ## REC-05–07 — sản xuất, SES và offsite — 2026-10-21T19:49:43.3598763+07:00
 
 - Chủ dự án xác nhận CMS Admin login thật hoạt động; REC-03B DONE theo xác nhận owner. Không cần reset mật khẩu hoặc nâng thêm quyền.

@@ -112,3 +112,9 @@ POD-04 v9 (2026-10-19T22:16:59.3083211+07:00): mẫu dẫn/kểchuyện87.060s,l
 | REC-06 | DONE | ScheduledTask LastTaskResult0; archive ngoàiAWS SHA/decrypt/integrity/FK/inventory đạt; giới hạn PC on/login/Internet ghi runbook |
 | REC-07 | IN_PROGRESS | Chống forgedheaders đạt direct; peer Amplify ngoài CloudFront origin nên bucket chưa theo viewer. Phụ thuộc authenticated relay/ingress cần triển khai/test; không mở trust toànAWS |
 | REC-08 | IN_PROGRESS | Local lint/typecheck/49unit/build/smoke đạt; production16bài/7podcast/14MP3 SHA+Range đạt. Chờ stagedscan/push/CI/Amplify/VMFF |
+
+REC-08 DONE 2026-10-21T20:15:27.5757022+07:00: commit1fab4bb, CI39602877223SUCCESS, Amplify9SUCCEED, VMFF/installedSHA/health đạt. REC-07 vẫnIN_PROGRESS như PRODUCTION_OPS_RECOVERY; không tuyên bố allproductionblockerscomplete.
+
+REC-07 IN_PROGRESS 2026-10-21T20:43:31.9102473+07:00: Rootcause/trustboundary xácđịnh, existingrewrite không có authenticated originheader qua cấu hình công bố; chờ owner duyệt origin/architecture theo mục9–10. Chưacode/deploy/postfixmulticlient; chưaDONE.
+
+REC-07 APPROVED / D-057 2026-10-21T21:02:27.2328209+07:00 : Owner phê duyệt staged single-Lightsail, chỉcutoversau verification, giữAmplifyrollback, trustTCPonly, test2networks+forged+auth/CMS/content/SES/persistence; oldAPIkhôngbypass; rollbackconfigkhôngSQLite; khôngpaidresources. Đang staging exact2origin, loginemailhashguard10/15min, Caddypublicbuild riêng. Local check51tests/lint/typecheck/build vàsmoke đạt; chưadeploy/cutover.

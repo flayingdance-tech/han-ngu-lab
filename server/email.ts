@@ -1,6 +1,7 @@
 import nodemailer, { type SendMailOptions } from 'nodemailer';
 import type SMTPTransport from 'nodemailer/lib/smtp-transport';
 import { z } from 'zod';
+import { applicationOrigins } from './origins';
 
 export const SES_SMTP_HOST = 'email-smtp.ap-southeast-2.amazonaws.com';
 export type MailPurpose = 'verify' | 'reset';
@@ -28,10 +29,9 @@ export function createSesMailer(env: Record<string, string | undefined>, factory
   const username = env.SMTP_USERNAME;
   const password = env.SMTP_PASSWORD;
   const from = env.SMTP_FROM_EMAIL?.trim();
-  let origin: URL;
+  let origins: Set<string>;
   try {
-    origin = new URL(env.APP_ORIGIN ?? '');
-    if (origin.protocol !== 'https:' || origin.origin !== env.APP_ORIGIN) throw new Error();
+    origins = applicationOrigins(env.APP_ORIGIN ?? '', env.APP_STAGING_ORIGIN);
     if (!username || !password || /[\r\n\0]/.test(username + password) || !from || !z.email().safeParse(from).success || /[\r\n]/.test(from)) throw new Error();
   } catch {
     throw new Error('Production email yêu cầu APP_ORIGIN HTTPS hợp lệ, SMTP_USERNAME, SMTP_PASSWORD và SMTP_FROM_EMAIL hợp lệ.');
@@ -48,7 +48,7 @@ export function createSesMailer(env: Record<string, string | undefined>, factory
     try {
       if (!z.email().safeParse(email).success || /[\r\n]/.test(email) || !['verify', 'reset'].includes(purpose)) throw new Error();
       const url = new URL(link), params = new URLSearchParams(url.hash.slice(1));
-      if (url.origin !== origin.origin || url.pathname !== '/' || url.search || !params.get(purpose) || [...params.keys()].length !== 1) throw new Error();
+      if (!origins.has(url.origin) || url.pathname !== '/' || url.search || !params.get(purpose) || [...params.keys()].length !== 1) throw new Error();
       const verify = purpose === 'verify';
       await transport.sendMail({
         from: { name: 'Hán Ngữ Lab', address: from }, to: { address: email, name: '' },

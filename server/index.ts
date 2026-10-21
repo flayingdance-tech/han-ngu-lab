@@ -16,7 +16,7 @@ const sendMail = localPreview ? undefined : createSesMailer(process.env);
 const db = openDatabase(process.env.DATABASE_PATH ?? '.local/hanngulab.sqlite');
 if (localPreview) seedPreview(db);
 const releasePolicy = releasePolicySchema.parse(releasePolicyInput);
-const app = createApp(db, { localPreview, origin: process.env.APP_ORIGIN ?? 'http://localhost:3000', sendMail, releasePolicy, podcastDirectory: process.env.PODCAST_DIRECTORY });
+const app = createApp(db, { localPreview, origin: process.env.APP_ORIGIN ?? 'http://localhost:3000', stagingOrigin: process.env.APP_STAGING_ORIGIN, sendMail, releasePolicy, podcastDirectory: process.env.PODCAST_DIRECTORY });
 const output = resolve('out');
 if (existsSync(output)) app.use(express.static(output, { extensions: ['html'] }));
 const server = app.listen(Number(process.env.PORT ?? 3001), host, () => console.log(`Hán Ngữ Lab API: http://${host}:${process.env.PORT ?? 3001} (${localPreview ? 'LOCAL PREVIEW — email mô phỏng, học liệu chưa duyệt' : 'production'})`));

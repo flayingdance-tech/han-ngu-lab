@@ -1,15 +1,31 @@
-{
-    servers {
-        import /etc/caddy/hnl-cloudfront-trust.caddy
-        trusted_proxies_strict
-        client_ip_headers X-Forwarded-For
-    }
-}
-
 54-253-61-113.sslip.io {
-    reverse_proxy 127.0.0.1:3001 {
-        header_up X-Forwarded-For {client_ip}
-        header_up -X-Real-IP
-        header_up -Forwarded
+    header -Server
+    @private path /.env /.env.* /.git /.git/* /.local /.local/* /server/* /scripts/* /docs/* /content/*
+    handle @private {
+        respond 404
+    }
+    handle /__legacy_api_retired {
+        header Cache-Control "no-store"
+        respond "Legacy API retired. Open the canonical website." 410
+    }
+    handle /api/* {
+        reverse_proxy 127.0.0.1:3001 {
+            header_up X-Forwarded-For {http.request.remote.host}
+            header_up X-Forwarded-Proto https
+            header_up X-Forwarded-Host {http.request.host}
+            header_up -X-Real-IP
+            header_up -Forwarded
+            header_up -CF-Connecting-IP
+            header_up -CloudFront-Viewer-Address
+            header_up -True-Client-IP
+        }
+    }
+    handle {
+        root * /srv/han-ngu-lab/current
+        header Cache-Control "no-cache"
+        header Referrer-Policy "no-referrer"
+        header X-Content-Type-Options "nosniff"
+        header X-Frame-Options "DENY"
+        file_server
     }
 }
