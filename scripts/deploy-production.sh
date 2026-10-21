@@ -66,6 +66,7 @@ failed() {
 trap failed ERR
 # Stage only trusted backup code from the exact fetched commit, before touching the checkout.
 git archive "$TARGET" server/operations-backup.ts scripts/operations-backup.ts | tar -x -C "$WORK"
+printf '%s\n' '{"type":"module"}' > "$WORK/package.json"
 if ! sudo -n test -e "$KEY"; then
   sudo -n "$NODE" -e 'const f=require("fs"),c=require("crypto");f.writeFileSync(process.argv[1],c.randomBytes(32),{flag:"wx",mode:0o600})' "$KEY"
 fi
@@ -149,6 +150,6 @@ sudo -n systemctl is-active --quiet han-ngu-lab-backup.timer
 echo "DEPLOY_OK commit=$TARGET previous=$OLD backup=$MANIFEST"
 echo 'Keep the encryption key in a separate safe location and copy encrypted backups off this VM. Offsite backup is not automated.'
 # Cleanup only explicitly created files, never a recursive or computed-source delete.
-rm -f "$WORK/server/operations-backup.ts" "$WORK/scripts/operations-backup.ts" "$WORK/backup.json" "$WORK/backup.service" "$WORK/backup.timer" "$WORK/operations-backup.mjs" "$WORK/run-backup.mjs"
+rm -f "$WORK/server/operations-backup.ts" "$WORK/scripts/operations-backup.ts" "$WORK/package.json" "$WORK/backup.json" "$WORK/backup.service" "$WORK/backup.timer" "$WORK/operations-backup.mjs" "$WORK/run-backup.mjs"
 rmdir "$WORK/server" "$WORK/scripts"
 cleanup

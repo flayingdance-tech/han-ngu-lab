@@ -13,7 +13,7 @@ export const releasePolicySchema = z.object({
   for (const key of ['lessonIds', 'podcastIds'] as const) if (new Set(policy[key]).size !== policy[key].length) ctx.addIssue({ code: 'custom', message: 'Duplicate release IDs' });
 });
 export type ReleasePolicy = z.infer<typeof releasePolicySchema>;
-export const betaNotice = 'Bản thử nghiệm · Học liệu và âm đọc chưa được duyệt chuyên môn độc lập. Thư viện hiện có chưa phải giáo trình HSK 4 hoàn chỉnh.';
+export const betaNotice = 'Bản thử nghiệm — Chưa duyệt. Học liệu và âm đọc chưa được duyệt chuyên môn độc lập. Thư viện hiện có chưa phải giáo trình HSK 4 hoàn chỉnh.';
 export const betaLessonAllowed = (policy: ReleasePolicy | undefined, id: string) => Boolean(policy?.betaPublicationApproved && policy.approvedAt && policy.lessonIds.includes(id));
 const hash = (value: string) => createHash('sha256').update(value).digest('hex');
 
@@ -28,10 +28,10 @@ export function importExistingLessons(db: Database, input: Lesson[], policyInput
     const revisionId = `release-${status}-${lesson.id}-${hash(content).slice(0, 16)}`;
     const existing = db.prepare('SELECT id,published_revision_id FROM lessons WHERE id=?').get(lesson.id) as { id: string; published_revision_id: string | null } | undefined;
     const revision = db.prepare('SELECT content,status,author_id FROM revisions WHERE id=?').get(revisionId);
-    if (revision && (revision.content !== content || revision.status !== status || revision.author_id !== author)) throw new Error('Immutable release revision collision');
+    if (revision && (revision.content !== content || ![status, ...(status === 'beta' ? ['beta_archived'] : [])].includes(String(revision.status)) || revision.author_id !== author)) throw new Error('Immutable release revision collision');
     const current = existing?.published_revision_id ? db.prepare('SELECT status,author_id FROM revisions WHERE id=?').get(existing.published_revision_id) : undefined;
     // Never replace an independently published lesson or another editor's publication.
-    const canPublish = status === 'beta' && (!existing?.published_revision_id || current?.status === 'beta' && current.author_id === author);
+    const canPublish = status === 'beta' && revision?.status !== 'beta_archived' && (!existing?.published_revision_id || current?.status === 'beta' && current.author_id === author);
     return { lesson, content, status, revisionId, newLesson: !existing, newRevision: !revision, publish: canPublish && existing?.published_revision_id !== revisionId, protectedPublication: status === 'beta' && !canPublish };
   });
   const summary = { lessons: lessons.length, newLessons: plan.filter(p => p.newLesson).length, newRevisions: plan.filter(p => p.newRevision).length, betaPointers: plan.filter(p => p.publish).length, protectedPublications: plan.filter(p => p.protectedPublication).length, humanReviewChanged: false, userDataChanged: false, applied: apply };

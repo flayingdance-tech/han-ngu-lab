@@ -572,3 +572,20 @@ Push60c713e03db605948d23925df1e9d4f9aa2c94f7 Private main; CI39546789335 SUCCESS
 
 ## REC-01 GitHub SSH blocker — 2026-10-21T12:03:18.8439288+07:00
 VM fetch failed Permissiondeniedpublickey; bootstrap stopped beforebackup/service/DB. Clipboard paste verified with harmlessHNL_CLIPBOARD_OK. Implemented optional verifiedGitbundle path (exactHEAD/prerequisites/fullSHA), preservingmainhistory/remotes and avoidingnewkeys/tokens. Next pushfallbackscript, CI, transferbundle viaexistingbrowserSSH, compareSHA256, runbackup/import. No credentials copied.
+
+REC-01 2026-10-21T12:05:12.9692109+07:00: fallback2b3ab0f1200a8d842d307227a0b937039864f147 pushedPrivate; CI39547427368 pending. Bundle36329bytes, SHA256997f47a1ac57f7ee47db276e3aa3d0ab3b73532ed7df43ba2c628f8985c2b53a, HEAD2b3/prerequisite099 verifiedlocal, sentviaexistingbrowserSSH (nonsecretcommittedsource). WaitingremotebundleverifybeforeDBmutation. No credentials/newaccess.
+
+
+REC-01/D-052 2026-10-21T15:07:21.9337859+07:00: Đã nhận chốtbeta; lyrics/piano rights vẫnunverified nên7podcast khôngpublic. ModelcardKokoro official Apache2 + Chinese datasetpermissive, canonical16bài nội dunggốctrợlý chưa duyệt. Serverstill099cactive/clean mớiđốichiếu; chuyểnGitbundlecodequaSSHexisting, khôngnewkey/token. Cần hoànthiệnCMSbeta/media, tests/deploy/audio productionproof.
+
+REC-01 2026-10-21T15:23:34.9482274+07:00: SSH CLI đã xác minh ED25519 qua Console, ACL khóa riêng đã hạn chế; không đọc key. Production backup WAL-safe AES256GCM lúc2026-10-21T08:18:43.446Z, file20261021T081843Z-be8fb6c5.sqlite.enc, checksum e5c1270eacbdd98be556abef4be4f6bd385cece1281053233a2cc278b6d3b1b3, restore/integrity đạt; users3/sessions1/tokens2/consent3, học liệu0. Deployment dừng trước stop/merge/import do backup temp thiếu packageESM; bản sửa đang local, server vẫn099. D-053 đủ quyền beta+nhạc; bước tiếp theo offsite/restore/CMS/tests/push/deploy.
+
+
+REC-01 2026-10-21T15:36:54.6025050+07:00: Production backup đã copy mã hóa ra Windows ngoài AWS, key ở thư mục riêng ACL chỉ currentuser+SYSTEM. Giải mã từ bản offsite sang file SQLite riêng, integrity/FK và inventory khớp (3users/1session/2tokens/3consent), xóa file restore tạm; không in dữ liệu/key. Đã bỏ bản key trung chuyển trên VM, giữ key gốc root600. MediaCMS 152items/immutable revisions, beta withdraw/reimport/rollback, independentreview, protectedpreview; unit47/47 đạt. Regression standalone backup phát hiện Windows --import cần fileURL, đã sửa test; lỗi deploy tempESM đã có test bảo vệ. E2E đang chạy lại sau sửa JSON import của Playwright; chưa rolloutbeta.
+
+## REC-01 / D-052–D-053 — 2026-10-21T15:42:51.5752606+07:00
+
+- Chủ dự án chốt Public Beta và xác nhận toàn bộ quyền đã kiểm tra: phát hành16bài/145âmA/7podcast, nguyên giọng/nhạc. Nhãn Bản thử nghiệm — Chưa duyệt, không cam kết đủHSK4/humanreview.
+- MediaCMS152mục + revision immutable, independentreview, protectedpreview, withdraw/rollback; lessonbeta tương tự. Rerunimport không tự hồi nội dung đã thu hồi; JSONbackup hỗ trợ media và beta.
+- Unit47/47, E2E18/18 desktop/mobile(audio/podcast/captions/CMS), lint/typecheck/build/smoke/audit0/Bashsyntax đạt. Chưa tuyên bố rolloutbeta xong; bước kế là stagedsecret→pushPrivate→CI/Amplify→GitbundleSSH→freshbackup/import/timer→HTTP/mediahash/playback production.
+- Productionencryptedbackup đã restore thật và copy ngoàiAWS tớiWindowsACLprivate, keyseparate, offsite decrypt/integrity/inventory khớp3users/1session/2tokens/3consent. VM vẫn099c26eactive. SES cònSandbox/requestdisabled; không mua/domain/upgrade. Xem PUBLIC_BETA_OPERATIONS và PRODUCTION_FINAL_REPORT.

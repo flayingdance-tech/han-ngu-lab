@@ -1,3 +1,9 @@
+## REC-01 / D-052–D-053 — 2026-10-21T15:42:51.5752606+07:00
+
+- Chủ dự án chốt Public Beta và xác nhận toàn bộ quyền đã kiểm tra: phát hành16bài/145âmA/7podcast, nguyên giọng/nhạc. Nhãn Bản thử nghiệm — Chưa duyệt, không cam kết đủHSK4/humanreview.
+- MediaCMS152mục + revision immutable, independentreview, protectedpreview, withdraw/rollback; lessonbeta tương tự. Rerunimport không tự hồi nội dung đã thu hồi; JSONbackup hỗ trợ media và beta.
+- Unit47/47, E2E18/18 desktop/mobile(audio/podcast/captions/CMS), lint/typecheck/build/smoke/audit0/Bashsyntax đạt. Chưa tuyên bố rolloutbeta xong; bước kế là stagedsecret→pushPrivate→CI/Amplify→GitbundleSSH→freshbackup/import/timer→HTTP/mediahash/playback production.
+- Productionencryptedbackup đã restore thật và copy ngoàiAWS tớiWindowsACLprivate, keyseparate, offsite decrypt/integrity/inventory khớp3users/1session/2tokens/3consent. VM vẫn099c26eactive. SES cònSandbox/requestdisabled; không mua/domain/upgrade. Xem PUBLIC_BETA_OPERATIONS và PRODUCTION_FINAL_REPORT.
 ## PUB-03 / D-050 — hoàn tất push và frontend deploy — 2026-10-21T10:29:41.6985611+07:00
 
 - Commit phát hành099c26e07cc07778607af4b06798698001b033a0 đã push lên flayingdance-tech/han-ngu-lab Private main, remoteSHA khớp. Fetch origin/main=e12d719 là ancestor, không merge/force/rewrite. amplify.yml baseDirectory:.next khớp nguyên remote. Gitleaks allreachable exit0, không track credentialCSV/populatedenv/DB/key, chỉ .env.example.

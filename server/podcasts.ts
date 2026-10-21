@@ -2,17 +2,18 @@ import { existsSync, readFileSync, lstatSync, realpathSync } from 'node:fs';
 import { resolve, basename, dirname } from 'node:path';
 import { createHash } from 'node:crypto';
 import type { Express } from 'express';
-import { podcastCatalogSchema } from '../lib/podcast';
+import { podcastCatalogSchema, type PodcastCatalog } from '../lib/podcast';
 import type { ReleasePolicy } from './content-release';
 
 // Production media must have a separate release manifest; local drafts stay private.
-export function mountPodcasts(app:Express,localPreview:boolean,directory=resolve(localPreview?'.local/podcasts/rendered':'media/podcasts'),policy?:ReleasePolicy){
+export function mountPodcasts(app:Express,localPreview:boolean,directory=resolve(localPreview?'.local/podcasts/rendered':'media/podcasts'),policy?:ReleasePolicy,editorial?:(base:PodcastCatalog)=>PodcastCatalog|null){
   const checked = new Map<string, { size:number;mtime:number;ctime:number;sha:string }>();
   function catalog(){
     const file=resolve(directory,'catalog.json');
     if(!existsSync(file))return null;
-    const data=podcastCatalogSchema.parse(JSON.parse(readFileSync(file,'utf8')));
+    let data=podcastCatalogSchema.parse(JSON.parse(readFileSync(file,'utf8')));
     if(localPreview)return data;
+    if(editorial){const released=editorial(data);if(!released)return null;data=released;}
     if(data.music.license==='owner-supplied'&&!(policy?.betaPublicationApproved&&policy.approvedAt&&policy.musicDistribution==='owner-authorized'))return null;
     const episodes=data.episodes.filter(e=>e.review==='approved'||policy?.betaPublicationApproved&&policy.approvedAt&&policy.podcastIds.includes(e.id));
     return episodes.length?{...data,episodes}:null;

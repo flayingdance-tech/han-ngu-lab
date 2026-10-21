@@ -9,5 +9,5 @@ export function publicPodcastRelease(input: unknown, policyInput: unknown): Podc
   if (policy.musicDistribution === 'voice-only') {
     return podcastCatalogSchema.parse({ ...catalog, music: { title: 'Không nhạc nền', author: 'Hán Ngữ Lab', license: 'none', changes: 'Giữ nguyên file giọng đọc gốc; không phân phối nhạc nền.' }, episodes: episodes.map(ep => ({ ...ep, assets: { voice: ep.assets.voice, mix: ep.assets.voice } })) });
   }
-  return { ...catalog, episodes };
+  return { ...catalog, episodes, music:catalog.music.license==='owner-supplied'?{...catalog.music,rightsStatus:'owner-confirmed'}:catalog.music };
 }

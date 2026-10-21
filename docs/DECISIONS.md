@@ -103,3 +103,9 @@ D-049 ACCEPTED 2026-10-21T10:03:49.6620411+07:00 : Sửa luồng verify/resend/l
 D-050 ACCEPTED 2026-10-21T10:27:51.9842586+07:00 : Chủ dự án duyệt push099c26e Private main, fetch/merge nếu cần/giữ .next/không force/không DB; dừng nếu conflict/testfail. Chỉ theo dõi CI và Amplify, không tự deploy Lightsail hoặc sửa IAM/SES. Fetch origin/main=e12d719 là ancestor, không merge; quét secret toàn reachable đạt, push099c26e thành công.
 
 D-051 ACCEPTED 2026-10-21T11:15:31.8335212+07:00 : Chủ dự án giao autonomous production recovery theo tệp8ea8029b, cho phép safe push/deploy/backup/idempotent import và kiểm cloud; giữAmplify.next, không thayDBbằnglocal/force/newpaidresources. Cần hỏi riêng credentials/MFA, quyềnnhạy cảm mới, giấyphép nội dung hoặc thayđổi bấtkhảphục. Chưa tự duyệthọc liệu/nhạc.
+
+D-052 ACCEPTED 2026-10-21T15:07:21.8981912+07:00: Chủ dự án chốt Public Beta (Unreviewed), nhãn chính xác Bản thử nghiệm — Chưa duyệt; chỉ phát hành16bài/bộA/7podcast sau xác minh quyền. Nội dung/quyền nhạc chưa rõ giữprivateCMS; không tự đổi giọng/nhạc hoặc nhận đủHSK4. Admin phải có review/edit/approve/unpublish/rollback; tiếp tụcAWS tự chủ trongngân sách, giữuserDB/credentials.
+
+
+## D-053 — 2026-10-21T15:23:34.9482274+07:00 — Đã chốt
+Chủ dự án xác nhận tất cả quyền sử dụng/phân phối đã kiểm tra trước đó, không kiểm tra lại. Cho phép 16 bài, bộ A và 7 podcast theo D-052, giữ nguyên giọng và nhạc piano. D-053 thay thế các checkpoint còn chờ quyền; không đồng nghĩa duyệt chuyên môn.

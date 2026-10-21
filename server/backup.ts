@@ -3,16 +3,18 @@ import { z } from 'zod';
 import { type Database, transaction } from './database';
 
 const tables = ['users', 'consent', 'lessons', 'revisions', 'attempts', 'progress', 'reviews', 'review_events', 'audit', 'deletion_requests'] as const;
+const extendedTables = [...tables,'media_items','media_revisions'] as const;
 const exportSchema = z.object({ version: z.literal(1), createdAt: z.string(), tables: z.record(z.string(), z.array(z.record(z.string(), z.union([z.string(), z.number(), z.null()])))) });
 export function exportDatabase(db: Database) {
-  return transaction(db, () => ({ version: 1 as const, createdAt: new Date().toISOString(), tables: Object.fromEntries(tables.map(t => [t, db.prepare(`SELECT * FROM ${t}`).all()])) }));
+  return transaction(db, () => ({ version: 1 as const, createdAt: new Date().toISOString(), tables: Object.fromEntries(extendedTables.map(t => [t, db.prepare(`SELECT * FROM ${t}`).all()])) }));
 }
 export function restoreDatabase(db: Database, input: unknown) {
   const data = exportSchema.parse(input);
-  if (Object.keys(data.tables).length !== tables.length || tables.some(t => !(t in data.tables))) throw new Error('Backup thiếu bảng hoặc có bảng không được hỗ trợ.');
+  const selected=Object.keys(data.tables).length===tables.length?tables:extendedTables;
+  if (Object.keys(data.tables).length !== selected.length || selected.some(t => !(t in data.tables))) throw new Error('Backup thiếu bảng hoặc có bảng không được hỗ trợ.');
   transaction(db, () => {
-    for (const t of tables) if ((db.prepare(`SELECT COUNT(*) AS n FROM ${t}`).get() as { n: number }).n) throw new Error('Restore chỉ được phép vào DB trống.');
-    for (const t of tables) {
+    for (const t of extendedTables) if ((db.prepare(`SELECT COUNT(*) AS n FROM ${t}`).get() as { n: number }).n) throw new Error('Restore chỉ được phép vào DB trống.');
+    for (const t of selected) {
       const columns = (db.prepare(`PRAGMA table_info(${t})`).all() as { name: string }[]).map(x => x.name);
       for (const row of data.tables[t] ?? []) {
         if (Object.keys(row).length !== columns.length || columns.some(c => !(c in row))) throw new Error(`Schema không khớp: ${t}`);
@@ -20,7 +22,8 @@ export function restoreDatabase(db: Database, input: unknown) {
       }
     }
     if (db.prepare('PRAGMA foreign_key_check').all().length) throw new Error('Backup có reference không hợp lệ.');
-    if (db.prepare("SELECT l.id FROM lessons l LEFT JOIN revisions r ON r.id=l.published_revision_id WHERE l.published_revision_id IS NOT NULL AND (r.id IS NULL OR r.lesson_id<>l.id OR r.status<>'published')").all().length) throw new Error('Backup có phiên bản xuất bản không hợp lệ.');
+    if (db.prepare("SELECT l.id FROM lessons l LEFT JOIN revisions r ON r.id=l.published_revision_id WHERE l.published_revision_id IS NOT NULL AND (r.id IS NULL OR r.lesson_id<>l.id OR r.status NOT IN ('published','beta'))").all().length) throw new Error('Backup có phiên bản xuất bản không hợp lệ.');
+    if (db.prepare("SELECT i.id FROM media_items i LEFT JOIN media_revisions r ON r.id=i.published_revision_id WHERE i.published_revision_id IS NOT NULL AND (r.id IS NULL OR r.item_id<>i.id OR r.status NOT IN ('published','beta'))").all().length) throw new Error('Backup có media pointer không hợp lệ.');
   });
 }
 export function encryptBackup(data: unknown, passphrase: string) {

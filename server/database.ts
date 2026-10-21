@@ -1,6 +1,7 @@
 import { DatabaseSync } from 'node:sqlite';
 import { mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
+import { ensureMediaSchema } from './media-schema';
 
 export function openDatabase(path = ':memory:') {
   if (path !== ':memory:') mkdirSync(dirname(path), { recursive: true });
@@ -24,6 +25,7 @@ export function openDatabase(path = ':memory:') {
     CREATE TABLE IF NOT EXISTS deletion_requests(user_id TEXT PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE, requested_at INTEGER NOT NULL);
     PRAGMA user_version=1;
   `);
+  ensureMediaSchema(db);
   return db;
 }
 export type Database = ReturnType<typeof openDatabase>;

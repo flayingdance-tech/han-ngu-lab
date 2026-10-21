@@ -19,7 +19,7 @@ export function stopSpeech() {
 async function loadManifest() {
   if (!manifest || Date.now() > manifestExpires) {
     manifestExpires = Infinity;
-    manifest = fetch('/audio/manifest.json', { cache: 'no-store' }).then(async response => {
+    manifest = fetch('/api/audio/manifest.json', { cache: 'no-store' }).then(async response => {
       if (!response.ok) throw new Error('Chưa tải được bộ âm đọc. Vui lòng thử lại.');
       const parsed = audioManifestSchema.safeParse(await response.json());
       if (!parsed.success) throw new Error('Bộ âm đọc chưa sẵn sàng. Vui lòng thử lại sau.');

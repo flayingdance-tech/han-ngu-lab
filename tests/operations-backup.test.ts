@@ -1,7 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { randomBytes } from 'node:crypto';
-import { mkdtempSync, writeFileSync, readFileSync, readdirSync, rmSync } from 'node:fs';
+import { mkdtempSync, writeFileSync, readFileSync, readdirSync, rmSync, mkdirSync, copyFileSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
+import { pathToFileURL } from 'node:url';
 import { join, relative, resolve, isAbsolute } from 'node:path';
 import { tmpdir } from 'node:os';
 import { openDatabase } from '../server/database';
@@ -30,4 +32,17 @@ test('online WAL backup restores encrypted full SQLite without touching live use
   } finally {
     db.close(); const inside = relative(resolve(tmpdir()), resolve(folder)); assert.ok(inside && !inside.startsWith('..') && !isAbsolute(inside)); rmSync(folder, { recursive: true, force: true });
   }
+});
+
+test('standalone deployment backup executes outside project with an explicit ESM package boundary',()=>{
+  const folder=mkdtempSync(join(tmpdir(),'hnl-standalone-backup-')),source=join(folder,'live.sqlite');
+  const db=openDatabase(source);db.close();
+  try{
+    mkdirSync(join(folder,'server'));mkdirSync(join(folder,'scripts'));
+    for(const file of ['server/operations-backup.ts','scripts/operations-backup.ts'])copyFileSync(resolve(file),join(folder,file));
+    writeFileSync(join(folder,'package.json'),'{"type":"module"}');
+    writeFileSync(join(folder,'key'),randomBytes(32),{mode:0o600});
+    const run=spawnSync(process.execPath,['--import',pathToFileURL(resolve('node_modules/tsx/dist/loader.mjs')).href,join(folder,'scripts/operations-backup.ts')],{cwd:folder,env:{...process.env,DATABASE_PATH:source,BACKUP_DIRECTORY:join(folder,'backups'),BACKUP_KEY_FILE:join(folder,'key')},encoding:'utf8',timeout:20000});
+    assert.equal(run.status,0,run.stderr);assert.equal(JSON.parse(run.stdout).restoredAndIntegrityChecked,true);
+  }finally{const child=relative(resolve(tmpdir()),resolve(folder));assert.ok(child&&!child.startsWith('..')&&!isAbsolute(child));rmSync(folder,{recursive:true,force:true});}
 });

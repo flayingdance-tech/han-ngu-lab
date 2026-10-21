@@ -1021,5 +1021,9 @@
       "slow": "/audio/hnl-kokoro-zf001-v1/1c8f088d7b51b910adb25753-slow.mp3",
       "review": "unreviewed"
     }
+  },
+  "betaRelease": {
+    "approvedAt": "2026-10-21T08:28:09.101Z",
+    "notice": "Bản thử nghiệm — Chưa duyệt. Học liệu và âm đọc chưa được duyệt chuyên môn độc lập. Thư viện hiện có chưa phải giáo trình HSK 4 hoàn chỉnh."
   }
 }

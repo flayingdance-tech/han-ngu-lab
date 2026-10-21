@@ -1,3 +1,15 @@
+# Cập nhật phát hành beta — 2026-10-21T15:42:51.5752606+07:00
+
+D-052/D-053 thay thế phần phụ thuộc chờ beta/quyền trong biên bản ban đầu bên dưới. Chủ dự án đã xác nhận tất cả quyền trước đó; không kiểm tra lại. Giữ nguyên bộ A và nhạc piano, công khai 16 bài/7 podcast ở trạng thái **Bản thử nghiệm — Chưa duyệt**, không tuyên bố hoàn chỉnh HSK4.
+
+CMS đã có review/edit/approve/unpublish/rollback từng bài/âm đọc/podcast, giữ revision/progress. Unit47/47, E2E18/18 desktop/mobile, lint/typecheck/build/smoke/dependency audit/Bashsyntax đạt. Xem docs/PUBLIC_BETA_OPERATIONS.md.
+
+Backup production đã mã hóa AES256GCM, restore/integrity/FK và inventory3users/1session/2tokens/3consent đạt; bản mã hóa đã chuyển ra Windows ngoàiAWS, keyseparate/ACLprivate, giải mã từ bản offsite kiểm lại thành công. Chưa có đồng bộ offsite tự động. VM vẫn099c26e, bản beta chưa rollout ở thời điểm checkpoint này. Deployscript có fix packageESM và regressiontest ngoài repo. Chờ CI/Amplify rồi deploy/HTTP/hash/playback thật; kết quả cuối sẽ cập nhật theo bằng chứng.
+
+SES Sandbox và nút requestdisabled chưa giải quyết; không tạo tài nguyên/mua domain/nâng gói. Caddy chỉ trust localhop, chainclientIPAmplify chưa nghiệm thu. Số cập nhật Ubuntu mới26, restartrequired; chưa reboot.
+
+---
+Biên bản ban đầu dưới đây là lịch sử, các dòng chờ beta/quyền/backup không còn phản ánh trạng thái mới:
 # Hán Ngữ Lab — báo cáo khôi phục production
 
 Checkpoint: 2026-10-21, Asia/Bangkok (+07). **Đang thực hiện; chưa nghiệm thu hoàn tất.**

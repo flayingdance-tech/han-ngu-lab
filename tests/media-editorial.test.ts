@@ -1,0 +1,66 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import request from 'supertest';
+import { readFileSync } from 'node:fs';
+import { openDatabase } from '../server/database';
+import { createApp } from '../server/app';
+import { digest } from '../server/security';
+import { seedMedia } from '../server/media-editorial';
+import { releasePolicySchema, importExistingLessons } from '../server/content-release';
+import { audioManifestSchema } from '../lib/audio-catalog';
+import { podcastCatalogSchema } from '../lib/podcast';
+import { seedLessons } from '../content/lessons';
+import { exportDatabase, restoreDatabase } from '../server/backup';
+
+test('beta media CMS preserves assets, requires independent review, withdraws and rolls back without reimport resurrection',async t=>{
+  const db=openDatabase();t.after(()=>db.close());
+  const audio=audioManifestSchema.parse(JSON.parse(readFileSync('public/audio/manifest.json','utf8')));
+  const catalog=podcastCatalogSchema.parse(JSON.parse(readFileSync('media/podcasts/catalog.json','utf8')));
+  const policy=releasePolicySchema.parse({version:1,id:'test-release',betaPublicationApproved:true,approvedAt:new Date().toISOString(),lessonIds:seedLessons.map(l=>l.id),podcastIds:catalog.episodes.map(e=>e.id),musicDistribution:'owner-authorized'});
+  seedMedia(db,audio,catalog,policy);importExistingLessons(db,seedLessons,policy,true);
+  const users=[['editor','editor'],['reviewer','reviewer'],['learner','learner'],['admin','admin']];
+  for(const [id,role] of users){db.prepare('INSERT INTO users(id,email,name,password,role,verified,created_at) VALUES(?,?,?,?,?,1,1)').run(id,`${id}@example.test`,id,'synthetic-hash',role);db.prepare('INSERT INTO sessions VALUES(?,?,?)').run(digest(`synthetic-${id}-session`),id,Date.now()+3600000);}
+  const originalUsers=db.prepare('SELECT * FROM users').all();
+  const app=createApp(db,{localPreview:false,origin:'https://example.test',releasePolicy:policy,sendMail:async()=>{throw Error('No mail expected');}});
+  const post=(path:string,body:object,who='reviewer')=>request(app).post(`/api/admin/${path}`).set('Cookie',`hnl_session=synthetic-${who}-session`).set('Origin','https://example.test').set('X-HNL-Client','web').send(body);
+  assert.equal((await request(app).get('/api/admin/media')).status,401);
+  assert.equal((await request(app).get('/api/admin/media').set('Cookie','hnl_session=synthetic-learner-session')).status,403);
+  const rows=(await request(app).get('/api/admin/media').set('Cookie','hnl_session=synthetic-admin-session')).body.revisions;
+  assert.equal(rows.length,152);
+  for(const kind of ['audio','podcast']){
+    const row=rows.find((r:{kind:string})=>r.kind===kind);
+    const count=async()=>kind==='audio'?Object.keys((await request(app).get('/api/audio/manifest.json')).body.entries).length:(await request(app).get('/api/podcasts')).body.episodes.length;
+    const initial=await count();assert.equal(initial,kind==='audio'?145:7);
+    assert.equal((await post(`media/${row.id}/transition`,{action:'unpublish'},'learner')).status,403);
+    assert.equal((await post(`media/${row.id}/transition`,{action:'unpublish'})).status,200);
+    assert.equal(await count(),initial-1);
+    seedMedia(db,audio,catalog,policy);assert.equal(await count(),initial-1);
+    if(kind==='podcast')assert.equal((await request(app).get(row.content.assets.mix.url)).status,404);
+    const preview=`/api/admin/media/${row.id}/preview/${kind==='audio'?'normal':'mix'}`;
+    assert.equal((await request(app).get(preview)).status,401);
+    assert.equal((await request(app).get(preview).set('Cookie','hnl_session=synthetic-reviewer-session').set('Range','bytes=0-31')).status,206);
+    assert.equal((await post(`media/${row.id}/transition`,{action:'rollback'})).status,200);assert.equal(await count(),initial);
+    const edited=structuredClone(row.content);if(kind==='audio')edited.note='Ghi chú rà soát';else edited.description='Mô tả đã sửa';
+    const fixed=structuredClone(edited);if(kind==='audio')fixed.entry.normal=fixed.entry.slow;else fixed.voiceId='other-voice';
+    assert.equal((await post(`media/${row.id}/edit`,fixed,'editor')).status,400);
+    const created=await post(`media/${row.id}/edit`,edited,'editor');assert.equal(created.status,201);
+    const id=created.body.revisionId;
+    assert.equal((await post(`media/${id}/transition`,{action:'approve',note:'Đã nghe và rà soát phát âm'},'reviewer')).status,403);
+    assert.equal((await post(`media/${id}/transition`,{action:'submit'},'editor')).status,200);
+    assert.equal((await post(`media/${id}/transition`,{action:'approve',note:'Đã kiểm tra nội dung'},'editor')).status,403);
+    assert.equal((await post(`media/${id}/transition`,{action:'approve',note:'Đã nghe và rà soát phát âm, phụ đề'},'reviewer')).status,200);
+    assert.equal((await post(`media/${id}/transition`,{action:'publish'},'reviewer')).status,200);
+    assert.equal(await count(),initial);assert.equal((await post(`media/${row.id}/transition`,{action:'rollback'})).status,200);
+    assert.equal(db.prepare('SELECT reviewer_id FROM media_revisions WHERE id=?').get(row.id)?.reviewer_id,null);
+  }
+  const lesson=db.prepare("SELECT id,lesson_id FROM revisions WHERE status='beta' LIMIT 1").get()!;
+  assert.equal((await post(`revisions/${lesson.id}/transition`,{action:'archive'})).status,200);
+  importExistingLessons(db,seedLessons,policy,true);
+  assert.equal(db.prepare('SELECT published_revision_id FROM lessons WHERE id=?').get(lesson.lesson_id!)?.published_revision_id,null);
+  assert.equal((await post(`revisions/${lesson.id}/rollback`,{})).status,200);
+  assert.equal(db.prepare('SELECT reviewer_id FROM revisions WHERE id=?').get(lesson.id!)?.reviewer_id,null);
+  assert.deepEqual(db.prepare('SELECT * FROM users').all(),originalUsers);
+  const restored=openDatabase();t.after(()=>restored.close());restoreDatabase(restored,exportDatabase(db));
+  assert.equal(restored.prepare('SELECT COUNT(*) AS n FROM media_items').get()?.n,152);
+  assert.equal(restored.prepare('PRAGMA integrity_check').get()?.integrity_check,'ok');
+});

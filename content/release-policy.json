@@ -1,9 +1,34 @@
 {
   "version": 1,
   "id": "hnl-existing-content-2026-10",
-  "betaPublicationApproved": false,
-  "approvedAt": null,
-  "lessonIds": [],
-  "podcastIds": [],
-  "musicDistribution": "blocked"
+  "betaPublicationApproved": true,
+  "approvedAt": "2026-10-21T08:28:09.101Z",
+  "lessonIds": [
+    "nen-tang-chao-hoi",
+    "nen-tang-thanh-dieu",
+    "nen-tang-gioi-thieu",
+    "hsk1-quoc-tich",
+    "hsk1-gia-dinh",
+    "hsk1-thoi-gian",
+    "hsk1-goi-mon",
+    "hsk2-kinh-nghiem",
+    "hsk2-so-sanh",
+    "hsk2-dang-lam-gi",
+    "hsk3-ke-hoach",
+    "hsk3-nguyen-nhan",
+    "hsk3-bo-ngu-ket-qua",
+    "hsk4-nhuong-bo",
+    "hsk4-dieu-kien",
+    "hsk4-y-kien"
+  ],
+  "podcastIds": [
+    "radio-weekstart-v1",
+    "radio-persistence-v1",
+    "radio-learning-diary-v1",
+    "radio-tea-culture-v1",
+    "radio-moon-poem-v1",
+    "radio-weekend-story-v1",
+    "radio-sunday-evening-v1"
+  ],
+  "musicDistribution": "owner-authorized"
 }

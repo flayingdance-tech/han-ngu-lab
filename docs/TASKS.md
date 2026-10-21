@@ -87,3 +87,5 @@ POD-04 v9 (2026-10-19T22:16:59.3083211+07:00): mẫu dẫn/kểchuyện87.060s,l
 | PUB-03 | Push bản sửa MAIL-02 và theo dõi phát hành | DONE | D-050 099c26e Private main, không merge/force; .next giữ nguyên/secrets đạt; CI39538587917 SUCCESS, AmplifyDeployment4 Deployed/SUCCEED đúngSHA; backend chưa cập nhật, runbook AUTH_EMAIL_RECOVERY |
 
 | REC-01 | Production content recovery và vận hành | IN_PROGRESS | D-051: inventory/backup/idempotent imports/media publication/pipeline/tests/deploy/report; giữDBngười học, chờreleasepolicy/quyềnnhạc, SSHCLIhiệnchưađủkết nối |
+
+| REC-02 | Public Beta 16 bài, bộ A, 7 podcast và CMS từng mục | IN_PROGRESS | D-052/D-053; local47unit/18E2E/allchecks đạt; chờ pushCI/Amplify/backend/proof. Quyền đã owner xác nhận, không kiểm tra lại |

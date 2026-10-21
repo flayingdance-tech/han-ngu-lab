@@ -11,6 +11,7 @@ import { mountPodcasts } from './podcasts';
 import { EmailDeliveryError, type SendMail, type MailPurpose } from './email';
 import { authMailControl, AUTH_MAIL_MESSAGE, AUTH_MAIL_WAIT_SECONDS } from './auth-mail';
 import { betaLessonAllowed, betaNotice, type ReleasePolicy } from './content-release';
+import { mountMediaEditorial, releasedPodcasts } from './media-editorial';
 
 type UserRow = { id: string; email: string; name: string; password: string; role: Role; verified: number; status: string; timezone: string; daily_goal: number };
 type Revision = { id: string; lesson_id: string; content: string; status: string; author_id: string; reviewer_id: string | null; created_at: number };
@@ -59,6 +60,7 @@ export function createApp(db: Database, options: AppOptions) {
   function privileged(req: Request, allowed: Role[]) { const u = currentUser(req); assert(allowed.includes(u.role), 403, 'Bạn không có quyền thực hiện thao tác này.'); return u; }
   const staff: Role[] = ['editor', 'reviewer', 'admin', 'super_admin'];
   function audit(actor: string, action: string, target: string, details = '') { db.prepare('INSERT INTO audit VALUES (?,?,?,?,?,?)').run(randomUUID(), actor, action, target, details, now()); }
+  mountMediaEditorial(app,db,options,privileged,audit,assert);
   function issueToken(user: string, purpose: string) {
     const raw = token();
     db.prepare('DELETE FROM tokens WHERE user_id=? AND purpose=?').run(user, purpose);
@@ -80,7 +82,7 @@ export function createApp(db: Database, options: AppOptions) {
   }
 
   app.get('/api/health', (_req, res) => res.json({ ok: true, mode: options.localPreview ? 'local-preview' : 'live', aiEnabled: false }));
-  mountPodcasts(app, options.localPreview, options.podcastDirectory, options.releasePolicy);
+  mountPodcasts(app, options.localPreview, options.podcastDirectory, options.releasePolicy,base=>releasedPodcasts(db,base,options.releasePolicy));
   app.post('/api/auth/register', async (req, res) => {
     const input = registration.parse(req.body);
     if (!options.localPreview && !mailControl.reserve(input.email, res)) return;
@@ -247,19 +249,20 @@ export function createApp(db: Database, options: AppOptions) {
     if (input.action === 'request-changes') { assert(reviewer && r.status === 'in_review', 403, 'Không thể trả lại phiên bản này.'); next = 'draft'; }
     if (input.action === 'approve') { assert(reviewer && r.author_id !== u.id && r.status === 'in_review', 403, 'Cần người duyệt khác tác giả và bài đang chờ duyệt.'); next = 'approved'; }
     if (input.action === 'publish') { assert(reviewer && r.author_id !== u.id && r.status === 'approved' && r.reviewer_id, 403, 'Bài cần được người khác duyệt trước khi xuất bản.'); next = 'published'; }
-    if (input.action === 'archive') { assert(reviewer && r.status === 'published', 403, 'Chỉ thu hồi phiên bản từng xuất bản.'); next = 'archived'; }
+    if (input.action === 'archive') { assert(reviewer && ['published','beta'].includes(r.status), 403, 'Chỉ thu hồi phiên bản từng xuất bản.'); next = r.status === 'beta' ? 'beta_archived' : 'archived'; }
     transaction(db, () => {
       db.prepare('UPDATE revisions SET status=?,reviewer_id=? WHERE id=?').run(next, input.action === 'approve' ? u.id : r.reviewer_id, r.id);
       if (next === 'published') db.prepare('UPDATE lessons SET published_revision_id=? WHERE id=?').run(r.id, r.lesson_id);
-      if (next === 'archived') db.prepare('UPDATE lessons SET published_revision_id=NULL WHERE id=? AND published_revision_id=?').run(r.lesson_id, r.id);
+      if (['archived','beta_archived'].includes(next)) db.prepare('UPDATE lessons SET published_revision_id=NULL WHERE id=? AND published_revision_id=?').run(r.lesson_id, r.id);
       audit(u.id, `revision.${input.action}`, r.id);
     }); res.json({ status: next });
   });
   app.post('/api/admin/revisions/:id/rollback', (req, res) => {
     const u = privileged(req, ['reviewer', 'admin', 'super_admin']);
     const r = db.prepare('SELECT * FROM revisions WHERE id=?').get(String(req.params.id)) as Revision | undefined;
-    assert(r && ['published', 'archived'].includes(r.status) && r.reviewer_id, 409, 'Chỉ khôi phục được phiên bản từng xuất bản/được duyệt.');
-    transaction(db, () => { db.prepare("UPDATE revisions SET status='published' WHERE id=?").run(r.id); db.prepare('UPDATE lessons SET published_revision_id=? WHERE id=?').run(r.id, r.lesson_id); audit(u.id, 'lesson.rollback', r.id); });
+    const beta = r && ['beta','beta_archived'].includes(r.status) && betaLessonAllowed(options.releasePolicy,r.lesson_id) && r.author_id === `system-release:${options.releasePolicy!.id}`;
+    assert(r && (beta || ['published', 'archived'].includes(r.status) && r.reviewer_id), 409, 'Chỉ khôi phục được bản beta được cho phép hoặc phiên bản từng xuất bản/được duyệt.');
+    transaction(db, () => { db.prepare('UPDATE revisions SET status=? WHERE id=?').run(beta?'beta':'published',r.id); db.prepare('UPDATE lessons SET published_revision_id=? WHERE id=?').run(r.id, r.lesson_id); audit(u.id, 'lesson.rollback', r.id); });
     res.json({ ok: true });
   });
   app.post('/api/admin/import/preview', (req, res) => {

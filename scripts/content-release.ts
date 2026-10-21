@@ -3,9 +3,13 @@ import { existsSync, readFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { createHash } from 'node:crypto';
 import { seedLessons } from '../content/lessons';
-import { importExistingLessons } from '../server/content-release';
-import policy from '../content/release-policy.json';
+import { importExistingLessons, releasePolicySchema } from '../server/content-release';
+import policyInput from '../content/release-policy.json';
+import { seedMedia } from '../server/media-editorial';
+import { audioManifestSchema } from '../lib/audio-catalog';
+import { podcastCatalogSchema } from '../lib/podcast';
 
+const policy=releasePolicySchema.parse(policyInput);
 const apply = process.argv.includes('--apply'), databasePath = resolve(process.env.DATABASE_PATH ?? '/var/lib/han-ngu-lab/hanngulab.sqlite');
 if (!existsSync(databasePath)) throw new Error('Import requires an existing database; it never creates or replaces a production database');
 if (apply) {
@@ -18,4 +22,10 @@ if (apply) {
 }
 const db = new DatabaseSync(databasePath, { readOnly: !apply });
 db.exec('PRAGMA foreign_keys=ON; PRAGMA busy_timeout=5000');
-try { console.log(JSON.stringify(importExistingLessons(db, seedLessons, policy, apply))); } finally { db.close(); }
+try {
+  const audio=audioManifestSchema.parse(JSON.parse(readFileSync('public/audio/manifest.json','utf8')));
+  const podcasts=policy.podcastIds.length?podcastCatalogSchema.parse(JSON.parse(readFileSync('media/podcasts/catalog.json','utf8'))):null;
+  const lessons=importExistingLessons(db,seedLessons,policy,apply);
+  if(apply){db.exec('BEGIN IMMEDIATE');try{seedMedia(db,audio,podcasts,policy);db.exec('COMMIT');}catch(error){db.exec('ROLLBACK');throw error;}}
+  console.log(JSON.stringify(lessons));
+} finally { db.close(); }
