@@ -1,0 +1,61 @@
+import { test, expect } from '@playwright/test';
+
+test('unverified account can request a new verification link from login and keep the same account', async ({ page }, info) => {
+  const email = `recovery-${info.project.name}-${Date.now()}@example.test`;
+  const password = 'Synthetic-Recovery-UI-Password-123!';
+  const headers = { Origin: 'http://localhost:3000', 'X-HNL-Client': 'web' };
+  const created = await page.request.post('/api/auth/register', { headers, data: { email, password, name: 'Bạn thử', adult: true, acceptedTerms: true } });
+  expect(created.status()).toBe(201);
+  const oldLink = (await created.json()).devLink;
+  await page.goto('/');
+  await page.locator('header').getByRole('button', { name: 'Đăng nhập', exact: true }).click();
+  const dialog = page.getByRole('dialog');
+  await dialog.getByLabel('Email', { exact: true }).fill(email);
+  await dialog.getByLabel('Mật khẩu', { exact: true }).fill(password);
+  await dialog.getByRole('button', { name: 'Đăng nhập', exact: true }).click();
+  await expect(dialog.getByRole('alert')).toContainText('Hãy xác minh email');
+  await dialog.getByRole('button', { name: 'Gửi lại email xác minh', exact: true }).click();
+  await expect(dialog.getByLabel('Email', { exact: true })).toHaveValue(email);
+  await expect(dialog.getByLabel('Mật khẩu', { exact: true })).toHaveCount(0);
+  await dialog.getByRole('button', { name: 'Gửi email xác minh', exact: true }).click();
+  await expect(dialog.getByRole('status')).toContainText('Yêu cầu đã được tiếp nhận');
+  await expect(dialog.getByRole('button', { name: 'Gửi email xác minh', exact: true })).toBeDisabled();
+  await dialog.screenshot({ path: info.outputPath('resend-verification.png') });
+  const oldToken = new URLSearchParams(new URL(oldLink).hash.slice(1)).get('verify');
+  expect((await page.request.post('/api/auth/verify', { headers, data: { token: oldToken } })).status()).toBe(400);
+  await dialog.getByRole('link', { name: 'Xác minh tài khoản thử nghiệm' }).click();
+  await expect(page.getByRole('status')).toContainText('Email đã được xác minh');
+  await expect(dialog.getByRole('heading', { name: 'Mừng bạn trở lại.' })).toBeVisible();
+  await dialog.getByLabel('Email', { exact: true }).fill(email);
+  await dialog.getByLabel('Mật khẩu', { exact: true }).fill(password);
+  await dialog.getByRole('button', { name: 'Đăng nhập', exact: true }).click();
+  await expect(dialog).toHaveCount(0);
+  const me = await page.request.get('/api/me');
+  expect(me.ok()).toBeTruthy(); expect((await me.json()).user.email).toBe(email);
+});
+
+test('resend UI honors Retry-After across navigation and handles temporary failure without claiming delivery', async ({ page }) => {
+  let requests = 0;
+  await page.route('**/api/auth/resend-verification', async route => {
+    expect(route.request().postDataJSON()).toEqual({ email: 'ui@example.test' });
+    requests++;
+    if (requests === 1) return route.fulfill({ status: 429, headers: { 'Retry-After': '2' }, json: { error: 'Vui lòng chờ 2 giây trước khi yêu cầu gửi thư lại.' } });
+    if (requests === 2) return route.fulfill({ status: 503, headers: { 'Retry-After': '2' }, json: { error: 'Dịch vụ email tạm thời bận. Vui lòng thử lại sau.' } });
+    return route.fulfill({ json: { message: 'Yêu cầu đã được tiếp nhận. Nếu email đủ điều kiện, bạn sẽ nhận được thư.', retryAfterSeconds: 60 } });
+  });
+  await page.goto('/');
+  await page.locator('header').getByRole('button', { name: 'Đăng nhập', exact: true }).click();
+  const dialog = page.getByRole('dialog');
+  await dialog.getByRole('button', { name: 'Gửi lại email xác minh', exact: true }).click();
+  await dialog.getByLabel('Email', { exact: true }).fill('ui@example.test');
+  const send = dialog.getByRole('button', { name: 'Gửi email xác minh', exact: true });
+  await send.click(); await expect(dialog.getByRole('alert')).toContainText('Vui lòng chờ');
+  await expect(send).toBeDisabled();
+  await dialog.getByRole('button', { name: 'Quay lại đăng nhập', exact: true }).click();
+  await dialog.getByRole('button', { name: 'Gửi lại email xác minh', exact: true }).click();
+  await expect(send).toBeDisabled(); await expect(send).toBeEnabled();
+  await send.click(); await expect(dialog.getByRole('alert')).toContainText('tạm thời bận');
+  await expect(send).toBeDisabled(); await expect(send).toBeEnabled();
+  await send.click(); await expect(dialog.getByRole('status')).toContainText('Nếu email đủ điều kiện');
+  await expect(send).toBeDisabled(); expect(requests).toBe(3);
+});

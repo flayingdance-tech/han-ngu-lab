@@ -97,3 +97,5 @@ D-046 ACCEPTED 2026-10-20T16:29:50.6317986+07:00 : Chủ dự án xác nhận pu
 D-047 ACCEPTED 2026-10-21T00:28:07.8905748+07:00 : Tích hợp SES SMTP Sydney587 STARTTLS bắt buộc bằng Nodemailer, credentials từ process env server; hỗ trợ verify/resend/reset, giữ guards/rate limits; test giả lập và runbook Lightsail/systemd. Không UI/học liệu/media/dữ liệu học viên; phải hỏi trước push. SES verified/IAM/Lightsail do chủ dự án cung cấp, chưa xác minh cloud thực tế.
 
 D-048 ACCEPTED 2026-10-21T00:39:38.5050715+07:00 : Chủ dự án duyệt push57f3a3b, fetch/merge giữ lịch sử và amplify.yml baseDirectory:.next từ origin/main; không force/xóa; dừng trước push nếu conflict hoặc phải sửa Amplify. Theo dõi CI và Amplify auto-deploy nếu có; chưa backend Lightsail/credentials/DB/tài nguyên AWS.
+
+D-049 ACCEPTED 2026-10-21T10:03:49.6620411+07:00 : Sửa luồng verify/resend/login/register/forgot, chống enumeration/cooldown/throttling, trust proxy chỉ loopback Caddy; không xóa/reset dữ liệu, không học liệu/podcast; giữ Amplify .next, test và secret scan; phải xin trước push. Cloud hiện trạng do chủ dự án báo, chưa xác minh Sandbox phiên này.

@@ -7,9 +7,20 @@ export type MailPurpose = 'verify' | 'reset';
 export type SendMail = (email: string, purpose: MailPurpose, link: string) => Promise<void>;
 type Transport = { sendMail: (message: SendMailOptions) => Promise<unknown> };
 export type TransportFactory = (options: SMTPTransport.Options) => Transport;
+export type MailFailure = 'identity_unverified' | 'authentication_failed' | 'throttled' | 'connection_failed' | 'delivery_failed';
+
+function failureReason(error: unknown): MailFailure {
+  if (!error || typeof error !== 'object') return 'delivery_failed';
+  const info = error as { responseCode?: unknown; response?: unknown; code?: unknown };
+  if (info.responseCode === 554 && typeof info.response === 'string' && /email address is not verified/i.test(info.response)) return 'identity_unverified';
+  if (info.responseCode === 535 || info.code === 'EAUTH') return 'authentication_failed';
+  if (info.responseCode === 454) return 'throttled';
+  if (['ETIMEDOUT', 'ECONNECTION', 'ESOCKET', 'ECONNREFUSED', 'EDNS', 'ETLS'].includes(String(info.code))) return 'connection_failed';
+  return 'delivery_failed';
+}
 
 export class EmailDeliveryError extends Error {
-  constructor() { super('Không thể gửi email lúc này. Vui lòng thử lại sau.'); this.name = 'EmailDeliveryError'; }
+  constructor(public readonly reason: MailFailure = 'delivery_failed') { super('Không thể gửi email lúc này. Vui lòng thử lại sau.'); this.name = 'EmailDeliveryError'; }
 }
 
 /** Server-only: validate all configuration before constructing a transport. Never log SMTP errors. */
@@ -51,9 +62,9 @@ export function createSesMailer(env: Record<string, string | undefined>, factory
         ].join('\n'),
         disableFileAccess: true, disableUrlAccess: true,
       });
-    } catch {
+    } catch (error) {
       // SMTP responses may contain recipient addresses or credentials; discard the cause.
-      throw new EmailDeliveryError();
+      throw new EmailDeliveryError(failureReason(error));
     }
   };
 }

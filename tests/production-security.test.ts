@@ -11,8 +11,12 @@ import { DatabaseSync } from 'node:sqlite';
 test('production authentication hides email tokens from query strings and sets secure session cookies',async t=>{
   const db=openDatabase(); t.after(()=>db.close());
   const origin='https://example.test',sent:{purpose:string;link:string}[]=[];
-  const app=createApp(db,{localPreview:false,origin,sendMail:async(_email,purpose,link)=>{sent.push({purpose,link});}});
-  const post=(path:string,body:object)=>request(app).post(`/api${path}`).set('Origin',origin).set('X-HNL-Client','web').send(body);
+  let clock=Date.now();
+  const app=createApp(db,{localPreview:false,origin,now:()=>clock,sendMail:async(_email,purpose,link)=>{sent.push({purpose,link});}});
+  const post=async(path:string,body:object)=>{
+    const response=await request(app).post(`/api${path}`).set('Origin',origin).set('X-HNL-Client','web').send(body);
+    await app.locals.drainAuthMail();return response;
+  };
   const email='security@example.test',password='Synthetic-Audit-Password-123!';
   const reg=await post('/auth/register',{email,password,name:'Kiểm thử',adult:true,acceptedTerms:true});
   assert.equal(reg.status,201);assert.equal('devLink' in reg.body,false);
@@ -27,6 +31,7 @@ test('production authentication hides email tokens from query strings and sets s
   assert.equal(login.headers['referrer-policy'],'no-referrer');
   assert.equal((await request(app).get('/api/admin/users')).status,401);
   assert.equal((await request(app).get('/api/admin/users').set('Cookie',cookie.split(';')[0])).status,403);
+  clock+=60_001;
   const forgot=await post('/auth/forgot',{email});assert.equal('devLink' in forgot.body,false);
   const resetLink=new URL(sent[1].link);assert.equal(resetLink.search,'');
   const reset=new URLSearchParams(resetLink.hash.slice(1)).get('reset');assert.ok(reset);

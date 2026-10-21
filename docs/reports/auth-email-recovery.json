@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-10-21T10:21:14.3269697+07:00",
+  "scope": "MAIL-02 local patch, not pushed or deployed",
+  "codegraph": "Used first for auth module source and dependency analysis",
+  "changes": [
+    "AuthPanel resend UI and Retry-After countdown",
+    "Generic register/resend/forgot responses independent of SMTP result",
+    "Per-email hashed cooldown60s and max5/hour, existing IP limits unchanged",
+    "Bounded RAM mail tasks with serialized1.1s spacing and safe reason-only logs",
+    "Only loopback socket at proxy hop0 trusted; API loopback bind",
+    "Graceful drain on SIGTERM, no DB schema/reset/data changes"
+  ],
+  "checks": {
+    "typecheck": "exit0 before and after build",
+    "lint": "exit0; changed tests lint exit0",
+    "productionSmoke": "exit0 isolated DB/no mail",
+    "build": "exit0 static frontend",
+    "stagedGitleaks": "exit0 no findings",
+    "amplify": "unchanged baseDirectory:.next; matches fetched origin/main",
+    "unit": "39/39 pass",
+    "browser": "6/6 desktop+mobile pass after fixing incorrect test navigation expectation"
+  },
+  "ses": {
+    "dailyQuota": 200,
+    "region": "ap-southeast-2",
+    "source": "authenticated AWS Console Account dashboard read only",
+    "health": "Healthy",
+    "sandbox": true,
+    "maxPerSecond": 1
+  },
+  "limitations": [
+    "No Lightsail update or real email sent in this patch session",
+    "Caddyfile/CDN trust chain not inspected on server; validate real client IP before rollout",
+    "RAM cooldown/tasks reset on crash or restart; not a durable queue; single-process limits",
+    "Arbitrary unverified Gmail recipients remain blocked by SES Sandbox until AWS production access"
+  ],
+  "evidence": [
+    ".local/pre-github-audit/auth-recovery-test-final.log",
+    ".local/pre-github-audit/auth-recovery-e2e-final.log",
+    ".local/pre-github-audit/auth-recovery-build.log",
+    ".local/pre-github-audit/auth-recovery-secrets.json"
+  ]
+}

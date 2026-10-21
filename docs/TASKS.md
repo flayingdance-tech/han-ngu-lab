@@ -80,4 +80,6 @@ POD-04 v9 (2026-10-19T22:16:59.3083211+07:00): mẫu dẫn/kểchuyện87.060s,l
 
 | MAIL-01 | SES SMTP production và Lightsail runbook | DONE | Tích hợp cục bộ: Sydney587 STARTTLS/env, verify/resend/reset, 6mock tests, total31/31; lint/typecheck/build/smoke/audit/Gitleaks đạt; docs/reports/ses-smtp-integration.json. Chờ duyệt push và chưa nghiệm thu SES/Lightsail thật |
 
-| PUB-02 | Push SES và theo dõi CI/Amplify | IN_PROGRESS | D-048 merge9a2acec không conflict, giữ amplify.yml của remote, retest31/31/lint/build/typecheck/smoke/secrets đạt; push checkpoint và chờ CI, Amplify cần phiên Console hợp lệ |
+| PUB-02 | Push SES và theo dõi CI/Amplify | DONE | D-048 e12d719 Private main, giữ57f3a3b/1b23772 và .next, không force; CI39468035970 success, Amplify appd12mghkvifkghp Deployment3 SUCCEED đúngSHA. Chỉ frontend; chưa Lightsail/SMTP thật |
+
+| MAIL-02 | Khôi phục xác minh email và Caddy proxy | DONE | Chỉ kỹ thuật cục bộ D-049: resendUI/anti-enumeration/cooldown/proxy; unit39/39/E2E6/6/lint/typecheck/build/smoke/secrets đạt. SES Sandbox xác minh Console; runbook cập nhật Lightsail, chờ duyệt push và nghiệm thu thật/CDN IP |

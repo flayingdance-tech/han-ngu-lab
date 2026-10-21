@@ -1,4 +1,4 @@
-export class ApiError extends Error { constructor(message: string, public status: number) { super(message); } }
+export class ApiError extends Error { constructor(message: string, public status: number, public retryAfterSeconds?: number) { super(message); } }
 export async function api<T>(path: string, body?: unknown, method?: string): Promise<T> {
   const res = await fetch(`/api${path}`, {
     method: method ?? (body === undefined ? 'GET' : 'POST'), credentials: 'same-origin',
@@ -6,7 +6,10 @@ export async function api<T>(path: string, body?: unknown, method?: string): Pro
     ...(body === undefined ? {} : { body: JSON.stringify(body) }),
   });
   const data = await res.json().catch(() => ({ error: 'Máy chủ chưa sẵn sàng. Hãy thử lại.' }));
-  if (!res.ok) throw new ApiError(data.issues?.length ? `${data.error} ${data.issues.map((x: {path:string;message:string}) => `${x.path}: ${x.message}`).join('; ')}` : data.error ?? 'Có lỗi xảy ra.', res.status);
+  if (!res.ok) {
+    const seconds = Number(res.headers.get('Retry-After') ?? data.retryAfterSeconds);
+    throw new ApiError(data.issues?.length ? `${data.error} ${data.issues.map((x: {path:string;message:string}) => `${x.path}: ${x.message}`).join('; ')}` : data.error ?? 'Có lỗi xảy ra.', res.status, Number.isFinite(seconds) && seconds > 0 ? Math.min(3600, seconds) : undefined);
+  }
   return data;
 }
 export function downloadJson(value: unknown, name: string) {

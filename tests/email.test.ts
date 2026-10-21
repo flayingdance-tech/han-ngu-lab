@@ -78,21 +78,28 @@ test('SMTP failure is sanitized and arbitrary links/recipient headers never reac
 test('production register, resend verification and reset use the adapter; rotated and consumed tokens fail', async t => {
   const db = openDatabase(); t.after(() => db.close());
   const { sendMail, messages } = captureMailer();
-  const app = createApp(db, { localPreview: false, origin, sendMail });
-  const post = (path: string, body: object) => request(app).post(`/api/auth/${path}`).set('Origin', origin).set('X-HNL-Client', 'web').send(body);
+  let clock = Date.now();
+  const app = createApp(db, { localPreview: false, origin, sendMail, now: () => clock });
+  const post = async (path: string, body: object) => {
+    const response = await request(app).post(`/api/auth/${path}`).set('Origin', origin).set('X-HNL-Client', 'web').send(body);
+    await app.locals.drainAuthMail(); return response;
+  };
   const email = 'learner@example.test', password = 'Synthetic-Email-Test-Password-123!';
   const registration = await post('register', { email, password, name: 'Thử email', adult: true, acceptedTerms: true });
   assert.equal(registration.status, 201); assert.equal('devLink' in registration.body, false);
   const oldToken = tokenFrom(messages[0].text, 'verify');
+  clock += 60_001;
   const resent = await post('resend-verification', { email });
   assert.equal(resent.status, 200); assert.equal('devLink' in resent.body, false);
   const newToken = tokenFrom(messages[1].text, 'verify'); assert.notEqual(oldToken, newToken);
   assert.equal((await post('verify', { token: oldToken })).status, 400);
   assert.equal((await post('verify', { token: newToken })).status, 200);
   assert.equal((await post('verify', { token: newToken })).status, 400);
+  clock += 60_001;
   assert.equal((await post('resend-verification', { email })).status, 200); assert.equal(messages.length, 2);
   const unknown = await post('resend-verification', { email: 'unknown@example.test' });
   assert.deepEqual(unknown.body, resent.body); assert.equal(messages.length, 2);
+  clock += 60_001;
   assert.equal((await post('forgot', { email })).status, 200);
   const reset = tokenFrom(messages[2].text, 'reset');
   const stored = db.prepare("SELECT token FROM tokens WHERE purpose='reset'").get();
@@ -109,18 +116,21 @@ test('resend keeps CSRF, JSON validation, production guards and shared auth rate
   assert.equal((await request(app).post('/api/auth/resend-verification').send({ email: 'a@example.test' })).status, 403);
   const post = (body: object) => request(app).post('/api/auth/resend-verification').set('Origin', origin).set('X-HNL-Client', 'web').send(body);
   assert.equal((await post({ email: 'invalid' })).status, 400);
-  for (let i = 0; i < 19; i++) assert.equal((await post({ email: 'unknown@example.test' })).status, 200);
+  for (let i = 0; i < 19; i++) assert.equal((await post({ email: `unknown${i}@example.test` })).status, 200);
   assert.equal((await post({ email: 'unknown@example.test' })).status, 429);
   assert.equal(sent, 0);
 });
 
-test('production SMTP failure returns bounded 503 without token, credential or provider response', async t => {
+test('production SMTP failure returns generic accepted response without token, credential or provider response', async t => {
   const db = openDatabase(); t.after(() => db.close());
   const sendMail = createSesMailer(env, () => ({ sendMail: async () => { throw new Error(`535 ${env.SMTP_PASSWORD}`); } }));
   const app = createApp(db, { localPreview: false, origin, sendMail });
   const response = await request(app).post('/api/auth/register').set('Origin', origin).set('X-HNL-Client', 'web').send({ email: 'failure@example.test', password: 'Synthetic-Email-Test-Password-123!', name: 'Thử lỗi', adult: true, acceptedTerms: true });
-  assert.equal(response.status, 503);
-  assert.deepEqual(response.body, { error: 'Không thể gửi email lúc này. Vui lòng thử lại sau.' });
+  await app.locals.drainAuthMail();
+  assert.equal(response.status, 201);
+  assert.equal(response.body.retryAfterSeconds, 60);
+  assert.equal('devLink' in response.body, false);
+  assert.ok(!JSON.stringify(response.body).includes(env.SMTP_PASSWORD));
   assert.equal(db.prepare('SELECT COUNT(*) AS count FROM users').get()?.count, 1);
   // Existing unverified account survives a delivery failure and can request a fresh link.
 });

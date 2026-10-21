@@ -9,6 +9,7 @@ import { type Database, transaction } from './database';
 import { hashPassword, checkPassword, token, digest } from './security';
 import { mountPodcasts } from './podcasts';
 import { EmailDeliveryError, type SendMail, type MailPurpose } from './email';
+import { authMailControl, AUTH_MAIL_MESSAGE, AUTH_MAIL_WAIT_SECONDS } from './auth-mail';
 
 type UserRow = { id: string; email: string; name: string; password: string; role: Role; verified: number; status: string; timezone: string; daily_goal: number };
 type Revision = { id: string; lesson_id: string; content: string; status: string; author_id: string; reviewer_id: string | null; created_at: number };
@@ -27,6 +28,11 @@ export function createApp(db: Database, options: AppOptions) {
     if (!options.sendMail || !validOrigin) throw new Error('Production yêu cầu HTTPS origin hợp lệ và adapter email đã cấu hình.');
   }
   const app = express(), now = options.now ?? Date.now;
+  // Caddy must overwrite incoming forwarded headers and connect over loopback only.
+  // Trust only one local hop, never arbitrary remote proxies or a forged leftmost IP.
+  app.set('trust proxy', (ip: string, hop: number) => hop === 0 && ['127.0.0.1', '::1', '::ffff:127.0.0.1'].includes(ip));
+  const mailControl = authMailControl(now);
+  app.locals.drainAuthMail = mailControl.drain;
   app.disable('x-powered-by');
   app.use(helmet({ contentSecurityPolicy: false, referrerPolicy:{policy:'no-referrer'} }));
   app.use(express.json({ limit: '1mb' }), cookieParser());
@@ -62,7 +68,7 @@ export function createApp(db: Database, options: AppOptions) {
     // URL fragments are not sent in CDN/origin requests or access-log query strings.
     const link = `${options.origin}/#${purpose}=${encodeURIComponent(raw)}`;
     if (options.localPreview) return link;
-    await options.sendMail!(email, purpose, link);
+    await mailControl.deliver(() => options.sendMail!(email, purpose, link));
     return undefined;
   }
   function published(id: string): Revision {
@@ -74,16 +80,23 @@ export function createApp(db: Database, options: AppOptions) {
   app.get('/api/health', (_req, res) => res.json({ ok: true, mode: options.localPreview ? 'local-preview' : 'live', aiEnabled: false }));
   mountPodcasts(app, options.localPreview);
   app.post('/api/auth/register', async (req, res) => {
-    const input = registration.parse(req.body), existing = db.prepare('SELECT id FROM users WHERE email=?').get(input.email);
-    assert(!existing, 409, 'Email đã được sử dụng. Hãy đăng nhập hoặc khôi phục mật khẩu.');
+    const input = registration.parse(req.body);
+    if (!options.localPreview && !mailControl.reserve(input.email, res)) return;
+    // Hash on both paths: duplicate registration must not reveal account existence.
     const id = randomUUID(), hash = await hashPassword(input.password);
+    let created = false;
     transaction(db, () => {
+      if (db.prepare('SELECT id FROM users WHERE email=?').get(input.email)) return;
       db.prepare('INSERT INTO users(id,email,name,password,created_at) VALUES (?,?,?,?,?)').run(id, input.email, input.name, hash, now());
       db.prepare('INSERT INTO consent VALUES (?,?,?,?)').run(id, '2026-10-16', 1, now());
+      created = true;
     });
-    const raw = issueToken(id, 'verify');
-    const devLink = await mail(input.email, 'verify', raw);
-    res.status(201).json({ message: 'Hãy xác minh email để bắt đầu học.', ...(devLink ? { devLink } : {}) });
+    let devLink: string | undefined;
+    if (options.localPreview && created) devLink = await mail(input.email, 'verify', issueToken(id, 'verify'));
+    else if (!options.localPreview) mailControl.dispatch(async () => {
+      if (created) await mail(input.email, 'verify', issueToken(id, 'verify'));
+    });
+    res.status(201).json({ message: AUTH_MAIL_MESSAGE, retryAfterSeconds: AUTH_MAIL_WAIT_SECONDS, ...(devLink ? { devLink } : {}) });
   });
   app.post('/api/auth/verify', (req, res) => {
     const input = z.object({ token: z.string().min(20).max(200) }).strict().parse(req.body);
@@ -110,17 +123,21 @@ export function createApp(db: Database, options: AppOptions) {
   });
   app.post('/api/auth/forgot', async (req, res) => {
     const { email } = z.object({ email: z.email().max(254).transform(x => x.toLowerCase()) }).strict().parse(req.body);
-    const u = db.prepare('SELECT id FROM users WHERE email=?').get(email) as { id: string } | undefined;
+    if (!options.localPreview && !mailControl.reserve(email, res)) return;
+    const u = db.prepare("SELECT id FROM users WHERE email=? AND status='active'").get(email) as { id: string } | undefined;
     let devLink: string | undefined;
-    if (u) devLink = await mail(email, 'reset', issueToken(u.id, 'reset'));
-    res.json({ message: 'Nếu email đã đăng ký, bạn sẽ nhận được liên kết khôi phục.', ...(devLink ? { devLink } : {}) });
+    if (options.localPreview && u) devLink = await mail(email, 'reset', issueToken(u.id, 'reset'));
+    else if (!options.localPreview) mailControl.dispatch(async () => { if (u) await mail(email, 'reset', issueToken(u.id, 'reset')); });
+    res.json({ message: AUTH_MAIL_MESSAGE, retryAfterSeconds: AUTH_MAIL_WAIT_SECONDS, ...(devLink ? { devLink } : {}) });
   });
   app.post('/api/auth/resend-verification', async (req, res) => {
     const { email } = z.object({ email: z.email().max(254).transform(x => x.toLowerCase()) }).strict().parse(req.body);
+    if (!options.localPreview && !mailControl.reserve(email, res)) return;
     const u = db.prepare("SELECT id FROM users WHERE email=? AND verified=0 AND status='active'").get(email) as { id: string } | undefined;
     let devLink: string | undefined;
-    if (u) devLink = await mail(email, 'verify', issueToken(u.id, 'verify'));
-    res.json({ message: 'Nếu tài khoản cần xác minh, bạn sẽ nhận được liên kết mới.', ...(devLink ? { devLink } : {}) });
+    if (options.localPreview && u) devLink = await mail(email, 'verify', issueToken(u.id, 'verify'));
+    else if (!options.localPreview) mailControl.dispatch(async () => { if (u) await mail(email, 'verify', issueToken(u.id, 'verify')); });
+    res.json({ message: AUTH_MAIL_MESSAGE, retryAfterSeconds: AUTH_MAIL_WAIT_SECONDS, ...(devLink ? { devLink } : {}) });
   });
   app.post('/api/auth/reset', async (req, res) => {
     const input = z.object({ token: z.string().min(20).max(200), password: z.string().min(12).max(128) }).strict().parse(req.body);
