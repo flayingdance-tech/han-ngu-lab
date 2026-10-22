@@ -54,3 +54,7 @@ Create a polished wide landscape 3:2 illustration asset for a Vietnamese Chinese
 ## Prompt ảnh tối
 
 Wide landscape 3:2 original illustration for the dark theme of a Chinese-learning website. Cozy lo-fi study nook at night, sophisticated storybook/anime illustration with soft dimensional lighting, palette midnight indigo, muted plum, warm amber lamplight and coral details. RIGHT side: adorable young adult student with twin hair buns and over-ear headphones studying a blank open notebook at a wooden desk, a sleepy cream cat, stacked books, tea, warm desk lamp. Behind the student a round window looks out onto moonlit mountains, a distant Chinese pagoda and cherry blossom branches. LEFT 45 percent mostly calm dark indigo wall and subtle window glow, very low detail negative space for accessible HTML headline. No words, no letters, no logos, no UI, no borders. Peaceful inviting focus atmosphere, visually rich but calm, premium quality. Horizontal website hero asset.
+
+## CLEAN-01 — 22/10/2026
+
+Đã xóa public/images/study-night-room.webp theo yêu cầu dọn bản thử không dùng. Không có CSS/runtime tham chiếu file này; giữ đủ12ảnh hiện hành, bao gồm study-night.webp và toàn bộ chibi/light. Các mục UI-06/UI-07 phía trên là lịch sử; ảnh thử cũ có thể lấy từ Git nếu cần.

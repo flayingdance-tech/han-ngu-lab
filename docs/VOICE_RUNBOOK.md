@@ -69,3 +69,7 @@ Lệnh legacy: dùng `npx tsx scripts/voice-command.ts render-original ...` ch�
 
 
 Bổ sung bản cuối: word_phonemes giữ thanh từ vựng theo Pinyin và chỉ áp dụng biến điệu thanh3, tránh tự chuyển 打算/suàn4 về5. Khi thay logic, giữ workspace cũ; --reuse-cache .local/voice-kokoro-v1 chỉ tái dùng clip nếu phoneme và cấu hình model/speaker/speed/encoding giống nhau. Cache no-op ghi cache-check.json riêng. audio-retire.py chuyển file không còn tham chiếu vào .local/voice-retired có kiểm tra SHA256, không xóa file; audio-export-check.py kiểm tra đúng file private giọng, cho phép ảnh thiết kế reference-*.webp. Bộ cuối backup timestamp2026-10-19T00-11-01-948Z,295file, cùng máy.
+
+## CLEAN-01 — runtime hiện hành sau dọn (22/10/2026)
+
+Giữ Kokoro model/runtime, ASR, nguồn master/reference và bộA hiện hành. Xóa modelclone OmniVoice, model/thử nghiệmMOSS, mẫu thất bại và cachev1 đã bị thay thế. Luồng audio:render (Kokoro) và radio hiện hành không thay đổi; render-original lịch sử không còn model sẵn, cần chuẩn bị lại nếu được yêu cầu riêng. Giữ backupA2026-10-19T00-11-01-948Z đã kiểm295file; thư mục restore-check và snapshot dư đã dọn. Xem CLEANUP_2026-10-22.md.

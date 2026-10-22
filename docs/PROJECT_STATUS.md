@@ -1,5 +1,23 @@
 # Hán Ngữ Lab — Trạng thái dự án
 
+## CLEAN-01 — dọn file hoàn tất, còn giới hạn bổ sung — 2026-10-22T15:14:25.9381210+07:00
+
+Đã xóa22.370file/6,470GiB local và19file/30,53MiB staging server theo allowlist;383file bảo vệ/304MP3/12ảnh vàSQLite nguyên hash/digest,365file backup giữ lại đã kiểm hash. npm run podcast:check7tập14MP3 đạt; productionhealth16bài7podcastRange206đạt. Không sửa logic/restart/push/deploy, không xóa DB/credential/CodeGraph/Git/offsite/rollback. Bộ duyệt tự động chặn bước dọn bổ sung script cũ và thư mục trống (blocked by policy), nên giữ nguyên. Bàn giao docs/START_HERE.md; báo cáo docs/CLEANUP_2026-10-22.md; bằng chứng .local/cleanup-20261022. Chuẩn bị xử lý xóa chat bước cuối; chưa ghi đã xóa khi chưa có kết quả.
+
+
+## CLEAN-01 IN_PROGRESS — 2026-10-22T15:06:17.9379655+07:00
+
+Chủ dự án yêu cầu dọn file phát sinh/ảnh/âm thanh không dùng và chat. Đã đối chiếu CodeGraph, catalogs/CMS local và checksum; plan riêng .local/cleanup-20261022/plan.json khoảng6GiB. Giữ nguyên304MP3 hiện hành, ảnh UI đang dùng, nguồn/PCM/nhạc/modelKokoro/ASR, SQLite/local+production, credentials/offsite và2backupmedia365file đã kiểm hash. Chỉ xóa modelclone/MOSS không dùng, cache/build/test, mẫu thất bại, media ngoài catalog/CMS và snapshotmedia trùng; .codegraph/.git/node_modules không đụng. Pending docs/domain checkpoint đang có được giữ. Tiếp: xóa theo allowlist/absolute-path preflight, kiểm hash+DB+media/source refs, dọn stagingserver có chứng cứ nếu an toàn, viết bàn giao ngắn cho chat mới. Không push/deploy source ở mốc dọn.
+
+
+## DOMAIN-01 — bàn giao đã đồng bộ — 2026-10-21T22:38:29.3502816+07:00
+
+- FinalHEAD **eb18b321cd4f3a820591a91acc537a8cfc473dff** khớp local/GitHub Private main/Lightsail; [CI39627082548 SUCCESS](https://github.com/flayingdance-tech/han-ngu-lab/actions/runs/39627082548). Frontend release3b39c11 giữ nguyên sau nghiệm thu; commit cuối chỉ tài liệu, VM cập nhật FF-only, không restart/import/test lặp.
+- Canonical https://hanngulab.duckdns.org/ hoạt động; sslip/Amplify302, APIcũ410; REC07 hai mạng đã đạt sau cutover, probe dừng/gỡ. SMTP/non-origin env byte nguyên, Caddy khớp template, services active; mọi hàng gốc14bảng còn nguyên/integrity/FK đạt.
+- Backup20261021T153300Z-fa88e3dc.sqlite.enc đã sync/restore offsite22:33(+07). Fixture/password/token tạm đã thu hồi/dọn riêng; AWSCLI đã logout. Không còn công việc triển khai/test/CI đang chờ.
+- Hồ sơ chính docs/DOMAIN_MIGRATION.md đã trên PrivateGit và VM. Checkpoint kết quả cuối này lưu cục bộ, không push chỉ để kích hoạt CI/build thêm. .codegraph của chủ dự án vẫn untracked, không stage/chỉnh.
+- Công việc ngoài phạm vi migration: theo dõi DNS/DuckDNS, tải và credit, backupPC, duyệt chuyên môn học liệu; không coi migration là hoàn chỉnhHSK4.
+
 ## DOMAIN-01 DONE — DuckDNS production — 2026-10-21T22:35:07.5066009+07:00
 
 - Website chính: **https://hanngulab.duckdns.org/**. DNS A qua1.1.1.1 đúng54.253.61.113; TLS Let's Encrypt YE2/SAN đúng, hạn19/01/2027, Caddy tự gia hạn. Không thêm tài nguyên trả phí, CDN, DNS proxy hoặc quyền IAM.

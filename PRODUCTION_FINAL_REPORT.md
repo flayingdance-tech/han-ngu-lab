@@ -148,3 +148,11 @@ Báo cáo cuối và cấu hình kiểm thử cách ly được đồng bộ Git
 - Backup sau cleanup **20261021T153300Z-fa88e3dc.sqlite.enc**, SHA256 **05c284866c31ba32b92a3ca10386ab19628302afd9218a2b53645ca62b05160b**; serviceSUCCESS/exit0. Sync ngoài máy chủ22:33(+07), giải mã/restore/integrity/FK/inventory đạt. Timer và WindowsScheduledTask cũ giữ nguyên; PC cần bật/login/Internet.
 - Lỗi chuẩn bị đã chặn trước cutover: bundle tạo refHEAD phải fetchHEAD; Next chuẩn hóa canonical bỏ slash cuối; partition key nằm trong RateLimit-Policy dạng pk=:...:. Đã sửa helper riêng, không giảm bảo mật để vượt test. Tài liệu chi tiết docs/DOMAIN_MIGRATION.md.
 - Còn giới hạn vận hành: hostname miễn phí phụ thuộc DuckDNS, một VM, limiterRAM reset khi restart/NAT dùng chung; cần theo dõi credit/traffic. Nhãn beta chưa duyệt giữ nguyên, không cam kết hoàn chỉnhHSK4. Không đổi SES/IAM/SMTP/database/media.
+
+## DOMAIN-01 — bàn giao đã đồng bộ — 2026-10-21T22:38:29.3502816+07:00
+
+- FinalHEAD **eb18b321cd4f3a820591a91acc537a8cfc473dff** khớp local/GitHub Private main/Lightsail; [CI39627082548 SUCCESS](https://github.com/flayingdance-tech/han-ngu-lab/actions/runs/39627082548). Frontend release3b39c11 giữ nguyên sau nghiệm thu; commit cuối chỉ tài liệu, VM cập nhật FF-only, không restart/import/test lặp.
+- Canonical https://hanngulab.duckdns.org/ hoạt động; sslip/Amplify302, APIcũ410; REC07 hai mạng đã đạt sau cutover, probe dừng/gỡ. SMTP/non-origin env byte nguyên, Caddy khớp template, services active; mọi hàng gốc14bảng còn nguyên/integrity/FK đạt.
+- Backup20261021T153300Z-fa88e3dc.sqlite.enc đã sync/restore offsite22:33(+07). Fixture/password/token tạm đã thu hồi/dọn riêng; AWSCLI đã logout. Không còn công việc triển khai/test/CI đang chờ.
+- Hồ sơ chính docs/DOMAIN_MIGRATION.md đã trên PrivateGit và VM. Checkpoint kết quả cuối này lưu cục bộ, không push chỉ để kích hoạt CI/build thêm. .codegraph của chủ dự án vẫn untracked, không stage/chỉnh.
+- Công việc ngoài phạm vi migration: theo dõi DNS/DuckDNS, tải và credit, backupPC, duyệt chuyên môn học liệu; không coi migration là hoàn chỉnhHSK4.

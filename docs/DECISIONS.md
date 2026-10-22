@@ -124,3 +124,7 @@ D-057 ACCEPTED / completed 2026-10-21T21:32:21.4202324+07:00: Ownerphêduyệtst
 ## D-058 — Đã chốt — 2026-10-21T22:34:05.4537313+07:00
 
 Chủ dự án phê duyệt DuckDNS hanngulab.duckdns.org trên Lightsail hiện có, staged rồi mới cutover302 sslip/Amplify; không trả phí/CDN/IAM, giữTCPtrust/SQLite/SMTP/media/backups vàrollback. Canonicalđãchuyển qua nghiệmthu thật; xem DOMAIN_MIGRATION.md. Quyếtđịnhnàythayhostname sslip tạm củaD-057, khôngđổikiếntrúc đãduyệt.
+
+## D-059 — Đã chốt — 2026-10-22T15:14:25.9381210+07:00
+
+Chủ dự án yêu cầu dọn file/thư mục/hình/âm thanh không dùng và chat. Cho phép loại bỏ các bản thử/cache/model không dùng cùng snapshotmedia dư sau đối chiếu phụ thuộc và kiểm backup; quyết định này thay yêu cầu lịch sử giữ mọi bản thử để đối chiếu, nhưng giữ nguyên dữ liệu/credentials/media hiện hành và rollback/offsite. Không tự mở rộng sang dữ liệu hoặc cuộc trò chuyện khác.
