@@ -54,6 +54,17 @@ test('responsive image, pause, keyboard target sizes and reduced motion', async 
   expect(await banner.locator('.promo-spark').evaluate(el=>getComputedStyle(el).animationPlayState)).toBe('paused');
   await page.screenshot({path:testInfo.outputPath('banner-light.png'),fullPage:true});
   await page.evaluate(()=>document.documentElement.setAttribute('data-theme','dark'));
+    await banner.locator('.promo-motion-toggle').hover();
+  const contrast=await banner.locator('.promo-motion-toggle').evaluate(el=>{
+    const style=getComputedStyle(el);
+    const luminance=(color:string)=>{
+      const values=color.match(/[\d.]+/g)!.slice(0,3).map(Number).map(value=>{const c=value/255;return c<=.04045?c/12.92:((c+.055)/1.055)**2.4;});
+      return values[0]*.2126+values[1]*.7152+values[2]*.0722;
+    };
+    const a=luminance(style.color),b=luminance(style.backgroundColor);
+    return (Math.max(a,b)+.05)/(Math.min(a,b)+.05);
+  });
+  expect(contrast).toBeGreaterThanOrEqual(4.5);
   await page.screenshot({path:testInfo.outputPath('banner-dark.png'),fullPage:true});
   await page.emulateMedia({reducedMotion:'reduce'});
   expect(await banner.locator('.promo-spark').evaluate(el=>getComputedStyle(el).animationName)).toBe('none');

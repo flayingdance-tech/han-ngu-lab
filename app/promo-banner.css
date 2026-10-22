@@ -39,6 +39,7 @@
 [data-theme="dark"] .promo-copy>small{color:#c2a49e}
 [data-theme="dark"] .promo-features svg,[data-theme="dark"] .promo-spark{color:#ffa999}
 [data-theme="dark"] .promo-art{border-color:#86534f}
+[data-theme="dark"] .promo-motion-toggle:hover{background:#4b3039;border-color:#916262}
 [data-theme="dark"] .promo-banner button:focus-visible{outline-color:#ffc2aa}
 @keyframes promo-enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 @keyframes promo-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
