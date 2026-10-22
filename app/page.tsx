@@ -12,6 +12,7 @@ import { stopSpeech } from '../lib/audio';
 import { AudioButton } from './components/AudioButton';
 import { StudyActivity } from './components/StudyActivity';
 import { Podcasts } from './components/Podcasts';
+import { PromoBanner } from './components/PromoBanner';
 
 type Page = 'home'|'roadmap'|'review'|'vocab'|'progress'|'podcasts'|'settings'|'admin'|'about';
 type Progress = { progress:{lessonId:string;score:number;completedAt:number}[]; attempts:{id:string;lessonId:string;createdAt:number;result:{score:number;feedback:{correct:boolean;prompt:string;answer:string;explanation:string}[]}}[]; due:number; totalWords:number };
@@ -23,6 +24,7 @@ export default function Home() {
   const entryAction=useRef<{verification?:Promise<{message:string}>;reset?:string}|null>(null);
   const [page,setPage]=useState<Page>('home'),[user,setUser]=useState<User|null>(null),[catalog,setCatalog]=useState<LessonCard[]>([]),[progress,setProgress]=useState<Progress>(emptyProgress),[local,setLocal]=useState(false),[loading,setLoading]=useState(true),[error,setError]=useState(''),[notice,setNotice]=useState(''),[auth,setAuth]=useState(false),[resetToken,setResetToken]=useState(''),[selected,setSelected]=useState(''),[menu,setMenu]=useState(false),[level,setLevel]=useState(-1),[search,setSearch]=useState('');
   const [releaseNotice,setReleaseNotice]=useState('');
+  const [authMode,setAuthMode]=useState<'login'|'register'>('login');
   const refresh=useCallback(async()=>{try{setProgress(await api<Progress>('/progress'));}catch(e){setError((e as Error).message);}},[]);
   useEffect(()=>{
     // A mail link clicked inside this open page changes only its fragment.
@@ -75,6 +77,7 @@ export default function Home() {
     <main id="main-content">{notice&&<div role="status" className="notice success">{notice}<button className="icon-button" aria-label="Đóng thông báo" onClick={()=>setNotice('')}><X size={15}/></button></div>}{error&&<div role="alert" className="notice error">{error}<button className="text-button" onClick={()=>location.reload()}>Thử tải lại</button></div>}
       {selected?<LessonPlayer key={selected} id={selected} user={user} onBack={()=>navigate('roadmap')} onLogin={()=>setAuth(true)} onComplete={()=>void refresh()}/>:<>
       {page==='home'&&<><div className="greeting"><div><span className="eyebrow">{today}</span><h1>{user?`Chào ${user.name.split(' ').at(-1)}, học một chút nhé.`:'Chào bạn, cùng bắt đầu nhé.'}<span className="greeting-dot">✦</span></h1><p className="muted">Một bước nhỏ hôm nay. Một thế giới rộng hơn ngày mai.</p></div><span className="daily-target"><Target size={18}/>{user?.dailyGoal??20} phút / ngày</span></div>
+        <PromoBanner signedIn={Boolean(user)} onStart={()=>{if(user){navigate('roadmap');}else{setAuthMode('register');setAuth(true);}}} onExplore={()=>navigate('roadmap')}/>
         <section className="hero"><div className="hero-copy"><span className="hero-label"><span/> HÀNH TRÌNH TỪ CON SỐ 0</span><h2>Mỗi ngày một chút,<br/>tiếng Trung <em>gần hơn.</em></h2><p>Học điều mới. Thử dùng ngay.<br/>Ôn lại đúng lúc để nhớ thật lâu.</p><button className="button light" disabled={!nextLesson} onClick={()=>nextLesson&&openLesson(nextLesson.id)}>{progress.progress.length?'Tiếp tục học':'Bắt đầu bài đầu tiên'}<ArrowRight size={18}/></button><span className="hero-caption">{nextLesson?`${nextLesson.minutes} phút · ${nextLesson.title}`:loading?'Đang tải giáo trình…':'Giáo trình đang được chuẩn bị'}</span></div><div className="hero-art" aria-hidden="true"/></section>
         <section className="home-discover"><div className="section-title"><h2>Một bài học, một khám phá</h2><button className="text-button" onClick={()=>navigate('roadmap')}>Đề xuất cho bạn<ArrowRight size={15}/></button></div><div className="lesson-list">{catalog.slice(0,3).map((l,i)=><LessonRow key={l.id} lesson={l} index={i} completed={completed.has(l.id)} onOpen={()=>openLesson(l.id)}/>)}</div></section>
       </>}
@@ -90,7 +93,7 @@ export default function Home() {
       <footer><span>Hán Ngữ Lab <span className="footer-dot">·</span> Một chút mỗi ngày.</span><button onClick={()=>navigate('about')}>Thông tin & quyền riêng tư<ArrowUpRight size={13}/></button></footer>
     </main></div>
     <nav className="mobile-bottom" aria-label="Điều hướng di động">{navItems.slice(0,4).map(n=><button key={n.id} className={page===n.id?'active':''} onClick={()=>navigate(n.id)}><n.icon size={19}/><span>{n.title}</span></button>)}</nav>
-    {auth&&<AuthPanel initialReset={resetToken||undefined} onClose={()=>{setAuth(false);setResetToken('');}} onLogin={u=>{setUser(u);setAuth(false);setResetToken('');void refresh();}}/>}
+    {auth&&<AuthPanel initialMode={authMode} initialReset={resetToken||undefined} onClose={()=>{setAuth(false);setAuthMode('login');setResetToken('');}} onLogin={u=>{setUser(u);setAuth(false);setAuthMode('login');setResetToken('');void refresh();}}/>}
   </div>;
 }
 

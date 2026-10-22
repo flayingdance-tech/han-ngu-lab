@@ -3,6 +3,7 @@
 Cập nhật22/10/2026, Asia/Bangkok(+07). Tệp này đủ để mở chat mới mà không cần chép lịch sử chat cũ.
 
 - Workspace: D:\Hán Ngữ Lab. Đọc AGENTS.md; nguồn và dữ liệu đang có phải được bảo toàn.
+- Báo cáo từ offline lên online và checklist/prompt cho Codex: docs/AWS_DEPLOYMENT_REPORT.md.
 - Website: https://hanngulab.duckdns.org/ . sslip.io và Amplify cũ chuyển302; APIcũ tới410, không proxy Express.
 - Hosting: Lightsail54.253.61.113, Caddy2.11.7, Node24, Express127.0.0.1:3001. Không tin headerIP tùy ý; REC07 đã nghiệm thu2mạng trước/saucutover.
 - GitHub: flayingdance-tech/han-ngu-lab Private, main. Local master theo dõi origin/main; giữ amplify.yml baseDirectory:.next. eb18b32 là commit phát hành/bàn giao trước dọn; CI39627082548 SUCCESS. Commit dọn cục bộ, nếu có, chưa push.
@@ -20,3 +21,5 @@ Cập nhật22/10/2026, Asia/Bangkok(+07). Tệp này đủ để mở chat mớ
 - Một số script triển khai cũ và thư mục trống vẫn giữ vì bộ duyệt tự động chặn dọn bổ sung. Xem docs/CLEANUP_2026-10-22.md; không tự vượt chặn.
 - Chi tiết công việc: PROJECT_STATUS.md, NEXT_STEPS.md, TASKS.md, DECISIONS.md, WORK_LOG.md trong docs/.
 - Phần tiếp theo ngoài cleanup: duyệt chuyên môn học liệu, hoàn thiện giáo trình, theo dõi ngân sách/backup/DNS. Không mua dịch vụ/nâng gói/tạo tài nguyên trả phí nếu chưa được duyệt.
+
+Kết quả cuối về chat: đã thử đúng UUID của cuộc trò chuyện hiện tại bằng codex delete --force; CLI trả lỗi nguyên văn failed to delete session (exit1), nên chat CHƯA bị xóa. Không sửa/xóa thủ công database hoặc transcript của Codex và không đụng chat khác. Dọn file chính DONE; phần xóa chat và dọn script/thư mục bổ sung còn BLOCKED bởi kết quả CLI/bộ duyệt tự động. Bản bàn giao đã lưu, cleanup commit ea16da5 chưa push.

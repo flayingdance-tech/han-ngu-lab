@@ -1,5 +1,9 @@
 # Bảng công việc
 
+## PROMO-01 IN_PROGRESS — 2026-10-23T00:33:38.8367558+07:00
+
+Đã thêm PromoBanner, CSS giảm chuyển động, CTA mở đăng ký và 3 WebP tối ưu. Giữ hero/học liệu cũ. Tiếp: kiểm thử responsive/build/secret, Private GitHub CI, backup và static release Lightsail có rollback; chưa triển khai. Bằng chứng .local/promo-20261023. Không đổi backend/Caddy/SMTP/SQLite.
+
 ## CLEAN-01 — dọn file hoàn tất, còn giới hạn bổ sung — 2026-10-22T15:14:25.9381210+07:00
 
 Đã xóa22.370file/6,470GiB local và19file/30,53MiB staging server theo allowlist;383file bảo vệ/304MP3/12ảnh vàSQLite nguyên hash/digest,365file backup giữ lại đã kiểm hash. npm run podcast:check7tập14MP3 đạt; productionhealth16bài7podcastRange206đạt. Không sửa logic/restart/push/deploy, không xóa DB/credential/CodeGraph/Git/offsite/rollback. Bộ duyệt tự động chặn bước dọn bổ sung script cũ và thư mục trống (blocked by policy), nên giữ nguyên. Bàn giao docs/START_HERE.md; báo cáo docs/CLEANUP_2026-10-22.md; bằng chứng .local/cleanup-20261022. Chuẩn bị xử lý xóa chat bước cuối; chưa ghi đã xóa khi chưa có kết quả.
@@ -157,3 +161,10 @@ REC-07 APPROVED / D-057 2026-10-21T21:02:27.2328209+07:00 : Owner phê duyệt s
 REC-07 DONE 2026-10-21T21:32:21.4202324+07:00: DirectTCPonly, hai mạngthật+forged saufullrollback/táicutover21:30đạt; auth/CSRF/CMS/16lessons/7podcasts/304SHA/Range/SES/persistence/data14tables/backupđạt. Runbook REC07_DIRECT_INGRESS_RESULT.md.
 
 REC-07 HANDOFF DONE 2026-10-21T21:39:12.0982954+07:00: b9d8463Private/main/VMkhớp, CI39617833990success, canonicaldirectingressactive, actual2networks+forged/fullrollback/CSRF/auth/CMS/media/SES/SQLite/offsitepassed. Khôngcònrequiredwork củaREC07.
+
+Kết quả cuối về chat: đã thử đúng UUID của cuộc trò chuyện hiện tại bằng codex delete --force; CLI trả lỗi nguyên văn failed to delete session (exit1), nên chat CHƯA bị xóa. Không sửa/xóa thủ công database hoặc transcript của Codex và không đụng chat khác. Dọn file chính DONE; phần xóa chat và dọn script/thư mục bổ sung còn BLOCKED bởi kết quả CLI/bộ duyệt tự động. Bản bàn giao đã lưu, cleanup commit ea16da5 chưa push.
+
+DOC-AWS-01 DONE — 2026-10-22T15:33:31.1471397+07:00: tạo docs/AWS_DEPLOYMENT_SHORT.md, bản ghi tối giản từ offline lên AWS, lỗi và cách xử lý theo hồ sơ20–22/10. Chỉ tài liệu; không sửa mã, dữ liệu hoặc AWS, không chạy lại test/build, không push.
+
+
+DOC-AWS-02 DONE — 2026-10-22T15:56:29.1054932+07:00: tạo docs/AWS_DEPLOYMENT_REPORT.md:8giai đoạn, lỗi/nguyên nhân/cách khắc phục, lỗi thao tác, checklist8bước và prompt tái sử dụng. Phân biệt cấu hình Amplify.next với exportout, ghi kiến trúc cuối thayproxycũ. Chỉ tổng hợp hồ sơ, không triển khai hoặc kiểmAWS lại, không push.

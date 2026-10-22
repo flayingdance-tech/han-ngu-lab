@@ -1,5 +1,9 @@
 # Hán Ngữ Lab — Trạng thái dự án
 
+## PROMO-01 IN_PROGRESS — 2026-10-23T00:33:38.8367558+07:00
+
+Đã thêm PromoBanner, CSS giảm chuyển động, CTA mở đăng ký và 3 WebP tối ưu. Giữ hero/học liệu cũ. Tiếp: kiểm thử responsive/build/secret, Private GitHub CI, backup và static release Lightsail có rollback; chưa triển khai. Bằng chứng .local/promo-20261023. Không đổi backend/Caddy/SMTP/SQLite.
+
 ## CLEAN-01 — dọn file hoàn tất, còn giới hạn bổ sung — 2026-10-22T15:14:25.9381210+07:00
 
 Đã xóa22.370file/6,470GiB local và19file/30,53MiB staging server theo allowlist;383file bảo vệ/304MP3/12ảnh vàSQLite nguyên hash/digest,365file backup giữ lại đã kiểm hash. npm run podcast:check7tập14MP3 đạt; productionhealth16bài7podcastRange206đạt. Không sửa logic/restart/push/deploy, không xóa DB/credential/CodeGraph/Git/offsite/rollback. Bộ duyệt tự động chặn bước dọn bổ sung script cũ và thư mục trống (blocked by policy), nên giữ nguyên. Bàn giao docs/START_HERE.md; báo cáo docs/CLEANUP_2026-10-22.md; bằng chứng .local/cleanup-20261022. Chuẩn bị xử lý xóa chat bước cuối; chưa ghi đã xóa khi chưa có kết quả.
@@ -217,3 +221,10 @@ Unit45/45; E2E26pass+2focus outdated lastbutton fixed and rerun2/2pass; lint/typ
 Push60c713e03db605948d23925df1e9d4f9aa2c94f7 Private main; CI39546789335 SUCCESS allsteps; AmplifyDeployment5 Deployed and commitlink exact60c713e. BrowserSSH invoked reviewed deploy script from exact GitSHA after CI. Waiting server result: do not assume backup/import/timer done. Policy remains pendingfalse, no media release. Next read terminal and validate users3/lessons16draft/no publication, backup timer, HTTP.
 
 REC-07 APPROVED / D-057 2026-10-21T21:02:27.2328209+07:00 : Owner phê duyệt staged single-Lightsail, chỉcutoversau verification, giữAmplifyrollback, trustTCPonly, test2networks+forged+auth/CMS/content/SES/persistence; oldAPIkhôngbypass; rollbackconfigkhôngSQLite; khôngpaidresources. Đang staging exact2origin, loginemailhashguard10/15min, Caddypublicbuild riêng. Local check51tests/lint/typecheck/build vàsmoke đạt; chưadeploy/cutover.
+
+Kết quả cuối về chat: đã thử đúng UUID của cuộc trò chuyện hiện tại bằng codex delete --force; CLI trả lỗi nguyên văn failed to delete session (exit1), nên chat CHƯA bị xóa. Không sửa/xóa thủ công database hoặc transcript của Codex và không đụng chat khác. Dọn file chính DONE; phần xóa chat và dọn script/thư mục bổ sung còn BLOCKED bởi kết quả CLI/bộ duyệt tự động. Bản bàn giao đã lưu, cleanup commit ea16da5 chưa push.
+
+DOC-AWS-01 DONE — 2026-10-22T15:33:31.1471397+07:00: tạo docs/AWS_DEPLOYMENT_SHORT.md, bản ghi tối giản từ offline lên AWS, lỗi và cách xử lý theo hồ sơ20–22/10. Chỉ tài liệu; không sửa mã, dữ liệu hoặc AWS, không chạy lại test/build, không push.
+
+
+DOC-AWS-02 DONE — 2026-10-22T15:56:29.1054932+07:00: tạo docs/AWS_DEPLOYMENT_REPORT.md:8giai đoạn, lỗi/nguyên nhân/cách khắc phục, lỗi thao tác, checklist8bước và prompt tái sử dụng. Phân biệt cấu hình Amplify.next với exportout, ghi kiến trúc cuối thayproxycũ. Chỉ tổng hợp hồ sơ, không triển khai hoặc kiểmAWS lại, không push.

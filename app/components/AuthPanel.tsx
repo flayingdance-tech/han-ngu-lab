@@ -4,7 +4,7 @@ import { ArrowRight, X, Mail, ShieldCheck } from 'lucide-react';
 import { api, ApiError } from '../../lib/client';
 import type { User } from '../../lib/domain';
 
-export function AuthPanel({ onClose, onLogin, initialReset }: { onClose: () => void; onLogin: (u: User) => void; initialReset?: string }) {
+export function AuthPanel({ onClose, onLogin, initialReset, initialMode = 'login' }: { onClose: () => void; onLogin: (u: User) => void; initialReset?: string; initialMode?: 'login' | 'register' }) {
   const panel = useRef<HTMLElement>(null);
   useEffect(() => {
     const previous = document.activeElement instanceof HTMLElement ? document.activeElement : null;
@@ -13,7 +13,7 @@ export function AuthPanel({ onClose, onLogin, initialReset }: { onClose: () => v
     panel.current?.querySelector<HTMLElement>('input,button')?.focus();
     return () => { document.body.style.overflow = overflow; previous?.focus(); };
   }, []);
-  const [mode, setMode] = useState<'login'|'register'|'forgot'|'reset'|'resend-verification'>(initialReset ? 'reset' : 'login');
+  const [mode, setMode] = useState<'login'|'register'|'forgot'|'reset'|'resend-verification'>(initialReset ? 'reset' : initialMode);
   const [error, setError] = useState(''), [message, setMessage] = useState(''), [devLink, setDevLink] = useState(''), [busy, setBusy] = useState(false);
   const [email, setEmail] = useState(''), [waits, setWaits] = useState<Record<string, number>>({}), [clock, setClock] = useState(0);
   useEffect(() => { const timer = setInterval(() => setClock(Date.now()), 1000); return () => clearInterval(timer); }, []);

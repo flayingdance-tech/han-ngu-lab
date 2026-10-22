@@ -1,0 +1,47 @@
+/* Keep the existing hero inside its column when its aspect ratio meets a minimum height. */
+.page-home .hero{width:100%;min-width:0}
+@media(min-width:761px) and (max-width:1200px){.page-home .hero{aspect-ratio:auto}}
+.promo-banner{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:28px;align-items:center;padding:30px;margin-bottom:24px;overflow:hidden;border:1px solid #edc8c4;border-radius:22px;background:radial-gradient(ellipse at 100% 0%,#f9d5ca 0,transparent 54%),linear-gradient(120deg,#fffdfb,#fff5ee);box-shadow:0 12px 38px #952b2310;color:#482a2b}
+.promo-banner::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(#dd473c,#a71025);z-index:-1}
+.promo-copy{min-width:0;animation:promo-enter .6s ease-out both}
+.promo-kicker{display:flex;align-items:center;gap:8px;color:#97312d;font-size:10px;font-weight:750;letter-spacing:.13em;line-height:1.6}
+.promo-kicker>span{width:6px;height:6px;flex-shrink:0;border-radius:50%;background:#bd2130;box-shadow:0 0 0 4px #bd21300e}
+.promo-banner h2{margin:17px 0 12px;font-size:clamp(26px,2.5vw,37px);font-weight:800;line-height:1.24;letter-spacing:-.045em;color:#392326}
+.promo-banner h2 em{font-style:normal;color:#b71d2b}
+.promo-copy>p{max-width:385px;margin:0;color:#735553;font-size:14px;line-height:1.8}
+.promo-features{display:flex;flex-wrap:wrap;gap:12px;margin:19px 0;padding:0;list-style:none}
+.promo-features li{display:flex;align-items:center;gap:5px;font-size:11px;font-weight:650;color:#7e3b38}
+.promo-features svg{color:#b52230}
+.promo-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px}
+.promo-cta{display:inline-flex;justify-content:center;align-items:center;gap:12px;min-height:48px;padding:12px 18px;border:1px solid #aa1624;border-radius:11px;background:linear-gradient(135deg,#d33732,#b21a2a);color:#fff;font-size:13px;font-weight:750;box-shadow:0 5px 13px #b51f2926;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.promo-cta:hover{transform:translateY(-2px);box-shadow:0 8px 18px #b51f2933}
+.promo-explore{display:inline-flex;align-items:center;gap:5px;min-height:44px;padding:7px 2px;background:none;border:0;color:#923a34;font-size:12px;font-weight:700;cursor:pointer}
+.promo-copy>small{display:block;margin-top:13px;color:#886b66;font-size:10px;line-height:1.6}
+.promo-visual{position:relative;min-width:0;padding:12px 0 27px}
+.promo-art{position:relative;display:block;width:100%;padding:0;overflow:hidden;aspect-ratio:16/9;border:3px solid #fff;border-radius:15px;background:#f8e4d9;box-shadow:0 14px 35px #8e25212e;cursor:pointer;transform:rotate(-1deg);transition:transform .35s ease,box-shadow .35s ease}
+.promo-art:hover{transform:rotate(0deg) translateY(-2px);box-shadow:0 18px 38px #8e252138}
+.promo-art picture,.promo-art img{display:block;width:100%;height:100%}
+.promo-art img{object-fit:contain}
+.promo-orbit{position:absolute;display:block;pointer-events:none;border:1px solid #cb66554d;border-radius:50%;animation:promo-float 7s ease-in-out infinite}
+.promo-orbit-one{width:75px;height:75px;top:-9px;right:-18px}
+.promo-orbit-two{width:46px;height:46px;bottom:11px;left:-16px;animation-delay:-3.5s;background:#efb39d28}
+.promo-spark{position:absolute;right:-9px;bottom:22px;z-index:1;display:flex;pointer-events:none;color:#be432f;animation:promo-float 6s ease-in-out infinite reverse}
+.promo-motion-toggle{position:absolute;right:0;bottom:-1px;display:inline-flex;align-items:center;gap:5px;min-height:28px;padding:4px 7px;border:1px solid transparent;border-radius:6px;background:transparent;color:#85564f;font-size:10px;cursor:pointer}
+.promo-motion-toggle:hover{background:#fff9;border-color:#e3b8ac}
+.promo-banner button:focus-visible{outline:3px solid #a70d2d;outline-offset:4px}
+.promo-banner[data-motion-paused="true"] .promo-orbit,.promo-banner[data-motion-paused="true"] .promo-spark{animation-play-state:paused}
+.promo-banner[data-motion-paused="true"] .promo-copy{animation:none}
+[data-theme="dark"] .promo-banner{border-color:#694449;background:radial-gradient(ellipse at 100% 0%,#6a2f382e 0,transparent 65%),linear-gradient(120deg,#2a2029,#32232b);color:#f2e0dc;box-shadow:0 12px 38px #08030c22}
+[data-theme="dark"] .promo-banner h2{color:#fff4ed}
+[data-theme="dark"] .promo-banner h2 em{color:#ffb2a3}
+[data-theme="dark"] .promo-kicker,[data-theme="dark"] .promo-features li,[data-theme="dark"] .promo-motion-toggle,[data-theme="dark"] .promo-explore{color:#efb5ab}
+[data-theme="dark"] .promo-copy>p{color:#d5bbb6}
+[data-theme="dark"] .promo-copy>small{color:#c2a49e}
+[data-theme="dark"] .promo-features svg,[data-theme="dark"] .promo-spark{color:#ffa999}
+[data-theme="dark"] .promo-art{border-color:#86534f}
+[data-theme="dark"] .promo-banner button:focus-visible{outline-color:#ffc2aa}
+@keyframes promo-enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes promo-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media(max-width:1050px){.promo-banner{gap:18px;padding:23px}.promo-banner h2{font-size:29px}.promo-copy>p{font-size:13px}.promo-actions{gap:7px}.promo-cta{font-size:12px;padding-inline:13px}.promo-features{gap:9px}}
+@media(max-width:1050px){.promo-banner{grid-template-columns:minmax(0,1fr);gap:5px;padding:17px;border-radius:17px}.promo-visual{grid-row:1;padding:5px 3px 26px}.promo-copy{padding:3px 3px 5px}.promo-art{transform:none;border-width:2px;border-radius:11px}.promo-banner h2{font-size:30px;margin:12px 0 10px}.promo-copy>p{max-width:none;font-size:13px}.promo-features{margin:14px 0;gap:17px}.promo-kicker{font-size:9px}.promo-cta{font-size:13px;min-height:48px;padding-inline:18px}.promo-actions{gap:16px}.promo-orbit-one{right:-10px;top:-10px;width:58px;height:58px}.promo-spark{right:-3px;bottom:23px}.promo-copy>small{margin-top:10px}}
+@media(prefers-reduced-motion:reduce){.promo-copy,.promo-orbit,.promo-spark{animation:none!important}.promo-banner button{transition:none}.promo-art,.promo-art:hover,.promo-cta:hover{transform:none}.promo-motion-toggle{display:none}}
