@@ -6,6 +6,7 @@ import type { Lesson, User } from '../../lib/domain';
 import { RevisionPreview } from './RevisionPreview';
 import { ExerciseEditor } from './ExerciseEditor';
 import { MediaCMS } from './MediaCMS';
+import { OnlineVisitors } from './OnlineVisitors';
 type Revision = { id: string; lesson_id:string; status:string; author_id:string; reviewer_id:string|null; published_revision_id:string|null; content:Lesson };
 const statusNames: Record<string,string> = { sample:'Bài mẫu local',draft:'Bản nháp',beta:'Bản thử nghiệm — Chưa duyệt',beta_archived:'Beta đã thu hồi',in_review:'Chờ duyệt',approved:'Đã duyệt',published:'Đã xuất bản',archived:'Lưu trữ' };
 const emptyLesson: Lesson = { id:'bai-hoc-moi',level:1,unit:'Unit mới',title:'Bài học mới',subtitle:'',minutes:20,order:1,objectives:['Mục tiêu bài học'],introduction:'',vocabulary:[],grammar:[],dialogue:[],exercises:[],summary:'',provenance:'Nội dung gốc Hán Ngữ Lab',standard:'HNL-DRAFT-2026',humanReviewed:false };
@@ -22,6 +23,7 @@ export function CMS({ user }: { user:User }) {
   async function confirmImport(){setBusy(true);try{await api('/admin/import',importData);setImportData(null);setImportSummary('');setMessage('Đã nhập thành bản nháp.');await load();}catch(e){setError((e as Error).message);}finally{setBusy(false);}}
   function set<K extends keyof Lesson>(key:K,value:Lesson[K]){setEditing(l=>l?{...l,[key]:value}:l);}
   return <div><div className="section-title"><div><span className="eyebrow">XƯỞNG NỘI DUNG</span><h1>{editing?'Biên soạn bài học':'Giáo trình & kiểm duyệt'}</h1><p className="muted">Mỗi chỉnh sửa là một phiên bản. Tiến độ của người học được giữ lại.</p></div>{!editing&&writer&&<button className="button primary" onClick={()=>setEditing(structuredClone(emptyLesson))}><Plus size={17}/>Tạo bài mới</button>}</div>
+    {!editing&&['admin','super_admin'].includes(user.role)&&<OnlineVisitors/>}
     {!editing&&<MediaCMS user={user}/>}
     {error&&<p className="notice error" role="alert">{error}</p>}{message&&<p className="notice success" role="status">{message}</p>}
     {preview&&!editing&&<RevisionPreview lesson={preview.content} revisionId={preview.id} onClose={()=>setPreview(null)}/>}

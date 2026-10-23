@@ -14,6 +14,7 @@ import { betaLessonAllowed, betaNotice, type ReleasePolicy } from './content-rel
 import { mountMediaEditorial, releasedPodcasts } from './media-editorial';
 import { applicationOrigins } from './origins';
 import { loginGuard } from './login-guard';
+import { mountPresence } from './presence';
 
 type UserRow = { id: string; email: string; name: string; password: string; role: Role; verified: number; status: string; timezone: string; daily_goal: number };
 type Revision = { id: string; lesson_id: string; content: string; status: string; author_id: string; reviewer_id: string | null; created_at: number };
@@ -65,6 +66,7 @@ export function createApp(db: Database, options: AppOptions) {
   const staff: Role[] = ['editor', 'reviewer', 'admin', 'super_admin'];
   function audit(actor: string, action: string, target: string, details = '') { db.prepare('INSERT INTO audit VALUES (?,?,?,?,?,?)').run(randomUUID(), actor, action, target, details, now()); }
   mountMediaEditorial(app,db,options,privileged,audit,assert);
+  mountPresence(app, { now, localPreview: options.localPreview, authorizeAdmin: req => privileged(req, ['admin', 'super_admin']) });
   function issueToken(user: string, purpose: string) {
     const raw = token();
     db.prepare('DELETE FROM tokens WHERE user_id=? AND purpose=?').run(user, purpose);

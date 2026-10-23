@@ -1,5 +1,29 @@
 # Bảng công việc
 
+## ONLINE-01 IN_PROGRESS — 2026-10-23T19:39:31.7294253+07:00
+
+Đang thêm heartbeat30s + TTL120s, bộ đếm RAM bounded, API admin/super_admin-only và card CMS refresh15s. Không thay schema/ghiSQLite/SMTP/học liệu. Chờ unitphânquyền/expiry/dedup/CSRF/abuse, E2E,lint/build/typecheck/smoke; chưa deploy. Bằng chứng .local/online-20261023. Giữ nguyên checkpoint PROMO pending và .codegraph. Tiếp: kiểm thử, backup, PrivateGit CI và deployment cảAPI/frontend có rollback không restoreDB.
+
+## PROMO-01 DONE — bản cuối — 2026-10-23T01:03:59.6318757+07:00
+
+- Website https://hanngulab.duckdns.org/ đang chạy **17db6d4a95d8e5ae6bfe61696ebc3d2aec965e5a**; GitHub Private/main cùngSHA, [CI39827539770 SUCCESS](https://github.com/flayingdance-tech/han-ngu-lab/actions/runs/39827539770). Feature28a5599 và fix17db đều đã triển khai; không còn gate chờ.
+- Local bản cuối: build/typecheck/scopedlint/6E2E đạt, gồm contrast hover tối≥4,5:1; CI chạy đủ lint/51tests/build/typecheck/smoke/secret/audit và đạt. Banner desktop/tablet/mobile, CTA đăng ký, focus/reduced-motion, WebP48–137KB, hero/bài học giữ nguyên.
+- HTTP HTML production khớp byte với out/index.html bản cuối;3WebP SHA khớp;16bài7podcast,Range206,adminẩn danh401. Browser thực đã xác nhận banner/đăng ký desktop/mobile, viewport không tràn. Không tạo tài khoản/mail test trênproduction.
+- Rollback frontend17db→28a5599→17db thực sự đạt; snapshot rootprivate promo-20261023-a11y giữ nguyên. Caddy/env nguyênbyte, API PID47006 không restart;14bảng integrity/FK/rowdigest đạt,290MP3 học khớp releasecũ +14MP3podcast khớpsnapshot =304nguyênhash. Backup/offsite restore đã đạt như mốc dưới; không đổi dữ liệu/SMTP/SES/REC07/hạ tầng/chi phí.
+- docs/PROMOTIONAL_BANNER.md có bàn giao cuối; .local/promo-20261023 có CI/deploy-a11y/final-http/final-server-a11y/ảnhproduction. Checkpoint cuối chỉ lưu local, không push docs để lặpCI. .codegraph của chủ dự án giữ nguyên. Bước tiếp theo chỉ theo dõi phản hồi giao diện, không còn triển khai banner đang dở.
+## PROMO-01 — hoàn thiện tương phản IN_PROGRESS — 2026-10-23T01:01:03.1089154+07:00
+
+Feature28a5599 đã chạy production; bản17db6d4 bổ sung màu hover tối và regressioncontrast≥4,5:1, local build/typecheck/lint/6E2E/secretPASS. Đã push Private main, CI39827539770 đang chạy; chưa deploy17db. Artifact+bundle ở staging promo-20261023-a11y; snapshotroot700 cùngtên đã tạo. Tiếp: CI đạt mới chạy deploy-a11y.sh theo digest, rollback về28a5599 nếu lỗi, xác minhproduction và cập nhậtDONE. API/Caddy/SQLite/SMTP nguyên. Không lặp51unit vìCSS/test-only; CI vẫn chạy đủ.
+
+## PROMO-01 DONE — 2026-10-23T00:55:26.3234919+07:00
+
+- Đã triển khai https://hanngulab.duckdns.org/ bằng commit **28a55991e9b610b414636241ffed4f35038534ae**, GitHub Private main; [CI39826279916 SUCCESS](https://github.com/flayingdance-tech/han-ngu-lab/actions/runs/39826279916).
+- Banner giữ ảnh chủ dự án, CSS entrance/float có dừng/reduced-motion, CTA mở đăng ký thật; nội dung học cũ giữ nguyên. Sửa tràn/cắt nút hero cũ tại tablet bằng width100% và aspect-ratio:auto, không giấu overflow.
+- Lint/51tests/build/typecheck/smoke đạt; 6/6 E2E desktop1440/tablet820/mobile390, sáng/tối/focus/đăng ký/giảm chuyển động/1WebP<150KB đạt. Bản cuối chỉ sửa CSS responsive và thêm regression assertion; không lặp unit khi không đổi backend.
+- Production browser xác nhận ảnh và đăng ký ở desktop/mobile; mobile viewport375 sau scrollbar, scrollWidth375, ảnh640WebP tải thành công. HTTP3asset SHA khớp, health200,16bài7podcast,Range206,adminẩn danh401. Không gửi đăng ký/mail mới trênproduction.
+- Release /srv/han-ngu-lab/releases/28a55991e9b610b414636241ffed4f35038534ae/site; symlink rollback về3b39c11 rồi chuyển lại đã thử. Caddy/env byte nguyên, API PID47006 không restart;14bảng SQLite/integrity/FK và mediaSHA nguyên. Amplify .next/backend/SMTP/REC07 không đổi.
+- Backup service thành công; bản20261022T173620Z-a009b76f.sqlite.enc, SHA bca507c04f85d1fdf0e5c609bc208f9449ecd7c8d2109f2abaf59701f56ca023 đã sync ngoàiVM và restoreverified00:47(+07). Snapshot riêng root700 /var/backups/han-ngu-lab-ops/promo-20261023.
+- Hồ sơ docs/PROMOTIONAL_BANNER.md; bằng chứng .local/promo-20261023 gồm ảnhproduction,deploy.log,production-http.json,CI và E2E. Checkpoint nghiệm thu cuối lưu local, không push chỉ để lặp CI/build. .codegraph của chủ dự án vẫn untracked/không sửa. Không còn bước triển khai banner chờ xử lý.
 ## PROMO-01 IN_PROGRESS — 2026-10-23T00:33:38.8367558+07:00
 
 Đã thêm PromoBanner, CSS giảm chuyển động, CTA mở đăng ký và 3 WebP tối ưu. Giữ hero/học liệu cũ. Tiếp: kiểm thử responsive/build/secret, Private GitHub CI, backup và static release Lightsail có rollback; chưa triển khai. Bằng chứng .local/promo-20261023. Không đổi backend/Caddy/SMTP/SQLite.

@@ -128,3 +128,7 @@ Chủ dự án phê duyệt DuckDNS hanngulab.duckdns.org trên Lightsail hiện
 ## D-059 — Đã chốt — 2026-10-22T15:14:25.9381210+07:00
 
 Chủ dự án yêu cầu dọn file/thư mục/hình/âm thanh không dùng và chat. Cho phép loại bỏ các bản thử/cache/model không dùng cùng snapshotmedia dư sau đối chiếu phụ thuộc và kiểm backup; quyết định này thay yêu cầu lịch sử giữ mọi bản thử để đối chiếu, nhưng giữ nguyên dữ liệu/credentials/media hiện hành và rollback/offsite. Không tự mở rộng sang dữ liệu hoặc cuộc trò chuyện khác.
+
+## ONLINE-01 — 23/10/2026
+
+ACCEPTED theo yêu cầu trực tiếp: thêm số người đang online, chỉ Admin xem được. Lựa chọn triển khai: đếm trình duyệt có heartbeat trong120giây, lưu RAM có giới hạn và dùng hạ tầng hiện hữu; đây là số ước tính, không phải thống kê người duy nhất hay lịch sử truy cập. Super Admin được xem như các chức năng quản trị hiện hữu.
