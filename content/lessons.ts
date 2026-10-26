@@ -1,5 +1,6 @@
 import { lessonSchema, type Lesson } from '../lib/domain';
 import { wordExamples } from './word-examples';
+import { hsk1BookLessons } from './lessons-hsk1';
 import { hsk56Lessons } from './lessons-hsk56';
 
 type Entry = { id: string; level: number; unit: string; title: string; subtitle: string; intro: string; pattern: string; rule: string; example: string; translation: string; words: [string,string,string,string][]; lines: [string,string,string][]; question: string; choices: string[]; answer: string; why: string; order: string[]; ordered: string; summary: string };
@@ -95,4 +96,11 @@ const baseLessons: Lesson[] = entries.map((e, index) => lessonSchema.parse({
   standard: 'HNL-DRAFT-2026; chưa xác minh mapping đầy đủ HSK 3.0', humanReviewed: false,
 }));
 
-export const seedLessons: Lesson[] = [...baseLessons, ...hsk56Lessons];
+// The original four HSK1 samples are replaced by the authored Quyển 1 bundle.
+// Keep the foundation and HSK2–4 lessons from the existing system unchanged.
+export const seedLessons: Lesson[] = [
+  ...baseLessons.filter(lesson => lesson.level === 0),
+  ...hsk1BookLessons,
+  ...baseLessons.filter(lesson => lesson.level >= 2),
+  ...hsk56Lessons,
+];
