@@ -1,6 +1,7 @@
 import { lessonSchema, type Lesson } from '../lib/domain';
 import { wordExamples } from './word-examples';
 import { hsk1BookLessons } from './lessons-hsk1';
+import { hsk234BookLessons } from './lessons-hsk234';
 import { hsk56Lessons } from './lessons-hsk56';
 
 type Entry = { id: string; level: number; unit: string; title: string; subtitle: string; intro: string; pattern: string; rule: string; example: string; translation: string; words: [string,string,string,string][]; lines: [string,string,string][]; question: string; choices: string[]; answer: string; why: string; order: string[]; ordered: string; summary: string };
@@ -97,10 +98,10 @@ const baseLessons: Lesson[] = entries.map((e, index) => lessonSchema.parse({
 }));
 
 // The original four HSK1 samples are replaced by the authored Quyển 1 bundle.
-// Keep the foundation and HSK2–4 lessons from the existing system unchanged.
+// Keep the foundation unchanged; replace the old HSK2–4 samples with Quyển 2–4.
 export const seedLessons: Lesson[] = [
   ...baseLessons.filter(lesson => lesson.level === 0),
   ...hsk1BookLessons,
-  ...baseLessons.filter(lesson => lesson.level >= 2),
+  ...hsk234BookLessons,
   ...hsk56Lessons,
 ];
