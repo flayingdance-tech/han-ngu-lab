@@ -1,0 +1,168 @@
+{
+  "id": "hanngu-q6-b17",
+  "level": 6,
+  "unit": "Quyển 6 · Bài nguồn 17",
+  "title": "再试一次",
+  "subtitle": "可是……却……",
+  "minutes": 35,
+  "order": 91,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “可是……却……” trong tình huống phù hợp.",
+    "Nhận diện 8 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “再试一次”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-eb765c84a16e2478",
+      "hanzi": "考研究生",
+      "pinyin": "kǎo yán jiū shēng",
+      "meaning": "thi cao học",
+      "example": "我很努力，可是却没有考上。",
+      "examplePinyin": "wǒ hěn nǔ lì， kě shì què méi yǒu kǎo shàng。",
+      "exampleMeaning": "Tôi rất nỗ lực nhưng lại không thi đỗ."
+    },
+    {
+      "id": "hnl-lex-74013730804d4086",
+      "hanzi": "打击",
+      "pinyin": "dǎ jī",
+      "meaning": "cú sốc",
+      "example": "经过练习，我对自己更有信心了。",
+      "examplePinyin": "jīng guò liàn xí， wǒ duì zì jǐ gèng yǒu xìn xīn le。",
+      "exampleMeaning": "Sau khi luyện tập, tôi tự tin hơn."
+    },
+    {
+      "id": "hnl-lex-cc4ff89ddb093fa5",
+      "hanzi": "招聘",
+      "pinyin": "zhāo pìn",
+      "meaning": "tuyển dụng",
+      "example": "我很努力，可是却没有考上。",
+      "examplePinyin": "wǒ hěn nǔ lì， kě shì què méi yǒu kǎo shàng。",
+      "exampleMeaning": "Tôi rất nỗ lực nhưng lại không thi đỗ."
+    },
+    {
+      "id": "hnl-lex-d31e297a0aced35b",
+      "hanzi": "报名",
+      "pinyin": "bào míng",
+      "meaning": "đăng ký",
+      "example": "经过练习，我对自己更有信心了。",
+      "examplePinyin": "jīng guò liàn xí， wǒ duì zì jǐ gèng yǒu xìn xīn le。",
+      "exampleMeaning": "Sau khi luyện tập, tôi tự tin hơn."
+    },
+    {
+      "id": "hnl-lex-63bd818bab5ca118",
+      "hanzi": "试讲",
+      "pinyin": "shì jiǎng",
+      "meaning": "dạy thử",
+      "example": "试讲前紧张吗？",
+      "examplePinyin": "shì jiǎng qián jǐn zhāng ma？",
+      "exampleMeaning": "Trước khi dạy thử có căng thẳng không?"
+    },
+    {
+      "id": "hnl-lex-c27df804bca780b9",
+      "hanzi": "沉着",
+      "pinyin": "chén zhuó",
+      "meaning": "bình tĩnh",
+      "example": "有一点儿，但我提醒自己要沉着。",
+      "examplePinyin": "yǒu yì diǎn ér， dàn wǒ tí xǐng zì jǐ yào chén zhuó。",
+      "exampleMeaning": "Có một chút, nhưng tôi nhắc mình phải bình tĩnh."
+    },
+    {
+      "id": "hnl-lex-1ddf95b1ab049032",
+      "hanzi": "集中",
+      "pinyin": "jí zhōng",
+      "meaning": "tập trung",
+      "example": "我很努力，可是却没有考上。",
+      "examplePinyin": "wǒ hěn nǔ lì， kě shì què méi yǒu kǎo shàng。",
+      "exampleMeaning": "Tôi rất nỗ lực nhưng lại không thi đỗ."
+    },
+    {
+      "id": "hnl-lex-a09ae47124fe3d11",
+      "hanzi": "自信",
+      "pinyin": "zì xìn",
+      "meaning": "tự tin",
+      "example": "经过练习，我对自己更有信心了。",
+      "examplePinyin": "jīng guò liàn xí， wǒ duì zì jǐ gèng yǒu xìn xīn le。",
+      "exampleMeaning": "Sau khi luyện tập, tôi tự tin hơn."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "可是……却……",
+      "explanation": "tạo quan hệ tương phản Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "我很努力，可是却没有考上。",
+      "translation": "Tôi rất nỗ lực nhưng lại không thi đỗ."
+    },
+    {
+      "title": "经过……",
+      "explanation": "sau khi trải qua…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "经过练习，我对自己更有信心了。",
+      "translation": "Sau khi luyện tập, tôi tự tin hơn."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "这次失败以后，你怎么办？",
+      "pinyin": "zhè cì shī bài yǐ hòu， nǐ zěn me bàn？",
+      "meaning": "Sau thất bại lần này bạn làm gì?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "我先调整心情，再试一次。",
+      "pinyin": "wǒ xiān tiáo zhěng xīn qíng， zài shì yī cì。",
+      "meaning": "Tôi điều chỉnh tâm trạng trước rồi thử lại."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "试讲前紧张吗？",
+      "pinyin": "shì jiǎng qián jǐn zhāng ma？",
+      "meaning": "Trước khi dạy thử có căng thẳng không?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "有一点儿，但我提醒自己要沉着。",
+      "pinyin": "yǒu yì diǎn ér， dàn wǒ tí xǐng zì jǐ yào chén zhuó。",
+      "meaning": "Có một chút, nhưng tôi nhắc mình phải bình tĩnh."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Chọn câu thể hiện quyết tâm thử lại.",
+      "options": [
+        "我先调整心情，再试一次。",
+        "我永远不学习。",
+        "失败就是成功。"
+      ],
+      "answer": "我先调整心情，再试一次。",
+      "explanation": "再……一次 biểu thị hành động được thực hiện thêm một lần.",
+      "id": "hanngu-q6-b17-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“考研究生”的意思是什么？（kǎo yán jiū shēng）",
+      "options": [
+        "thi cao học",
+        "cú sốc",
+        "tuyển dụng",
+        "đăng ký"
+      ],
+      "answer": "thi cao học",
+      "explanation": "考研究生（kǎo yán jiū shēng） nghĩa là thi cao học。",
+      "id": "hanngu-q6-b17-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “cú sốc” (dǎ jī).",
+      "answer": "打击",
+      "alternatives": [],
+      "explanation": "打击 (dǎ jī) nghĩa là cú sốc。",
+      "id": "hanngu-q6-b17-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “再试一次”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/6.pdf, trang PDF 50–64; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

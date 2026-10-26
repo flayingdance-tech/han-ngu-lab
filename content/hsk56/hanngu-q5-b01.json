@@ -1,0 +1,150 @@
+{
+  "id": "hanngu-q5-b01",
+  "level": 5,
+  "unit": "Quyển 5 · Bài nguồn 1",
+  "title": "离家的时候",
+  "subtitle": "从……起",
+  "minutes": 35,
+  "order": 71,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “从……起” trong tình huống phù hợp.",
+    "Nhận diện 6 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “离家的时候”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-ae0c3d80059116f6",
+      "hanzi": "愿望",
+      "pinyin": "yuàn wàng",
+      "meaning": "nguyện vọng",
+      "example": "从去年夏天起，我就开始学习汉语。",
+      "examplePinyin": "cóng qù nián xià tiān qǐ， wǒ jiù kāi shǐ xué xí hàn yǔ。",
+      "exampleMeaning": "Từ mùa hè năm ngoái, tôi bắt đầu học tiếng Trung."
+    },
+    {
+      "id": "hnl-lex-a90f01d8a94e15f1",
+      "hanzi": "实现",
+      "pinyin": "shí xiàn",
+      "meaning": "thực hiện",
+      "example": "她瞒着父母办好了手续。",
+      "examplePinyin": "tā mán zhe fù mǔ bàn hǎo le shǒu xù。",
+      "exampleMeaning": "Cô ấy giấu bố mẹ làm xong thủ tục."
+    },
+    {
+      "id": "hnl-lex-ad90963262a5d811",
+      "hanzi": "手续",
+      "pinyin": "shǒu xù",
+      "meaning": "thủ tục",
+      "example": "从去年夏天起，我就开始学习汉语。",
+      "examplePinyin": "cóng qù nián xià tiān qǐ， wǒ jiù kāi shǐ xué xí hàn yǔ。",
+      "exampleMeaning": "Từ mùa hè năm ngoái, tôi bắt đầu học tiếng Trung."
+    },
+    {
+      "id": "hnl-lex-fa85dad27bed241a",
+      "hanzi": "商量",
+      "pinyin": "shāng liáng",
+      "meaning": "bàn bạc",
+      "example": "她瞒着父母办好了手续。",
+      "examplePinyin": "tā mán zhe fù mǔ bàn hǎo le shǒu xù。",
+      "exampleMeaning": "Cô ấy giấu bố mẹ làm xong thủ tục."
+    },
+    {
+      "id": "hnl-lex-c2423749f80a5c2b",
+      "hanzi": "果然",
+      "pinyin": "guǒ rán",
+      "meaning": "quả nhiên",
+      "example": "从去年夏天起，我就开始学习汉语。",
+      "examplePinyin": "cóng qù nián xià tiān qǐ， wǒ jiù kāi shǐ xué xí hàn yǔ。",
+      "exampleMeaning": "Từ mùa hè năm ngoái, tôi bắt đầu học tiếng Trung."
+    },
+    {
+      "id": "hnl-lex-63428b3e9caffe76",
+      "hanzi": "独生女",
+      "pinyin": "dú shēng nǚ",
+      "meaning": "con gái duy nhất",
+      "example": "她瞒着父母办好了手续。",
+      "examplePinyin": "tā mán zhe fù mǔ bàn hǎo le shǒu xù。",
+      "exampleMeaning": "Cô ấy giấu bố mẹ làm xong thủ tục."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "从……起",
+      "explanation": "từ mốc thời gian trở đi Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "从去年夏天起，我就开始学习汉语。",
+      "translation": "Từ mùa hè năm ngoái, tôi bắt đầu học tiếng Trung."
+    },
+    {
+      "title": "瞒着",
+      "explanation": "giấu, không cho biết Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "她瞒着父母办好了手续。",
+      "translation": "Cô ấy giấu bố mẹ làm xong thủ tục."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "你什么时候开始准备的？",
+      "pinyin": "nǐ shén me shí hòu kāi shǐ zhǔn bèi de？",
+      "meaning": "Bạn bắt đầu chuẩn bị từ khi nào?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "从去年夏天起，我就开始准备了。",
+      "pinyin": "cóng qù nián xià tiān qǐ， wǒ jiù kāi shǐ zhǔn bèi le。",
+      "meaning": "Từ mùa hè năm ngoái tôi đã bắt đầu chuẩn bị."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "家人同意吗？",
+      "pinyin": "jiā rén tóng yì ma？",
+      "meaning": "Gia đình có đồng ý không?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "他们后来理解了我的选择。",
+      "pinyin": "tā men hòu lái lǐ jiě le wǒ de xuǎn zé。",
+      "meaning": "Sau đó họ đã hiểu lựa chọn của tôi."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Câu nào nói về một việc bắt đầu từ một mốc thời gian?",
+      "options": [
+        "从去年夏天起，我就开始准备了。",
+        "我昨天没有准备。",
+        "这是我的新书。"
+      ],
+      "answer": "从去年夏天起，我就开始准备了。",
+      "explanation": "从……起 đặt mốc bắt đầu và nhấn mạnh trạng thái tiếp tục sau mốc đó。",
+      "id": "hanngu-q5-b01-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“愿望”的意思是什么？（yuàn wàng）",
+      "options": [
+        "nguyện vọng",
+        "thực hiện",
+        "thủ tục",
+        "bàn bạc"
+      ],
+      "answer": "nguyện vọng",
+      "explanation": "愿望（yuàn wàng） nghĩa là nguyện vọng。",
+      "id": "hanngu-q5-b01-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “thực hiện” (shí xiàn).",
+      "answer": "实现",
+      "alternatives": [],
+      "explanation": "实现 (shí xiàn) nghĩa là thực hiện。",
+      "id": "hanngu-q5-b01-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “离家的时候”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/5.pdf, trang PDF 17–17; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

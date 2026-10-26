@@ -1,0 +1,168 @@
+{
+  "id": "hanngu-q5-b09",
+  "level": 5,
+  "unit": "Quyển 5 · Bài nguồn 9",
+  "title": "幸福的感觉",
+  "subtitle": "因为……所以……",
+  "minutes": 35,
+  "order": 88,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “因为……所以……” trong tình huống phù hợp.",
+    "Nhận diện 8 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “幸福的感觉”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-1aa3298c831faec9",
+      "hanzi": "幸福",
+      "pinyin": "xìng fú",
+      "meaning": "hạnh phúc",
+      "example": "你觉得幸福是什么？",
+      "examplePinyin": "nǐ jué de xìng fú shì shén me？",
+      "exampleMeaning": "Bạn nghĩ hạnh phúc là gì?"
+    },
+    {
+      "id": "hnl-lex-273158d7db75ddf0",
+      "hanzi": "权力",
+      "pinyin": "quán lì",
+      "meaning": "quyền lực",
+      "example": "只要心里有希望，就能感到幸福。",
+      "examplePinyin": "zhǐ yào xīn lǐ yǒu xī wàng， jiù néng gǎn dào xìng fú。",
+      "exampleMeaning": "Chỉ cần trong lòng có hy vọng thì có thể cảm thấy hạnh phúc."
+    },
+    {
+      "id": "hnl-lex-b4c9f66cb0495913",
+      "hanzi": "感情",
+      "pinyin": "gǎn qíng",
+      "meaning": "tình cảm",
+      "example": "因为幸福没有统一标准，所以每个人的感觉不同。",
+      "examplePinyin": "yīn wèi xìng fú méi yǒu tǒng yī biāo zhǔn， suǒ yǐ měi gè rén de gǎn jué bù tóng。",
+      "exampleMeaning": "Vì hạnh phúc không có tiêu chuẩn chung nên cảm nhận của mỗi người khác nhau."
+    },
+    {
+      "id": "hnl-lex-1d158a4aa4c03ea5",
+      "hanzi": "标准",
+      "pinyin": "biāo zhǔn",
+      "meaning": "tiêu chuẩn",
+      "example": "幸福有统一的标准吗？",
+      "examplePinyin": "xìng fú yǒu tǒng yī de biāo zhǔn ma？",
+      "exampleMeaning": "Hạnh phúc có tiêu chuẩn chung không?"
+    },
+    {
+      "id": "hnl-lex-44aef9ed354cc44a",
+      "hanzi": "感觉",
+      "pinyin": "gǎn jué",
+      "meaning": "cảm giác",
+      "example": "没有，每个人都有自己的感觉。",
+      "examplePinyin": "méi yǒu， měi gè rén dōu yǒu zì jǐ de gǎn jué。",
+      "exampleMeaning": "Không, mỗi người có cảm nhận riêng."
+    },
+    {
+      "id": "hnl-lex-4f7a5d1240615d0a",
+      "hanzi": "贫穷",
+      "pinyin": "pín qióng",
+      "meaning": "nghèo khó",
+      "example": "只要心里有希望，就能感到幸福。",
+      "examplePinyin": "zhǐ yào xīn lǐ yǒu xī wàng， jiù néng gǎn dào xìng fú。",
+      "exampleMeaning": "Chỉ cần trong lòng có hy vọng thì có thể cảm thấy hạnh phúc."
+    },
+    {
+      "id": "hnl-lex-68c10ce5dc296aa7",
+      "hanzi": "富翁",
+      "pinyin": "fù wēng",
+      "meaning": "người giàu",
+      "example": "因为幸福没有统一标准，所以每个人的感觉不同。",
+      "examplePinyin": "yīn wèi xìng fú méi yǒu tǒng yī biāo zhǔn， suǒ yǐ měi gè rén de gǎn jué bù tóng。",
+      "exampleMeaning": "Vì hạnh phúc không có tiêu chuẩn chung nên cảm nhận của mỗi người khác nhau."
+    },
+    {
+      "id": "hnl-lex-65f78064a8c08ee0",
+      "hanzi": "慈善家",
+      "pinyin": "cí shàn jiā",
+      "meaning": "nhà từ thiện",
+      "example": "只要心里有希望，就能感到幸福。",
+      "examplePinyin": "zhǐ yào xīn lǐ yǒu xī wàng， jiù néng gǎn dào xìng fú。",
+      "exampleMeaning": "Chỉ cần trong lòng có hy vọng thì có thể cảm thấy hạnh phúc."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "因为……所以……",
+      "explanation": "nêu nguyên nhân và kết quả Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "因为幸福没有统一标准，所以每个人的感觉不同。",
+      "translation": "Vì hạnh phúc không có tiêu chuẩn chung nên cảm nhận của mỗi người khác nhau."
+    },
+    {
+      "title": "只要……就……",
+      "explanation": "điều kiện đủ dẫn tới kết quả Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "只要心里有希望，就能感到幸福。",
+      "translation": "Chỉ cần trong lòng có hy vọng thì có thể cảm thấy hạnh phúc."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "你觉得幸福是什么？",
+      "pinyin": "nǐ jué de xìng fú shì shén me？",
+      "meaning": "Bạn nghĩ hạnh phúc là gì?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "对我来说，平安和家人的陪伴就是幸福。",
+      "pinyin": "duì wǒ lái shuō， píng ān hé jiā rén de péi bàn jiù shì xìng fú。",
+      "meaning": "Với tôi, bình an và sự đồng hành của gia đình là hạnh phúc."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "幸福有统一的标准吗？",
+      "pinyin": "xìng fú yǒu tǒng yī de biāo zhǔn ma？",
+      "meaning": "Hạnh phúc có tiêu chuẩn chung không?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "没有，每个人都有自己的感觉。",
+      "pinyin": "méi yǒu， měi gè rén dōu yǒu zì jǐ de gǎn jué。",
+      "meaning": "Không, mỗi người có cảm nhận riêng."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Chọn câu nêu quan điểm cá nhân về hạnh phúc.",
+      "options": [
+        "对我来说，平安就是幸福。",
+        "幸福在昨天。",
+        "标准跑得很快。"
+      ],
+      "answer": "对我来说，平安就是幸福。",
+      "explanation": "对……来说 giới thiệu góc nhìn của một người về một khái niệm.",
+      "id": "hanngu-q5-b09-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“幸福”的意思是什么？（xìng fú）",
+      "options": [
+        "hạnh phúc",
+        "quyền lực",
+        "tình cảm",
+        "tiêu chuẩn"
+      ],
+      "answer": "hạnh phúc",
+      "explanation": "幸福（xìng fú） nghĩa là hạnh phúc。",
+      "id": "hanngu-q5-b09-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “quyền lực” (quán lì).",
+      "answer": "权力",
+      "alternatives": [],
+      "explanation": "权力 (quán lì) nghĩa là quyền lực。",
+      "id": "hanngu-q5-b09-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “幸福的感觉”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/5.pdf, trang PDF 120–132; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

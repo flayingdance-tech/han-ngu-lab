@@ -1,0 +1,150 @@
+{
+  "id": "hanngu-q5-b05",
+  "level": 5,
+  "unit": "Quyển 5 · Bài nguồn 5",
+  "title": "回头再说",
+  "subtitle": "回头再说",
+  "minutes": 35,
+  "order": 75,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “回头再说” trong tình huống phù hợp.",
+    "Nhận diện 6 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “回头再说”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-14d72633afa07947",
+      "hanzi": "口头语",
+      "pinyin": "kǒu tóu yǔ",
+      "meaning": "khẩu ngữ",
+      "example": "这件事回头再说吧。",
+      "examplePinyin": "zhè jiàn shì huí tóu zài shuō ba。",
+      "exampleMeaning": "Việc này để lúc khác hãy bàn nhé."
+    },
+    {
+      "id": "hnl-lex-c578d56856706ab2",
+      "hanzi": "邻座",
+      "pinyin": "lín zuò",
+      "meaning": "người ngồi cạnh",
+      "example": "我一到北京就给他打电话。",
+      "examplePinyin": "wǒ yī dào běi jīng jiù gěi tā dǎ diàn huà。",
+      "exampleMeaning": "Tôi vừa đến Bắc Kinh đã gọi điện cho anh ấy."
+    },
+    {
+      "id": "hnl-lex-8d37db56558adfad",
+      "hanzi": "地道",
+      "pinyin": "dì dào",
+      "meaning": "chuẩn, tự nhiên",
+      "example": "这件事回头再说吧。",
+      "examplePinyin": "zhè jiàn shì huí tóu zài shuō ba。",
+      "exampleMeaning": "Việc này để lúc khác hãy bàn nhé."
+    },
+    {
+      "id": "hnl-lex-583187acc5616870",
+      "hanzi": "名片",
+      "pinyin": "míng piàn",
+      "meaning": "danh thiếp",
+      "example": "我一到北京就给他打电话。",
+      "examplePinyin": "wǒ yī dào běi jīng jiù gěi tā dǎ diàn huà。",
+      "exampleMeaning": "Tôi vừa đến Bắc Kinh đã gọi điện cho anh ấy."
+    },
+    {
+      "id": "hnl-lex-b242ab175ddfcab3",
+      "hanzi": "邀请",
+      "pinyin": "yāo qǐng",
+      "meaning": "mời",
+      "example": "这件事回头再说吧。",
+      "examplePinyin": "zhè jiàn shì huí tóu zài shuō ba。",
+      "exampleMeaning": "Việc này để lúc khác hãy bàn nhé."
+    },
+    {
+      "id": "hnl-lex-3d9b34f4f46d5468",
+      "hanzi": "实在",
+      "pinyin": "shí zài",
+      "meaning": "chân thật, thực tế",
+      "example": "我一到北京就给他打电话。",
+      "examplePinyin": "wǒ yī dào běi jīng jiù gěi tā dǎ diàn huà。",
+      "exampleMeaning": "Tôi vừa đến Bắc Kinh đã gọi điện cho anh ấy."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "回头再说",
+      "explanation": "để lúc khác bàn Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "这件事回头再说吧。",
+      "translation": "Việc này để lúc khác hãy bàn nhé."
+    },
+    {
+      "title": "一……就……",
+      "explanation": "vừa…… đã…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "我一到北京就给他打电话。",
+      "translation": "Tôi vừa đến Bắc Kinh đã gọi điện cho anh ấy."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "周末来我家玩吗？",
+      "pinyin": "zhōu mò lái wǒ jiā wán ma？",
+      "meaning": "Cuối tuần đến nhà tôi chơi không?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "好啊，我什么时候去？",
+      "pinyin": "hǎo a， wǒ shén me shí hòu qù？",
+      "meaning": "Được, tôi đi lúc nào?"
+    },
+    {
+      "speaker": "An",
+      "hanzi": "这几天工作太忙，回头再说吧。",
+      "pinyin": "zhè jǐ tiān gōng zuò tài máng， huí tóu zài shuō ba。",
+      "meaning": "Mấy hôm nay công việc bận quá, để lúc khác hãy nói nhé."
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "好，等你有时间再联系。",
+      "pinyin": "hǎo， děng nǐ yǒu shí jiān zài lián xì。",
+      "meaning": "Được, khi bạn có thời gian thì liên lạc lại nhé."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "回头再说 thể hiện ý nào?",
+      "options": [
+        "Để sau hãy bàn hoặc sắp xếp。",
+        "Đã hoàn thành ngay lập tức。",
+        "Không hiểu câu hỏi。"
+      ],
+      "answer": "Để sau hãy bàn hoặc sắp xếp。",
+      "explanation": "回头再说 thường trì hoãn việc quyết định hoặc trao đổi sang thời điểm sau。",
+      "id": "hanngu-q5-b05-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“口头语”的意思是什么？（kǒu tóu yǔ）",
+      "options": [
+        "khẩu ngữ",
+        "người ngồi cạnh",
+        "chuẩn, tự nhiên",
+        "danh thiếp"
+      ],
+      "answer": "khẩu ngữ",
+      "explanation": "口头语（kǒu tóu yǔ） nghĩa là khẩu ngữ。",
+      "id": "hanngu-q5-b05-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “người ngồi cạnh” (lín zuò).",
+      "answer": "邻座",
+      "alternatives": [],
+      "explanation": "邻座 (lín zuò) nghĩa là người ngồi cạnh。",
+      "id": "hanngu-q5-b05-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “回头再说”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/5.pdf, trang PDF 68–68; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

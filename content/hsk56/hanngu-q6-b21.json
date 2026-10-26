@@ -1,0 +1,150 @@
+{
+  "id": "hanngu-q6-b21",
+  "level": 6,
+  "unit": "Quyển 6 · Bài nguồn 21",
+  "title": "理发 · Bài học",
+  "subtitle": "V + 得 + tính từ",
+  "minutes": 35,
+  "order": 84,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “V + 得 + tính từ” trong tình huống phù hợp.",
+    "Nhận diện 6 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “理发”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-fc2d98a653d2f004",
+      "hanzi": "理发",
+      "pinyin": "lǐ fà",
+      "meaning": "cắt tóc",
+      "example": "理发师剪得很仔细。",
+      "examplePinyin": "lǐ fà shī jiǎn dé hěn zǐ xì。",
+      "exampleMeaning": "Thợ cắt tóc cắt rất tỉ mỉ."
+    },
+    {
+      "id": "hnl-lex-5f8db62f13df4c80",
+      "hanzi": "镜子",
+      "pinyin": "jìng zi",
+      "meaning": "gương",
+      "example": "虽然头发不长，但是我想换发型。",
+      "examplePinyin": "suī rán tóu fà bù zhǎng， dàn shì wǒ xiǎng huàn fà xíng。",
+      "exampleMeaning": "Mặc dù tóc không dài nhưng tôi muốn đổi kiểu."
+    },
+    {
+      "id": "hnl-lex-fa73d2d8106682ce",
+      "hanzi": "发型",
+      "pinyin": "fà xíng",
+      "meaning": "kiểu tóc",
+      "example": "您想剪什么发型？",
+      "examplePinyin": "nín xiǎng jiǎn shén me fà xíng？",
+      "exampleMeaning": "Bạn muốn cắt kiểu tóc nào?"
+    },
+    {
+      "id": "hnl-lex-012a9bb01540b63e",
+      "hanzi": "舒服",
+      "pinyin": "shū fú",
+      "meaning": "thoải mái",
+      "example": "请剪短一点儿，舒服就好。",
+      "examplePinyin": "qǐng jiǎn duǎn yì diǎn ér， shū fú jiù hǎo。",
+      "exampleMeaning": "Xin cắt ngắn hơn một chút, thoải mái là được."
+    },
+    {
+      "id": "hnl-lex-b969c61536106794",
+      "hanzi": "推荐",
+      "pinyin": "tuī jiàn",
+      "meaning": "giới thiệu",
+      "example": "理发师剪得很仔细。",
+      "examplePinyin": "lǐ fà shī jiǎn dé hěn zǐ xì。",
+      "exampleMeaning": "Thợ cắt tóc cắt rất tỉ mỉ."
+    },
+    {
+      "id": "hnl-lex-b8f43fb31a8f83f7",
+      "hanzi": "满意",
+      "pinyin": "mǎn yì",
+      "meaning": "hài lòng",
+      "example": "很好，我很满意。",
+      "examplePinyin": "hěn hǎo， wǒ hěn mǎn yì。",
+      "exampleMeaning": "Rất tốt, tôi rất hài lòng."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "V + 得 + tính từ",
+      "explanation": "mức độ của hành động Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "理发师剪得很仔细。",
+      "translation": "Thợ cắt tóc cắt rất tỉ mỉ."
+    },
+    {
+      "title": "虽然……但是……",
+      "explanation": "mặc dù…… nhưng…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "虽然头发不长，但是我想换发型。",
+      "translation": "Mặc dù tóc không dài nhưng tôi muốn đổi kiểu."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "您想剪什么发型？",
+      "pinyin": "nín xiǎng jiǎn shén me fà xíng？",
+      "meaning": "Bạn muốn cắt kiểu tóc nào?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "请剪短一点儿，舒服就好。",
+      "pinyin": "qǐng jiǎn duǎn yì diǎn ér， shū fú jiù hǎo。",
+      "meaning": "Xin cắt ngắn hơn một chút, thoải mái là được."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "这个发型可以吗？",
+      "pinyin": "zhè ge fà xíng kě yǐ ma？",
+      "meaning": "Kiểu tóc này được không?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "很好，我很满意。",
+      "pinyin": "hěn hǎo， wǒ hěn mǎn yì。",
+      "meaning": "Rất tốt, tôi rất hài lòng."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "虽然……但是…… biểu đạt quan hệ nào?",
+      "options": [
+        "Mặc dù…… nhưng……",
+        "Vì…… nên……",
+        "Nếu…… thì……"
+      ],
+      "answer": "Mặc dù…… nhưng……",
+      "explanation": "虽然 nêu điều kiện trái với dự đoán, 但是 giới thiệu kết quả hoặc nhận xét đối lập。",
+      "id": "hanngu-q6-b21-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“理发”的意思是什么？（lǐ fà）",
+      "options": [
+        "cắt tóc",
+        "gương",
+        "kiểu tóc",
+        "thoải mái"
+      ],
+      "answer": "cắt tóc",
+      "explanation": "理发（lǐ fà） nghĩa là cắt tóc。",
+      "id": "hanngu-q6-b21-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “gương” (jìng zi).",
+      "answer": "镜子",
+      "alternatives": [],
+      "explanation": "镜子 (jìng zi) nghĩa là gương。",
+      "id": "hanngu-q6-b21-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “理发”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/6.pdf, trang PDF 111–111; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

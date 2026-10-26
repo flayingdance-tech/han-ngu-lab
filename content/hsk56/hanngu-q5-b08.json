@@ -1,0 +1,150 @@
+{
+  "id": "hanngu-q5-b08",
+  "level": 5,
+  "unit": "Quyển 5 · Bài nguồn 8",
+  "title": "恋爱故事",
+  "subtitle": "即使……也……",
+  "minutes": 35,
+  "order": 77,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “即使……也……” trong tình huống phù hợp.",
+    "Nhận diện 6 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “恋爱故事”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-a5c13bf8207c5c9d",
+      "hanzi": "恋爱",
+      "pinyin": "liàn ài",
+      "meaning": "tình yêu",
+      "example": "即使有误会，也应该诚实地沟通。",
+      "examplePinyin": "jí shǐ yǒu wù huì， yě yīng gāi chéng shí dì gōu tōng。",
+      "exampleMeaning": "Cho dù có hiểu lầm cũng nên trao đổi thành thật."
+    },
+    {
+      "id": "hnl-lex-b6bf3998e36899bb",
+      "hanzi": "误会",
+      "pinyin": "wù huì",
+      "meaning": "hiểu lầm",
+      "example": "你们为什么产生误会？",
+      "examplePinyin": "nǐ men wèi shén me chǎn shēng wù huì？",
+      "exampleMeaning": "Vì sao hai bạn nảy sinh hiểu lầm?"
+    },
+    {
+      "id": "hnl-lex-c28361d8bdfd6deb",
+      "hanzi": "诚实",
+      "pinyin": "chéng shí",
+      "meaning": "thành thật",
+      "example": "即使有误会，也应该诚实地沟通。",
+      "examplePinyin": "jí shǐ yǒu wù huì， yě yīng gāi chéng shí dì gōu tōng。",
+      "exampleMeaning": "Cho dù có hiểu lầm cũng nên trao đổi thành thật."
+    },
+    {
+      "id": "hnl-lex-29d283071342465f",
+      "hanzi": "信任",
+      "pinyin": "xìn rèn",
+      "meaning": "tin tưởng",
+      "example": "不管发生什么，我们都要互相信任。",
+      "examplePinyin": "bù guǎn fā shēng shén me， wǒ men dōu yào hù xiāng xìn rèn。",
+      "exampleMeaning": "Dù xảy ra chuyện gì, chúng ta vẫn phải tin tưởng nhau."
+    },
+    {
+      "id": "hnl-lex-0434badcbdde0c9a",
+      "hanzi": "性格",
+      "pinyin": "xìng gé",
+      "meaning": "tính cách",
+      "example": "即使有误会，也应该诚实地沟通。",
+      "examplePinyin": "jí shǐ yǒu wù huì， yě yīng gāi chéng shí dì gōu tōng。",
+      "exampleMeaning": "Cho dù có hiểu lầm cũng nên trao đổi thành thật."
+    },
+    {
+      "id": "hnl-lex-3cc7e0fcf477dd92",
+      "hanzi": "解决",
+      "pinyin": "jiě jué",
+      "meaning": "giải quyết",
+      "example": "现在解决了吗？",
+      "examplePinyin": "xiàn zài jiě jué le ma？",
+      "exampleMeaning": "Bây giờ giải quyết xong chưa?"
+    }
+  ],
+  "grammar": [
+    {
+      "title": "即使……也……",
+      "explanation": "cho dù…… cũng…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "即使有误会，也应该诚实地沟通。",
+      "translation": "Cho dù có hiểu lầm cũng nên trao đổi thành thật."
+    },
+    {
+      "title": "不管……都……",
+      "explanation": "dù…… thế nào cũng…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "不管发生什么，我们都要互相信任。",
+      "translation": "Dù xảy ra chuyện gì, chúng ta vẫn phải tin tưởng nhau."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "你们为什么产生误会？",
+      "pinyin": "nǐ men wèi shén me chǎn shēng wù huì？",
+      "meaning": "Vì sao hai bạn nảy sinh hiểu lầm?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "因为没有及时说明情况。",
+      "pinyin": "yīn wèi méi yǒu jí shí shuō míng qíng kuàng。",
+      "meaning": "Vì không kịp thời giải thích tình hình."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "现在解决了吗？",
+      "pinyin": "xiàn zài jiě jué le ma？",
+      "meaning": "Bây giờ giải quyết xong chưa?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "解决了，我们学会了好好沟通。",
+      "pinyin": "jiě jué le， wǒ men xué huì le hǎo hǎo gōu tōng。",
+      "meaning": "Xong rồi, chúng tôi đã học cách trao đổi tốt hơn."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Câu nào thể hiện sự nhượng bộ?",
+      "options": [
+        "即使有误会，也应该诚实地沟通。",
+        "他昨天买了一本书。",
+        "这里有三个人。"
+      ],
+      "answer": "即使有误会，也应该诚实地沟通。",
+      "explanation": "即使 đưa ra điều kiện giả định bất lợi nhưng mệnh đề sau vẫn giữ nguyên。",
+      "id": "hanngu-q5-b08-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“恋爱”的意思是什么？（liàn ài）",
+      "options": [
+        "tình yêu",
+        "hiểu lầm",
+        "thành thật",
+        "tin tưởng"
+      ],
+      "answer": "tình yêu",
+      "explanation": "恋爱（liàn ài） nghĩa là tình yêu。",
+      "id": "hanngu-q5-b08-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “hiểu lầm” (wù huì).",
+      "answer": "误会",
+      "alternatives": [],
+      "explanation": "误会 (wù huì) nghĩa là hiểu lầm。",
+      "id": "hanngu-q5-b08-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “恋爱故事”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/5.pdf, trang PDF 108–108; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

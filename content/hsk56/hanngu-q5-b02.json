@@ -1,0 +1,150 @@
+{
+  "id": "hanngu-q5-b02",
+  "level": 5,
+  "unit": "Quyển 5 · Bài nguồn 2",
+  "title": "一封信",
+  "subtitle": "互相 + động từ",
+  "minutes": 35,
+  "order": 72,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “互相 + động từ” trong tình huống phù hợp.",
+    "Nhận diện 6 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “一封信”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-321fdef0e5a71946",
+      "hanzi": "放心",
+      "pinyin": "fàng xīn",
+      "meaning": "yên tâm",
+      "example": "同学们互相关心，互相帮助。",
+      "examplePinyin": "tóng xué men hù xiāng guān xīn， hù xiāng bāng zhù。",
+      "exampleMeaning": "Các bạn học quan tâm và giúp đỡ lẫn nhau."
+    },
+    {
+      "id": "hnl-lex-9147c77e495aefe1",
+      "hanzi": "习惯",
+      "pinyin": "xí guàn",
+      "meaning": "quen với",
+      "example": "你习惯这里的生活了吗？",
+      "examplePinyin": "nǐ xí guàn zhè lǐ de shēng huó le ma？",
+      "exampleMeaning": "Bạn đã quen cuộc sống ở đây chưa?"
+    },
+    {
+      "id": "hnl-lex-9ab5e9b73eeaa1a3",
+      "hanzi": "情景",
+      "pinyin": "qíng jǐng",
+      "meaning": "cảnh tượng",
+      "example": "同学们互相关心，互相帮助。",
+      "examplePinyin": "tóng xué men hù xiāng guān xīn， hù xiāng bāng zhù。",
+      "exampleMeaning": "Các bạn học quan tâm và giúp đỡ lẫn nhau."
+    },
+    {
+      "id": "hnl-lex-68e8ef4f4d0d9ded",
+      "hanzi": "分别",
+      "pinyin": "fēn bié",
+      "meaning": "lần lượt",
+      "example": "同学们分别来自五大洲。",
+      "examplePinyin": "tóng xué men fēn bié lái zì wǔ dà zhōu。",
+      "exampleMeaning": "Các bạn học đến từ năm châu."
+    },
+    {
+      "id": "hnl-lex-dd502526c9ac4fa2",
+      "hanzi": "互相",
+      "pinyin": "hù xiāng",
+      "meaning": "lẫn nhau",
+      "example": "大家互相关心，互相帮助。",
+      "examplePinyin": "dà jiā hù xiāng guān xīn， hù xiāng bāng zhù。",
+      "exampleMeaning": "Mọi người quan tâm và giúp đỡ lẫn nhau."
+    },
+    {
+      "id": "hnl-lex-a96d8f8c5fefccaf",
+      "hanzi": "团结",
+      "pinyin": "tuán jié",
+      "meaning": "đoàn kết",
+      "example": "同学们分别来自五大洲。",
+      "examplePinyin": "tóng xué men fēn bié lái zì wǔ dà zhōu。",
+      "exampleMeaning": "Các bạn học đến từ năm châu."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "互相 + động từ",
+      "explanation": "hành động qua lại Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "同学们互相关心，互相帮助。",
+      "translation": "Các bạn học quan tâm và giúp đỡ lẫn nhau."
+    },
+    {
+      "title": "分别 + động từ",
+      "explanation": "lần lượt hoặc theo từng nhóm Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "同学们分别来自五大洲。",
+      "translation": "Các bạn học đến từ năm châu."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "你习惯这里的生活了吗？",
+      "pinyin": "nǐ xí guàn zhè lǐ de shēng huó le ma？",
+      "meaning": "Bạn đã quen cuộc sống ở đây chưa?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "基本上习惯了，也交了很多朋友。",
+      "pinyin": "jī běn shàng xí guàn le， yě jiāo le hěn duō péng yǒu。",
+      "meaning": "Về cơ bản đã quen và còn kết bạn được nhiều."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "同学们相处得怎么样？",
+      "pinyin": "tóng xué men xiāng chǔ dé zěn me yàng？",
+      "meaning": "Các bạn học hòa hợp thế nào?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "大家互相关心，互相帮助。",
+      "pinyin": "dà jiā hù xiāng guān xīn， hù xiāng bāng zhù。",
+      "meaning": "Mọi người quan tâm và giúp đỡ lẫn nhau."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Chọn câu dùng 互相 đúng。",
+      "options": [
+        "同学们互相关心。",
+        "互相同学们很高。",
+        "我互相一本书。"
+      ],
+      "answer": "同学们互相关心。",
+      "explanation": "互相 đứng trước động từ để nói hành động tác động qua lại giữa các bên。",
+      "id": "hanngu-q5-b02-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“放心”的意思是什么？（fàng xīn）",
+      "options": [
+        "yên tâm",
+        "quen với",
+        "cảnh tượng",
+        "lần lượt"
+      ],
+      "answer": "yên tâm",
+      "explanation": "放心（fàng xīn） nghĩa là yên tâm。",
+      "id": "hanngu-q5-b02-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “quen với” (xí guàn).",
+      "answer": "习惯",
+      "alternatives": [],
+      "explanation": "习惯 (xí guàn) nghĩa là quen với。",
+      "id": "hanngu-q5-b02-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “一封信”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/5.pdf, trang PDF 31–31; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

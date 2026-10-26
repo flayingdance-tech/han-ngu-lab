@@ -1,0 +1,168 @@
+{
+  "id": "hanngu-q6-b19",
+  "level": 6,
+  "unit": "Quyển 6 · Bài nguồn 19",
+  "title": "无声的泪",
+  "subtitle": "不仅……而且……",
+  "minutes": 35,
+  "order": 92,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “不仅……而且……” trong tình huống phù hợp.",
+    "Nhận diện 8 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “无声的泪”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-f0658380804b97f6",
+      "hanzi": "意外",
+      "pinyin": "yì wài",
+      "meaning": "tai nạn, sự cố",
+      "example": "这份工作不仅适合我，而且我也能胜任。",
+      "examplePinyin": "zhè fèn gōng zuò bù jǐn shì hé wǒ， ér qiě wǒ yě néng shèng rèn。",
+      "exampleMeaning": "Công việc này không những hợp với tôi mà tôi còn đảm nhiệm tốt."
+    },
+    {
+      "id": "hnl-lex-ea8e09be961bd8b5",
+      "hanzi": "残疾人",
+      "pinyin": "cán jí rén",
+      "meaning": "người khuyết tật",
+      "example": "为了生活，我不得不再三求职。",
+      "examplePinyin": "wèi le shēng huó， wǒ bù dé bù zài sān qiú zhí。",
+      "exampleMeaning": "Vì cuộc sống, tôi buộc phải nhiều lần tìm việc."
+    },
+    {
+      "id": "hnl-lex-ea91887b9d5f2fad",
+      "hanzi": "歧视",
+      "pinyin": "qí shì",
+      "meaning": "phân biệt đối xử",
+      "example": "这份工作不仅适合我，而且我也能胜任。",
+      "examplePinyin": "zhè fèn gōng zuò bù jǐn shì hé wǒ， ér qiě wǒ yě néng shèng rèn。",
+      "exampleMeaning": "Công việc này không những hợp với tôi mà tôi còn đảm nhiệm tốt."
+    },
+    {
+      "id": "hnl-lex-3cb0dbdba37f83e9",
+      "hanzi": "求职",
+      "pinyin": "qiú zhí",
+      "meaning": "tìm việc",
+      "example": "为了生活，我不得不再三求职。",
+      "examplePinyin": "wèi le shēng huó， wǒ bù dé bù zài sān qiú zhí。",
+      "exampleMeaning": "Vì cuộc sống, tôi buộc phải nhiều lần tìm việc."
+    },
+    {
+      "id": "hnl-lex-8c224b6795e6c9a7",
+      "hanzi": "报社",
+      "pinyin": "bào shè",
+      "meaning": "tòa soạn",
+      "example": "这份工作不仅适合我，而且我也能胜任。",
+      "examplePinyin": "zhè fèn gōng zuò bù jǐn shì hé wǒ， ér qiě wǒ yě néng shèng rèn。",
+      "exampleMeaning": "Công việc này không những hợp với tôi mà tôi còn đảm nhiệm tốt."
+    },
+    {
+      "id": "hnl-lex-b3fd9ce61a1c33a1",
+      "hanzi": "资料",
+      "pinyin": "zī liào",
+      "meaning": "tài liệu",
+      "example": "为了生活，我不得不再三求职。",
+      "examplePinyin": "wèi le shēng huó， wǒ bù dé bù zài sān qiú zhí。",
+      "exampleMeaning": "Vì cuộc sống, tôi buộc phải nhiều lần tìm việc."
+    },
+    {
+      "id": "hnl-lex-614fa7ee4d4bd7a1",
+      "hanzi": "胜任",
+      "pinyin": "shèng rèn",
+      "meaning": "đảm nhiệm tốt",
+      "example": "这份工作不仅适合我，而且我也能胜任。",
+      "examplePinyin": "zhè fèn gōng zuò bù jǐn shì hé wǒ， ér qiě wǒ yě néng shèng rèn。",
+      "exampleMeaning": "Công việc này không những hợp với tôi mà tôi còn đảm nhiệm tốt."
+    },
+    {
+      "id": "hnl-lex-88096f53c9212d92",
+      "hanzi": "保证",
+      "pinyin": "bǎo zhèng",
+      "meaning": "cam kết",
+      "example": "为了生活，我不得不再三求职。",
+      "examplePinyin": "wèi le shēng huó， wǒ bù dé bù zài sān qiú zhí。",
+      "exampleMeaning": "Vì cuộc sống, tôi buộc phải nhiều lần tìm việc."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "不仅……而且……",
+      "explanation": "không những…… mà còn…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "这份工作不仅适合我，而且我也能胜任。",
+      "translation": "Công việc này không những hợp với tôi mà tôi còn đảm nhiệm tốt."
+    },
+    {
+      "title": "不得不……",
+      "explanation": "buộc phải…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "为了生活，我不得不再三求职。",
+      "translation": "Vì cuộc sống, tôi buộc phải nhiều lần tìm việc."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "遇到困难时，你会怎么做？",
+      "pinyin": "yù dào kùn nán shí， nǐ huì zěn me zuò？",
+      "meaning": "Khi gặp khó khăn bạn sẽ làm gì?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "我会说明情况，也会继续学习。",
+      "pinyin": "wǒ huì shuō míng qíng kuàng， yě huì jì xù xué xí。",
+      "meaning": "Tôi sẽ giải thích tình hình và tiếp tục học."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "别人误解你怎么办？",
+      "pinyin": "bié rén wù jiě nǐ zěn me bàn？",
+      "meaning": "Nếu người khác hiểu lầm bạn thì sao?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "先沟通，再用行动证明自己。",
+      "pinyin": "xiān gōu tōng， zài yòng xíng dòng zhèng míng zì jǐ。",
+      "meaning": "Trước hết trao đổi, sau đó dùng hành động chứng minh bản thân."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Chọn câu dùng 不得不 đúng.",
+      "options": [
+        "为了生活，我不得不再三求职。",
+        "不得不今天很蓝。",
+        "我不不得不学习。"
+      ],
+      "answer": "为了生活，我不得不再三求职。",
+      "explanation": "不得不 nói về việc bắt buộc phải làm dù không muốn hoặc gặp khó khăn.",
+      "id": "hanngu-q6-b19-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“意外”的意思是什么？（yì wài）",
+      "options": [
+        "tai nạn, sự cố",
+        "người khuyết tật",
+        "phân biệt đối xử",
+        "tìm việc"
+      ],
+      "answer": "tai nạn, sự cố",
+      "explanation": "意外（yì wài） nghĩa là tai nạn, sự cố。",
+      "id": "hanngu-q6-b19-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “người khuyết tật” (cán jí rén).",
+      "answer": "残疾人",
+      "alternatives": [],
+      "explanation": "残疾人 (cán jí rén) nghĩa là người khuyết tật。",
+      "id": "hanngu-q6-b19-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “无声的泪”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/6.pdf, trang PDF 81–94; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

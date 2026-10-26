@@ -1,0 +1,168 @@
+{
+  "id": "hanngu-q6-b23",
+  "level": 6,
+  "unit": "Quyển 6 · Bài nguồn 23",
+  "title": "网络学校",
+  "subtitle": "只要……就……",
+  "minutes": 35,
+  "order": 94,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “只要……就……” trong tình huống phù hợp.",
+    "Nhận diện 8 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “网络学校”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-4b6ef9df1b45a842",
+      "hanzi": "网络学校",
+      "pinyin": "wǎng luò xué xiào",
+      "meaning": "trường học trực tuyến",
+      "example": "只要打开电脑，就可以开始学习。",
+      "examplePinyin": "zhǐ yào dǎ kāi diàn nǎo， jiù kě yǐ kāi shǐ xué xí。",
+      "exampleMeaning": "Chỉ cần mở máy tính là có thể bắt đầu học."
+    },
+    {
+      "id": "hnl-lex-e81e886dad1dceb6",
+      "hanzi": "教师",
+      "pinyin": "jiào shī",
+      "meaning": "giáo viên",
+      "example": "我们通过网络交换学习资料。",
+      "examplePinyin": "wǒ men tōng guò wǎng luò jiāo huàn xué xí zī liào。",
+      "exampleMeaning": "Chúng tôi trao đổi tài liệu học thông qua mạng."
+    },
+    {
+      "id": "hnl-lex-d4b825780cae1fd0",
+      "hanzi": "教学安排",
+      "pinyin": "jiào xué ān pái",
+      "meaning": "安排 dạy học",
+      "example": "只要打开电脑，就可以开始学习。",
+      "examplePinyin": "zhǐ yào dǎ kāi diàn nǎo， jiù kě yǐ kāi shǐ xué xí。",
+      "exampleMeaning": "Chỉ cần mở máy tính là có thể bắt đầu học."
+    },
+    {
+      "id": "hnl-lex-a77e8dea02edb057",
+      "hanzi": "电子邮件",
+      "pinyin": "diàn zi yóu jiàn",
+      "meaning": "email",
+      "example": "通过电子邮件和在线讨论联系。",
+      "examplePinyin": "tōng guò diàn zi yóu jiàn hé zài xiàn tǎo lùn lián xì。",
+      "exampleMeaning": "Liên lạc qua email và thảo luận trực tuyến."
+    },
+    {
+      "id": "hnl-lex-0efd13258c19f30c",
+      "hanzi": "多媒体",
+      "pinyin": "duō méi tǐ",
+      "meaning": "đa phương tiện",
+      "example": "只要打开电脑，就可以开始学习。",
+      "examplePinyin": "zhǐ yào dǎ kāi diàn nǎo， jiù kě yǐ kāi shǐ xué xí。",
+      "exampleMeaning": "Chỉ cần mở máy tính là có thể bắt đầu học."
+    },
+    {
+      "id": "hnl-lex-2cc3576cd9b34899",
+      "hanzi": "课程",
+      "pinyin": "kè chéng",
+      "meaning": "khóa học",
+      "example": "方便，我可以在家查看课程安排。",
+      "examplePinyin": "fāng biàn， wǒ kě yǐ zài jiā chá kàn kè chéng ān pái。",
+      "exampleMeaning": "Thuận tiện, tôi có thể xem lịch học ở nhà."
+    },
+    {
+      "id": "hnl-lex-7b58ff283a192e37",
+      "hanzi": "讨论",
+      "pinyin": "tǎo lùn",
+      "meaning": "thảo luận",
+      "example": "通过电子邮件和在线讨论联系。",
+      "examplePinyin": "tōng guò diàn zi yóu jiàn hé zài xiàn tǎo lùn lián xì。",
+      "exampleMeaning": "Liên lạc qua email và thảo luận trực tuyến."
+    },
+    {
+      "id": "hnl-lex-b84f757c20e0c5b9",
+      "hanzi": "方便",
+      "pinyin": "fāng biàn",
+      "meaning": "thuận tiện",
+      "example": "网络学习方便吗？",
+      "examplePinyin": "wǎng luò xué xí fāng biàn ma？",
+      "exampleMeaning": "Học trực tuyến có thuận tiện không?"
+    }
+  ],
+  "grammar": [
+    {
+      "title": "只要……就……",
+      "explanation": "chỉ cần…… thì…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "只要打开电脑，就可以开始学习。",
+      "translation": "Chỉ cần mở máy tính là có thể bắt đầu học."
+    },
+    {
+      "title": "通过……",
+      "explanation": "thông qua…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "我们通过网络交换学习资料。",
+      "translation": "Chúng tôi trao đổi tài liệu học thông qua mạng."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "网络学习方便吗？",
+      "pinyin": "wǎng luò xué xí fāng biàn ma？",
+      "meaning": "Học trực tuyến có thuận tiện không?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "方便，我可以在家查看课程安排。",
+      "pinyin": "fāng biàn， wǒ kě yǐ zài jiā chá kàn kè chéng ān pái。",
+      "meaning": "Thuận tiện, tôi có thể xem lịch học ở nhà."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "怎样和老师联系？",
+      "pinyin": "zěn yàng hé lǎo shī lián xì？",
+      "meaning": "Liên lạc với giáo viên thế nào?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "通过电子邮件和在线讨论联系。",
+      "pinyin": "tōng guò diàn zi yóu jiàn hé zài xiàn tǎo lùn lián xì。",
+      "meaning": "Liên lạc qua email và thảo luận trực tuyến."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Chọn câu dùng 通过 để nói về phương tiện.",
+      "options": [
+        "我们通过网络交换学习资料。",
+        "通过昨天很冷。",
+        "网络通过是老师。"
+      ],
+      "answer": "我们通过网络交换学习资料。",
+      "explanation": "通过 giới thiệu phương tiện hoặc con đường để thực hiện việc gì.",
+      "id": "hanngu-q6-b23-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“网络学校”的意思是什么？（wǎng luò xué xiào）",
+      "options": [
+        "trường học trực tuyến",
+        "giáo viên",
+        "安排 dạy học",
+        "email"
+      ],
+      "answer": "trường học trực tuyến",
+      "explanation": "网络学校（wǎng luò xué xiào） nghĩa là trường học trực tuyến。",
+      "id": "hanngu-q6-b23-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “giáo viên” (jiào shī).",
+      "answer": "教师",
+      "alternatives": [],
+      "explanation": "教师 (jiào shī) nghĩa là giáo viên。",
+      "id": "hanngu-q6-b23-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “网络学校”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/6.pdf, trang PDF 144–155; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

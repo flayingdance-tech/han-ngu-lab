@@ -1,0 +1,150 @@
+{
+  "id": "hanngu-q5-b03",
+  "level": 5,
+  "unit": "Quyển 5 · Bài nguồn 3",
+  "title": "北京的四季",
+  "subtitle": "拿……来说",
+  "minutes": 35,
+  "order": 73,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “拿……来说” trong tình huống phù hợp.",
+    "Nhận diện 6 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “北京的四季”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-7a7cb0fb3b61fc25",
+      "hanzi": "季节",
+      "pinyin": "jì jié",
+      "meaning": "mùa",
+      "example": "你喜欢哪个季节？",
+      "examplePinyin": "nǐ xǐ huān nǎ ge jì jié？",
+      "exampleMeaning": "Bạn thích mùa nào?"
+    },
+    {
+      "id": "hnl-lex-01cea0883c107adb",
+      "hanzi": "暖和",
+      "pinyin": "nuǎn huo",
+      "meaning": "ấm áp",
+      "example": "天气暖和，公园里有很多游人。",
+      "examplePinyin": "tiān qì nuǎn huo， gōng yuán lǐ yǒu hěn duō yóu rén。",
+      "exampleMeaning": "Thời tiết ấm áp, công viên có nhiều du khách."
+    },
+    {
+      "id": "hnl-lex-d01244893cb32443",
+      "hanzi": "打扮",
+      "pinyin": "dǎ bàn",
+      "meaning": "ăn diện",
+      "example": "拿北京来说，一年有四个季节。",
+      "examplePinyin": "ná běi jīng lái shuō， yī nián yǒu sì gè jì jié。",
+      "exampleMeaning": "Lấy Bắc Kinh làm ví dụ, một năm có bốn mùa."
+    },
+    {
+      "id": "hnl-lex-2c202e6e6a551b2a",
+      "hanzi": "散步",
+      "pinyin": "sàn bù",
+      "meaning": "đi dạo",
+      "example": "春天一到，天气就暖和起来了。",
+      "examplePinyin": "chūn tiān yī dào， tiān qì jiù nuǎn huo qǐ lái le。",
+      "exampleMeaning": "Mùa xuân vừa đến, thời tiết liền ấm lên."
+    },
+    {
+      "id": "hnl-lex-1bf667118c266be5",
+      "hanzi": "充满",
+      "pinyin": "chōng mǎn",
+      "meaning": "tràn đầy",
+      "example": "拿北京来说，一年有四个季节。",
+      "examplePinyin": "ná běi jīng lái shuō， yī nián yǒu sì gè jì jié。",
+      "exampleMeaning": "Lấy Bắc Kinh làm ví dụ, một năm có bốn mùa."
+    },
+    {
+      "id": "hnl-lex-13b3fdc7a37cfcaa",
+      "hanzi": "游人",
+      "pinyin": "yóu rén",
+      "meaning": "du khách",
+      "example": "天气暖和，公园里有很多游人。",
+      "examplePinyin": "tiān qì nuǎn huo， gōng yuán lǐ yǒu hěn duō yóu rén。",
+      "exampleMeaning": "Thời tiết ấm áp, công viên có nhiều du khách."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "拿……来说",
+      "explanation": "lấy làm ví dụ Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "拿北京来说，一年有四个季节。",
+      "translation": "Lấy Bắc Kinh làm ví dụ, một năm có bốn mùa."
+    },
+    {
+      "title": "一……就……",
+      "explanation": "vừa…… thì…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "春天一到，天气就暖和起来了。",
+      "translation": "Mùa xuân vừa đến, thời tiết liền ấm lên."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "北京春天怎么样？",
+      "pinyin": "běi jīng chūn tiān zěn me yàng？",
+      "meaning": "Mùa xuân ở Bắc Kinh thế nào?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "天气暖和，公园里有很多游人。",
+      "pinyin": "tiān qì nuǎn huo， gōng yuán lǐ yǒu hěn duō yóu rén。",
+      "meaning": "Thời tiết ấm áp, công viên có nhiều du khách."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "你喜欢哪个季节？",
+      "pinyin": "nǐ xǐ huān nǎ ge jì jié？",
+      "meaning": "Bạn thích mùa nào?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "我喜欢秋天，天气不冷也不热。",
+      "pinyin": "wǒ xǐ huān qiū tiān， tiān qì bù lěng yě bù rè。",
+      "meaning": "Tôi thích mùa thu, thời tiết không lạnh cũng không nóng."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Câu nào dùng 拿……来说 để nêu ví dụ?",
+      "options": [
+        "拿北京来说，一年有四个季节。",
+        "北京拿四个季节。",
+        "来说北京昨天去。"
+      ],
+      "answer": "拿北京来说，一年有四个季节。",
+      "explanation": "拿……来说 đưa một đối tượng ra làm ví dụ để giải thích nhận xét chung。",
+      "id": "hanngu-q5-b03-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“季节”的意思是什么？（jì jié）",
+      "options": [
+        "mùa",
+        "ấm áp",
+        "ăn diện",
+        "đi dạo"
+      ],
+      "answer": "mùa",
+      "explanation": "季节（jì jié） nghĩa là mùa。",
+      "id": "hanngu-q5-b03-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “ấm áp” (nuǎn huo).",
+      "answer": "暖和",
+      "alternatives": [],
+      "explanation": "暖和 (nuǎn huo) nghĩa là ấm áp。",
+      "id": "hanngu-q5-b03-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “北京的四季”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/5.pdf, trang PDF 44–44; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

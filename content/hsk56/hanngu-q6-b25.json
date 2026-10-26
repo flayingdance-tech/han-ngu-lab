@@ -1,0 +1,150 @@
+{
+  "id": "hanngu-q6-b25",
+  "level": 6,
+  "unit": "Quyển 6 · Bài nguồn 25",
+  "title": "你喜欢什么颜色",
+  "subtitle": "不但……而且……",
+  "minutes": 35,
+  "order": 86,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “不但……而且……” trong tình huống phù hợp.",
+    "Nhận diện 6 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “你喜欢什么颜色”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-507c650ab82dc0e2",
+      "hanzi": "颜色",
+      "pinyin": "yán sè",
+      "meaning": "màu sắc",
+      "example": "你喜欢什么颜色？",
+      "examplePinyin": "nǐ xǐ huān shén me yán sè？",
+      "exampleMeaning": "Bạn thích màu gì?"
+    },
+    {
+      "id": "hnl-lex-0434badcbdde0c9a",
+      "hanzi": "性格",
+      "pinyin": "xìng gé",
+      "meaning": "tính cách",
+      "example": "颜色能说明性格吗？",
+      "examplePinyin": "yán sè néng shuō míng xìng gé ma？",
+      "exampleMeaning": "Màu sắc có thể cho biết tính cách không?"
+    },
+    {
+      "id": "hnl-lex-07d59e9f8282544f",
+      "hanzi": "影响",
+      "pinyin": "yǐng xiǎng",
+      "meaning": "ảnh hưởng",
+      "example": "可能有影响，但不能简单判断。",
+      "examplePinyin": "kě néng yǒu yǐng xiǎng， dàn bù néng jiǎn dān pàn duàn。",
+      "exampleMeaning": "Có thể có ảnh hưởng nhưng không thể phán đoán đơn giản."
+    },
+    {
+      "id": "hnl-lex-19f305f1fef8749b",
+      "hanzi": "热烈",
+      "pinyin": "rè liè",
+      "meaning": "nồng nhiệt",
+      "example": "这个说法是否正确，还要研究。",
+      "examplePinyin": "zhè ge shuō fǎ shì fǒu zhèng què， hái yào yán jiū。",
+      "exampleMeaning": "Cách nói này có đúng hay không còn cần nghiên cứu."
+    },
+    {
+      "id": "hnl-lex-685db69e19b2f191",
+      "hanzi": "纯洁",
+      "pinyin": "chún jié",
+      "meaning": "trong sáng",
+      "example": "颜色不但影响情绪，而且影响表达。",
+      "examplePinyin": "yán sè bù dàn yǐng xiǎng qíng xù， ér qiě yǐng xiǎng biǎo dá。",
+      "exampleMeaning": "Màu sắc không những ảnh hưởng cảm xúc mà còn ảnh hưởng cách biểu đạt."
+    },
+    {
+      "id": "hnl-lex-8ecc8a50178ad673",
+      "hanzi": "宁静",
+      "pinyin": "níng jìng",
+      "meaning": "yên tĩnh",
+      "example": "这个说法是否正确，还要研究。",
+      "examplePinyin": "zhè ge shuō fǎ shì fǒu zhèng què， hái yào yán jiū。",
+      "exampleMeaning": "Cách nói này có đúng hay không còn cần nghiên cứu."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "不但……而且……",
+      "explanation": "không những…… mà còn…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "颜色不但影响情绪，而且影响表达。",
+      "translation": "Màu sắc không những ảnh hưởng cảm xúc mà còn ảnh hưởng cách biểu đạt."
+    },
+    {
+      "title": "是否……",
+      "explanation": "có…… hay không Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "这个说法是否正确，还要研究。",
+      "translation": "Cách nói này có đúng hay không còn cần nghiên cứu."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "你喜欢什么颜色？",
+      "pinyin": "nǐ xǐ huān shén me yán sè？",
+      "meaning": "Bạn thích màu gì?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "我喜欢蓝色，因为它让我觉得安静。",
+      "pinyin": "wǒ xǐ huān lán sè， yīn wèi tā ràng wǒ jué de ān jìng。",
+      "meaning": "Tôi thích màu xanh lam vì nó khiến tôi thấy yên tĩnh."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "颜色能说明性格吗？",
+      "pinyin": "yán sè néng shuō míng xìng gé ma？",
+      "meaning": "Màu sắc có thể cho biết tính cách không?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "可能有影响，但不能简单判断。",
+      "pinyin": "kě néng yǒu yǐng xiǎng， dàn bù néng jiǎn dān pàn duàn。",
+      "meaning": "Có thể có ảnh hưởng nhưng không thể phán đoán đơn giản."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "是否…… dùng để làm gì?",
+      "options": [
+        "Nêu vấn đề có…… hay không",
+        "Nêu địa điểm",
+        "Nêu số lượng"
+      ],
+      "answer": "Nêu vấn đề có…… hay không",
+      "explanation": "是否 đặt trước tính từ hoặc động từ để tạo câu hỏi gián tiếp về tính đúng sai hoặc khả năng。",
+      "id": "hanngu-q6-b25-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“颜色”的意思是什么？（yán sè）",
+      "options": [
+        "màu sắc",
+        "tính cách",
+        "ảnh hưởng",
+        "nồng nhiệt"
+      ],
+      "answer": "màu sắc",
+      "explanation": "颜色（yán sè） nghĩa là màu sắc。",
+      "id": "hanngu-q6-b25-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “tính cách” (xìng gé).",
+      "answer": "性格",
+      "alternatives": [],
+      "explanation": "性格 (xìng gé) nghĩa là tính cách。",
+      "id": "hanngu-q6-b25-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “你喜欢什么颜色”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/6.pdf, trang PDF 172–172; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

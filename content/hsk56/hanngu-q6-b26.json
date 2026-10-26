@@ -1,0 +1,168 @@
+{
+  "id": "hanngu-q6-b26",
+  "level": 6,
+  "unit": "Quyển 6 · Bài nguồn 26",
+  "title": "梁山伯与祝英台",
+  "subtitle": "不仅……而且……",
+  "minutes": 35,
+  "order": 95,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “不仅……而且……” trong tình huống phù hợp.",
+    "Nhận diện 8 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “梁山伯与祝英台”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-35cddee1702c22ae",
+      "hanzi": "家喻户晓",
+      "pinyin": "jiā yù hù xiǎo",
+      "meaning": "nhà nhà đều biết",
+      "example": "听过，这是一个家喻户晓的故事。",
+      "examplePinyin": "tīng guò， zhè shì yí gè jiā yù hù xiǎo de gù shì。",
+      "exampleMeaning": "Rồi, đây là câu chuyện nhà nhà đều biết."
+    },
+    {
+      "id": "hnl-lex-a0686dd9572124c5",
+      "hanzi": "女扮男装",
+      "pinyin": "nǚ bàn nán zhuāng",
+      "meaning": "cải trang nam",
+      "example": "祝英台为什么女扮男装？",
+      "examplePinyin": "zhù yīng tái wèi shén me nǚ bàn nán zhuāng？",
+      "exampleMeaning": "Vì sao Chúc Anh Đài cải trang nam?"
+    },
+    {
+      "id": "hnl-lex-b2f96e7abe985ad2",
+      "hanzi": "聪明好学",
+      "pinyin": "cōng míng hào xué",
+      "meaning": "thông minh ham học",
+      "example": "她不仅聪明，而且好学。",
+      "examplePinyin": "tā bù jǐn cōng míng， ér qiě hào xué。",
+      "exampleMeaning": "Cô ấy không những thông minh mà còn ham học."
+    },
+    {
+      "id": "hnl-lex-25546165f1f7ddd1",
+      "hanzi": "书院",
+      "pinyin": "shū yuàn",
+      "meaning": "thư viện trường, học viện",
+      "example": "从此，两人成了好朋友。",
+      "examplePinyin": "cóng cǐ， liǎng rén chéng le hǎo péng yǒu。",
+      "exampleMeaning": "Từ đó, hai người trở thành bạn tốt."
+    },
+    {
+      "id": "hnl-lex-587e1afb37298111",
+      "hanzi": "一见如故",
+      "pinyin": "yī jiàn rú gù",
+      "meaning": "vừa gặp đã thân",
+      "example": "她不仅聪明，而且好学。",
+      "examplePinyin": "tā bù jǐn cōng míng， ér qiě hào xué。",
+      "exampleMeaning": "Cô ấy không những thông minh mà còn ham học."
+    },
+    {
+      "id": "hnl-lex-a410e890bfb761f2",
+      "hanzi": "相识",
+      "pinyin": "xiāng shí",
+      "meaning": "quen biết",
+      "example": "从此，两人成了好朋友。",
+      "examplePinyin": "cóng cǐ， liǎng rén chéng le hǎo péng yǒu。",
+      "exampleMeaning": "Từ đó, hai người trở thành bạn tốt."
+    },
+    {
+      "id": "hnl-lex-25c2966df3ef8e76",
+      "hanzi": "答应",
+      "pinyin": "dā yìng",
+      "meaning": "đồng ý",
+      "example": "她不仅聪明，而且好学。",
+      "examplePinyin": "tā bù jǐn cōng míng， ér qiě hào xué。",
+      "exampleMeaning": "Cô ấy không những thông minh mà còn ham học."
+    },
+    {
+      "id": "hnl-lex-94d9c10f1dc4edc0",
+      "hanzi": "故事",
+      "pinyin": "gù shì",
+      "meaning": "câu chuyện",
+      "example": "你听过这个故事吗？",
+      "examplePinyin": "nǐ tīng guò zhè ge gù shì ma？",
+      "exampleMeaning": "Bạn từng nghe câu chuyện này chưa?"
+    }
+  ],
+  "grammar": [
+    {
+      "title": "不仅……而且……",
+      "explanation": "không những…… mà còn…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "她不仅聪明，而且好学。",
+      "translation": "Cô ấy không những thông minh mà còn ham học."
+    },
+    {
+      "title": "从此……",
+      "explanation": "từ đó về sau…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "从此，两人成了好朋友。",
+      "translation": "Từ đó, hai người trở thành bạn tốt."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "你听过这个故事吗？",
+      "pinyin": "nǐ tīng guò zhè ge gù shì ma？",
+      "meaning": "Bạn từng nghe câu chuyện này chưa?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "听过，这是一个家喻户晓的故事。",
+      "pinyin": "tīng guò， zhè shì yí gè jiā yù hù xiǎo de gù shì。",
+      "meaning": "Rồi, đây là câu chuyện nhà nhà đều biết."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "祝英台为什么女扮男装？",
+      "pinyin": "zhù yīng tái wèi shén me nǚ bàn nán zhuāng？",
+      "meaning": "Vì sao Chúc Anh Đài cải trang nam?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "因为她想去读书。",
+      "pinyin": "yīn wèi tā xiǎng qù dú shū。",
+      "meaning": "Vì cô ấy muốn đi học."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Chọn câu dùng 不仅……而且…… đúng.",
+      "options": [
+        "她不仅聪明，而且好学。",
+        "不仅她去而且书。",
+        "而且不学习聪明。"
+      ],
+      "answer": "她不仅聪明，而且好学。",
+      "explanation": "不仅……而且…… nối hai đặc điểm cùng chiều của một đối tượng.",
+      "id": "hanngu-q6-b26-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“家喻户晓”的意思是什么？（jiā yù hù xiǎo）",
+      "options": [
+        "nhà nhà đều biết",
+        "cải trang nam",
+        "thông minh ham học",
+        "thư viện trường, học viện"
+      ],
+      "answer": "nhà nhà đều biết",
+      "explanation": "家喻户晓（jiā yù hù xiǎo） nghĩa là nhà nhà đều biết。",
+      "id": "hanngu-q6-b26-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “cải trang nam” (nǚ bàn nán zhuāng).",
+      "answer": "女扮男装",
+      "alternatives": [],
+      "explanation": "女扮男装 (nǚ bàn nán zhuāng) nghĩa là cải trang nam。",
+      "id": "hanngu-q6-b26-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “梁山伯与祝英台”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/6.pdf, trang PDF 189–191; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

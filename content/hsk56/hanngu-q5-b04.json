@@ -1,0 +1,150 @@
+{
+  "id": "hanngu-q5-b04",
+  "level": 5,
+  "unit": "Quyển 5 · Bài nguồn 4",
+  "title": "理想 · Bài học",
+  "subtitle": "不是……而是……",
+  "minutes": 35,
+  "order": 74,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “不是……而是……” trong tình huống phù hợp.",
+    "Nhận diện 6 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “理想”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-9b35451909cc3674",
+      "hanzi": "理想",
+      "pinyin": "lǐ xiǎng",
+      "meaning": "lý tưởng",
+      "example": "你的理想是什么？",
+      "examplePinyin": "nǐ de lǐ xiǎng shì shén me？",
+      "exampleMeaning": "Lý tưởng của bạn là gì?"
+    },
+    {
+      "id": "hnl-lex-12684486c4c7bb17",
+      "hanzi": "专业",
+      "pinyin": "zhuān yè",
+      "meaning": "chuyên ngành",
+      "example": "为什么选择这个专业？",
+      "examplePinyin": "wèi shén me xuǎn zé zhè ge zhuān yè？",
+      "exampleMeaning": "Vì sao bạn chọn chuyên ngành này?"
+    },
+    {
+      "id": "hnl-lex-95ca74ac40cba5ed",
+      "hanzi": "翻译",
+      "pinyin": "fān yì",
+      "meaning": "biên dịch",
+      "example": "我想做一名翻译。",
+      "examplePinyin": "wǒ xiǎng zuò yī míng fān yì。",
+      "exampleMeaning": "Tôi muốn làm biên dịch viên."
+    },
+    {
+      "id": "hnl-lex-7e3dfe2d1785636c",
+      "hanzi": "著名",
+      "pinyin": "zhù míng",
+      "meaning": "nổi tiếng",
+      "example": "只有努力学习，才能实现理想。",
+      "examplePinyin": "zhǐ yǒu nǔ lì xué xí， cái néng shí xiàn lǐ xiǎng。",
+      "exampleMeaning": "Chỉ khi học tập nỗ lực mới có thể thực hiện lý tưởng."
+    },
+    {
+      "id": "hnl-lex-a347a426bfbfe1e8",
+      "hanzi": "了解",
+      "pinyin": "liǎo jiě",
+      "meaning": "tìm hiểu",
+      "example": "因为我喜欢语言，也想了解不同的文化。",
+      "examplePinyin": "yīn wèi wǒ xǐ huān yǔ yán， yě xiǎng liǎo jiě bù tóng de wén huà。",
+      "exampleMeaning": "Vì tôi thích ngôn ngữ và muốn tìm hiểu các nền văn hóa khác nhau."
+    },
+    {
+      "id": "hnl-lex-0a3d06a84e5358e5",
+      "hanzi": "依靠",
+      "pinyin": "yī kào",
+      "meaning": "dựa vào",
+      "example": "只有努力学习，才能实现理想。",
+      "examplePinyin": "zhǐ yǒu nǔ lì xué xí， cái néng shí xiàn lǐ xiǎng。",
+      "exampleMeaning": "Chỉ khi học tập nỗ lực mới có thể thực hiện lý tưởng."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "不是……而是……",
+      "explanation": "không phải…… mà là…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "我想学的不是英语，而是汉语。",
+      "translation": "Điều tôi muốn học không phải tiếng Anh mà là tiếng Trung."
+    },
+    {
+      "title": "只有……才……",
+      "explanation": "chỉ khi…… mới…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "只有努力学习，才能实现理想。",
+      "translation": "Chỉ khi học tập nỗ lực mới có thể thực hiện lý tưởng."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "你的理想是什么？",
+      "pinyin": "nǐ de lǐ xiǎng shì shén me？",
+      "meaning": "Lý tưởng của bạn là gì?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "我想做一名翻译。",
+      "pinyin": "wǒ xiǎng zuò yī míng fān yì。",
+      "meaning": "Tôi muốn làm biên dịch viên."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "为什么选择这个专业？",
+      "pinyin": "wèi shén me xuǎn zé zhè ge zhuān yè？",
+      "meaning": "Vì sao bạn chọn chuyên ngành này?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "因为我喜欢语言，也想了解不同的文化。",
+      "pinyin": "yīn wèi wǒ xǐ huān yǔ yán， yě xiǎng liǎo jiě bù tóng de wén huà。",
+      "meaning": "Vì tôi thích ngôn ngữ và muốn tìm hiểu các nền văn hóa khác nhau."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Chọn câu dùng 只有……才…… đúng。",
+      "options": [
+        "只有努力学习，才能实现理想。",
+        "只有理想努力学习。",
+        "才能只有今天下雨。"
+      ],
+      "answer": "只有努力学习，才能实现理想。",
+      "explanation": "只有 nêu điều kiện cần; 才 nêu kết quả chỉ xuất hiện khi điều kiện được đáp ứng。",
+      "id": "hanngu-q5-b04-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“理想”的意思是什么？（lǐ xiǎng）",
+      "options": [
+        "lý tưởng",
+        "chuyên ngành",
+        "biên dịch",
+        "nổi tiếng"
+      ],
+      "answer": "lý tưởng",
+      "explanation": "理想（lǐ xiǎng） nghĩa là lý tưởng。",
+      "id": "hanngu-q5-b04-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “chuyên ngành” (zhuān yè).",
+      "answer": "专业",
+      "alternatives": [],
+      "explanation": "专业 (zhuān yè) nghĩa là chuyên ngành。",
+      "id": "hanngu-q5-b04-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “理想”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/5.pdf, trang PDF 55–55; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

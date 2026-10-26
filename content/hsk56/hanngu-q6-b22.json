@@ -1,0 +1,168 @@
+{
+  "id": "hanngu-q6-b22",
+  "level": 6,
+  "unit": "Quyển 6 · Bài nguồn 22",
+  "title": "母亲的心",
+  "subtitle": "为了……",
+  "minutes": 35,
+  "order": 93,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “为了……” trong tình huống phù hợp.",
+    "Nhận diện 8 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “母亲的心”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-925f73178705e79b",
+      "hanzi": "母亲",
+      "pinyin": "mǔ qīn",
+      "meaning": "mẹ",
+      "example": "母亲最担心什么？",
+      "examplePinyin": "mǔ qīn zuì dān xīn shén me？",
+      "exampleMeaning": "Người mẹ lo điều gì nhất?"
+    },
+    {
+      "id": "hnl-lex-914d856c53173e4f",
+      "hanzi": "医疗事故",
+      "pinyin": "yī liáo shì gù",
+      "meaning": "sự cố y tế",
+      "example": "一听到孩子的声音，母亲就很紧张。",
+      "examplePinyin": "yī tīng dào hái zi de shēng yīn， mǔ qīn jiù hěn jǐn zhāng。",
+      "exampleMeaning": "Vừa nghe tiếng con, người mẹ đã rất lo lắng."
+    },
+    {
+      "id": "hnl-lex-5b884e58e850b8f8",
+      "hanzi": "聋哑学校",
+      "pinyin": "lóng yǎ xué xiào",
+      "meaning": "trường dành cho người khiếm thính",
+      "example": "为了不失去语言能力，他每天练习。",
+      "examplePinyin": "wèi le bù shī qù yǔ yán néng lì， tā měi tiān liàn xí。",
+      "exampleMeaning": "Để không mất khả năng ngôn ngữ, cậu ấy luyện tập mỗi ngày."
+    },
+    {
+      "id": "hnl-lex-ef769e75e8e921be",
+      "hanzi": "听力",
+      "pinyin": "tīng lì",
+      "meaning": "thính lực",
+      "example": "一听到孩子的声音，母亲就很紧张。",
+      "examplePinyin": "yī tīng dào hái zi de shēng yīn， mǔ qīn jiù hěn jǐn zhāng。",
+      "exampleMeaning": "Vừa nghe tiếng con, người mẹ đã rất lo lắng."
+    },
+    {
+      "id": "hnl-lex-72930b580d996fff",
+      "hanzi": "语言能力",
+      "pinyin": "yǔ yán néng lì",
+      "meaning": "khả năng ngôn ngữ",
+      "example": "为了不失去语言能力，他每天练习。",
+      "examplePinyin": "wèi le bù shī qù yǔ yán néng lì， tā měi tiān liàn xí。",
+      "exampleMeaning": "Để không mất khả năng ngôn ngữ, cậu ấy luyện tập mỗi ngày."
+    },
+    {
+      "id": "hnl-lex-3365b1b87bc4ecb4",
+      "hanzi": "口形",
+      "pinyin": "kǒu xíng",
+      "meaning": "khẩu hình",
+      "example": "她让孩子看口形，一句一句地练习。",
+      "examplePinyin": "tā ràng hái zi kàn kǒu xíng， yī jù yī jù dì liàn xí。",
+      "exampleMeaning": "Bà để con nhìn khẩu hình và luyện từng câu."
+    },
+    {
+      "id": "hnl-lex-adee935d8cb78e6d",
+      "hanzi": "耐力",
+      "pinyin": "nài lì",
+      "meaning": "sức chịu đựng",
+      "example": "为了不失去语言能力，他每天练习。",
+      "examplePinyin": "wèi le bù shī qù yǔ yán néng lì， tā měi tiān liàn xí。",
+      "exampleMeaning": "Để không mất khả năng ngôn ngữ, cậu ấy luyện tập mỗi ngày."
+    },
+    {
+      "id": "hnl-lex-730ad020eb5bacab",
+      "hanzi": "希望",
+      "pinyin": "xī wàng",
+      "meaning": "hy vọng",
+      "example": "她担心孩子失去沟通的希望。",
+      "examplePinyin": "tā dān xīn hái zi shī qù gōu tōng de xī wàng。",
+      "exampleMeaning": "Bà lo con mất hy vọng giao tiếp."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "为了……",
+      "explanation": "vì mục đích…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "为了不失去语言能力，他每天练习。",
+      "translation": "Để không mất khả năng ngôn ngữ, cậu ấy luyện tập mỗi ngày."
+    },
+    {
+      "title": "一……就……",
+      "explanation": "vừa…… thì…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "一听到孩子的声音，母亲就很紧张。",
+      "translation": "Vừa nghe tiếng con, người mẹ đã rất lo lắng."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "母亲最担心什么？",
+      "pinyin": "mǔ qīn zuì dān xīn shén me？",
+      "meaning": "Người mẹ lo điều gì nhất?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "她担心孩子失去沟通的希望。",
+      "pinyin": "tā dān xīn hái zi shī qù gōu tōng de xī wàng。",
+      "meaning": "Bà lo con mất hy vọng giao tiếp."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "她怎样帮助孩子？",
+      "pinyin": "tā zěn yàng bāng zhù hái zi？",
+      "meaning": "Bà giúp con thế nào?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "她让孩子看口形，一句一句地练习。",
+      "pinyin": "tā ràng hái zi kàn kǒu xíng， yī jù yī jù dì liàn xí。",
+      "meaning": "Bà để con nhìn khẩu hình và luyện từng câu."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Chọn câu nêu mục đích dùng 为了.",
+      "options": [
+        "为了保持语言能力，他每天练习。",
+        "为了昨天是星期天。",
+        "他为了很高。"
+      ],
+      "answer": "为了保持语言能力，他每天练习。",
+      "explanation": "为了 đứng trước mục đích của hành động.",
+      "id": "hanngu-q6-b22-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“母亲”的意思是什么？（mǔ qīn）",
+      "options": [
+        "mẹ",
+        "sự cố y tế",
+        "trường dành cho người khiếm thính",
+        "thính lực"
+      ],
+      "answer": "mẹ",
+      "explanation": "母亲（mǔ qīn） nghĩa là mẹ。",
+      "id": "hanngu-q6-b22-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “sự cố y tế” (yī liáo shì gù).",
+      "answer": "医疗事故",
+      "alternatives": [],
+      "explanation": "医疗事故 (yī liáo shì gù) nghĩa là sự cố y tế。",
+      "id": "hanngu-q6-b22-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “母亲的心”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/6.pdf, trang PDF 128–143; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

@@ -1,0 +1,150 @@
+{
+  "id": "hanngu-q6-b20",
+  "level": 6,
+  "unit": "Quyển 6 · Bài nguồn 20",
+  "title": "什么最重要",
+  "subtitle": "对……来说",
+  "minutes": 35,
+  "order": 83,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “对……来说” trong tình huống phù hợp.",
+    "Nhận diện 6 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “什么最重要”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-8306382e45cfdfd3",
+      "hanzi": "重要",
+      "pinyin": "zhòng yào",
+      "meaning": "quan trọng",
+      "example": "对你来说什么最重要？",
+      "examplePinyin": "duì nǐ lái shuō shén me zuì zhòng yào？",
+      "exampleMeaning": "Đối với bạn điều gì quan trọng nhất?"
+    },
+    {
+      "id": "hnl-lex-4c35f303bc71332e",
+      "hanzi": "选择",
+      "pinyin": "xuǎn zé",
+      "meaning": "lựa chọn",
+      "example": "你怎么做选择？",
+      "examplePinyin": "nǐ zěn me zuò xuǎn zé？",
+      "exampleMeaning": "Bạn lựa chọn thế nào?"
+    },
+    {
+      "id": "hnl-lex-3bde63221228db14",
+      "hanzi": "健康",
+      "pinyin": "jiàn kāng",
+      "meaning": "sức khỏe",
+      "example": "对我来说，健康和家人最重要。",
+      "examplePinyin": "duì wǒ lái shuō， jiàn kāng hé jiā rén zuì zhòng yào。",
+      "exampleMeaning": "Đối với tôi, sức khỏe và gia đình quan trọng nhất."
+    },
+    {
+      "id": "hnl-lex-c8137a5c209182ef",
+      "hanzi": "责任",
+      "pinyin": "zé rèn",
+      "meaning": "trách nhiệm",
+      "example": "我会先想清楚自己的责任。",
+      "examplePinyin": "wǒ huì xiān xiǎng qīng chǔ zì jǐ de zé rèn。",
+      "exampleMeaning": "Tôi sẽ nghĩ rõ trách nhiệm của mình trước."
+    },
+    {
+      "id": "hnl-lex-ee99d6a0b765e769",
+      "hanzi": "陪伴",
+      "pinyin": "péi bàn",
+      "meaning": "đồng hành",
+      "example": "对我来说，健康最重要。",
+      "examplePinyin": "duì wǒ lái shuō， jiàn kāng zuì zhòng yào。",
+      "exampleMeaning": "Đối với tôi, sức khỏe là quan trọng nhất."
+    },
+    {
+      "id": "hnl-lex-6cad55e35a7f94af",
+      "hanzi": "价值",
+      "pinyin": "jià zhí",
+      "meaning": "giá trị",
+      "example": "与其担心，不如马上行动。",
+      "examplePinyin": "yǔ qí dān xīn， bù rú mǎ shàng xíng dòng。",
+      "exampleMeaning": "Thà lo lắng còn hơn là hành động ngay."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "对……来说",
+      "explanation": "đối với…… mà nói Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "对我来说，健康最重要。",
+      "translation": "Đối với tôi, sức khỏe là quan trọng nhất."
+    },
+    {
+      "title": "与其……不如……",
+      "explanation": "thà…… còn hơn…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "与其担心，不如马上行动。",
+      "translation": "Thà lo lắng còn hơn là hành động ngay."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "对你来说什么最重要？",
+      "pinyin": "duì nǐ lái shuō shén me zuì zhòng yào？",
+      "meaning": "Đối với bạn điều gì quan trọng nhất?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "对我来说，健康和家人最重要。",
+      "pinyin": "duì wǒ lái shuō， jiàn kāng hé jiā rén zuì zhòng yào。",
+      "meaning": "Đối với tôi, sức khỏe và gia đình quan trọng nhất."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "你怎么做选择？",
+      "pinyin": "nǐ zěn me zuò xuǎn zé？",
+      "meaning": "Bạn lựa chọn thế nào?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "我会先想清楚自己的责任。",
+      "pinyin": "wǒ huì xiān xiǎng qīng chǔ zì jǐ de zé rèn。",
+      "meaning": "Tôi sẽ nghĩ rõ trách nhiệm của mình trước."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Câu nào nêu quan điểm của một người?",
+      "options": [
+        "对我来说，健康最重要。",
+        "健康在桌子上。",
+        "我昨天很早回家。"
+      ],
+      "answer": "对我来说，健康最重要。",
+      "explanation": "对……来说 giới thiệu góc nhìn hoặc đối tượng được dùng làm 기준 đánh giá。",
+      "id": "hanngu-q6-b20-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“重要”的意思是什么？（zhòng yào）",
+      "options": [
+        "quan trọng",
+        "lựa chọn",
+        "sức khỏe",
+        "trách nhiệm"
+      ],
+      "answer": "quan trọng",
+      "explanation": "重要（zhòng yào） nghĩa là quan trọng。",
+      "id": "hanngu-q6-b20-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “lựa chọn” (xuǎn zé).",
+      "answer": "选择",
+      "alternatives": [],
+      "explanation": "选择 (xuǎn zé) nghĩa là lựa chọn。",
+      "id": "hanngu-q6-b20-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “什么最重要”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/6.pdf, trang PDF 95–95; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

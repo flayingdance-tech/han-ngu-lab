@@ -1,0 +1,150 @@
+{
+  "id": "hanngu-q5-b07",
+  "level": 5,
+  "unit": "Quyển 5 · Bài nguồn 7",
+  "title": "成语故事",
+  "subtitle": "因此",
+  "minutes": 35,
+  "order": 76,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “因此” trong tình huống phù hợp.",
+    "Nhận diện 6 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “成语故事”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-f119f199e4578c78",
+      "hanzi": "成语",
+      "pinyin": "chéng yǔ",
+      "meaning": "thành ngữ",
+      "example": "你喜欢成语故事吗？",
+      "examplePinyin": "nǐ xǐ huān chéng yǔ gù shì ma？",
+      "exampleMeaning": "Bạn thích truyện thành ngữ không?"
+    },
+    {
+      "id": "hnl-lex-94d9c10f1dc4edc0",
+      "hanzi": "故事",
+      "pinyin": "gù shì",
+      "meaning": "câu chuyện",
+      "example": "你喜欢成语故事吗？",
+      "examplePinyin": "nǐ xǐ huān chéng yǔ gù shì ma？",
+      "exampleMeaning": "Bạn thích truyện thành ngữ không?"
+    },
+    {
+      "id": "hnl-lex-4135665e44033f9b",
+      "hanzi": "寓意",
+      "pinyin": "yù yì",
+      "meaning": "ngụ ý",
+      "example": "喜欢，因为故事短，寓意很深。",
+      "examplePinyin": "xǐ huān， yīn wèi gù shì duǎn， yù yì hěn shēn。",
+      "exampleMeaning": "Thích, vì truyện ngắn mà ngụ ý sâu."
+    },
+    {
+      "id": "hnl-lex-6db7eb2ed74af14e",
+      "hanzi": "结果",
+      "pinyin": "jié guǒ",
+      "meaning": "kết quả",
+      "example": "只要坚持，就能看到结果。",
+      "examplePinyin": "zhǐ yào jiān chí， jiù néng kàn dào jié guǒ。",
+      "exampleMeaning": "Chỉ cần kiên trì thì sẽ thấy kết quả."
+    },
+    {
+      "id": "hnl-lex-39dd1d26c08a4187",
+      "hanzi": "耐心",
+      "pinyin": "nài xīn",
+      "meaning": "kiên nhẫn",
+      "example": "他每天练习，因此进步很快。",
+      "examplePinyin": "tā měi tiān liàn xí， yīn cǐ jìn bù hěn kuài。",
+      "exampleMeaning": "Mỗi ngày anh ấy luyện tập, vì vậy tiến bộ rất nhanh."
+    },
+    {
+      "id": "hnl-lex-ed3ab028f8af7d19",
+      "hanzi": "坚持",
+      "pinyin": "jiān chí",
+      "meaning": "kiên trì",
+      "example": "只要坚持，就能看到结果。",
+      "examplePinyin": "zhǐ yào jiān chí， jiù néng kàn dào jié guǒ。",
+      "exampleMeaning": "Chỉ cần kiên trì thì sẽ thấy kết quả."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "因此",
+      "explanation": "vì vậy Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "他每天练习，因此进步很快。",
+      "translation": "Mỗi ngày anh ấy luyện tập, vì vậy tiến bộ rất nhanh."
+    },
+    {
+      "title": "只要……就……",
+      "explanation": "chỉ cần…… thì…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "只要坚持，就能看到结果。",
+      "translation": "Chỉ cần kiên trì thì sẽ thấy kết quả."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "你喜欢成语故事吗？",
+      "pinyin": "nǐ xǐ huān chéng yǔ gù shì ma？",
+      "meaning": "Bạn thích truyện thành ngữ không?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "喜欢，因为故事短，寓意很深。",
+      "pinyin": "xǐ huān， yīn wèi gù shì duǎn， yù yì hěn shēn。",
+      "meaning": "Thích, vì truyện ngắn mà ngụ ý sâu."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "学习成语有什么方法？",
+      "pinyin": "xué xí chéng yǔ yǒu shén me fāng fǎ？",
+      "meaning": "Học thành ngữ bằng cách nào?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "先了解故事，再练习使用。",
+      "pinyin": "xiān liǎo jiě gù shì， zài liàn xí shǐ yòng。",
+      "meaning": "Trước hết hiểu câu chuyện, sau đó luyện cách dùng."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "只要……就…… nói quan hệ gì?",
+      "options": [
+        "Điều kiện và kết quả",
+        "Địa điểm và phương hướng",
+        "So sánh hai đồ vật"
+      ],
+      "answer": "Điều kiện và kết quả",
+      "explanation": "只要 nêu điều kiện đủ; 就 giới thiệu kết quả sẽ xảy ra khi điều kiện đó được đáp ứng。",
+      "id": "hanngu-q5-b07-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“成语”的意思是什么？（chéng yǔ）",
+      "options": [
+        "thành ngữ",
+        "câu chuyện",
+        "ngụ ý",
+        "kết quả"
+      ],
+      "answer": "thành ngữ",
+      "explanation": "成语（chéng yǔ） nghĩa là thành ngữ。",
+      "id": "hanngu-q5-b07-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “câu chuyện” (gù shì).",
+      "answer": "故事",
+      "alternatives": [],
+      "explanation": "故事 (gù shì) nghĩa là câu chuyện。",
+      "id": "hanngu-q5-b07-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “成语故事”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/5.pdf, trang PDF 94–94; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

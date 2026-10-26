@@ -1,0 +1,150 @@
+{
+  "id": "hanngu-q6-b24",
+  "level": 6,
+  "unit": "Quyển 6 · Bài nguồn 24",
+  "title": "情商 · Bài học",
+  "subtitle": "即使……也……",
+  "minutes": 35,
+  "order": 85,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “即使……也……” trong tình huống phù hợp.",
+    "Nhận diện 6 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “情商”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-568271717617ebe0",
+      "hanzi": "情商",
+      "pinyin": "qíng shāng",
+      "meaning": "trí tuệ cảm xúc",
+      "example": "什么是情商？",
+      "examplePinyin": "shén me shì qíng shāng？",
+      "exampleMeaning": "Trí tuệ cảm xúc là gì?"
+    },
+    {
+      "id": "hnl-lex-297719013427a7de",
+      "hanzi": "情绪",
+      "pinyin": "qíng xù",
+      "meaning": "cảm xúc",
+      "example": "情商包括控制情绪和体谅别人。",
+      "examplePinyin": "qíng shāng bāo kuò kòng zhì qíng xù hé tǐ liàng bié rén。",
+      "exampleMeaning": "Trí tuệ cảm xúc gồm kiểm soát cảm xúc và thông cảm người khác."
+    },
+    {
+      "id": "hnl-lex-34cf2a6b3e8f5497",
+      "hanzi": "体谅",
+      "pinyin": "tǐ liàng",
+      "meaning": "thông cảm",
+      "example": "情商包括控制情绪和体谅别人。",
+      "examplePinyin": "qíng shāng bāo kuò kòng zhì qíng xù hé tǐ liàng bié rén。",
+      "exampleMeaning": "Trí tuệ cảm xúc gồm kiểm soát cảm xúc và thông cảm người khác."
+    },
+    {
+      "id": "hnl-lex-b8f1d0e6af9445d9",
+      "hanzi": "主动",
+      "pinyin": "zhǔ dòng",
+      "meaning": "chủ động",
+      "example": "他不但聪明，而且很主动。",
+      "examplePinyin": "tā bù dàn cōng míng， ér qiě hěn zhǔ dòng。",
+      "exampleMeaning": "Bạn ấy không những thông minh mà còn rất chủ động."
+    },
+    {
+      "id": "hnl-lex-8e700148deb36812",
+      "hanzi": "关系",
+      "pinyin": "guān xì",
+      "meaning": "mối quan hệ",
+      "example": "即使遇到困难，也要保持耐心。",
+      "examplePinyin": "jí shǐ yù dào kùn nán， yě yào bǎo chí nài xīn。",
+      "exampleMeaning": "Cho dù gặp khó khăn cũng phải giữ kiên nhẫn."
+    },
+    {
+      "id": "hnl-lex-3e56bfc0b1c80e5c",
+      "hanzi": "成功",
+      "pinyin": "chéng gōng",
+      "meaning": "thành công",
+      "example": "他不但聪明，而且很主动。",
+      "examplePinyin": "tā bù dàn cōng míng， ér qiě hěn zhǔ dòng。",
+      "exampleMeaning": "Bạn ấy không những thông minh mà còn rất chủ động."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "即使……也……",
+      "explanation": "cho dù…… cũng…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "即使遇到困难，也要保持耐心。",
+      "translation": "Cho dù gặp khó khăn cũng phải giữ kiên nhẫn."
+    },
+    {
+      "title": "不但……而且……",
+      "explanation": "không những…… mà còn…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "他不但聪明，而且很主动。",
+      "translation": "Bạn ấy không những thông minh mà còn rất chủ động."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "什么是情商？",
+      "pinyin": "shén me shì qíng shāng？",
+      "meaning": "Trí tuệ cảm xúc là gì?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "情商包括控制情绪和体谅别人。",
+      "pinyin": "qíng shāng bāo kuò kòng zhì qíng xù hé tǐ liàng bié rén。",
+      "meaning": "Trí tuệ cảm xúc gồm kiểm soát cảm xúc và thông cảm người khác."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "情商能不能提高？",
+      "pinyin": "qíng shāng néng bù néng tí gāo？",
+      "meaning": "Trí tuệ cảm xúc có thể nâng cao không?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "可以，通过练习和反思慢慢提高。",
+      "pinyin": "kě yǐ， tōng guò liàn xí hé fǎn sī màn màn tí gāo。",
+      "meaning": "Có, có thể nâng cao dần qua luyện tập và suy ngẫm."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Chọn câu dùng 不但……而且…… đúng。",
+      "options": [
+        "他不但聪明，而且很主动。",
+        "不但他昨天去，而且书。",
+        "而且不但天气下雨。"
+      ],
+      "answer": "他不但聪明，而且很主动。",
+      "explanation": "不但 và 而且 nối hai đặc điểm hoặc hành động cùng chiều。",
+      "id": "hanngu-q6-b24-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“情商”的意思是什么？（qíng shāng）",
+      "options": [
+        "trí tuệ cảm xúc",
+        "cảm xúc",
+        "thông cảm",
+        "chủ động"
+      ],
+      "answer": "trí tuệ cảm xúc",
+      "explanation": "情商（qíng shāng） nghĩa là trí tuệ cảm xúc。",
+      "id": "hanngu-q6-b24-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “cảm xúc” (qíng xù).",
+      "answer": "情绪",
+      "alternatives": [],
+      "explanation": "情绪 (qíng xù) nghĩa là cảm xúc。",
+      "id": "hanngu-q6-b24-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “情商”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/6.pdf, trang PDF 156–156; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

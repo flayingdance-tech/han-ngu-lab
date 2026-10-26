@@ -13,7 +13,7 @@ export const releasePolicySchema = z.object({
   for (const key of ['lessonIds', 'podcastIds'] as const) if (new Set(policy[key]).size !== policy[key].length) ctx.addIssue({ code: 'custom', message: 'Duplicate release IDs' });
 });
 export type ReleasePolicy = z.infer<typeof releasePolicySchema>;
-export const betaNotice = 'Bản thử nghiệm — Chưa duyệt. Học liệu và âm đọc chưa được duyệt chuyên môn độc lập. Thư viện hiện có chưa phải giáo trình HSK 4 hoàn chỉnh.';
+export const betaNotice = 'Bản thử nghiệm — Chưa duyệt. Học liệu và âm đọc chưa được duyệt chuyên môn độc lập; tuyến HSK5–6 chưa chứng nhận độ phủ kỳ thi.';
 export const betaLessonAllowed = (policy: ReleasePolicy | undefined, id: string) => Boolean(policy?.betaPublicationApproved && policy.approvedAt && policy.lessonIds.includes(id));
 const hash = (value: string) => createHash('sha256').update(value).digest('hex');
 

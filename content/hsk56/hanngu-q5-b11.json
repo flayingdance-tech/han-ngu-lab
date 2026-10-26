@@ -1,0 +1,150 @@
+{
+  "id": "hanngu-q5-b11",
+  "level": 5,
+  "unit": "Quyển 5 · Bài nguồn 11",
+  "title": "我看见了飞碟",
+  "subtitle": "据说",
+  "minutes": 35,
+  "order": 78,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “据说” trong tình huống phù hợp.",
+    "Nhận diện 6 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “我看见了飞碟”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-44432b723814a33a",
+      "hanzi": "飞碟",
+      "pinyin": "fēi dié",
+      "meaning": "đĩa bay",
+      "example": "你真的看见飞碟了吗？",
+      "examplePinyin": "nǐ zhēn de kàn jiàn fēi dié le ma？",
+      "exampleMeaning": "Bạn thật sự đã nhìn thấy đĩa bay à?"
+    },
+    {
+      "id": "hnl-lex-22a78295e8e78bba",
+      "hanzi": "发现",
+      "pinyin": "fā xiàn",
+      "meaning": "phát hiện",
+      "example": "你到底看见了什么？",
+      "examplePinyin": "nǐ dào dǐ kàn jiàn le shén me？",
+      "exampleMeaning": "Rốt cuộc bạn đã nhìn thấy gì?"
+    },
+    {
+      "id": "hnl-lex-ea663a30701f19ad",
+      "hanzi": "相信",
+      "pinyin": "xiāng xìn",
+      "meaning": "tin",
+      "example": "据说那里出现过奇怪的光。",
+      "examplePinyin": "jù shuō nà lǐ chū xiàn guò qí guài de guāng。",
+      "exampleMeaning": "Nghe nói nơi đó từng xuất hiện ánh sáng kỳ lạ."
+    },
+    {
+      "id": "hnl-lex-8e86aa93090451d5",
+      "hanzi": "现象",
+      "pinyin": "xiàn xiàng",
+      "meaning": "hiện tượng",
+      "example": "没有，所以我只是在描述现象。",
+      "examplePinyin": "méi yǒu， suǒ yǐ wǒ zhǐ shì zài miáo shù xiàn xiàng。",
+      "exampleMeaning": "Không có, nên tôi chỉ mô tả hiện tượng."
+    },
+    {
+      "id": "hnl-lex-4633434cf54cc436",
+      "hanzi": "解释",
+      "pinyin": "jiě shì",
+      "meaning": "giải thích",
+      "example": "据说那里出现过奇怪的光。",
+      "examplePinyin": "jù shuō nà lǐ chū xiàn guò qí guài de guāng。",
+      "exampleMeaning": "Nghe nói nơi đó từng xuất hiện ánh sáng kỳ lạ."
+    },
+    {
+      "id": "hnl-lex-33e343cf14b49dd8",
+      "hanzi": "证据",
+      "pinyin": "zhèng jù",
+      "meaning": "bằng chứng",
+      "example": "你有证据吗？",
+      "examplePinyin": "nǐ yǒu zhèng jù ma？",
+      "exampleMeaning": "Bạn có bằng chứng không?"
+    }
+  ],
+  "grammar": [
+    {
+      "title": "据说",
+      "explanation": "nghe nói Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "据说那里出现过奇怪的光。",
+      "translation": "Nghe nói nơi đó từng xuất hiện ánh sáng kỳ lạ."
+    },
+    {
+      "title": "到底",
+      "explanation": "rốt cuộc Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "你到底看见了什么？",
+      "translation": "Rốt cuộc bạn đã nhìn thấy gì?"
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "你真的看见飞碟了吗？",
+      "pinyin": "nǐ zhēn de kàn jiàn fēi dié le ma？",
+      "meaning": "Bạn thật sự đã nhìn thấy đĩa bay à?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "我看见了奇怪的光，但不确定是什么。",
+      "pinyin": "wǒ kàn jiàn le qí guài de guāng， dàn bù què dìng shì shén me。",
+      "meaning": "Tôi thấy ánh sáng kỳ lạ nhưng không chắc là gì."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "你有证据吗？",
+      "pinyin": "nǐ yǒu zhèng jù ma？",
+      "meaning": "Bạn có bằng chứng không?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "没有，所以我只是在描述现象。",
+      "pinyin": "méi yǒu， suǒ yǐ wǒ zhǐ shì zài miáo shù xiàn xiàng。",
+      "meaning": "Không có, nên tôi chỉ mô tả hiện tượng."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "据说 thường dùng để làm gì?",
+      "options": [
+        "Dẫn thông tin được nghe nói",
+        "Chỉ vị trí người nói",
+        "Nêu kết quả chắc chắn"
+      ],
+      "answer": "Dẫn thông tin được nghe nói",
+      "explanation": "据说 báo hiệu thông tin truyền lại, người nói không nhất thiết tự mình xác nhận。",
+      "id": "hanngu-q5-b11-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“飞碟”的意思是什么？（fēi dié）",
+      "options": [
+        "đĩa bay",
+        "phát hiện",
+        "tin",
+        "hiện tượng"
+      ],
+      "answer": "đĩa bay",
+      "explanation": "飞碟（fēi dié） nghĩa là đĩa bay。",
+      "id": "hanngu-q5-b11-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “phát hiện” (fā xiàn).",
+      "answer": "发现",
+      "alternatives": [],
+      "explanation": "发现 (fā xiàn) nghĩa là phát hiện。",
+      "id": "hanngu-q5-b11-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “我看见了飞碟”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/5.pdf, trang PDF 146–146; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

@@ -1,5 +1,6 @@
 import { lessonSchema, type Lesson } from '../lib/domain';
 import { wordExamples } from './word-examples';
+import { hsk56Lessons } from './lessons-hsk56';
 
 type Entry = { id: string; level: number; unit: string; title: string; subtitle: string; intro: string; pattern: string; rule: string; example: string; translation: string; words: [string,string,string,string][]; lines: [string,string,string][]; question: string; choices: string[]; answer: string; why: string; order: string[]; ordered: string; summary: string };
 const entries: Entry[] = [
@@ -75,7 +76,7 @@ const entries: Entry[] = [
     lines:[['你认为哪种方法更好？','Nǐ rènwéi nǎ zhǒng fāngfǎ gèng hǎo?','Bạn cho rằng phương pháp nào tốt hơn?'],['对我来说，每天练习更有效。','Duì wǒ lái shuō, měitiān liànxí gèng yǒuxiào.','Với tôi, luyện tập hằng ngày hiệu quả hơn.'],['我们可以讨论一下。','Wǒmen kěyǐ tǎolùn yíxià.','Chúng ta có thể thảo luận một chút.']],question:'对我来说 dùng để làm gì?',choices:['Nêu góc nhìn cá nhân','Chứng minh mọi người đều đồng ý','Diễn đạt thời gian quá khứ'],answer:'Nêu góc nhìn cá nhân',why:'Cụm này giới hạn nhận định ở góc nhìn của tôi; không tự hàm ý mọi người đều có cùng quan điểm.',order:['学习方法很重要','对我来说'],ordered:'对我来说学习方法很重要',summary:'Thử viết ba câu: nêu góc nhìn, đưa ra ý kiến và giải thích lý do. Sử dụng từ nối vừa đủ, ưu tiên thông tin cụ thể.' },
 ];
 
-export const seedLessons: Lesson[] = entries.map((e, index) => lessonSchema.parse({
+const baseLessons: Lesson[] = entries.map((e, index) => lessonSchema.parse({
   id: e.id, level: e.level, unit: e.unit, title: e.title, subtitle: e.subtitle, minutes: 15 + e.level * 3, order: index + 1,
   objectives: [`Hiểu và sử dụng ${e.pattern}.`, `Nhận diện ${e.words.length} từ/cụm từ trong ngữ cảnh.`, 'Hoàn thành luyện tập và giải thích được lỗi của mình.'],
   introduction: e.intro,
@@ -93,3 +94,5 @@ export const seedLessons: Lesson[] = entries.map((e, index) => lessonSchema.pars
   summary: e.summary, provenance: 'Hán Ngữ Lab: nội dung gốc do trợ lý soạn, chưa được người kiểm duyệt độc lập.',
   standard: 'HNL-DRAFT-2026; chưa xác minh mapping đầy đủ HSK 3.0', humanReviewed: false,
 }));
+
+export const seedLessons: Lesson[] = [...baseLessons, ...hsk56Lessons];

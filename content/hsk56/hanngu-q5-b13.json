@@ -1,0 +1,150 @@
+{
+  "id": "hanngu-q5-b13",
+  "level": 5,
+  "unit": "Quyển 5 · Bài nguồn 13",
+  "title": "百姓话题",
+  "subtitle": "随着……",
+  "minutes": 35,
+  "order": 80,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “随着……” trong tình huống phù hợp.",
+    "Nhận diện 6 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “百姓话题”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-7c869538234ea4c0",
+      "hanzi": "百姓",
+      "pinyin": "bǎi xìng",
+      "meaning": "người dân",
+      "example": "随着社会变化，人们的生活也在变化。",
+      "examplePinyin": "suí zhe shè huì biàn huà， rén men de shēng huó yě zài biàn huà。",
+      "exampleMeaning": "Cùng với xã hội thay đổi, cuộc sống con người cũng thay đổi."
+    },
+    {
+      "id": "hnl-lex-c5ea7d6325fba3d3",
+      "hanzi": "话题",
+      "pinyin": "huà tí",
+      "meaning": "chủ đề",
+      "example": "最近大家关心什么话题？",
+      "examplePinyin": "zuì jìn dà jiā guān xīn shén me huà tí？",
+      "exampleMeaning": "Gần đây mọi người quan tâm chủ đề gì?"
+    },
+    {
+      "id": "hnl-lex-a84a78c8a6d5eaf4",
+      "hanzi": "生活",
+      "pinyin": "shēng huó",
+      "meaning": "cuộc sống",
+      "example": "大家关心工作、健康和生活质量。",
+      "examplePinyin": "dà jiā guān xīn gōng zuò、 jiàn kāng hé shēng huó zhì liàng。",
+      "exampleMeaning": "Mọi người quan tâm công việc, sức khỏe và chất lượng cuộc sống."
+    },
+    {
+      "id": "hnl-lex-100a6a7e8806efef",
+      "hanzi": "变化",
+      "pinyin": "biàn huà",
+      "meaning": "thay đổi",
+      "example": "社会变化快吗？",
+      "examplePinyin": "shè huì biàn huà kuài ma？",
+      "exampleMeaning": "Xã hội thay đổi nhanh không?"
+    },
+    {
+      "id": "hnl-lex-b3a20b5b563fd057",
+      "hanzi": "关心",
+      "pinyin": "guān xīn",
+      "meaning": "quan tâm",
+      "example": "最近大家关心什么话题？",
+      "examplePinyin": "zuì jìn dà jiā guān xīn shén me huà tí？",
+      "exampleMeaning": "Gần đây mọi người quan tâm chủ đề gì?"
+    },
+    {
+      "id": "hnl-lex-766ef9b9462fe53d",
+      "hanzi": "社会",
+      "pinyin": "shè huì",
+      "meaning": "xã hội",
+      "example": "社会变化快吗？",
+      "examplePinyin": "shè huì biàn huà kuài ma？",
+      "exampleMeaning": "Xã hội thay đổi nhanh không?"
+    }
+  ],
+  "grammar": [
+    {
+      "title": "随着……",
+      "explanation": "cùng với…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "随着社会变化，人们的生活也在变化。",
+      "translation": "Cùng với xã hội thay đổi, cuộc sống con người cũng thay đổi."
+    },
+    {
+      "title": "越来越……",
+      "explanation": "ngày càng…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "大家越来越关心生活质量。",
+      "translation": "Mọi người ngày càng quan tâm chất lượng cuộc sống."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "最近大家关心什么话题？",
+      "pinyin": "zuì jìn dà jiā guān xīn shén me huà tí？",
+      "meaning": "Gần đây mọi người quan tâm chủ đề gì?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "大家关心工作、健康和生活质量。",
+      "pinyin": "dà jiā guān xīn gōng zuò、 jiàn kāng hé shēng huó zhì liàng。",
+      "meaning": "Mọi người quan tâm công việc, sức khỏe và chất lượng cuộc sống."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "社会变化快吗？",
+      "pinyin": "shè huì biàn huà kuài ma？",
+      "meaning": "Xã hội thay đổi nhanh không?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "变化很快，我们也要不断学习。",
+      "pinyin": "biàn huà hěn kuài， wǒ men yě yào bù duàn xué xí。",
+      "meaning": "Thay đổi rất nhanh, chúng ta cũng phải không ngừng học."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "越来越…… diễn đạt điều gì?",
+      "options": [
+        "Mức độ tăng dần theo thời gian",
+        "Một sự việc đã kết thúc",
+        "Một địa điểm cụ thể"
+      ],
+      "answer": "Mức độ tăng dần theo thời gian",
+      "explanation": "越来越 nêu sự biến đổi tăng dần của mức độ hoặc số lượng。",
+      "id": "hanngu-q5-b13-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“百姓”的意思是什么？（bǎi xìng）",
+      "options": [
+        "người dân",
+        "chủ đề",
+        "cuộc sống",
+        "thay đổi"
+      ],
+      "answer": "người dân",
+      "explanation": "百姓（bǎi xìng） nghĩa là người dân。",
+      "id": "hanngu-q5-b13-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “chủ đề” (huà tí).",
+      "answer": "话题",
+      "alternatives": [],
+      "explanation": "话题 (huà tí) nghĩa là chủ đề。",
+      "id": "hanngu-q5-b13-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “百姓话题”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/5.pdf, trang PDF 174–174; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

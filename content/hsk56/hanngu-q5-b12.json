@@ -1,0 +1,150 @@
+{
+  "id": "hanngu-q5-b12",
+  "level": 5,
+  "unit": "Quyển 5 · Bài nguồn 12",
+  "title": "好人难当",
+  "subtitle": "难 + động từ",
+  "minutes": 35,
+  "order": 79,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “难 + động từ” trong tình huống phù hợp.",
+    "Nhận diện 6 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “好人难当”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-b1573dcf1e7e0ad1",
+      "hanzi": "好人",
+      "pinyin": "hǎo rén",
+      "meaning": "người tốt",
+      "example": "好人难当，帮助别人也要讲方法。",
+      "examplePinyin": "hǎo rén nán dāng， bāng zhù bié rén yě yào jiǎng fāng fǎ。",
+      "exampleMeaning": "Làm người tốt khó, giúp người khác cũng cần phương pháp."
+    },
+    {
+      "id": "hnl-lex-922d7f67f222c371",
+      "hanzi": "帮助",
+      "pinyin": "bāng zhù",
+      "meaning": "giúp đỡ",
+      "example": "为什么帮助别人也会被误解？",
+      "examplePinyin": "wèi shén me bāng zhù bié rén yě huì bèi wù jiě？",
+      "exampleMeaning": "Vì sao giúp người khác cũng bị hiểu lầm?"
+    },
+    {
+      "id": "hnl-lex-0c80710d57623c0c",
+      "hanzi": "误解",
+      "pinyin": "wù jiě",
+      "meaning": "hiểu lầm",
+      "example": "为什么帮助别人也会被误解？",
+      "examplePinyin": "wèi shén me bāng zhù bié rén yě huì bèi wù jiě？",
+      "exampleMeaning": "Vì sao giúp người khác cũng bị hiểu lầm?"
+    },
+    {
+      "id": "hnl-lex-4c35f303bc71332e",
+      "hanzi": "选择",
+      "pinyin": "xuǎn zé",
+      "meaning": "lựa chọn",
+      "example": "既然决定帮助，就要有耐心。",
+      "examplePinyin": "jì rán jué dìng bāng zhù， jiù yào yǒu nài xīn。",
+      "exampleMeaning": "Đã quyết định giúp thì phải kiên nhẫn."
+    },
+    {
+      "id": "hnl-lex-9bfa4ba5d28fe988",
+      "hanzi": "善意",
+      "pinyin": "shàn yì",
+      "meaning": "thiện ý",
+      "example": "好人难当，帮助别人也要讲方法。",
+      "examplePinyin": "hǎo rén nán dāng， bāng zhù bié rén yě yào jiǎng fāng fǎ。",
+      "exampleMeaning": "Làm người tốt khó, giúp người khác cũng cần phương pháp."
+    },
+    {
+      "id": "hnl-lex-b43033dcad0cd13a",
+      "hanzi": "后悔",
+      "pinyin": "hòu huǐ",
+      "meaning": "hối hận",
+      "example": "既然决定帮助，就要有耐心。",
+      "examplePinyin": "jì rán jué dìng bāng zhù， jiù yào yǒu nài xīn。",
+      "exampleMeaning": "Đã quyết định giúp thì phải kiên nhẫn."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "难 + động từ",
+      "explanation": "khó làm việc gì Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "好人难当，帮助别人也要讲方法。",
+      "translation": "Làm người tốt khó, giúp người khác cũng cần phương pháp."
+    },
+    {
+      "title": "既然……就……",
+      "explanation": "đã…… thì…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "既然决定帮助，就要有耐心。",
+      "translation": "Đã quyết định giúp thì phải kiên nhẫn."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "为什么帮助别人也会被误解？",
+      "pinyin": "wèi shén me bāng zhù bié rén yě huì bèi wù jiě？",
+      "meaning": "Vì sao giúp người khác cũng bị hiểu lầm?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "因为每个人的想法不一样。",
+      "pinyin": "yīn wèi měi gè rén de xiǎng fǎ bù yí yàng。",
+      "meaning": "Vì suy nghĩ của mỗi người khác nhau."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "那还要不要帮助？",
+      "pinyin": "nà hái yào bù yào bāng zhù？",
+      "meaning": "Vậy có nên tiếp tục giúp không?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "要先沟通，再决定怎么做。",
+      "pinyin": "yào xiān gōu tōng， zài jué dìng zěn me zuò。",
+      "meaning": "Nên trao đổi trước rồi quyết định cách làm."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "既然……就…… diễn đạt quan hệ nào?",
+      "options": [
+        "Đã có điều kiện đó thì đưa ra hành động phù hợp",
+        "Miêu tả màu sắc",
+        "Nêu thời tiết"
+      ],
+      "answer": "Đã có điều kiện đó thì đưa ra hành động phù hợp",
+      "explanation": "既然 thừa nhận một sự việc đã biết; 就 nêu kết luận hoặc hành động tiếp theo。",
+      "id": "hanngu-q5-b12-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“好人”的意思是什么？（hǎo rén）",
+      "options": [
+        "người tốt",
+        "giúp đỡ",
+        "hiểu lầm",
+        "lựa chọn"
+      ],
+      "answer": "người tốt",
+      "explanation": "好人（hǎo rén） nghĩa là người tốt。",
+      "id": "hanngu-q5-b12-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “giúp đỡ” (bāng zhù).",
+      "answer": "帮助",
+      "alternatives": [],
+      "explanation": "帮助 (bāng zhù) nghĩa là giúp đỡ。",
+      "id": "hanngu-q5-b12-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “好人难当”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/5.pdf, trang PDF 161–161; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

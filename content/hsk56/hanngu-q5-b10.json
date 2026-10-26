@@ -1,0 +1,168 @@
+{
+  "id": "hanngu-q5-b10",
+  "level": 5,
+  "unit": "Quyển 5 · Bài nguồn 10",
+  "title": "提高自己",
+  "subtitle": "对于……来说",
+  "minutes": 35,
+  "order": 89,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “对于……来说” trong tình huống phù hợp.",
+    "Nhận diện 8 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “提高自己”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-4b7cb4aac22d5ed1",
+      "hanzi": "提高",
+      "pinyin": "tí gāo",
+      "meaning": "nâng cao",
+      "example": "我发现自己还有很多能力需要提高。",
+      "examplePinyin": "wǒ fā xiàn zì jǐ hái yǒu hěn duō néng lì xū yào tí gāo。",
+      "exampleMeaning": "Tôi nhận ra mình còn nhiều năng lực cần nâng cao."
+    },
+    {
+      "id": "hnl-lex-a87a25b512387076",
+      "hanzi": "贸易",
+      "pinyin": "mào yì",
+      "meaning": "thương mại",
+      "example": "除了提高能力以外，还要学会承担责任。",
+      "examplePinyin": "chú le tí gāo néng lì yǐ wài， hái yào xué huì chéng dān zé rèn。",
+      "exampleMeaning": "Ngoài nâng cao năng lực còn phải học cách đảm nhận trách nhiệm."
+    },
+    {
+      "id": "hnl-lex-f7707e7b30c49d24",
+      "hanzi": "愤怒",
+      "pinyin": "fèn nù",
+      "meaning": "tức giận",
+      "example": "对于新员工来说，先了解业务很重要。",
+      "examplePinyin": "duì yú xīn yuán gōng lái shuō， xiān liǎo jiě yè wù hěn zhòng yào。",
+      "exampleMeaning": "Đối với nhân viên mới, trước hết hiểu nghiệp vụ là rất quan trọng."
+    },
+    {
+      "id": "hnl-lex-d46b9126c89dc65b",
+      "hanzi": "辞职",
+      "pinyin": "cí zhí",
+      "meaning": "từ chức",
+      "example": "你为什么想辞职？",
+      "examplePinyin": "nǐ wèi shén me xiǎng cí zhí？",
+      "exampleMeaning": "Vì sao bạn muốn xin nghỉ việc?"
+    },
+    {
+      "id": "hnl-lex-e5eb62903a9578ff",
+      "hanzi": "能力",
+      "pinyin": "néng lì",
+      "meaning": "năng lực",
+      "example": "我发现自己还有很多能力需要提高。",
+      "examplePinyin": "wǒ fā xiàn zì jǐ hái yǒu hěn duō néng lì xū yào tí gāo。",
+      "exampleMeaning": "Tôi nhận ra mình còn nhiều năng lực cần nâng cao."
+    },
+    {
+      "id": "hnl-lex-dd6b5d1b9313c614",
+      "hanzi": "刻苦",
+      "pinyin": "kè kǔ",
+      "meaning": "chăm chỉ, khổ luyện",
+      "example": "除了提高能力以外，还要学会承担责任。",
+      "examplePinyin": "chú le tí gāo néng lì yǐ wài， hái yào xué huì chéng dān zé rèn。",
+      "exampleMeaning": "Ngoài nâng cao năng lực còn phải học cách đảm nhận trách nhiệm."
+    },
+    {
+      "id": "hnl-lex-c8137a5c209182ef",
+      "hanzi": "责任",
+      "pinyin": "zé rèn",
+      "meaning": "trách nhiệm",
+      "example": "对于新员工来说，先了解业务很重要。",
+      "examplePinyin": "duì yú xīn yuán gōng lái shuō， xiān liǎo jiě yè wù hěn zhòng yào。",
+      "exampleMeaning": "Đối với nhân viên mới, trước hết hiểu nghiệp vụ là rất quan trọng."
+    },
+    {
+      "id": "hnl-lex-84f5abb8143a59a3",
+      "hanzi": "收获",
+      "pinyin": "shōu huò",
+      "meaning": "thành quả",
+      "example": "除了提高能力以外，还要学会承担责任。",
+      "examplePinyin": "chú le tí gāo néng lì yǐ wài， hái yào xué huì chéng dān zé rèn。",
+      "exampleMeaning": "Ngoài nâng cao năng lực còn phải học cách đảm nhận trách nhiệm."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "对于……来说",
+      "explanation": "xét theo góc độ của…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "对于新员工来说，先了解业务很重要。",
+      "translation": "Đối với nhân viên mới, trước hết hiểu nghiệp vụ là rất quan trọng."
+    },
+    {
+      "title": "除了……以外，还……",
+      "explanation": "ngoài…… ra còn…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "除了提高能力以外，还要学会承担责任。",
+      "translation": "Ngoài nâng cao năng lực còn phải học cách đảm nhận trách nhiệm."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "你为什么想辞职？",
+      "pinyin": "nǐ wèi shén me xiǎng cí zhí？",
+      "meaning": "Vì sao bạn muốn xin nghỉ việc?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "我发现自己还有很多能力需要提高。",
+      "pinyin": "wǒ fā xiàn zì jǐ hái yǒu hěn duō néng lì xū yào tí gāo。",
+      "meaning": "Tôi nhận ra mình còn nhiều năng lực cần nâng cao."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "那你准备怎么做？",
+      "pinyin": "nà nǐ zhǔn bèi zěn me zuò？",
+      "meaning": "Vậy bạn định làm thế nào?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "先把工作学好，再决定下一步。",
+      "pinyin": "xiān bǎ gōng zuò xué hǎo， zài jué dìng xià yī bù。",
+      "meaning": "Trước hết học tốt công việc rồi quyết định bước tiếp theo."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Chọn câu dùng 除了……以外，还…… đúng.",
+      "options": [
+        "除了提高能力以外，还要学会承担责任。",
+        "除了能力还以外提高。",
+        "还要除了工作能力。"
+      ],
+      "answer": "除了提高能力以外，还要学会承担责任。",
+      "explanation": "Mẫu câu nối thêm một điều bên cạnh điều đã nêu.",
+      "id": "hanngu-q5-b10-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“提高”的意思是什么？（tí gāo）",
+      "options": [
+        "nâng cao",
+        "thương mại",
+        "tức giận",
+        "từ chức"
+      ],
+      "answer": "nâng cao",
+      "explanation": "提高（tí gāo） nghĩa là nâng cao。",
+      "id": "hanngu-q5-b10-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “thương mại” (mào yì).",
+      "answer": "贸易",
+      "alternatives": [],
+      "explanation": "贸易 (mào yì) nghĩa là thương mại。",
+      "id": "hanngu-q5-b10-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “提高自己”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/5.pdf, trang PDF 133–145; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

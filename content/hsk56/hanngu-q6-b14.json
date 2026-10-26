@@ -1,0 +1,168 @@
+{
+  "id": "hanngu-q6-b14",
+  "level": 6,
+  "unit": "Quyển 6 · Bài nguồn 14",
+  "title": "谁当家",
+  "subtitle": "由……决定",
+  "minutes": 35,
+  "order": 90,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “由……决定” trong tình huống phù hợp.",
+    "Nhận diện 8 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “谁当家”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-2b93194821b6077a",
+      "hanzi": "当家",
+      "pinyin": "dāng jiā",
+      "meaning": "quản lý gia đình",
+      "example": "你们家谁当家？",
+      "examplePinyin": "nǐ men jiā shuí dāng jiā？",
+      "exampleMeaning": "Nhà bạn ai là người quyết định?"
+    },
+    {
+      "id": "hnl-lex-847361acd8057927",
+      "hanzi": "规定",
+      "pinyin": "guī dìng",
+      "meaning": "quy định",
+      "example": "家里有什么规定？",
+      "examplePinyin": "jiā lǐ yǒu shén me guī dìng？",
+      "exampleMeaning": "Nhà bạn có quy định gì?"
+    },
+    {
+      "id": "hnl-lex-38a11454c2e420e1",
+      "hanzi": "小事",
+      "pinyin": "xiǎo shì",
+      "meaning": "việc nhỏ",
+      "example": "大事一起商量，小事轮流负责。",
+      "examplePinyin": "dà shì yì qǐ shāng liáng， xiǎo shì lún liú fù zé。",
+      "exampleMeaning": "Việc lớn cùng bàn, việc nhỏ luân phiên phụ trách."
+    },
+    {
+      "id": "hnl-lex-ddc0f37e1000fc75",
+      "hanzi": "大事",
+      "pinyin": "dà shì",
+      "meaning": "việc lớn",
+      "example": "大事一起商量，小事轮流负责。",
+      "examplePinyin": "dà shì yì qǐ shāng liáng， xiǎo shì lún liú fù zé。",
+      "exampleMeaning": "Việc lớn cùng bàn, việc nhỏ luân phiên phụ trách."
+    },
+    {
+      "id": "hnl-lex-63818b7a57668325",
+      "hanzi": "做主",
+      "pinyin": "zuò zhǔ",
+      "meaning": "quyết định",
+      "example": "小事由大家商量决定。",
+      "examplePinyin": "xiǎo shì yóu dà jiā shāng liáng jué dìng。",
+      "exampleMeaning": "Việc nhỏ do mọi người bàn bạc quyết định."
+    },
+    {
+      "id": "hnl-lex-3e69fe6714f95696",
+      "hanzi": "讲究",
+      "pinyin": "jiǎng jiū",
+      "meaning": "chú trọng",
+      "example": "他不但会做饭，而且很讲究卫生。",
+      "examplePinyin": "tā bù dàn huì zuò fàn， ér qiě hěn jiǎng jiū wèi shēng。",
+      "exampleMeaning": "Anh ấy không những biết nấu ăn mà còn rất chú trọng vệ sinh."
+    },
+    {
+      "id": "hnl-lex-bc46096bdc464dc8",
+      "hanzi": "卫生",
+      "pinyin": "wèi shēng",
+      "meaning": "vệ sinh",
+      "example": "人人有责，保持卫生。",
+      "examplePinyin": "rén rén yǒu zé， bǎo chí wèi shēng。",
+      "exampleMeaning": "Mọi người đều có trách nhiệm giữ vệ sinh."
+    },
+    {
+      "id": "hnl-lex-c8137a5c209182ef",
+      "hanzi": "责任",
+      "pinyin": "zé rèn",
+      "meaning": "trách nhiệm",
+      "example": "他不但会做饭，而且很讲究卫生。",
+      "examplePinyin": "tā bù dàn huì zuò fàn， ér qiě hěn jiǎng jiū wèi shēng。",
+      "exampleMeaning": "Anh ấy không những biết nấu ăn mà còn rất chú trọng vệ sinh."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "由……决定",
+      "explanation": "do…… quyết định Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "小事由大家商量决定。",
+      "translation": "Việc nhỏ do mọi người bàn bạc quyết định."
+    },
+    {
+      "title": "不但……而且……",
+      "explanation": "không những…… mà còn…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "他不但会做饭，而且很讲究卫生。",
+      "translation": "Anh ấy không những biết nấu ăn mà còn rất chú trọng vệ sinh."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "你们家谁当家？",
+      "pinyin": "nǐ men jiā shuí dāng jiā？",
+      "meaning": "Nhà bạn ai là người quyết định?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "大事一起商量，小事轮流负责。",
+      "pinyin": "dà shì yì qǐ shāng liáng， xiǎo shì lún liú fù zé。",
+      "meaning": "Việc lớn cùng bàn, việc nhỏ luân phiên phụ trách."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "家里有什么规定？",
+      "pinyin": "jiā lǐ yǒu shén me guī dìng？",
+      "meaning": "Nhà bạn có quy định gì?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "人人有责，保持卫生。",
+      "pinyin": "rén rén yǒu zé， bǎo chí wèi shēng。",
+      "meaning": "Mọi người đều có trách nhiệm giữ vệ sinh."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Chọn câu dùng 由……决定 đúng.",
+      "options": [
+        "小事由大家商量决定。",
+        "由小事大家。",
+        "大家决定由卫生。"
+      ],
+      "answer": "小事由大家商量决定。",
+      "explanation": "由 giới thiệu người hoặc nhóm chịu trách nhiệm quyết định.",
+      "id": "hanngu-q6-b14-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“当家”的意思是什么？（dāng jiā）",
+      "options": [
+        "quản lý gia đình",
+        "quy định",
+        "việc nhỏ",
+        "việc lớn"
+      ],
+      "answer": "quản lý gia đình",
+      "explanation": "当家（dāng jiā） nghĩa là quản lý gia đình。",
+      "id": "hanngu-q6-b14-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “quy định” (guī dìng).",
+      "answer": "规定",
+      "alternatives": [],
+      "explanation": "规定 (guī dìng) nghĩa là quy định。",
+      "id": "hanngu-q6-b14-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “谁当家”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/6.pdf, trang PDF 11–23; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

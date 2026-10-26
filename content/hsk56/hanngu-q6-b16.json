@@ -1,0 +1,150 @@
+{
+  "id": "hanngu-q6-b16",
+  "level": 6,
+  "unit": "Quyển 6 · Bài nguồn 16",
+  "title": "话说“慢点儿”",
+  "subtitle": "别……了",
+  "minutes": 35,
+  "order": 82,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “别……了” trong tình huống phù hợp.",
+    "Nhận diện 6 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “话说“慢点儿””. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-5eea26533c007219",
+      "hanzi": "慢点儿",
+      "pinyin": "màn diǎn ér",
+      "meaning": "chậm một chút",
+      "example": "好的，我慢点儿。",
+      "examplePinyin": "hǎo de， wǒ màn diǎn ér。",
+      "exampleMeaning": "Được, tôi sẽ chậm lại một chút."
+    },
+    {
+      "id": "hnl-lex-427501fff8b9d738",
+      "hanzi": "着急",
+      "pinyin": "zháo jí",
+      "meaning": "sốt ruột",
+      "example": "越着急，越容易出错。",
+      "examplePinyin": "yuè zháo jí， yuè róng yì chū cuò。",
+      "exampleMeaning": "Càng sốt ruột càng dễ mắc lỗi."
+    },
+    {
+      "id": "hnl-lex-cc8e375a078edf06",
+      "hanzi": "安全",
+      "pinyin": "ān quán",
+      "meaning": "an toàn",
+      "example": "安全比速度更重要。",
+      "examplePinyin": "ān quán bǐ sù dù gèng zhòng yào。",
+      "exampleMeaning": "An toàn quan trọng hơn tốc độ."
+    },
+    {
+      "id": "hnl-lex-28dd11f74f67de0f",
+      "hanzi": "速度",
+      "pinyin": "sù dù",
+      "meaning": "tốc độ",
+      "example": "安全比速度更重要。",
+      "examplePinyin": "ān quán bǐ sù dù gèng zhòng yào。",
+      "exampleMeaning": "An toàn quan trọng hơn tốc độ."
+    },
+    {
+      "id": "hnl-lex-2cb3a97282aad7e4",
+      "hanzi": "提醒",
+      "pinyin": "tí xǐng",
+      "meaning": "nhắc nhở",
+      "example": "别着急了，慢慢说。",
+      "examplePinyin": "bié zháo jí le， màn màn shuō。",
+      "exampleMeaning": "Đừng sốt ruột nữa, cứ từ từ nói."
+    },
+    {
+      "id": "hnl-lex-39dd1d26c08a4187",
+      "hanzi": "耐心",
+      "pinyin": "nài xīn",
+      "meaning": "kiên nhẫn",
+      "example": "越着急，越容易出错。",
+      "examplePinyin": "yuè zháo jí， yuè róng yì chū cuò。",
+      "exampleMeaning": "Càng sốt ruột càng dễ mắc lỗi."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "别……了",
+      "explanation": "đừng tiếp tục…… nữa Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "别着急了，慢慢说。",
+      "translation": "Đừng sốt ruột nữa, cứ từ từ nói."
+    },
+    {
+      "title": "越……越……",
+      "explanation": "càng…… càng…… Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "越着急，越容易出错。",
+      "translation": "Càng sốt ruột càng dễ mắc lỗi."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "你走得太快了。",
+      "pinyin": "nǐ zǒu dé tài kuài le。",
+      "meaning": "Bạn đi nhanh quá."
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "好的，我慢点儿。",
+      "pinyin": "hǎo de， wǒ màn diǎn ér。",
+      "meaning": "Được, tôi sẽ chậm lại một chút."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "为什么要慢一点？",
+      "pinyin": "wèi shén me yào màn yì diǎn？",
+      "meaning": "Vì sao phải chậm hơn?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "安全比速度更重要。",
+      "pinyin": "ān quán bǐ sù dù gèng zhòng yào。",
+      "meaning": "An toàn quan trọng hơn tốc độ."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Chọn câu khuyên ai đó bình tĩnh hơn。",
+      "options": [
+        "别着急了，慢慢说。",
+        "你越快越好。",
+        "我昨天买了书。"
+      ],
+      "answer": "别着急了，慢慢说。",
+      "explanation": "别……了 dùng để khuyên dừng một trạng thái hoặc hành động đang diễn ra。",
+      "id": "hanngu-q6-b16-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“慢点儿”的意思是什么？（màn diǎn ér）",
+      "options": [
+        "chậm một chút",
+        "sốt ruột",
+        "an toàn",
+        "tốc độ"
+      ],
+      "answer": "chậm một chút",
+      "explanation": "慢点儿（màn diǎn ér） nghĩa là chậm một chút。",
+      "id": "hanngu-q6-b16-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “sốt ruột” (zháo jí).",
+      "answer": "着急",
+      "alternatives": [],
+      "explanation": "着急 (zháo jí) nghĩa là sốt ruột。",
+      "id": "hanngu-q6-b16-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “话说“慢点儿””. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/6.pdf, trang PDF 37–37; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

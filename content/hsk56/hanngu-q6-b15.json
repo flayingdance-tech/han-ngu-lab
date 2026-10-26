@@ -1,0 +1,150 @@
+{
+  "id": "hanngu-q6-b15",
+  "level": 6,
+  "unit": "Quyển 6 · Bài nguồn 15",
+  "title": "受伤以后",
+  "subtitle": "以后",
+  "minutes": 35,
+  "order": 81,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “以后” trong tình huống phù hợp.",
+    "Nhận diện 6 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “受伤以后”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-1cf284cf1cd440da",
+      "hanzi": "受伤",
+      "pinyin": "shòu shāng",
+      "meaning": "bị thương",
+      "example": "受伤以后，他每天都做检查。",
+      "examplePinyin": "shòu shāng yǐ hòu， tā měi tiān dōu zuò jiǎn chá。",
+      "exampleMeaning": "Sau khi bị thương, mỗi ngày anh ấy đều kiểm tra."
+    },
+    {
+      "id": "hnl-lex-d32bfdab5974bd6d",
+      "hanzi": "恢复",
+      "pinyin": "huī fù",
+      "meaning": "hồi phục",
+      "example": "听到这个消息，她忍不住哭了。",
+      "examplePinyin": "tīng dào zhè ge xiāo xī， tā rěn bú zhù kū le。",
+      "exampleMeaning": "Nghe tin này, cô ấy không kìm được mà khóc."
+    },
+    {
+      "id": "hnl-lex-4cc723f783316a54",
+      "hanzi": "照顾",
+      "pinyin": "zhào gù",
+      "meaning": "chăm sóc",
+      "example": "谁在照顾你？",
+      "examplePinyin": "shuí zài zhào gù nǐ？",
+      "exampleMeaning": "Ai đang chăm sóc bạn?"
+    },
+    {
+      "id": "hnl-lex-5739dd705f55324c",
+      "hanzi": "检查",
+      "pinyin": "jiǎn chá",
+      "meaning": "kiểm tra",
+      "example": "听到这个消息，她忍不住哭了。",
+      "examplePinyin": "tīng dào zhè ge xiāo xī， tā rěn bú zhù kū le。",
+      "exampleMeaning": "Nghe tin này, cô ấy không kìm được mà khóc."
+    },
+    {
+      "id": "hnl-lex-7eaf5bef5c5acb6d",
+      "hanzi": "忍不住",
+      "pinyin": "rěn bú zhù",
+      "meaning": "không kìm được",
+      "example": "受伤以后，他每天都做检查。",
+      "examplePinyin": "shòu shāng yǐ hòu， tā měi tiān dōu zuò jiǎn chá。",
+      "exampleMeaning": "Sau khi bị thương, mỗi ngày anh ấy đều kiểm tra."
+    },
+    {
+      "id": "hnl-lex-3ec87d8325f28e3c",
+      "hanzi": "鼓励",
+      "pinyin": "gǔ lì",
+      "meaning": "động viên",
+      "example": "家人和朋友都在鼓励我。",
+      "examplePinyin": "jiā rén hé péng yǒu dōu zài gǔ lì wǒ。",
+      "exampleMeaning": "Gia đình và bạn bè đều động viên tôi."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "以后",
+      "explanation": "sau khi Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "受伤以后，他每天都做检查。",
+      "translation": "Sau khi bị thương, mỗi ngày anh ấy đều kiểm tra."
+    },
+    {
+      "title": "忍不住 + động từ",
+      "explanation": "không kìm được việc gì Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "听到这个消息，她忍不住哭了。",
+      "translation": "Nghe tin này, cô ấy không kìm được mà khóc."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "你现在感觉怎么样？",
+      "pinyin": "nǐ xiàn zài gǎn jué zěn me yàng？",
+      "meaning": "Bây giờ bạn cảm thấy thế nào?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "好多了，还要继续休息。",
+      "pinyin": "hǎo duō le， hái yào jì xù xiū xī。",
+      "meaning": "Đỡ hơn nhiều, vẫn cần tiếp tục nghỉ."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "谁在照顾你？",
+      "pinyin": "shuí zài zhào gù nǐ？",
+      "meaning": "Ai đang chăm sóc bạn?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "家人和朋友都在鼓励我。",
+      "pinyin": "jiā rén hé péng yǒu dōu zài gǔ lì wǒ。",
+      "meaning": "Gia đình và bạn bè đều động viên tôi."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "受伤以后表示什么关系？",
+      "options": [
+        "Sau khi bị thương",
+        "Trước khi bị thương",
+        "Không liên quan thời gian"
+      ],
+      "answer": "Sau khi bị thương",
+      "explanation": "以后 đặt sau một sự việc để chỉ thời gian kể từ khi việc đó xảy ra。",
+      "id": "hanngu-q6-b15-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“受伤”的意思是什么？（shòu shāng）",
+      "options": [
+        "bị thương",
+        "hồi phục",
+        "chăm sóc",
+        "kiểm tra"
+      ],
+      "answer": "bị thương",
+      "explanation": "受伤（shòu shāng） nghĩa là bị thương。",
+      "id": "hanngu-q6-b15-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “hồi phục” (huī fù).",
+      "answer": "恢复",
+      "alternatives": [],
+      "explanation": "恢复 (huī fù) nghĩa là hồi phục。",
+      "id": "hanngu-q6-b15-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “受伤以后”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/6.pdf, trang PDF 24–24; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}

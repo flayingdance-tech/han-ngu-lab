@@ -1,0 +1,168 @@
+{
+  "id": "hanngu-q5-b06",
+  "level": 5,
+  "unit": "Quyển 5 · Bài nguồn 6",
+  "title": "吃葡萄",
+  "subtitle": "不料……",
+  "minutes": 35,
+  "order": 87,
+  "objectives": [
+    "Hiểu và dùng trọng tâm “不料……” trong tình huống phù hợp.",
+    "Nhận diện 8 từ và cụm từ của bài.",
+    "Làm bài tập rồi tự đối chiếu phản hồi; chưa dùng điểm số để kết luận năng lực thi."
+  ],
+  "introduction": "Bài bổ trợ theo chủ đề “吃葡萄”. Học chậm theo ba lượt: đọc hiểu, luyện mẫu câu, rồi tự nói lại bằng thông tin của bạn. Nội dung tiếng Việt và hoạt động do Hán Ngữ Lab biên soạn để học online; không phải bản chép nguyên văn giáo trình.",
+  "vocabulary": [
+    {
+      "id": "hnl-lex-e3e935174ab2472b",
+      "hanzi": "葡萄",
+      "pinyin": "pú táo",
+      "meaning": "quả nho",
+      "example": "我以为很容易，不料问题更多。",
+      "examplePinyin": "wǒ yǐ wéi hěn róng yì， bù liào wèn tí gèng duō。",
+      "exampleMeaning": "Tôi tưởng rất dễ, không ngờ vấn đề lại nhiều hơn."
+    },
+    {
+      "id": "hnl-lex-d2c34ba7aae83019",
+      "hanzi": "半死不活",
+      "pinyin": "bàn sǐ bù huó",
+      "meaning": "thoi thóp, uể oải",
+      "example": "她一边学习，一边分享自己的收获。",
+      "examplePinyin": "tā yī biān xué xí， yī biān fēn xiǎng zì jǐ de shōu huò。",
+      "exampleMeaning": "Cô ấy vừa học vừa chia sẻ thành quả của mình."
+    },
+    {
+      "id": "hnl-lex-a5bf81ca19068704",
+      "hanzi": "不料",
+      "pinyin": "bù liào",
+      "meaning": "không ngờ",
+      "example": "我以为很容易，不料问题更多。",
+      "examplePinyin": "wǒ yǐ wéi hěn róng yì， bù liào wèn tí gèng duō。",
+      "exampleMeaning": "Tôi tưởng rất dễ, không ngờ vấn đề lại nhiều hơn."
+    },
+    {
+      "id": "hnl-lex-0aa35ef58bdbbf52",
+      "hanzi": "竟然",
+      "pinyin": "jìng rán",
+      "meaning": "thế mà, lại còn",
+      "example": "她一边学习，一边分享自己的收获。",
+      "examplePinyin": "tā yī biān xué xí， yī biān fēn xiǎng zì jǐ de shōu huò。",
+      "exampleMeaning": "Cô ấy vừa học vừa chia sẻ thành quả của mình."
+    },
+    {
+      "id": "hnl-lex-7526741e07a0f7bd",
+      "hanzi": "分享",
+      "pinyin": "fēn xiǎng",
+      "meaning": "chia sẻ",
+      "example": "我学会了分享，也更有耐心了。",
+      "examplePinyin": "wǒ xué huì le fēn xiǎng， yě gèng yǒu nài xīn le。",
+      "exampleMeaning": "Tôi học được cách chia sẻ và kiên nhẫn hơn."
+    },
+    {
+      "id": "hnl-lex-2d779142168e3c6d",
+      "hanzi": "收获",
+      "pinyin": "shōu huò",
+      "meaning": "thu hoạch",
+      "example": "你今天有什么收获？",
+      "examplePinyin": "nǐ jīn tiān yǒu shén me shōu huò？",
+      "exampleMeaning": "Hôm nay bạn thu hoạch được gì?"
+    },
+    {
+      "id": "hnl-lex-dd98ba9d977b8a02",
+      "hanzi": "喜悦",
+      "pinyin": "xǐ yuè",
+      "meaning": "niềm vui",
+      "example": "我以为很容易，不料问题更多。",
+      "examplePinyin": "wǒ yǐ wéi hěn róng yì， bù liào wèn tí gèng duō。",
+      "exampleMeaning": "Tôi tưởng rất dễ, không ngờ vấn đề lại nhiều hơn."
+    },
+    {
+      "id": "hnl-lex-1f0dd0808cd99ae1",
+      "hanzi": "注视",
+      "pinyin": "zhù shì",
+      "meaning": "chăm chú nhìn",
+      "example": "她一边学习，一边分享自己的收获。",
+      "examplePinyin": "tā yī biān xué xí， yī biān fēn xiǎng zì jǐ de shōu huò。",
+      "exampleMeaning": "Cô ấy vừa học vừa chia sẻ thành quả của mình."
+    }
+  ],
+  "grammar": [
+    {
+      "title": "不料……",
+      "explanation": "dẫn vào kết quả bất ngờ Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "我以为很容易，不料问题更多。",
+      "translation": "Tôi tưởng rất dễ, không ngờ vấn đề lại nhiều hơn."
+    },
+    {
+      "title": "一边……一边……",
+      "explanation": "hai hành động diễn ra đồng thời Đây là phần giải thích bổ trợ của Hán Ngữ Lab, cần được duyệt chuyên môn trước khi xuất bản.",
+      "example": "她一边学习，一边分享自己的收获。",
+      "translation": "Cô ấy vừa học vừa chia sẻ thành quả của mình."
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "An",
+      "hanzi": "你今天有什么收获？",
+      "pinyin": "nǐ jīn tiān yǒu shén me shōu huò？",
+      "meaning": "Hôm nay bạn thu hoạch được gì?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "我学会了分享，也更有耐心了。",
+      "pinyin": "wǒ xué huì le fēn xiǎng， yě gèng yǒu nài xīn le。",
+      "meaning": "Tôi học được cách chia sẻ và kiên nhẫn hơn."
+    },
+    {
+      "speaker": "An",
+      "hanzi": "遇到意外怎么办？",
+      "pinyin": "yù dào yì wài zěn me bàn？",
+      "meaning": "Gặp chuyện bất ngờ thì làm sao?"
+    },
+    {
+      "speaker": "Minh",
+      "hanzi": "先观察，再决定下一步。",
+      "pinyin": "xiān guān chá， zài jué dìng xià yī bù。",
+      "meaning": "Trước hết quan sát rồi quyết định bước tiếp theo."
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Chọn câu dùng 不料 để nói về kết quả bất ngờ.",
+      "options": [
+        "我以为很容易，不料问题更多。",
+        "不料我是学生。",
+        "今天不料星期三。"
+      ],
+      "answer": "我以为很容易，不料问题更多。",
+      "explanation": "不料 nối dự đoán ban đầu với kết quả trái dự đoán.",
+      "id": "hanngu-q5-b06-q01"
+    },
+    {
+      "type": "choice",
+      "prompt": "“葡萄”的意思是什么？（pú táo）",
+      "options": [
+        "quả nho",
+        "thoi thóp, uể oải",
+        "không ngờ",
+        "thế mà, lại còn"
+      ],
+      "answer": "quả nho",
+      "explanation": "葡萄（pú táo） nghĩa là quả nho。",
+      "id": "hanngu-q5-b06-q02"
+    },
+    {
+      "type": "input",
+      "prompt": "Viết chữ Hán cho “thoi thóp, uể oải” (bàn sǐ bù huó).",
+      "answer": "半死不活",
+      "alternatives": [],
+      "explanation": "半死不活 (bàn sǐ bù huó) nghĩa là thoi thóp, uể oải。",
+      "id": "hanngu-q5-b06-q03"
+    }
+  ],
+  "summary": "Bạn vừa luyện chủ đề “吃葡萄”. Hãy nói lại một câu bằng trải nghiệm của bạn và ôn lại từ còn quên sau một ngày. Bài vẫn ở trạng thái draft-unreviewed.",
+  "provenance": "Đã đối chiếu trực tiếp PDF gốc PDF_GOC/5.pdf, trang PDF 82–93; giáo án là bản bổ trợ do Hán Ngữ Lab biên soạn, không chép nguyên văn và chưa duyệt chuyên môn.",
+  "standard": "HNL-BOOKORDER-2026; private draft, chưa chứng nhận đủ đại cương thi HSK",
+  "humanReviewed": false
+}
